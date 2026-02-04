@@ -1,0 +1,42 @@
+>>Neil	00:00
+We're looking at possible ways of savings on our end and where we could have another party or company process our invoices in Business Central. So just to kind of show you, or to kind of like take a step back for a second. Right now, the vendors give us the invoices to Docsumo, right, the managers go into Docsumo and code, you know, what you guys built us, when they hit confirm or whatever, it makes a, it's called in Business Central, it's called the purchase invoice. It makes a record in our financial system. And right now our accounts payable, we have a small team in Napa that reviews and validates what the managers are typing in, you know, through Docsumo. And number one, that it's like a check that the dollar amount's correct, that, you know, we're validating that the invoice is accurate, right? Yeah. And then pretty much hitting, you know, the approve or post button. And we're, number one, do you do any of that work, you know, from your staff in India or anything like that, that type of work for clients? Like that process?
+
+>>Bikram Dahal	01:28
+We don't do it, but we have some partners who currently are using our product and they do it for their customers. So we have a partner in Balatac in Australia, where they take care of your whole Ap automation side of things. So this is a complete Ap automation. So they take care of that part, like the part where people have to manually come, look at the document, make sure that they do the coding, and then the information extraction is correct. So that part is currently done by a company called Balatac. Like they can do it like for you guys also. Right.
+
+>>Neil	02:04
+So do they, do they, or would you, or they charge by document or? I think they charge it by document.
+
+>>Bikram Dahal	02:12
+I'll have to check with him. Like I can connect you with, because these guys are also, they use Docsumo only for that. So like they have been with us for more than five years. They are quite a big vendor. They started like, it's a very small item. I think they're quite big vendors. They must use Koopa and a few of this system. So I'll have to check with him once, because usually that connection goes through them only. We're not involved. But like I can quickly connect you with him and see if anything makes sense on that side. Because he also uses our team in Philippines. So he's not doing it in Australia. But like the guys in the Philippines use our to do that. Right. So like I can connect that And then you can see if, like you can like make sure that that tax is done by them so that you can use your resources for something else.
+
+>>Neil	03:00
+Right. Right. And just checking. So that's good that you've heard of this before. You know, like you have some connections. Would you guys have an interest to do it yourselves as well? Or probably not?
+
+>>Bikram Dahal	03:09
+Unfortunately, no. Because that is a bit, we have to be a bit shorter on the software side. So because of that, like we are not looking into going into this space. Okay.
+
+>>Neil	03:20
+Got it. Got it. Okay. Yeah. Let's, if you can, please pass me that contact. And I'd love to see what we can do with you.
+
+>>Bikram Dahal	03:29
+I think though like a few only, the Jc is like very good friend of like a very, very good friend of us. So I'll just make our, I'll just quickly, like, Connect you guys with over there. And then you guys can see if that makes sense. He does the exactly same thing that you guys are doing. He does it for different vendors. The only different thing is that like he uses the same platform for multiple things. But I think that should not be an issue because you can assign one user for you guys, because your volume is not that high rate. So as long as it makes sense, like because it is about 4 ,000 per month or 3 ,000 per month. So as long as we can assign one person, they can log into Docsumo, do that part. Like they already know the platform and everything. So that it should not be that big of an issue as long as the side of like, whatever the financial makes sense for you guys.
+
+>>Neil	04:16
+Right, right, right. Okay. Okay. I appreciate it.
+
+>>Bikram Dahal	04:19
+Okay. Awesome. Then let me, let me connect you guys. And then you have like, how you guys can talk about there and see if that makes sense.
+
+>>Neil	04:24
+Okay. Thank you so much program. No problem. I'll talk to you tomorrow. You're getting the email thing.
+
+>>Bikram Dahal	04:29
+Yep.
+
+>>Neil	04:29
+Thank you. Bye. Okay.
+
+>>Bikram Dahal	04:30
+Bye.
+

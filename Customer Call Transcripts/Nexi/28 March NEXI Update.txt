@@ -1,0 +1,267 @@
+>>Eugene Yaromik	00:00
+Hello, I'm fine. Awesome. Can I start the call? Or is there anything else that Boris or Eugene you guys want to discuss before I start the call? Eugene has a couple of questions for you. Sure. Ok, let's start with Eugene then. For example, about webhook, what's the difference when we receive webhook statements with account summary? And when we receive account summaries with API request?
+
+>>Bikram Dahal	00:33
+Yes, the difference, and Aniket, you can help me on this one. So the major difference to make, so Aniket, can you take it on? I know you are traveling. Yeah, I'll take this.
+
+>>Aniket Tatipamula	00:43
+So the major difference is, Eugene, if you do this via API, you send that API all the documents that you want to get the analytics on. So that API would use fetch data of all the documents and then make one concise report on all of those. But if you get it on webhook, it happens one document at a time. So you'll only get analytics on that doc.
+
+>>Eugene Yaromik	01:07
+Yes, because we need it. Usually, one PDA of bank statements contains one month. But sometimes it can contain, for example, next month, several days.
+
+>>Aniket Tatipamula	01:25
+Sure, if you need both of them, then we'll make it live on both of them. It should not be an issue. So even on a single file, you will get the analytics on the data that is in the file, while you can also use the API to fetch consolidated info across the statements.
+
+>>Eugene Yaromik	01:41
+Yeah, I think we need to both options.
+
+>>Bikram Dahal	01:44
+I'll just make it clear, and Aniket, let me know if that makes clear. So single bank statement, even if you have a three month, so the webhook only works with the information it has on that bank statement. So if that bank statement is three months long, then you'll get that three month summary and everything in that webhook request. But to my best knowledge, you guys also wanted to figure out which of these are recurring payment. Now, the recurring payment information can only be done between the bank statement. It cannot, let me say, if I only have one month bank statement, then you'll not be able to figure out which of these is recurring payment, because you need three or four month bank statement to figure out which of these are recurring payment. So when you get data on a webhook, just on one bank statement, the information about a recurring payment might not be correct. But when you get three month detail, then that is the difference where I see, like where it can be different, and that is what I have seen with the customer. I'm not sure if that is the same case. Aniket, you can answer if I'm understanding this part correctly. So the only place I see a difference is if you have to use other month information to derive some metrics. That average and everything, you don't need it. It will be each one month only, so there's no issue over there. But recurring payment, those kind of things might only be available on the consolidated API, not on the individual API.
+
+>>Aniket Tatipamula	03:08
+So Vikram, as in, because most of the analytics is done monthly, so as long as an entire month's data is within the statement, it should be okay. But there are statements where you have 15 days in statement one and 15 days in statement two. So in that case, this will not work out.
+
+>>Eugene Yaromik	03:26
+Okay, so it's better to use like the API. Okay, and also a question about after classification. For example, I sent a test email with bank statement. It was today. And I received a webhook that you describe in next implementation details, Google Docs. Like you wrote that we need to use API to change, for example, file type. Can you open like the Google Doc?
+
+>>Bikram Dahal	04:13
+Sure, I'll open it. I think Aniket can handle it, I'll just. That's pretty much pushing something today. So there might have been some changes. So I'll just, we'll just look into that.
+
+>>Eugene Yaromik	04:26
+Okay, yeah, this is the document we are talking about, right? Uh -huh. Is this the document? Number one flow and point, scroll down, scroll up. Uh, webhook, uh, yeah, number three, right?
+
+>>Bikram Dahal	04:55
+Number three, okay.
+
+>>Eugene Yaromik	04:57
+So after.
+
+>>Eugene Yaromik	05:01
+Yeah, yeah, I received a webhook with type Autoclassifyai, and also this webhook contains a review URL. When I go with this URL, it allows me to choose a file type, but I didn't have access, like I received an error.
+
+>>Bikram Dahal	05:31
+Oh, when you try to change it, it did not allow you to change it?
+
+>>Eugene Yaromik	05:35
+Yeah.
+
+>>Bikram Dahal	05:36
+Okay, we'll check that, so I'll just, we'll check that And we'll get back to you on that one.
+
+>>Eugene Yaromik	05:41
+Yeah, it's also possible, or we should change, like, only by API request.
+
+>>Bikram Dahal	05:48
+Yeah, we should change by API request, but on this case, usually we change it, the document type will be changed, Right? I'm just trying to understand one thing on this one. Sorry, like, it might be on my team, not on your team, Eugene, but if the bank statement is figured out, then we change it, right, Aniket? Aniket, you are on mute. So, like, Eugene, the thing about this Autoclassification, this is only for the cases where it's not bank statement or form, or we are able to get some document that do not look like bank statement. So this is like a case where Ai fails to do a classification. This is not to be used for day -to -day operations. So that is my understanding. I'll just confirm with my team, because there's no reason for you guys to, oh, go and change that bank statement, then only we'll start processing. So that one will give you an API to change the document type, no questions about it, but I'll just quickly check with the team and get back to you on this.
+
+>>Eugene Yaromik	06:56
+Mm -hmm, OK. Just, it's possible to change one type. Yeah, so we'll give you the URL for that. Yeah, because only I don't have access.
+
+>>Bikram Dahal	07:07
+Sure, I will give you that endpoint if you want to automatically change it, then you'll also be able to do it through API.
+
+>>Eugene Yaromik	07:14
+Mm -hmm, mm -hmm, OK. And also, one more question about, for example, like, Isa application form. Can we set up, like, several required fields when we can't parse this field? Like, we should see from…
+
+>>Bikram Dahal	07:34
+Yeah, so what you're talking about is, if you want a mandatory field on application, so if certain fields are, like, certain values are not accepted, for example, email ID names, then you don't want it to be processed. You want people to go and review and then fix those. So that one, 100 % can be done. Let us know what are the mandatory fields. We'll make sure that if only those mandatory fields are present, then you guys will be able to, like, the document will go to process, although it will be on review. So one can open a link and make that change, and then it will go to process.
+
+>>Eugene Yaromik	08:07
+Mm -hmm, mm -hmm, yeah. That is what you're talking about using, right?
+
+>>Bikram Dahal	08:10
+That is what you want on the workflow.
+
+>>Eugene Yaromik	08:15
+Is it possible? Yeah, it's possible.
+
+>>Bikram Dahal	08:17
+And that is what you want, right?
+
+>>Eugene Yaromik	08:22
+What fields? Required fields? Yeah.
+
+>>Bikram Dahal	08:25
+So what are the fields that are required, mandatory? Without that, the document will not go to process. So if you can give us that list, we can make that in a sort of way that if those fields are not, like, extracted, then people have to go and put that value before the document goes to process. Mm -hmm.
+
+>>Eugene Yaromik	08:48
+Ok. We will send the required fields. Yes. Mm -hmm. Ok.
+
+>>Bikram Dahal	08:56
+That should be fine, right? In that case, the document will be processed so that like, oh, sorry, reviewing so that you guys can open that link. Do the review. Click on process, then you'll get one more ebook to make sure that you have the latest information.
+
+>>Eugene Yaromik	09:11
+Mm -hmm. Ok, and that's it from my side. Ok.
+
+>>Bikram Dahal	09:23
+Yeah, Boris.
+
+>>Eugene Yaromik	09:27
+No, I don't have any questions.
+
+>>Boris Teper	09:28
+I was just saying.
+
+>>Bikram Dahal	09:29
+Aniket, you were saying something?
+
+>>Aniket Tatipamula	09:32
+So basically, for Doc, there is a DocStatusChangeWebHook. So that WebHook can be used to identify a document from the original to processed.
+
+>>Bikram Dahal	09:40
+Ok, sure. That makes sense. So let's do this, then, like using for next week. Anyway, my team will finish all the parts that is remaining by Monday. Maximum, this project will be closed by Monday. It is a development. We'll always be on support and everything for sure, until you guys have your whole problem.
+
+>>Bikram Dahal	09:57
+To Doxomo And I will always be there. But for next week, can we do this? I really want to get a report of 100 cases through Doxomo, both on the extraction of loan application and also analytics of those applications. I know we have already talked about it, but I just wanted to make sure that we are clear on what we're asking for And then we'll plan it for next week. So for next 100 cases, what we want to do is that we want to pass this through Doxomo and I want my doxomo, I want you to test and make sure that all the things are working as for all the happy path, all the SKs and everything are properly working as for what you need. That's number one thing. My team will also send our equity report on what is the extraction equity, what is the equity on the bank statement and they will also send the information on the analytics and everything. If something is like some of the bank statement were not able to be parsed or whatever reason, there can be a lot of reasons that can happen with few of these files. So we want to run that complete experiment on 100 samples, 100 cases for next week. So how can we arrange that?
+
+>>Boris Teper	11:09
+We can just add your Doxomo email to our submissions email. We'll add it and you'll be automatically receiving the submissions.
+
+>>Bikram Dahal	11:18
+Okay, awesome. And then Eugene, can you make sure that you can also test the whole flow and make sure that everything is working on your side?
+
+>>Eugene Yaromik	11:27
+Yeah, I will check the whole process maybe on Monday and let you know.
+
+>>Bikram Dahal	11:33
+Okay, sure.
+
+>>Eugene Yaromik	11:33
+Because I noticed that you've today fixed it all. Sure.
+
+>>Bikram Dahal	11:41
+No, we can plan it for the week. If you guys need one or two days, that is a totally fine on the side. I know like things have a little bit of delay on our side. So I'll get my team to do a battle test of this over the Monday. I personally will also look into this flow and make sure that there's no any S case or anything over there. And then like Eugene, you can look into Monday and Tuesday, you guys can do the complete test and make sure that you guys do a simple test with five or six cases with all the scenarios, make sure that everything is working properly. And then after that is done, next week, let's plan to make sure that we do 100 cases through the system so that you guys can also take that and compare it against your current provider and provide us some kind of feedback or everything. It's something we call Uat so that we are extremely clear about what kind of accuracy we're achieving, what we need to further improve and everything on top of this.
+
+>>Boris Teper	12:30
+Okay, sounds good.
+
+>>Eugene Yaromik	12:31
+Okay, awesome.
+
+>>Bikram Dahal	12:32
+Let's make sure that we plan it based on that only. So next week at the end of the day, we really love if Boris and us got a complete report with Undersample, that would be a really good meeting for next week.
+
+>>Boris Teper	12:44
+Okay.
+
+>>Bikram Dahal	12:45
+Okay. Thanks a lot for this. Thanks a lot for your patience and everything. You're really awesome to work with. I know there are a few things here and there, but you're really good with your feedback and everything. Looking forward to doing that Uat by end of next week and then moving to the next stage.
+
+>>Boris Teper	13:02
+Okay, sounds very good.
+
+>>Bikram Dahal	13:04
+Okay, awesome. Ujin from your side, looking forward and Boris looking forward to getting a list of the mandatory fields so that we can configure the system to only send the document into process if those fields are available. Looking forward for that. We'll look into the bug you talked about Ujin and just to make sure that that is not happening. So that is supposed to happen only for the cases where we don't know the document type or something. So I'll get back to you on that. Yeah.
+
+>>Eugene Yaromik	13:30
+Boris, about the required fields for application, it's like account name, Dba name and federal tax ID.
+
+>>Boris Teper	13:37
+Federal tax ID, social security number.
+
+>>Eugene Yaromik	13:40
+Because we checked this all fields, but like...
+
+>>Bikram Dahal	13:44
+Yeah, these are mandatory. Can you send us on the message so that the team, we don't miss any?
+
+>>Eugene Yaromik	13:51
+Because without these fields, we can process next steps. Okay.
+
+>>Boris Teper	13:56
+And one more thing, the list of Mta companies, can we somehow make it to play dynamics or will we change an hour And so it will reflect on the grant?
+
+>>Bikram Dahal	14:06
+Sure, we can do that. I'll ask the team to send you the documentation for this one. That can be sent through Apa. We'll also add that information into the same documentation that Google Doc has. Okay.
+
+>>Boris Teper	14:19
+Okay.
+
+>>Bikram Dahal	14:22
+Anything else, Aniket, Ujin?
+
+>>Eugene Yaromik	14:23
+I don't know.
+
+>>Bikram Dahal	14:25
+Okay. Awesome. I told you we had a very tight schedule on our side. I think the engineering team did a good job on our side. I'm looking forward to seeing that final result by the end of next week.
+
+>>Boris Teper	14:35
+Great. Thank you very much again.
+
+>>Bikram Dahal	14:36
+Have a nice day.
+
+>>Boris Teper	14:37
+Have a good weekend.
+
+>>Bikram Dahal	14:38
+Thank you.
+
+>>Eugene Yaromik	14:39
+Have a nice weekend. Bye.
+
+>>Boris Teper	14:40
+Bye -bye.
+
+>>Aniket Tatipamula	14:45
+Aniket? Sorry, I think there was some network issue.
+
+>>Bikram Dahal	14:47
+No, no, that's totally fine.
+
+>>Aniket Tatipamula	14:49
+We already completed that MCLH thing through database table. So, we'll add it to the doc as well.
+
+>>Bikram Dahal	14:54
+Yeah.
+
+>>Aniket Tatipamula	14:55
+I think he mentioned some issue, right? So, we'll...
+
+>>Aniket Tatipamula	14:56
+So right now, we are holding the document on AI AutoClassifier. And then when you change the doc type, let me just quickly share with you. So what happens is, if you forward the email, so can you see the blank statement? They are actually not processing right now. So they will be stuck here until you either call that API or you move it manually from here. And it will start getting promised.
+
+>>Bikram Dahal	15:19
+No, that's fine. Give him the API to like, give him the API to, like he needs the API to change the data. That is what he's asking for. Like as long as he has that, that should be fine. Aniket, can you hear me? Sivam, can you hear me?
+
+>>Shivam Kumar	15:39
+Yeah, Vikram, I can hear you.
+
+>>Bikram Dahal	15:42
+Okay. I think, but why are you using ID? Aniket, can you hear us?
+
+>>Aniket Tatipamula	16:03
+Okay, was there any other issue? Because I think he was mentioning some issues.
+
+>>Bikram Dahal	16:05
+No, no, he was mentioning it's on the UI side. He was not able to change on the UI.
+
+>>Bikram Dahal	16:16
+Aniket, let's talk when you are on the laptop on Monday.
+
+>>Bikram Dahal	16:35
+Yeah, Aniket. That's fine, Aniket. Like we can talk later. Sivam, anything else you want to know about this project? Here's the documentation so that you know the complete implementation. We have even put a proper documentation with details. So Sivam, Sivam.
+
+>>Shivam Kumar	16:52
+Yeah, that was helpful. I'll go through that process.
+
+>>Bikram Dahal	16:55
+So it has API detail also. So you'll be able to understand what is going on and what is happening. So like Sivam. Doc for, let's see. This will help you understand. There might be a context issue because a few of the things you might not have understood, but if you go through the document, you'll understand things.
+
+>>Shivam Kumar	17:13
+Okay, sure, Vikram.
+
+>>Bikram Dahal	17:15
+Okay, anything else?
+
+>>Shivam Kumar	17:17
+Not as of now.
+
+>>Bikram Dahal	17:18
+Okay, then talk to you later.
+
+>>Shivam Kumar	17:19
+Bye, Vikram.
+

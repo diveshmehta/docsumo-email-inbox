@@ -1,0 +1,399 @@
+>>Jasneet Singh Malhi	00:00
+We don't process bi -weekly, so I was a little confused by your math there. Just give me one quick second to open it up.
+
+>>Jasneet Singh Malhi	00:30
+I'll share my screen. Please confirm once you can see my screen. Can you see it?
+
+>>Alden Pelletier	00:40
+Yep.
+
+>>mike williams	00:41
+Yeah, I can see it now as well.
+
+>>Jasneet Singh Malhi	00:44
+So typically, team, our pricing has three components overall. The first component is a platform fee, which is a recurring fee. We also have an account management and management solution engineer fee, which goes into the ongoing contract, the customer success, and account management. And if there are any technical level things, that's a recurring fee as well. And then we calculated around 3 ,000 cases for the whole year. So every time card and every corresponding invoice would be one case, typically. So let's say if you're getting 250 to 300 validation cases per month, so we just multiplied it and just made it at 3 ,000 cases annually. So a case is not a single time card or a single invoice. It is basically a combination of a time card and an invoice so that we can not only provide you with the extraction bit, but also the actual validation bit where most of the automation happens. And then basically, there's also a 20 % setup and implementation, which I've got waived off, if we can get started before Thanksgiving. And we can extend a 25 % discount. So basically, this is how the costing looks like. So based on 3 ,000 cases, the cost per case is $10. And every case can have up to 100 pages. So let's say an invoice and a time card, if they're one case, it can have over 100 pages.
+
+>>Jasneet Singh Malhi	02:27
+And those all will be counted under the same $10.
+
+>>Alden Pelletier	02:30
+Hey, Mike, weren't we around 3 ,000 to 4 ,000 invoices a week?
+
+>>mike williams	02:37
+Yeah, that's correct. Ok.
+
+>>Alden Pelletier	02:40
+Yeah. Yeah.
+
+>>Jasneet Singh Malhi	02:43
+Basically, like 3 ,000. And each case has like 100 pages, right? So 3 ,000 times 100 is like the volume that we were initially going with. Right.
+
+>>Alden Pelletier	02:57
+But that's this price. You have 3 ,000 cases a year. If we have 3 ,000 invoices a week, and each invoice has one to, say, 400 time cards, where a case would be each case would be representative of an invoice, correct? No matter how many time cards are associated with an invoice, one case is a single invoice being validated with the time cards. So we're talking based upon what you're describing as a case being a invoice with the associated time cards, no matter how many time cards it is, up to 100 pages. We're talking about 3 ,000 times 15 ,000, which if that's the pricing for this, then we just can't move forward.
+
+>>Jasneet Singh Malhi	03:53
+Wait, wait, wait. I think there might be like miscommunication. Let me just give me one quick second. Let me check my notes with the Dls team, and let me see if I can also get someone in the tech team as well.
+
+>>Jasneet Singh Malhi	04:15
+Just bear with me for one quick second, Mike Orland.
+
+>>Alden Pelletier	04:17
+115 ,000 is 156 ,000 cases a year. Yeah.
+
+>>mike williams	04:24
+For an estimation, we were using roughly 3 ,600 invoices a week, totaling to 187 ,000 invoices per year.
+
+>>mike williams	04:45
+All right.
+
+>>Jasneet Singh Malhi	04:46
+So I think we need to rework on the pricing in that way, because obviously we do also have a volume discount in place, like more number of pages less than the per page cost. So I can rework on this.
+
+>>Jasneet Singh Malhi	04:58
+Just I've asked someone do you have any? Yeah.
+
+>>Alden Pelletier	05:02
+Do you have any questions? We're trying to understand our model a little more because a we're not bi weekly. I don't know where that you know, came from. And be a case like we have it we have some invoices because they're split by Eo you have one invoice for one time card. We have other invoices where we have one invoice that might have 100 time cards attached to it because it's, you know, there's 100 employees that work at a warehouse. So it sounds like a case represents the matching of a invoice to the time card, whether that time card is one or 1000. But you're saying up to 100 pages. So in the case of it's one to 1000, that would be 10 cases.
+
+>>Jasneet Singh Malhi	05:55
+Right. So basically, a case is, you know, a combination of an invoice and the, you know, subsequent time cards. And it can have like, but like it goes the other way also, like if there is one time card for like 10 different invoices, then also because the matching is still one to many and many to one as well. So like, when you say that your volume, if so two things are team like, we would need to understand how many validations are you running? Let's say on an annual basis.
+
+>>mike williams	06:31
+Yeah, so that's if you're talking about validations of like, each invoice being a validation, because each that's going to be a case, right? Let's say 150 ,000.
+
+>>Alden Pelletier	06:43
+And that's probably a light estimate. Yes.
+
+>>Jasneet Singh Malhi	06:47
+Got it. So 150 ,000 matching that we need to do. And basically, that that would, in a way mean that there are 150 ,000 invoices that need to be matched to the subsequent time. Correct?
+
+>>Alden Pelletier	07:03
+Correct.
+
+>>mike williams	07:04
+Correct.
+
+>>Jasneet Singh Malhi	07:04
+Awesome. So the number in this case for the number of invoices is 150 ,000. Right. And do we have any idea on the number of time cards that it would it would require for us to kind of extract and match the data out of like, so 150 ,000, like in because timecards are like multiple pages, correct? So like, what are the number of timecards that we're looking at?
+
+>>mike williams	07:27
+So that's, that's a difficulty we were having before, because that, in terms of pages that can vary greatly, it could be that there's one person's timecard on one page, or it could be a print off, where there are 20 individuals per page, 20 individuals times represented on one page. So that that does vary greatly.
+
+>>Jasneet Singh Malhi	07:51
+But like for the pricing, I will need like some ballpark figure to kind of give you an estimate because that so the thing is that like, the source of growth are both things, right, we need to like match with like invoice timecard, and they need to go like hand in hand, right? If I'm extracting and matching data out of 150 ,000 pages of the of the invoice, right, then like, what is the corresponding number of timecard that it that it corresponds to, because then that is also like where compute is, right, getting getting so that it's not necessarily a page count, it's a transaction count.
+
+>>Alden Pelletier	08:23
+So if we got a count of the number of employees, so you know, you need two numbers, you need the number of invoices, and then you need the number of employees, because the number of employees would correspond to a timecard. But that timecard, as Mike's trying to explain, right, you could have a single page that has one employee with a timecard on it, or we could have a single page that is an Excel timesheet that has 100, you know, lines on it.
+
+>>mike williams	08:54
+Yeah, and so that that's where there's 36, 3600 invoices a week and that that directly relates to roughly 10 ,000 paychecks. So individuals that there would be time for per week or got it, got it. Okay, so like, because it is like, yeah, as a as a estimate for, it could fluctuate, like there could be times where there's one, one, like the timecard is one page, there could be times where the timecard where that package of the case could be 100 pages, but I, I know we were using I based on the sample size I had before, I was using an approximate average of 10 pages. But some of them might be larger than 100 pages, some of them are one page.
+
+>>mike williams	09:59
+Or I guess it would be two pages in the case of the case.
+
+>>Jasneet Singh Malhi	10:05
+Got it. So I think a more favorable pricing for you would be like a per -page pricing, so that you are more covered in that sense. Do you think that that would make more sense for you?
+
+>>mike williams	10:17
+I don't know that that would make more sense, because there are some pages where that seems as though it wouldn't make sense for our cases where there's one time card per page.
+
+>>Jasneet Singh Malhi	10:35
+Because then it's kind of like my only issue is like it becomes difficult for me to quantify what that corresponds to. That is why we came up with a case -based pricing, right? So I can do one thing. We can increase the number of cases and the number of page limit. Let's say if it's 100 pages per case, what is the average length of a time card?
+
+>>mike williams	11:00
+If we're going by...
+
+>>Alden Pelletier	11:02
+We'll have to do some digging. We don't have those numbers to be able to effectively give them to you.
+
+>>Jasneet Singh Malhi	11:13
+Okay.
+
+>>Alden Pelletier	11:14
+Our business, do you understand? Let me just kind of explain what Madison does. So we're a funding company. We partner with staffing agencies all over the world. They all over the world, all over the country. We're US domestic. They hire us to do their back office. So we do their payroll and we do the invoicing and we're providing them their profit same week. So in turn for us purchasing and funding those invoices, our back office team validates the invoicing by validating to those time cards. So our client base has multiple types of invoices. They have multiple types of different customers that provide us with multiple types of different time cards. They use different types of time card systems. So in order for us to try to realistically provide and count the number of different types of pages we get to the corresponding invoice numbers is gonna take us some time. So I don't know that either one, neither your company nor our company can be comfortable with pricing until such time. And I don't even know how we can do that.
+
+>>Jasneet Singh Malhi	12:42
+All right, so Alden, let me ask you this. What is the most favorable scenario for you? Let's talk about that. Like in an ideal world, how would you want it to be priced out?
+
+>>Alden Pelletier	13:03
+Well, I don't like, I mean, is it amount of data that goes in? I mean, I just want to, obviously we want pricing that meets the usage, right? So is it, are we getting, we get charged for every validation that occurs or just every bit of data because pages can be different sizes. I guess I just don't, I don't know. I don't understand. We want to be able to understand the pricing and also forecast the pricing so that we know what it will be on a weekly or annualized basis.
+
+>>Jasneet Singh Malhi	13:53
+Got it.
+
+>>mike williams	13:54
+And it does seem like cases could make sense, but $10 per case for our situation computes to an unreasonable figure.
+
+>>Jasneet Singh Malhi	14:11
+Right, so because like your number of invoices only are 150 ,000 and like your number of timecards would exceed that 150 ,000 number because every invoice may have like more timecards associated with it, correct?
+
+>>mike williams	14:26
+It computes to an unreasonable number because that would mean 150 ,000 cases per year because each - 1 .5 million. Yeah, that computes to an unreasonable number.
+
+>>Jasneet Singh Malhi	14:39
+No, I completely get it.
+
+>>Alden Pelletier	14:42
+And obviously like I think - So we split on invoicing for a variety of reasons, mostly due to what the customer's billing requirements are. So, you know, we might have a customer that only has a hundred timecards, but because the customer's billing requirements
+
+>>Alden Pelletier	14:56
+Requirements require a Po attached to every employee. We now have a hundred cases versus we really could print, according to Madison, we could print those all on one invoice, but the customer wants it separated. So right where now it's the same amount of validation, but we're getting times 10 case count from you guys, even though the number, it's really the same validation occurring. It's just the way that we split it accounts to, you know, would account to more pricing, you know, per this model, I guess. Does that make sense?
+
+>>Jasneet Singh Malhi	15:39
+Yes, kind of. So what I'm going to do is I'm going to go back to my deal desk team and I'm going to figure out a pricing for 150 ,000 cases, right? Because we have 150 ,000 invoices for the whole year. So 150 ,000 cases and give you, you know, a reasonable number of pages per case. How does that sound?
+
+>>mike williams	16:03
+Yeah. And I don't think it would be unreasonable based on the sample size we had before. If you need a page count, I mean, you could average because of those big combination ones. You could, I mean, it'd be a very rough average if you needed one now, but we would have to research a better average.
+
+>>Jasneet Singh Malhi	16:27
+That would be helpful. Like that would be like a good jump off point for me to kind of, you know, take and run some numbers of the deal desk team. Okay.
+
+>>mike williams	16:38
+As a very rough average now, based on the sample size I was looking at, about nine ish pages per case would be from this. Did you say nine?
+
+>>Jasneet Singh Malhi	16:55
+Nine.
+
+>>mike williams	16:56
+Nine. Oh, okay.
+
+>>Jasneet Singh Malhi	16:58
+So basically we are anyway, like in the current pricing, it is a hundred pages per case, correct? Right.
+
+>>mike williams	17:05
+But then that would be a lot like some cases it would use up to that and some, it would be one, right? So that's where the average sometimes it might, it might potentially be more than a hundred, but other cases it will be one or two.
+
+>>Jasneet Singh Malhi	17:19
+And basically evens out like, because every, you know, case has like a hundred up to a hundred pages. So let's say if you are not using one case, then it would basically average out for the, for the entire, entire year. Does that make sense?
+
+>>Alden Pelletier	17:34
+Yeah. I would doubt we'd exceed a hundred on it on a case, Mike.
+
+>>mike williams	17:38
+Yeah. Agreed. Right.
+
+>>Jasneet Singh Malhi	17:41
+So what I need to come back to you with is like a pricing for 150K cases and a case would be one invoice matching with time cards up to a hundred pages. Awesome.
+
+>>Alden Pelletier	17:56
+Yeah. Perfect.
+
+>>Jasneet Singh Malhi	17:59
+I'm so sorry for the confusion folks. I'm not sure, like maybe I misread something or I misunderstood something.
+
+>>Alden Pelletier	18:07
+We're an interesting, we're an interesting business. So I'm not surprised there isn't questions. So we're very customized to our, to our clients and customers needs. And there's, there's a lot of them.
+
+>>Jasneet Singh Malhi	18:21
+No, no, absolutely. I do agree. Can we set up a time for next week to discuss this? I will check with the Dealers team today only. And basically after my, you know, meeting with them, I can go ahead and basically come back to you with, with the updated pricing.
+
+>>Alden Pelletier	18:41
+Sounds good. I'm going to, I'm going to try to, you know, knowing what, what we need to know now too, you know, we'll do some additional, maybe I'll even grab a developer, you know, we do save and scan. I just, you know, maybe we, we can get better numbers too. So, you know, it is definitely looks like about, you know, 150 ,000 invoices a year. That's unquestionable. It's just the amount of pages that go along with each invoice is the, you know, is the question.
+
+>>Jasneet Singh Malhi	19:10
+Right. So I also have like Roshabh here. Roshabh is our co -founder and CEO. He's based out of New York. And I just invited him on today's call just to make sure that there is no confusion moving forward. So Roshabh, we were talking to the Madison resources team and we had previously shared pricing with them. I think due to like a miscommunication, we misquoted the number of pages, the number of cases. So we, I think calculated around 3000 cases per year and each case having a hundred pages. But the volume that we're expecting here is 150 ,000 invoices that needs to be matched against a bunch of time cards. And each time card would be in the range of like 10 to a hundred pages. So that's what we're looking at.
+
+>>Jasneet Singh Malhi	19:55
+That is like the updated pricing that we need to give Alden and Mike.
+
+>>Rushabh Sheth	20:00
+Understood. Alden, Mike, really good to meet you guys. Where would you be based out of?
+
+>>Alden Pelletier	20:07
+We're in New Hampshire.
+
+>>Rushabh Sheth	20:08
+Oh, I see. I actually just did the fall trip two weeks back.
+
+>>Alden Pelletier	20:13
+Nice.
+
+>>mike williams	20:14
+Where'd you go?
+
+>>Rushabh Sheth	20:15
+So I went to, I was in, we stayed at Bartlett and then visited North Conway and there's that aerial tram, I forgot, Mount... Cannon? Cannon, Mount Cannon. Yeah, amazing. Like, never did I imagine that I would like be so happy looking at like changing colors of leaves.
+
+>>mike williams	20:39
+Yeah, were the colors changing when you got out here? Oh yeah, Yeah.
+
+>>Rushabh Sheth	20:43
+I was there on third, the second week of October. So it was already like, I think it hit. So I also did Acadia, but the colors actually changed earlier in New Hampshire than Acadia, Maine.
+
+>>mike williams	20:57
+Yeah.
+
+>>Alden Pelletier	20:57
+Acadia is beautiful too.
+
+>>mike williams	20:59
+I was there, I was there that week.
+
+>>Rushabh Sheth	21:01
+Oh, I see. Awesome. Which city in New Hampshire are you guys in?
+
+>>mike williams	21:05
+Portsmouth.
+
+>>Rushabh Sheth	21:06
+Sorry?
+
+>>Alden Pelletier	21:08
+Portsmouth.
+
+>>Rushabh Sheth	21:09
+Portsmouth. Oh, let me check it out. Not too far.
+
+>>mike williams	21:13
+Yeah, it's right on the, right on the coast. It's on the water there.
+
+>>Rushabh Sheth	21:17
+Awesome.
+
+>>mike williams	21:18
+Cool.
+
+>>Jasneet Singh Malhi	21:20
+So Alden, Mike, while I have you, and I'm sorry to talk stop again, but like every invoice that needs matching, you know, how many pages would be every invoice, like a single invoice? Which?
+
+>>mike williams	21:37
+Again, that varies, but it's typically one to two.
+
+>>Jasneet Singh Malhi	21:42
+Got it. Then like, that should not be like a big, big change. So every one to two page invoice, 150 ,000 invoices for the whole year need matching against time cards, which can be nine to 10 pages. Nine to, sorry, 100 pages that need the validation engine. Got it. Awesome.
+
+>>mike williams	22:00
+I would say that the case of them in total, we're saying probably averages out to nine, but could be as small as three, two to three pages could be as large as 100 pages.
+
+>>Rushabh Sheth	22:12
+Yeah, yeah. My God. Yeah, I'll get context. Sorry for like, I was on another call. I'll get context from Jasneet after this call. Understood like your number of cases is much higher than 3 ,000 is what we gathered from this conversation.
+
+>>mike williams	22:28
+It's roughly 3 ,000 per week.
+
+>>Rushabh Sheth	22:29
+3 ,000 per week. Got it. And then how many, like, so one thing that I had asked Jasneet before this, and which I wanted to understand is like, essentially like, do you right now rigorously capture data across this? Because like, it seems like your volume is large enough for like people to manually do it.
+
+>>mike williams	22:47
+Yeah, people are manually doing this as it stands right now.
+
+>>Rushabh Sheth	22:51
+Okay. Because I was like surprised that how do you even process this much? But yeah, like, got it. We will come back to you on this. We will sort of give you like, like we'll recode on this, what's possible on our side and get it done. Right now your team is how big that does this?
+
+>>Alden Pelletier	23:11
+11.
+
+>>Rushabh Sheth	23:13
+11. Okay. Fairly, fairly large team. Got it. Got it. Cool. And then Alden, Mike, like any particular timeline that you have in mind when you want to get started? Fairly doable. I don't know, like, if there are any open questions or concerns whether this will work, but the use case seems straightforward, like we can deliver on this. So, but like, would love to know like what concerns would you have?
+
+>>mike williams	23:39
+Yeah, we're evaluating some other options as well too. So that's kind of affecting the timeline, like trying to just do our due diligence and collect the relevant information and those things. Yeah.
+
+>>Rushabh Sheth	23:54
+And, and any particular, besides price, any particular decision criteria that you need to satisfy? I completely understand. In fact, we want all of our prospects to like do, because like we work with almost everyone, like across Arbor, Nomura, Greystone, like essentially like it's a two -way binding because once you have this, it's sort of doing your volumes, like our customers, we have customers like through the life of our company, like five years. So we do take all of these conversations and engagement seriously, because like, it's like, once you are stuck, like we cannot make losses on this. Like if tomorrow it goes from 10 to 100, essentially we bear the cost of paying for the LLMs and vice versa. So we definitely want to make sure that like the, we set the stage right for success.
+
+>>Alden Pelletier	24:42
+Absolutely. Now we're, you know, we're considering obviously price, but you know, the solution, the support, what support we'll get through, you know, the setup that, you know, the initial implementation.
+
+>>Alden Pelletier	24:54
+Um You know scale scalability, too Um, you know, we we we would want protection as well as you would want protection make sense. Um You know, and we're we're not trying to hide anything so, you know if we we come to a point where you're You know, you've got some pricing but you're not you know, you're not a hundred percent, you know comfortable we can jump on more, you know more calls or or share more more data because it's You know be one thing if we had one one version of time cards that came in and we were able to You know kind of but our our client base is ever -changing our clients customers are ever -changing because that's staffing, right? So they're going out picking up new staffing companies. These new staffing companies have different billing requirements They use different time tracking systems, you know, some of this some of this data where we're pulling out of uh, You know the vms and portals right So we're not actually getting time cards. We're just pulling out an excel Yeah an excel file that excel file Um, we're considering a time card, but in that case, it's really just one page, but it might have 100 people on it but that one you know that one Uh excel we pull out of a vms or portal might have a hundred people but the invoices in our system um Because of work sites and sales taxes There might be six invoices that our our our person is pulling that report and they're having to pull You know and look at seven or eight people, you know on this invoice and then 10 people from the invoice But they're all matching it to that one vms, you know data export makes sense. It's it's you know
+
+>>Rushabh Sheth	26:32
+There's a lot there's a lot going on Makes sense awesome Alden then uh fair enough and we will also do this. Um, we'll basically uh, just do a three month uh poc plus annual essentially like We like I understand that you want to have that downside risk protected It actually makes sense. We can just sign up for three months. We we will bundle everything and then You pay for that three months We work together for three months In that first second month if we go live and then you're just using it for one month Then it's thumbs up from everyone and you just pay for the rest of the year So we will come back to you on this and um Um, yeah sounds good and do you need to feed this into any particular like do you use any software where you need to feed? This data into So all of our software is is just kind of legacy
+
+>>Alden Pelletier	27:29
+And you know proprietary we do have systems that so Data data that creates the invoice and comes into Madison from a variety of different. Uh, uh, you know different ats crms Our own online payroll processing system. Some of it. We're uploading via fat file. Some of it's coming in via api, right? So all the data comes in we process paychecks then we process invoices our billing team gets those invoices and then Based upon the customer base of our of our separate clients They're getting invoices either emailed to them dropped in share points or they're pulling data out of vms portals And they're having to take the invoices that were generated by our payroll team Ensure they have the proper time card backup that's come from the clients whether that be via email Dropped into a shared folder or we're pulling it ourselves out of portals they have to Match that data up. That's the validation. We're talking about and then they're If it's a portal our invoices might not be going anywhere We're still doing the validation if it's emailed invoices that are going out They're attaching the appropriate time card as backup because the customer requires it With the invoice and then they're saving that off on the network drives then they're saving their you know, they're saving their emails saving the Email correspondence back from the clients. So it's a real high level.
+
+>>Rushabh Sheth	29:05
+I hope I captured it a little bit for you, but In essence what i'm trying to understand is like for your clients, what do you need to send them back?
+
+>>Alden Pelletier	29:17
+We're not sending this is all internal validation because we're purchasing the ar we want to make sure it's right before it goes out The door And that we're not getting fraudulent, you know customers time cards. It's it's it's a level of risk for Madison Makes sense.
+
+>>Rushabh Sheth	29:30
+Awesome.
+
+>>Alden Pelletier	29:31
+So I think where there are To one step further where there are validation errors like Hours didn't match Are missing time cards we are generating, you know Our billing team is logging those issues in an internal system that then creates billing issues reports that go to our clients because they need to Correct those billing issues before
+
+>>Alden Pelletier	29:53
+Before we actually send the invoice out the door. And that time of us sitting on invoices affects, when an invoice ages out, essentially we charge it back to our client. So, us getting invoices out the door timely is relying upon us having the proper validated time card backup. So, there are billing issues reports that go out the door based upon errors found during validation, I guess would be the answer.
+
+>>Rushabh Sheth	30:23
+Got it. You need to be absolutely sure that the invoice is correct. Makes sense, based on the time cards, because otherwise you will have to charge back if you sort of like either like charged extra or like in the worst case, like charge less.
+
+>>Alden Pelletier	30:43
+Yeah, I mean, invoicing going out the door accurately ensures cash coming into Madison comes back accurately. So, then we've got our cash posting piece and automation of it, right? So, if we get an exact payment back that matches the invoice, it can auto post. If it comes back inaccurate, we're now spending more manual time digging into the reasons why. And it always leads back to, hey, it was probably because of an inaccurate invoice that went out the door, but our time card backup that we validate is our support to go back to the customer that, we're also looking on these time cards for customer approved signatures. So, the backup we're attaching to the time card was signed by the customer or an approver at the customer at some point. So, it's the support of the invoice for which Madison funded it.
+
+>>Rushabh Sheth	31:36
+Makes sense? Got it, yeah, fairly straightforward. Like essentially on the accounts receivables, you bear the risk of collecting on behalf of your clients.
+
+>>Alden Pelletier	31:46
+Correct, I mean, we're a little protected that we'll charge it back, but it's hard to charge back if the client can't pay Madison either. So, it's all that level of risk.
+
+>>Rushabh Sheth	31:57
+And Alden, if it has been manual, like is there anything that's changed that's driving this urgency? Like, so why shift if it's working manually like so far?
+
+>>Alden Pelletier	32:10
+We know that we could be more efficient, that we would have the potential to scale without hiring additional staff. If we don't scale, we ultimately know that that could lead to head cuts.
+
+>>Rushabh Sheth	32:24
+We don't want that, but we wanna be able to scale without hiring.
+
+>>Alden Pelletier	32:28
+We're also doing some different pricing for 30 day rates. So, if we're pricing at a 30 day rate, our clients are gonna wanna see that invoice go out the door as soon as possible and not have us take three days to get the invoice out the door because we're doing the manual efforts of validating the invoicing, right? So, if we can automate the validation, the invoices go out the door quicker, more accurate. And those are a few of the reasons.
+
+>>Rushabh Sheth	32:59
+Alden, I'll give you some more insight on this. Essentially, what we have realized is that companies who have been manual and going, they find that like, because you don't maintain a checklist on every time. So, because we work with lenders a lot, so even simple things like, for X set of clients, one thing you need to check is the timecard signed. And essentially, since it's not baked into a checklist that someone has to then check off and it's recorded somewhere, we find that when we onboard customers, a lot of the times that they thought they have been doing checks have never been done because there's no trace back or has the signature for, because with us, we can... So, again, like time conversation for another time, but if you sort of take that 80 -20 sort of a rule, take your top five clients and then try to map like what is absolutely required for you to deliver for them, we can build those workflows and the checks can be individualized for those workflows. So, for example, if client one always has, let's say, signed timesheets and client two has some other sort, let's say you're checking like whether the hours always have to be on a weekday or something like that, those sort of checks you can only do once you capture the data. So, when it's manual, you really are not like, you cannot run an automated formula on top of that. So, when you really codify that, you will realize that a lot of these checks, which were primarily someone taking a judgment call on that becomes traceable because you have a case where you can go back and check, which also means that we also see a lot of customers saying that, oh, like, because it's not like, we have set it up, now they have to say, oh, this we have to now like pass it through a human because like, okay, like we were relying on judgment.
+
+>>Rushabh Sheth	34:52
+But like now someone can point saying that look out of this customer, we always make sure that it has to have a signature, but like these five out of 100 or two out of 100 are missing a signature. And that is where like, it becomes very important for us to work with whoever leads your ops team from the get go. Because that's where like, things like the tech, like if your ops team sort of like adopt this, then we have seen that once you do it for let's say, top three, four or five customers, then it becomes like no brainer for them to do it for everyone else.
+
+>>Alden Pelletier	35:28
+Yep. Great. Makes sense.
+
+>>Rushabh Sheth	35:33
+Cool. Then Alden, Mike, we will come back to you on the pricing. And then whenever you're ready, we can yeah, just you're on mute, just need. I hate that. Awesome. Alden, Mike, just wanted to see if we can like set up some time next week for a quick sync up. I'll be, you know, sending you the pricing after checking with the DealDesk team, I think today only to the end of the day. So if you can have a sync up next week, and then decide on the next step from there on that would be awesome.
+
+>>Jasneet Singh Malhi	36:04
+When would you be available?
+
+>>Alden Pelletier	36:10
+I've got Wednesday or Thursday between one and five, I'm open. The other days I'm pretty.
+
+>>mike williams	36:29
+Yeah, I'm, I'm similarly available one to five on on Wednesday, Thursday. There's a period of time in there. I could do one or after 3 .30.
+
+>>Rushabh Sheth	36:46
+Yeah, let's do books.
+
+>>Jasneet Singh Malhi	36:49
+Thursday 30th at 1pm Eastern, does that work?
+
+>>mike williams	36:54
+That works for me.
+
+>>Alden Pelletier	36:56
+Thursday. Yeah, I'm good.
+
+>>Jasneet Singh Malhi	37:00
+I'm just sending you an invite as we speak, you will receive it in your calendar and then you can just accept it so it does not fall through the cracks. And I'm so sorry about the mix up. I'll be sending you the updated pricing today end of the day and then we can meet on Thursday again to see how to take this forward.
+
+>>Alden Pelletier	37:18
+Excellent. Appreciate your time.
+
+>>Rushabh Sheth	37:21
+Thanks.
+
+>>mike williams	37:21
+Thanks, Mike.
+
+>>Jasneet Singh Malhi	37:22
+Thanks all.
+
+>>mike williams	37:22
+Thank you.
+
+>>Alden Pelletier	37:23
+Thank you.
+

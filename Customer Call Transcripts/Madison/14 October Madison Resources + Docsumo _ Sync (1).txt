@@ -1,0 +1,81 @@
+>>mike williams	00:00
+Emailing you so i had another um co -worker who was gonna um who was intending to hop on but he has a fairly tight time frame Um so it might be might be best if um if there's something for us to go over in the in the meantime i'm happy to answer any quick questions Otherwise i think there might be a good uh might be good if we uh schedule another time for some some deeper conversation
+
+>>Jasneet Singh Malhi	00:24
+Oh i'm so sorry uh was was were they like uh coming on the call today and like because of the delay they could not join in Yeah Oh got it so sorry for That Mike I like um my last call ran a little little longer than it was supposed to but uh sincerest apologies for that Yeah
+
+>>mike williams	00:40
+No no worries understandable
+
+>>Jasneet Singh Malhi	00:42
+Right uh so Mike we can do the call as soon as like tomorrow as well uh i'll put some time on the calendar uh And then we can run through the demo but in the meantime it's just wanted to see that since you mentioned that october mid is when you would be more closer towards evaluating and making a decision so are there has there been any other changes to the plan what's the status quo and how do you want to proceed forward Yeah
+
+>>mike williams	01:06
+Um full um i'll give you a full update and rundown I mean we've been going down the road um a little bit as well with with rosam some too um and uipath um definitely a lot um spent a good amount of time with uipath Um So uh pursuing those those options as well But then still um definitely considering um you guys and excited to see see that demo I'd like like you said i think it might be better if we schedule a demo i don't want to waste uh any of your guys time at all so um that way we can get as many um like more eyes on it so that we don't have to repeat or relay too much information pretty bad absolutely different uh Mike so what time would work for you tomorrow i'll reach out to him as well um and see what would be some times that work for you guys uh i can do like pretty much the same time tomorrow as well um and any time from 11 30 a .m eastern or even 11 a .m eastern
+
+>>Jasneet Singh Malhi	02:16
+Uh i'm wide open tomorrow 11 11 a .m eastern to about what time works works for you uh i am open till 2 p .m Oh two
+
+>>mike williams	02:27
+Okay um Okay then best course the action might be um I'll i'll reach out to him I'll find a time in that window um And then we can uh move on from there is there any other information that in the meantime would be helpful to have from me for the demo or anything like that i think we have all the uh you know things from our and from a demo standpoint because i think we've already created that that piece of the extraction and the case management uh only thing i wanted to see is that if you were able to get some clarity on the budget for the project uh just so that i can also you know parallelly run some numbers with my deal desk team and come back to you with some prime pricing for tomorrow's call as well that uh that is still pretty the what the budget is is kind of still pretty open again depending on what it it's able to do um there's there's nothing we're nothing we're not considering i'm definitely I know i've mentioned it to you guys before kind of looking at it in terms of um like if it's if it's the cost of the person cost of two people um and Mike i would have like spoken to you this before about this before as well but how much uh do we have any idea in terms of how much time uh or that dollar value is it taking to do this process manually today uh Yeah So for we know for some uh specific customers we had this conversation a little bit last time um there are some customers that it's it's 12 hours per customer um And then some some it's as brief as two hours three hours um but for some of our our largest and it's um in those higher number ranges right and what does that translate it from a dollar value standpoint um i haven't put it in terms of direct direct dollar values um
+
+>>mike williams	04:24
+Yes um that's a little bit difficult uh because how how stuff gets moved around what that turns into and i i imagine you're meaning in the in the like return like value return element my mind
+
+>>Jasneet Singh Malhi	04:46
+Uh Mike is to kind of understand you know what it is taking today and how much down can i bring it right so to provide you with a clear value driven roi driven conversation so that's where i'm coming from Yeah Because that's
+
+>>Jasneet Singh Malhi	04:58
+Precisely where I can give in my inputs, use some of the industry best practices and see what is the level of automation that we can achieve. Because we should aim to kind of achieve 100 % automation, but obviously 100 % automation is kind of difficult to, you know, get on day zero. So I'm trying to just get to the closest number, 95%, 97%, whatever, what the case might be, to see how soon can we get started and what is the kind of impact that we can create from day zero. So that is where I'm coming from.
+
+>>mike williams	05:28
+Yeah, so, and also as we're looking at this too, what, it's a little bit tricky because some of that time spent is on validation and things that would be difficult to, from our standpoint, would be difficult to automate in this manner. Like there's also those elements of, like the person needed checks of, like, what the following up element of things with some of the approver information and stuff like that. And when things are incorrect, doing the following up with clients and stuff like that. So that's one area of complexity in terms of finding that timing there.
+
+>>Jasneet Singh Malhi	06:18
+Sorry, my connection just dropped off for a minute. It's all right. Yeah, sorry, Mike, you were saying.
+
+>>mike williams	06:26
+Yeah, just that creates some complexity in exactly how much, because we definitely wouldn't be able to, I think even 90 % automation on the grander process of that is not realistic at this time. Like still maintaining how it fits in with other processes and things like that, dependent on some other factors. And I guess we'll be able to see more from the demo, but like in terms of the scope of what we're able to automate there.
+
+>>Jasneet Singh Malhi	07:02
+Absolutely. Not a problem. All right, Mike. So let's do one thing. Would it be okay if I duplicate the same invite to tomorrow for the same time? But if that does not work for you, you can just suggest a new time on the calendar and we can move it around. I just want to kind of have something on the calendar just so that we can, it does not fall through the cracks, if that's fine. Yep.
+
+>>mike williams	07:23
+Yeah, that's all right. Awesome.
+
+>>Jasneet Singh Malhi	07:25
+Let me quickly just duplicate for the same time tomorrow. And I have given you the access to kind of make the changes on the invite itself. So you can go ahead and do that and suggest a new time. Please confirm if you received the invite for tomorrow same time.
+
+>>mike williams	07:45
+I haven't gotten it yet.
+
+>>Jasneet Singh Malhi	07:51
+And Mike, any update on the timeline by when you would ideally want to have a solution like this in place?
+
+>>mike williams	07:56
+Yeah, we'd still be looking to implement sometime in the first quarter of 2026.
+
+>>Jasneet Singh Malhi	08:03
+Got it. So would you ideally be like, I just wanted to kind of get a sense of by when because Q4 is usually very slow because of a lot of festivals, Thanksgiving, Christmas, holidays, New Year break. So just wanted to see that by when is your process to select or contract with the vendor. And then I understand implementation can get started in Q126.
+
+>>mike williams	08:27
+We don't have a hard selection date. Mainly because we just want to, we're kind of keeping that open in terms of getting all of the right information. We don't want a Russian informed decision choice sort of thing. So no problem.
+
+>>Jasneet Singh Malhi	08:46
+And what would be the process after you see the demo and your team sees the demo? Like, do you have a process defined after that?
+
+>>mike williams	08:54
+We're again, we're looking at other other demos and things as well. So then it'll be just internal conversation about like comparisons of what seems to be best fit, like talking about best fit. And then, yeah, we'll definitely, as those things go on, reach back out with any follow -up questions or concerns there. And certainly if we feel like it's going a different way, I'll definitely still reach out and see. Maybe there's something we overlooked, but I'll definitely, either way, over the course of those conversations, I'll be reaching back out as well.
+
+>>Jasneet Singh Malhi	09:37
+I appreciate that, Mike. All right, no problem. So for tomorrow's call, I'll have the demo ready. And again, since here's topologies for today, I do realize that that's not a good experience. Just waiting for the call to get started. But unfortunately, my call might have spent. Perhaps. And I'll also try to...
+
+>>Jasneet Singh Malhi	09:57
+See if i can also run some pricing with my deal desk and get back to you on that uh so just so that you have some idea in terms of what is the value pricing options that you would want uh also you you said Tim would be on the call tomorrow who uh was a co -worker uh that most likely it'll be Alden Pelleteer
+
+>>mike williams	10:18
+Um I'll send it I'll send once we lock down a time i'll send the um appointment over to him as well And then there's another co -worker um Tyler who i will be i'm not sure he's kind of back and forth from being on paternity leave um So we'll see if he's available But um if not it might just be all that i got it awesome all right
+
+>>Jasneet Singh Malhi	10:48
+Uh Mike thank you so much for your time today and your patience really appreciate it And yeah talk to you tomorrow sounds good appreciate it thank you very much thank you
+

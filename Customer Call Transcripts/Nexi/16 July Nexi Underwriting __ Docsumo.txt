@@ -1,0 +1,516 @@
+>>Aniket Tatipamula	00:00
+Has information coming in from Docsumo and what is, you know, what we're seeing, what we need to see and what is incorrect. So when you finish with Liam, we'll do like one sample of an opportunity. Yep, sure. I'll probably take this up at the end of the call because this may take a little bit of time to go through. But what I wanted to show Lazaro is like, we first, we made a quite a big update today. Like the thing that we were working and the thing that I talked about, right, Liana on the Slack messages that will make a big, major update to our extractor. That has been like, partially it has been released on this account. And if you look at it from today's perspective, as in we have, we've been monitoring the account for some time. I mean, most of the documents that has been sent or that has been processed by Docsumo, they're all, most of them are processed. And the ones that are in review are generally because they may not exactly be, like there could be some issue, or like, but these are not major issues. Like these are just minor issues. And in most cases, there's a genuine reason why the document is actually stuck in review. This document does look correct and then we'll go through it, but I'll probably go through other docs. So if you look at the ratio, I think more than 90 % of them are going to be processed right away. And if a document goes to processed, what that means is most of the data or entirety of that document data is perfectly picked up by Docsumo. Because the only way we mark this document approved by default is when we get this opening balance and closing balance matching all the transactions here.
+
+>>Aniket Tatipamula	01:50
+So we take up the opening balance, sum up the credits, subtract the debits, and then try to match it to closing balance. And only if it happens, we mark it as approved. So, and the number of documents that are actually going to processed right now are very high, like you may come across two docs that go to review, but we'll go through a few of the ones that reviewed just to give an idea as to what kind of docs go to review. If I look at, we released it at around eight today, which is 16, eight, yeah. I mean, post that, whatever documents have been going to review are the ones that I'm trying to open. So this went to review. We will, and we have someone actually sitting and checking up these documents. So in this case, no table got extracted. We'll have a look at it. This one as well. This one looks like there's no, this one doesn't look like a proper statement as such. I mean, the data is picked up, but we have to check why the opening and closing balance is not matched. Maybe because there's nowhere as in it's specifically mentioned what's the opening and closing balance is. This one as well, because we would have picked up all the transactions, but there's no opening and closing balance. So it's difficult to, same here, as in you would see the transaction extracted, but there's no opening and closing balance because it's not a bank statement, proper bank statement. Similarly, this one as well, this one as well.
+
+>>Aniket Tatipamula	03:30
+And then again, the transactions would have been extracted. All of them are here, but it's not structured. This one as well. This probably is not a bank statement as such, but if you look at the data, as in we would have extracted most of it, deposit made 3082, 2160, 2780. So I mean, with this new extractor, as in we are fairly confident that most documents would extract the data. And the ones that are stuck or stopped would have some genuine reasons, like even with this much, even with the entire extraction happening, if we can't match the opening and closing balance, we keep it in review. We have one person now at our end who is actually looking into these documents, but his approval may take some process, like 90, 95 % of them. So that was one update on the Docsumo site. Yeah, I mean, maybe we can proceed further. And then I'll probably also talk about what is happening. So what happens is we get, the way this integration is happening is someone sends an email to Nexi. Nexi sends the email to Salesforce, and that email gets forwarded to Docsumo. And every time we get an email.
+
+>>Aniket Tatipamula	04:58
+We create a case here. So the folder that you see in front of me is a case and it has all these files dumped into this folder. And we first classify the documents. So we first check if a certain document is of the email body or is it a loan application and then the, or if it is a bank statement. And post that, there's been a sequence of events that we trigger from Nexi and Oximo that makes this exchange of information happen. I'll not go into the nitty gritties of it, but I'll just open up one of the case that got processed. So if you look at this, there's one application form here. This is where all the data gets picked up for application form. Nexi doesn't use our review screen as such, but we do have a lot of customers who come here and then make corrections. But in this case, I don't think we want that. And if you look at the bank statements as well, in this case, at least all of them got processed. So this means the data that we've extracted from the document, we guarantee it that there's nothing wrong with it. Like each and every transaction has been properly picked up with proper description and proper amount whenever the document is marked approved or a tally is marked as past. So yeah, I mean, that's about it in a nutshell on Doximo side. And then we have this one API that we've created that Eugene has integrated to fetch the summary. So once all of these documents get processed, Eugene sends us, hits this API, and then we send the summary back to Nexi, which is shown on the Salesforce. Yeah, I mean, are there any questions?
+
+>>Lazaro Pages	06:48
+I appreciate the changes.
+
+>>Liana Vinokur	06:50
+Aniket, I saw your note. Of course, we hope that these changes will definitely improve performance of the accuracy of the information. But I think, and we will regroup. I think we should do a call that we had yesterday, maybe a week from now, that we can judge performance. But in the meantime, let's just have the demonstration by Lazaro of what he's finding even before the change. Yeah.
+
+>>Aniket Tatipamula	07:26
+Yeah.
+
+>>Liana Vinokur	07:27
+What's most important to us? Let's do it.
+
+>>Lazaro Pages	07:30
+I have about three files we can review if you'd like. I don't know what's the best way to share my screen here. All right, let's try that.
+
+>>Liana Vinokur	07:41
+And are you guys recording this so we can see the write -up after this? Thank you.
+
+>>Aniket Tatipamula	07:48
+It's on the note taker, so we can send it back to you.
+
+>>Liana Vinokur	07:52
+Thank you, appreciate it.
+
+>>Lazaro Pages	07:56
+Tap to share. Okay, let's go here. Okay, I can see this. Hold on. Let me go. No. Okay, hold on. This isn't the file. I'm not sure. It's not showing my screen, right? It's just showing one tab. Giant tab.
+
+>>Aniket Tatipamula	08:29
+Yeah, it's showing Salesforce.
+
+>>Liam Dionisio	08:31
+Yeah.
+
+>>Lazaro Pages	08:32
+Okay, hold on. Let me see. It's on something else.
+
+>>Lazaro Pages	08:48
+Let's go home. How can I get? I mean, hold on. Sorry, one second here. Okay, so let's look up American. American containers, one example here. Okay, so let's go into the most recent one here. Opportunity. Can you guys see this here? American container?
+
+>>Aniket Tatipamula	09:21
+Yeah, we can see it.
+
+>>Lazaro Pages	09:23
+Yes. Okay, so let's go here. I had input the incorrect data here. So it's showing 55K in May and 13 negative days. So the main thing here is the 13 negative days. So let's go into the May bank statement. So that first account is really nothing. It's just a savings. I mean, we have balances there, but there's no negatives. And then let's scroll down here to the main checking account, which is.
+
+>>Lazaro Pages	09:57
+Is this one, 54 ,000 in deposits. Yeah. I believe the AI read 55. It's off by 1 ,000. That's not a major deal. But the 13 negative days is where, if you see, we just keep scrolling down these balances. I believe there's just maybe one or none here. Let me see. Ok, there's some negative activity here, but it doesn't end negative on the 20th. So that doesn't count. And then two more here on the 29th, but they end that day positive. And that's it. It just ends. So really two occurrences of some negative balances, but the date doesn't end negative. But then it's reporting here 13 negative days.
+
+>>Aniket Tatipamula	10:48
+Yeah, how old is this case, Lazarus? Like, when was this? I remember we made an update. Because initially, we wanted to have, yeah.
+
+>>Lazaro Pages	10:59
+So this file was entered into our system yesterday, July 15. Ok. And yeah, I reviewed it yesterday. And I have two other files that are similar to this, where it's reporting back a high number of negative days, when in reality, it's either zero or maybe just one. And as well as the revenue in other cases, it's reporting something a few thousand dollars off, or that's what I'm in. Look, we can look at another file here. Just let me see. Olive Grove Catering.
+
+>>Aniket Tatipamula	11:42
+Here's another example.
+
+>>Lazaro Pages	11:44
+Yeah, yeah, go ahead.
+
+>>Aniket Tatipamula	11:45
+Sorry to interrupt you. May I know the folder ID? Or can I get some info on this last case? Because it will help me look at the extracts and then look at the summary as well.
+
+>>Lazaro Pages	11:56
+Ok, American Complainant.
+
+>>Liam Dionisio	11:58
+I'm actually adding it to the sheet that we have.
+
+>>Aniket Tatipamula	12:03
+Ok.
+
+>>Lazaro Pages	12:03
+Let me know what specific information you need here, and I'll try to get it on the screen.
+
+>>Liam Dionisio	12:09
+Yeah, the folder ID?
+
+>>Aniket Tatipamula	12:10
+I don't know.
+
+>>Liam Dionisio	12:12
+I'll get it.
+
+>>Aniket Tatipamula	12:14
+Ok, thanks. Thank you.
+
+>>Liam Dionisio	12:17
+No problem.
+
+>>Lazaro Pages	12:20
+Should I go through the other? No, no, it's all right. No worries. No worries. Should I go through the other two files as well, so we can have that as examples?
+
+>>Aniket Tatipamula	12:27
+Yeah, please.
+
+>>Lazaro Pages	12:28
+Yes. Ok, so Olive Grove Catering. For example, here it's reporting in June 16 negative days with an average ledger balance of negative $5 ,000. Ok. And $174 ,000 in deposits. When we go to the June bank statement here, the revenue when you add this up, $153 ,000 plus $7 ,000 plus $4 ,000, comes out to be $165 ,000, where Ai had said $174 ,000. And as far as the negative days, I mean, we can scroll down here. If the balances are here on the right side of the statement, and this one, OK, a couple of occurrences here. It doesn't. Ok, let me see here. $26 ,000. That's one negative, and that's all. So this one specifically just had one negative day. However, the AI was reporting 16 negative days with a negative average ledger balance, which, I mean, it's, oh, this is another thing that this bank statement specifically already lists the average ledger balance here, right under the summary. Yeah. And it shows $5 ,917, and the AI somehow calculated negative $5 ,888. So that's another example. I believe in that one, May is also incorrect. May shows 15 negative days. The bank shows zero. Let me see here. Ok. And then the other file I found, Ashay's home.
+
+>>Lazaro Pages	14:10
+Sorry. Ashay's home. June revenue and negative days are incorrect. It shows here 52K in deposits and six negative days. The banks show zero negative days and $67 ,000 in deposits. Let's look here. Let's open up June. So it's showing $67 ,000, and Ai says six negative days. However, I believe this one has zero negative days. If we look here at the balance activity. Yeah. So kind of the three files are.
+
+>>Lazaro Pages	14:56
+Were pretty similar in the sense of they had incorrect information on the revenue, the total deposits, and the negative days. With that second file, Olive Grove, showing it even calculated the average ledger balance wrong when the average ledger balance was provided in the summary portion of the bank statement, which some bank statements do tend to do. So I'm not sure if the Docsumo AI calculates it on its own. And when it sees that it's provided, it just bypasses it. But that's some of the issues there with the AI and the banks.
+
+>>Aniket Tatipamula	15:41
+We always compute because we cannot be sure about the month. But thanks for pointing this out, Lazaro. I think this helps a lot. Awesome. Is there anything else that you want to show?
+
+>>Lazaro Pages	15:55
+So I just picked out those three for this meeting. And today, actually, I noticed that the little text box was there to input if there's any errors or not. So I've been kind of doing that today with the deals that I've been underwriting.
+
+>>Aniket Tatipamula	16:12
+Ok, understood. Have you been seeing any difference today? Is the number reduced?
+
+>>Lazaro Pages	16:20
+It's hard for me to say if the number has reduced. The same way I found these inconsistencies, I've also seen some that are accurate. So it's not across the board. It's hard for me to put a number, a percentage on it. But it's hard. I don't know if it's 50 -50, maybe a little less. Then 50 -50, it's just hard to put a number on it.
+
+>>Aniket Tatipamula	16:49
+Sure, and then thanks, Zahra, that helps. Just while we are at it, I know that these primary issues are the primary concerns. And I personally think, at Docsimo, we want to just focus on the primary because we want to solve the ones that are more relevant before we go to something that's maybe the secondary relevance that would come soon. So I wanted to talk about a few issues that I want to get a clarification on. These, I understand. One thing that we can do right now is, Liam, I'll share my screen and probably go to one of the folders where we had these issues, right? The one that, let me just open up one and then see if I can see what happens at Docsimo's end. Ok, let me open this up.
+
+>>Aniket Tatipamula	17:46
+Ok, the bank statements did not go through. Let me just check this one. This was the one, right? The tally failed. Let me quickly check this out.
+
+>>Aniket Tatipamula	18:11
+There's one debit here. The rest of them looks correct. 1 ,000, 1 ,000, 90, 135, 1 ,000, 385, 375. Ok, this document looks like this is where it is probably off.
+
+>>Aniket Tatipamula	19:26
+Oh, I think we should not have picked up this, right? Or is this not a transaction, right? I mean, no.
+
+>>Lazaro Pages	19:35
+That looks like a separate sort of account. It's not the main checking account.
+
+>>Aniket Tatipamula	19:45
+So this should not have made a huge difference because it's just 20 -20s at the end.
+
+>>Aniket Tatipamula	19:55
+But that point is also noted. So in this case, the bigger issue that you had observed was negative balance. And I, yeah, it doesn't look like this had any negative balance as well, as you rightly mentioned. So we'll do one thing. I'll probably review the analytics again. Like, we'll review the analytics API just to make sure that we've not missed out on anything that is basic. Because it looks like extractions are not that bad. It may be because the way we are computing the numbers may have caused some of these issues, if not all. And these folders, right? Like, I'll ask someone from the team, and I personally would also go through these specific cases and then make sure that I get those numbers out. Like, at least figure out what is going on. The calculation for negative balance right now is, at the end of the day, if we have a negative balance, we consider it to be a negative balance day. So that should not, like, this should have worked. Average balance is basically, we just get the balance at the end of the day, every day, and then sum them up for 30 days, and then divide it by 30. So one of the questions that we had was, what happens if there was no transaction on that day? So can we assume that the balance remains the same and just sum them up with the same balance and then divide it by 30?
+
+>>Lazaro Pages	21:36
+I believe the average is just not divided by 30, but just an average of all the numbers combined every ending day. And just get the average of that. It doesn't have to be divided by 30. It's just the average of all those numbers.
+
+>>Liam Dionisio	21:56
+Yeah, I believe it's only the ones that have transaction days. So, for example, usually we only have, usually, like, 22 days with transactions. So it should be the average of those days only.
+
+>>Aniket Tatipamula	22:11
+Oh, then I think that is, so our math is wrong then. Because when we read online, it mentioned that you'll have to consider those non -transaction days, too. I'll note it down. So if I'm getting this right, it's not the average of all the balances, but average of only the balances for the days where the transactions happened. So if transactions happened only for 10 days and there were 200 transactions, then we'll consider balances at the end of those 10 days and then sum them up, divide by 10. Is it right?
+
+>>Lazaro Pages	22:48
+No, I don't think it has to be divided by the amount of days. I think it's just you group up those numbers. So, for example, look, if we see here with what's on the screen, you see how the 11th ends and it's $651. Then you go on the last day of the 12 here, the last transaction, $4 ,373. Then you go to the 13th and it is $4 ,445. So you do that for every end of the day, and then you just get the average of all those numbers together. It doesn't have to be divided by how many days or numbers you... Okay. Yeah, you just get the average of that.
+
+>>Aniket Tatipamula	23:34
+Okay, understood.
+
+>>Aniket Tatipamula	23:43
+Okay, that makes sense.
+
+>>Lazaro Pages	23:45
+Yeah, I know there exists things like calculators out there that's like you just input all these numbers into a calculator and it spits out the average to you. So I don't know if that's something you can work into the system Or... I don't know if that's helpful or not.
+
+>>Aniket Tatipamula	24:05
+Yeah, I mean, maybe we can check a few items on the calculator and then tweak our math, because right now the math is based on the logic that I just discussed. So maybe we'll do a little bit of read up and then also share the math with you, because initially the negative days logic was also based on that. And maybe there could be a possibility that if one of the days ends up negative and then you have no transaction for the next few days, we may consider them to be negative balance days. So I assume that's not what you want. Like if there are, if the transaction, if on 10th, the balance was negative, but there was no transaction on 11th, 12th, 13th, 14th, till 15th, we would only consider this as one negative balance day and not five, right?
+
+>>Lazaro Pages	24:52
+Well, in most cases...
+
+>>Lazaro Pages	24:54
+Because if there's no transactions, which it's pretty rare that there are no transactions because if there's no deposits, that's one thing, but there's almost always debits coming out of these banks. At the end of that day, it would still be negative because nothing brought that balance positive. So yeah, that would count as another negative day. But you only count the negative day at the end of that business day. If you see in a bank statement like this, where it's a run on balance on the side and you just see it on every line item is a balance, you have to go to the last transaction of that day. And that's how they ended the day. Yeah. And if there's no transactions on the next day, the following day is still considered a negative day. So that would count. So let's say, for example, on the 11th, they end the negative, then the 12th, they have no transactions and the balance remain negative. The 12th is also negative. So that's two negative days. And then so on and so forth. The 13th, no activity and it remains negative. That's three negative days. Oh, but yeah, you wouldn't count on something like on the bank statement like that. You wouldn't count all the negative markers you see there. You have to count on the last day.
+
+>>Aniket Tatipamula	26:12
+Understood.
+
+>>Lazaro Pages	26:12
+And then a lot of bank statements, the major ones do have the summary at the end of the statement. It makes it a lot easier because you do see every day's end and it points out the negatives right away. Like The Bank Of America, the Chase, The Td Banks, all those banks, it gives you a much easier read on those.
+
+>>Aniket Tatipamula	26:34
+Understood. Understood. Okay. I think I can see the number here. I see that we have sent 30 negative balance days. So we will look into the logic. I think there is some issue here, otherwise, because we just looked at the statement, right? And I think we could not see so many negative balances, even in the data that we've extracted. So we have a balance problem. Okay. So thanks, Lazaro. I think this 100 % helps us and we'll make this correction. Let me look at the other data as well. And there was no issue on Od or Nsf, right? They are looking correct?
+
+>>Lazaro Pages	27:14
+The Nsfs, I didn't really look too into, so I don't really have an answer for you on that one.
+
+>>Aniket Tatipamula	27:21
+Understood. Average balance, in this case, came out to be 554. That was wrong too, right? Like you mentioned that average balance or in this case, average balance was okay, only the negative balance, negative days were wrong.
+
+>>Lazaro Pages	27:36
+I mean, yeah, if it's counting 13 negative days, then the average, then yes, the average would be wrong, completely wrong. Just eyeballing this, just me scrolling through these balances, I can maybe say that an average, something of an accurate balance here would be somewhere between, let me see, somewhere between, it should be somewhere between maybe in between three to $5 ,000.
+
+>>Aniket Tatipamula	28:13
+Understood.
+
+>>Lazaro Pages	28:14
+Just eyeballing, just going through the balances, it should be roughly between that number. And here it reported, the system reported, what, something low, right? Yeah, $544.
+
+>>Aniket Tatipamula	28:27
+It reported quite low. I mean, even I agree that doesn't look right. So okay. Okay. This helps as in, thanks Lazaro, I think, are there any other items that you feel are off? We understood about average balance, we understood about negative days, is there anything else?
+
+>>Lazaro Pages	28:50
+If we go to, let's go to the other file, The Olive Grove, look that one up because that one had incorrect revenue. I just want to know how they calculated that.
+
+>>Aniket Tatipamula	29:01
+Let me just open that up. This is the second one, right?
+
+>>Aniket Tatipamula	29:22
+Oh, these, let me just open up the application form. This is The Olive Grove, right?
+
+>>Lazaro Pages	29:29
+Olive Grove Catering, yes, correct.
+
+>>Aniket Tatipamula	29:32
+But Olive Grove Catering bank statements are not processed from Docsumo. So most likely this client would have been already with you and the data would be from previous vendor.
+
+>>Lazaro Pages	29:47
+Okay. Let me see here.
+
+>>Aniket Tatipamula	29:54
+So it does happen as I checked it with you G It does happen that in some cases you pick up the old data and not the new one
+
+>>Lazaro Pages	30:00
+So yeah, but in this case, it's it's picking up an old. I mean, sorry, not an old. It's picking up a new statement It's picking up May 2025 Which was only provided to us yesterday but I don't think unless I mean is do I'm not sure if we still have the old AI because there is an So this is another thing I noted down there is a Submission here from December of 2024 Let me see something actually from March of 2025 No 24 No, hold on. I'm in the wrong file. Sorry. Give me a second here Olive Grove catering so June it's reporting June 2025, which we received Yesterday And then we have something from May of 2024 But I'm looking at the AI banks of 2024 And I actually wrote here in my notes that this was actually accurate But the 2025 info was not so I'm wondering if in 2024 Maybe we had a different system and it did get it, right And now with the 2025 submission if we're using the doc sumo, I got it incorrect
+
+>>Aniket Tatipamula	31:25
+Yeah, but as in what happens is As far as I know the way Eugene has set it up Like you have to process these files And I can see that these documents they are they are still in classifier So they have not been processed yet So there's a system that stops bank statements from being processed if you already have that So do you want me to process it and check this out?
+
+>>Lazaro Pages	31:49
+Um, yeah.
+
+>>Aniket Tatipamula	31:50
+Yeah Let me These all are bank statements We'll have to wait for a few minutes as in maybe we can go to the next one and then come back here
+
+>>Lazaro Pages	32:08
+Yeah The next one is called Asha's home a a s h a y
+
+>>Aniket Tatipamula	32:21
+This is also not processed actually leather like this is also Only application form is processed the dog of the bank statements are not processed This is it right? This was the application as chase.
+
+>>Lazaro Pages	32:50
+Yes So my question is how was it input into the our banking information? Was it with a different AI?
+
+>>Aniket Tatipamula	33:02
+No, I think only Eugene would be able to answer that
+
+>>Lazaro Pages	33:05
+Oh Right Because in our sales force we do see it We do see the numbers on the in the sales force I'm just wondering how it picked that up
+
+>>Aniket Tatipamula	33:17
+Yeah, we would have to probably check with you again because I've seen a lot of such applications where the bank statements are not processed so there's Would be a likelihood that either the old data was picked up or I'm not so sure like what happens Yes, it's a pretty strange
+
+>>Lazaro Pages	33:38
+I'm not sure either I'll note it down so that I'll discuss this with Eugene.
+
+>>Aniket Tatipamula	33:44
+I'll probably also note down these I'll not process this specific case because I'll discuss this with Eugene while I show him this
+
+>>Aniket Tatipamula	34:21
+And While we are at it as an I had few other questions that I just wanted to quickly circle back So I just showed a few documents that were actually not Bank statements, but they were screenshots So just wanted to check like what should we do with them like because they don't have account number or bank name So how should we process them while we are generating the summary in the case of like a month a day?
+
+>>Lazaro Pages	34:52
+Date screenshot?
+
+>>Aniket Tatipamula	34:53
+Yeah, the ones with the screenshot. This, I think, is still a bank statement.
+
+>>Lazaro Pages	34:59
+Yeah, this is a bank statement.
+
+>>Aniket Tatipamula	35:03
+This one as well.
+
+>>Lazaro Pages	35:04
+So no, this is not a bank statement. That was a decision logic month to date. It's not a screenshot, but this is a form of gaining access to the bank account without having to sign into their bank account. So through a third party, it shows us the transactions. I believe this one is decision logic, if I'm not mistaken.
+
+>>Aniket Tatipamula	35:32
+But this is a very strange bank statement because we were not able to make sense out of the data.
+
+>>Lazaro Pages	35:38
+Right, right. Yeah, because it's not an official bank statement. This is a third party form of a month to date. So I mean, with these things, I'm not sure with these things what's the best way to really read this. This would have to be the way we do it. We add it up manually. I know on the top, some of these have a summary. If you scroll up, I think there's summaries up here. You see up here in the summary part, it shows you deposits, 894. Gives you an available balance.
+
+>>Aniket Tatipamula	36:19
+Yeah.
+
+>>Lazaro Pages	36:19
+Yeah, yeah. Gives you the withdrawals, all within the range of what it's reading, which I believe this one is. The range is just July, I believe. I'm not sure. We have to scroll down to see July 16. And when does it start here?
+
+>>Aniket Tatipamula	36:38
+July 1.
+
+>>Lazaro Pages	36:39
+Got it. Oh, no, Yeah, it's reading up to June 26. So between that time, yeah, it added up all those, all the deposits. And it puts it up summary on that top part.
+
+>>Aniket Tatipamula	36:55
+Understood. Understood.
+
+>>Liam Dionisio	36:59
+I have a question, actually. I think you mentioned before that the AI would pick up only the data for the specific month, and then it would combine those data if they appear. Like, for example, if the cycle of the advanced statement ends somewhere middle of the month, not end of the month. So like, for example, if one has April 15 to May 15, so when the data is extracted, it would separate them. It would get May 1 to May 15 only, and then get the rest from the next bank statements. Is that how it does it?
+
+>>Aniket Tatipamula	37:43
+Yeah, we merge. When we make an API call, we get all the bank statements that we are supposed to consider. So we merge all of them, and then group them by month, and then compute the analytics on top of it. So if someone sends from May 15 to June 15, and then June 15 to July 15, then we'll merge all of them, and then we'll generate one for May, one for June, and one for July. So the May and the July one would be 15 days, but the June one, although it was split into two statements, we will send it for an entire month because we look at all the data at once. Does that answer your question, Leon?
+
+>>Liam Dionisio	38:30
+Yeah. How do you feel about that, Lazaro?
+
+>>Lazaro Pages	38:34
+I mean, it could get complicated. Let's say we won't have full information for the most recent month, right? So for example, this month, if we have a statement that's June 16 to July 16, and you count the June, and then you only give us, I mean, it will still be accurate, but you can't put July full revenue just yet because July is not done. I don't know if there's a way in the system to just put it as the bank statement listed. So if there is a bank statement that's like May 15 to June 15, maybe in the summary portion of that AI, you can just list it like that. You can list, this is the revenue between, you know, May 15 to June 15.
+
+>>Aniket Tatipamula	39:22
+We can do that.
+
+>>Lazaro Pages	39:23
+I mean, that logic is - I think that's easier because then you can just read the information on a statement and not have to, I feel like it starts to get complicated when now you have to go to another statement and calculate that and make sure it cuts off on the right date. And it just sounds like it's more complicated when you can just reflect what the statement is already saying And we have a full picture. So at the end of the day, it is half a month to another half a month, but it gives us a solid 30 days of banking information. And we can see -
+
+>>Lazaro Pages	39:51
+See that just like every month as a 30 -day. I think it's less complicated to not have to split it up.
+
+>>Aniket Tatipamula	40:02
+Ok, that is perfect, Lazarus. And I have one follow -up question on that. Because what we do is, let's say if you give us a couple of bank statements of two different accounts, and we do tend to merge them. We look at which account is what and merge them. Do you want us to do all of that, or just treat each statement independently? You saw the screenshot, right? So do you want three entries for each of the screenshots or each of those PDFs, or do you actually want one, or one for all of them merged into a single one?
+
+>>Lazaro Pages	40:40
+No, so if there's two different bank statements with two different bank accounts, it'd be perfect the way it is right now, which I believe it separates both and it gives us data on both accounts. We shouldn't combine the two accounts. I mean, we can do that ourselves looking at it or manually, but it could complicate if you combine everything and make it look like it's one major. But I think right now the way it is, it's fine, right? You guys do separate it per account number. And you display the revenue for each account number. I think that's the right way to go about it.
+
+>>Aniket Tatipamula	41:21
+Perfect. But the thing is, if, let's say, in cases like this, where we actually don't have any sense of the account number, like because there's no account number here, right? So what would you want us to do? Like, do you want us to just share the data with some dummy account number?
+
+>>Lazaro Pages	41:40
+No, scroll all the way up. It should have, sometimes it should have the last four digits of the account number up here. Let me see. In this case, it does not. So scroll down. Let's see if at the end, or let's see if at the end of the, sometimes at the end also, it might have it. In this case, it does not. So here, yeah, no need for a dummy number. But maybe, I don't know, leave it blank, maybe, if that's an option. Ok. Because sometimes there is only one bank account for the business. So we will automatically assume that a month -to -date like that is the same account. Given that it's the same bank account, given that it's the same type of transactions we saw in prior months, and he only operates a one bank account, we assume it's the same account, if we don't see an account number here.
+
+>>Aniket Tatipamula	42:38
+Understood, understood.
+
+>>Lazaro Pages	42:39
+It can get complicated if the merchant has two or three different accounts, and we only have one of those screenshots without a number. And now we're like, OK, which one is this? But we wouldn't know until we actually have that account number.
+
+>>Aniket Tatipamula	42:54
+Yeah, understood. And if, let's say, they provided two screenshots, and both could be of different bank, different account number. But if they have not mentioned it here.
+
+>>Lazaro Pages	43:06
+You see how this one, sorry to cut you off, but you see how this one has the last four digits? A lot of these month -to -dates will show it like that.
+
+>>Aniket Tatipamula	43:16
+Yeah, understood. Ok. So we can use this as an info, and?
+
+>>Lazaro Pages	43:21
+Yes, yep, that is the last four digits of the account number. And that's on, actually, the most important part is the last four digits of the account number. So any document that you see that, you know, a month -to -date or something like that, and you see the last four digits, that's all we need right there to match it.
+
+>>Aniket Tatipamula	43:39
+Understood, understood. Ok, screenshots. And with bank statements, as in it's completely understandable on how we can extract. But when it comes to this, do you want it to be separate? Like, because if you look at these, like there are only two or three transactions, and we cannot write a different logic for both. Like, whatever logic we'll have to keep, we'll have to keep it for both of them. So if we don't match the screenshots, then you will also get three different entries for it. Would that work?
+
+>>Lazaro Pages	44:15
+I don't really understand the question.
+
+>>Aniket Tatipamula	44:17
+Yeah, so you just mentioned, right, like a little while ago that you would want to see summary, bank statement by bank statement, and not actually merge them into a single, or not try to consolidate them for a single account. Let's say it's an account, but we still have three statements. And the thing that I talked about between May, June, and July, right? When you have 15 days. So for that, the only way to do is, do would be like, for two statements, we provide you two different summaries, which we get.
+
+>>Aniket Tatipamula	44:50
+Can do, but if those two statements were two screenshots, so the amount of data that would be in that screenshot would be two less. So would that work out for you?
+
+>>Liam Dionisio	45:04
+Yeah, I think what he's trying to say is if they send two months of bunk statement into one file.
+
+>>Aniket Tatipamula	45:16
+Not two months, as in something like this. Let's say for this case, there were, I guess, not even this, this looks quite good. Just check this image. Yeah, this image, right? Like, this image, do you want us to generate one summary for this image, or would you want us to combine images?
+
+>>Lazaro Pages	45:40
+Yeah, OK, I see what you're saying. So when there's multiple snapshots, right? Because sometimes I'll spend a month to date on this with multiple screenshots, right? I think in the case where it is a month to date, where it's in the current month that we're in, and I think, yes, we should group all these deposits into one showing, one viewing. You shouldn't put, if there's five screenshots, it shouldn't be five fields of, it should be one field of the total amount of revenue, if there's a way to do that.
+
+>>Aniket Tatipamula	46:12
+Understood. We'll figure something out, and we'll get back to you with logic. I think now I understand what you are looking at. Ok, I think this helps. Let's go back to that document which we put for processing. Let me just open that up.
+
+>>Aniket Tatipamula	46:41
+Yeah, we just, this was it, right? The one that we kept for processing?
+
+>>Lazaro Pages	46:51
+American container, yes, this is one of them.
+
+>>Aniket Tatipamula	46:56
+No, not this one. I guess we did process this one. It's still getting processed, so one of them got processed. Just open this up.
+
+>>Lazaro Pages	47:09
+Let's see.
+
+>>Aniket Tatipamula	47:14
+So this is for month of May. Let me just get summary for it.
+
+>>Aniket Tatipamula	47:31
+Yeah, so this is it. So average balance is $8 ,783. Days with negative balance is zero.
+
+>>Lazaro Pages	47:41
+Ok.
+
+>>Aniket Tatipamula	47:44
+I think we do have average balance here somewhere.
+
+>>Lazaro Pages	47:46
+Yeah, it's right there. You see $8 ,900? Yeah, and it's a little bit off, but.
+
+>>Aniket Tatipamula	47:54
+Yeah, but it's in the neighborhood.
+
+>>Lazaro Pages	47:55
+Yeah, yeah, see, it did it correctly. If it's off by a couple hundred, it's still, it's the same average. And it picked up zero negative days, which in my notes, I believe that's what I have too, zero negative days.
+
+>>Aniket Tatipamula	48:12
+Yeah, yeah. So this one, I think this one, I don't see there would be any issue. The document would be processed for sure. I guess it's because of the, like, I don't know how this document processing itself logic works. So I'll check with Eugene on why it did not work and how did he actually populate the data. And then we will find the answer for these kind of cases. For others where I know for sure, like we are making a mess, I'll personally look into it with my team and then fix those.
+
+>>Lazaro Pages	48:49
+Awesome, yeah, no, that sounds good.
+
+>>Aniket Tatipamula	48:52
+Yeah. Yeah, Lazaro, I think that's it from my side. And if there are more issues, do please let me know and we'll do our best to fix those.
+
+>>Liana Vinokur	49:01
+I think this was a very productive call. Thank you so much. I'd like to do more of these. Maybe, Liam, next time you go, you find a couple of opportunities that we have a bottleneck on that you can showcase on the Katrin team.
+
+>>Liam Dionisio	49:22
+Yeah, sure, the problem is I can't join Google Meets on my computer, so I'm not able to share it.
+
+>>Lazaro Pages	49:34
+For the, I heard you mention you might want to schedule something for next week so we can see how the updates have been going for the week. Throughout the week, I'll just be selecting some files as well, and if I see something so we can show for next week.
+
+>>Lazaro Pages	49:49
+And see how the process and how the updates have gone.
+
+>>Liana Vinokur	49:53
+Great. Thank you, Lazaro.
+
+>>Liam Dionisio	49:56
+I guess I'll just give the files also.
+
+>>Lazaro Pages	50:00
+Yeah, yeah, definitely.
+
+>>Liam Dionisio	50:01
+Notice too, to Lazaro, so that he can show it.
+
+>>Lazaro Pages	50:05
+Yeah, yeah, let's do that.
+
+>>Liam Dionisio	50:05
+If you see anything, yeah, Liam, let me know.
+
+>>Lazaro Pages	50:07
+I'll let Lenny know too.
+
+>>Liana Vinokur	50:09
+Yeah, and we decided to keep the issues log going, Aniket. Yeah. Liam, if you could finally just enter as you have been doing, and Lazaro, you could tag him. Yep. So we can keep looking at the type of issues, right? Hopefully, we get the bank statements cleared up and any other type of in -between issues. Even on emails, I saw some examples where we're not able to extract the information from emails. So let's keep going with the issues log. And I think just showing you the screenshot, or this live screen, I think is very helpful, if you agree, Aniket.
+
+>>Aniket Tatipamula	50:57
+Yeah. You mean the one that where you get to see the document data? Is that what you're saying?
+
+>>Liana Vinokur	51:02
+No, like what Lazaro was showing you right there inside the bank statement, where we're looking versus where Ai is looking. Yeah.
+
+>>Aniket Tatipamula	51:14
+Yeah. I did discuss this with Larry Eugene, saying that if we can, Yeah, if we can quickly, like, because all of these documents can be opened from Salesforce as well, just like how you are opening the document, as in we can generate a shareable link that can be opened anywhere, like you don't have to log into Docsomo. I'm not so sure, like, whether there was some discussion between Eugene and Boris on it. So I'll circle back on that, because if that is possible, I think a lot can be solved, because you would finally come to a conclusion that there's no issue on the extraction, but the issue probably lies on the code that we have written to convert this data. Because if that is the case, then it's much easier to solve, because it's just a map, or it's just a piece of code that we'll have to correct, or a piece of logic that we'll have to look at.
+
+>>Liana Vinokur	52:09
+Okay, that sounds good, promising. Do you want to schedule a call yourself with Boris and Eugene and talk this out to see what's blocking?
+
+>>Aniket Tatipamula	52:21
+Yeah, I'll do that, Eliana. I'll probably take a couple of more days fixing the issues that I already know of, and then have a call with Eugene and Boris about this.
+
+>>Liana Vinokur	52:32
+Good. And, Liam, you said you were not able to get on Google Meet. Maybe we can do a Teams call, Aniket? Do you guys have Teams?
+
+>>Aniket Tatipamula	52:43
+Yeah, I guess I'll probably create a Zoom link, if Zoom works.
+
+>>Liana Vinokur	52:48
+Okay, so Zoom works. Yeah, perfect. There's nothing like pointing out, and hopefully we don't have that many to point out, but, Liam, I saw some email problems and other documentation problems. I think it's good to show live environment.
+
+>>Liam Dionisio	53:11
+Okay, I'll see if I can find issues like that moving forward so that we can showcase them.
+
+>>Liana Vinokur	53:19
+Is it okay if we just call you, Aniket? We have a time crunch, so we're going to have to move on and not spend too much time and wait. Is it okay if we just call you and share the screen?
+
+>>Aniket Tatipamula	53:33
+Yeah, I mean, it's like any time, as long as I'm awake. I'm generally awake till 12 a .m. Indian time, and if I'm awake, I'll come on the call. You can directly ping me on Slack, and then I'll be out there.
+
+>>Liana Vinokur	53:49
+Okay, well, you and Liam are closer than we are, so time zone, you're a little bit better.
+
+>>Liam Dionisio	53:55
+Yeah, yes.
+
+>>Liana Vinokur	53:58
+Okay, very good. This has been very helpful. We'll look out for improvements, especially in the log, and we'll get together again next week.
+
+>>Aniket Tatipamula	54:08
+Yeah, thanks, Liana.
+
+>>Liana Vinokur	54:10
+Thanks, everyone.
+
+>>Aniket Tatipamula	54:12
+Thanks, Liam.
+
+>>Liam Dionisio	54:12
+Thank you. Bye -bye.
+
+>>Aniket Tatipamula	54:14
+Thanks. Bye -bye.
+
+>>Lazaro Pages	54:21
+Awesome. Thank you, guys. Have a good one, guys.
+

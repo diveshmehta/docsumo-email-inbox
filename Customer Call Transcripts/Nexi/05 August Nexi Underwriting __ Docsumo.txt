@@ -1,0 +1,240 @@
+>>Aniket Tatipamula	00:00
+Yeah, I don't think the underwriting team will be joining for this call, so Because Liana just messaged that I'm not sure whether we have issues or maybe they want to take more time to list the issues and then come back But for today, I don't think there are any issues to discuss okay, so does that mean we don't need a call
+
+>>inga pross	00:26
+Or
+
+>>Aniket Tatipamula	00:28
+Yeah, I mean If there's no issues to discuss and the only other items that I had Boris as a new hat that reply to email issue We fix that And then we've made one release that allows you to Send like while you are making an email you have an option to Enter what it should reply to so basically there's one more field in the in the metadata And if you send it we will reply back on that email ID
+
+>>Boris Teper	01:00
+Oh, that's for the the These just why we get an email saying there's an issue with the with the file, right? Correct.
+
+>>Aniket Tatipamula	01:09
+Yeah, because we now send it back to the same email But if you send it to reply to as and then we'll be sending it back to the reply to email
+
+>>Boris Teper	01:17
+So we have to add the reply to on in the portal
+
+>>Aniket Tatipamula	01:21
+Yeah, okay So that was one the second issue that like I've been noticing is in a lot of cases We do extract everything properly, but I see Liam mentioning that Like there's there's no data in the in the top So I'm not so sure like what is the cause of it because I went through the issues and I Looked at the extraction. It looks perfect, but Liam would have put it in the And it's mainly happening on email body As far as I know so for lender details and sometimes we do not fill up the Salesforce section Hello
+
+>>Boris Teper	02:09
+Yeah, we have to ask Liam. I don't know. I'm not familiar with the issue
+
+>>Aniket Tatipamula	02:14
+Yeah, I have messaged Liam. I have messaged. Let me just check if Liam can join the poll. Just give me one second I have messaged him And there was one last issue that I wanted to discuss this was around Mapping of Weekly daily, I I guess I just need to check What are the keywords that we are mapping on Salesforce and based on that will make a small fix because right now we do pick up the text as is so if on the Table or if the user specifically marks a week Then we pick it up as a week rather than just weekly So we can do that mapping based on How The code has been written, so I think we need Eugene for that and then if I get that answer We will make that fix on the extraction
+
+>>Boris Teper	03:22
+Yeah, yeah, so you take the air Eugene. I'm gonna run into a play Yeah, okay
+
+>>inga pross	03:31
+We honor to join the call just so that we can all be on the same page She said that she has to cancel the meeting, but since you have questions Aniket I think it's better if she joins so that we can all be aligned Okay, if she's joining the call now. Yeah, I just spoke to her Okay, sure
+
+>>Aniket Tatipamula	03:53
+No, thank you While we are at it like are there any more issues that we are observing And then we've been making Some fixes every now And then I hope the platform is much more usable right now Yeah, yeah,
+
+>>Boris Teper	04:17
+I would know Because she's going off changes Yeah, and I posted one one question for the for the application that didn't didn't get any data from What was the issue there
+
+>>Aniket Tatipamula	04:37
+Yeah, we looked at the issue so And we figured out the problem So what happens in some cases the document the Pdf is editable So you can actually edit the Pdf and in those cases, I think we are not able to pass the PDF properly. It's
+
+>>Aniket Tatipamula	04:54
+It's completely issue at our end. Nothing to do with the extraction, as in it's for the entirety of Docsumo. Something like that comes our way. We are omitting the field values in it. So the team is looking into it, and we are figuring out how to fix it.
+
+>>Boris Teper	05:11
+Yeah, that needs to be figured out, because one broker is constantly sending the same disamplications on the same tool. Yeah.
+
+>>Aniket Tatipamula	05:20
+Sure, Boris, we will get that thing fixed.
+
+>>Boris Teper	05:22
+Ok. Hi, Liam.
+
+>>inga pross	05:32
+Did Liana join?
+
+>>Aniket Tatipamula	05:36
+I cannot see her quite yet. No, she did not. Liam, while you're at it, thanks for joining. Sorry for the confusion. Liam, there are a few instances where you mentioned that the lender details are not getting populated, and I can see it on the document that the extraction has happened. So can you open up and show any one of those so that Boris can have a look at it?
+
+>>Liam Dionisio	06:12
+Using my phone, I don't have access to Google Meet on the computers. I won't be able to show my screen.
+
+>>Aniket Tatipamula	06:20
+Would it be possible to share the packet information? Yeah, the loan information.
+
+>>Liam Dionisio	06:28
+I think I have the document IDs here in the documents.
+
+>>Aniket Tatipamula	06:37
+Yeah.
+
+>>Boris Teper	06:37
+What's the name of the opportunity? I can share my screen. Just tell me the opportunity name.
+
+>>Liam Dionisio	06:44
+One is Add Jobs Willie.
+
+>>Boris Teper	06:48
+A -A -T Jobs, A -A -T?
+
+>>Liam Dionisio	06:50
+A -D -D Jobs Willie, W -I -L -L -i -E, L -L -c.
+
+>>Boris Teper	07:01
+Add Jobs, one word?
+
+>>Liam Dionisio	07:03
+Yeah, add and then space Jobs, and then space Willie. This was from yesterday.
+
+>>Boris Teper	07:17
+Add Jobs Willie, OK, let me share my screen. Can you see my screen? So we're looking at opportunity from yesterday? Yes. Ok, so where do I go? Which bank statement?
+
+>>Liam Dionisio	07:41
+This is not the bank statement. This is the notes, the submission notes. They provided balances there, but they did not go to that tab.
+
+>>Boris Teper	07:54
+Bluerock, Epic Olympus, and that tab. Bluerock. Were they designed manually?
+
+>>Liam Dionisio	08:02
+Yeah, if you open them, it would show that I created them instead of the AI.
+
+>>Boris Teper	08:07
+Yeah. Ok, so the issue, the AI didn't recognize the balances from the email, right?
+
+>>Liam Dionisio	08:15
+Exactly.
+
+>>Aniket Tatipamula	08:17
+It did, Boris. I just opened up that document, and I saw the extraction happen. So we need to check what went wrong here.
+
+>>Boris Teper	08:26
+Hold on a second, I think we have a JSON. No, these are bank statements. That's just a signed wire, and they didn't. So you have that, and they didn't enter the debts, right? So we have debts here, bank. I don't see the document, but the debts.
+
+>>Boris Teper	09:03
+So then I'll have to check with Eugene if he recognized the debts and why they didn't enter the debt section. Yeah.
+
+>>Aniket Tatipamula	09:16
+Maybe the webhook got missed. So I'll check with Eugene again. I'll have a look at it as well. The extractions happened, I looked at it personally. I mean, it could majorly be that the webhook got missed, either at Nexie's end or at our end. So I will check both of them and then figure out what went wrong.
+
+>>Boris Teper	09:36
+Ok. Yeah.
+
+>>Aniket Tatipamula	09:39
+Hi, Liana. Hope you are doing good. You're on mute, Liana.
+
+>>Liana Vinokur	09:51
+Hi, I thought we were going to reschedule because our underwriters.
+
+>>Liana Vinokur	09:53
+Are very much working on a lot of proposals right now And yeah if you want to showcase something we're keeping a list of the issues on a Cox let's do this next week surely another talks for us thanks we've already discussed the issues that I wanted to discuss with Boris
+
+>>Aniket Tatipamula	10:16
+And I think usually they're on the call just went through a few of them I don't think there's anything else left at my side
+
+>>Liana Vinokur	10:26
+I just wanted to get a feedback like if everything is working fine if there are any more things that we have to do I think they're putting in the issues in the log Liam how do you see this from your perspective so far the issues that I've been encountering are similar the the balances are not being picked up and automated in the death tab
+
+>>Liam Dionisio	10:51
+So we just showed one earlier when it comes to the bank statements I'm not seeing as much issue compared to before so the balances in the email are still wrong they are not actually being automated so I had to enter the manually
+
+>>Liana Vinokur	11:17
+And I can't what do you how do you see this why are we still having problems with emails Yeah
+
+>>Aniket Tatipamula	11:23
+So you know that that's what I was checking as in if the extractions are happening at our end the problem is mainly the sinking we need to figure out what is going wrong from like like after the extraction the data has to come to salesforce we figure out like what is going wrong that's the issue not the extraction itself because when I open the document in Doc Sumo and then I can see all the data in it And I think Liam also like has a look at has looked at few documents and he could also see the data so the data does exist in the in the extraction
+
+>>Liana Vinokur	11:55
+But why is it not making it to a Salesforce I mean the fact that it's in Doc Sumo does not help us Yeah
+
+>>Aniket Tatipamula	12:04
+I mean that for that I think we need to discuss with Eugene there could be a possibility that because it's these are all integrated using the books so if in case of a book got missed that could be the possibility very unlikely though But we will have a look at it like what's going wrong either there could be a possibility that the code would have broken somewhere or it could be our book actually getting lost so we'll investigate both of them and prepare a fix for it Okay
+
+>>Liana Vinokur	12:31
+You're aware of this
+
+>>Boris Teper	12:33
+Yes I just found out just now But yeah
+
+>>Liana Vinokur	12:39
+Yeah let us know right away and because if you seeing that something got broken on our side and it's preventing information from being loaded into Salesforce you should ring me a lot
+
+>>Aniket Tatipamula	12:49
+Yeah okay
+
+>>Liam Dionisio	12:56
+Anything else Liam on your side there's there's one that involves Nsf it says it's already fixed I put it in the document so it's 10 0 Nsf But there's a lot of Nsf's on that particular file Liam can you please share the folder ID let me quickly check that out I have the the Doc Sumo file it's a file I'll send it to you via slack
+
+>>Liana Vinokur	13:30
+Yeah give me a second let me just open that up this is just one this is the document where it's in because the extraction looks perfect so this is for the month of July you go to page 13 and 14 you will see a long list of overdrafts and return charge there so those are overdrafts page 13 and 13 to 15 there's a lot of $35 charges and those are all overdrafts and Nsf's
+
+>>Aniket Tatipamula	14:52
+Return, check, charge, return, check, charge, let me just click on that. They're all marked as overdraft Nsf. I think it should, because we've marked it as category, right? Can you check this? So yeah, very unlikely that it would have not picked up. Give me one second. Let me just check the API itself. In the meantime, Lian, would you be able to refresh it again, reload the data? Ok.
+
+>>Liam Dionisio	15:30
+I got an error, Docsumo account summaries disappeared.
+
+>>Liam Dionisio	15:52
+It says Docsumo account summaries are empty. Some docs have either errored, or I wasn't able to catch the last word.
+
+>>Aniket Tatipamula	16:00
+Yeah, I'll check that out. So for this specific document, it does say 27 NSFs. So the API looks good. Let me quickly check.
+
+>>Aniket Tatipamula	16:57
+Oh, the documents are still getting processed, as in Lian. I don't know why.
+
+>>Liana Vinokur	17:02
+Was it just, oh, there's something wrong.
+
+>>Aniket Tatipamula	17:08
+As in this was uploaded to 12 .50, 12 .47. We'll check this out, Lian, but then this case has been uploaded quite a long time back, right?
+
+>>Aniket Tatipamula	17:24
+We'll check this out. I think something is going wrong on this specific case. But the extraction is not wrong. I mean, the extractions are perfect. But if you can see, a couple of documents are stuck in processing. We'll check what happened here. I'll ask my team to check. Ok.
+
+>>Liam Dionisio	17:41
+That's it for me.
+
+>>Aniket Tatipamula	17:50
+Then we'll have a look at it. I think the rest of the issues regarding debts, we'll have a look. I'll sync with Eugene, and then have a look at it. I guess these are the only two issues right now. Apart from the one that Boris mentioned, as in which has to do with the application form, these are the three issues that we look at. Anything else?
+
+>>Liam Dionisio	18:16
+That's it for me.
+
+>>Aniket Tatipamula	18:19
+Thanks, Lian. Anything else, Boris?
+
+>>Boris Teper	18:23
+No.
+
+>>Aniket Tatipamula	18:25
+Yeah, thanks, Boris. I guess that's it.
+
+>>Liana Vinokur	18:31
+Follow -up, follow -up.
+
+>>Aniket Tatipamula	18:35
+Hello?
+
+>>Liana Vinokur	18:37
+Yep, I think that's good, Aniket.
+
+>>Aniket Tatipamula	18:40
+Yeah, sure, I'll keep you posted with all of these issues. I'll again message it on the group as and when we fix it. So I mean, the team knows what is the update.
+
+>>Liana Vinokur	18:52
+Ok, sounds good. Let us know if you're not getting what you need from Eugene.
+
+>>Aniket Tatipamula	18:58
+Sure, thanks, Lian. Thanks, Inge, thanks.
+
+>>Liana Vinokur	19:01
+Thank you all.
+
+>>Liam Dionisio	19:02
+Thank you.
+
+>>Boris Teper	19:03
+Bye -bye.
+

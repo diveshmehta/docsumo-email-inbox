@@ -1,0 +1,597 @@
+>>Bikram Dahal	00:02
+I'm good. I just had to run some errands just to make the meeting extra fun.
+
+>>Jarl Arntzen	00:23
+I'm just going to try to switch off your video feed because I'm just connecting via mobile.
+
+>>Bikram Dahal	00:37
+Anyway, so I'll just do a quick introduction. I think I have two more people on the team, like Divesh and Sivam. Can you guys do a quick introduction and then we can move to the heavy setup and also we can discuss about other things that Gerald and the team has put on the setup.
+
+>>Divesh Mehta	00:57
+Sure, sure. Hey, hey, hi. I'm Divesh. I have joined Osumo very recently in the last two months and I'm one of the product managers here who will help build the kind of solutions that will help Semain achieve what they want to achieve. So I'm on this call to learn more about how you guys do it with Abby and ensure we can also do everything that they do and plus more. It is not as complicated as that.
+
+>>Shivam Kumar	01:26
+Hi, I'm Sivam. I'm also one of the PMs here on the call to just understand a bit more about your workflows.
+
+>>Jarl Arntzen	01:36
+Yeah, yeah.
+
+>>Bikram Dahal	01:38
+So the call you can take it simply like on the agenda side, we didn't have, I think we're still waiting for the data set. So like that one, we'll take that as a separate conversation and so on. So like today, we just wanted to see the current Abby setup that you guys have and then what are the challenges that you guys are facing And then we can discuss about. We also are developing a few things on the workflow and everything, which I think will make your life easier, which will show a few things towards the end. But first, let's start with your current Abby setup, talk about the challenges, talk about the problem that we could do better or if they don't have some feature that we could add that feature And then we'll finally show you a few things we are developing and also our plan towards that.
+
+>>Jarl Arntzen	02:23
+Yeah. All right. Yeah. So regarding Abby Flexicapture, just an introduction, right? So you know where we're coming from, right? Yeah. First of all, we've had Abby Flexicapture for a long time, right? Half a decade, six plus years. It works quite well for us. We have a team of operators who make manual corrections. This is something that happens with any type of invoice capture system. Overall, we are, I would say, when it comes to the Flexicapture invoice capture part, it's decent. It's doing well enough. However, I'll get more into depth about each point later on, just as a few headlines. I would just like to say that when it comes to administration, we have to do quite a lot of workarounds. This is due to our volume of suppliers and customers, really. Okay. So Abby Flexicapture is really intended to work best for a single customer, and we have 200 customers.
+
+>>Jarl Arntzen	04:11
+Abby FlexiCapture works well if you only have one single or five or six single business units or clients, if you will, that receive invoices. We have several thousand of those. So this has led to quite a bit of workarounds when it comes to administration. By the way, this is a Windows app that was clearly made in the early 2000s, and so on, so the thing is, I don't think we want to have something that replicates what Flexicapture does, but it has a
+
+>>Jarl Arntzen	04:58
+Few strengths that we would like to explore in your product. You would have to suggest how this can be handled in your product. I would also like to add that in DocsUMO, for Flexicapture, we spent a lot longer time setting up Flexicapture to a decent state. This has been, I wouldn't say a breeze, but far easier in DocsUMO so far. You just have to know that you're winning already. It's not like we want to continue with Flexicapture anyway. You just have to know that. We have a very positive impression of DocsUMO. Now, it's more down to small or important details. Also, we want to establish what are the averages over 10 ,000, 20 ,000 invoices? What is the average operator time need? On average, do you need an operator for one minute per invoice or five minutes or more?
+
+>>Jarl Arntzen	06:43
+That's the variable part of the cost. Then there's the fixed cost, which is your fee per invoice. Again, when it comes to the variable cost, that's the unknown part. That's why we need to run a certain volume through your system in order to get not only averages, but reliable averages, which we can multiply up to our real volume. I would say that finally, throughout the years, we have passed, I think, barely short of 1 million invoices through Abi the last three or four years. That's about 4 million invoices through Abi or Flexicapture. We have a lot of experience using it. When it comes to the things that we would like to continue to have from Flexicapture, I think basically it's maybe two categories of functionality. One is supplier identification, and the other one is validation.
+
+>>Jarl Arntzen	08:23
+When it comes to the validation part, sometimes we need to compare several different fields. I've already done this in Flexicapture, and it seems to work fine. We also need to check some algorithms on some other fields that also seem to work really nicely. Then we need some help to do a bit of branching logic, I think. Depending on, say, for example, the invoice nationality, we should expect to find some particular fields for Norwegian invoices, and we should expect to find other fields for Danish invoices, for example. For those two nationalities, we expect to have one check some algorithm for some fields, and for another nationality, we expect to have a different set of validation algorithms for some other fields. That's the type of branching logic I'm talking about. For example, in Norway, we have something called Kid. In Denmark, they have something called FIK. In both cases, it's payment identification. It's a long number.
+
+>>Jarl Arntzen	09:57
+Number. And we just need to run different algorithms depending on the nation. But we can also imagine a case where we just run all the algorithms on the same number. And if at least one of them passes, then OK, we approve the number. That's also possible. Right. So we're not completely dependent on identifying the nationality of the supplier. But it's just nice to know. Right. So I would say that's when it comes to validation. That's probably where we have tried many solutions in or we have tried quite hard in Flexicapture to get this right. And we've been able to get it right. But then we have these workarounds, which means it's very hard to apply this across all the clients and the suppliers. So that's something I think you can help with quite quickly. So I just wanted to mention it in the beginning because I think we have, you know, multiple possible solutions. And as long as we can get in touch with someone on your side who has a reasonable experience in this type of branching logic, then we are good, I think.
+
+>>Bikram Dahal	11:47
+Ok. Yeah, that makes sense. Sorry. I know it totally makes sense. Like we apply it to both requirements. And then there's one question that I have regarding the supplier. But I'll come to that in a minute. Generally, you can continue. I'll come back to supplier. There are a few questions that I have regarding how they work in Appian and what are the problems that you guys are facing. So I'll come to that. I'll put a pin on that. I'll come to that after you finish your explanations.
+
+>>Jarl Arntzen	12:17
+Yeah. So back to the supplier. So I'll just explain briefly how that works in Flexicapture. And the thing is, so Flexicapture has a very tolerant system. They can sort of.
+
+>>Bikram Dahal	12:43
+Sorry, I know you told me that you are on mobile, but is it possible to share also a screen and show it on every getting the supplier thing? I know you'll explain it really nicely. I can understand and everything. But for the rest of the team and everything, if that visual clue might be a bit better. Right. So if possible. Otherwise, like that is also fine if it's not possible. But if possible, can we share the screen and see that those things are easy for them to visualize it?
+
+>>Jarl Arntzen	13:11
+I don't know how to visualize. I mean, we can look at an invoice just for reference, but I don't. So the thing is, I don't have the Abbey setup station installed on my computer now. Even installing it is a local app. It's a total hassle to do it. And we have to have some activation server running And we have to deal with the firewall and stuff like that. So it's yeah, it's been too long. Sorry about that. So I'm just looking. Maybe I could share. Yeah. So the thing is, I want to not share too much from Flexicapture because again, we really don't want to replicate that system. But I'll share an invoice so I can point to certain features in an invoice. So we're all more literally on the same page. So just one second. Let me see if I can get this to work. Share, share, share.
+
+>>Bikram Dahal	14:24
+One quick thing for Sivam and Devesh, regarding the validation and everything, Monoj already has a very detailed feedback. The team has sent one of the examples, excellent and everything. So Monoj, can you please share those documents with Sivam and Devesh so that they have a complete context about what we already have and what might need further improvements?
+
+>>Manoj Racherla	14:45
+Sure.
+
+>>Bikram Dahal	14:47
+Ajay, you can go ahead.
+
+>>Jarl Arntzen	14:48
+Yeah. If I could just complete the.
+
+>>Bikram Dahal	14:53
+Yeah.
+
+>>Jarl Arntzen	14:54
+How does this work, really?
+
+>>Jarl Arntzen	14:57
+I'm not used to this Google Meet thing. But anyways, you can see the invoice here, right?
+
+>>Bikram Dahal	15:07
+Yeah.
+
+>>Jarl Arntzen	15:10
+Pen text. Hang on. Okay. I'll just try. Okay. I can't even scroll it now. But anyways, so I'll just briefly explain what Flexicapture does to identify a supplier, right?
+
+>>Bikram Dahal	15:33
+Okay.
+
+>>Jarl Arntzen	15:34
+Yeah. So what we do in Flexicapture, we start by uploading a giant table of all known suppliers, right?
+
+>>Bikram Dahal	15:47
+And one thing on general, that is for one station or do you guys do it for all the stations at once? Because you guys have more than 200 different vendors, right? I think service center is what you guys use the terminology. So does each and every service center have their own CSV supplier list or that is more than made into one master list? Yeah.
+
+>>Jarl Arntzen	16:09
+So if we want to use Flexicapture terminology, we have a project that's equivalent to your document type, if you will. Yeah. More or less. Or the entire setup here, I would say. That's a project. So the thing is, because this is a local app, right? Wonderful app from the early 2000s. So of course, being what it is, it means that it's actually possible to corrupt a project, right?
+
+>>Bikram Dahal	16:50
+Yes.
+
+>>Jarl Arntzen	16:50
+Or break it completely. So we have to take regular backups and regularly we have to restore from backup, right? So we can only have a certain number of suppliers per project. Okay. After that, we have to split the product or duplicate the project, right? And split the list of suppliers. And now we have two separate projects and we have to keep updating.
+
+>>Bikram Dahal	17:19
+Jail, I think we can hear me.
+
+>>Jarl Arntzen	17:24
+I hear you.
+
+>>Manoj Racherla	17:26
+I guess.
+
+>>Bikram Dahal	17:29
+Ok, give me a second. Let me just see it.
+
+>>Bjørnar (Semine)	17:34
+All right. Ok.
+
+>>Bikram Dahal	17:39
+Can you hear me?
+
+>>Bjørnar (Semine)	17:42
+Yeah, I can hear you.
+
+>>Bikram Dahal	17:44
+Ok, can you guys hear us there?
+
+>>Bjørnar (Semine)	17:46
+No, I texted him just now.
+
+>>Bikram Dahal	18:24
+Yeah. When the general is joining, I think we can also discuss about the ticketing system. So on the ticketing system, can you help us a bit more regarding what is the expectation so that we can let you know? Oh, I think Jai is back. So let's continue that. We'll talk about the ticketing system that you have put on the masses after the end.
+
+>>Jarl Arntzen	18:48
+Sorry about that, Bhakti. No problem.
+
+>>Bikram Dahal	18:51
+Yeah.
+
+>>Jarl Arntzen	18:53
+I'll try. I'll share again.
+
+>>Bikram Dahal	18:54
+Yeah. We were talking about a project being very large and getting corrupted. So you have to split that into two different projects. Yeah.
+
+>>Jarl Arntzen	19:01
+I mean, of course, I can tell you a lot.
+
+>>Bikram Dahal	19:14
+I think we cannot hear him again.
+
+>>Bjørnar (Semine)	19:23
+Yeah.
+
+>>Bjørnar (Semine)	19:38
+Just quickly while we wait for him to come, I can just explain. So I had a talk with Jarkko earlier today. In terms of the cases that he wants to describe and give you guys, it's just he said it's a little bit hard to kind of describe it. It's in R.
+
+>>Bjørnar (Semine)	19:55
+Excel sheets online, so it's more like if you have like a ticket system where we can put in a bit more description maybe some photos Elaborate a little bit. It would be easier easier to give you the Edge cases and problems we're facing today Really, I totally agree because I think sometime you might need to it as our picture
+
+>>Bikram Dahal	20:15
+Sometime you might need to do a link and everything. I understood that so Manoj and Anivi Can you guys look into I know we have Protango also and we have like Clickup also on Clickup also project and like we can give to the customers and make sure that they only have access to that project and this one so kind of quickly have a talk with Visal once And I'll see we cannot use readme because it means a public so we want it to be private So let's figure out something that is that we can use either Protango or ClickUp and provide the required access to the Cementing
+
+>>Nidhi Vichare	20:49
+So, yeah,
+
+>>Bikram Dahal	20:50
+Okay. Sure. Like I will make sure that we go through that And then I'll get back to you with the systems Thank you
+
+>>Jarl Arntzen	21:02
+Yeah, hello again.
+
+>>Bikram Dahal	21:04
+Yeah, right
+
+>>Jarl Arntzen	21:06
+Yeah, I've connected to power now, so it will work a little bit better Yeah, Okay Yeah, long story short we go regarding flex capture and Supplier identification, right? So each table we upload it to a project And then we have to upload the project It's you like very often. It's five five gigabytes of data packed into one object It's terrible. We should be able to sync it through the API But we are not able to do that. Blah blah blah, you know It's it's it Sort of barely works, right? So this this admin part is really a weak part of Flex capture So the capture part itself is reasonable right And and your capture is you know At least as good I would say right, Okay so the only thing So I'll get back to the capture thing, but when it comes to the Supplier I don't think identification the way they do this they take this Huge They they collect all the words from the invoice page, right?
+
+>>Bikram Dahal	22:30
+Okay
+
+>>Jarl Arntzen	22:31
+And then they try to find the entry in this huge supplier table, which has the most equal You know name street address Phone number email address That number bank account number, etc, etc That you can also, you know find Anywhere on the page, right?
+
+>>Bikram Dahal	23:00
+Okay
+
+>>Jarl Arntzen	23:01
+Yeah, so basically, you know, um They they pick the supplier from our list Okay, that is Has the most matching um Fields or content if you will from the invoice And the good thing about this just to start with the good thing. Yeah is that it is. Um, It's very tolerant to low quality invoices, okay, right from suppliers who don't even Give their Bank account number or anything like that, right? Yeah, it's just a supplier name maybe And then a street name and a country Maybe Yeah, that's all we have to Work on right? So that's the good part, right?
+
+>>Bikram Dahal	23:55
+Yeah
+
+>>Jarl Arntzen	23:55
+The bad part is that it's not deterministic Right. Okay you can If and we've experienced this multiple times if Combinations of week or combinations of Sparse data from our Erp system Sparse data from this invoice means that if two suppliers share the same street name, for example Yeah They get mixed up quite a lot Okay, so Both are on say uh Main street, right? Yeah, but they're totally different suppliers Yeah, and execute things that oh, it's it's on main street. So yeah, it's probably this one So I mean That's just one of the weaknesses, right?
+
+>>Jarl Arntzen	24:54
+Right?
+
+>>Bikram Dahal	24:55
+Yeah. On this setup, so when you do a match, you cannot decide, I just want to match the name and let me set some ID and bank. It will automatically match all the information or can you choose and say that, OK, just match the address, just match the name. And if the Fuzzy Match is 90 percent, then only so. Can you do that kind of setting or that is not allowed?
+
+>>Jarl Arntzen	25:20
+Yeah, I mean, you can do stuff like, for example, you want the bank account number to match exactly. Yes, of course. And then you want to have a bit of Fuzzy Matching for the supplier name, right? Because, of course, the supplier may decide to write their name on the invoice in a slightly different way than it's stored in the database and stuff like that. So you have that kind of distinction. However, it's a bit hit and miss still because you can have an invoice where the bank account number is entirely correct and you would expect that to be identified immediately. But then it chooses to go with the supplier name and street address instead. It's something which works most of the time. And that's, of course, really annoying because that means you have to double check all the time. So that's the background. It's not that Flexcapture is especially good, but it's just reasonable. So I could describe the system I would rather like to have. It's a suggest your way of doing this, of course.
+
+>>Jarl Arntzen	27:01
+But we could have envisioned some kind of multiple passes, right? For those cases where we try with high precision data first, we try with bank number, bank account number, that number, right? If those match, then we can conclude that, yeah, this is really likely to be this particular supplier, right? And then there's no point in going further in trying to identify street names and stuff like that, right? So that type of extraction is something where, from your perspective, all you have to do is just to make sure that you extract bank account number, IBAN number, or the VAT number. That's all you have to do. Because as soon as we get at least one or two of those, we do the rest of the job inside Zemina, right? So from your perspective, that's all you need to do. And we can just look at one example here. Here's the bank account number. It's in Norway, that's 11 digits. And here's the VAT number or organization number. In Norway, that's nine digits. The last digit is the check digit.
+
+>>Jarl Arntzen	28:44
+So that depends entirely on the preceding eight or ten digits, right? And I've also implemented the algorithm to check this in, I think I did tip number, I'm not sure. So that works, right? So that seems to work. So already at this point, it seems like Docsumo is doing a better job. So again, this is a high -quality invoice with high -quality data. It's high -precision data. Iban, BBAN. Bban is just basic bank account number and so on. So all good, right? Then later on, we will see that and we'll try to get some examples of that. And I guess we have a lot of those. We will see kind of low -quality data, right? Where we only have
+
+>>Jarl Arntzen	29:54
+The supplier name or you know, and it's not even spelled the same way and We have to do some normalizing before comparing it or stuff like that, right?
+
+>>Bikram Dahal	30:05
+Okay, so
+
+>>Jarl Arntzen	30:06
+So This is something we'll have to return to but I'm just giving you a heads up that we have you know as you know, we have both high quality data on the invoice side and Data on the invoice side And it's it's also the same on the supplier list Yeah supplier list sign, right? We have Some like sometimes we have very low quality data on that side as well. You know, we only have name for example But that's kind of our problem. So so as long as you can extract reliably, you know Thank you number Ivan number that number and also supplier name and so on then we're good
+
+>>Bikram Dahal	30:52
+Okay, but that's it. Sorry one quick thing on this and those to check up you're going to bring in a B You guys also want to do that like check in and oxymoron Like because one thing you told general is that as long as documents are the very good extraction That check might happen on cement side. I just wanted to get that confirmation like what is expectation? Like you guys will be able to upload that supplier list we do the extraction we also We also like come Do the matching and then for those that are not match Then there's a way to select those information over here. So I want to understand like that part of like what is a requirement?
+
+>>Jarl Arntzen	31:30
+Yeah, Yeah Yeah, so I would say the ideal is yeah, that's We just do the matching on our side
+
+>>Bikram Dahal	31:42
+Okay Yeah so if there's a mistake then what happens because one of the thing about Doxomo is also that and also like A quietly you guys are doing it on a B
+
+>>Jarl Arntzen	31:52
+Then I'm like up your point to that pushes being done on a B right or like that matching path or not The matching in in flexi capture a bit Then the matching happens on the flexi capture side.
+
+>>Bikram Dahal	32:08
+Yes Okay, it happens in plexi capture and also you guys also do it one more time or like We we kind of double check it, right? Okay, you do on both the places.
+
+>>Jarl Arntzen	32:18
+Yeah, okay, So so Matching or a better word would be maybe identification. But yeah matching is probably a good word So so the matching happens on the in flexi capture the matching happens on the flexi capture side, but then we double check the result when it comes in and if the supplier Doesn't exist in The customers supplier list then, you know, we it still shows up as supplier supplier not found Okay Supplier rather and do guys go and update that like example you find that one of the one of the supply
+
+>>Bikram Dahal	33:05
+It's not identified. Then you send that information to the customer customer says that this is a new vendor Then do you guys go to Abby and add that into that list of the supplier or like what or that part? Yeah, like only that part done.
+
+>>Jarl Arntzen	33:18
+Yeah, that's that's like that's more or less how it's done But you have to know that since all these steps are manual Yeah, the the Lag time here is to could be one week. It could be four weeks
+
+>>Bikram Dahal	33:37
+Okay.
+
+>>Jarl Arntzen	33:38
+Yeah, because this our customer has to manually enter this into the ERP system The ERP system has to sync with our system We have to do this export of this giant table we have to manually import that into the Flexi capture projects And then we have to make sure that the project doesn't break or corrupt Yeah, and then we have to finally upload the project. So, you know one two, four weeks after Supplier has been added then So this is you know, it's it's not scalable at all, right? It's it's a pretty weak system
+
+>>Bikram Dahal	34:17
+Yeah and this ERP that Because you have so many different customer the air piece are different or all of the majority of this around Sap Majority of this are on with books or like what is the majority of ERP this people are using?
+
+>>Jarl Arntzen	34:30
+The earpiece we integrate with our Yeah, it's it's around ten different ones, okay, we also have SAP But It doesn't really matter Because any information that we
+
+>>Jarl Arntzen	34:54
+Say, if we want to give you a supplier list or something like that, right? We do that through Semina directly, right?
+
+>>Bikram Dahal	35:03
+Yeah.
+
+>>Jarl Arntzen	35:04
+Because even though we connect to 10 different ERP vendors, then, you know, we do the integrations.
+
+>>Bikram Dahal	35:11
+Yes.
+
+>>Jarl Arntzen	35:12
+Right? So you don't have to deal with any of those.
+
+>>Bikram Dahal	35:17
+Okay. Makes sense. And on the Semina system that you guys have, like, that is built on top of, like, it's built from scratch, or like, what is that built on top of?
+
+>>Jarl Arntzen	35:29
+Semina?
+
+>>Bikram Dahal	35:30
+Yeah.
+
+>>Jarl Arntzen	35:31
+Our system is built from scratch.
+
+>>Bikram Dahal	35:33
+Yeah. It's built from scratch, and it's like, so just trying to figure out, like, on the side, like, it is built on React, or, like, it's built on any, like, what is it?
+
+>>Jarl Arntzen	35:43
+Oh, right. Okay. React. Yeah. And the front -end is Agile. No, it's Agile. I mean, Angular. Sorry. Angular. Front -end is Angular. Yeah.
+
+>>Bikram Dahal	35:54
+Okay.
+
+>>Jarl Arntzen	35:54
+Back -end is C -sharp, regular SQL.
+
+>>Bikram Dahal	35:59
+Okay. Yeah.
+
+>>Jarl Arntzen	36:00
+I mean, we used to have MongoDB back in the days. We used to use Vue back in the days. We were not able to utilize that really well. Mongodb turned out to be fast, but slightly unreliable, so we couldn't use it. Yeah.
+
+>>Bikram Dahal	36:18
+Okay. Makes sense. Now, let's finish the thing that, like, we understood the thing about the software ID. We understood the thing about the validation, about improvements and everything. Let's talk about other improvements. Then I have a few questions regarding the current system that you guys have, Semana and everything. So, I'll come to that in some time, and Andres will also show some things up, like, regarding what we're working on to make sure that a lot of this setup can be easier, or you can do more complicated setup. We'll do it in a minute. But I would love to get more information about what are the other pain points that you guys are facing that it would be good to have on Docsomo. We can go to that point, and then we'll come back to these two other points. Yeah.
+
+>>Jarl Arntzen	37:03
+Again, just regarding the supply identification, I think, like, what I said initially about the high quality and the low quality, I expect the high quality to work really well, right? Yeah. The high quality data, right? And then we may need to try out different strategies for the low quality data, right? So, I think I have a good, or kind of a question that I want to pose immediately, which is, we have around four or five different ways of submitting an invoice to you, right? So, it's a bit similar to your system, right? You can upload manually, right? Or you can submit it via API, or via email, right? It's very similar to your system. So, of course, we have to get back to this. But my point is that when someone uploads an invoice, right? We know already at that point, we know a little bit of the information.
+
+>>Jarl Arntzen	38:41
+The supplier is not doing the uploading, typically, right? Our customer is doing the uploading, and that means that we can assume that the supplier is one of the suppliers that's already registered, or in the customer supplier list, right? So, we can narrow down, we can scope down the number of suppliers from all suppliers to only the ones that apply to this particular customer. So, this is something we'll have to get back to, but it will be very interesting to see if your system can identify low quality data suppliers based on name, for example, without knowing beforehand the list of possible suppliers. But if we have to help your system a little bit by giving it the list of possible matchers, then I'm just saying that that's something we can do.
+
+>>Jarl Arntzen	39:51
+Something we can probably do.
+
+>>Bikram Dahal	39:53
+Yeah, so there are two ways of doing it. We'll go into questioning everything. So we have a way for you guys to send that information on the API side only. Because on your side, you guys will get information from different sources, but at the end of the day, more likely that information will come to Docsumer through API only.
+
+>>Jarl Arntzen	40:12
+All right?
+
+>>Bikram Dahal	40:12
+And when you send the information on the API, you can send the doc metadata, that is what we say, with that API. So you can send, okay, this is a supplier, and just use this supplier to filter out your list or something like that. Or this has this additional information, I want those additional information to be used for using certain validation and everything. So those rules can be written using the workflows and everything, which is, like, quite a bit can be written using very Python code, which is not that great, but the best thing is currently building the workflow, which will make it very easy to do those things very easily, right? So the best way to handle it is, like, if you guys already have that information, then there's no point of, like, us trying to figure out the information. It's similar to document type. So one of the things that happens with a lot of customers is they already know the document type, but we have auto -classifier. So they want to use auto -classifier to figure out if the document type is correct or not. But if you already have a document type and you are confident that this is correct, then we ask them to, like, not try to use AI classifier, because, like, even if it is 99 % correct, then 1 % will cause more issues, right? So in this case, we do the same thing. Like, if you guys already know this is a low -quality software and you are confident, we can do it. But if you know that people will make a mistake of five times out of 100 times, five times people make a wrong choice. So it's better for your system to figure out, because your accuracy is going to be, like, 99. Accuracy of people manually doing it is going to be 95. Then we ask them to use the AI system. So, like, that is something that we can determine during the, like, implementation phase, either to, like, not provide us that information, and we do it because our system is better. Or we say that, okay, this system is already, like, your classification is always better.
+
+>>Bikram Dahal	41:53
+Like, let's use that system and let's not do that extra one more computation on our side. We can decide based on, like, how the number looks like.
+
+>>Jarl Arntzen	42:00
+Yeah, yeah, Yeah, good. So what I'm trying to highlight now is not, so, again, it's just that I think we need to try out different methods, right, for the high quality, medium quality, and low quality. And what I'm saying is that we can offer additional data, a list of possible suppliers, for example. We can offer essentially anything you want or need. And I think my main question is, can we, with any invoice, can we, and you have already answered this, but as long as we can submit additional parameters to guide or to switch logic on and off in Docsumo, then this seems very nice, right?
+
+>>Bikram Dahal	42:48
+So we have something called Doc Metadata. You can send it as a JSON. We usually prefer it as a JSON because then you can add whatever parameter you want, and that can be passed into our system and then can be added back to Azure Field, can be added back to run a different system, different rules and everything. So those systems are already inbuilt. Currently, it's really hard to do it. Like, it's doable, but hard to do it using some code, but like, anyway, Devesh will show you. Like, we are making that and putting it in the workflow so that you can easily go and make that block and write that code and see how it affects and everything. So those are doable, but we're even making it even better, easier, so that those things can be configured by the customer only.
+
+>>Jarl Arntzen	43:32
+Yeah, right.
+
+>>Bikram Dahal	43:36
+I know we're at the end, like, because we only have 15 minutes and Devesh also might want to show a few things. One other thing that I wanted to understand was there were two things that you had written on that chat. One was regarding converting various data format into a standard. I think we have talked about this in past also. So like, as long as we are able to figure out the countries and everything, I don't think this will be that big of a problem because we handle multiple customers and everything. So we'll get back to you on that. And if you guys are facing some issue during setup, let us know. We'll just work with it and make sure that this is fully robust because this is an Nfa code only. And so, like, that should not be an issue. And same thing is with number. I will also make sure that, like, once we get that sample set that you guys are looking into, like, we'll make sure that we have a very robust system in place, that, like, even for us is good because we need to convert that into a very standard format for our storage and everything also because I cannot have comma in a number format because that would break the whole system. Or have a two different document type, which is what we don't want at this time. So both for date and for number, of, like, we already know the requirement that you guys have. Once we receive that sample and everything, we'll make sure that if we have a little bit of more logic and everything, those things are done so that you have a very robust system.
+
+>>Bikram Dahal	44:51
+With like complete predictability and like not that it will work sometime, it will not work the next time.
+
+>>Jarl Arntzen	44:57
+Yeah, and it seems like, you know, I think you have actually done some work here because I tried to make my own logic to clean the different amounts And then I just chose number without any logic and then it seems to be, you know, it seemed to work actually. So it seems like at least this format here, one space and then comma, then that works directly. So that's probably fine. Yeah, let me see if I can. Yeah, I mean, I had a step for cleaning. Yeah, but I just skipped it. And then it seems to work. So, yeah, what's more important now for us? Yeah, it's num formats, it's day formats, it's identifying the customer, it's identifying the supplier.
+
+>>Bikram Dahal	46:09
+The country is also like, just to make sure that the format and everything can be figured out based on that country because I think if I want to figure out the country and currency, it solves a lot of problem on this formatting and everything.
+
+>>Jarl Arntzen	46:20
+Yeah, so I can give you my logic, which was simply to remove everything that's non -numeric And then just divide by a hundred.
+
+>>Bikram Dahal	46:34
+Oh, okay, that's a good one. But like, don't invoice sometimes have a bit larger like decimals or they don't have a decimal at all because we have seen those cases.
+
+>>Jarl Arntzen	46:47
+Yeah, this is assuming that they only have two decimals, yes, they have sometimes three decimals. So that will break completely, yes.
+
+>>Bikram Dahal	46:57
+Yeah, I think number ended, like I said, like you might feel a little bit of issue, but we'll make sure that once you get that larger sample and everything, number ended, I'll make sure that you don't have any issue because we have handled a lot of complicated case and everything. So we'll just make sure that those things are added into that logic. Even all logic that we have, it is already good enough. The only one place where it will fail at the point logic of number, and it's a feature, not a bug, is that if you just have a comma separated, then it will work like perfect. You don't have to do anything. Like it's a dot separated or comma separated, no issue. I'm talking about decimal, okay? I'm on decimal. If it is a dot separated or comma separated, it will work like a charm. If it is space separated, it will work like a charm. The place it will fail is that if the thousands have dot and decimal has comma, then that system fails. Because like that system is a bit tricky to handle and that is also because of low quality document because sometimes what happens is the comma is added as dot and everything. So that is what I'm looking forward to getting that bigger sample so that we can fine tune that logic because we know that that can be always replaced. It's not that difficult to replace, right? So we'll get back to you on this one and then we'll figure those out. I think, like I said, number and date, we'll make sure that once we give that larger sample, you should not have any issue.
+
+>>Jarl Arntzen	48:21
+No, no. Initially, I just started on a different algorithm, but I'm not trained in Python, so I don't know how to write Python. But the initial algorithm was just to start from the end of the number, then just move one character at a time, and then if you find a comma, you know the decimal sign, right? And then you can, the rest of the numbers to the left, you can just remove anything that's not a number because now you know what's the decimal character, right? As soon as you know the decimal character, you can disregard the rest, really. And then as a bonus point, right? If you do it that way, if you start from the right hand, you also, in most cases, you will get to know how many decimals there are, right? But it has a weakness as well. But yeah, anyways.
+
+>>Bikram Dahal	49:29
+Daru, like I said, thanks for your logic and everything.
+
+>>Jarl Arntzen	49:32
+We'll look into that and everything also, but we'll make sure that's - Yeah, I would also like to mention one more thing that I've done. I'll do this in writing as well. Right, so my point is that, okay, when it comes to AI, right? Language models, stuff like that. I like it, of course.
+
+>>Jarl Arntzen	49:50
+They are really useful. They're really nice. Only problem is they're based on probability. So they are not deterministic. And that makes it a bit bad again. So what we want to experience ideally is that if I take the same invoice now, right? I take 10 copies of that invoice. I upload those 10 copies on the same invoice. I should see exactly the same extraction every time. 10 times, right? No difference. And so I try this. I've only done it three times. So it seems reasonable. It seems good. There's not the usual randomness I've gotten from, for example, chat -tpt suggests slightly different structures and blah, blah, Blah every time, right? So I'm not getting that type of randomness. So that's really good, right? I think when it comes to Docsumo itself, the tool, the editing here, I wasn't really planning on touching on this, but I have made some screenshots and stuff like that. So I think the issue I have with the current tool is the generate and run functionality.
+
+>>Jarl Arntzen	51:30
+It's actually, for me, that's really good because I have no real training in writing Python code, right? So that's really good, right? So just keep that. But I've seen when I make my own custom code and I try to run it in this case, in the validation block, right? Yeah. Everything is fine. I run it. It does what it's supposed to do. Then I make some custom code in the calculation block. But now the problem is that when I run that custom code, this validation block regenerates.
+
+>>Bikram Dahal	52:16
+One thing, I cannot do one thing. Can I go to custom code right now on this?
+
+>>Jarl Arntzen	52:22
+Yeah, I'll say...
+
+>>Bikram Dahal	52:24
+And open that? Now we have added that run button so that it will not... If you just click that run, then that will not be regenerated. You can make the changes and everything, it will not regenerate the code.
+
+>>Jarl Arntzen	52:39
+No, no. And that's fine. That's fine. But the trick is here, right? The trick is here. If I run this one now.
+
+>>Bikram Dahal	52:45
+Yeah.
+
+>>Jarl Arntzen	52:48
+Okay. Okay. So now it's... Okay. I think it was only a day ago or something.
+
+>>Bikram Dahal	52:54
+No, no. This feature was added after your feedback last time. It was added on... I was able to send you an email. There are two features we added. This is a new feature that is added. There's one more feature that is coming up that is important. For example, what is happening right now is you cannot just edit this code using Prompto. Sometimes what happens is that the code is really good, but you can change it. You can always go and change. That is good. But you can also add a small thing on the prompt, and it will just modify the code, not give you a very new code, but just take that block code and do one level of modification.
+
+>>Jarl Arntzen	53:22
+So that is also important.
+
+>>Bikram Dahal	53:23
+So that part, that feature is not here. We'll also be adding that feature and everything. But right now, if you use the run on the bottom side, then it will just run what is there or changes that you have done in there.
+
+>>Jarl Arntzen	53:36
+Yep. Yep. All right. It's all good. Yeah, it's all good. No problem. I'll get back to the other issues that I found.
+
+>>Bikram Dahal	53:45
+Yeah, sure.
+
+>>Jarl Arntzen	53:47
+Yeah.
+
+>>Bikram Dahal	53:49
+Some of this... Oh, one more thing. I think, Gerald, because you wanted to try it out. I think we have done it. So I just wanted to show you it. If you go to the table, please, can you go to table, like line, like... Yeah.
+
+>>Jarl Arntzen	54:00
+No, sorry.
+
+>>Bikram Dahal	54:01
+Sorry. Yeah. Can you click on that table? On the table only. So you have a... Can you click on that?
+
+>>Jarl Arntzen	54:11
+Like this?
+
+>>Bikram Dahal	54:13
+Yeah. So if you click on that gear icon, so on table, you have a gear icon, right? Okay. Yes. Now, can you continue once? Yes. Now, do you remember you guys had tried out... This is not required for general invoice. So for now, general invoice, you don't have to do any of this setup and everything. But for that complicated metrics kind of invoice, I had sent you some documents regarding how it was set up. So like this is how it was set up. So this is also added into the product. So you can make a copy of this document type. Just go over here and play with it. You can just put some example on the...
+
+>>Bikram Dahal	54:49
+On the very bottom, it has some prompt and everything, and you'll be able to convert that complicated table into the format that you need.
+
+>>Jarl Arntzen	54:57
+Okay, got it. Yep, nice.
+
+>>Bikram Dahal	55:00
+There are other features also you did. I could not send you the video because the team that made a video used a document that had a Pii, personal PII information. So like we could use it.
+
+>>Jarl Arntzen	55:11
+Yeah, yeah, no worries, no worries.
+
+>>Bikram Dahal	55:13
+So as I see making that video, so that like I will send you detail about all the improvements that we have done on this table.
+
+>>Jarl Arntzen	55:21
+Yep, nice. Yeah, that's really good. So yeah, I also look forward to learning more about how to apply different sets of logic depending on say nationality or supplier, right? So we know that from one particular supplier, we have to do this and this, for example, or to do some kind of automatic detection, right? Of whether this table is a matrix table or not.
+
+>>Bikram Dahal	56:01
+Yeah, yeah.
+
+>>Jarl Arntzen	56:04
+So I look forward to play around with that.
+
+>>Bikram Dahal	56:06
+Okay, so like that one, like Divya's, I think we're towards the end. I think Divya will show you something that we have done. It's not currently on the product. There's a way to do it, but it's more complicated. We'll make sure that, I know, Zeyral, you are really easy to work with because you are an engineer. So like, even if it is complicated, like you'll be able to handle it. So like we'll send you those material separately, but Divya will also show you what we are developing that will be ready in next six to eight weeks that you will be able to play. And I think that will make your life even far easier for all of these companies, rebranching and everything. Right, so I'll leave it to Divya to provide his feedback. And we'd love to hear your feedback, Zeyral, on this one, like what we can do to further improve it.
+
+>>Jarl Arntzen	56:46
+Yeah, no, thanks for the feedback and thanks for the quick response, I would say. I think, you know, you're also very easy, very responsive to work with. So I look forward to, you know, doing more of this development. And I think I would also like to say that, I mean, what you've shown so far, right? For example, the matrix table extraction, right?
+
+>>Bikram Dahal	57:14
+Yeah.
+
+>>Jarl Arntzen	57:14
+You know, only based on that, you've beaten Flexicapture already, right? Yeah. You just have to know that, right? You know, this is something we can do in Flexicapture, but it's very hard, it's very finicky, it's very, very hard to generalize. And already based on your small demo, it seems like, I mean, you're doing a much better job, right? I think based on our experience, my experience throughout the years with different types of extraction systems, blah, blah, blah. I think the key often is that it's, many times it's very easy to implement one feature, right?
+
+>>Bikram Dahal	58:07
+Yeah.
+
+>>Jarl Arntzen	58:10
+But I think at least the stumbling block that I've found quite many times is that, we still end up, many times we end up with a manual step because we have to help the system understand what it's supposed to do before it does it, right? So I think maybe this is where you can probably stand out a little bit because you can probably, you know, have some level of automation where we don't have to manually indicate that this is a matrix invoice, this is a matrix supplier because your system kind of infers that, oh, this looks like a matrix, so now I should use the matrix extraction.
+
+>>Bikram Dahal	58:58
+So one thing I'll just add, I know like Divesh has mentioned this, that's exactly why there's something what we call, when you give me the example of 10 invoice, where you say that, okay, if I upload a 10 invoice, all the 10 invoice should be the same extraction, that is one goal, but there's a better goal on that. If I upload 10, I have 10 invoice, I upload two invoice, I fix a issue on like one or two field that might be on that issue, then this invoice will not have any issue.
+
+>>Jarl Arntzen	59:25
+Yes.
+
+>>Bikram Dahal	59:26
+It will not have, so that's our goal, that's the goal that we have, where like, one is predictability, second part is like, if I have fixed the issue on one vendor, that vendor, people are okay to fix one or two issues here and there, but after I have fixed it, I don't want that issue coming back and back again. So that's the main goal. And the second important thing you talked about, that is what we call continuous learning, and we have already met.
+
+>>Bikram Dahal	59:48
+Made a lot of progress into that. So that's very important. Second part, before Deves kills me, is that the second part is something with matrix also. What we want to do, the same principle that you had applied told about, if this matrix, you already know this is a matrix, and this should be the output, then you don't want to go and write those complicated code. Like, it's too difficult to maintain. Once a certain time goes, it's difficult to maintain. It's good for one or two, but once you have those logic, it will be difficult to maintain. Over there also, we want to do a continuous learning. What it says is that, OK, I have already seen this kind of invoice. In this kind of invoice, people have done this kind of manipulation. So let me figure out what are the manipulations that people have done, and then do that manipulation so that I don't have to go and write the rules, saying, OK, to change from this format to this format. Your only job is to come to Docsumo, annotate one or two documents, because it's very easy to annotate. And then after that, next time I upload two more invoices, then that should have the format that I need. So those are very, very critical for us to be successful. Already working towards that on some simple cases and everything, we have already seen the good results. Part three will give you more idea about a more complicated case and everything, like you guys.
+
+>>Jarl Arntzen	01:00:59
+Yeah. Yeah, so exactly. So that's, yeah, So I can just tell you what I've done with that as well, right? Yeah. So just to, like, I have some invoices, right, which I expect any invoice extraction service or any invoice capture service should be able to do, right? So those are the ones I've been uploading now, right? Then, of course, I have a similar set of invoices, which are harder and harder. But the way we are structuring this is that we pick our top 10 or top 15, whatever, suppliers with the highest volume, right?
+
+>>Bikram Dahal	01:01:47
+Yeah.
+
+>>Jarl Arntzen	01:01:48
+For each customer, right? So what we've done here, we've made some agreements with some customers, some NDAs, and I believe you've signed some of them as well. I don't know, really. And then, so what we're going to do is we're going to be very structured. We're not just going to pick 85 random invoices, right?
+
+>>Bikram Dahal	01:02:10
+Yeah.
+
+>>Jarl Arntzen	01:02:11
+We're going to pick 20 invoices from the largest 10 or 20 suppliers, right?
+
+>>Bikram Dahal	01:02:20
+Yeah.
+
+>>Jarl Arntzen	01:02:22
+And then those invoices, the similarity between the invoices will be very high, right? And then we will be able to get to that point where we actually test out this learning system, right? Where we expect it to not really capture the first one, and then we make all the corrections, all the annotations, and then we try the second one, and still it doesn't really capture, and then we then make other round annotations. And on the third one or the fourth or the fifth, we expect the quality to become better and better. So yeah, that's something I've saved for next week, I would say.
+
+>>Bikram Dahal	01:02:58
+Yeah.
+
+>>Jarl Arntzen	01:02:58
+Ok.
+
+>>Bikram Dahal	01:02:59
+Looking forward to doing that also, yeah. Yeah. So just so you know that we're not just testing randomly or blindly or anything like that, Yeah. Ok. Sure. Yeah, Bikram, I've got to go. But could you just send exactly, or even just tell me now if you have it in your head, the sample you want now? Because when we start to test this more with the comparison tool, we will just start picking invoices on the regular and pumping them into Docsumo.
+
+>>Bjørnar (Semine)	01:03:35
+So it's more like the sample you want, is there any specific data sets you want in them, or should we just pick?
+
+>>Bikram Dahal	01:03:42
+You guys can pick whatever comes on your example. The only ask that I have is for the same set of vendor, we want at least five or six invoice so that we can test that continuous learning. So as long as for that vendor, we have like five to six invoice for that vendor. You guys choose a simple, complicated, because we also want to make sure that this model is, if there are some is cases and everything, we want to make sure that we see those. So on the vendor side, you guys can decide however your real example is. If you get 50 % of simple invoice, then 50 % of simple invoice, 30 % of complicated invoice, 20 % of very stupid invoice that might be very difficult. So I would just do that based on the way that you guys receive that invoice on that per person. The only ask that we have is for each and every vendor, we would like to have five, six, so that you can see that continuous learning thing and for them to want that.
+
+>>Jarl Arntzen	01:04:38
+Got it.
+
+>>Bjørnar (Semine)	01:04:38
+We can find some vendors and send you a good sample of them.
+
+>>Bikram Dahal	01:04:44
+I got to go.
+
+>>Bjørnar (Semine)	01:04:46
+But thank you.
+
+>>Bjørnar (Semine)	01:04:47
+So much for meeting us.
+
+>>Jarl Arntzen	01:04:50
+I just want to add one thing but you can leave.
+
+>>Bikram Dahal	01:04:54
+I think like Dinesh has something there we'll find it interesting so like can we just quickly show that because it's very important to us because we're building on this one and then like we'll take your last questions and then we'll go.
+
+>>Divesh Mehta	01:05:07
+All right cool cool So I won't take a lot of time But I'll just tell you quickly what we're trying to build. What we're building is what we're calling workflows and that's like any other workflow that you can imagine right But what we want is the user to be able to map out the exact process that they have in their mind visually of what their teams do onto this canvas so that Docsumo can exactly follow what your teams do and automate that entire process for you right. To do that like Vikram said and we've spoken about a few times right we'll have multiple kinds of functionalities what we call blocks right So some can be just mechanisms for you to get data in whether it's through an integration like gmail through your Drp systems to uploads some will be sending data out which is through triggers or other integrations or send it back to you as email or even download as CSV files right or even start publishing to a google sheet if you want right or through an API and the others will be kind of transform functions where which is where all the extraction all the validation all the fuzzy matching everything can be done right So we literally are building blocks that you can pick drag drop configure so that we build a workflow that kind of maps to what you would make and this is something crude that I just made while we were talking right so just giving you a crude example But it's more to visualize what kind of conditionalities because the amount of conditionalities you mentioned right we can ingest the docs great we can give it a name it can be a vendor name or supplier name whatever it is so that you can identify it But you have conditionalities where based on whether the supplier nationality is German you want to do some other flow whether the vendor name is something you want to do another flow right or if the invoice type is one of the other types you want to do some other flow so within the workflow you'll be able to say hey if the data that you've captured is of type X do an entire flow which is for this type X if it is why I do an entire flow which is for Y right and within that you can also then have more conditions so like you said if the vendor is German you want to check the street you want to check the address you want to do some kind of matches and then move forward so you will be able to say if ensure that the address matches deterministically if it doesn't match it then you do kind of something like a fuzzy match
+
+>>Divesh Mehta	01:07:21
+Right so you could drop an Ai block and ask it to do the fuzzy matching even in fuzzy matching then you could say hey if it's below 90 I don't want you to do anything do deterministic match so it could do a deterministic match after a fuzzy match of deterministic match and then a fuzzy match later whatever you want you should be able to draw it out also what would be kind of cool was if I just added this you want to ruin that one let's say you do all of this and this is vendors and you identify that Hey and I don't have any of these vendors right And right now you have to go and manually update someone has to go and update it in your ERP system and all of that process is manual Right what we could do is we could use because we have a way to send it out to an API right or publish it to a sheet you could just publish that data through an API or a web to some point that you want or put it in a Google sheet or put it in an Excel sheet or show it in our own tool and you could download it and without having to go through all of the problems you'll find a whole list of vendors that we could not match to our existing data set that's what Docsumo right So we could also do that and kind of reduce our workload on that side so the entire aim with this workflow is to allow you to map the process that you have onto this canvas and make it simpler for you to follow the process and as your process changes you don't have to do a whole lot of changes and come to our engineering team every time to make changes Right you go in you have one more supplier you add one more if block you just say okay follow this flow now for this new vendor or this new supplier or this new country that I've started working with right on this new center that we started working with so it should be very very easy for you to map this whole thing out and this is how we're starting to build this got it got it Okay
+
+>>Jarl Arntzen	01:08:58
+Yeah I mean like I could give some feedback immediately if you want But uh
+
+>>Divesh Mehta	01:09:03
+Yeah Yeah Sure sure this is this is what you're doing
+
+>>Jarl Arntzen	01:09:05
+Yeah Uh I mean I would say um you know I mean I understand what you're doing um we have workflow in our system As well okay And uh I would just like to say that for um for us uh we if we see a system like this or um a growth like this uh we tend to immediately look for the code version Oh yeah Just because um I think you know for many customers this could be really injured I I mean
+
+>>Jarl Arntzen	01:09:46
+And don't get me wrong, this is, you know, visually, this is really nice. You know, sales -wise, this is appealing, absolutely, no problem here. My only problem is that I have a lot of experience, if you will. And with enough experience, we have sort of learned that it's actually easier to do it in code, right? Because you can copy -paste code, you can paint a very detailed part of the code, right? Yeah, this would be covered in a few lines of code, you know. But, so that's my feedback. I don't think we, yeah. Yeah, it is essentially code, right? We had some, like, we have actually seen, what could I say? I would say that internally in our system, we have considered, you know, we have tried displaying some logic like this, right? And I think, invariably, the problem is that the ERP systems kind of suck, right? You have to add a lot of if, okay, do this, but if the address is missing, then you have to do this other thing.
+
+>>Jarl Arntzen	01:11:35
+But if this is missing, then, yeah. So, like, the problem is really volume and kind of the old -fashioned way that some ERP systems work, right? You can send them data, and they can say 200, okay, Right? But what it really means is 500, not okay. You know, and the data is lost, and you have to do retries and, you know, stuff like that. I'm not saying this is by any means bad. I think when it comes, like, for a UI, this is, you know, very appealing. But making the flow in the first place and sort of defining the logic is not really our problem. Our problem is to deal with all the finicky, unreliable parts of the ERP system, really. So, it's like when we import data, like, we have to have some nice way of saying that, okay, we like this part of the data, but we don't like the other part because here you're clearly missing the account numbers, for example. And, you know, really stuff like this, which is more about communicating with the ERP system rather than explaining some logic inside of this system here.
+
+>>Jarl Arntzen	01:13:20
+But I like it, and you've really paid attention during our meeting now, I would say. But like I said, with, for example, the checksum algorithms, right? A very stupid approach is simply to run all the algorithms, right? Regardless of the invoice nationality. And then if one of them works, you can be pretty sure that it's, you know, good. So, that's another way to do it. So, the issue we see is that if we try to be clever, it's always the case that some ERP system is too stupid, still. So, it's like our clever system is like, not really getting there anyway. So, yeah. That's my feedback, really. So, yeah.
+
+>>Bikram Dahal	01:14:28
+On that part, I'll just give you one antidote to this one. In Docsumo, we have a feature called custom code. It's written like, Divya, can you please go to any Docsumo platform? Docsumo, yeah. Can you go to any document? Yeah. Can you go to any, you can go to any document? Yeah.
+
+>>Bikram Dahal	01:14:45
+Go to configuration and can you go to post -processing. So one of the things that I tell the whole team and we also tell it is that about 70 % of the customers in Docsimo is powered by this it's a editor like it's nothing complicated it's just a code like you don't have it over here but like I had we have built it's also complicated system that people love it just on this code like like there's nothing else like and this solves like a lot of problem on those case and everything and people love it because once you set it up things are there right So we totally understand like after your feedback how from what lens you are coming from and Everything And we'll also look into that then you're right those those things are one is for sales and one is for the customer we do not have complicated system like you guys have right So like simple system you don't they don't know how to do coding and everything like they just want to set up and everything So we totally understand that But we'll also put some feature over there so that it might be useful for you guys like power users also
+
+>>Jarl Arntzen	01:15:39
+Yeah I look forward to to check it out and then again the logic I've or the the topics and logic I've presented now right it's I've tried to present them as as goals I would say and if you like you know there are multiple ways to solve any issue Right we like you know Flexicapture does it in their way we don't have to do it in the same way of course Not right there's no that's not really the goal So so Yeah So So I mean I mean I just look forward to to keep trying your system and maybe some of the things that I think are issues now aren't really issues maybe they go away when we try with a higher volume so that's something I look forward to to check out Sure okay and one final thing right so we thought we mentioned the comparison tool Right so we're making a diff tool right Um so we're sending the same invoice through different systems Yeah um and just to keep it fair we we also want to implement like um uh the raw capture Yeah Like the the under unattended capture Yeah We're gonna measure uh you know what does system a and b do
+
+>>Bikram Dahal	01:17:00
+Yeah
+
+>>Jarl Arntzen	01:17:01
+Without any operator intervention right how far can you get the invoice Yeah um how much can you capture without any help right So that's test number one and then test number two is you know um how much more did we capture after uh the operator did Yeah So it's it's It's we we are trying to compare fairly it's not like we're comparing um a raw extraction against um an assisted extraction right because that wouldn't really
+
+>>Bikram Dahal	01:17:37
+Yeah No I totally agree I think last time that really made a lot of things easier for on our side also uh because we are trying to do a few things on the usi to make it very easy for people to approve and everything So I think that like that thing anyway coming up in coming with but like that earlier uh thanks a lot for that clarification I think we're looking forward to seeing that report because we really once we have always been really lucky at that reports and everything when people compare us against google vision people compare us against like the third -party system Abby or anything so always love to see those reports so to see like like there is always a winner on that report either you better than everyone else or you figure out that oh you need to really improve and so looking forward to getting that data and then learning from that and hopefully like uh hopefully like we'll be able to like um make sure that we're better than the rest of the systems
+
+>>Jarl Arntzen	01:18:28
+Yeah
+
+>>Bikram Dahal	01:18:28
+All right well thanks a lot sure okay just on the external side of the things thanks a lot for all of this clarification and everything so on action item things we'll make sure that we send you a detail about the new texting system so that like you guys can put more details and everything so the team will use a click up or two tangles who will look into one of the system and send it across to you and then on top of that we're looking forward to for you guys completing you guys completing the data set uh that I said like um so that would be used to compare between different vendors and then looking forward to sending it to the system and like getting that reports and on top of that we'll also once we receive the sample we'll also be doing the continuous learning that I talked about because that's very critical for us because I know that that can make a big difference on this space not just for you guys but for rest of the like people like on the company and also for future growth of the company so we're looking at that so looking for that continuous learning and the last part is I'm looking forward to you trying the product and we helping you we're getting branching and everything So we'll go through a few of these things and we'll provide you the best advice regarding how to do a branching like how to do a few of these things uh so that uh like the capture can be done you find And so that like we'll continuously like you can try the product we'll send you some details and everything
+
+>>Bikram Dahal	01:19:44
+And then we'll take it from there. Yep.
+
+>>Jarl Arntzen	01:19:46
+Nice. Okay. Thank you guys.
+
+>>Bikram Dahal	01:19:49
+Yeah. Have a nice day. Bye.
+
+>>Jarl Arntzen	01:19:51
+Bye. Bye.
+
+>>Bikram Dahal	01:19:53
+Bye.
+
+>>Nidhi Vichare	01:19:54
+Bye.
+
+>>Manoj Racherla	01:19:55
+Bye. Bye.
+

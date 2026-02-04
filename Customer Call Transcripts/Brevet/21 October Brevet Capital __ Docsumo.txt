@@ -1,0 +1,279 @@
+>>Vishal Arya	00:00
+A minute Aaron is here by the way Aaron nice to meet you nice to see you after a long time Aaron are we audible all right how are you doing see manan and vishal here too Hi Aaron Yeah
+
+>>Aniket Tatipamula	00:24
+We are doing great Aaron like nice to nice to see you like after a couple of weeks i guess Yeah
+
+>>Aaron	00:30
+Yeah Yeah
+
+>>Aniket Tatipamula	00:30
+Um we've had some stuff on our end on the integration parts um can we just wait a moment for Eric to join sure while while we are at a time because we were supposed to also look at some of the issues that you pointed out right we fixed most of them as in is there anything pending there uh
+
+>>Manann Agarwal	00:52
+No I think there's just one which is work in progress uh but apart from that uh everything's done any anything pending for which we require clarification um frankly i haven't looked at in a while um we've been kind of focused on the integration aspect of it um
+
+>>Aaron	01:12
+But if we're starting that again i can take a look and see if there's anything we can do with that Eric thank you
+
+>>Aniket Tatipamula	01:21
+Hi
+
+>>Aaron	01:22
+Eric Eric you are on mute how about now is that better we can hear you
+
+>>Erik Zboyan	01:46
+Yeah I was saying is roman is not going to be able to join But i think we should be okay so from a technical standpoint it seems you know I'm i'm going to talk to him later this afternoon or my morning is that from what we we can tell everything seems to be fine in terms of the creation of the folder on your side the passing the documents and retrieving a response um so just heads up for you guys that it seems everything seems good there um The i think there was some question i don't know Aaron did you bring up any of the questions that you and i had discussed um i haven't brought up anything yet
+
+>>Aaron	02:30
+Okay
+
+>>Erik Zboyan	02:31
+So one one thing that we were curious about is that let's say there's a scenario where we create this folder right we give you all the files you guys do your thing and spits back um um you know nine out of ten responses pass one response fails or whatever whatever the check is um now we want to resubmit it the thing that failed what are you guys expecting are you expecting the everything back again are you expecting just in the replacement file um
+
+>>Aniket Tatipamula	03:09
+I i think Eric and maybe Aaron you would be you'd probably be able to answer this better like uh would the issue be because of the file being missing or would it be an issue because we extracted the data wrong so which case are we talking here
+
+>>Aaron	03:25
+So i think for this one we're saying let's say um our platforms team had an error um let's say it's an outdated document and we want an updated version so the platforms team may upload uh the same document name but an updated version for this month let's say um Yeah we need that one to be re -evaluated how do you think that's kind of looking for you
+
+>>Aniket Tatipamula	03:53
+Oh understood so in that case Eric it could be wise to just delete the older document and upload the new one would that be possible because if you do that then we don't have to change anything if you don't do that then we can still do it we can probably write some validation logic at our end to do all the necessary computation to come to that conclusion but the easiest way would be just delete before you upload the new one just delete the old then upload it back And you would know because we already classified the dog type and you can also search using the document name itself so that should not that should not be difficult so we would have the ability to look into the folder we created placed all the files again let's just use 10 right
+
+>>Erik Zboyan	04:35
+I place 10 files into your folder on your side you evaluate it nine of the ten pass one doesn't you there's a there's the ability for me to reach into that folder and remove the one that failed and put a new one in to the same folder Okay Yeah Uh can you do anything oh go ahead
+
+>>Aniket Tatipamula	04:59
+Yeah, so Eric, you we have an Api to list all the files in the document in the folder, sorry, so that that Api already exists. If you are not aware, I'll share it again. We have an Api to delete a document using doc ID. And because you are the ones who are uploading, you already know what you're uploading. And even if you don't, we have something called as doc type label. So we would know what document it is. For example, we exactly know that this one is radium, for example, so you can just use that title check and then get the doc ID and delete it.
+
+>>Erik Zboyan	05:29
+Okay, can you do me a favor? Can you send an email to myself and Roman, referencing the, what you just said, the, you know, the identification of the documents, the deletion of the document, you know, that that piece, like call it out in your Api? Okay.
+
+>>Aniket Tatipamula	05:48
+Sure, I'll do that. Okay.
+
+>>Erik Zboyan	05:50
+So just to be clear, when we send a second evaluation through, we do not need to create a new folder, we can use the existing folder.
+
+>>Aniket Tatipamula	05:59
+Okay.
+
+>>Erik Zboyan	06:00
+All right. The next question I had is that there's, there's two steps to this, there's a pre and a post, there's a pre evaluation and a post evaluation. The post evaluation, is that going into the same folder, or is it going into a different folder, same folder?
+
+>>Aniket Tatipamula	06:19
+It's the same folder. Okay.
+
+>>Erik Zboyan	06:22
+And while I'm at it, is that so in the future, the next alone that they do, a new folder, correct?
+
+>>Aniket Tatipamula	06:34
+That I think Aaron, you would have to answer it as a, we don't know.
+
+>>Erik Zboyan	06:38
+Meaning like, meaning like we, we've provided you 10 files for loan number one, right? And so we create folder loan number one, we drop 10 files in there, you do your evaluation. Now we're going to do loan, loan number two, loan number two, I'm assuming is a new, new folder on your side with the new files that I'm going to provide, correct? Yeah.
+
+>>Aniket Tatipamula	07:02
+Yep. It will be a new folder on our side. Okay.
+
+>>Erik Zboyan	07:05
+Correct. What else? I think that's really the only questions I have right now is that we, so the, the, where we're at is that I was, I was trying to create it so that somebody could look in the box and identify if there's 20 files in box on our side, on the platform side, that they could choose the 10 files they want to give to you, right? To put in your folder that we create. Right now it sounds like I might just be identifying the folder where all these files exist, whether they, they are necessary on your side or not, you guys will evaluate everything. So let's say you only need 10 things, right? I'm only asking you to evaluate 10 things. If I dump 20 things on your side of which 10, there are 10 of them are the things I need you to evaluate. You're going to figure it out, correct? Okay. So it doesn't matter what I, what I give you. Yep.
+
+>>Aniket Tatipamula	08:18
+So what happens is when you upload, we classify the document first and the validation only works or uses the document that are classified. And, uh, I mean, it, it works that way. So it should not be a problem. So the documents that you've uploaded, that would not be classified, would just be sitting in our platform doing nothing. Okay.
+
+>>Erik Zboyan	08:38
+And then are you using the name of the file or are you using just evaluation of the contents of the file?
+
+>>Aniket Tatipamula	08:46
+Right now we're using the name of the file. As in, we were earlier using the contents, but because in a lot of Pbsr receipts, the contents are the same. So it was not working out. So we are now using the name of the file. Okay.
+
+>>Erik Zboyan	08:59
+So if somebody were to put, I don't know, I think I still have a folder open. Hold on. So like, if I'm looking at a PPSR 19 dash Ppsr underscore Token, right? If I put 20 dash Ppsr underscore token, that won't work. Correct. Meaning like you're looking for 19. Yep. Okay. And if there's any, like the formatting of this thing, there's the numbers there, there's, there's two digits underscore dash underscore, you know, close name of document. If, if there are three digits, they won't work. Right.
+
+>>Aniket Tatipamula	09:48
+We can, we can make those changes, Eric. And it's not like we can't. It's just that right now we've, we've set it, set up the system in a way where. No, no, no.
+
+>>Erik Zboyan	09:56
+Yeah. Yeah.
+
+>>Aniket Tatipamula	09:57
+It's like,
+
+>>Erik Zboyan	09:57
+Totally fine i just want to know how to test it basically to make sure that you know somebody human side doesn't change something But but again to be clear is if i have here let's just share my screen real quick just so we're all looking at this let me know when you can see it
+
+>>Aniket Tatipamula	10:27
+Okay
+
+>>Erik Zboyan	10:29
+So in the scenario here if if i have 18 And i don't have a space here is yours going to recognize it yeah
+
+>>Aniket Tatipamula	10:40
+That that would okay
+
+>>Erik Zboyan	10:41
+But if i had 18 a space dash Blah Blah blah Right you would not understand that to be your ppsr receipt because it's not named exactly that we can figure that out as well Eric as in we have not tested it though
+
+>>Aniket Tatipamula	10:59
+But as long as we have that 18 and ppsr as in right now it's the number only as long as it starts with 18 we would be able to classify it As okay
+
+>>Erik Zboyan	11:07
+Yes okay
+
+>>Aniket Tatipamula	11:08
+But we can program our system in a way where we can customize it all right
+
+>>Erik Zboyan	11:13
+And so if i if this one were the one that was incorrect and i wanted i wanted to resubmit this Yeah um And i was able i you're saying right now you would prefer me to go into your folder remove it and replace it with the new one is that correct Okay Yeah um And so and i'm sorry if i'm asking questions you guys have already gone through because i got it this late is that right now it's one through 15 or something I don't know the numbers But anyway there's stuff that's going to be dropped in earlier um But then this folder is going to begin to accumulate more and more documents that some of which are going to be the post you know not the pre -funding But the the post funding or whatever is that if i gave you all these things again but all i'm asking you to do is do the evaluation for the pr the post second part you'll understand not to come in and reevaluate one through 15 is that Right
+
+>>Aniket Tatipamula	12:24
+I think that would create duplicates as in that we cannot do obviously we can write the validations uh code in that way But right now we have not written it in that way wherein we expect to only have one copy so ideally if uh the easiest thing to do would be because the the pre -approval packets and post -approval packets are very well defined uh in in case in your case so it's it It should be easy but i don't know like maybe due to some operational constraints you are not able to do it uh but uploading it twice will first cost you twice the amount of money which doesn't make sense because we'll have to go ahead and then extract the data uh and second even on our side we'll have to then evaluate uh the older ones and then or maybe the evaluate the newer ones and then ignore them so we can do that as well like it's up well let me
+
+>>Erik Zboyan	13:15
+Yeah let me ask it again in a different way let's say right here at 11 right 11 down to eight this is the pre all the stuff i need for pre -evaluation And So i i create the folder i provide all these files to you you do your pre -evaluation And you say pass fail whatever it is So now i'm ready to do my my post evaluation which is 34 all the way up Right Yeah So if you so first of all you want me on the post to put all these files these files here 34 up you want me to put it in the same folder that i already created Right Okay Yeah So um just heads up Aaron We need to save that i we need to save the folder id just that's an fyi right now i don't know that i was doing that so because i'm gonna have to reference it again you know Okay just if you want to make a note of that so there's that piece of it
+
+>>Aniket Tatipamula	14:16
+And then the other part is the uh if you can i just too sorry to interrupt you Eric you can also search for the using the name so that also works as long as your names are unique and i assume they would be unique because you're not able to i'll save the id
+
+>>Erik Zboyan	14:34
+I already i'm already getting it back i just have not I I just it's more of a note for me is i'll save the id of the folder it's fine it's no big Yeah Um so now i'm doing my post which only involves 34 up to 20. If i point if i were to point to this folder here
+
+>>Erik Zboyan	14:56
+Gave you everything all over again you're going to get duplicates of whatever 11 down 15 down and So which will cause a problem on your side but if i just put 34 to 20 as brand new files in a folder that already has this stuff you're only you're going to know to only evaluate the new stuff i put in because it's a post Okay is the post call different like because i the the file evaluation there's some some input that i have that i need to reference when i i send the files over is it the same file type or is it a different file type it would be same Eric isn't it let me just quickly explain what is happening under the hood so that like i mean that would probably clear a lot of confusion what happens is uh when we are running the validation we are running the validation on the folder
+
+>>Aniket Tatipamula	15:56
+So we take whatever is there in the folder and then run a piece of code to figure out what passes and what fails right like that's the check that we are doing now if you upload duplicates of it you will just pick up the first one so for example if you uploaded two documents of the same type we just pick up the first one and then conduct our validation so that's how it works now in your case if you for example you created a bpa folder and then you uploaded seven the initial documents right the pre -approval so when we run the validation we go ahead and run it on both uh the entire folder and check Okay this is all the data for pre -valid pre -approval looks good we also go ahead and do post approval we can skip though we can we can obviously write a skip condition that if you don't have any document of post approval we just skip it and if you now go ahead and upload more documents in that folder and then again call the api and we see Okay there's a post approval document as well
+
+>>Erik Zboyan	16:48
+And then we'll we can conduct all the checks from start to bottom from start to the end so when you do the again to sound clear so when you do the post approval you're you're effectively right you're not saying go do just a post approval you're just saying go do an approval whether it's post or pre Yeah
+
+>>Aniket Tatipamula	17:07
+Right so there's no marking as such
+
+>>Erik Zboyan	17:10
+Yeah okay and is that you is that is that duplicating the the same like if it passed pre right
+
+>>Aniket Tatipamula	17:19
+And then you run it again are you are you are you charging them again to do the pre no no okay for validation we are not charging you so that's what and then what happens is we only charge you for extraction so when the document is uploaded that's correct no matter how many time you hit the validation api we don't charge you we only charge you when you upload the document and our system extracts the data from it Okay
+
+>>Erik Zboyan	17:46
+Um All Right i think i got what i need at this point um what we're gonna do is we are going to i mean we're gonna we're gonna go try to grab a folder like i just showed you there and throw all the documents over right and just take everything that's in this folder and run run your evaluations and get the results to confirm that we can do that we we have individually done that you know we've done it you know through our own stuff And it's work But i'm gonna i'm gonna do that the other part that we're gonna do is look to see about taking a single file on your side removing it and then replacing it um And so we don't need to necessarily do anything other than replace it And then you'll know to evaluate it right And you're going to give me back the full evaluation meaning like you're not just going to go i'm going to go evaluate that one doc you put in there you're going to go here's The whole result Yeah
+
+>>Aniket Tatipamula	18:48
+Okay I think you will have to hit the api I mean i think that part is pretty clear Right Yeah
+
+>>Erik Zboyan	18:54
+Yeah Um All Right i got what i need give me uh give me a couple days i mean obviously you know i'll have Roman Reach out on the thread to with any questions he has but um so far the api is good you know and well documented so we haven't really had any issues but if he's got some questions i'm sure he'll he'll ping you guys if you guys could respond he's over he's over in Germany You know i don't know where you guys are at um so like right now like another two hours And then i don't get him So if you if you're if you're overseas somewhere then hit him hit him in the morning you know he'll be able to work on stuff otherwise it will lose days that's what i just don't want to do so all right cool
+
+>>Aaron	19:46
+Great thank you all
+
+>>Aniket Tatipamula	19:50
+Right take care guys see you i'm sorry to interrupt you thank you
+
+>>Aniket Tatipamula	19:55
+I think it's it's only with that And then we just wanted to verify a few issues on the extraction Aaron if you're free for a couple of minutes can we please go through a couple of packets If you if you're free sure i can do that see you guys thanks sir thanks Eric um let me share my screen then let me take you through manan please do take over as in if you have any questions But so let me just open up a couple of validations so this failed um revised loan model summary this is this is the fail right secured party true false why don't did you verify this like if these were genuine fails one second let me just open it on my end as well
+
+>>Aaron	21:38
+So clarify question when we were referring to the the pre and post packet approval system you're essentially saying that even if we do pull the post pull the folder again for the post it's going to skip over the initial documents because they're already in the system correct Yeah Great yes need to clarify
+
+>>Aniket Tatipamula	22:00
+But i haven't it will run the validation though it will not extract but it will run the validation now if you tampered if anyone tampered the documents in doc sumo for radium application or let's say a green idea then it may fail as long as it the values remain same it will not fail great um
+
+>>Aaron	22:18
+Yeah we're probably not gonna directly be editing or tampering with things in doc sumo Um so we can we don't have to stress about that thanks then so Aaron
+
+>>Aniket Tatipamula	22:32
+As in maybe i rather than me going through all of these like did you see anything uh random or like i'll just go through a few of them And then you can let us know if you want us to stop anywhere so that uh we can check something out Yeah the ppsr report failed here pps I i think uh
+
+>>Aaron	22:55
+Okay So remarks mananro um the date difference is 377 So i guess there's the the the ppsr report might be too old Yeah
+
+>>Manann Agarwal	23:10
+Okay
+
+>>Aaron	23:11
+I understand Okay um there's some documents where the green id report had verified with changes Uh i'm not sure which ones those are it's frankly it's been a little bit since i've looked at this Um i think we for that we wanted to have that consider as a pass now Yeah
+
+>>Manann Agarwal	23:38
+I i know which which one you're talking about just give me a minute sure So Aaron from the last set of feedbacks that you gave
+
+>>Aniket Tatipamula	23:49
+And then we made the updates so 34 is optional uh i think this is one more check that you wanted the year needs to be checked with respect to document 13 for example us uh industry registration period verification you wanted it to match to uh loan model and summary f Fye Right Yeah So that is being added uh we made the cross director match so on document number 34 we picked the 15 and then try to get the signs so that uh those are matched so a lot of these are fixed But i mean we just have to go through them and can group green Id Okay Yeah
+
+>>Manann Agarwal	24:31
+So in can group if you open up the green Id right uh Yeah
+
+>>Aniket Tatipamula	24:37
+Yeah
+
+>>Manann Agarwal	24:37
+So if you can just open up the document uh essentially aren't for verified with changes also we term it as true now like past i think that's that's
+
+>>Manann Agarwal	24:54
+What was required right based on the feedback that you put in Yeah Okay Awesome Yeah
+
+>>Aniket Tatipamula	25:00
+That's what we talked about it's great we'll go through one more packet as an ad and please stop us please let us know whenever you you want to like stop right sure um this one comfort letter failed let's go through the checks beginning of financial period is this looking correct um which one is this illumina this one would be yeah alumina if you don't mind giving me a minute i can look through this myself
+
+>>Aaron	25:45
+Yeah
+
+>>Aniket Tatipamula	25:47
+It has no outstanding ato tax liabilities i think this one was no let me check quickly check this out So it says it has an outstanding ato liability
+
+>>Aaron	26:03
+So um you know we but we this is an exception so we can figure this out I mean i think i would expect a fail from you guys and then this would be a scenario where we would push it forwards this one
+
+>>Aniket Tatipamula	26:22
+I think uh we just have to reprocess the document that's it because the field doesn't exist here so if you process document number 13 this would pass as well can you click into 13 and just see that um Fye does say 23 to 24.
+
+>>Aaron	26:37
+Uh we'll have to reprocess because if i we added uh let's let me let me reprocess talking on more than 13.
+
+>>Aniket Tatipamula	26:50
+Yeah
+
+>>Aniket Tatipamula	27:21
+I think it got processed let me go to the validation screen Yeah now it passed right And then it picked up uh let me just open up this document Yeah That's correct
+
+>>Aaron	27:40
+Right yep looks good and
+
+>>Aniket Tatipamula	27:48
+Uh yeah the check also seems to have passed so
+
+>>Manann Agarwal	27:55
+So there was one more thing that i think uh Michael had uh spotted for uh document 13 where the minimum interest amount right that was also coming up as a two -digit number because for certain documents earlier it was coming up as percentage of the amount principal amount Right So we said two digits so potentially just wanted to point that out that there was another check failing between document 13 and 15 for the minimum interest amount which is now passing because now it matches
+
+>>Aaron	28:25
+Yeah i can see that that looks good it's something we recently added so thank you for accommodating um it's a new product change within the past two months this looks the first two fail that that seems to be genuine
+
+>>Aniket Tatipamula	28:44
+Okay Let's go through one last case and then i think it should be good green id report a failed that should not have failed right 96a
+
+>>Aaron	29:02
+Okay this might be a fair five of changes so if this was recent Oh okay
+
+>>Aniket Tatipamula	29:11
+Okay So name mismatch name mismatch would not cause this but verified would cause this So oh we have to make the verified which changes okay uh let's change this as well manan
+
+>>Manann Agarwal	29:24
+No no we just need to reprocess this you just probably just have to reprocess this
+
+>>Aaron	29:27
+Yeah
+
+>>Aniket Tatipamula	29:28
+Oh okay This makes sense Okay these are these are some of the older ones uploaded Yeah I think there's one more fail Oh this is because of 13 i think Yeah This this would just go through without any issues yep that's about it ironizing uh i don't want to take any more of your time Okay we will have this check at our end and then please do
+
+>>Aniket Tatipamula	29:53
+Let us know if we if there are any more pending issues on our side and we'll be happy to fix them great
+
+>>Aaron	29:59
+Yeah um Yeah So our focus is obviously good on the integration for the past few weeks um And it's been taking a bit um But you know if i have the time i'll start uploading re -uploading things as per usual um And Yeah that's good thank you for bringing this up it's very helpful Thanks Aaron great um because Michael wasn't here today if you guys have a I see you guys have the note taker could you guys just send me some uh like a high level summary of this meeting Please sure we can reply all to everyone yep
+
+>>Aniket Tatipamula	30:34
+Thanks Aaron Great thanks Aaron have a good day thank you for that have a good one guys
+

@@ -1,0 +1,408 @@
+>>Aaron Yu	00:00
+Hi Aaron, how are you? Hey, hey Doing good Alex How are you? Oh, I don't know. How are you doing? Yeah, we are good as well Good good to hear. Um, thanks for the meeting. By the way, that's a bit of a late notice But really appreciate it So So How would you guys prefer to do this should we just jump right in
+
+>>Aniket Tatipamula	00:35
+Yeah, we can just jump right in and We've made small changes based on what we had discussed last time But I think I could I could check the email And then you want the entire structure to be different So I think it's better that like you Start And then maybe we can at the end. We can just showcase like what we have right now
+
+>>Aaron Yu	00:54
+Yeah, that would be good great Um, so You know, maybe if one of you guys want to share share the validation screen, um We can kind of go off that great Um, so Right now I guess we would like the formatting to be a little different And right now it's kind of being bundled up in terms of the validation criteria which is um You know we we understand because it's um, that's how it's been set up But it'd be nice if we could have kind of like a summary of documents at the very top And basically we want it to be formatted by the document instead of by the checklist criteria um So for example, you know how when we shared Excel it was very structured by like document one. These are the criteria. These are what it's referencing and this is um This is the result Yeah, okay So instead of having it all kind of bundled up in like Oh, this is the Equifax check. This is the tax agent check This is uh, all the director names in one area and such Um, if it could be separated and kind of segregated into each document And so we can clearly see what is being checked in each document and if there's consistently mistakes We can find out that which document is basically like consistently problematic Is what we're kind of it also be more readable for us
+
+>>Aniket Tatipamula	02:38
+Okay, understood. Uh, okay, then let's let's start then and let's start right? Like I mean in the sense that if we if we start with this You're talking about keeping the order exactly as is here, right? True. Yes now if we go ahead and make a table out of this like borrow a legal name and Because this verification would be A single entry and if it fails on one of them, what would you want to see on the screen? Would you want to see pass or and fail and if it fails like what would you want to see?
+
+>>Aaron Yu	03:14
+Um I think what would be nice is if you could stay on the screen for now, um, just have it imagine This is instead of avian consistency check. This just says like Document one radium application, right? Um or Yeah, that's just radium application even though I know we're pulling references from radium application at the moment Um, but in a really hypothetical world So instead of like you can have the field name can stay abn or have it be director's name director a borrower name, sorry, um and then For the extracted value you're going to have to extract value there And then you can Maybe if you guys can add a table row that's like reference so we can directly see The reference value that is being compared against and just say fail So basically, it's still the same thing saying fail, but we're seeing within the documents Rather than within the validation criteria understood and would you want to see radium application at the very start listing down all the reference values or That can be just skipped Yeah, um I think just have Some something else I kind of noted was if reference values instead of green because it's not really validation Just make it like white or something. Um in terms of like pure really small minor organizational thing but um Keep it Essentially what we're asking for is maybe just keep the order and then if a document is missing for example Let's say document eight is missing. You can still have the things there and just say like
+
+>>Aaron Yu	04:56
+Document not detected, or something like that. And then if it's helpful, I can actually, I can make an Excel table for you guys. So, you know, this is literally just a table. So I can kind of format it into Excel so you guys get a visual of what our expectations will be.
+
+>>Aniket Tatipamula	05:14
+Yeah, that would be perfect, Aaron, if you can share the Excel sheet, because at the end of the day, we can just recreate the same Excel sheet as long as it is in the same structure, like a title value here, and then just a table, we'll be able to recreate it for you. And there's one more thing that we've added right now is if I click on this cell, I'll open up the document for you to see the value. And I can go back, like I can make the correction and then go back to the validation screen. So this speeds up, in case something got missed, it would speed up the data extraction, or maybe the checks.
+
+>>Aaron Yu	05:53
+Yeah, we noticed that when we were playing around with it, we were like, oh, we can click on it now. And so that was definitely a good plus and a convenience factor that we kind of like, we mentioned that before. So we do appreciate that. Yeah, so that's kind of like the first thing. In terms of priority, that would be pretty high. And I can get a visual to you guys right at the end of the day but second, we were kind of thinking, we were thinking about some of the mistakes that sounded like, I don't wanna say fake, but false flags are brought up. For example, there was a case where we saw William Buck Party Limited, but instead of Party Limited, some of the things said P slash L, or it would be like a company, New South Wales, instead of just a company name. And I was kind of doing a flags. Are you guys able to maybe do like a similarity check? So if it's like my name, if it's like Aaron Yu partners, and the reference name is just Aaron Yu, maybe that would be kind of like 80 % similar, therefore it will pass.
+
+>>Aniket Tatipamula	07:13
+I don't know if that's possible. That's possible, Aaron, as in, but we'll have to be a little careful there because there are two parts to the problem. Problem number one is making sure the extraction happens properly. And problem number two is mismatching. Ideally, as in, we will put the matching percentage, but the bigger problem would always be making sure the extraction is very limited, very concise, just as I showed last. So that's where Manan and me would come into play. We will surely write the code as per your requirements, but at the same time, the priority would always be making sure our extractions are as perfect as possible.
+
+>>Aaron Yu	07:48
+Yeah, I completely agree. Yeah, you guys are the experts in this. So we're kind of thinking about it from our perspective, but if you guys have the solution, they're happy to work with you guys, basically. And then another third thing that we were talking about is kind of if you guys can do like a this or that. Some, because right now, some fields, we have a variety of documents from different providers. A lot of them are standardized, but some of them are not. So we, for example, let's just say a company has an Acn, which is a codified number. It has a real name, name of the company, and it also has the director name. Sure, right? Three criteria. Sometimes we notice that a comfort letter may have two of the three, or it may have one of the three, or some of the cases may have all three of them. So we would, I mean, we basically don't wanna see a flag raised if two out of three criteria are met in that situation. So if you guys can do like a criteria thing, be like, if Acn is missing, but the director and borrower name both match, then boom, this one is still good. It's just that the formatting is slightly different, basically kind of accommodating for that.
+
+>>Aniket Tatipamula	09:14
+Yeah, sure, Aaron, we can do that. The way that would work is maybe the individual rows themselves may have a pass or fail, but this one, as in, we can probably put a condition here so that like you can see everything is passed. So that like, but if you like, I mean, it's up to you. You can let us know like how you want that to be structured. Either ways, as in, if you want the borrower name legal check to be passed while two out of three of them are pass and one is fail, we can do that. Or if you want the same line to also mention that it was passed, we can do that as well.
+
+>>Aaron Yu	09:49
+Okay, so we can maybe coordinate further with that. How would you -
+
+>>Aaron Yu	09:55
+Prefer that to be kind of like. We get our expectations across to you.
+
+>>Aniket Tatipamula	10:01
+Let's do it on Excel sheet itself. I think that would be the fastest and the most easiest way to do. If you create maybe let's just for an example. I'm just sharing one. Let's say validation. The way we can, we can do it as an right from word get go. I mean, if you want, you can mention the table name like it. Let's say this is a. A B and check. In check and you can give options like it's either passed or let's say failed or let's say mixed. I mean, it's up to you how what you want to mention here based on the checks that we do. And then let's say we want to say. I mean, it's always going to be not even check. It is always going to be document. Let's say this is document one or document for example. And then we have a field one. Field two and let's say this is field three and then you can. You can mention the field extracted value. Let's give it a second. Sorry about this. This is this will be the header actually like you can talk about field. Extracted value. And then maybe if you want, if you want the if you want the reference information to be printed like what is it actually referring to the extracted value would technically be the reference. But if let's say you want to still mention reference based on. However, you want to refer it, it's going to be radium application, then we can do that. And then we can have something like this, which has checks and I mean, you can you can specify the order.
+
+>>Aniket Tatipamula	11:47
+So, for example, for the ones that are passed, we don't have to specify or if you want us to specify that as well. So maybe doc one pass, doc two pass and let's say doc three fail while the entire, I mean, the check itself can be marked as pass or fail. So you can specify this And then we will format it accordingly. And then you can write your actual validation logic here. So however, you want to write the logic, right? You can mention that two of the three have to pass. Ok, or to pass for it to pass And we will we will take it from there. You can specify what how you want these values to be and we'll get it done. It's just that you have to be a little careful because the screen space that you have may be not that much. And ideally, you would want to look at these validations as fast as possible. So I mean, that would be up to you.
+
+>>Aaron Yu	12:42
+Ok, that's good about the screen space. It's simply a discretion of how wide our screens are, right?
+
+>>Aniket Tatipamula	12:51
+Yeah, OK, I mean, we can add more columns here and but it will have to then scroll. So if you scroll, I mean, I mean, it's up to you like how you want to set it up, but if you can set it up in three or four columns, that would be better.
+
+>>Aaron Yu	13:06
+Ok, I think we're we're looking at five right now, so. If that is possible, if I would be possible, that should not be an issue. Great, yeah, and how does your kind of timeline look for I know this is one of the more common mistakes is kind of like the borrower name and the company entity name is getting mixed up commonly. Do you guys kind of have like a how do you guys how would you guys usually work with that?
+
+>>Aniket Tatipamula	13:39
+Yeah, well, what we would do as And we were doing some of the checks as in today, so I mean, one of the things that Manan would do now is he would actually go through these documents one by one. And let's say this one failed, right? Like, I mean, let's let's see if any of these failed.
+
+>>Aaron Yu	13:56
+Um, yeah, these are the ones that I like. I remember I completely messed with these documents.
+
+>>Aniket Tatipamula	14:04
+Yeah, I mean, for example, these two ones, I think there was no extraction. So Manan is going through these documents one by one with the checks that we've listed and making sure if the data itself is extracted. If the extractions are there, then he'll check if it was wrong. If it was wrong, he'll go ahead and make those corrections. And I did show a couple of corrections last time. So this may take on three to four days, because you'll have to go through a few packets and then see when exactly it fails. And I think once it's done, it's done, like it may take a week or two, but post started, as in it will mostly be edge cases. So if we come across one or two edge cases, I mean, we will like the team can let us know And then we'll make those modifications, but the rest should look good. And when it comes to the cold side, as soon as like.
+
+>>Aniket Tatipamula	14:54
+We will do it parallelly like the first draft we will try to keep it ready by next monday i mean the upcoming monday after you share the the updated structure and and we'll test it on these documents and if the structure works out if the data extraction works out it should be good if they are not then there could be instances where as you mentioned Aaron right like as in there may be some percentage check that we'll have to fuzzy match that we'll have to do rather than exact match there could be instances where the name and the first name the last name could be swapped so we would also have to look into those so we will we'll go case by case and figure out like what to fix how to fix but those will be picked up next based on the issues that we'll come across great um
+
+>>Aaron Yu	15:38
+Yeah that sounds pretty good um kind of kind of as we were expecting but um good to hear it And then i once we kind of figure out the formatting of the visual for the validation part because realistically that's once we're operating it that's the majority of where we're going to be spending our time looking as like the underwriting team um we may have to add a few more criteria once we kind of get it looking looking and uh working with credit so just throwing that out there um so it's on your radar set some of these validation criterias may not necessarily be fully finalized but we're around 70 80 there is what i would say sure and that that works you can always keep like let us know like what to change and the team would be happy to change those great Yeah um you know that was our our main points i there was a few other things that we were kind of curious about which was um we we saw that on our end we couldn't see the analytics tab And we had some trouble downloading as excel Oh yeah
+
+>>Aniket Tatipamula	16:46
+So there's there's some issue uh on that part of the code i guess And and the team has made the fixes uh maybe after next I'll i'll keep you posted and then the fix is supposed to go tomorrow But i i just can't guarantee so give us a couple of days the moment it happens we'll let you know And i'll i'll inform the team great
+
+>>Aaron Yu	17:07
+Yeah um Michael and Alex did you have any other comments um
+
+>>Michael Bottazzi	17:17
+No i think um just for the data analytics tab um was the team fixing the code for the excel download toggle or the or the data analytics or Sorry maybe i just misunderstood Oh you mean when you say data analytics are you talking about uh we are fixing code for this one okay that makes sense i thought there was a tab last week that showed i thought it was But maybe it was something else You mean this one uh Yeah we just couldn't find where that was sitting so that's in document types and Where yeah it's in it's in it's in just the document types
+
+>>Aniket Tatipamula	18:03
+And uh the thing it does is uh i mean it's more for you for people to review how many documents they've uploaded how many documents they've approved so it's more of a stat screen that lets you know what's the accuracy of the extraction the time it takes may not be very helpful in your case But uh
+
+>>Michael Bottazzi	18:23
+Yeah okay
+
+>>Aniket Tatipamula	18:28
+And if you ever want to know more then you can always go here in the billing stat screen like you have more details here like just to check how many documents you uploaded what were these documents all about like we do have this Yeah cool
+
+>>Michael Bottazzi	18:42
+That's helpful thank You I think that's really it from from my end Yeah
+
+>>Alexander	18:53
+I don't have anything great um
+
+>>Aaron Yu	18:58
+Yeah I guess then good on my end too um from my deliverable to you guys I'll i'll get that to you guys as soon as possible and yeah really appreciate it guys sure thanks Aaron
+
+>>Aniket Tatipamula	19:12
+I there's only one last question from my side as in um uh while you while you were testing this as in um there were a few there are a few items that maybe we would want a little bit of feedback on like while you are on that validation screen And then we have this navigation added is it of any use if you want some changes here uh maybe nothing much like uh i'm not sure how this testing would happen and second is regarding the upload itself i don't think we have any other option here apart from doing it this way where we'll have to go here and then upload an entire folder i think both of them work for you
+
+>>Aaron Yu	19:47
+Right i think we had some trouble with the folder uploading um
+
+>>Aaron Yu	19:53
+I'm not too sure.
+
+>>Aniket Tatipamula	19:55
+You can only upload one folder at a time, Aaron. I know last time you asked the question, and I did circle back internally. So you can only upload one folder at a time. And while you are uploading, a widget would open on the bottom right side, and you should not be closing it. If you cancel it, then the upload would stop.
+
+>>Michael Bottazzi	20:14
+Ok. Ok, that's helpful.
+
+>>Aaron Yu	20:17
+So we'll keep that in mind. If as we play with it and we run into an issue with that, I can confirm with you guys. But on the validation screen, realistically, and Michael, you can jump in. But realistically, from a validation standpoint, I don't think we're going to be directly using that to navigate, right? Probably not, the back and forth.
+
+>>Michael Bottazzi	20:44
+Yeah, I don't think so. I think the biggest thing was what you touched on in the beginning, was if we can get that main screen sorted for the documents as opposed to the checks. I think that would be easiest. Can you click back through, though, where you were? You hit a few different arrows, right? Yeah, so OK. So this just goes through the cases. Load and validation, interesting.
+
+>>Aaron Yu	21:19
+Yeah, there's some probably minor things where like, could you click on validation analysis again, like the original screen? Yeah, one below that. Oh, if you guys could, are you able to get back to where it was just like the folders? Oh no, that's part of the documents, right?
+
+>>Aniket Tatipamula	21:47
+Yeah. Yeah, I mean, like. If you want to go back to the folder, you'll have to click on all cases here.
+
+>>Aaron Yu	21:56
+I see.
+
+>>Aniket Tatipamula	21:59
+And ideally, what would happen based on my understanding of a use case, I assume you'll be doing this one packet at a time and not many. So the moment you upload, the packet would be right in front of you. So you don't have to do anything like, I mean, the last packet is the first one that you see, and it should be fairly straightforward. You just click, go to the validation screen, get your task done. And then if you want to go back, yeah, I mean, we can decide what, but you can just click here and then you can upload one more. I mean, that would be it. Like it is a repeat the moment that happens.
+
+>>Aaron Yu	22:42
+I mean, it'd be nice because it's going to be someone other than Michael who is uploading them from the other side. If Michael's end could see the new documents for the day without having to look for it, kind of like how emails, obviously, the unread ones are at the top and a different color. That's extremely minor, I think.
+
+>>Michael Bottazzi	23:06
+Yeah. Because to your point, I guess here, I could just sort on the day as well.
+
+>>Aaron Yu	23:12
+Oh, yeah. Ok.
+
+>>Michael Bottazzi	23:14
+And it's only came through today. Yeah. Yeah, I'm a little worried about that.
+
+>>Aaron Yu	23:20
+I think you can get around that.
+
+>>Michael Bottazzi	23:21
+Yeah. Just a general question. If I were to go into one and it looked good and I changed the status to approved, I think it's approved, does that just do anything besides just mark it as approved? Does it send anything anywhere? Does it change the states anywhere else? Or does it just give it the green light and the green approval seal?
+
+>>Aniket Tatipamula	23:52
+Yeah, I mean, in your case, I don't think it will do anything, to be honest. Because why we do that is when people upload documents in Docsomo, I mean, we have extraction sometime perfectly extracted and we marked it processed. For every other document, the users would go there and then mark them as review, mark them as approved. And the moment this happens, as in we have a book set up that pushes the data in into a third -party system. And that's where all of this kicks in. And once a document is approved, ideally no one changes it. You cannot change it via shareable link. There are a few checks that we've done here. People can't update. I can't randomly click something and then get it updated. There are a few advantages to it when it's in approved state. But in your case, I don't see that as a value. And neither can you mark a folder as approved. So I mean, it's not going to be much useful in your case. It is a document that is marked approved or reviewed.
+
+>>Aniket Tatipamula	24:52
+Review. Ok.
+
+>>Michael Bottazzi	24:55
+Thanks, that's an interesting color, though. Maybe at some point in the future that would be. But OK, got it.
+
+>>Aniket Tatipamula	25:03
+And I wanted to take, because while we are at it, I think we have Shivam on the call as well. I'm not so sure whether we have time today. But maybe today or on the next call, we are actually working on this in a proper way. Maybe within two to three months, you would find a very different UI for this, much more in line with what you are expecting right now. Like if a case is approved, then you would see separately, in a separate way, you can mark the cases for review. So all of those would happen. Right now, it's kind of a workaround for Brevet in this case, because we're using a folder as a case and then uploading it, and a validation is on top of the folder. But within, I guess, the next two, three months, you would see it in a very different way. And Shivam would run through you. If you are OK, like if you are done with everything, and if you are OK with it, Shivam can run through it right now. Or if you want it to be done next week, we can do it next week.
+
+>>Michael Bottazzi	26:06
+I'm fine to run through right now, Aaron, Alexander. I don't know if you have any questions. Sure.
+
+>>Aaron Yu	26:10
+I don't really have anything to do.
+
+>>Michael Bottazzi	26:13
+Yeah, sure.
+
+>>Aniket Tatipamula	26:15
+Yeah, then, Shivam, over to you, if you are prepared. Cool.
+
+>>Shivam Kumar	26:19
+Yeah, I think we can go through it. Just a bit about me, guys. I'm one of the product managers here at Oxymore. To set up the context about this screen, so we are trying to build a general purpose screen for underwriters, mainly with respect to business ending. The simple question we are trying to answer is, if we show the screen to an underwriter, would they be able to make a decision for the application, say, within minutes? That is a simple question we are trying to answer. So I'll share the screen with you now. And I'll walk you through it. I think it would be great if we can get feedback on the steps on the other things that I'll show.
+
+>>Shivam Kumar	27:08
+So let me sort of first get you guys through, yeah. So assume, for example, right now you have multiple cases, right? This is a collective view of all the cases that you'll have. There are two views in it. One is that this Kanban view, wherein you can move cases to different stages. And then there is tabular view. It will be customized according to whatever data you want to see for every case. So you get a brief summary of the things. Any thoughts on this? Any feedback?
+
+>>Michael Bottazzi	27:47
+Can you go back to the new lead versus underwriting? Sorry, the other view, the Kanban view.
+
+>>Shivam Kumar	27:54
+This one?
+
+>>Michael Bottazzi	27:55
+Yeah.
+
+>>Shivam Kumar	27:56
+Yeah.
+
+>>Michael Bottazzi	28:04
+Interesting.
+
+>>Aaron Yu	28:06
+So this is almost like the stages of approval, right? New lead is like stage one. Verification is stage two. Underwriting is stage three. Decision is stage four.
+
+>>Shivam Kumar	28:17
+Exactly. Sorting it in that way.
+
+>>Michael Bottazzi	28:20
+Although it does the full front to back. So I guess you could put a lead in with documentation. And then as time goes on.
+
+>>Shivam Kumar	28:30
+You can put a lead in by entering some manual information. For example, loan amount. You can upload the documents, get analytics and validation, and make the decision of whatever. For example, if there is an algorithm, if there is a credit score formula, or if you guys do it on a qualitative basis. So yeah, that is the end goal of it. Yeah.
+
+>>Aniket Tatipamula	28:55
+Just to add to this, this is like this screen, all of these screens in itself are supporting structures to how we want to shape our product. Right now, our product works around documents. We do not work around cases. But in the next two to three months, our plan is to make it wired around cases where a user can define a case, few fields around the case, attach certain doc types to that case, extract data from those cases, right? The one that I just showed you on the validation screen, those will be computed on a workflow. So you as a client can create a workflow and then decide on the workflow that, okay, I'm getting data from Radium application, and then I'm getting data from maybe doc type P. And then I want to match this. If it matches, then go further. If it doesn't match, then keep it stuck on certain state. Maybe it could be verification state. If everything looks good, then it will directly go to maybe decision -making states.
+
+>>Aniket Tatipamula	29:52
+If there are automatic rules written for it. And Shivam is presenting what happens once all of that works, the case is set up and the workflow is set up. And both of them are under development. This is just a backdrop so that you understand this is not going to be directly coming to the product, but there's something underneath that is happening to make this work. Yeah.
+
+>>Michael Bottazzi	30:14
+That's interesting, yeah. Yeah, I think the case management is definitely useful in our, you know, for how we're operating and just the sheer amount of documents associated in the variability. Interesting.
+
+>>Shivam Kumar	30:30
+I think what would be helpful, especially since we were discussing about validation, is what happens when you go inside a particular case, right? So this is what the screen would look like, or maybe if not just like this, a bit modified, but we'll have these different stages wherein there would be an overview. In the overview, there would be different stages that you'll be able to see. You'll be able to mark the stages complete, not complete. There would be this macro level information about the case. Then below we have document checklist, what documents we were supposed to get, what documents were received, what were not received. Key level analytics, primary analytics, primary validation. And this is just with respect to bank statement. If you have a bank statement, we'll also show the account summary. Any thoughts on this screen?
+
+>>Michael Bottazzi	31:30
+Can you scroll down a little bit? Sorry, I'm just...
+
+>>Shivam Kumar	31:32
+Yeah, yeah.
+
+>>Michael Bottazzi	31:39
+So if I had like 20 documents though, within this case, would the validation checks sift through all of them? Or does this screen only pertain to a particular set of validation checks in a larger group?
+
+>>Shivam Kumar	31:55
+The checklist pertains to each and every document. The validation pertains to whatever validations have been defined as primary validations by you, right? So for example, if there are 30, 40 validation checks and you say, I want to look at these top six validations first, then I want to go into others later. So this is what this pertains to. We also have a drill down into validation, which I'll show in some time.
+
+>>Michael Bottazzi	32:25
+Interesting.
+
+>>Aniket Tatipamula	32:25
+But all of them configurable. Like, I mean, what Shivam is talking about is like, these are not fixed. Like we will be able to configure it based on the need.
+
+>>Shivam Kumar	32:39
+Yeah, so this was the overview screen. We'll also have tags again defined on a custom basis by each and every customer. How would they like to tag a particular case or a particular application? So this is another thing. Now, when I go to the document screen next, by the way, we will also have comments. So if you want to tag your team member and put a comment for them, let's say for a task or if something is missing, we'll also have that option. Now this is the documents tab. So you'll be able to see within a case, what were the original set of documents that you received? How are these classified and organized into different document buckets? And you'll be able to change the classification if something was wrong. If all the document types are not there, you'll be able to add a new document type directly on the screen. So yeah, this screen is mostly about checking in what were the original docs you received? How are they organized? And if something is wrong, what do you want to change it?
+
+>>Michael Bottazzi	33:47
+Yeah, I think that would be useful. And Aaron, I think you and I were talking about it. At some point in the future, the ability to maybe say, hey, there's an existing case Abc already in DocsUMO, already gone through the QC checklist, or we'll say through most of the QC checklist, right? And someone comes back in and adds an additional document or two. Instead of making a new folder, having it be able to be folded into the existing one due to whatever criteria we specify, and having additional checks be done, I think would be useful, which in relation to this, having documents folded and bucketed this way actually seems pretty useful. So yeah, that's interesting.
+
+>>Shivam Kumar	34:44
+I just, make sense. Next.
+
+>>Shivam Kumar	34:50
+I think this is just view of the documents tab. This is valid. So first thing, first, you have the validation summary. What are the validations you sort of configured? What was the status on it? A brief description of why it failed, why it passed. And if you want to review things in detail, there is a drill -down table with respect to each and every validation. So for example, business document checklist, what we are doing here is we are just checking if the documents were received or not, and if they had the required coverage. For example, if we are supposed to receive a two -year W -2, did we receive it or not? What was missing? What was not there? So you'll have this plus. Once you click on a validation, you'll be directly able to see what values are referenced from the document. And if no values were referenced, then you'll just see the document type if you received one. Yeah, that looks good.
+
+>>Michael Bottazzi	35:56
+That looks like an easy way to go through the validations.
+
+>>Shivam Kumar	36:00
+Got it. Any thoughts on the summary one? So summary, validation summary just made, keeping the goal in mind that underwriters would want to foresee the validations if everything has passed or not. And if yes, then they should only go into underwriting. Otherwise they should first complete the verification part, document verification part. Any thoughts on the screen that would it be able to do that job or not?
+
+>>Michael Bottazzi	36:32
+Yeah, I think even right now, seeing the summary is helpful. But then like the point Aaron was making as well is I think if there are issues, the easiest way to grab them will be straight into the documents. So I guess regardless of whether it's listed out like it is now, or you have the separate tabs you can click into, which is also really useful, going the document route would be most efficient. So I would definitely say to do it that way. But I don't know if anyone has any other thoughts.
+
+>>Aaron Yu	37:06
+I do agree. And something to know purely for you guys would just be like, if I saw a document that said passed, if I open up a packet in the morning, and I see it's 20 documents, like 18 of them pass, I'm not even gonna read it. I'm not even gonna click on it. It's passed. It made it through my requirements as I wanted it to. For the two that didn't pass, maybe it has like one criteria, I'd probably click into the one criteria. I'd look at the validation criteria where it's getting flagged and I take a gander at the document And then I'd mark it off and send it off. So, I mean, there's more information there, but that's probably the bare minimum of what I do realistically, if there were deals flowing in.
+
+>>Shivam Kumar	37:58
+Understood. Understood. Makes sense, Aaron. Yeah, so this was about the validation screen. We also have analytics, sort of an advanced version of what we currently have. Just a minute. Yeah.
+
+>>Aniket Tatipamula	38:12
+Just a second. So as in based on this, so one of the important decisions that we are actually like struggling with is, if you looked at the table, right? Like we have something called as data tables on our application. And we, like our logic or our philosophy right now is we make each and every decision or data extraction in terms of table. I just wanted to quickly check like, does that resonate with other applications that you deal with? Or how are they laid down? Because if you looked at all the validation screen, except for the first overview one, the validation screen itself was table after table after table. Is that the right way to organize the data for the underwriter to make the decision as fast as possible? Or is there a better structure that you have in mind or you've looked at that you can suggest? That would be really helpful for us to like choose a route.
+
+>>Aaron Yu	39:10
+I would think tables are most efficient, but I don't know if, I also think tables, and even from what you've seen, what you saw in our validation checklist is literally what is being returned to us right now. And with tables, I can communicate with you in Excel purely because I can format Excel as a table And then I can visualize it to you. And likewise, with how you have the extraction criteria validation screen set up, you can extract it as an Excel file. So it gets sent to either Michael as an email or whatever.
+
+>>Michael Bottazzi	39:48
+Right.
+
+>>Michael Bottazzi	39:49
+Yeah, I think that's probably because a lot of what else we're working with is in Excel or similar.
+
+>>Aaron Yu	39:57
+People live on Excel. So it's definitely being Excel -friendly. Being Excel -friendly is definitely more of a plus than maybe formatting it in a prettier way. I feel like tables work pretty well for that.
+
+>>Aniket Tatipamula	40:15
+Just one more follow -up question on that. And when you looked at the validations, and you've broken down the validations into a subset of validations, and just wanted to get some statistics in terms of how many applications does someone look at in a day? Or what does that average number look like for an underwriter to decide whether to lend or not?
+
+>>Michael Bottazzi	40:37
+What does, sorry, what does the?
+
+>>Aniket Tatipamula	40:39
+How many applications does an underwriter underwrite in probably an hour?
+
+>>Aaron Yu	40:46
+It can really depend, right? I mean, look, for us, it might be a few a day. But for someone that's doing Sba loans or even more small -scale loans, they could be pumping out thousands of pounds, thousands. I wouldn't really doubt it with lower checklist requirements than what we have.
+
+>>Aniket Tatipamula	41:10
+This question is mainly coming from the point of view of setting up that validation summary screen and the individual screens. Does it take a lot of time to move from those checks? Because when you're laying out right now, we have everything flat. You can just scroll down, and then you are done. But when we were on that page, we had to actually go through a few tabs. So I was just trying to check, is there any specific method or layout that you prefer?
+
+>>Michael Bottazzi	41:37
+I mean, from my perspective, I kind of think the ability to see everything at once, see the summary, scroll and go, is it all green, where there's little errors, click right into them, see the docs, see the problem, fix it, push it onward, as little clicks as possible. I think that would be. I don't know if, again, that could just be me, but that's what I think. Aaron, Alexander, I don't know if you could put a little something like that.
+
+>>Alexander	42:09
+Yeah, I think that makes sense.
+
+>>Shivam Kumar	42:11
+Yeah, makes sense, Aaron. Aaron, I also had a question, sort of very similar to Aniket, but during, let's say, the whole life cycle of a particular application or a load, how many applications do you guys have to deal with? Is it just Excel, maybe Docsumo, CRM? Just a bit of clarity on that would be actually helpful. Yeah.
+
+>>Michael Bottazzi	42:37
+Yeah, I mean, we're always in Excel. I think we were talking about this earlier on in the process, but we have Salesforce connectivity, so a lot of back and forth happens in there. As far as, yeah, I mean, as far as systems go, I guess those would be the two most heavily used. And then, yeah, there's always one or all sort of little things that happen, I guess, elsewhere, but those two come to mind first, Yeah.
+
+>>Shivam Kumar	43:09
+Understood, makes sense. So yeah, I think we're mostly done on the feedback for validation. I quickly wanted to show you the analytics tab. So this is, we have built this analytics tab initially, at least for the data part, keeping in mind.
+
+>>Aniket Tatipamula	43:25
+Oh, actually, you're not sharing the screen.
+
+>>Shivam Kumar	43:28
+Oh, my bad. Yeah. So this is the analytics tab. We have built this primarily keeping in mind initially your short -term working capital and Mca loans. But again, the data is sort of configurable according to each lender. But what this sort of analytics tab does at a very brief level, it will show you the top KPIs. That is important for your decision -making. It will show you the primary charts of how things have, let's say, moved over time. And then it will show you all the key metrics in the form of tables only. So this is what the analytics tab primarily would be able to do. You would also be able to apply time -based filters. For example, if I'm looking the data for the last three months, last six months, or do I want to look data of just last 30 days? Any quick thoughts on this? Any feedback, questions?
+
+>>Michael Bottazzi	44:28
+I think this would be really useful if, even if we were looking at the GUI the way it is now, being able to see, right, because it's extracting a lot of this data anyway. So all of these details at the top, maybe there's certain,
+
+>>Michael Bottazzi	44:48
+Can you scroll down a little bit? Certain things that we wouldn't be able to grab based on our current inputs. But a lot of this stuff would be really useful to see. So yeah, I think here, the more the merrier.
+
+>>Shivam Kumar	45:05
+I understand. Got it. Just one quick follow -up on this. Let's say a metric is calculated. In Excel, you can follow it up to the nth level, from where the cell was referenced, how the assumption was made, for example. Would that similar functionality of audit traceability be required? A, is that critical, or is it good to have in terms of your decision making?
+
+>>Michael Bottazzi	45:31
+I don't know if it's critical, but I think it'd be good to have. If there was a, at the top there, if there was a, can you scroll up? If someone were to say, wow, you processed 10 times more than you did last month, what was the driver there? But we couldn't click into it. I don't know if that'd be as useful as being able to say, oh, well, we funded Xyz this month, and that didn't happen last month. So I mean, is it critical? Probably not, but would it be good to have and really be useful to make decisions? Like, yeah, definitely. Yeah.
+
+>>Shivam Kumar	46:07
+Got it.
+
+>>Aaron Yu	46:08
+Oh, yeah,
+
+>>Shivam Kumar	46:09
+I think it's really important.
+
+>>Aaron Yu	46:12
+Just an add -on with the nature of finance, I feel like where your numbers come from, your baseline assumptions are always very important. And an important thing for this is like we have information pullable from Salesforce, but in raw Excel numbers that we can't, that we currently, like Michael pivots it all the time, right? I mean, this is convenient, but is it useful if we have to kind of, if we're unclear on where the data is sourcing from? Well, maybe that's a consideration, right? Maybe I want the exact same table, and I pull it from like Salesforce instead, and it's just a more reliable way of doing it. Could be like another way of, I mean, that's like your two options, basically.
+
+>>Shivam Kumar	47:00
+Got it. Understood. Yeah, just one last question. I think this is the question that I highlighted at the very start. Let's say you have all of this in the single screen. Would that help you make the decision on the application just by using our application, or would this still involve going back and forth between multiple apps?
+
+>>Michael Bottazzi	47:26
+Well, I mean, right now we have a lot of flows that are dependent on the existing apps. So I think that's probably like a larger conversation that would need to happen. Like in theory, yeah, having all this stuff would be great, but I don't think it would be as simple as turning off the faucet and changing the entire flow. But this stuff is useful, yes.
+
+>>Shivam Kumar	47:51
+Makes sense.
+
+>>Aaron Yu	47:53
+For someone like, I mean, for us, maybe it's less relevant. But for like a smaller company with like invoices, business receipts invoices, maybe it would be like they don't have the Salesforce. Maybe this would be very helpful towards them, just an alternate perspective. I understand.
+
+>>Shivam Kumar	48:10
+Makes sense. Any other feedback? Or Aniket, if you have any particular questions that you want to ask.
+
+>>Aniket Tatipamula	48:19
+Yeah, I mean, I know this is something that like, so the reason we've been doing this is like we've observed, we've been getting quite a lot of requests around lending, specifically SMB lending. And like we could see a repeated pattern in how people are using our application to get a part of the problem solved. And what you see right now, as I also iterated back, and this is just part of the outcome, but the process itself is much more detailed. We are building a workflow setup where like, for example, initially, if you come to us just how we've been setting up the validation screen, this time around, we'll set up the entire flow. And the flow would look like a form to ingest the data into the setup. Imagine Docsumo gives you a form that you can send it to your customer. The flow starts there, or you upload it via an integration. And then we have blocks that specifically do various items one after the other. One of it could be, let's say we picked up, the Radium application is something that you would have floated to the customer. But once it fills it up, we may do a few checks with third party. For example, open corporates to get company details. We can use some API to get any Ics code. We can use one more API to pull credit score on the fly. So we plan to do all of that on workflow, and then finally fill it up. That's the entire piece that the company wants to develop in the next six months.
+
+>>Aniket Tatipamula	49:48
+I mean, that's a general idea, but at the same time, the thing that we are relying more on is AI. I mean, the new age softwares tend to be like relying around LLMs a bit. So a large part of it is LLM driven right from setup. So we want someone like maybe Brevit is a big company right now. But even in that case, a lot of the flows that were never opened up because of the lack of LLM or because of the tools that were old age will now be replaced. Just to give you an example, right, like, we had one of the customers who is using our software to read the email, like that was not possible in the previous version. So what we do is we do a bit, we don't do it in a proper way, but we convert the email to an image. And then we extract the text out of it and then make sense of the email. But in the next version of it, it will be a proper model, which you can just type in and say that, OK, only if if I'm getting any emails on this email ID, only the emails that are to do with business requirements or some sort of a loan requirement, pass it through, reject the rest. And even in that, let's say he forgot, like the user forgot to attach a couple of attachments. We can reply back to him and say that, OK, you ended up not sending a three month's worth of statement. Why don't you send the last one and then we'll proceed further. So that is a flow that we are actually shooting for. I hope that makes sense. And this was just a brief summary.
+
+>>Michael Bottazzi	51:16
+No, that definitely makes sense. And that's And yeah, those are possibilities that are totally new. And, you know, I guess we're just starting to see implemented now. So having color and background as to your roadmap is super useful. Yeah, I think as these things progress, we'd love to just hear more about it. But for the short term and for what we're focused on right now, getting the QC process over the line is definitely top of mind. So yeah. Thanks for the background.
+
+>>Aniket Tatipamula	51:48
+Sure. Sure, team. And sure, Michael. Thanks, Aaron. Thanks, Michael. Thanks, Alex. Thanks, Shivam as well. And just to conclude the call, as in a few action items on my end, a few action item on Brevet's End, as in Aaron will probably send us the updated version of the sheet. At our end, Manan would set up the Doctypes and the fields that we are missing out. We'll make sure that the code is set up in a proper way. And ideally, next Monday or maybe Monday to Wednesday, somewhere around those three days, we'll hand over the first version of the updated validation screen. And then we'll take it forward from there.
+
+>>Michael Bottazzi	52:23
+Perfect.
+
+>>Aaron Yu	52:24
+Yeah. If you guys could, Manan, what you did last time with the summary email, really helpful, really good. I know that the note taker is here. If we could schedule a Monday, whether you want to do same time or earlier, it's a little late for you guys, but that kind of, that all works for us.
+
+>>Aniket Tatipamula	52:49
+Sure, Aaron. That works. And then I would recommend, if it's okay, can we do it on Tuesday? I mean, the only reason being on Monday, as in we'll be trying a few things out over the weekend. So maybe Tuesday would be much better, if you're okay with it, otherwise we can keep it on Monday.
+
+>>Aaron Yu	53:05
+I think it's fine. Yeah.
+
+>>Aniket Tatipamula	53:08
+Okay. Okay then. Thanks team. Anything else?
+
+>>Aaron Yu	53:14
+No. Really, really appreciated this call.
+
+>>Michael Bottazzi	53:16
+Appreciate it.
+
+>>Aaron Yu	53:18
+Thanks for that. And thanks for the roadmap. It's pretty interesting to look at.
+
+>>Shivam Kumar	53:22
+Yeah. Thanks, Michael and Aaron for the feedback, especially.
+
+>>Michael Bottazzi	53:25
+Yes.
+
+>>Manann Agarwal	53:26
+Thank you.
+
+>>Aaron Yu	53:27
+Of course. Looking forward to it. Have a good one, guys.
+
+>>Alexander	53:29
+Thank you.
+
+>>Shivam Kumar	53:30
+Bye.
+
+>>Aniket Tatipamula	53:31
+Bye. Bye. Bye.
+

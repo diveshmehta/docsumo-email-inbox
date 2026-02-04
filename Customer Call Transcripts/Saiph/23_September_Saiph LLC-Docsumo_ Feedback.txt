@@ -1,0 +1,225 @@
+>>Jasneet Singh Malhi	00:00
+Awesome. So while they are joining the call, we have Aniket with us. I think we've already met Aniket. So basically, team, we just wanted to kind of connect very quickly today and understand the feedback that you had with the testing of the platform, if there were any issues or challenges that you faced, and what is that we can do to make your experience better. So firstly, I'll give it to the team to tell us if there were any issues or any feedback, and then we can take it ahead from there.
+
+>>Abby	00:31
+Lauren, do you want to start?
+
+>>Mila	00:33
+Oh, yeah. I have some questions on the AI out of the classifier. So we had issues with some of the documents being misclassified. Hold on.
+
+>>Lauren Boersig	00:56
+Hold on.
+
+>>Mila	01:08
+I guess sorry about that.
+
+>>Jasneet Singh Malhi	01:14
+I'm so sorry, but there's a bit of an echo from your end. Like, we can't hear you properly, probably because it is also echoing on Mila's end. So if you both are like in close proximity, maybe one of you can turn off your mic. So that will be better.
+
+>>Mila	01:36
+Okay, I'm sorry, Abby, do you want to start while I figure this out?
+
+>>Abby	01:57
+Sure, I just, um, I think it was kind of in relation to data retrieval. So I'm looking at a few of the documents that were uploaded for the POD confirmation, it listed it as I'm sorry, listed it as POD confirmation, which is confirmation that they'd received the disclosure, but it was actually the court order notice and admin fee, which had was a little bit confusing. So I'm guessing that's something that we have to retrain. So is that what it would be? Just a retraining of it? I'll give you some more documents. So the list of dependents takes both the annuitant and dependent and list them all as dependents.
+
+>>Aniket Tatipamula	02:43
+Yeah, Abby, I think I would take up that question. The thing about these documents is while we were setting up, we were quite, we were not aware about what these documents are. Like, we tried to classify it based on the description that you gave in the document, maybe we will require a little bit of help. And, and post that it's it will be we will be free in it. And we'll just make sure that it understands that if it has these phrases, or it has this kind of a structure, so classify it into this kind of product. Right now, it's very basic based on whatever you gave us, we just took it and then put it there. Maybe that that's not working out.
+
+>>Abby	03:20
+But no, I understand it's a lot of information that we put in and put through. So I understand that part. I just wanted to make sure that it was something that can be fixed and how we would do it how quickly it could be fixed. And then for any document that I tried to change. Is it any time I have a document in there, but we had to revise it anytime I sent a put in a revised document, it's telling me it's two credits will be assumed. Is that for all documents across the board?
+
+>>Aniket Tatipamula	03:56
+If you you're talking about if you upload the document again? Yes. Yes, Abby, as in every time you upload as in we do process the documents as in the credits would be consumed based on the number of pages. Okay.
+
+>>Jasneet Singh Malhi	04:09
+Okay. But Abby, like, so what's the use case here? Are you like, re uploading the same document to get?
+
+>>Abby	04:16
+Yeah, let's say there was a mistake on the first one. So we're set we're deleting that one and then putting in another one because there was a mistake.
+
+>>Jasneet Singh Malhi	04:23
+That might not be the right way to go about it. Right. Because we basically have a review screen process, which basically helps you rectify, you know, the quality of extractions with the actual document on the on the side. Right. So when you reprocess a document, it consumes a credit right for you because it has to go through the entire process. And basically whatever the system was giving you the right values, it has to like go over and look at these values again. But if you just make a correction or an annotation system will learn from that and basically give you a better result without you using that credit again. Because if you re upload.
+
+>>Jasneet Singh Malhi	04:58
+The document it will basically use a credit which is not the most economical way to go about things but if you can just tell the platform to make the correction then it will learn from that correction and it won't reprocess the document for lack of a better word if that makes sense Okay
+
+>>Abby	05:13
+Oh can you hear me Yes you can i thought my mic was off okay Um and then the other questions i had were obviously we're gonna need to give you more information But when you upload a whole binder it does not actually take the document that we're requesting it names it something else And i understand that you know you guys kind of did this as a rush So i we'd have more training i would think for the system
+
+>>Jasneet Singh Malhi	05:41
+Yes so yes as in when you keep on adding more and more files and more and more data the system tends to become more smarter because it has more context in as to what exactly we're trying to achieve Right okay So that is a reasonable estimation but again the idea is that as long as the information exists on the actual file that we are putting in the system which should be able to extract it without a problem Okay
+
+>>Aniket Tatipamula	06:04
+And then the other question i had were the fields that i'm sorry because the question that you asked right can you please because i like just from the engineering perspective i just wanted to understand what's not happening like you're talking about document getting renamed Is it Yeah So what should happen like i think the document the way you would have named the document that's how it is told do you want something else there let me just share my screen quickly uh so that like we can go through those items okay Is my screen visible well i see a picture of you
+
+>>Abby	06:41
+Yeah it is now Yeah
+
+>>Aniket Tatipamula	06:43
+So so happy And then you're talking about this right the folder and the files in the folder
+
+>>Abby	06:48
+Yes so what would you want it to be okay so here's the that that was my question so the document type how do i change that is that something that i would have to put in so in before i put in a file so it can come out correctly because i tried to change that And it would not change Yeah It would change it under the name you see how it says admin fee there that was me i put that admin fee in but that proof of disclosure delivery that's wrong so the document type is wrong it's not in there so that's something that we would have to put in is that what it is we would have to
+
+>>Aniket Tatipamula	07:26
+Okay
+
+>>Abby	07:27
+Yeah
+
+>>Aniket Tatipamula	07:29
+Sorry can you please complete And then i'll i'll explain the entire process
+
+>>Abby	07:34
+Okay
+
+>>Aniket Tatipamula	07:37
+Okay then let me take you i will let me take you through what happens here is uh so basically we have something called as an auto classifier uh when you upload a document here and please do stop me uh and uh ask me questions in between like whenever you feel you did not get it So when you upload a document here uh we try to split it and classify it so you would have a big document pdf like this document type it is actually not any document what it does is when i upload a document here it uh goes and tries to split the document and then also check what kind of document it is and put it in any of these categories out here that we that we created so that's one way of doing it and that's how we had uploaded it so whenever we upload we actually don't do a manual upload and if you want to just test out like what happens is if i just select this document and i want to auto classify again i can just go ahead and click it here and apply what it what it does is it first it does not know which document i bet it first tries to classify it And then uh once it is done with the classification it would go through the extraction of that classified document so that's
+
+>>Lauren Boersig	08:45
+one way of doing it um one of the things with like this classification of the document that she was talking about is that we have there's some fields inside of the document that first based on like the extraction and what the field is it would change what the document is so we get like shipping labels for a few different document types but depending on who it shipped to that would define like what document type it would be is that possible to have done with the auto classifier or is there like additional steps that where we'd have to put all the shipping labels you know together to say then you know if it's this going to this or that then it's this or that no you as you rightly mentioned we can do that like if you let us know that a document should contain these kind of fields and if it contains these fields just mark it as a specific dog type we can do that Okay and then saying what the um because i noticed in the configuration for the the auto classifier that there is a post processing code what is that usually used for so essentially Lauren if you want to manipulate the data that has been extracted through a custom code logic so we basically use that
+
+>>Jasneet Singh Malhi	09:57
+Custom post -processing code to you so you have the ability rather to write a custom code for the data to be manipulated once it has been extracted right So if you want the data to be let's say uh you know converted into specific format or you want it to be sent to a specific system so based on the logic of that code once the data has been extracted it will understand what it needs to do and then it will basically post process uh the the extracted output value and give you that code in the format that you would want or give you Yeah
+
+>>Lauren Boersig	10:28
+Yeah We have uh based on like the extraction like like the literal field like what's in the field um itself would tell us what type of document that um some of our repeating documents like it's the same document type in the binder but it's just not the same it's not like for that transaction based on like the extracted data itself we'd want to then be able to say like this would be the proof of uh delivery for like disclosures versus for like your no disappearing Lauren you have to repeat that one more time i think i
+
+>>Aniket Tatipamula	10:59
+I i understood that like the thing about all of these fixes uh the way we go about doing it is like once we get that onboarding done right the basic onboarding we sit with the team across multiple calls like it will take us like a couple of weeks at least to get this perfected because we don't have that subject matter expertise you would have to let us know And uh if you want that then we can try it like we can see one document and try to get it fixed right now on the call or maybe after the call uh and we can give you a better feedback saying that Okay this is how we do it And this is what we have done to make it work Okay
+
+>>Lauren Boersig	11:35
+Yeah No I figured like just kind of looking at the setup of it that it was probably possible But we just want to confirm that that was possible because uh some of the things it's just after the data extraction is one is like the only way to make the decision and for it to be accurate Lauren
+
+>>Jasneet Singh Malhi	11:54
+I wanted to understand and the actual the entire team as well uh so this was obviously the classification bit which needs a few fixes here and there to kind of optimize it better uh because as Anikin mentioned we would need your subject matter expertise to understand and give the platform more context in terms of what's what but from an actual extraction standpoint within the documents did you face any challenges any feedback on the actual extraction engine bit
+
+>>Lauren Boersig	12:21
+Um no i think we liked the extraction uh from what i I didn't really see any um clearing problems with the extraction aside from you obviously like we didn't have all the fields But there's just a lot of fields but for the most part it looked like it was pulling from the correct places and then how to update or like you know make the extraction better for some of the fields that kind of moved um it seemed like it was a pretty clear cuts uh way to do that you know it's like changing or modifying the prompt awesome that's possible right because like like i said for the the list of dependents is my best example because it took instead of just taking the dependents that are listed separately it took the annuitant and the dependents
+
+>>Abby	13:06
+And it listed them all under there right
+
+>>Jasneet Singh Malhi	13:10
+So basically uh the format that you would want this in like is potentially like a table a table format mm -hmm
+
+>>Lauren Boersig	13:18
+And it's that table below where the names are like um the The Yeah the the table itself is where it starts Yeah
+
+>>Jasneet Singh Malhi	13:27
+For sure so basically we can like take this up in the field setup where we can go ahead and tell the platform that the values that need to be extracted from here are in a tabular format only and then based on that understanding we can go ahead and re -optimize the actual model for us to pick pick up the right value so that is completely doable that should not be like a big problem Okay great
+
+>>Abby	13:50
+And then one other question from me are we able to add in document types
+
+>>Jasneet Singh Malhi	13:57
+Oh absolutely okay So right now these are the document types based on the uh document i think that Lauren shared with us so these were like all the document types within that document uh But you can just go to you see the option of add document type on the very top you can just click on it and create a custom document type uh and you can set it up within like minutes if not seconds
+
+>>Lauren Boersig	14:18
+Oh yeah That's the other question we had um with the permissioning for document types i know you can permission by the different document types uh But for we have um if like we have this it's the same documents but like if they come through and on Abby's side and like the underwriting binder um it's one thing But if it comes through on the servicing side it's a different thing uh we can separate that classification like based on like just like the user permission So if the user just has to upload it to the proper because it's the same document it's just if it's you know like like there might be like a proof of like the payment existing like it was a check -in
+
+>>Lauren Boersig	14:56
+Image on her side, but we wouldn't want that over on the servicing side. Like we would want to like keep those separate.
+
+>>Jasneet Singh Malhi	15:02
+So two things Lauren, like if the information on the origination, the servicing side is the same, right? We can either create two separate models or we can create two separate folders within, within one model. I would lean on any case.
+
+>>Aniket Tatipamula	15:17
+So, uh, just wanted to understand, Abby, like, uh, can you just rename the documents because if you can rename it saying that, okay, Abby uploaded versus Lauren uploaded, then we can, we can do that mapping as long as you can do it on the document name itself. User level, uh, it could be a little tricky.
+
+>>Abby	15:34
+I'm sorry. What was that repeat?
+
+>>Aniket Tatipamula	15:37
+Yeah, what I was saying is if you can, if, if the information can be embedded on the document name itself, like for example, in this case, right now it's free closing book. And if, if it is uploaded by Abby, then you can just mark Abby as a name here, then we can, we can use that information and then, uh, classify it properly. That would be doable, but not from who uploaded it.
+
+>>Jasneet Singh Malhi	16:01
+No, I think what Lauren meant was the same document from different functions of the business. So I think one function is the origination side loan origin, one is the loan servicing side, they are getting the same document, but they want to distinct between the servicing on the organization so that it does not basically mix and match within the same document type.
+
+>>Aniket Tatipamula	16:23
+Yeah, but we still, uh, if, so Lauren, if there is no classification involved, then you like you as a user, we provide two options. One, you can directly upload to a doc type, like you can use this upload and then literally go to the document type and get it uploaded. But if you can't do that, and if you feel that, no, it has to be auto classified, then for auto classifier, you would need the document name to be, uh, a little bit more concise. So if the document has that info, we can do it.
+
+>>Lauren Boersig	16:50
+We would want like the, to essentially duplicate, like what we've done on the loan origination side on the servicing side, because, uh, there would be a couple of different document types on the servicing side. That would be, that would be different. Um, that like would just be used for servicing. Like there's a few different ways to get like, we'll get a check or we'll get like a statement, um, so we would want to be able to like auto classify, like for the servicing side on that. But we could duplicate, we could duplicate all of this and then just give the rights to the servicing people.
+
+>>Aniket Tatipamula	17:23
+As long as these are two different problems, we can do it.
+
+>>Lauren Boersig	17:27
+Like we don't have to worry about anything. I think there are different, different departments, but we essentially would like to take advantage of Doximo for both.
+
+>>Jasneet Singh Malhi	17:36
+No, absolutely Lauren, even like we would want to give you end -to -end automation, not just from like one business, you know, unit, but the entire, you know, thing. So completely aligned on that. And I don't think it should be a big problem, but I just wanted to take a minute and understand what should be our next steps from here on onwards. Right. Because I think, uh, you do have a fair bit of an understanding of the platform as well. It's basically just like, you know, some, uh, you know, refinement that we need to do on the auto classification, but that anyway is done when we onboard you as a customer, because that involves some, some bit of, you know, resources from our end. Another quick point I wanted to touch up upon was the case management and the validation screen. How was your experience with that? Any feedback on that? Basically we set up a bunch of validations for you folks, uh, basically pass fail needs review, so just wanted to see if, you know, there were any, any issues or feedback on the validation engine.
+
+>>Abby	18:35
+I don't, I don't have any feedback on the validation because I don't think that it's, I don't, I don't think everything that needs to be in there is in there, but I think that's because you were working on such a short, such short notice. And we have so many documents that there are times that I'm like, okay, well, this didn't work or this did work. So it's, it, I think it's going to take a lot more training to be able to, I don't know if Lauren was looking at it for something else.
+
+>>Jasneet Singh Malhi	19:03
+So Abby, like the intent behind setting up that validation case management screen was just to kind of demo the actual feature to you, right. And establish a basic proof of concept back to like, we should be able to do this.
+
+>>Abby	19:17
+Oh, okay.
+
+>>Jasneet Singh Malhi	19:18
+Then that, that works because the actual center would obviously we, we would cover all the validation rules and the validation, you know, that you, that will provide us. And that since like this requires some lift, we just set up some basic validations for you to test out the actual feature. But when we onboard you as a customer, obviously we'll have a very extensive onboarding session. And then that we'll be setting up the entire validation rules for you.
+
+>>Abby	19:43
+Well, then it's, it's great because it tells me exactly where it is that I have to look for an issue. I mean, obviously I have to go in and check them anyway, just, just to make sure in case there's any retraining that the AI needs or what have you, but it's.
+
+>>Abby	19:55
+It works well it looks good so in that sense it does look really nice
+
+>>Jasneet Singh Malhi	20:00
+Awesome uh Lauren were you able to test out the case management any feedback from your end
+
+>>Lauren Boersig	20:06
+No i liked it I definitely see like the potential of what we could achieve um i like that color coded as well um And then you can click through to the exact error like that's definitely um all things that we like about it And then i know that it also can be exported because like i don't think that you get a better checklist than this sort of validation awesome awesome
+
+>>Jasneet Singh Malhi	20:27
+So team Uh i think uh wanted to kind of take a minute and understand what should be our next steps from here on onwards I think uh you folks need to come back to us with an updated page count from this origination and the servicing side I think we uh that was still pending from a couple of calls because we were focusing on establishing a proof of concept with the actual features and functionality of the platform uh because based on that we can you run some numbers with the Dls team and come back to the preliminary pricing uh a ballpark pricing of sorts uh and then potentially uh we can we want to understand what should be the next steps from here on uh and decide on how do we proceed forward from here
+
+>>Lauren Boersig	21:08
+Okay Yeah
+
+>>Jasneet Singh Malhi	21:11
+So Lauren i wanted to understand do you have any any sort of next steps in mind um i think we wanted to kind of get an idea of what the pricing would be Uh so we could make a decision because we really like um you know what we've seen so far so we just want to know what the cost is for sure uh if you can uh give me an updated page count number i think the last time we spoke i think we were doing around 150 pages per binder And i think we were doing around 500 binders in a month or 500 loans in a month that is 75 000 pages uh in a month And this is on the loan origination side uh and what would be the delta for the servicing side uh As well okay
+
+>>Lauren Boersig	21:51
+Yeah I can do that um let me talk with Paul to figure out what we would want our numbers to be because we have um our business is a little lumpy so we have uh you know like our general month to month like guaranteed amounts And then we also have like some um you know uh instances where we'll buy like a portfolio so we'll just be like a huge bump up per month so we'd want to be able to kind of account for like that range of those two for sure so a lot of anyway we basically uh do anvil contracts right
+
+>>Jasneet Singh Malhi	22:24
+And you get all the credits up front right So even if there's a high usage in a month you would potentially get all the you know credits for the entire entire year up front right So you can use it at your discretion So uh you there won't be like a scenario wherein you would run out of credits because according to the numbers that i have right now 75 000 pages a month you would get the entire 900 000 credits up front uh so even if there's a high demand in one month and probably the demand is low in the next month it kind of averages out on its own uh so if you can just give us some numbers or we can you know share some preliminary pricing you know with you on the basis of let's say one million pages for the year 900 000 Pages are according to 75 000 pages and another delta of you know 100 000 pages making making it one million for the whole year uh do you think that would be a good number to begin with um i can look at the model and i'll send you an email of what we want let's see what be the um our different ranges and then our other question would be if you know
+
+>>Lauren Boersig	23:26
+Yeah I know Like you probably as we have more pages uh the the I guess the price per credit goes down of if we are if we go in at a certain tier and we need like more pages how would that pricing work as well like could we buy it as or do we have like do we buy like you know a certain amount of credit that our same pricing rate um or do we have to like go to the next tier
+
+>>Jasneet Singh Malhi	23:48
+Right so a couple of ways to do that uh Lauren let's say if you can give us an updated account on the binders we can see if we can like try to do something on the binder level uh as well so that uh the model is more predictable the pricing model is more predictable for you uh so like once you have the updated numbers from your end i can run some something with my deal desk and maybe we can get back to you and or i can you know just reply to you on the email and we can have another feedback call to discuss uh the the pricing uh as well maybe next week okay
+
+>>Lauren Boersig	24:21
+Yeah That sounds good uh what time would you be available for next week for a feedback call um i could do the same time if that works for everybody else
+
+>>Jasneet Singh Malhi	24:32
+Yep that works awesome that that works for everyone Yep So i'm getting the invite for september 30th at the same time Okay awesome uh in the meantime i would just request the upgraded binder account from you so that i can run some numbers with my deal desk and get back to you uh with the pricing so that on the next call you have some feed you
+
+>>Jasneet Singh Malhi	24:54
+Back to give us and then we can we can basically take it out from there
+
+>>Lauren Boersig	24:57
+Okay that sounds good awesome
+
+>>Jasneet Singh Malhi	25:00
+Uh also Lauren just wanted to understand one more thing do we have like a timeline on this by when you would ideally want to have or decide a vendor uh for this project i think we'll be deciding at the beginning of october and
+
+>>Lauren Boersig	25:15
+Like the first two weeks then probably Paul Yeah
+
+>>Paul Kosinski	25:20
+That sounds right Okay
+
+>>Lauren Boersig	25:22
+Yeah awesome
+
+>>Jasneet Singh Malhi	25:23
+Uh all right sure Lauren Paul thank you so much and Abby and Mila thank you so much for the for joining the call really appreciate it in the meantime if you have any questions queries concerns on the uh demo or on the sandbox feel free to let us know and we will make sure to get back to you in a flash thank you awesome thanks thanks everyone cheers see you all next week bye
+

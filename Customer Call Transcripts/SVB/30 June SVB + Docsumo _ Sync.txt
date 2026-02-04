@@ -1,0 +1,321 @@
+>>Jasneet Singh Malhi	00:00
+I just, I was just asking how has the week started for you? Oh yeah, it's just getting started. I'm on The West Coast, so, Vishal's already two hours into me. I'm just getting to my email. Excuse me, let me just. Where's that tea? Yeah, that's my tea. Hi, Stefan. Hey, Stefan, how's it going? You're on mute, Stefan, if you're saying anything. We can't hear you.
+
+>>Stefan Z	00:30
+Oh, there we go, there we go.
+
+>>Jasneet Singh Malhi	00:32
+Awesome, we have a full quorum team. Is there anyone else who's joining us today or is it, do we have a full quorum?
+
+>>Min	00:38
+On our side, we're good. Awesome. On our side, we're good. So, thanks for your patience and just kind of staying with us as we work through these internal hoops to jump through. So, from a philosophical perspective, at a high level, we would like to engage Docsumo to move forward. There's still some things that we need to work out, but we like the things that we really enjoyed, just Jasneet covering us the way he did and his flexibility, the fact that you're able to get, you got more people when we needed it on the call to discuss the technical details. Also, the demo that we did. Those were all really helpful in helping us get clarity on the product and platform. So, we appreciate you guys putting in the effort to do that. So, we just need to get to the close. But I think that's where we're at. As far as like a high level things, what we need to do, I think it's important for us to, A, talk to the cost piece of it a little bit, and walk through the process of how we're going to launch and go. But then also, we need to do some legal and compliance review. And we kind of left that up to a little bit late, in part because I wanted to get to the internal approvals first before having my attorneys do diligence on the contract or anything else. So, that's where we're at at this point.
+
+>>Min	02:20
+Does that sound reasonable to you guys? Or do you feel like we're?
+
+>>Jasneet Singh Malhi	02:26
+That's awesome, Min. I think it really helps us also understand the process on your end. So, primarily we'll discuss two things. We'll discuss the pricing that we've shared with you and what exactly is the pricing structure. And then we'll also walk you through the process in terms of what all will be done on our end and what's the process that looks like. Sound good?
+
+>>Min	02:47
+Sure. Awesome. Sure. So, why should we hit pricing first and just get that out of the way? Right.
+
+>>Jasneet Singh Malhi	02:55
+So, I've already shared the order form with you, right? So, in the order form, you'll see that we have kind of divided into two categories. One is the onboarding and the setup fee, wherein which goes into the model training, onboarding, basically setting everything up from scratch and setting up the infrastructure for us to actually work on the financial documents that we were talking to you about, right? Yeah. And then that's the setup fee, that's around $8 ,000. And then we have the Doxmo annual subscription, which has the platform fee of $24 ,000, right? That's $2 ,000. And then there's ongoing support of 6 ,000. And the number of pages for the annual subscription is 240 ,000 pages for the whole year. So - And that is around 5 cents per page. So, that comes down to a total of 42 ,000 pages, dollars for the whole year.
+
+>>Min	03:45
+So, can we just start from the top and then walk down? So, as far as the onboarding and setup fee, I know there's going to be a cost up front doing the data sharing, the integration and other scope. I'm trying to better understand where on the onboarding, you say, you know, model included, custom model. And then in the annual subscription, you have model included, custom model. What, again, this is all fungible at a certain level, but I want to just better understand, is the model built as part of like the onboarding or is that more just ongoing subscription?
+
+>>Rushabh Sheth	04:23
+So, I'll walk you. So, essentially the first 8 ,000 is just services. And actually like, it is like, to be honest, this is fairly underpriced on our side. Like we now, from this point, we actually have increased the onboarding to almost like 30K primarily because so far we are not charging. But what we'll do is on our side, once you give us access to the Sharepoint, we will basically set up that table, run a bunch of files through it. Essentially what we understand is per loan record.
+
+>>Rushabh Sheth	04:59
+You need to sort of make sure that all the columns, specifically the put rights and things like that are correctly identified. So both the clauses and the final, any sort of like transformed data column that you need based on that. Essentially the, think of it as an outsourced services. Essentially the first thing we'll do is run it through like a 20, 30 row, like what do you say, the deal that you have in that master folder and give you that output just to make sure that each of the data points in those columns is exactly what you need. Primarily because I think overall, the structure, it's not very good. So we can do that iteration like probably twice, but basically you don't want to redo the whole thing again, like on all 4 ,200 every time. So we can do like 30, 30 or 30 odd loans, run another 70. You say, come back saying that, hey, we've missed one column, two column, three columns, or that column we want, let's say validation to be run differently, or let's say you want certain output to be modified certain way. Essentially we'll take that feedback and we'll rerun it for that again, 100. And then again, put another 100. So basically you want - It's not a one -shot model. It's not a one -shot. Because the thing is that - Yeah, yeah, we'll do it two or three times till we, because like at the end, you should be able to use that data.
+
+>>Min	06:31
+So we'll do this.
+
+>>Rushabh Sheth	06:34
+Yeah.
+
+>>Min	06:35
+That, no, that makes sense. And so basically the front end is all services, basically formatting, queuing up the model to be ready to go. That part actually we're reasonably comfortable with. Okay, and there's not that much push back there.
+
+>>Rushabh Sheth	06:51
+Yeah.
+
+>>Min	06:52
+I guess that what we have, in our earlier conversation, when I was just throwing out page numbers, we went from, I told you like my confidence in the number of pages was really low. So when we did the basic math, I said it could be anywhere from like 50 ,000 to like 80, you know, a million pages. I've worked with Michelle and Stefan and they have internally identified. And this is where I think Michelle will work with your customer success person to migrate the right file. Well, we're going to migrate everything, but help that person identify which are the right files to look for. That's going to reduce, we think, the page numbers all the way down to like a hundred, less than a hundred thousand. We're probably like 80, 60, 80 ,000.
+
+>>Rushabh Sheth	07:43
+Yeah.
+
+>>Min	07:45
+It could be higher. It could be lower. We're open to just paying like 60 to 80 ,000 number. And if it's more than that, just pay the incremental five cents a page or whatever that may be. But at this point, I don't think we're going to require 240 ,000 pages to scan.
+
+>>Rushabh Sheth	08:07
+So just maybe if we can open our normal pricing. So the thing is that we essentially quoted that price based on that only. Essentially, we give you a higher page number and a lower price per page, just to make sure that again, for us, what is the... Because what we know is you're not going to consume that pages next year onwards. You're just going to essentially pay a platform fee for querying and searching through that data next year onwards. And essentially, we are showing you actually like this thing, this is what we sort of quote people off from like basically everything from tomorrow is going up because primarily we are just like undercharging for our own services. Essentially at this point, it's better for us to sell services and charge like 6K, 8K per month for two resources on our end than to do this lift on our side. The thing is that even if you go lower, like this is what our cost per page is at like, even at 100K, 10K. So what I would suggest is just look at it from a total cost of ownership perspective. So both the 30K, you're getting it at 8K, the 50K is also coming at like some 42K.
+
+>>Min	09:23
+So... I don't fully appreciate that. What was that again?
+
+>>Rushabh Sheth	09:27
+So basically, I mean like we... The total cost of ownership is actually like quite reasonable compared to what we have like revised our pricing primarily because at the start, we did not know how much of like, we could have gone like 100K at 10 cents a page and it would still be at like that 10K mark in terms of the pages. So the cost for you, whether it's like 240K pages...
+
+>>Rushabh Sheth	09:57
+Or 100K pages will not really make any difference. Primarily, the reason we quoted that was just to make sure that you should not bother saying that, oh, will I run out of pages? Essentially, we wanted to make sure that if we are doing this, we do it right. We will basically incur the cost of running each and every page through the Llm model and getting the columns of data that you need, whether it be 100K pages at $0 .10 or 240K pages at $0 .05.
+
+>>Min	10:30
+Right, but if we run 80 ,000 pages at $0 .10, there's still a $4 ,000 delta. So I mean, I know it might seem like nipple doesn't sense, but I have my own internal controller to deal with too. So I'm just trying to, I need to bring this down one way or another, and that's one way we can bring it down.
+
+>>Rushabh Sheth	10:51
+In terms of pricing, I think overall, again, we could have probably jacked it up and then done it. It is going to take us - Jacked up a little bit,
+
+>>Min	11:02
+Yeah, I get it.
+
+>>Rushabh Sheth	11:03
+But we want to work with you. And primarily, this thing is, because you have been in the industry for a long time, I want your feedback And I want your reference going forward, which is the reason why we, at the start itself, quoted a very reasonable price to begin with. And we will do that iterations, make sure that we run through that iterations fast enough with your team. Essentially, if we can deliver this project to you in the next one or two months, that's a win for everyone.
+
+>>Min	11:30
+Yeah, no, that would be a win for everyone. So I would ask you to just kind of, again, take a look at that. We don't have to negotiate the actual number, but I'm just asking you to take a look at that. But the biggest bogey that I'm trying to get my hands, those are all kind of peripheral stuff. The onboarding I'm comfortable with. I think the page chance is a little higher. I get the idea that if you lower the page count, per page costs are gonna go up, so it's kind of a push. I hear what you're saying, but I think there's still room there. But the bogey that's really catching me off guard is the platform fee. And that's an annual subscription. I know that's the tale. That's where you guys are gonna make your money. So I know all this upfront is like flat marginal costs and you're gonna make money on the back end. Our, as you know, our setup is a little different. Cause initially when we spoke to Jasneet, we said, okay, maybe we start with this And we might have other things. It seems like we're not gonna have any other things. This is like a one -shot deal. So our platform use is not gonna be really that high. Meaning like once you guys like generate the data, we could actually export that into a CSV file, like a massive one and then play with it ourselves. I'd like to pay some platform fee because in case we need to run it on the same data, some other thing, I just want it as an optionality, but it seems really cost prohibitive for us to have done all the work, extracted everything we needed and still pay a maintenance fee that's more than half the price.
+
+>>Min	13:12
+So I think that's where I think we need to kind of work things to the result because I rather have a little bit of platform fee and then keep working with you in case something happens. As opposed to just doing it as a single one -shot license and just taking all the data.
+
+>>Rushabh Sheth	13:29
+So you mean for year two onwards, right?
+
+>>Min	13:32
+I'm sorry?
+
+>>Rushabh Sheth	13:33
+For the second year onwards.
+
+>>Min	13:36
+Yeah, if you guys can do something on the first year would be great too, but yes, definitely on the second year and going forward. I can't justify spending that money.
+
+>>Rushabh Sheth	13:44
+No, no, I completely agree, man. So in that case, what we can do is we can come back to you with a three -year thing where the second year and the third year is like, I understand you basically don't need pages. Essentially, you just need it like a snowflake sort of a queryable database where you can refer back to this data. And the main part is that the audibility, like you will be able to basically pinpoint exactly on what page, on what document, any data source has come from. So fair enough.
+
+>>Min	14:14
+And if it's cost prohibitive, we can just export that, right?
+
+>>Rushabh Sheth	14:16
+No, no, I think, no, no, I mean, we don't want you to go that route. Like we understand your business challenge. We will basically come for year two, year three, we'll sort of like reduce, we'll come back to with a better price offering on that. Works, totally works. Again, like we just created a one -year order form thinking that, okay, you get this data, then you have nothing to do with Docsumo, you push it into Snowflake and that's sort of like how you operate. But we will come back to you with the second year, third year platform fee, which is that no pages, no this thing, just a very small fee on the platform side just to maintain the data and instance.
+
+>>Min	14:56
+Yeah, so.
+
+>>Min	14:56
+What I would like to see and, you know, and we can, we can, we're going to, let's keep moving forward, but let's iterate on pricing. If you wouldn't mind, Jesse, if you can show me a new order form with what we discussed on the, like the upfront fee, not the onboarding, I'm totally with you guys on the onboarding, but just page count and maybe some, a little bit on the margin of some of the other things. So that number has like a, like some sort of a four handle on it. It, it'll be make my life a lot easier. And then the, the ongoing platform fees, we're probably not going to be scanning, putting more data in. It's just going to be reviewed. It's going to be a, just a UI and to our data. So if you can kind of adjust for that and then we can talk about the next pricing sheet, but I'm not going to let that hang us up. Let's just keep moving forward. But that's something I'll expect to see from you guys. Yeah.
+
+>>Rushabh Sheth	15:49
+When we send it across and overall, like, again, like we don't, if you like, if again, the thought process is that we understand that you have duplicity, like we don't want you to sort of like spend time trying to figure out exactly what files to like, essentially, if you think about that 42K only 12K is sort of for the actual.
+
+>>Min	16:13
+We found a really easy way. So don't worry, we're not going to turn ourselves inside out. There's quick ways that Stefan has articulated to me and Vishal and Stefan know the file structure much better. There are certain strings in the key files that you're looking for. And I thought, when I look at this folder, I see like these files and like 20 versions of it, it looks like, but you need these unique strings. And if you can hit on those, you don't need to input the million pages I thought we did. It just comes down dramatically. So they know the data more. So Vishal is going to lead the data integration with your customer success officer. So make sure that we migrate the data in the right way through a Sharepoint, a shared Sharepoint, and then how to locate the file, what the files are that have these unique strings that he or she can just pull them off.
+
+>>Rushabh Sheth	17:06
+Yeah. So Min, do you want us to go to 100K pages at 10 cents or leave 240K pages at five cents?
+
+>>Min	17:16
+Stefan, what do you think? What do you think the odds are of us breaching 100 ,000?
+
+>>Rushabh Sheth	17:19
+So basically, if we break again, it's not like it's a 2K difference. If you want, we'll just give you a discount of 2K on this. But like, essentially, we really don't want you to think, oh, we are going to run out of pages just and we are also interested, like my CTO will also get involved with this. We'll make sure that we deliver on this project to you guys.
+
+>>Min	17:37
+Yeah. Yeah, if you can just talk to Chaos, that would be helpful, whichever way we can go. I think we're going to be under 100 ,000 pages. Yeah.
+
+>>Rushabh Sheth	17:49
+So the difference is not that much. This just gives you optionality that if you have something that overruns, like maybe one document has a lot of like extra appendix or things like that.
+
+>>Min	18:02
+Yeah. 4 ,000, 4 ,000, I think we should be in pretty good shape, right, Stefan? At 100 ,000?
+
+>>Stefan Z	18:16
+Yeah, yeah, Yeah, the number of pages. Yeah, OK.
+
+>>Rushabh Sheth	18:21
+Ok, we'll make the change, we'll put your to just the platform fee for maintaining and searching through the database.
+
+>>Min	18:29
+Yeah, and the, yeah, the platform and the ongoing support, so the ongoing support, the first year should have been picked up by the onboarding, no? Is that different support?
+
+>>Rushabh Sheth	18:42
+So, I mean, typically, again, like the way we have thought about it is, again, we have like really reduced it on the front end, like rather than going high on this thing. But essentially, like the thought process is that if there is any point in the future in that entire year where your team needs help, like you need a different export, you need to do any slice and dice, like that's why it's kept on there. Again, the thought was like, you know, like how SaaS models work, we have like put everything more on the back end rather than the front end. But if we were to do it more as a services model, then everything would be more on the front end.
+
+>>Min	19:16
+So I know we've already spent 20 minutes on this and we have other things to talk about. What could I just ask you guys to just take another look at this, come back with your best and hopefully we don't need to iterate. And I know this isn't a big contract either, so I really appreciate you taking the time to go through this. So it's not that I'm just trying to be a j*** about getting best pricing. I am being a j*** about getting best pricing, but I'm not trying to be. And I know it's not a big deal, but if you could just come back, I'm talking about those things that we talked about and give us your best. Hopefully we don't iterate and we can go forward. Ok, yeah, I think.
+
+>>Min	19:55
+The next thing I wanted to highlight is that the way that the files are gonna be migrated, Michelle is working with our IT team to be able to port all the files onto a shared Sharepoint. I think that's the most appropriate way to do it. These are big, big patches. And then what's interesting is in each of the folders, you'll see a big folder, you'll have company names, and in each of the folders, there'll be like 10, 20 files. Michelle will show his counterpart what string that they should be looking for. There's literally every file that has a five number string, and those are the only files that you need to upload. So it makes it really easy. There's tons of PDF files, Excel files, but those are the key files. If you upload those, that makes sense. Also, this database has companies that are older than what is in our analysis. So there's stuff from, you know, 10, 15 years ago that's not relevant today. So Stefan, oh, I guess it's just Michelle will share. Stefan will share with Michelle, will share with the success agent that the actual, the names of the companies. So it'll make it a lot easier to filter. So I'm not, what I'm saying is I'm not giving you, you know, a terabyte of unstructured data and telling me to organize it. Rather, I'm giving you some structured data that actually identifies the names. I'm giving you a Sharepoint with all the files, file names associated with the company names and the discrete way to find the underlying files that need to be within that folder.
+
+>>Rushabh Sheth	21:47
+Makes sense.
+
+>>Min	21:48
+And again, once we get going, I think if you do one or two reps, it'll make it a lot easier. So I think the data onboarding should be a lot easier than what, when Jasneet and I, we first started talking, we were like, ah, I don't know how to get this done, but I think it's a lot more streamlined.
+
+>>Rushabh Sheth	22:08
+Will be a lot more streamlined. And I think overall, Michelle, what we'll need from you is essentially how many different kinds of data tables do you need out? Like, do you want just one data table per folder with just columns across this? Or like, again, like if, I don't know if you are going to maintain this ahead in the, on Snowflake or somewhere, but essentially the different kinds of data table you want to maintain, if that structure is decided, that would be super helpful to get work. So essentially we're just talking about like different tabs on an Excel that you want to maintain because then you can just import that into Snowflake. And the bi -directionality of that can be maintained because you can still sort of link between that. So that structure is something that you should think through because the default and the easiest is to just do one data table across the whole thing, because then there is no real structure. Like it's just one big structure that we are creating, but then it really depends on the end outcome that you are seeking.
+
+>>Stefan Z	23:24
+Yeah, I mean, I think the quick answer to that is just one data table, right? I mean, the only other way we could subdivide it is by company and that would be thousands. So that doesn't make any sense. I don't think there's another way that we could subdivide it that if we really thought through that it wouldn't make sense for us.
+
+>>Rushabh Sheth	23:42
+Yeah, so like Stefan, like one could be like a company's table, one could be like a put right table that depends on.
+
+>>Stefan Z	23:50
+Yeah, I mean, I think it's in, so that one table is effectively by company, right? So it's sorted by company name and then each one will, some of them will have put rights, some of them will not have put rights. And I think it's like -
+
+>>Min	24:03
+Yeah, if you go across the - As long as we can see that information in that one table, then that's - Okay.
+
+>>Rushabh Sheth	24:08
+Yeah.
+
+>>Min	24:09
+I think that's the easiest way for us.
+
+>>Rushabh Sheth	24:12
+Yeah.
+
+>>Min	24:12
+If we had a Dba who can do all this stuff, it'd be a lot, you could query stuff, but for us, it's a discrete number. It's a lot, but we can, it's a discrete number of let's say 4 ,500 that we can, with all your fields. So we can filter and find things a lot easier than actually doing like queries probably. Okay. But one data table makes sense to me. Okay.
+
+>>Rushabh Sheth	24:37
+Okay. Yeah, so then I think we can define that during the onboarding. And the last piece is, we basically run in Sprint where we, if you are on Slack or Microsoft Teams, we'll just create like a common group. We are on Slack, but if -
+
+>>Rushabh Sheth	24:54
+You are on Microsoft Teams, then that also works. What platform are you guys on?
+
+>>Stefan Z	25:00
+We use Teams.
+
+>>Rushabh Sheth	25:01
+Ok. So if you can then add us, then Jasneet can share this thing. And typically, we typically start on Mondays, like the onboarding calls, so that we can align on that. And if the sharing and all of that can happen once we sign in, if you can share that structure, that would also help. So for example, let's say if we were to sign today, tomorrow, Wednesday, and you can send us, even if you can send us that out, if the whole Sharepoint is not done, but just two, three, four, what do you say, loan the folders with the corresponding Excel output, at least then on Monday, we'll come back to you with questions from our team.
+
+>>Min	25:51
+That sounds good. That sounds good, Jasneet.
+
+>>Jasneet Singh Malhi	25:58
+So what we'll do is we'll rework on the pricing, and then we'll share the updated order form with you. And forgive me, but I have to ask this. Is there any chance we can work through the pricing and get it signed today? And that can be, you know, Yeah, I know it's quarter end.
+
+>>Min	26:14
+I know it's quarter end. People need to get their budgets in. I appreciate that. I will get to council. My hesitation there is my, and it's just outside our scope, is to what extent, if you can provide any, not just the order form, but if you can provide any color on, you know, your infrastructure, your security, whatnot. I don't know if my, our primary councils on holiday and other councils in Europe, and she's gonna shut down in an hour. I kid you not. Is there, I mean, I would love to be able to say, hey, this is, I can do a contingency. I'm happy to say this is in as soon as my attorneys sign off on it. And I can say, once I get the pricing sheet, this sounds reasonable, let's go. I don't know if that's enough for you to be able to say, this is a done deal. Also, lastly, I was gonna ask you, as far as payments are concerned, can we structure this in monthly or quarterly payments?
+
+>>Rushabh Sheth	27:28
+So, Min, I think onboarding plus first quarter is fine. The rest we can do next quarter. That's also fine. Typically, yeah, so we can do like, I think that would turn out to be about 18K upfront and then every quarter, the remainder of it. So that also works for us, not an issue. And we will send you our SOC 2 and the trust site link, so.
+
+>>Min	27:55
+Okay, if you can send us that, and then the actual contract itself, not just the pricing, or is the contract on the back of the pricing form?
+
+>>Rushabh Sheth	28:04
+Yeah, that's just an order form. There's nothing else in terms of the same, so.
+
+>>Min	28:10
+Okay, there's no other contract besides that.
+
+>>Rushabh Sheth	28:13
+There's no other contract. It's a Sas, you just like, we'll deliver on that.
+
+>>Min	28:21
+Let me see who's available. I, unfortunately, I can't approve it. I have to have the council look at it first.
+
+>>Rushabh Sheth	28:28
+No worries, Min, I didn't, again, like.
+
+>>Min	28:30
+Well, no, I want, and I would love for you to be like, Oh yeah, in June, we got this number, and quarter ends are important. And I said, you know, I just don't, not 100 % confident we can get there just because of the logistics and time.
+
+>>Rushabh Sheth	28:43
+No worries, no worries, Min, like.
+
+>>Min	28:45
+From a spirit perspective, if you wanna get comped, you can see that this is happening, so, you know.
+
+>>Jasneet Singh Malhi	28:51
+That's why, Min, I said I had to, I have to ask this. I know probably it's unreasonable, but, you know, the salesperson in me had to.
+
+>>Min	29:00
+Jasneet's on his like 5S accelerator right now. This is gonna pick him up the 10X accelerator, and he's like, ah, we're so live. It's one little deal.
+
+>>Rushabh Sheth	29:08
+It's funny, like how different people's perspective. I'm like, okay, this will give us more time if it's 4th of July. My co -founder, otherwise, is going to like kill me, saying that, why are you like stressing me out? Like, anyways, Fridays often, like I have to do one more onboarding on Monday. So, Jasneet wants to get signed today. I'm on the other side. I'm saying like, fine, take one more week. Everyone's celebrating 4th of July. My co -founder will be happier.
+
+>>Min	29:31
+Yeah, I do a guy who was maxed out on his bonus, completely maxed out, made every cent. He wasn't gonna make any more money. He's on his client going, yeah, I think it's better to go public in January because the market's gonna be better, so he can reset, because he was gonna make $0 on any incremental sale. So, he's like pushing all his deals out in January, but I know we're not there.
+
+>>Rushabh Sheth	29:53
+Yeah.
+
+>>Min	29:53
+We are trying to pull it in. We get it. We are with you. We empathize. I just don't want to say we are going to get it done.
+
+>>Rushabh Sheth	30:01
+No problem. And anyways, I think we will most likely plan for 14th July kickoff. So, that gives us like 3 days this week and 5 days next week. And in that time also, we will introduce Vishal and Stephan to the team. At least if before 14th July, we can at least have a look at the final data table that we want to maintain and the initial. That also would be a good start. So, at least the initial, this thing, we will just do it async only. Just come back to you on like if you have what questions we have based on the final data table. Okay.
+
+>>Min	30:41
+So, for next steps, Jassi, you are going to send me a new order form with a number that starts with 10 ,000. And then you are going to send me the SOC 2 stuff. And then I guess the actual contract itself is on the bottom of the order form. There is no other contract.
+
+>>Jasneet Singh Malhi	31:02
+Correct. Reiterate once, along with the updated volume of number of pages, we would also include the platform fee for year 2 and year 3, right? Just for you to query the data.
+
+>>Min	31:14
+Yes, but just to query the data, doing nothing on it. Correct.
+
+>>Jasneet Singh Malhi	31:18
+So, I just need a separate line item for that.
+
+>>Min	31:21
+And then, but I want to be able to, worst comes to worst, not cancel those years if it's not working, right?
+
+>>Rushabh Sheth	31:34
+Yeah.
+
+>>Min	31:35
+And again, if you guys can do a little bit on the margin, reduce that first year apart just the pages. But if you can even reduce the platform fee a little bit, it will make things a lot easier for me. I'm joking when I say it has to have a one handle, but it certainly will not have a five handle. So, that's really helpful. And then, yeah, I'll look to see that. I'm going to try to get my counsel to look at it. It's got to be tough. She's literally in the Dolomites in Italy, so it's really late for her. So, she shuts down in like an hour and a half. And my other Gc is on holiday for July 4th. So, I'll see if there's any availability, but it just became an awkward situation. I apologize. No problem.
+
+>>Jasneet Singh Malhi	32:26
+I'll pester Roshav to increase the quarter by one day, so I'll do it.
+
+>>Min	32:31
+That sounds lovely. All right, guys. And then, just so you know, Vishal is going to be the point person on the data flows. Sapan and I are here if you need anything. And so, I think that does it.
+
+>>Jasneet Singh Malhi	32:48
+So, we also have Vishal on Rx. We'll introduce Vishal with Vishal and we can get things rolling.
+
+>>Rushabh Sheth	32:55
+Awesome.
+
+>>Vishal	32:56
+Sounds good.
+
+>>Min	32:56
+Well, if anything happens, feel free to reach out to me at any time, email. I think my phone number is on my email. So, give me a holler and we'll try to prosecute this as quickly as we can.
+
+>>Rushabh Sheth	33:08
+Awesome.
+
+>>Jasneet Singh Malhi	33:08
+Thanks, man. I really appreciate it. Thanks, Sapan, Vishal for jumping on the call. Really appreciate you as well. And I'll have the updated information and the order form sent to you within the next 30 minutes. And then, we can take it from there.
+
+>>Min	33:19
+That sounds lovely.
+
+>>Jasneet Singh Malhi	33:21
+Awesome.
+
+>>Rushabh Sheth	33:21
+Thanks, man.
+
+>>Jasneet Singh Malhi	33:22
+Thanks, Sapan.
+
+>>Min	33:22
+Thanks, Vishal.
+
+>>Vishal	33:23
+Thank you.
+

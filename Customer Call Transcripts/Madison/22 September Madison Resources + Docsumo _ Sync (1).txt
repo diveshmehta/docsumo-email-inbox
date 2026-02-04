@@ -1,0 +1,129 @@
+>>Jasneet Singh Malhi	00:00
+But I got to understand the gravity of the situation and obviously seeing that, you know, you would obviously need to see the case management bit because that is where the actual automation is happening for you to make a case for us internally. So we've kind of set that up. But before I get into that and I share my screen and we get into the validation demo, I wanted to check if there are any questions from the last time we spoke, anything that might have changed, anything that, you know, is an update rather than other than the page count that you just mentioned.
+
+>>mike williams	00:29
+No, no, no huge updates. I know that we're looking to make a to have a decision date for like solution picking. I have kind of an updated timeline on that. It's looking like we want to make a decision by Mid -november, like giving plenty of time to do internal, both internal conversation, but get all the information we need. And I think that's just a lot of due diligence to do there. But we're looking at that as a target decision making time right now.
+
+>>Jasneet Singh Malhi	01:05
+Awesome. Awesome. So basically, when you say decision making by mid -November, you mean you would want to have the contracting done by mid -November? Because like after mid -November is usually when, you know, people in the U .S. start to shut down for the holidays And, you know, everyone's basically in the holiday mode. So I wanted to understand, like, is that by when you would want to decide on a vendor or is that when you would want to maybe have something implemented, something or the other implemented to run a POC?
+
+>>mike williams	01:32
+When we would want to have the decision made and begin, like, having initiating implementation. For sure.
+
+>>Jasneet Singh Malhi	01:44
+Makes sense. All right, Mike. So let me actually do this. Let me quickly, you know, share my screen and give you the demo of the validation engine that we built. Now, keep in mind, this is like a very preliminary overview. This does not cover all the validations that you mentioned because obviously this is just to kind of give you an idea in terms of how the validation engine works, right? And when we kind of, you know, onboard you as a customer, when you push it to production, we will build all these validations for you and ensure that each and every part of the area is covered. But on today's demo, it is more of a demonstration of the feature rather than the actual end -level feature. I hope that makes sense. Yeah.
+
+>>mike williams	02:20
+Awesome.
+
+>>Jasneet Singh Malhi	02:22
+So, Mike, basically, this is, as you know, the auto -classifier, the invoice, and the timecard. Just to give you a quick refresher, we get the, you know, documents on the auto -classifier. They get classified into the invoice and the timecard, right? For the invoice, if I open up one of these examples, you will be able to see that you can, you have the ability to create different folders or also upload individual files as well. If I open up an individual file, it will give you all the information that you're looking to extract with respect to all the line items on the table and everything, right? This is from an invoice standpoint. If I open up, let's say, the timecard, similarly, you know, you can open up and review a timecard as well. So, this is the line items on the timecard level wherein we're able to extract all the information. For the information which is not available, the system, rather than assuming wrong or fault information, gives you a low confidence score, right? Wherein you can manually annotate and tell the platform where exactly is this and that. The system will continue to learn from that annotation as well. Quick refresher before we get into case management. Any questions for me?
+
+>>mike williams	03:25
+No, that makes sense.
+
+>>Jasneet Singh Malhi	03:27
+Let's get to the main course then. So, basically, how we've set up case management is, Mike, that every invoice and timecard that needs to be matched will basically be a case, right? Now, if I open up one of these examples, you'll be able to see that this is the timecard report, this is the invoice. So, these are the two things where we're, for this demo at least, showing you how the validation engine would work. Now, how is validation working is that we are basically comparing values that we've extracted from the timecard and the invoice because that is our source of truth, right? So, basically, first of all, in the documents tab, you'll be able to see that these are the two values. The document type is a timecard report and an invoice, right? Now, this is the basic source of truth. If I move into the actual validation screen, you'll be able to see that it just takes a minute to bring up, just give it one quick second.
+
+>>Manann Agarwal	04:29
+So, Mike, just giving you an overview, why this takes a minute is because as soon as just need clicked on the validation button, the validations are now running. They are taking all the data that's extracted from the invoice and timecard, making that comparison and creating a report here. Which you can see. Awesome.
+
+>>Jasneet Singh Malhi	04:47
+Fantastic.
+
+>>mike williams	04:47
+Is that something that will be, will there be a time issue of like a processing time issue at volume, like at exceptional volumes? Not really, Mike.
+
+>>Jasneet Singh Malhi	04:58
+Like that.
+
+>>Jasneet Singh Malhi	04:58
+Happens in like that so last time i think we talked about batch processing so everything runs parallely and everything happens badly now this screen Mike is particularly very powerful it is a very clean minimal review screen on which you will see that the source of the information is time card And this is invoice so the first validation that we are running is weak ending right So the first on the first information the the issue the value that we extracted was 25th and the on the invoice the value is 24th now these both values don't match so that is why it says that it needs a review right the hours on the time card and the hours on the invoice match that's why it says pass right now the best part is that you can actually click on this one of these values and see where the value is extracted from so you don't need to go back to the you know system again to understand which which value is coming from here now in this case as you can see that the value is and is extracted extracting from here and if i just go back you will be able to see that uh that was 25th on the time card and if i open up the invoice the value is being extracted from here right which is 28th so the value does not match so since the value don't match that is why it is basically giving you that we need to review this validation in order to you know pass it uh right now in this case let me quickly you know show you an example that how if how about i make both of these values same let's say if i make this value as 25th of you know august uh to see if the validation would change or not let me manually override this uh just need uh the value is in the line items
+
+>>Manann Agarwal	06:41
+Oh okay
+
+>>Jasneet Singh Malhi	06:42
+My bad Uh okay So this is where it is picking up the value from Manan Do i need to change the all the values or just one value would work you you can change like the first two values because both are the same individual so you can just change that just these two that should do it so let's say if i go back here now and if i rerun the validation here now uh how do we rerun the validation let me quickly refresh this this should automatically turn into pass now But i'm not sure why this is not turning into us because both the values are same do we need like uh we i'll just have this check and just give me a minute
+
+>>Manann Agarwal	07:31
+Yeah
+
+>>Jasneet Singh Malhi	07:32
+So basically Mike the idea is that uh this is the validation screen wherein it will compare the values on the time card and on the invoice and give you a pass fail or a needs review validation now in this case the order id was not found either on the time card or the invoice right So that is why the system was has nothing to compare values against right there is no source of truth data so that is why it basically gave you a fail validation right now in this case the average rate was not found on the time card because there is no we are not calculating the average rate if if you want we can create another field on the time card and calculate the average rate using a business metric but right now we are not right So and the average rate on the invoice is 25 .60 cents Right So basically it gave you the average rate 25 .60 because it is not comparing it against any value and it is an average value right so similarly uh in the very end for all the different you know So this is for you know another invoice this is for another invoice and time card this is for all the other like all the specific people that you found on the time card and on the invoice right uh in the end we give you a validation summary what what were the total number of records that were passed what were the total number of records that were failed what were the total number of records that need a review and what were the total number of employees so this is completely customizable we'll work with your team and understand what are the reviews and metric checks that you want and based on that we'll create uh you know a value id for you that makes sense
+
+>>mike williams	09:00
+Yeah And then like you said having other fields and values and things that need review because it will be valuable to have um total number of hours which is great it seems like it was doing that very well um in some in a lot of cases it'll need to have different types of hours be like regular hours versus overtime hours And things like that But i can i can see how that would that would work right
+
+>>Jasneet Singh Malhi	09:24
+So Mike the idea is that uh this is completely customizable we can set up any sort of validation that you want as long as we have the data right So the course of truth for us in this case is the data that we are getting from the extracted documents what we're basically doing is we're comparing two values right even if it is number of overtime hours or number of like hours spent on you know a regular work week that is a secondary thing as long as the data is on the invoice on the time card we can compare it and give you a Yes no if they match or not so is this something that makes that makes sense can we add rules
+
+>>mike williams	09:57
+To that uh as if such as like if we did um like if it was regular hours and counted standard hours and it was greater than 40 could we just always say that that needed review because everything over 40 we need to check to make sure that's not supposed to be over so could we add kind of logic there to make it be a fail or not a fail but need review or something like that um can we do that
+
+>>Manann Agarwal	10:26
+So so Mike If if there are any rules that you can write down objectively right that if a is greater than b do this if b is greater than c do this is equal to then do this if you objectively you can write it down then we can do it fairly quickly fantastic
+
+>>mike williams	10:41
+Yep So i i saw your understanding head nod as i was describing it
+
+>>Jasneet Singh Malhi	10:45
+So i appreciate that fantastic the power of a the power of a uh video call absolutely absolutely now i'll actually share a case with you uh in this sense uh Mike so this was another validation that we ran in this case you see that the total number of hours there is 49 .1 And it is 50 .3 So right now it is giving you that it failed and it failed with the delta value of 1 .2 as well right which basically tells you you know if there's any sort of calculation that needs to be done um let's say in this case the r was 51 and then 51 .4 And it failed with a delta value of 0 .4 right So all these rules can be basically set on our end we just need to understand better with respect to what you want to do But it is the possibilities of this use case are like endless like we can do anything and everything as long as we have the data uh which is coming from the documents fantastic So Mike is this something that you're looking for do you think that that this will help you save time or help with or complete that level of automation that you were initially envisioning Yeah
+
+>>mike williams	11:49
+I I do i feel like this is uh this I i'm also understanding that our needing to build it out for our case will take a that'll take customized effort that would be part of the the onboarding and all of those things But Yeah i can see how this would be um directly useful and applicable and Um it this is definitely an interesting exercise for me because there's a lot of solutions that are just slightly slightly different same vein but slightly different or even even wildly difference But this is this is something i can very much like this is kind of how we were envisioning it um from the get -go some sort of portal to go into and and look at this comparison So um Yeah This this definitely looks good awesome
+
+>>Jasneet Singh Malhi	12:34
+So Mike uh this is like a very high level overview of case management uh i think uh you have a good idea in terms of what exactly it can do for you what should be your next steps from here on onwards you want to maybe include have another call and include some of the stakeholders And we can run like a end -to -end demo covering the classification validation extraction with them
+
+>>mike williams	12:55
+Yeah uh i think it would be a good idea I mean we might we might i'm thinking on our side it might might make a little bit of sense to have a touch of a delay on that because of when when it'll make the most sense for decision making and keeping this fresh in mind to keep it so we can have some better apples to apples comparison because it's going to take a little bit of time to get some other stuff in place So i I really like what you guys just presented i feel like this is a really good thing And i don't want it to get lost amongst um kind of in time you know i don't want to present it too early and have it be um so would it be possible if we tried to do something Um i mean i don't know if would do you think it would be too far out to do a next next conversation either the last week of october or the first week of november
+
+>>Jasneet Singh Malhi	13:52
+Um i think uh we might um it's it's obviously like we need to work with your timeline Right obviously i understand where you're coming from But if you're trying to like wrap up and make a decision by like mid november i think it would be because i don't know like how contracting works on your end or how like a vendor decision works on your end So i think maybe mid october would be a good chance to regroup and then because we're already like in the end of september uh the week the last september has started uh so if we can probably catch up once like mid october to see where things are at um and then maybe plan from there i think that would be a better way so let's let's let's do it like that then let's do a if we do another like us catch up i'm there might be one or two additional people i bring on as an additional catch up and then probably a larger call following that
+
+>>mike williams	14:46
+But if we did a mid -october um catch up i think that could be good And i I'll i will I'll forward this along as well we'll include a couple of the the other people but
+
+>>mike williams	14:57
+I think the the largest decision making element of it will will more or that largest group will probably um i don't believe we'll all be available until a little bit later got it can i schedule something for 13th of october which is basically a monday let's see Yeah that should that should work um roughly this time would be should be a good fit if if that works then to the invite for 13th of october for the same time
+
+>>Jasneet Singh Malhi	15:39
+Okay uh and we can kind of use that as a sync up uh but Mike uh we we've not discussed the pricing for this use case right And i was kind of waiting for the larger team to join in so that i can you know present the pricing to the the entire team uh because i just got the upgraded number from you today and like volume is pretty big Uh you know variable when it comes to the actual pricing of uh of course So uh how do you think like we should go about the pricing uh because i'm gonna be honest with you Mike um you know i we want we want to work with you We You know we put in the effort of building that case management feature which we usually like pick up in the onboarding and like you only so it's pretty clear that we have the intent And we we understand that this is like we can provide end -to -end automation here So i wanted to like see what would be the best time and if i wanted to see if we can create you as our champion uh within within the within the company and see you know what is the best way to go about it Yeah
+
+>>mike williams	16:42
+So that's kind of the way i'm looking at it um as well too I mean kind of i i would like to be as positively as possible presenting the like making the case argument for for you guys um i mean i think just just because of the way that i'm trying to present the things against each other I mean next call if we could discuss pricing i think that would probably be a good time the the earlier we have that information to ruminate on and and discuss one um the the better comparatively but two um i would if it is something that that shuts the door immediately when i mention it um i would rather tell you that sooner than later But i don't think i believe that's going to be the case
+
+>>Jasneet Singh Malhi	17:35
+But um i i just think it's probably prudent to have that discussion sooner rather than later for sure for sure Mike no problem uh let me see if i can run some numbers with my team and maybe share and ballpark estimate with you over an email so by the next call you can also start like floating it within your team and maybe get some initial reactions uh bear in mind this will just be a ballpark not the actual number So um i'm just trying my best to you know see what's you know from a pricing standpoint because there should be no surprises towards the later half of our conversation Yeah So that's like i'm coming from But uh Yeah no problem Mike let's discuss uh the same i think on october 13th And we can take a conversation ahead from there but in the meantime if you have any questions queries concerns from an Infosec standpoint or from an operation standpoint if you want us to you know give give you a report on how maybe we differ from another vendor that you're looking at uh maybe just comparing apples and apples we would be more than happy to kind of run that report with you and build that business case along with you
+
+>>mike williams	18:38
+Yeah um So that's that's something Um if we were going to do some some comparison in terms of apples to apples i mean i'll i'll tell you um quite candidly we're looking at uh uipath um as well um and doing some um we're going to be looking at a demo with a Bbyy as well um so those those are two uh two of the more deeper conversations that we're having as well have you have you spoken to uh Abby or uipath uh until now like i don't like as long as i remember i don't think they have like a validation engine
+
+>>Jasneet Singh Malhi	19:22
+But i i may i could be completely wrong like
+
+>>mike williams	19:25
+So they they both had um so uipath had an example that they were able to show me like actually a video demo version uh that was that was a pre -recorded thing that was a functionality that did some native um extraction and matching um and then Abby had um they had some there uh it looked like there was a little bit more custom
+
+>>mike williams	19:55
+That they were going to have to do if that makes sense um similarly to the discussion we've been having But um it was functionality that um that they were sound they came off comfortable with as well um interesting
+
+>>Jasneet Singh Malhi	20:12
+So like that's right like with the right amount of investment you can build any feature that you want right any company can build any feature with the right motivation right investment what really matters at the end of the day is the kind of support and service that you get and the kind of people that you get you know in business with So i would urge you to read our G2 reviews uh not bad mouthing anyone because that's not the kind of business that we are in But you'll be pleasantly surprised reading our G2 reviews we want to kind of you know Not just we don't look at you know customers as customers rather we look at them as partners because we want to kind of partner with them and build that whole automation journey with them because we know that if you grow only then we can we can grow as a company But uh we can keep this conversation for another another time wherein you know we can maybe But i'll try to see if i can do some research and maybe give you a comparison in terms of how doximo differs from Abby and uipath And i think that would be helpful for you to present internally as well Yeah
+
+>>mike williams	21:15
+Fantastic awesome awesome awesome all right Mike
+
+>>Jasneet Singh Malhi	21:19
+Thank you so much for joining the call today really appreciate it is there anything else i can help you with today i don't believe so um
+
+>>mike williams	21:26
+Yeah thank you for your time awesome awesome Mike
+
+>>Jasneet Singh Malhi	21:28
+All right thank you so much uh see you in a while and then talk to you soon sounds great talk to you soon awesome thanks Mike
+
+>>Manann Agarwal	21:35
+Bye bye thank you thank you thank you You Thank you.
+

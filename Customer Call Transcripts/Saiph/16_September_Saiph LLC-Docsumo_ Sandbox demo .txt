@@ -1,0 +1,309 @@
+>>Aniket Tatipamula	00:00
+Invited him on today's call just so there are any techno -functional questions that I cannot answer. Perhaps Aniket would be the best person to answer these questions. We also have Manoj with us. Manoj is part of our sales engineering team. So any questions on the integration front or on the demo count or whatever, we would lean on Manoj for that. I'll just quickly give it to Aniket and Manoj for a quick introduction and we can kick things off from there. Hello. Hello.
+
+>>Abby	00:27
+Hi.
+
+>>Aniket Tatipamula	00:28
+This is the first call that I have been added and yeah, So I had engineering here in Docs And I found your use case like really amazing And then we've been building something around it for last couple of I say months And maybe this would be a proper use case where we could put to use a lot of a lot of the stuff that we have built. So yeah. Pleasure to be on this call.
+
+>>Abby	00:55
+Awesome.
+
+>>Jasneet Singh Malhi	00:56
+Manoj, if you want to quickly introduce yourself And then we can set the context And then the agenda for today's call.
+
+>>Manoj Racherla	01:02
+Yeah, sure. Hey, hi guys. My name is Manoj. I'm working as a senior solutions engineer and I will be helping you with all the technical questions and integrations if you have any regarding the demo setup.
+
+>>Jasneet Singh Malhi	01:16
+Awesome. Thanks for that, Manoj. So team, basically before. So on today's call, we've refined the sandbox and we'll be able to give you the access today. Right. So you can test out some some things on the sandbox with respect to the extraction bit. We've also set up a case management screen for you, which will help you validate the you know, responses and ensure that we are matching them with the specific data on the on the case management front. But before I get into the actual specifics of what we're trying to do today, just wanted to take a minute and understand based on the last demo conversation, if you have any questions, anything pending on our side, or if you'd like, you obviously have had some time to digest the last demo. So any feedback, any questions, queries, we would love to kick things off from from there on.
+
+>>Abby	02:03
+I don't have any.
+
+>>Jasneet Singh Malhi	02:06
+Lauren, John, Jorge, Paul. Got it. Awesome.
+
+>>Lauren Boersig	02:12
+So team, what I'm going to do is.
+
+>>Jasneet Singh Malhi	02:14
+Got it. So based on what you saw last time around, team, is this something that you think would fit into your workflow? Is this something that you're looking for? Has something changed from the last time around? Or if not, then we can delve into case management.
+
+>>Lauren Boersig	02:28
+No, we don't have anything that changed. Awesome.
+
+>>Jasneet Singh Malhi	02:31
+So, team, what I do is I quickly, you know, get to the case management screen. Right. And basically, based on some of the logics that you've shared with us, based on that very extensive document that I think Lauren prepared, we've set up some some validation rules for you. Now, if I let's say this is this all will be part of like our onboarding and setup when we onboard you as a customer. So this is basically an example of what what exactly we can do. But for all the logics, we will build all the logic based on, you know, when we when we onboard you as a as a customer. So essentially, if I just go ahead and let's say open up one of these files. So these are different cases that we've built on the system. These are different folders. Right. If I let's say open up the amended files and let's if I go to the validation screen. Now what basically is happening here is that the system is first of all, we've implemented the logic in which the seller name consistency, we are checking against the logic that we provided using the configured right there and we've kind of written a code to pick up the data.
+
+>>Aniket Tatipamula	03:34
+I'll probably.
+
+>>Jasneet Singh Malhi	03:36
+Yeah. If you want, you can probably do it.
+
+>>Aniket Tatipamula	03:40
+Yeah. Let me also, if possible, share my screen and probably give a little bit of idea. Give me one second. Let me just log into this.
+
+>>Aniket Tatipamula	04:12
+Is my screen visible? Yes. So let me actually take a step back And I think Jasneet would have already talked about how like Docsumo functions, but I'll just again quickly walk through. So basically what would happen ideally is you would be uploading the document to this auto -classified doc type. We have AI at our end, which would end up splitting these the packet that you would have into each of these doc types and each of these doc types would have certain fields that we extract And then we then go to the part of case management. So just to showcase, I think this is already done. So there's nothing much to talk about, but just to catch up again, like each of the documents would have certain fields.
+
+>>Aniket Tatipamula	04:58
+That we would extract that are relevant to the validation document that you have shared. And what would then happen ideally is for each of these packets that you would have, there will be a folder like this, or this is a container which contains that k -filtered document. And what we have is a validation layer on top of all the document data that got extracted. So for example, in this specific case, in this container, we would have all of these documents that we see in front of. So I think quite a lot of disclosures, a couple of contracts, and some of them were not classified. I think I'll leave it to Manoj on that. Maybe we need to train our model or figure out what happens with those dogs. But all of these documents would be categorized. According to the dog type, the data will be extracted. And finally, we would come to this validation screen. And what's happening here is we take all the data from all of these documents And then we run a bunch of checks on top of it. So these could be any type of checks in this. This we've set up very quickly for this demo specifically. But ideally, like we would understand exactly what kind of checks you want and then lay them out as per your convenience. So right now, as you can see, we've laid down a few checks, seller name check, annuity insurance consistency, so originator consistency. So these checks, however, we perceived it, we put it across. But in actual deployment scenario, all of these would be, we would talk with the team, try to understand what check we want and where to pick the reference from, where to pick the value from. So if you see right now, I think the reference was this specific document. And because the reference was wrong, everything is wrong.
+
+>>Aniket Tatipamula	06:39
+But let me just do one thing. Let me just copy this reference to this value.
+
+>>Aniket Tatipamula	06:59
+Let me just open it up again. So let me just put this seller name back.
+
+>>Aniket Tatipamula	07:18
+Yeah. If you can see this, is my screen visible?
+
+>>Jasneet Singh Malhi	07:21
+Yeah.
+
+>>Aniket Tatipamula	07:22
+And again, you can see if you can see this, all the checks right now I have passed. So this reference has been used to make checks against all the other documents. We can, we can have a better table here. Right now, if you look at it, we may have not put exact document type here. We can, we'll probably add that as well. So you may see the document name and the document type. It was to give some idea as to whether this was the application form that the, or the form that user filled, or this was some code search order or something else. And we picked that as a reference and then it tried to match to all of the documents where the name was mentioned. Like, are we, like, if there are any questions, then this is the time we talk as, and we can go through other checks, but all of them would pretty much look the same. Like this is what we would do. And if there are additional logic that you want, I saw there were some, there was some logic where you mentioned that if, if, if the document got amended, we would want to use the latest amendment amended document. I think those kinds of checks, we will have to discuss and figure out how you want, how you want us to take or work on it because from our systems perspective, yes, we will get two documents with different versions and this validation layer, right. Can surely make sense of it. Like there are multiple ways in which we can do it. Ideally, the document would have a date and the date can become a referencing that, okay, this code order or this code order got amended with the new date being Xyz. And we know that the new date is, this is a new data and this was the old date. So we can easily figure out what got added or what got removed from the extracted data that we are extracting. Team, as in, are we on the same page here? Like, am I making sense? Hmm.
+
+>>Lauren Boersig	09:07
+Yeah, it looks good.
+
+>>Jasneet Singh Malhi	09:10
+Lauren, your voice seems to be cracking a little bit. I don't know if it's just for me or if it's for everyone.
+
+>>Lauren Boersig	09:15
+Oh, sorry. Can you hear me?
+
+>>Jasneet Singh Malhi	09:17
+Yep.
+
+>>Aniket Tatipamula	09:17
+Yeah.
+
+>>Lauren Boersig	09:19
+No, it looks good so far. Yeah.
+
+>>Abby	09:24
+That is a good idea where you mentioned the amended would check through the dates.
+
+>>Aniket Tatipamula	09:31
+Yeah, we can check through the dates. So this is a very basic setup that we have done. We are not sure whether this can be of any value to you right now. This is more like we demonstrating that yes, this can be done. But the next part where you actually see a value, this is where we will need your help. And what at least I did from my side is figure out like that the document was concise, but I actually just extracted what is
+
+>>Aniket Tatipamula	09:57
+Is relevant to Docsumo because in Docsumo what we deal with is documents and fields and validations that we do on top of fields. So I don't know about Jasneet what is the next step that we have officially discussed but one of the things that we can do is decide maybe two or three doc types and the checks that we can set it up for you so that you can have these properly looked at or verified.
+
+>>Jasneet Singh Malhi	10:26
+So Lauren team if that would make sense like can we identify a bunch of document types where you think we could potentially set up that structure for you for you to test out and from the extraction standpoint like I can add you as users on the sandbox and you can check out the extraction that is not a problem right. So what the only you know two things that we can validate right now is the ingestion classification extraction but for case management we would need your help to understand the whole structure. So what should be our next steps how do you want to proceed from here on onwards and how can we like take it ahead from here.
+
+>>Lauren Boersig	11:03
+I think that for the document for the case management for the case management I think it would be with using like the corridor the contract and the disclosures because those are the three that's like a large part of the and that's like a large part of the case management and kind of all of those documents cover all of like the scenarios that happen in the other documents because it's either looking for like a phrase of words or it's looking for a field itself and then it's cost validating across those. I think that those would be those would be like the big documents to look at for the case management because that's where most of the compliance checks are being done. Ok
+
+>>Aniket Tatipamula	11:51
+So Lauren code order and which other document the contract contracts OK OK code order and contract contract
+
+>>Lauren Boersig	12:02
+Yeah
+
+>>Abby	12:02
+And then disclosure you may want to add the annuity contract or benefits letter to that one
+
+>>Aniket Tatipamula	12:07
+And then you do contract and benefits letter and anything on track sorry and benefits letter and if we can quickly go through the extractions that we have done just need have we like circled them in like what fields are we expecting what did we just do it by ourselves as in any case I didn't I didn't get your question the usual fields that we're extracting right have we validated it with the team Yeah
+
+>>Jasneet Singh Malhi	12:42
+So we have set up the structure And I think on the last call we showed them the the extraction so we have some new documents and the team has And we have also uploaded these documents which which actually have the details because the last time around a lot of details were redacted on the documents so Lauren I can quickly like upload a document again and show you show you the extraction bit you mentioned that the intermediary address is something which is important for you and it is not available on all the documents so based on the documents that you've sent us in the new files in the amended files or in the servicing words where could we find a document which would have the intermediary address so that I can upload it and show you how how the extraction engine would extract all these values as well for the intermediary address I think if we can just find the like the servicing arrangement in term one and term two that would be sufficient because it's a little complicated to actually like do the extraction for the intermediary address because it's a very roundabout way of backing into it based on like the different orders because yeah because let's say on the code because the system has something called as continuous learning wherein if let's say if the system is not able to find up an intermediary address that's in the first iteration and you tell the platform that this is where you need you need to extract this address from the machine learning algorithm kicks in And it kind of learns from any sort of annotation or correction that you might be doing on the actual platform so you won't have to make that same correction again and again maybe just a couple of times and the system will automatically start to pick it up from the next time onwards
+
+>>Jasneet Singh Malhi	14:24
+I think yes man which had a point to it Yeah So any case can you go to that service can you go back go to service arrangement example one let's say go to code order or contract contract go to contract
+
+>>Manoj Racherla	15:00
+Sorry example to service arrangement X my example to this not the one quote order Quote order the contract which one quote order photo So in this as you can see intermediate at least can So Lauren, this is the right value that we were able to extract from the system.
+
+>>Lauren Boersig	15:25
+No, it's um, it's on page three Okay, it's the three two one Henderson receivables Got it.
+
+>>Jasneet Singh Malhi	15:36
+And like how are we making the distinction that which which address is the intermediary address? Is it like from the context of the clause or is it is there a specialized marker because for the AI to Understand that this address is the primary address and this address is probably the intermediary address. There needs to be a marker, right? Is it coming from the Context of the clause.
+
+>>Lauren Boersig	15:57
+Yes the context of the cause are because of the assigned payments are The signed payments are broken into two terms so term one All the payments are going to the three to one Henderson receivables and Henderson would then be sending it to The Sutton Park S &e So that's how we would know that that would have that would be the intermediary Got it, so it's the paragraph After if you on the page four There's a whole paragraph that's Talking about how the guaranteed payments aren't they're not required to be split. So then that three two one is going to Get a hundred percent of the payments and then they're going to remit them to then the S &E So will the will this logic be applicable to all the intermediary addresses across the board or like is it just because?
+
+>>Jasneet Singh Malhi	16:54
+Then we can like basically write a prompt and give that context to the AI In terms of how is this intermediary address being extracted because it is not on all the documents which we've kind of established So will this logic that the payments will not be split and only it will not be remitted and it will only go to this one One address is that the only way we are finding the intermediary address and then intermediary on the on the contract
+
+>>Lauren Boersig	17:19
+Yeah, you would be finding. Yes, if it were to exist there be a paragraph about how The they're not required to divide or split the payments and so it's going to go to one person And then they're Responsible for remitting it to the second entity Got it.
+
+>>Jasneet Singh Malhi	17:35
+So I think it I think we can we can set up the logic on the prompt and basically ask the system to Look at the context of the clause and then extract right? Am I right here?
+
+>>Aniket Tatipamula	17:45
+Yeah, we can we can try we can test it out and then most likely it should work We will probably do something with the prompt and see if that if that is able to work Make sense
+
+>>Jasneet Singh Malhi	17:56
+So Lauren, is there an team is there anything specific that I we could focus on on today's call to kind of you know Help you get some more idea about the platform
+
+>>Lauren Boersig	18:06
+If not, then we can quickly add you as users and then you can start testing on the platform Could you just go over like how we could go about testing on the platform for you know because I think that would probably be the best so that our underwriter Abby can Test And
+
+>>Aniket Tatipamula	18:25
+Yeah, so typically I would just go ahead and add you as users Sorry to interrupt you before we go there and then just wanted to understand like what kind of validation would you want here? Lauren and then because we understand these Documents will be used to run the extraction, but can you?
+
+>>Lauren Boersig	18:44
+Let us know couple of validations that you would want to want us to set up properly right now Oh, we would want the for the extraction from the We would want to do across the documents like some what one like the purchase agreement has It's like, you know purchase agreement date. So like we'd want that to Match like if the quarter dimensions the purchase agreement date like we would want that to match So like and like this the person's name across The documents between like disclosure and the court order And the payment stream description I would match across payment stream between between the quarter the contracts and the disclosure and then the Annuity contract the policy number from the annuity contract matches the court order policy number
+
+>>Jasneet Singh Malhi	19:50
+Right
+
+>>Lauren Boersig	19:50
+Abby, is that?
+
+>>Lauren Boersig	19:56
+Sorry. For the nudity contract or the benefits letter, because if we have one or the other, if we have both, are the policy number from the nudity contract and benefits letter matches the court order?
+
+>>Abby	20:12
+It's not always listed on the court order.
+
+>>Lauren Boersig	20:15
+If it's there, yeah.
+
+>>Abby	20:16
+If it's there, yes. But it's not always listed there.
+
+>>Lauren Boersig	20:20
+And then for the extraction, there's certain phrases from the court order. We want to confirm that those phrases are in the court order because it's part of the requirements for the order to be valid. Okay.
+
+>>Aniket Tatipamula	20:45
+Would this be a good first version, which will probably give you confidence that, okay, this can... We understand there could be more, but I think this should be a good starter, right? Like where you will get all the confidence that you require that, yes, the system can automatically extract and also validate. Yeah.
+
+>>Lauren Boersig	21:03
+Because there's more data points, but there's basically, these are like the primary things is the same data points across documents. And then certain documents have certain phrases.
+
+>>Aniket Tatipamula	21:14
+Understood. Understood. Yeah. I think... And Lauren, if I'm getting this right, those phrases are already listed on the document that you shared, right?
+
+>>Lauren Boersig	21:24
+Right.
+
+>>Aniket Tatipamula	21:24
+The one PDF that you shared with us. So that's listed in detail here. Let me just open that up and just verify. So phrases look for... So these are the phrases that we are looking for, right? Yeah.
+
+>>Abby	21:43
+Yes. Okay.
+
+>>Aniket Tatipamula	21:47
+Okay. And if I may, because I think for the other customers, when they set up the validation screen, what they do is they set it up as per their convenience. So it's not like we decide what we want, but rather the client decides what they want to look at. And what we allow here, just to give a little bit of idea, this is just a table. So you can have a table title and you can, like, this is a summary, then we can... The summary can always be generated, saying that these are the number of checks that we did. These many checks passed and failed. And for each of the checks, what happened? But ideally for each of the checks, we can have a header saying that whether the entire check passed. And for each of the individual items in the check, we can list them as a table. So we can have columns as per your wish, we can have data listed as per your wish. But ideally what we do is we have the document information, we have the extracted value from the document. And then if the validation is referenced, then we treat that as a reference and then for every other document, we just check against that reference. So this is a standard we follow. But you are all welcome to let us know how you want to configure this for your underwriting to be as fast as possible.
+
+>>Lauren Boersig	23:02
+Okay.
+
+>>Aniket Tatipamula	23:03
+Yeah. Okay, then, Lauren, I think that's it from my side, Jasneet.
+
+>>Jasneet Singh Malhi	23:09
+Awesome. So we have the action items, Aniket, like we'll set up the thing. And then we can add you all as... And so, Lauren, who all would be testing? It would be you and Abby. Do you want me to add everyone to the account as a user or would be restricted to you and Abby only?
+
+>>Lauren Boersig	23:26
+I think we would all be testing. And then also one other person, Mila Mitchell, she's also going to be testing.
+
+>>Jasneet Singh Malhi	23:35
+Got it. So if you can just share the email ID of this person on the chat, I can also add them as the user. And then you will basically receive an automated email as soon as you add your folks as a user. It will probably be done by tomorrow. We'll just need some time to set validation and everything on our end. And then probably by tomorrow, we can have another, we can have you folks start testing on the platform. So I'll also add a couple of more credits as well, so that you can test without any problem. And to discuss the fee, if you have any questions, queries, concerns during the testing period, feel free to write to us and then I'll make sure to get back to you in a flash and wouldn't make sense for us to schedule maybe another call next week to discuss the feedback and any other edge cases that you were able to discover during the testing. So, OK, yeah,
+
+>>Aniket Tatipamula	24:26
+Yeah, this is based out on actually going through the platform. I think Lauren asked us and I interrupted her in between. So can we please do that? Ok, well, if you want that, then I can. We just have to walk them through how exactly to use the platform.
+
+>>Jasneet Singh Malhi	24:45
+I think we did that on the first call, but I can quickly give a rundown once again. Yeah, so typically, Tim, this is like where the.
+
+>>Jasneet Singh Malhi	24:54
+We will get the files on the AI auto classifier. It will understand what the document type is, split it into different document types. Code order goes into the code order, stipulation goes into stipulation automatically. Typically, once the system receives a specific document, the first phase it goes through is the processing phase, where in the AI and the OCR, they work together and we extract all the information that we're looking to extract from the document. You also have the ability to go ahead and create multiple folders as well on the document itself, right? Or you can upload individual files. Let's say if I open up one of these amended files and I open up the code order that we've got. Now, in this case, this review screen opens up in which let's say there's a two -way mapping wherein we go ahead and look at what is the value which is extracted from where. This two -way mapping really helps a lot of operations team, a lot of underwriting teams to understand what exactly has been extracted from where so you don't have to squint your eyes really hard and basically find what is coming from where. And it also gives you all the extracted value, the degree of confidence, right? So in this case, rather than assuming wrong or faulty information, the system basically told you that this is a field that I was able to extract based on my understanding, but the confidence score of this field is low so someone from the team can basically go ahead and approve this. Once I've approved this specific file, the confidence score would change into high and the system will also learn from this annotation. So the next time onwards when the system encounters the same document or the same kind of format again, it will go ahead and it will not give you a low confidence score again. The confidence score field is customizable. You can go ahead and change, let's say if you want the confidence score of a specific field to be really high.
+
+>>Jasneet Singh Malhi	26:38
+Right now it is set at 80 as a default, but you can go ahead and set it very high as well. So if the system is only 80 or more than 80 % sure, then only it will pass it on without any human review, but even if it is 79 .9 % sure, then it will flag it as a low confidence for someone to review and then learn from that annotation or correction as well. Similarly, you have the ability to write multiple prompts and add multiple blocks to create your extraction engine. Right now we have basically written a prompt to extract the basic information and the assignee address. So the system is looking at the basic information within the assignee address on the document, but you can go ahead and give it more context or a more flavor of how you would want to essentially extract the value, right? So let's say, just as an example, if the assignee address happens to be next to a table, right, so I can give the prompt to the system that the assignee address will always exist next to a table and basically give more context to the AI for it to do a better job on the extraction standpoint. Then we basically can create multiple blocks wherein if you want to calculate anything, if you want to detect if there's a signature has been, if this document is signed or not, if you want to basically do a lookup based on a database of files based from the backend, that is also possible. And then you can add like multiple blocks and see what exactly according to the use case and then get the data back in a structured format. Now, where the platform typically really shines is our data table feature, wherein you would get the entire data across this specific document type in one consolidated structure, right?
+
+>>Jasneet Singh Malhi	28:21
+Wherein you can also go ahead and ask it question, run prompts, basically show me all court orders from the state of Minnesota or show me all orders from the state of Dakota County. So the system will run basically a query on all the extracted data because our source of truth is the data that we're extracting from the document and basically give you that consolidated view. So it can also help your underwriting teams when basically they can ask it a question and they can give you a list of all the documents. I see we just have one minute remaining team. So I wanted to see if you have any questions for me up until this point.
+
+>>Abby	28:59
+No?
+
+>>Aniket Tatipamula	29:00
+Probably, Jasneet, I'll probably take a little bit of time explaining how to even look at that case management. So maybe Jasneet went a little too fast here. Let me share my screen, Jasneet, if you have other call, right? I'll just take my time and then just showcase. So, and Lauren and team, if anyone has any questions, please do stop us.
+
+>>Jasneet Singh Malhi	29:23
+And - Actually, before we get into that, I wanted to do a quick time check with the team to understand if we can extend by five, 10 minutes or do we have a hard stop?
+
+>>Abby	29:33
+I'm okay to keep going, Lauren, Paul.
+
+>>Paul Kosinski	29:37
+I'm going to have to drop, but you guys can continue.
+
+>>Lauren Boersig	29:40
+Yeah, I'm okay to keep going.
+
+>>Jasneet Singh Malhi	29:43
+Awesome, thanks, thanks. I just wanted to do a quick time check just to ensure that we have all the people on board. Yeah, Aniket, please go ahead.
+
+>>Aniket Tatipamula	29:51
+Yeah, so what Jasneet said,
+
+>>Aniket Tatipamula	29:53
+Talked about is the actual flow, but if you if you want to look at the validation data, you would want to have all the documents in a single folder. So for example, if you have a new case, then you would have to have all of those in that folder only. For example, this may be the new case. And then you would have to upload your files, code orders or relevant stuff here. We do automatically extra split and extract and do rest of the stuff here. That's done if you upload here, but still you would have to make sure that the upload happens inside a specific folder or Manoj, if I'm getting this right, have you set up the setting that it will always be in the folder?
+
+>>Manoj Racherla	30:37
+Yeah. Can you go to pre -processing?
+
+>>Aniket Tatipamula	30:42
+Yeah. Okay.
+
+>>Manoj Racherla	30:44
+So yeah,
+
+>>Aniket Tatipamula	30:45
+So ideally what should happen is you when you upload a document to this folder, this document would first get split. Then you would see a new folder getting created here. Like for example, if the name of the document was new case, you would see a folder named new case here. And inside that new case, you would end up seeing all the documents that are uploaded by you. So we would take care of splitting and classification at our end. Now, while you do this, you may run into a few issues right now, because we need to train the system because your documents are a little not as standard as we have, because in standard cases, we have those numbers listed saying that, okay, document one, one of two pages, two of two pages and document two, one of four pages, two of four pages. So when it happens in that fashion, it's very easy for us to split. But I think in this case, it was not that specific. So the split can fail sometimes and please do let us know when that happens. But ideally, you would then end up seeing documents like these, for example, amended file, right, you'll end up seeing all of these. If you want to add the same if you have if you want to add a new document to this, then you will have to upload it inside this folder only you can't just do it outside and then be able to see something on the case management level. You can do uploading at both the places. Ideally, because you're working on case we would I want you to do it here. So you can always come here and upload as an auto classifier type, or you can just create your own doc type and start uploading, create your own folder and start uploading those files one by one, either to auto classifier or to this very specific type that you want to upload it to. And once all the uploading is done, and once all the documents are processed, only and only then you would end up seeing all the validations here.
+
+>>Aniket Tatipamula	32:29
+If you come here, before the documents are uploaded or getting processed, you may not see this working fine, like you may not see some of the validations at all. For example, as an if I go here to let me go back, let me open up new case and then let me come here, you'll see nothing here, because there's no data in that folder, in that case in this specific scenario. So you can also navigate from here, this not sure whether that would be very useful right now. But you can navigate from one case to the next case and get to see the validation. Yeah, I hope this gives a little bit of idea to the team while they are testing. Do let us know if you have any questions.
+
+>>Abby	33:13
+Thank you. Yeah.
+
+>>Aniket Tatipamula	33:16
+Okay, you're welcome, Abby. And what do you just think?
+
+>>Jasneet Singh Malhi	33:19
+Awesome. Thanks. Thank you so much for that, Aniket. So team, we will set up the structure for you and then we'll be able to share the access with you as well. And then can we set up some time for next week for a quick feedback session?
+
+>>Lauren Boersig	33:33
+Yeah, can we do the same time next week?
+
+>>Jasneet Singh Malhi	33:36
+Same time next week would be 23rd of September, correct?
+
+>>Lauren Boersig	33:43
+Yes.
+
+>>Jasneet Singh Malhi	33:44
+Awesome. Just give me one quick second. Yeah, same time next week should work definitely. So I'm just sending the invite to you. Please confirm once you've received the invite and then. So 23rd September, same time I've sent the invite. Awesome. So you should have gotten the invite and then we can take a conversation ahead from there. But in the meantime, if you have any questions for us, we would love to kind of jump on another call and help answer all these questions for you.
+
+>>Lauren Boersig	34:19
+Okay, that sounds good.
+
+>>Jasneet Singh Malhi	34:21
+Awesome.
+
+>>John Pascale	34:22
+Thank you, Lauren. Thanks, John.
+
+>>Jasneet Singh Malhi	34:24
+Thanks, everyone. Thanks, Jorge.
+
+>>Lauren Boersig	34:25
+Thanks, Manoj.
+
+>>Jorge N.	34:27
+Thanks.
+

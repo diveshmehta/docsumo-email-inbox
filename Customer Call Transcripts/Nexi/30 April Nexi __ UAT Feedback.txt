@@ -1,0 +1,150 @@
+>>Eugene Yaromik	00:00
+Like helping you out working out. Well, I you mentioned that there were a couple of places where it did not do well But yeah, I would like to first hear that out before maybe we can take it or I can answer or I can pick it up for development Feedback about this integration. Yeah. Yeah We started taking it But for example, I Yesterday I received a feedback from a Baris and just a Sec. I'll open it That She Wrote to me that she sent a test file for Wells Fargo Bank statement and It came very Close to her own like the service that we use now. We're using now and Can you please check I'll send you a kiron ID and Can you check that? How many files do you receive for this? Holder Id Look some of all the radio
+
+>>Aniket Tatipamula	01:22
+Sure It's it's the data is already there with us, right?
+
+>>Eugene Yaromik	01:26
+Like so that we because we will need to know which Kiron Id and which documents are for that ID looks like because he says that He didn't receive Bank statement Didn't receive Information about this bank statement, but I think He didn't send this file because I tried It manually to receive all files Via API by Folder ID it showed me only one file. I Think it's okay He didn't send Okay, so if I'm getting this right is everything working fine
+
+>>Aniket Tatipamula	02:32
+Then
+
+>>Eugene Yaromik	02:34
+Yes Yes, for example, we compare with another service that we use now. It's like very similar But Sometimes it's not like accurate Maybe In the future when we start using it's more Maybe it will be more accurate, right?
+
+>>Aniket Tatipamula	03:01
+Yeah, and Eugene we made a fix as in we've been making small releases over the weekend So we also made one yesterday. I think on Monday and that would have also improved the categorization.
+
+>>Eugene Yaromik	03:13
+So Look at it as in slowly you will see much more Extraction and much better categorization for operating revenue and for debt settlement Mm -hmm, and also we're waiting task about debts Have you done this?
+
+>>Aniket Tatipamula	03:32
+Yeah, you mean to say the the debt information on the email body, right? Yeah So that's where Eugene I wanted to discuss with you because we surely can do that But what happens is we will take The email body create a image out of it and then upload it back into one more Doc type so we will create a document type maybe for Debt information for example and that information and if you go in that data information, you will see documents that are printouts of email body or it could be an attachment So And then You will get to extract the fields from there, too But just wanted to understand what kind of fields do you want because it's a very open -ended, Right? I could see there are multiple people who are giving death from as in giving debt. Then we'll have to create a table with all possible Companies who are giving the debt and all possible amounts that are provided as debt, right?
+
+>>Eugene Yaromik	04:37
+Well, I'm not sure if you can do this Maybe I can Send you like more examples for these steps how we receive these emails
+
+>>Aniket Tatipamula	04:53
+Okay, then that would be great if you can please share those emails and that would help us shock out a better solution for it
+
+>>Eugene Yaromik	05:02
+Okay, if it will it be a New document type it's okay
+
+>>Aniket Tatipamula	05:11
+Yeah, it will be a new document type we just have to be very sure like how exactly the data will be so that we can create a Proper data structure for it like will the weather it will be just a field or it will be a line item And then there Will be a couple of columns for that info. So we need to figure that out
+
+>>Eugene Yaromik	05:38
+Do you mean how you will store this information?
+
+>>Aniket Tatipamula	05:44
+Yeah, I'll just show you what I mean
+
+>>Eugene Yaromik	05:47
+Okay, so this like this for example as in we may have
+
+>>Aniket Tatipamula	06:54
+So I'll just show you here only so basically there could be It could be more information like a serial number one, So maybe the lender name and that a and then the amount right amount can be five thousand And Then there could be lender B and the amount could be six thousand Because we don't know how many lenders there could be So this is how the data would be like because you cannot put it here on a single key You will have to put it in a table Yeah, it could be something like this Are you going to find this? Lander depth into a bank statement No, no, this is this is this document is just for example, but this will be an email body We will see an email body here as a printout and then you will see this extraction
+
+>>Aniket Tatipamula	08:01
+Yeah, it could be something like this we will see if this is it is able to work right now But yeah, I think I don't know it But we will extract the data like this You you get my point right Eugene I Don't have credit on this account, but I'll I'll process and show it to you so that you you get that the response back We have a book For this for this specific case, you can get this data back on the same Summary API right because you want it on that summary API, correct?
+
+>>Eugene Yaromik	09:57
+Where do you want this? And like bank statement account summary will contain like that Also that yes, yes, we will send you that along with it Yeah, it's possible. Yes. Yeah, it is possible Okay, but That has Several fields like lender name repayment frequency like daily weekly Also repayment amount and sometimes outstanding balance It's for fields.
+
+>>Aniket Tatipamula	10:41
+Okay, then let me set it up. Give me one second. Let's try this out right now
+
+>>Aniket Tatipamula	11:26
+Okay, so you mean lender name Amount what else?
+
+>>Eugene Yaromik	11:33
+The amount of payment frequency usually it's daily or weekly Okay, what else outstanding balance will all of that be in the email itself No, maybe outstanding balance it's Emails usually looks like like in a red box This that's then lender name will lender name is Lcf, right? Yes payment frequency daily and Repayment amount like the agreement amount was that document.
+
+>>Aniket Tatipamula	12:28
+Let's see if this is able to expand Yeah Lcf Funding metrics 149 832 daily and weekly. That's it, right? Outstanding balance This is something that
+
+>>Eugene Yaromik	12:50
+Yeah for this email it's missing Where will we get this from?
+
+>>Aniket Tatipamula	12:58
+Eugene We'll get this from What? Outstanding balance. So we will have to Complete this via the transactions
+
+>>Eugene Yaromik	13:11
+No, it's also from email body. But in this case, we don't have outstanding balance Okay, maybe I'll send you more examples like Maybe it will contain outstanding balance Understood.
+
+>>Aniket Tatipamula	13:30
+Okay, then this should work out like we'll set it
+
+>>Eugene Yaromik	13:34
+Yeah, it works well like recognize all these fields Yeah And we will receive this information Into account summary for bank statements. Yes, we can do that Okay, cool
+
+>>Eugene Yaromik	14:01
+It's oh it's done already that
+
+>>Aniket Tatipamula	14:06
+Or not It's done then so what will happen is Eugene, please share a few samples What we'll do it Because I need to check please also share samples where some sometimes it's in body and sometimes it's in the attachment, right? Please share both these cases because then what we'll do is we'll figure out what is the flow because we'll have to set up that Flow right now on your flow. We don't check for body We don't convert body to image and then upload in any auto classifier, right? So we'll have to set that up. It may take a little bit of time a week or two But we will get it done for sure in the meantime Please share samples so that we can set this document type out properly and we'll also make sure that this information if present In that case will be sent on the summary on that summary API Summary API it will be likes bank statement summary and under That summary You can let us know where you want us where you want it. We will put it there. It's up to you. You can tell us
+
+>>Eugene Yaromik	15:14
+Okay Okay, I think it's clear about that and What else
+
+>>Aniket Tatipamula	15:31
+Yeah, I think I think we are good rest looks good. I guess let us know if you face any issues and would be more than happy to hear how the Summary is turning out. The analysis is turning out for your lending team. If you see any discrepancy, please do let us know We'll be there to help you out I mean, we have a dedicated team for next week out here and optimal in case you run into any issue Please feel free to ping
+
+>>Eugene Yaromik	15:58
+And then we'll get back to you in 20 12 to 24 hours and for example We discussed is that is it possible to schedule another call with our underwriting team And then they like will provide a feedback because they test This like bank statements know all calculations about this about Bank statements account summary So using perfect like I will be happy to let us know when you want that and we'll be happy to help you on that one Okay, and Like may I ask a question like just curious what type of Artificially intelligent do you use?
+
+>>Aniket Tatipamula	16:53
+Like like sounds like that charge a PT for example It's it's combination of everything using a not specifically deep sea, but we do use LLMs this generally is orchestrated by our machine learning team, so we Some of the models could be LLM based some of the model could be could be rule based like we have written for bank statements Right, it's very difficult to get everything right even with the latest Gen AI models, so we have a lot of rules that are written on it And if you look at let me just show you something I mean So when we when we extract the data out So a lot of rules are written to compute this tally check past So this is this is basically like one of the checks that we had to write And then we do a lot of checks Over and over the extraction to make sure that we get our opening closing and then the entire extractions out properly So it's it's a rule It's a little bit of Ml model little bit of rule little bit of LLM And I think all of them combined Gives you the perfect extraction almost all this
+
+>>Eugene Yaromik	18:08
+Yeah, okay, Okay Yeah, it's like We already connected like Integration with your API But Like big problem now we didn't test it There may be a situation when your service process Email faster than our system. For example now we are going to send like forward email To our system and our system to Salesforce at the same time yeah, and Sometimes for example your system will process this email Faster than our system and when you send a webhook, we will not have this email yet like for now, it's Like a problem we will test it But maybe in future we will Change it. For example, we will receive first of all email to our system and then we will send to your system some squazzes That would be the right way to do because any other way as
+
+>>Aniket Tatipamula	19:40
+And we'll still run into that issue Okay
+
+>>Eugene Yaromik	19:45
+Yeah Okay, I don't have any question for today Okay, okay, I'll send you examples and also send information about maybe if we Can schedule another call for like the writing team to discuss account summary information
+
+>>Aniket Tatipamula	20:11
+Sorry, I'll be waiting for that.
+
+>>Eugene Yaromik	20:14
+Uh -huh. Okay Yeah
+
+>>Aniket Tatipamula	20:18
+Okay No Yeah, hope everything is working fine. And please let us know if there's any issue and We hope that the onboarding gets completed soon, and then we can support you in the actual release Uh -huh.
+
+>>Eugene Yaromik	20:37
+Okay
+
+>>Aniket Tatipamula	20:37
+Okay Eugene as and before we drop off if you have two minutes, right two minutes I just wanted to understand like earlier you have you were integrated with Heron data like Any reason why you left them and then? Decided to join the dog sumo gold oxen.
+
+>>Eugene Yaromik	21:00
+I Don't know exactly it's depends on Boris and Next company I like I Don't know exactly you should ask them For example, we wanted to change your own like me one year ago, we Will also hire another company's age also should to create An Integration with like also should pass application bank statements and They used Google Gemini AI But we Awaiting around one year and Didn't have a result didn't receive a result and we switched to your company Okay, and how has been the experience till now?
+
+>>Aniket Tatipamula	22:08
+Like are you feeling we are easy good enough like any problem that you have with us compared to Heron or any other provider?
+
+>>Eugene Yaromik	22:19
+No, it's like very similar but her own like more Accurate Recognize bank statements, for example, something like this When you say accurate as in in what sense and was the categorization more accurate or the extraction more accurate I Didn't test it but Baris sent me like a feedback about this and he said that for example like Starting balance and in balance Like not accurate Starting better than accurate.
+
+>>Aniket Tatipamula	23:02
+Okay.
+
+>>Eugene Yaromik	23:03
+Okay Just a second, I'll check if I have this message No, he just says that her own is more accurate, okay And Maybe underwriting team provides more like feedback because they check all these values But I don't know Sure.
+
+>>Aniket Tatipamula	23:43
+Sure Eugene. I think I'll be like very excited to Sit with them and get a feedback and so that we can improve. I'm pretty sure like there's too much left We can 100 % give much better accuracy Given that we know what what and where we are failing
+
+>>Eugene Yaromik	23:59
+Yeah, Okay Yep
+
+>>Aniket Tatipamula	24:04
+Okay, and thank you. Thank you Eugene. Thank you for your time.
+
+>>Eugene Yaromik	24:07
+Have a great day. Thank you. Have a nice day. Bye Bye
+

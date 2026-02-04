@@ -1,0 +1,450 @@
+>>Aniket Tatipamula	00:00
+Sure I Get I'm an I'm I can Hey, how are you? I am good. How are you? Good good. I was saying I think Aaron should be here in a moment.
+
+>>Michael Bottazzi	00:10
+We just met up to hold on for a second Hey, hi, Adam Hey Okay, and we start Yep, I think we all set
+
+>>Aniket Tatipamula	01:08
+Yeah Manan do you want to take up? So I'll just give a brief about what happened on the last call and Aaron as in post last call as in I could not see more issues listed there and Manan has started working on those individual document issues. So I am waiting for Manan to fix those first So and the rest I could see most of the issues are very basic ones in terms of name match and other things other than that like we'll probably Go through all the uploads once and then keep everything ready by Monday So that would be our agenda regarding signatures as in like I personally talked to our Engineering team And then they have started working on one version of the fix So they'll come back with that fix and then post that probably we should be able to like the signatures would also be done So that's like a very basic update. I think the rest Manan if you fixed anything. Can you please share that?
+
+>>Manann Agarwal	02:02
+Yeah, so So, uh, what so basically there was one specific issue that I saw or two issues that I saw Once I'll just share my screen and I'll make it easier Okay, so there was this issue about you know prior year tax returns And your specific date for this I think the same issue is mentioned Yeah, okay So this was this was one set of issues which you know, I have fixed I think there was some issue at the document level validation So I made that change And you know, I did run a few documents where the issue was popping up I read write them and you know now they are working out fine, so that is You know exactly like that's that's one fix that I've done. The other fix that I have done is Regarding your secured loan. I think there's another issue of the same issue. There's that No, it's just this Yeah, Okay So here as well what it was doing was it was picking up innovation Llc's data The bank name And you know the name so that has you know that also, you know, we have made that change And I tried a couple of documents again. They were working fine, but this issue I will still have to test out On a few more documents. So this is again something that I'm just testing on Apart from this, this was one issue that I you know, I did not actually get what you know You were trying to say here
+
+>>Manann Agarwal	03:43
+Exactly so if you could, you know, just run me through this particular issue That would be great. I will just open this up clean water drinking Yeah Okay, it was comfort letter, Okay Yeah, so it's R &d comfort letter right or taxation comfort letter
+
+>>Aaron	04:05
+Um, you can just go straight to the validation screen
+
+>>Manann Agarwal	04:09
+Okay scroll
+
+>>Aaron	04:16
+Yeah, so for this, um, I think it was specifically referring to William Buck versus this one is on William Buck parentheses new South Wales limited party limited And I think the solution that we talked about with aniket was That we would actually make a more expansive list with um Because William Buck new South Wales is like relatively common. You can do like Deloitte Australia We'll make a better list for you guys and then you guys can also simultaneously implement a more fuzzy check um so that It can like kind of match it better in those scenarios Okay
+
+>>Manann Agarwal	05:00
+Okay, got it. Yeah. So, uh, apart from this, uh, again, this is something that's work in progress.
+
+>>Aniket Tatipamula	05:07
+Uh, you know, this we've discussed, Aaron knows about it. It's because of a resolution of the, uh, Excel to PDF.
+
+>>Manann Agarwal	05:14
+Yeah. Okay. Okay. And secure load agreements again, uh, that is, uh, uh, based off signatures. So, um, yeah, just one second. Hyperfire. Uh, this is also resolved. Just give me a second.
+
+>>Manann Agarwal	05:41
+Yeah. I think hyperfire. Um, I think everything is passing here, right? So that don't, that doesn't seem to be an issue here.
+
+>>Aniket Tatipamula	05:50
+Okay.
+
+>>Manann Agarwal	05:53
+Okay. Okay. Awesome. So, uh, um, again, uh, we did, uh, like I was, we went through a few more sets where I saw, you know, the same issue that was repeated that, uh, you know, you mentioned in the Excel. So, you know, uh, taking that also into consideration, you know, uh, made changes accordingly for the extraction part. Uh, again, uh, like I said, there are, there are two, uh, specifically one issue that we are still working on. There's one issue, which is based on the resolution, which I don't know if we would be able to fix on that. Uh, but, uh, yeah. Apart from that, are there any other issues that, uh, I wouldn't say an issue really, but I might just a heads up.
+
+>>Michael Bottazzi	06:38
+I might send one note over about one criteria for a specific check that we might want tweaked. I'm still looking at it. So I don't want to ask you to make any changes. I'll, I'll, if I do, I'll send over it in an email, but, um, super simple instead of like less than a figure, maybe like less than or equal to sort of situation. Um, so it should be basic. Um, I think the industries have been looking better. I know that was something that we were having issues with last week. Those look to be a little bit more streamlined. Um, also as I'm sure you've noticed, we've just been popping in cases as well. So yeah, I think the open points that you mentioned that are being worked through are kind of the same as what we were looking at on our end. I think the missing situational highlighting is working really well. I think that looks the way we'd want it to. Um, Aaron, I don't know if you had anything specific, but I think we're on the right track here. I think to your point, it's going to just be continual little tweaks and we're going to keep running packets through it. Right. So if there, anything does come up, we can address it accordingly.
+
+>>Aaron	07:49
+Yeah. Um, I mean, I put in two packets this morning, just around like 30 minutes ago. If, um, Manon or Anika, you want to share your screen and let's run through the two of those collectively. Um, I think let's, let's do that. And then meanwhile, in the meantime, I mean, after this call, um, I'll continue to make packets and I'll actually start logging all this because there's still like a few consistent, just like Aaron, there are these small things are failing. Um, and I'll actually note them down for you guys. Um, let's start with site quality.
+
+>>Manann Agarwal	08:23
+Okay. Yeah.
+
+>>Aaron	08:26
+For this one that actually, um, as like a collective packet, it looks really good. Um, but I did run it through a few times. There was a few, like, I think I ran the Equifax report through twice. Um, but let's just go through it.
+
+>>Manann Agarwal	08:39
+Uh, okay. So your tax agent comfort letter has some issue here. Uh, yeah. So I think the issue is on the, uh, name fuzzy match, right?
+
+>>Aaron	08:51
+Correct.
+
+>>Aniket Tatipamula	08:52
+Yes.
+
+>>Manann Agarwal	08:53
+We'll just still reconfirm this. Okay. Yeah. So this is something that we have noted and, uh, uh, you know, we'll make change to, uh, the name checks specifically, at least for the approved list of, uh, uh, you know, your, uh, agent or tax agent on the forms as well.
+
+>>Aaron	09:12
+Great. Yeah. Um, yeah, let's just continue to run through it.
+
+>>Manann Agarwal	09:19
+So we have is on green ID report. I'll just open this up.
+
+>>Aaron	09:27
+I think this is, um, I think this should be a flag just, just so like Michael, you can look at it because this is kind of like, uh, just let you know that something happened in the past. This is good.
+
+>>Michael Bottazzi	09:39
+Yeah. So I'm just, just to be clear, I guess what it's normally looking for is just the phrase, the word verified. Right. And then anything else that's in there is going to throw it, which I think to your point is what we'd want. So the, yeah, I think that that makes sense. Yep.
+
+>>Manann Agarwal	09:55
+So this is correct, right? Uh, there should be no
+
+>>Manann Agarwal	09:57
+No, it's not verified.
+
+>>Aaron	09:59
+Yeah, I think this looks good.
+
+>>Manann Agarwal	10:01
+Awesome, OK, perfect. Next we have, I think this document itself is missing. Yeah, it's missing.
+
+>>Aaron	10:11
+So that's also good, because they weren't registered last year. So it should be missing. And I looked through the documents. They also don't have a tax return from last year. So all of it is consistent, basically.
+
+>>Michael Bottazzi	10:24
+So Aaron, was there anything like a registration for this year? Or was there just no document present for Oz industry regardless?
+
+>>Aaron	10:33
+There was no document present.
+
+>>Michael Bottazzi	10:35
+Ok, so they might have had an offline conversation with whoever about waiving that or something. Ok, cool. Yeah, that's good.
+
+>>Aaron	10:43
+Yeah, and if you look at their tax returns, it's like zero. And originally, I'll just bring it up. When I first ran this through, I think in document 8, it was extracting zero, which is good. But for document 10, it was extracting no extraction value, because there's a blank there, right?
+
+>>Manann Agarwal	11:09
+Yeah, so again, that change is something that I made, where since the validation is set such that it matches the exact number with the exact number with, I think, plus or minus 5. So I actually made that change, where if nothing is found, then it would, by default, return zero, so that the validation runs as it should.
+
+>>Aaron	11:34
+Great, that makes sense. Yeah, if you want to take a look at the Excel documents, I changed the formatting. So it's a bit of a more manual step. And hopefully, we can automate this process within Salesforce. But you can just click into it. It's a, oh, not this one, 13 or 20. 13, OK, Excel.
+
+>>Michael Bottazzi	11:58
+And then, sorry, just in 15, that was the signature check that we talked about, right? Still getting worked on. Is that where it was failing? Ok, I just want to make sure.
+
+>>Manann Agarwal	12:07
+Yeah.
+
+>>Aaron	12:15
+So it's basically a two -pager now.
+
+>>Manann Agarwal	12:18
+Ok. But again, see, that should not be an issue, right? If it's a two -pager as well, because this is a pretty standard document. So if the resolution is fine, and if everything is legible, as in if it's visually, letters can be differentiated. So I think then I'm pretty sure the system would pick up data from documents like these.
+
+>>Aaron	12:46
+Great.
+
+>>Manann Agarwal	12:48
+Awesome, OK. Moving on to secured loan agreement. Again, this is the signature check. So we are working on this. So yeah, we can give you an update on this, let's say, by the end of this week or by next Tuesday.
+
+>>Aaron	13:09
+Ok.
+
+>>Manann Agarwal	13:10
+Moving on, closing statement. We don't have a date here. I will just open this up once.
+
+>>Michael Bottazzi	13:22
+Should we? Is that not it right at the top? Should it be closed date or funding date?
+
+>>Aaron	13:28
+Should be closed date.
+
+>>Michael Bottazzi	13:29
+Yeah. Yeah, it should be closed date.
+
+>>Manann Agarwal	13:32
+Ok, I will just make a note of this.
+
+>>Manann Agarwal	13:48
+Ok. Pass, pass, pass. Ok, the last one, master facility agreement. Ok, that's a fail. So I think there's some issue here, which I'm not aware of. Yeah. The same issue that you discussed last time? On the last one?
+
+>>Aniket Tatipamula	14:11
+It's the same issue.
+
+>>Manann Agarwal	14:12
+Ok. Ok, so for now, we can skip this fail part, right? For now, we can just overlook it.
+
+>>Aaron	14:20
+Yeah, let's just ignore that. Discussed it with Aniket last meeting. It's good. Still got record.
+
+>>Manann Agarwal	14:34
+Again, we'll move to tax agent comfort letter.
+
+>>Michael Bottazzi	14:40
+Abn.
+
+>>Manann Agarwal	14:45
+Oh, I think it's captured the wrong Abn.
+
+>>Michael Bottazzi	14:48
+Yeah. Does this have the other Abn?
+
+>>Manann Agarwal	14:56
+It doesn't.
+
+>>Manann Agarwal	14:56
+It does not have the other Abn, I think. Yeah, it does not.
+
+>>Michael Bottazzi	15:03
+Can you go back out? I just want to see what the reference.
+
+>>Manann Agarwal	15:11
+So I think the reference is from document one.
+
+>>Michael Bottazzi	15:15
+Yeah. All right, I think the check's doing what it's supposed to do. We might have to talk about that, Aaron. I wonder if that particular R &D advisor just doesn't put the Abn on a letter.
+
+>>Aaron	15:31
+A lot of them don't, actually.
+
+>>Michael Bottazzi	15:33
+Yeah. Yeah.
+
+>>Aaron	15:36
+I think for this, we were talking about if the name is, if the name or direction is consistent.
+
+>>Michael Bottazzi	15:45
+Yeah.
+
+>>Aaron	15:45
+Okay, so let's talk about that offline and figure something out.
+
+>>Michael Bottazzi	15:49
+All right, so yeah, we'll discuss that. It might be a change on this to either be Abn or company name, just as a heads up, if that works.
+
+>>Aaron	16:02
+Sure, let me make a note of that.
+
+>>Manann Agarwal	16:06
+Okay, so this no And no should have been yes. So if you could just confirm based on if this is exactly what it should have been.
+
+>>Michael Bottazzi	16:21
+I know it's not required. It's not part of a new setup. Not registered. It's not subject to review. It's never been subject to review. Has no outstanding tax. Will also maintain business activity standards.
+
+>>Michael Bottazzi	16:45
+I think they have lodged business activity statements because it's telling us here that they don't have any open disputes. They don't have any outstanding tax or superannuation liabilities. I don't know if you think the same, Aaron, but just quickly reading that, that's kind of what it is.
+
+>>Aaron	17:03
+I think it's a bit difficult because for this specific tax agent, usually they're all formatted and the first two bullet points are lodged, all required and lodged and maintained. But the first two bullet points here are like referring to something else. So in the sense that the formatting is very different for this specific tax advisor.
+
+>>Michael Bottazzi	17:30
+Okay, so. Sorry, what did you say?
+
+>>Manann Agarwal	17:35
+Yeah, yeah, Yeah, Michael, please go ahead.
+
+>>Michael Bottazzi	17:38
+Yeah, so I was just gonna say that, I guess the short point is that it looks different than the standard. However, they are up to date. They have lodged and maintained. So I don't know if there's a workaround there, if this is gonna have to be on a case -by -case basis. But yeah.
+
+>>Aaron	18:04
+Yeah. Let's just talk about this one more in -depth offline then.
+
+>>Michael Bottazzi	18:12
+Yeah, we can figure it out.
+
+>>Manann Agarwal	18:14
+All right, so I'll keep a pause on that for now. And again, I think this is something that we'll just look into, because the issue might have been because of the hyphen here.
+
+>>Aaron	18:27
+Yeah.
+
+>>Manann Agarwal	18:27
+So yeah, I'll just make a note of that as well.
+
+>>Aaron	18:31
+This happens with a few other documents too. Sometimes they might have hyphens and stuff. But I think I saw it was fixed in one of the other documents. So the same thing could just be implemented. Very good.
+
+>>Manann Agarwal	18:48
+Okay. Equifax report. Yeah, I think it has not extracted this value.
+
+>>Manann Agarwal	19:13
+We'll have to see why it didn't pick up that text. Aniket, any idea on this? Why did it just?
+
+>>Aniket Tatipamula	19:25
+Can you just show me the text once again?
+
+>>Manann Agarwal	19:30
+Yeah.
+
+>>Aniket Tatipamula	19:32
+Well, this is our OCR issue actually. This sometimes happens. Maybe we can, that would be solved if we used Usevision, right? Maybe this we know, this is a known issue. Manan, we can separately think and figure out how to fix this.
+
+>>Manann Agarwal	19:47
+Okay. Okay. I'll just make a note of this.
+
+>>Aaron	19:52
+Great. Yeah, when I did Sequality, I...
+
+>>Aaron	19:55
+I also noticed that everything else was extracting properly, and then it was just that the last two, the two petitions were having a bit of trouble. So that was when I was running it through.
+
+>>Manann Agarwal	20:14
+Awesome. Ok.
+
+>>Aaron	20:20
+Great.
+
+>>Manann Agarwal	20:21
+Moving on. Priority refund.
+
+>>Manann Agarwal	20:31
+Ok, so there are no transactions. So I think that's why there's no refund. Again, this should have been zero. We'll just work on this so that this is zero. I'll just make a note of this.
+
+>>Manann Agarwal	21:00
+Again, bulleted.
+
+>>Michael Bottazzi	21:03
+Yeah, that's fine.
+
+>>Manann Agarwal	21:06
+One second, we have this missing. Is this file actually missing?
+
+>>Michael Bottazzi	21:10
+No, actually, sorry. The, wait, where are your tax return?
+
+>>Aaron	21:16
+I think it probably is missing because they're a new company, yeah?
+
+>>Michael Bottazzi	21:20
+So they don't have a file. Yeah, they don't. Yeah.
+
+>>Manann Agarwal	21:23
+Ok. Ok. Looks like that.
+
+>>Michael Bottazzi	21:34
+And then for the Ppsr, the date. Yeah.
+
+>>Aaron	21:40
+So this was actually, if you want to click into it, it's actually September 3rd, 2025. I think it's being picked up as March 9th.
+
+>>Michael Bottazzi	21:52
+Right. This is just so that they have the date listed. Yeah.
+
+>>Manann Agarwal	22:02
+Ok, I will just keep it.
+
+>>Aniket Tatipamula	22:05
+This is something that can be a little bit of a pain because it's mentioned as year, month, and day, right?
+
+>>Aaron	22:15
+Yes.
+
+>>Michael Bottazzi	22:17
+Yeah.
+
+>>Aniket Tatipamula	22:17
+Can you, will it always be like this, Aaron?
+
+>>Aaron	22:21
+For the Ppsr report, I think so.
+
+>>Aniket Tatipamula	22:24
+Can month and day be both? Yeah, sorry, Michael.
+
+>>Michael Bottazzi	22:28
+No, you're good. I was just going to say, I think for this report, it should be.
+
+>>Aniket Tatipamula	22:33
+Yeah, can you, yeah, the date will always be in the format of, you can mention that's it, right? Y by MMDB, correct?
+
+>>Manann Agarwal	22:48
+Ok.
+
+>>Manann Agarwal	22:57
+I think it's getting processed. I think this is zero. This is empty up there. That's why this failed, where it's matching empty with zero. So once we make that change, I think this should also be sorted.
+
+>>Aaron	23:16
+Yep.
+
+>>Michael Bottazzi	23:17
+I think I'll just retry this document once.
+
+>>Manann Agarwal	23:26
+I think I made a change in this. I'll just retry this once.
+
+>>Manann Agarwal	23:42
+Ok, so Ppsr report is now coming to be correct. This is being retried here. We move to device loan summary model. Again, the earlier value was zero. It was empty. That's why, you know, once we make that change, this will also be cleared out.
+
+>>Aaron	24:04
+Great.
+
+>>Manann Agarwal	24:06
+We have retried document number 15 for the bank information. So I think once that's processed, we'll get the values here for confirming.
+
+>>Aaron	24:14
+Ok, very good.
+
+>>Manann Agarwal	24:17
+And yeah, I think everything else is green. Everything else is fine.
+
+>>Aaron	24:24
+Yeah, let's look at the secure loan agreement.
+
+>>Manann Agarwal	24:28
+Yeah, let's just give it a minute.
+
+>>Aaron	24:30
+Sure. Looks pretty good, though. Don't you think, Michael?
+
+>>Michael Bottazzi	24:36
+Yeah, I think this looks good. I think, like we were saying, these little tweaks that we can make.
+
+>>Michael Bottazzi	25:03
+Thank you. Thank you. Thank you.
+
+>>Michael Bottazzi	25:22
+Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.
+
+>>Michael Bottazzi	25:43
+Thank you. Thank you. Thank you.
+
+>>Michael Bottazzi	26:01
+Thank you. Thank you.
+
+>>Manann Agarwal	26:06
+Thank you. Thank you. Thank you.
+
+>>Aaron	26:15
+Thank you.
+
+>>Manann Agarwal	26:55
+I think it's processed now.
+
+>>Michael Bottazzi	26:58
+Great.
+
+>>Manann Agarwal	27:03
+The values are still in.
+
+>>Aaron	27:06
+It's there now.
+
+>>Manann Agarwal	27:08
+Yeah. Yeah. Okay. Again, the signature check. We are working on that. But again, once you've extracted the value, and if we compare that with 20, 21. Yeah, here. Okay. I think everything passes here as well in closing statement.
+
+>>Aaron	27:29
+Very nice.
+
+>>Manann Agarwal	27:33
+So, yeah, I think that's about it on these two files.
+
+>>Aaron	27:38
+Great. Yeah, it looks good. I mean, on our end, I guess for us, we'll get to you guys the expanded R &D advisor list. And we'll discuss some of the specific details on those things, as we said. And we can follow up with an email, or I can put it into the Excel sheet, I think, or the Google sheet, also highlighted in an email. Mike, you want to talk about the box thing too?
+
+>>Michael Bottazzi	28:12
+Yeah. So, I know I dropped early on the last call, but we've been starting to work through the box integration. I think, ideally, we're continuing to make these tweaks. But I would like to say by sometime mid next week, maybe we can have a larger call with the folks involved on both your end and ours that are going to be able to make that happen. We're going to need access or the ability, the connectivity really for the box API and the Salesforce API, which I know are both available in the integration section. So, that's good. We think it should be fairly straightforward. But again, I think if there's any folks from your end that would be best to advise there, that'd be the time to have them on. So, maybe we can work through these updates. It's today, Thursday. Maybe we meet Tuesday again, if that works. And then, maybe even the following day, we can circle up on the Salesforce and box stuff. But yeah, that's sort of what I'm thinking, if that works on your end.
+
+>>Aniket Tatipamula	29:30
+Yeah, that works, Michael.
+
+>>Michael Bottazzi	29:32
+Cool. And then, yeah, in the meantime, as we make, like Aaron said, as we make these updates, we'll continue running packets through. We'll send over what we owe you, the list, or if we have any other questions or whatever, do the same, just reach out if anything comes up. And we'll keep working through it that way.
+
+>>Manann Agarwal	29:51
+Sure. Cool.
+
+>>Manann Agarwal	29:53
+Ok, so I'll set up a meeting for Tuesday. I'll just check on available slots, and I'll share available slots, then I will set up a meeting accordingly.
+
+>>Michael Bottazzi	30:07
+That's perfect. Yeah, just send it through. We'll be good to go for Tuesday.
+
+>>Manann Agarwal	30:11
+Awesome. Ok, then.
+
+>>Michael Bottazzi	30:13
+All right. Thank you.
+
+>>Aaron	30:15
+Great. I'll see you guys.
+

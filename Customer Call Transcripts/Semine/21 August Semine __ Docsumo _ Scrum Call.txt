@@ -1,0 +1,459 @@
+>>Bikram Dahal	00:00
+Click up on this then suddenly the confidence score is good. So basically like if people have gone into that cell it assumes that you have imbued it. So that is how like the system works because otherwise like if the confidence is low then how do you decide if people have imbued it and say that it is correct Right So that is because of that. So like if you go to a cell then the confidence automatically changes into high because it assumes that you have like imbued that file and that is true even if there is a value or there's no value. So if people go and manually stay with that cell then that will be automatically converted into high.
+
+>>Bjørnar (Semine)	00:48
+Okay I see I discussed a little bit with Alexander earlier. So Alexander it's not a bug or anything it's Yeah I think
+
+>>Bikram Dahal	00:57
+Yeah.
+
+>>Bjørnar (Semine)	00:58
+Hi Alexander.
+
+>>Bikram Dahal	01:03
+Okay I think as usual
+
+>>Aleksander Larsen	01:05
+Yeah
+
+>>Bikram Dahal	01:05
+Hello yeah.
+
+>>Bjørnar (Semine)	01:07
+Yeah
+
+>>Bikram Dahal	01:07
+Alexander. Is Gerald joining? I think
+
+>>Bjørnar (Semine)	01:10
+Yeah
+
+>>Bikram Dahal	01:11
+I think so.
+
+>>Bjørnar (Semine)	01:13
+I haven't heard anything else.
+
+>>Bikram Dahal	01:15
+Okay so we just wanted to like this is normal check only. I know you guys had sent some queries on last like Thursday so we have some solutions. I just wanted to present those solutions if that is okay because there's a small change on the JSON output format. Number is converted into a string to solve one of these problems. I just wanted that confirmation And I think the team is already working on multiple Ibm numbers and everything. Just wanted to give you that update and also understand if there are any new things that we need to work for this week so that we can like make sure that those issues or if you have any confusion those are those are solved. Okay so any other questions except for the confidence thing like any other questions or any other. So you had one concern regarding the split document right? So like Manoj do you already have a idea about it is an issue or like or we need more explanation regarding the split conversation that was happening?
+
+>>Manoj Racherla	02:17
+Yeah so Bhajan so the document that you uploaded for split so it contains multiple like it's a double invoice right within the same document. So it got split based on the so within the primary invoice that you uploaded in that there are two invoices and then it got split into two separate documents. Is that the expect that is that the output that you expected?
+
+>>Bjørnar (Semine)	02:43
+Yeah so in terms of the split logic when I looked up on the pdf again because I didn't realize at the beginning even that it was basically two of the same invoice in one pdf so there was eight pages of the same data. But I can basically because the other part of the question related to that I can just share my screen again quickly if that's fine.
+
+>>Manoj Racherla	03:05
+Yeah sure.
+
+>>Aleksander Larsen	03:09
+Where did we get this invoice Bjarne?
+
+>>Bjørnar (Semine)	03:14
+I just picked it up from a Slibak.
+
+>>Aleksander Larsen	03:19
+That was very strange. I agree. So it correctly split it Yeah That would be per expectations but then again we would never actually expect to send that type of invoice so it's surprising I guess to me that in fact someone is sending that type of invoice.
+
+>>Bjørnar (Semine)	03:40
+I need to check it again as well because apparently with the export tool I used previously today there is something that's not 100 % from our end I think. So there might be a problem from my end when downloading it
+
+>>Manoj Racherla	03:54
+But I'll see.
+
+>>Bjørnar (Semine)	03:55
+But this is basically the invoice I just talked about Vikram and Manoj. So when me and Alexander looked through it now obviously we have been clicking a bit through it so the example isn't relevant as it lies just now. But one of the things that we noticed is that the capture looks different but the invoice is identical. Like for example here you can see that it's white. Only the top line here of the invoice line is captured which is fine by any means. It's correct. I go to this and you see that it looks like everything is marked intact and this is basically the same invoice uploaded twice at the same time and also the confidence scores were not the same in the two documents.
+
+>>Bikram Dahal	04:49
+I'll check that file and I'll get back to you. Usually what happens is that if you go to line item. Can you please go to line item?
+
+>>Bikram Dahal	04:58
+Item. Yeah, on the line item, we'll go through a few things once and get back to you. But on line item, there is, I know, because if the description is a bit long, I know if it's identical, that's not the case. But just giving you a heads up for other files and everything is sometimes the highlighting can be a bit misleading. Not always, but sometimes misleading. It might capture everything, but only highlight one line. Like, because we are calculating the highlighting based on extraction. So just giving you a heads up, sometimes that can happen. I'll just check this file, and we'll get back to you regarding why that has happened.
+
+>>Bjørnar (Semine)	05:37
+Yeah, and if you want to try uploading it again to see, you can just use the same document of this API in those training. Yeah.
+
+>>Bikram Dahal	05:47
+Because if it has excluded, then it might be better if you can get the original file.
+
+>>Manoj Racherla	05:51
+Yeah, because they have shared the original file over email.
+
+>>Bikram Dahal	05:55
+Like, Manoj, please send it across. Do both the things. Upload it with speed. Upload it individually. And can you send me the results? And can you also send the results to the Ml team, to like Samir and Ayesha, and get their input on that?
+
+>>Manoj Racherla	06:11
+Oh, got it.
+
+>>Bjørnar (Semine)	06:14
+We'll check with the El -Shamoudi if he's joining. If you wanted to show some of the things you've been working on, it would be great if you could.
+
+>>Bikram Dahal	06:25
+Really, for number, there are a few questions that I wanted to answer regarding the feedback that your team has sent. Can you guys, I'll just share the screen, just to make sure that we're on the same page.
+
+>>Bjørnar (Semine)	06:40
+Yeah, I absolutely will be here in two minutes. Ok.
+
+>>Bikram Dahal	06:45
+So the major feedback that we had was regarding, yeah. So one was regarding this thing. And this, we will make sure that this is already solved. But we need to understand what are the kind of validation that you guys are using so that we can make sure that the fix that we are doing is not breaking anything. So this one, we'll solve it. This is a non -issue that we had discussed about. It will not happen when doing the extraction. But if people manually go and do a box, then usually this issue is there. The second thing, bank account also, we understood. We are solving it. Regarding the date, I just wanted to understand the only thing that you guys want to make sure that date is on this format, right? Like, always on this format. So that is the expectation. There's no anything else that we need to do over here. As long as the date is on this format, this is good, right?
+
+>>Bjørnar (Semine)	08:00
+Yeah, that's the format we use.
+
+>>Bikram Dahal	08:03
+So we'll make sure that we convert this into this format. And then we'll let you know. Or even if it's on the UI, this is not the format. When you guys get exported, this will be the format. So on the UI, we'll have to see. Because usually on UI, we have slash, slash format. But on the final output that you guys get, we'll make sure that the format is always the same on this one. So this one, Manoj, can you quickly check if this is solved or not? Because I think the extraction issue is just that formatting you guys always want it on certain format.
+
+>>Bjørnar (Semine)	08:35
+Yeah, and it's the order if it's in the actual extraction or if it's when you transfer it to JSON.
+
+>>Bikram Dahal	08:42
+Okay, one quick thing that I noticed, because this invoice is not in English, but the data are always on English. Is it standard? Because I know that, I'm not sure what is the language. This is Norwegian or something. Norwegian has their own way of saying, me is my and everything, right? So I just wanted to understand, do you guys have an idea if the date can be 21, May, 2025, or usually data are always in English? Just wanted to get if you guys have some idea so that we can make sure that those cases are also solved.
+
+>>Bjørnar (Semine)	09:12
+I guess, Alexander, you might have a better input on that than me, but I would assume that the mentions of the month written in letters can be either English or it can be in Finnish or German or Spanish or...
+
+>>Aleksander Larsen	09:28
+I feel like it's less usual. I think maybe Bikram is onto something that is usually is English when they use that denunciation. It doesn't really mean though that the invoice should be in English, but it doesn't really have... Don't think it has anything to do with like currencies or wherever the invoice actually was from, but Yeah, it's typical with that language. I haven't seen it really in...
+
+>>Aleksander Larsen	09:59
+Ok, sure. We are, I would say, at least in the Nordics, we are much better at this than in some other countries where, actually, we are very strict with how we create these invoices.
+
+>>Bikram Dahal	10:14
+Because usually, all of the systems are using some English EIP only, I think. So because of that, I think they always might be on English format. So yeah, anyway, we'll check it out. If you guys have seen, please do send some example. Because I was just doing my own research. Hi, Gerald. Because let me just quickly review on the context. We're just talking about date. Because where is that? Yeah, we're just talking about date only. And the question that I had was regarding even if this invoice is not, like even if you have a date over here, even if the invoice is not in English, date usually, I have seen, is always in English. So it's like 21 May, or it's on this format. They don't use the month name from that country. Because Norwegian might call May as May, and things like that. So we're just discussing about, like, have you guys seen any kind of invoice where date is not on English? Or like, what is the frequency of that? And then Alexander was just telling us that he has seen his big list of those is in English. Like, they have this format, or it is in English only, even if the invoice is something else. So if you guys find any example where the date is not in English format, we understood. We'll make sure that format is the same. But I just wanted to get some example of the case where the date is not in English, and it's on some other language, if you guys find those kind of examples. Yeah.
+
+>>Bjørnar (Semine)	11:45
+Ok.
+
+>>Bikram Dahal	11:46
+Daryl, I had one thing. We're going through this. We understood this also. We understood there's only one. There are two solutions for this. One is an embedded solution, and one is a long -term solution. A long -term solution, I have already talked with the team on this one. But for a short -term solution, one way to solve that problem is to use a cleaning function. But for that, the type has to be converted into a string. All the validation and everything will work. There's no issue with that. All the validation and everything will work. But the number on your JSON output, you'll get it on a string. So is that something that your system can handle or not? So based on that, we can make the change. And all the validation also will make sure that those code are changed so that the validation and everything will work. So that's what we need to understand. If this needs to be solved immediately, or we can wait for two or three weeks so that this fix goes into Podoc only, so that you guys can see those kind of things directly from Podoc, and the number is still number only. You don't have to worry about anything. It is urgent. And then we want to fix this issue. And you guys are OK to get a number as a string. But the format will always be this only. It will always be this, no matter what you get. But the output on the string, output on that JSON is going to be a string. So is that good enough? Or you guys are OK to wait for two weeks so that it will be fixed from the core in Docsummer itself? Gilles, you are on mute. Always, always.
+
+>>Jarl Arntzen	13:18
+Always. Always. Yeah, I think we're totally fine with waiting, really. I don't think there is any urgency, really. So I think all we need to know is that, all we need is that in the end, this will be resolved, and we get a number. Ok, sure. And if you click on the Wikipedia article, you have lots of nice little examples that you can try.
+
+>>Bikram Dahal	13:52
+Sure, like I had gone through this. So we'll make sure that all of those cases are solved. Like I have already told the team, they are already working on the fix using. So I'm not going to technical side of things. Like, it's just that there is one case where the cleaning block never runs if the validation itself fails. And we're just putting that block out of that block, changing that out of that block, so that in number, those cleaning and everything will happen. So for that, it has to go through a big battle test because it will affect majority of the customers. So the team will finish that, and then we'll make sure that we make a merge request to the main protocol.
+
+>>Jarl Arntzen	14:31
+Yeah, so I would say that this is the ability to capture and then clean all of these different formats is something that will, I think, enable your expansion in Scandinavia, in other regions, really, because it seems like there is something
+
+>>Jarl Arntzen	14:56
+We haven't really thought about, because that's actually one of the things that our existing system Flexicapture handles with ease. So as long as you can provide the same level of non -care, that we don't have to make anything special to handle the various formats, then we are happy with that. So, yeah.
+
+>>Bikram Dahal	15:28
+Okay, sounds good. I will make sure that that is edited in the next product, product office release, that will happen in the next two weeks. And regarding the Ipn number and date, we are on the same page, we'll make sure that those things are set up.
+
+>>Manoj Racherla	15:42
+Vikram, regarding the Ipn number and date, we are implemented, can I show?
+
+>>Bikram Dahal	15:46
+Yeah, okay. And in general, on those cases, the output will be on 8h, so we'll also give you some example of, I don't know if it happens by default, or we have to do something on the backend, we'll make sure that that is also, example of those ads are sent to you.
+
+>>Manoj Racherla	16:05
+So the invoice date is in YYMM DVD format here, from now onwards, as you can see here. Is the screen visible?
+
+>>Bikram Dahal	16:15
+Yeah, it's visible.
+
+>>Manoj Racherla	16:17
+Yeah, okay, fine. So these are the format that you guys were expecting for the date fields, right? Yeah.
+
+>>Bikram Dahal	16:26
+So this - One small thing, Manoj, please make sure that this also goes into training also, so sometimes we'll make a change in one document type and the team might be testing on some other document type.
+
+>>Manoj Racherla	16:35
+Oh, so other doc type, right? Okay.
+
+>>Bikram Dahal	16:37
+Yeah, so whatever changes you do, it's okay to have that one, but I think the team is testing app training and everything, so let's make sure that those are transferred to those also, before you let the team know that everything is good.
+
+>>Manoj Racherla	16:49
+Okay, got it. And regarding the multiple IBAN numbers as well, so I got, so here in this, there are multiple, and we are capturing it in a comma -separated string form.
+
+>>Bikram Dahal	17:06
+Can you download the JSON once for me, please?
+
+>>Manoj Racherla	17:09
+Yeah, sure.
+
+>>Bikram Dahal	17:14
+Because I know there's one bug on this one, just want to make sure that that bug is solved, otherwise I'll just let the team know so that they can plan it around. So if you go to IBAN number on this, can you put IBAN number directly? Oh, it's on comma only. Oh, oh, it's not for this, it is for something else. Okay, then I think this is good enough. Usually if you have a new line space, then it makes it into a area over here. So, and that is also a new feature that is being added. That should be fine, I think this should be good enough.
+
+>>Jarl Arntzen	17:50
+So these are the changes that we made.
+
+>>Manoj Racherla	17:52
+Iban number on the page. And I will make sure that these changes are incorporated in other Doctype as well for the invoice strings.
+
+>>Bikram Dahal	18:06
+Okay.
+
+>>Bjørnar (Semine)	18:06
+This is in production already. Sorry? Is this in production already for us to test?
+
+>>Manoj Racherla	18:15
+Yeah, yeah, Yeah, it's in production. Currently, this has been implemented in Api Invoice Doctype. Mm -hmm. If you want, I can make the same implementation in this Doctype as well of yours, API Invoice.
+
+>>Jarl Arntzen	18:31
+Yeah, I mean, if we can inspect your implementation, we can also transfer it to the other Doctype, so.
+
+>>Manoj Racherla	18:40
+Yeah, sure, sure. So basically you can just go to the field and check the prompt that we have added in here and just replicate that in our machine.
+
+>>Bikram Dahal	18:48
+And for format, what is done? Can I quickly see how you have changed on the format?
+
+>>Manoj Racherla	18:59
+So, what was it? For the date format.
+
+>>Bikram Dahal	19:01
+I'm talking about, yeah, this is fine for date format.
+
+>>Manoj Racherla	19:03
+This one I understand for date format.
+
+>>Bikram Dahal	19:09
+Okay. No, there is one thing. This, it will cause, it is good for, like, Tim, I'll get you back on this one, guys. So this will work well during the extraction. There is no issue. But if you manually select it, then the format might come wrongly. So let me talk with the team and make sure that that is also added. We just need to add something on the top of this. So I'll just make sure that, I'll just make sure that that is also added. And then you guys can test both the implementations. So this one works really well, like, if it's just extraction. But if you have to manually fix it, which you have to do a few times, you might have to, like, this format, you will not get on the format that you are needed. So I'll make sure that that is also added so that there is no longer an issue. Thank you.
+
+>>Manoj Racherla	19:54
+Yeah.
+
+>>Jarl Arntzen	19:55
+So basically, what you've done is that you've made other prompts that cleans or reformats the value, right? Yeah.
+
+>>Manoj Racherla	20:04
+Yeah.
+
+>>Jarl Arntzen	20:05
+I mean, we can just inspect this. So this is great.
+
+>>Bikram Dahal	20:13
+Okay. Sounds good then. And regarding the spirit and everything, we'll go through our engine team and we'll get back to you on that.
+
+>>Jarl Arntzen	20:23
+Of course, you have to imagine that the first thing I will do is to upload one invoice that contains all the different number formatting and all the different type formatting and see what happens.
+
+>>Bikram Dahal	20:33
+Yeah, sure. Allow me today. I'll just work with the team. Like I said, if it does the extraction without you doing manually, then it will work. I think more likely, not more likely it will work, but if you manually go to the skin and there's a date and if you do it, then it will not work right now. So I'll just work with the team and make sure that that is also fixed because that is important for you to make sure that even if people make a change in that debut skin, then the format always comes on the same one, right?
+
+>>Jarl Arntzen	20:58
+I have to say that now you've provided a quick solution for us, of course, in the doc type.
+
+>>Bikram Dahal	21:10
+Yeah.
+
+>>Jarl Arntzen	21:10
+And that's really good, right? We see that that has a lot of flexibility. But for the longer term, this is my opinion, is that if I were you, I would look at ways to provide embedded or built -in support for this in the actual real -time, Right?
+
+>>Bikram Dahal	21:39
+Yeah. I totally agree on that part. Also, there are some settings. This is not provided as a setting, but like a dot comma and dot, like there are a lot of other settings that are already provided. These are also the things we'll go and edit so that people don't have to go into all of these things. They just can go to one box and say that, OK, this is the format I need so that they don't have to go through all of this pain. So like feedback will be taken and some of this plan will make sure that this is also added into that list.
+
+>>Jarl Arntzen	22:08
+Nice.
+
+>>Bikram Dahal	22:09
+Ok.
+
+>>Bjørnar (Semine)	22:11
+Vikram, in terms of the next step or sample from our end, I will have a quick chat with the El Cholo today, but I will send over a sample of basically retail invoices with bigger tables and probably a bit complicated tables. And what I was wondering is next week, is there any chance after you guys have gotten this sample that you can maybe have a demo for us in terms of the advanced tabling tool?
+
+>>Bikram Dahal	22:39
+Yeah.
+
+>>Bjørnar (Semine)	22:40
+So we're going to send you the sample with some descriptions of what we expect if me, Alexandra, and El Cholo could be calling for a demonstration of how this advanced table functionality works.
+
+>>Bikram Dahal	22:52
+Yeah. You guys can send us some sample. We can also do some sample from our side, but I would prefer to get sample from you guys so that we can. It's a bit more tailored to us, you guys. Otherwise, it will be a bit more generic over there because we handle very super complicated tables in that case. One of the most complicated project that we are currently working on is called time sheets and time sheet from government, not just from like the company, like they are a mess of like they are next level mess. So like I would love to get some samples from you guys, like you said, and then we'll make sure that we give you a demo so that you guys can have an idea how to make those modifications and everything.
+
+>>Bjørnar (Semine)	23:30
+Perfect. Okay.
+
+>>Bikram Dahal	23:33
+Awesome. Anything else on this side?
+
+>>Bjørnar (Semine)	23:39
+I don't think from my end as of now, I'm still testing some different suppliers and looking at things. So Manoj, you can just, whenever you have any answers, just come back either in the team's channel or in the email. That's perfect. So I don't know if you guys have anything.
+
+>>Jarl Arntzen	24:04
+No, I think you started testing some splitting of PDFs, right? So that's interesting.
+
+>>Aleksander Larsen	24:20
+Unintentionally, maybe. Yeah.
+
+>>Bjørnar (Semine)	24:22
+I think the PDF I found was a weird thing.
+
+>>Jarl Arntzen	24:28
+Yeah. No, I think we have discussed this a little bit. Maybe I'm repeating something you have already mentioned, but I mean, we have the occasional cases of really big PDFs, right? Not really big, but like 10 pages where nine of the pages are just images and stuff like that. So I think I mentioned this before and typically...
+
+>>Jarl Arntzen	24:54
+Be clear, I would like for you to think about how can we stop the scanning or the OCR of a PDF of some pages, right? So after two pages, for example. So that would be a reasonable action in many cases, right? And then the next question is, okay, but how do we know when to stop, right? And there are many cases where it's more likely that you should stop without even opening the file. You can see that if a file is like, you know, 30 megabytes, right? It's probably 29 megabytes of really garbage, you know, and then one megabyte of some useful information, right? So that's a good reason to stop, right? Even at that point, you can decide to stop if the PDF has more than five or ten pages. That's a very good indication that you may just stop, right? And the final one is that if you have, like, if you are under 10 pages, right? And on page one, you have a complete invoice with total and everything, you can just stop at that point also, because next pages may be totally irrelevant, right?
+
+>>Aleksander Larsen	26:41
+But that's individual though. Yeah, what they want and what they don't want.
+
+>>Jarl Arntzen	26:50
+Yeah. So the key here is to actually at least provide some mechanism where instead of what happens today in today's system is that our system receives like 400 pages and then spends half an hour chewing through all those 400 pages and then, you know, there's nothing of value there, Right? So like, yeah, you get the point, right?
+
+>>Bikram Dahal	27:18
+Yeah, I got the point. That's also one of the reasons why we, most of the time, if you guys have, like, I think you guys have raised this question also, where, like, it was only doing the 20 pages and then, like, you guys wanted to increase that to like 50 pages and everything. The reason we had put 20 pages for majority of customers is we know that if the information is there, it will be on the first page and 99 .99 % of the cases, right? So, like, and then that number can be increased and decreased and we also are making it smarter so that even if you do 100 pages, if you figure out that there are only two pages, then don't look at the rest because, like you said, one of the good examples you gave was if the amount is already coming up. So, example, you have a grand total and you have a line item and then now on the second page, the sum are equal. Then you don't need to go and choose, like, the document, it might be shipping label, it might be some other information because, like, you already have the line item that is required to validate the grand total, right? So, those are also the logic that we are looking into. I will go through, like, those things and see, like, what makes, but the bigger issue with all of this system is, like, those thing has to trigger on very S case of S case. So, like, we'll look into that, like, understood on that problem. We already have some system in place to stop it on, like, certain level, like, by default, that's not smart enough, but we're making it more smart. And then, like, depending upon the, and that's also the thing about split. Sometimes you need that big document, but it has to split it before you start processing it, right? Because I don't know if you guys get it or not, but sometimes what happens is one of our vendor in Australia, he gets invoice for his phone bill and took by the phone bill.
+
+>>Bikram Dahal	29:02
+As of the phone, it pays and just the call record. This call, this many times, this call, this much is not worth it, right? So, we understand the case and everything. We'll go through that and we'll let you know, like, what is the, like, best solution, like, for this kind of issues.
+
+>>Jarl Arntzen	29:21
+Yeah, I got it. We have exactly the same example, I would say.
+
+>>Bikram Dahal	29:26
+Yeah, yeah. Usually, this happens on two cases. One, it happens if your bill comes with from international shipping and you have your invoice, then you have your shipping label, you have your custom document things. That is one case. Second case, sometimes for legal reason, people have to put two bills and they have this much big, like, just term and condition. That is the second case. The third case is usually that, like, bill, like, electric bill also, or, like,
+
+>>Bikram Dahal	29:53
+In this case a phone bill, where like you have those digital on the back And they're useless.
+
+>>Jarl Arntzen	29:58
+Yeah. And we have, what we have is that we have real cases that we can send you. Yeah. And also when it comes to the how to resolve this, again, we are looking for generic solutions.
+
+>>Bjørnar (Semine)	30:16
+Yeah, sure.
+
+>>Jarl Arntzen	30:18
+So we don't have to treat every case as an edge case, right?
+
+>>Bikram Dahal	30:22
+Yeah.
+
+>>Jarl Arntzen	30:23
+That's why I mentioned the file size, for example, as one possible indicator, the number of pages as another possible indicator, where you typically, instead of OCRing the whole thing, you just OCR the first page and then you have to ask some operator or some, Yeah, someone to confirm whether the rest of the pages should also be scanned.
+
+>>Bikram Dahal	30:47
+Yeah. So I'll just quickly show you something. That's exactly the path that we are going and we are solving it through workflow. All of those filter and everything is coming on the workflow side of things where you can decide like, okay, I want this to be a stub and someone has to manually approve before it goes into that. So not the whole thing. There are some better designs, but I cannot find that better design, but we are building something like this kind of workflow. Like it's not related to your case. It is a bit more complicated of case management for like a loan. When you get a loan, then a loan application, you get 10 different document types. You have to do a lot of things and then make a validation and everything. And you have to stop that loan if some documents are not there. Or if some conditions are not made, then people have to manually go and make a change. So same thing is on email. Like we are allowing people to write a rule saying that if it is more than this many pages, if it is more than, if this format is not this, then even don't process. Things like that, right? So we are working on that. This will be ready next, I think the next four or five days or two months. So like where you can decide. A lot of things that you can think about because at the end of the day, all of this data are JSON. So you make a JSON of a file in each stage. So you get a file, you make a JSON out of it, metadata and content. Then you do a OCR. Then you do a extraction and you do the validation. So if you think about it, all of this are JSON, right? And you can add a filter between these steps. As soon as an email comes, you can decide to say that, okay, first filter out. Figure out if the size is this, or if number of pages is this, then do this. If that is not the case, go and do this, right? Those kind of things are already being built because those are the smallest small thing where we can be differentiated.
+
+>>Bikram Dahal	32:33
+So like, thanks a lot for that things and everything. Some of these are already in build. We'll take your feedback and make sure that those things are added into the product also so that you guys can yourself configure it and change it depending upon some condition. You can say that if it is more than 20 pages, then it's split before you classify it, something like that, right? So we are working on that. We'll make sure that when the feature is live, we'll let you guys know and we'll improve on top of that.
+
+>>Aleksander Larsen	32:59
+Okay, so then that could be useful. But I also think about like, what if we have a supplier, which we know, okay, this is a telephone company. Usually, if you get the bill from this supplier and it's 2000 pages, we know that just 10 is maximum valuable and rest is c*** or just each call made.
+
+>>Bikram Dahal	33:30
+Yeah, yeah. So we'll check it out. Like, so on the cases which are easier to do, example, like one that I'll talk about, if it is 30 MB and everything, we'll look in that. The case you talked about is like you still need to do the extraction, but in that case, like this is based on supplier. So I think few of this, I allow you in that workflow because when I say the JSON, right? So when you get the email and everything, one of the information that we can always extract is ID or like, it can be that ID or it can be tax ID or it can be Abn Id or something or template name of the customer. And then based on that, do if and else condition. So like the whole purpose of that workflow is to make sure that you guys can build it the way you want to build it. So you want to get a one block before you do that check and say that, okay, the supplier is this, then do this branching. So that's our whole idea so that you can build any kind of like, you can make a megagenic case or you can also make a very specific case so that like, so that like you can just make a different branch for those vendors or like those kind of invoice. You can say that, okay, is this invoice? Even you might not have to say the vendor, you can just say that, oh, is this invoice tele, like telephone invoice? Then if there's a telephone invoice and it's really big, then just do the 10 page and don't do the rest of the page or something like that, right? So like we'll think around it and we'll get back to you, like make solving those.
+
+>>Bikram Dahal	34:52
+High -level case and also very specific case.
+
+>>Jarl Arntzen	34:58
+Yeah, this sounds very promising. I think we can we can certainly write down what we mean and provide the examples in the same way we've done so far And then we can try it out.
+
+>>Bikram Dahal	35:19
+But it will take some time so like I said also this one like this is not live right now So Tim is currently working on one version of it so it will take at least 45 days. Hopefully the engine will not overshoot the timeline. Generally, you know how the engineering development works. But yeah, we are looking into getting it out in the next 45 days.
+
+>>Jarl Arntzen	35:36
+Yep.
+
+>>Bikram Dahal	35:38
+Okay, sounds good guys. Thanks a lot for your time today. Regarding all the things that you guys have put, Manoj will send us some email and regarding four things, majority of those things are already done. So we will make sure that those are added into your accounts and everything And we'll also send you our screenshots regarding how it was edited if you want to play around with it. And regarding that split thing, we have got the file, we'll talk with our engineering team and get back to you with the answers.
+
+>>Bjørnar (Semine)	36:10
+Perfect, thank you. We will also forward a sample of these tables, retail -related, we have been talking about. So you can look at those.
+
+>>Aleksander Larsen	36:22
+Yeah, and also some scramble tables, right? We can get some examples of that. Oh yeah,
+
+>>Jarl Arntzen	36:29
+I mean we have the Keli level.
+
+>>Bikram Dahal	36:34
+Awesome, bye guys.
+
+>>Bjørnar (Semine)	36:37
+Perfect, thank you so much. Bye guys.
+
+>>Manoj Racherla	36:41
+Thank you everyone.
+
+>>Bikram Dahal	36:47
+Manoj, can you set up one call with one call between all the Cs team and like both the Sc team and Cs team at 9 .30?
+
+>>Manoj Racherla	37:01
+Sc and Cs team?
+
+>>Bikram Dahal	37:02
+Yeah. And the title should be product training. Because I think there are a few misconceptions that are happening. You guys are doing it, which is great, but there are places where you guys are expecting a kind of magic to happen, which is not the case. You have to solve two cases. Because I need to give you that training, but I want to give that training to everyone on the team. So I can set up that call so that everyone is clear about it.
+
+>>Manoj Racherla	37:29
+Got it. Today 9 .30 PM, right?
+
+>>Bikram Dahal	37:30
+9 .30 EST. So you can put it for EST. People's calendar, if people have calls and everything, then you can move it up and down. But if the majority of people don't have it, I see, I think usually Nidhi and Bishal's calendar will dictate everything. So there's an optional opportunity. Ok, so there's nothing over there. So you can just set up a call for 9 .30. Now, I want to have some discussion on that.
+
+>>Manoj Racherla	37:54
+Ok, got it.
+
+>>Bikram Dahal	37:55
+Ok, talk to you later.
+
+>>Manoj Racherla	37:57
+Regarding the yesterday you asked the calls that regarding the sales calls that we are attending, right?
+
+>>Bikram Dahal	38:04
+Yeah.
+
+>>Manoj Racherla	38:05
+Yeah. So majorly the blocker is like where we come in here. Regarding the they're not able to extract whatever the fields that they want to. And whatever The Shubham, YB and other guys that are not able to help them in that part.
+
+>>Bikram Dahal	38:22
+So prompt or they are not able to. The thing I want to understand is that is that some kind of training that you can give to them and then they will be able to do it. It's just a lack of lack of them understanding about the product and the prompt. Is it a product issue that you guys are doing some hacky way to like solve it?
+
+>>Manoj Racherla	38:40
+No, it's not a product issue. It's basically the understanding.
+
+>>Bikram Dahal	38:42
+Ok, then please make these things ready. I want like similar to how I'm giving you a training, you're getting these things like you guys should have idea and everything. I want them also to have certain ideas and anything. Whatever you guys are doing, if they can do it, then they should be doing. I'm not calling this one. You guys are on the call because it will not break your flow because you might be in the middle of things and everything. And then you guys will start dropping things because, oh, you you did that call that took time And then something else would get me straight. So for breaking a flow and everything is never good. So, like, make those list of the time you guys have gone into the call. Make one documentation, right? What is what? Like what? What are the thing that that people have not understood the product? And we'll have one sales calls with the team. You can have it biweekly so that those are solved so that you guys are calling this call less and less.
+
+>>Manoj Racherla	39:30
+Ok, got it.
+
+>>Bikram Dahal	39:31
+Because the thing is that LLM sometimes makes some stupid mistakes. So I'm not. I also wanted to know that. Oh, this one of the LLM issues or anything.
+
+>>Manoj Racherla	39:38
+Oh, good. Should I add Vishal also on this?
+
+>>Bikram Dahal	39:42
+Yeah, everyone.
+
+>>Manoj Racherla	39:44
+Ok. And one more thing.
+
+>>Bikram Dahal	39:46
+You can also see like if the system is available, you can also.
+
+>>Bikram Dahal	39:51
+So send that message saying that Bikram is giving one training on the product side. If someone wants the sales of Bti 1 to join, then they are free to join. They are not compulsory, but they are free to join.
+
+>>Manoj Racherla	40:02
+Oh, got it.
+
+>>Bikram Dahal	40:03
+Ok. Send it to the group, on the Cs group, and then send them the link saying that join at 9 .30 EST. If you guys are interested or you don't have other calls.
+
+>>Manoj Racherla	40:11
+9 .30 EST is 7 PM.
+
+>>Bikram Dahal	40:14
+Yeah, I think so. In next 30 minutes.
+
+>>Manoj Racherla	40:17
+Yeah.
+
+>>Bikram Dahal	40:18
+Ok. Anything else, Manoj?
+
+>>Manoj Racherla	40:20
+No. Ok.
+
+>>Bikram Dahal	40:21
+Then talk to you later.
+
+>>Manoj Racherla	40:22
+Bye.
+

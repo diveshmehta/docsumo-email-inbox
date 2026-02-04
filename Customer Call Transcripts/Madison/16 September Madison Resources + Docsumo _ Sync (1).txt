@@ -1,0 +1,621 @@
+>>Jasneet Singh Malhi	00:00
+No problem. Mike is here like let's probably just. Hey Mike, how's it going? Hey Mike. You're on mute like if you're saying anything. Can you hear me now? Oh yeah, loud and clear. How's it going? Thank you very much. Yeah, how are you guys doing doing very well? How have you been in the last 24 hours? It's been a while since we spoke, right?
+
+>>mike williams	00:29
+Yeah, yeah, there's been a tell you what I did. I did another another demo in the time in between and my brain is melting. Lots of information here. So it's in a good way. All sorts of good, exciting stuff, but awesome.
+
+>>Jasneet Singh Malhi	00:42
+So Mike, I would want to introduce you to Manan on today's call. Manan is the solution engineer on our end. We've kind of based on the information that we had from your setup. So your account, sorry, your documents that you're that you're sent across, we've set up a basic deck for you to kind of look at. And then Manan would be the point of contact for all things technical and obviously I would lead the business and the sales related conversation of this of this project. So Manan, if you want to take a minute and introduce yourself. Yeah, hi Mike.
+
+>>Manann Agarwal	01:16
+So basically I manage the solution here, essentially finding a solution to your problem and helping you fix it. So that's appreciate that.
+
+>>mike williams	01:27
+Awesome.
+
+>>Jasneet Singh Malhi	01:28
+So Mike, we basically the good news is that we basically do the exact use case for another client. We have their account on production as well. Unfortunately, I can't demo that account to you because we are bound by data privacy laws. But the exact use case, I would actually go ahead and say it's a little bit more nuanced and a little bit more complex than what we are trying to achieve. But rest assured, we can kind of do the use case on our end as well. And we have kind of set up a demo account for you. Are we ready or do we need some time? In the meantime, I can give Mike an overview of the platform and then once you're ready, we can discuss that as well. Sure. So are we ready on your end or do you need a minute?
+
+>>Manann Agarwal	02:14
+I would need a couple of minutes. Okay, cool.
+
+>>mike williams	02:18
+I have a quick question before then based off of what you just said there. So is this another use case that would be specific to staffing invoices? And okay, fantastic. Fantastic.
+
+>>Jasneet Singh Malhi	02:36
+So Manan was, again, the solution engineer on that project as well. So he only told me that this is very similar to what we are doing currently. But I would need a go ahead from my CS team before I divulge more details.
+
+>>mike williams	02:52
+Yeah, understood.
+
+>>Jasneet Singh Malhi	02:54
+So what I'm going to do is, Mike, I'm going to give you a rundown of the platform. And while Manan is basically setting up some of the features in the account, I think it would be worth giving you an idea of how everything works.
+
+>>mike williams	03:07
+Sounds good.
+
+>>Jasneet Singh Malhi	03:08
+Just give me one quick second to open up my demo account and then we can take it after that.
+
+>>mike williams	03:13
+Okay, I apologize for any background noise. I am in the office today. So I'll play the mic muting game and that way we'll try to reduce background noise there too.
+
+>>Jasneet Singh Malhi	03:28
+No problem, no problem. I completely understand. Awesome. So I'll quickly start to share my screen. Please confirm once my screen is visible and then we can get into the sake of it.
+
+>>mike williams	03:41
+Yeah, I can see it now. Awesome.
+
+>>Jasneet Singh Malhi	03:44
+So Mike, basically where I'm starting the demo today is setting some initial level context in terms of what we are, what the platform is, and then we'll give it to Manan for a more detailed version of what we discussed yesterday. Right? So where I'm starting the call today is that AI Models Hub, which is basically our AI library of sorts, which has 50 plus ready -to -use models that we have created, wherein we've done most of the heavy lifting and we've created a baseline model or a baseline extractor engine in place, which you can use on top of your dataset and customize it for your use case, right? So invoices, bank statements, W -2 form, tax forms, checks, bank statements again, then utility bills, driving licenses, accord forms in the insurance sector, tax forms, US tax form, W -2, W -9. We also have basically something called as an AI auto classifier, which basically has the ability to understand what the document type is and then send it to the right respective bucket automatically. Right? So in your use case, how this would be used is that if we would want to understand, let's say, if this is an invoice, or if this is, let's say, a timesheet, if it is a timesheet, you move it into the timesheet bucket, if it is an invoice. So basically pre -processing, trying to understand what the document type is and then moving it to the right, you know, to the right.
+
+>>Jasneet Singh Malhi	04:58
+You know, bucket for the extraction to take place. We typically also, even if like the documents that you sent us were part of the same file itself, they weren't like specific different documents, we also have the ability to automatically split these documents on the context as well. So an invoice and a timesheet can basically be split into different, you know, categories. And if let's say you, I also saw there were a lot of proofs of validations as well on the data set that you shared with us. So if you want that to be a separate data type altogether, wherein we are validating if this is approved by the company or not, even if it is on an email, a text chain or something of the sort, we can go ahead and segregate that part as well into a completely different document type. So an ideal workflow in your use case would be that we would get these files onto the platform, even if invoice goes into the invoice bucket, timesheet into timesheet bucket, and that text chain or that email of approval into the approval bucket. So all these three, you know, are segregated automatically and that's the step zero of the processing. Then we also have something called as a custom document type as well, which comes with automatic field extraction. So what this basically means is that the system has never ever seen your document type before, right? Rather than using a templatized version of the OCR engine, you can create your own document type setup within minutes, right? The automatic field extraction basically means that if you upload the document in the first iteration, the system will understand its schema structure and suggest some fields that you might be looking to extract from this custom model. Now, these fields, you have the ability to kind of add or remove fields as per your convenience and as per your discretion, right?
+
+>>Jasneet Singh Malhi	06:42
+But it does like a pretty good job in you not manually having to create the whole model or creating the whole schema structure. And then this basically ensures that everything is, you know, most of the things are automated. I'll very quickly take a pause here, Mike, to see if you have any questions for me on this front.
+
+>>mike williams	06:59
+This is making sense. And that sounds good. I'm liking the auto -classifier sort of concept there and that it can break, because there will be times where the stuff comes together, attached together. So that's definitely useful.
+
+>>Jasneet Singh Malhi	07:16
+For sure. So basically how the auto -classifier works is that if I quickly go to my configured screen and go to pre -processing, there needs to be a logic for the system to split the documents, right? So right now we're splitting it with AI, wherein we've written the prompt, right? We will go ahead and write a prompt that split the document type into three different structures. One will be an invoice. The starting of the invoice is this. So basically we would give it as much context as we would want. And then basis of that logic, it will do a job of the splitting, right? Then we also have, you know, basically if you want to split, split on the basis of a fixed number or text pattern or a QR code or even a custom API, we would basically use that as the base logic and then go ahead and split the document in different types. And then once it is split, it will go into our classification engine where the system will understand what the different document types are and then send it to the right bucket automatically without you sending them manually to one of these buckets, right? Now, I think, Manan, do we have the account set up? Yeah.
+
+>>Manann Agarwal	08:17
+Awesome.
+
+>>mike williams	08:17
+Do you want to - I have a quick question there as well, just in terms of like practicality and some functionality there. So I was talking with a coworker not long ago and realized it might be something where, is there kind of a way to group documents together? Because there will be instances where that context kind of matters. We might have someone who worked at, or worked on behalf of a staffing company somewhere and has the same name as someone else at a different staffing company somewhere else. So like kind of making sure that, is there a way to kind of have a folder or some way of grouping these invoices and these timesheets go to this entity, belong to this entity?
+
+>>Jasneet Singh Malhi	09:09
+I didn't quite get the use case, Mike.
+
+>>mike williams	09:12
+So we provide back office services for a bunch of different staffing companies. So if one company has a contractor out that has the same name, one concern we have is that if, say someone has a very common name and I can use my name as an example because it's a very common one around here. So if there's a different Mike Williams that's working for Abc staffing and Xyz staffing, two separate places, or there could be a crazy happenstance that they both work for a Gm dealership or something like that. But we have a document where there's a timesheet for Mike Williams for Abc staffing and an invoice that that goes to.
+
+>>mike williams	09:57
+To. And then a timesheet for Mike Williams for Xyz staffing and an invoice that that goes to. So making sure those are coupled to the right, the right invoices are coupled contextually.
+
+>>Jasneet Singh Malhi	10:13
+You don't need to create, let's say a separate model for Abc invoices and for Xyz staffing, it will be an under the same model. What we can do is to kind of get an understanding and segregate them. We can use a combination of fields. So let's say you can write up, you can, you can query the extracted data that show me all invoices from Mike Williams from Xyz staffing, right? And the system will query all the extracted data and show you all the invoices for Mike Williams for Xyz staffing, right? So it will all be part of the same model only because it would be very tedious to create separate model for separate staffing agencies, right? And that will not be the best user experience for you as well. So one model, one model does everything. So you don't need to kind of figure out the only thing that the system will segregate is that this is an invoice. This needs to go to the invoice model, irrespective of the staffing agency. This is a timesheet. This needs to go to the timesheet bucket, irrespective of the time of the agency. I hope that makes sense.
+
+>>mike williams	11:19
+That does, that does make sense. I'm just trying to, we have, there's, there's millions of employees a year. I'm just trying to make sure that it would make it there. I think that there will, there will be some overlap. So like creating, making sure there are unique identifiers and things like that would probably be important for some of these guys.
+
+>>Jasneet Singh Malhi	11:41
+So we also have the option like in the field setup itself. Manan, if you want to share your screen really quickly and I, we can walk Mike on the field setup. Awesome. So essentially Mike, we can create like if I go to like one of these fields that I want to mark as a unique field, I can create, let's say a bunch of these fields as unique field and basically understand that these values should always be unique to ensure that this, the overlap isn't there. Right. So let's say if the system understands that Mike Williams, the, the name Mike Williams and Xyz consultancy are two unique fields only and only when these are unique across all the documents. And if they come up again, then the system will basically throw an error saying that this was already processed and this was already done. Yeah.
+
+>>mike williams	12:31
+Kind of like a Boolean and sort of deal.
+
+>>Jasneet Singh Malhi	12:34
+Correct. Correct. Awesome. So Manan, do you want me to run the demo or do you want to take over on your end?
+
+>>Manann Agarwal	12:41
+Yeah. If it's fine, you know, you can, you can take it. That's fine. Got it.
+
+>>Jasneet Singh Malhi	12:45
+So essentially Mike, what is exactly is happening here? Like once now, can you actually share the credentials with me when I can?
+
+>>Manann Agarwal	12:54
+Yeah, I think I've shared them with you.
+
+>>Jasneet Singh Malhi	13:01
+Let me quickly. Okay. Just bear with me for one quick second.
+
+>>mike williams	13:13
+Absolutely.
+
+>>Jasneet Singh Malhi	13:15
+But as of now, whatever you see Mike does, is that making sense for you? Yep.
+
+>>mike williams	13:20
+Yep. That is making sense. And I also want to confirm too, would we be able to be a functionality we're looking for is to match, like have that information come out and then match against and look for discrepancies and differences and really isolating those inaccuracies between the two.
+
+>>Jasneet Singh Malhi	13:45
+Of course. So on today's call, we not sure if we'll be able to show you that matching functionality because that is like another structure altogether, but rest in mind, bear in mind, like we have that functionality and I'll try to see if I have another account where I've built something of that sort to show it to you.
+
+>>mike williams	14:04
+Okay. Appreciate that.
+
+>>Jasneet Singh Malhi	14:06
+So just give me one quick second. I'm just logging in.
+
+>>mike williams	14:14
+Okay.
+
+>>Jasneet Singh Malhi	14:15
+Awesome. Let me quickly see.
+
+>>Manann Agarwal	14:24
+It's at the end. Yeah.
+
+>>Jasneet Singh Malhi	14:27
+Awesome. So essentially, Mike, I've started to share my screen. Please confirm if it is visible.
+
+>>mike williams	14:35
+Yep. I can see it. I can see it now.
+
+>>Jasneet Singh Malhi	14:36
+Awesome. So basically now what is happening is that we've taken a bunch of documents, we've run them through the classifier. Now, how do we get them on the classifier in the first place? Right. So we want to look at this project as complete automation from step zero. So you don't even have to like go ahead and manually download the files from your email or your snail mail or whatever. And then you
+
+>>Jasneet Singh Malhi	14:56
+And then upload it, right? So that's a counterproductive process. So obviously, you have the option of manually dragging and dropping, which is something that we've done right now because we don't have the APIs or anything else in place. But you have an option of auto -import via API, wherein you can use the API call to fetch the documents as in when they come or they get uploaded onto the platform, right? So if you have a front -end platform where the vendors upload their timesheets and you then generate an invoice, we can fetch them by the API. We also have auto -import via email. This will be specifically very interesting for you because if a lot of these vendors send the invoices and timesheets via email, so all emails that receive on this specific email address, we can have an auto -forwarding in place as an attachment, can automatically be uploaded onto the Docsimo platform, and then the classification and the extraction process would start to work. Typically, we also have the ability to parse information out of an email as well. So the email body, the actual email that you see, if there is some information on that email body, we have the ability to create it into a document and upload that email body as well to extract more information because we did it for one of the lenders which did Mca lending back in the day, and a lot of their deposits were on the actual email body. So we have the ability to parse the actual email body as well. And then we have auto -import via integration. Let's say Google Drive, Azure Blob, Amazon S3. Let's say if there's a centralized depository or something like Sharepoint, if there's a centralized depository, you can just go ahead and connect it to and plug and play with it, and then as and when you upload a file on that repository, it will flow into the Docsimo platform. So this is how we are kind of automating the step one, step zero, actually, of the ingestion bit wherein we're automatically ingesting it via an email or an auto -import via integration on an API.
+
+>>Jasneet Singh Malhi	16:41
+I'll take a quick pause to see if there are any questions you might have.
+
+>>mike williams	16:44
+Yeah, that makes sense. And then kind of either having people CC that email or forwarding an email, being able to forward an email chain with the provided documents over to - Awesome.
+
+>>Jasneet Singh Malhi	16:58
+To you, yeah. Awesome. Now, essentially, we've uploaded the file. Manan, is there any specific file that I should upload for the classification? Can you make it with that?
+
+>>Manann Agarwal	17:08
+You can upload any file I shared with you, or if you have downloaded any, you can upload any of them.
+
+>>Jasneet Singh Malhi	17:16
+Okay, let me just quickly upload a file. So, okay. So essentially what I'm doing here is, Mike, I'm uploading a file because right now I'll only have to do it manually, right? Now, in this case, the system is running it through the classifier wherein it is understanding what the document type is. And then based on this, it was able to identify that the document was split successfully. Once I click on Review, I'll be able to see that this was the Ig Regency Warehouse and distribution was the file that I uploaded, Right? And Jasneet was the user here. And the AI auto classifier moved this file to which bucket? Let me quickly, let's see. This is probably just an unclassified item because this does not have either the invoice or the timesheet. This was basically, since it was not able to find any value for this, this was in the classifier itself. You have the option of manually overriding this and sending it to a bucket if you want. Now, this was where the system understood that this was probably a time card report. If I quickly open this up, you'll be able to see that this is the time card report that the system automatically understood. And this is the value that it was able to extract, right? So let's say the employee name, work date, all this value was automatically extracted from this system itself, right? And then if I look at another file, this is wherein the system classified this as an invoice. If I open this up quickly, this is the invoice extraction wherein we were able to get all the line items and all the data on the invoice as well. Now, before I go deeper into the extraction bit because right now I've just showed you the classification bit, any question on the classification before we move into the extraction engine?
+
+>>mike williams	19:02
+So this, did this automatically split? Like, I think in that example, that was actually, those were, I believe those were together.
+
+>>Jasneet Singh Malhi	19:10
+Yeah, these were part of like one file.
+
+>>mike williams	19:13
+Yep, so it's one file.
+
+>>Jasneet Singh Malhi	19:14
+The system did them into different document types. It first split them and then it classified them.
+
+>>mike williams	19:19
+Okay, thank you.
+
+>>Jasneet Singh Malhi	19:21
+What, how exactly did that happen, right? So if I go to, let's say, if I go back, give me one second. And I go to configure and I write, go to pre -processing. So this is basically the prompt that I've used. We've done, everything is done by Ai, right? So I've not done anything manually. The document contains invoices and timecard reports. Split the document when the document type changes, right? So basically this simple prompt that we've given to the system, it understood what the actual requirements are.
+
+>>Jasneet Singh Malhi	19:55
+Environment was and it automatically split the invoice and the time got into different buckets and then also classified them into different buckets as well. Awesome. Now once the splitting is done, let me actually go to the invoice field first. Now essentially, the idea here is that once, let's say, the system receives a specific invoice or a specific document, the first phase that it goes through is the processing phase wherein the AI and the OCR, they're working together and we are trying to extract all the information that we've set up in the structure and we want the system to extract. This hardly takes around 30 seconds for the system to kind of move in the processing phase and extract all the data. Once the processing phase is over, the document moves into something called as a review phase wherein you can look at the quality of extraction and the actual document side by side. So this is the example that we just uploaded. Let me actually open up another example. My bad. So let's say we'll open up this example. This is the invoice. Right. And now in this invoice, like this is basically the review screen in which there's a two way mapping in which the system is basically telling you what data is extracted from where on the invoice. Now, this is a particularly very powerful feature for operations team wherein they don't have to go and manually squint their eyes or do command F and kind of find which which data is coming from here to do the sanity check on the on the system. Everything happens automatically. Right. So I'll I'll know that the invoice ID is it's coming from here. The invoice data is coming from here.
+
+>>Jasneet Singh Malhi	21:36
+And if I go ahead and basically hover on top of one of these extracted values, it will give me a tooltip saying that this is the invoice date. This is the invoice number. Right. And if I just go ahead and also look at the line items on the table, you'll be able to see that we were able to extract all the line items, even if it is not in a completely structured table format. Right. So right now we are getting the week ending date, the employee date, the description. Right. We can also have, let's say, the number of hours, the build hours that we have. What is the per hour rate? What is the total line amount? Right. And then let's say if right now the description in this case, we were not able to pick up because it does not have like say a pointer, but we can quickly go to field settings and add another pointer of description and also start to pick it up in the table right now. So these are all the fields that we're picking up in a table. If I add another column of description, it will also go ahead and pick it up automatically. Again, I'll take a quick pause, Mike, to see if you have any questions. If you just if you think this is some making sense to you.
+
+>>mike williams	22:35
+This makes sense. Yep. Awesome.
+
+>>Jasneet Singh Malhi	22:37
+Now, once you've done this, you will be able to see that there are two of these yellow eye icons on the system which have not extracted any values whatsoever. Now what this basically means is that the confidence score of this field is low. Now why was the confidence score of this field low is because the system was not able to find the check number and the order ID anywhere on the platform. So rather than assuming wrong or faulty information, the system basically told you that, hey, I was not able to find this value. I need a human to tell me if this value exists on the system or not. So that is where human in the loop comes in. Right. And let's say, for example, if the check number is something like, as an example, it's this or let me actually pick up a number only. So for example, the check number is this. Just I'm using as an example. I know this is not this, but I'm just using an example. I can just go ahead and tell the platform that this is where you need to pick up the check number from and the confidence score changes from a low confidence to a good confidence score or to a high confidence score. Right. And the next time onwards, the system will remember this part of the correction that you made. So now for this specific format, the system knows that the check number needs to be picked up from this particular location because that is where our machine learning algorithm kicks in. And based on any annotation or correction, it is constantly learning from the input of the user is provided. So the more data that you keep on adding, the more correction and annotation that you keep on doing, the system becomes keeps becoming more and more accurate. And the confidence score of this field, you know, is basically customizable value also. But you can go ahead and ensure that we give you the best results in extraction in any way.
+
+>>Jasneet Singh Malhi	24:22
+Do you think that makes sense, Mike?
+
+>>mike williams	24:24
+I do. I do.
+
+>>Jasneet Singh Malhi	24:26
+Awesome. And any questions from you up until now?
+
+>>mike williams	24:30
+No, no. This is making sense so far.
+
+>>Jasneet Singh Malhi	24:33
+Perfect. So I'll go. So this was an example of an invoice. Is there any specific example within the invoice that you would want to see that we can like shed more light on?
+
+>>mike williams	24:45
+I think I would like to see. I saw you upload the IG New York Racing Association invoice.
+
+>>mike williams	24:57
+I'd like to see how that pulled, how that came in for the timesheets, if we'd be able to see. Awesome.
+
+>>Jasneet Singh Malhi	25:10
+So, basically, what we'll do here is, you said Ig, Regency, Warehouse, and Distribution this one?
+
+>>mike williams	25:17
+Awesome. I believe so. Awesome.
+
+>>Jasneet Singh Malhi	25:19
+So, it basically broke the timesheets into two parts. Right. And if I open the timesheet up, in this case, we were able to extract all the line items. Right. Now, in this case, I understand the daily totals and the regular are not extracted because the system has not picked it up because it is not part of the, you know, columns of the line items. Right. But if I add it as a column, it will be able to pick it up. Maran, I think it will be able to pick it up. Right. And please correct me if I'm wrong.
+
+>>Manann Agarwal	25:45
+Yes. Yeah.
+
+>>Jasneet Singh Malhi	25:46
+Probably do that only. Let's say if I add a column of daily totals.
+
+>>mike williams	25:50
+Will there be an issue where like different fields on different timesheets are going to be labeled different ways? Like something might have a code Br for regular or say regular or OT for overtime. Right.
+
+>>Jasneet Singh Malhi	26:05
+So, no, Mike, not really. We basically have that, you know, end case validation already baked in on the platform. You don't need to specify optional field names. So, how we work on extraction is basically we rely on an LLM. Now, think of an LLM as just like a human brain, which can do a lot of tasks very accurately in a very less time. So and if it is not sure about anything, then it basically gives you a low confidence score. So that fails if it's already built in. So you won't need to specify, you know, separately that this is what I need. And this is like the OT is over time. The system is smart enough to understand that context and automatically give you that value. Ok. Right. So let me add an option of daily total and regular. Let's say daily total should be a number. And then regular should also be a number. And then I quickly run a test to see what is the data that we are getting out of it. Just takes around 30 seconds to process. So in the line items, if I go ahead and look at it, it was able to. Was it able to get the daily total? Let me quickly see.
+
+>>Manann Agarwal	27:32
+It's there in the end. Last column.
+
+>>Jasneet Singh Malhi	27:36
+Yeah. So it was able to pick up the regular. Right. And the daily totals as well. So like if there's any field. So all this is anyway, like part of our implementation setup. If you want me, I can go ahead and.
+
+>>mike williams	27:51
+So did that did for daily totals there, there, did that pick that up as a number or is it not picking up that that's time?
+
+>>Jasneet Singh Malhi	27:59
+Oh, so, Oh, I'm daily total. So this is a time value. Ok, I think I put it as a number. So that's why it is.
+
+>>mike williams	28:06
+It is coming like this.
+
+>>Jasneet Singh Malhi	28:07
+But if I change it to a string, it will pick it up as a time as well. I thought it was probably a number value. So that's my bad. Oh, so we can definitely like I can mark it as a string value and we can redo this. Just give me one second to quickly run test and we'll see what value are we able to extract for this.
+
+>>mike williams	28:44
+So is this something that will need to be configured on our side for every time? Ok, we do it.
+
+>>Jasneet Singh Malhi	28:51
+So now in this case, you can see, can you actually see the zoom on my screen? Yeah. Yep. So this is like the time value automatically. And like if you want to go ahead and actually standardize this time into a 24 hour format automatically, that is also something that the system can do for you. Right. You can just basically write a prompt, convert the time into 24 hour format and the system will go ahead and get it done for you. Awesome. Again, in this case, the order ID and the client ID was not found anywhere on the actual file. So that's why it gave it a low confidence score. But if you specify that this is probably the order ID, this is the client ID. It can go ahead and learn from it and start to. So that's like what we precisely do, Mike, like when we onboard you as a customer, we request a lot of data files from you and then we set up these models on our end. So that is where the implementation and our services come in, wherein we kind of ensure that all edge cases are looked at and all the setup and implementation is very smooth. For you to give a platform to the customer.
+
+>>Jasneet Singh Malhi	29:53
+That you can plug into a production from day one and start getting the benefit of the automation automatically, right? Is there any specific timesheet, Mike, that you would want me to focus on other than the Ig Regency Warehouse timesheet?
+
+>>mike williams	30:07
+That's the only one that comes to mind right away. I mean, there was some complexity of that one. I think there might be, are there any that, can we tell if there's low confidence in any of them?
+
+>>Jasneet Singh Malhi	30:23
+So if any value or any field is not picked up, right, then it will basically give you a low confidence in field for that specific value, right? So in this case, the client ID, order ID is not, isn't picked up. And this confidence score is also a customizable field, right? So right now, by default, it is set up, set at 80. Let me quickly show it to you only. So let's say for order ID, the confidence score is set up at 80 right now. So what is basically happening is that in the background, if the system is 80, so this is the basic threshold, right? So if it is 80 or 80, more than 80 % sure, then it passes it on without any human review. But even if it is 79 .9 % sure, then it basically flags it for a human review and says that this is what I was able to extract, or I was not able to find this field. If a human can tell it where exactly it was or confirm it with the error, then it basically learns from that.
+
+>>mike williams	31:21
+Thank you. Is there any way to see that on the, I keep wanting to say dashboard, on the screen prior to this one where you're overviewing all of the files? Like if we had a bulk load of files put in, would there be a way from there to see?
+
+>>Jasneet Singh Malhi	31:41
+So we have exactly for something like that. We've, we've got something called as data tables, right? So let's say if you want to look at data across all your timesheets in one consolidated place, right? And you basically want to understand, you know, what value is extracted from where. So you have like all these timesheets across all your, the data that you've uploaded. And then you can just also go ahead and click on a specific value and it will show you where exactly was it, was this value extracted from on the actual invoice or the actual time to write. And then if the system was not able to find that value, then you can just click on this. And the order ID was, for example, not found on this. So you can also go ahead and ask it questions, right? Show me all the timesheets from the week starting or the week ending this, this, this, and it will query the data on this end and give you the result back.
+
+>>mike williams	32:35
+Okay, fantastic. So I did find an example that I would like to see for a time card. There's a V2 wages and benefits. I'd like to see how it did. There's some handwriting on that one.
+
+>>Jasneet Singh Malhi	32:53
+Okay, let me quickly get it for you.
+
+>>Jasneet Singh Malhi	33:13
+V2 wages. Okay, got it. So as a basic thumb rule, Mike, we are able to extract data out of handwritten documents as well. The only caveat is that it needs to be legible enough for the system to understand and how we define legibility is that if a 10 year old can read it, so our system should be able to extract the data out of it without any problem. So because handwriting is a very variable kind of a structure, right? Everyone has a different handwriting and legibility is definitely an issue. So if the system understand and reads it, then well and good, but if not, so that's why we don't, we need to understand what the handwriting is to promise any, any level of accuracy on the handwritten documents. So just give it to the classifier for the classification. Yeah, I think you had a question.
+
+>>mike williams	34:09
+Yeah. So that, that was the handwritten example. And then there's there, there's a complex example that I found too, that there's, there's a, a different, an Ig Regency warehouse and distribution example that on the time sheet, there was an email that it looks like there was on the scan that was writing on top of, and this was, this was the manner that a time, essentially like a one -off time sheet was submitted and it was someone's name. And then it said Monday through Saturday, 7am through 3 .30pm.
+
+>>mike williams	34:52
+And then someone hand wrote next to that, eight hours per day, six days, 48 hours. Is that something? I mean, that's a very complex example. I'm just trying to figure out. On Ig Regency Warehouse and Distribution.
+
+>>Jasneet Singh Malhi	35:08
+Is this the one? I'm sharing my screen. Could you confirm if this is the one?
+
+>>mike williams	35:13
+Here. Yes, that's exactly it.
+
+>>Jasneet Singh Malhi	35:17
+Right, Manan, if you want to help us out here.
+
+>>Manann Agarwal	35:21
+Yeah, so you can just upload this document and I think that should do the job. You can just upload like this page, just this page.
+
+>>Jasneet Singh Malhi	35:35
+Okay, let's do one thing. First, we'll go ahead and review the extraction results of the V2 wages, if that makes sense.
+
+>>mike williams	35:42
+Yep, that does make sense.
+
+>>Jasneet Singh Malhi	35:44
+Awesome. So the V2 wages were split into two different halves.
+
+>>mike williams	35:49
+The invoice and the timecard.
+
+>>Jasneet Singh Malhi	35:50
+The invoice and then the timecard. Do you want to first focus on the invoice or the timecard?
+
+>>mike williams	35:54
+The timecard. Yep.
+
+>>Jasneet Singh Malhi	35:56
+All right. So typically, this is how we were able to get the data, right? So in this case, we've asked the system not to get the in -time and the out -time. So that is how it was still able to kind of get the in -time shift starts at 1130 and that five. So in -time, out -time was also captured, right? The date was also captured. This is 7 -25 -25. So seven, this is in the DDMMYY format. So 25 -5 -7 -20 -25, right? And this is how, you know, it looks. And then the total was also captured here as well. The total artwork was 5 .3. So that was also captured.
+
+>>mike williams	36:40
+I think that that's a situation where they put a point. It makes sense if they did. I'm making a little bit of an assumption here, but I believe they're saying that time in was 1130. I think that might have been an errant entry. If that makes sense, like it's 1130 and five o 'clock. That's what would make sense for out times. And then for a time total, five hours and 30 minutes. So it would be 5 .5 hours worked rather than 5 .3.
+
+>>Jasneet Singh Malhi	37:14
+Oh, got it. Got it. That makes sense. So I think we can set up a business rule basically without like rather than relying on this total value, we can basically set up a business rule that this value minus this value should then come out as this value. So Manan, I hope we can do that.
+
+>>Manann Agarwal	37:32
+Yeah, so we can we can convert that 11 .30 to 11 .30. And again, same for the 5 .00. And then we can apply this business rule to get the total.
+
+>>mike williams	37:45
+Yeah, treat that as a time. That makes sense.
+
+>>Jasneet Singh Malhi	37:48
+So that is completely doable. We just need to do that set up on our end, Mike, but completely doable. So this was how we were able to extract the data out of this timecard. Do you think that it did a good job?
+
+>>mike williams	38:00
+I do. Yeah, I'm impressed with that. I mean, I understand it not picking up the employee name there because that, like you said, that's the handwriting element on the top.
+
+>>Jasneet Singh Malhi	38:14
+Let's say if I wanted to pick up the employee name, it will also pick up the employee name.
+
+>>mike williams	38:20
+That's fantastic.
+
+>>Jasneet Singh Malhi	38:21
+This is like, oh, this could be a Y or this could be like a V also, I think. But right now, the system has picked it up as an X, so Lx, Lxda, Vivas. So again, it can give you the result with a degree of confidence, but all depends on the legibility of the handwriting.
+
+>>mike williams	38:41
+Right.
+
+>>Jasneet Singh Malhi	38:43
+Got it. So we look at the invoice version of this as well, of the W2, V2 wages, I'm sorry. So this is the invoice component in this. We were able to extract all this data, right? Invoice ID, invoice total is coming from here, right? This is one page invoice. All the line items is also picked up from here. So in this case, the build hours are 5 .5, build rate is 20 .8, total line amount is this. So that is the invoice specification. Now, you wanted us to upload a file. Ok, let me actually get that file specifically for you. Just to handle the order.
+
+>>mike williams	39:20
+Yeah, Ig Regency Warehouse and Distribution.
+
+>>Jasneet Singh Malhi	39:24
+Let me just try to get a screenshot of this and just upload the screenshot.
+
+>>Jasneet Singh Malhi	39:45
+Ok, I will need to get that screenshot.
+
+>>Jasneet Singh Malhi	39:59
+So, it is in the classification team while this is getting classified, just give me one second. My battery is running like at seven percent. I'll just go fetch my charges. Absolutely. Yeah.
+
+>>mike williams	40:07
+No worries. Take your time.
+
+>>Jasneet Singh Malhi	40:35
+Awesome. Just plugged in. So, so sorry for that.
+
+>>mike williams	40:39
+All right.
+
+>>Jasneet Singh Malhi	40:39
+So, if I quickly review this document, so it picked up that this is the week starting date of twenty three eight, right? The time card source is an email and the client is Regency, right? So, I can basically tell the system that this is the entire client.
+
+>>mike williams	41:01
+It's right that Regency would be the client. That wouldn't be the start date because that's the date the email was sent. It would have been from the week prior. So, it's the subject, the subject line being Regency hours, week ending date. Oh, so it did. It did get that, but it's not that top number. It's using the subject line. It looks like because the Regency hours are week ending eight twenty three twenty five and it looks like it has that correct, but that's it's the subject line, not the number that's highlighted.
+
+>>Manann Agarwal	41:46
+Okay.
+
+>>Jasneet Singh Malhi	41:47
+So, basically the week ending date needs to be picked up from there.
+
+>>mike williams	41:52
+Yeah.
+
+>>Jasneet Singh Malhi	41:52
+Yeah. Okay. Awesome. So, if will we always get the date in the subject week ending hours or is there like a format that we need to follow here?
+
+>>mike williams	42:00
+There's not a standard format. It looks like it did it the right way.
+
+>>Jasneet Singh Malhi	42:06
+Got it.
+
+>>mike williams	42:06
+From from the beginning.
+
+>>Jasneet Singh Malhi	42:09
+But now in this case, Tim, like we were not able to find anything specific on the, you know, table line items. But if I just try to tell the platform that this is the table that we need to extract the data out of now, do you think is there a better way to do this?
+
+>>Manann Agarwal	42:25
+Yeah, I think we can do this. We just need to do some prompting for this.
+
+>>Jasneet Singh Malhi	42:32
+So in this case, Mike, we we can definitely like extract the data that that is even handwritten. We would just need to tell the platform what we are looking for right now in this case, the system does not have a lot of context. Right. So that is why it tried to find a table, but it could not find a table. That's why it gave you. So right now, I've made the confidence score, OK, but like it gave you basically nothing on the extraction front. Let me quickly see if I have a better example to show you. Awesome. So I think one on the back end uploaded this again with some some prompts. And this is what we were able to extract on the table is line items that the employee name CDN Gilhane, right. The work date was from Monday to Saturday from 7 a .m. To 3 .30 p .m. And hours worked was eight hours a day. And then the number of days that obviously we can add a column for the number of days as well and get the total number of hours as well. But it will be able to pick it up without any problem. So it just needs like the context and another column. But it should be able to pick it up without any problem.
+
+>>mike williams	43:43
+I have a question about and just in terms of scalability. So is there any issue with the quantity of these documents like that will be being uploaded per week will be fairly large?
+
+>>Jasneet Singh Malhi	43:57
+Yeah.
+
+>>mike williams	43:58
+Will it be able to do that? I know we were talking about the potential of I mean, it could be 10 ,000 pages of documents a week. Right.
+
+>>Jasneet Singh Malhi	44:07
+So no, Mike, not really, because I'll give you some flavor on that as well. So we work with one of the biggest transportation companies on The West Coast, right. And we have connected Doximo to their high speed scanners. So whenever a parcel comes in in their warehouse, they basically scan that parcel shipment ID and then that automatically gets scanned onto the Doximo platform. So in one probably in one hour, they upload around 10 ,000 pages, 20 ,000 pages based on the volume that they're processing. Right. And the system is designed to automatically scale when it experiences high volumes. So and all the documents are scanned and sorry, all the documents are processed.
+
+>>Jasneet Singh Malhi	44:50
+Are processed synchronously, right? So you don't have to wait for one document to process and then move on to the next document. Everything happens simultaneously. So that kind of adds on to the user experience. Okay.
+
+>>mike williams	45:06
+Makes sense. Yeah, that's right.
+
+>>Jasneet Singh Malhi	45:11
+I see we are 60 minutes over time, Mike. Do you have a hard stop or can we continue for some more, some more?
+
+>>mike williams	45:18
+I don't have a hard stop until 2 p .m. My time, I have 15 more minutes. So that works.
+
+>>Jasneet Singh Malhi	45:25
+Awesome. So let me see if I have, Manon, do you have an example for the case management set up anywhere? Just so that we can give Mike some flavor on the case management.
+
+>>Manann Agarwal	45:37
+I don't have an access for that.
+
+>>Jasneet Singh Malhi	45:40
+Oh, okay.
+
+>>Manann Agarwal	45:41
+I don't have my phone.
+
+>>Jasneet Singh Malhi	45:43
+Mike, then I think we'll have to set up another session only, when we can show you the validation engine of how everything gets validated. Let's say how data is picked up from the invoice, matched with the timesheet, and then a yes, no validation can be given to you. Because I do have a case management screen, but that is for another client. And obviously I would not want to share their data. So we can set up another meeting, but based on what you saw today, do you think this is something that you're looking for? Is this, does this make sense? How do you want to proceed forward?
+
+>>mike williams	46:15
+Yeah, this is definitely staying in line with what we're looking for, especially for this situation and instance. I had a question about, as far as location, and like support. So do you guys have like 24 seven support, or what would the hours for that look like? Right.
+
+>>Jasneet Singh Malhi	46:38
+So everything is built in the contract only, Mike. We don't charge like separately for support. It is within the contract only, first of all. So once you onboard as a customer, we would provide a customer success manager for you. And then they would be basically, working in your time zone, working in your specific thing, and they will be a single point of contact. When we onboard you as a customer, we will give you a team of three people. The project manager, the customer success manager, and a solution engineer. The solution engineer would be from Manan's team. And they would probably go ahead and make all the integrations and make sure the system is actually working. The project manager will go ahead and ensure that the project is delivered, and the customer success manager will be there from day one to understand your use case. Once the implementation is done, the point of contact for all things customer success would be your customer success manager, and for all things sales would be myself. And then your Cs manager would do quarterly reviews with you, help you understand what's working. We do provide 24 by five support, and we do have SLAs in place. If you have any sort of issues, you can just write, based on the severity of the issues, L1, L2, L3, we have a specific time in which we solve the issue and get back to you, or else we kind of give you a credit slot.
+
+>>mike williams	47:54
+Okay, yeah, understood. And as far as, just a point of curiosity, where are you guys located? Do you have any US basis or? Oh, absolutely.
+
+>>Jasneet Singh Malhi	48:06
+So we basically are based around the world. So our co -founder and a founder, they're based out of New York, right? I am currently in India, Bangalore right now. We also have an office in Singapore. We have a lot of our tech team based out of Nepal as well. So we're basically based around the world, but from a data residency, or a data privacy standpoint, all your data is hosted within the US, and it does not leave US servers, and we don't have access to your data, and it's completely safe, and you only have the access.
+
+>>mike williams	48:38
+I appreciate that.
+
+>>Jasneet Singh Malhi	48:39
+Yeah, that was gonna be my follow -up question, was the data security element there, because I know that's - Sure, if we covered this on yesterday's call, but we have like a trust site that I can quickly share it with you as well, which is basically shows all our compliance is in real time. So this is monitored by a third party called Sprinto, and it shows like HIPAA compliance, SOC2 compliant, Gdpr, and ISO 2701 compliant. And if anything drifts, this basically shows us that there's a drift in real time, and you can look at this website at any point in time, and check our compliance structure.
+
+>>mike williams	49:14
+Fantastic. Yeah, it's definitely, definitely important.
+
+>>Jasneet Singh Malhi	49:20
+Awesome. So Mike, what do you think should be our next steps? How do you wanna proceed from here? Do you think it would be worth setting up another demo with the evaluation team and the stakeholders?
+
+>>mike williams	49:29
+I think I'd like to see, before we do that, I'd like to do one more intermediary step in terms of like looking at what that matching looks like, if that's something you're able to show, because that's really the meat, that's the main basis of our interest here is kind of automating that step.
+
+>>mike williams	49:50
+So, I'd like to take a look at that before I get the rest of the team involved, but then after that, I think after that it would make sense to show this to the larger group.
+
+>>Jasneet Singh Malhi	50:04
+Got it. Got it. Manan, is there a way we could probably set up case management for this use case based on the information that you have?
+
+>>Manann Agarwal	50:13
+I'll have to check. Do we have any idea on the volume that they are going to process?
+
+>>Jasneet Singh Malhi	50:22
+Yeah, Mike, I think we discussed it briefly yesterday, but if you have any updated numbers for us on that.
+
+>>mike williams	50:29
+I don't have any updated numbers, but where as it stands, it would be 1500 plus invoices per week, and then probably 20 ,000 plus pages of, I would expect 20 ,000 to, yeah, definitely 20 ,000. I'll find a more accurate, but I don't know that we would have it in terms of pages somewhere. That might be a difficult number for us to get. I might be able to get total number of employees, and we can try and assess time sheets there. Like for a number of time sheets, because as you saw, there's some that it's one person per page, and sometimes it's 40 people on a page, and that could fluctuate as well. But I think on a week, I hate to say it would fluctuate that much, but it would be possible to fluctuate probably from like 20 ,000 total pages to possibly 100.
+
+>>Jasneet Singh Malhi	51:34
+That's per week?
+
+>>mike williams	51:35
+Per week.
+
+>>Jasneet Singh Malhi	51:37
+Got it. And that is split across invoices and time sheets, correct?
+
+>>mike williams	51:42
+I would say that would be inclusive of invoices and time sheets. Got it. But that's, I understand that's a really big range, but it's hard to tell based on what, like how that stuff comes in, if that makes sense.
+
+>>Jasneet Singh Malhi	51:56
+No, I understand. But anyway, like we run annual contracts, as you know, and we probably just give you all the credits upfront for you to use, right? And then if there's a bit of estimation that we need to do on the credit front, we can kind of do that as well as we go along as well. I'll try to see if we can set up a case management screen, because that usually requires some effort on our end to set up that whole structure, because we usually pick it up during the onboarding and implementation, but I'll quickly see if we can try to make an exception, maybe just set up a few examples to show you the demo, and then we can probably take it from there.
+
+>>mike williams	52:33
+That would be, that would be fantastic. Yeah, that would definitely be very helpful.
+
+>>Jasneet Singh Malhi	52:37
+Yeah. Mike, when would you be available for a follow -up call?
+
+>>mike williams	52:40
+Yeah. How much time do you think you guys would need? I mean, I'm available on Friday.
+
+>>Jasneet Singh Malhi	52:48
+The only problem is that I am out of office on Friday, so we'll have to kind of push it to next week, I think. But next week, Monday can work for us.
+
+>>mike williams	52:59
+Yeah. Again, so next week, I'm available Eastern time from 11am till 2pm, and then from four o 'clock to five.
+
+>>Jasneet Singh Malhi	53:19
+Just give me one quick second.
+
+>>mike williams	53:35
+I have some availability Tuesday and Wednesday as well, if that would be... Can we do the same time on Monday, the same time as today? Yeah, one o 'clock, absolutely.
+
+>>Jasneet Singh Malhi	53:45
+Yep. Sure. Awesome. Okay. I will set up the invite. Just give me one second. I'll send you the invite only.
+
+>>mike williams	53:55
+Appreciate it.
+
+>>Jasneet Singh Malhi	53:58
+So this is for September 22nd, 10 .30 to 11. Okay, that's our time.
+
+>>mike williams	54:05
+Right. Right.
+
+>>Jasneet Singh Malhi	54:06
+Give me one quick second just to make sure that I don't have a clash on that point. Awesome. It works. I have sent you the invite for 22nd of September at the same time. Please confirm if you've received it.
+
+>>mike williams	54:22
+I haven't received it yet. We have like Mimecast. So sometimes things get slowed down by that. It might take a Sec. But if I don't, I've written that down. And if I don't get it by end of day, I can email you back.
+
+>>Jasneet Singh Malhi	54:37
+Awesome. Awesome. That works, Mike. So on the next call, I'll see if we can try to set up, let's say, a basic structure. Because it does require like considerable effort on our end. And then if we can...
+
+>>Jasneet Singh Malhi	54:49
+And then once we have everything done, we can demo it to your stakeholders and take it from there.
+
+>>mike williams	54:54
+Yeah, as an update, I did just get your invitation there. Yeah, and I definitely appreciate that that might be, that that would be a difficult, that there is some lift there to show that in specifically our case. I mean, I understand if, I don't know if there's a, even if there was like a generic demo case or something that you could show, but I appreciate and understand that. Just one of those things we would really like, if we were able to see the practical use of what we're trying to do, that would be incredibly powerful.
+
+>>Jasneet Singh Malhi	55:28
+No, no, I completely understand, Mike. That's why I'll see if I can try to make a case for it internally, because I would also need approvals from my team to dedicate, because it would, at the end of the day, require resources dedicated from our team. And that's like basically a question of priority at that point. But I'll try to make my best effort to see if I can get something done for it.
+
+>>mike williams	55:48
+I appreciate that.
+
+>>Jasneet Singh Malhi	55:50
+Awesome. In the meantime, Mike, if we can probably by the next call, get a sense of, let's say the overall budget for this project, because I do realize that you've given me like a very vague value, but if I can get, because your volumes are considerably higher, right? And I would not want to waste your time as I've established on the very first time.
+
+>>mike williams	56:11
+So if you have to - Absolutely, and could you tell me what some ballparks of like, with those higher volumes, could you tell me what I might be expecting? Just even rough, incredibly rough ballpark.
+
+>>Jasneet Singh Malhi	56:24
+I completely get where you're coming from. The only issue is that your delta is very high. From 20 to 100K pages a week, your delta is very high, and that would considerably change the pricing. So I don't want to set any wrong expectations on your end, and I would anyway need to check the numbers of the deal desk team for me to give you a number.
+
+>>mike williams	56:42
+If it was, so totally understanding that, if it was 100 ,000 pages a week, is there a ballpark for roughly - I'll have to check, because I can't give out any number without consulting my deal desk.
+
+>>Jasneet Singh Malhi	56:57
+So I would need to check with the deal desk, but I can give you the structure of what all would be part of the pricing. So there would be a one -time set up and an implementation cost, which goes into the onboarding setup implementation, basically, wherein we do the heavy lift on our end and set everything up. Then there would be a platform fee and a customer success fee that would basically be part of all the support that you get. The platform fee helps you use all the case management, all the relevant features that you have on the platform, and then the subscription cost would be on a per -page basis. So that is how, typically, the three components of the pricing would work.
+
+>>mike williams	57:30
+Okay, yeah, that makes sense.
+
+>>Jasneet Singh Malhi	57:33
+But by the next one, if you can try to get a ballpark number of the budget for this project, I can then try to do one thing. I can go to my deal desk team and I can see what, and basically broker a deal for you, which can fit this project within your budget. Because I'll be honest with you, Mike, I want to work with you. I want to win this project. So I will try to see on my end what I can do, what approvals I can get to meet your budget. I think that should be a good point for us to kind of meet in the middle or whoever.
+
+>>mike williams	58:10
+So I can give a little bit of clarity in terms of budgetarily what we're looking at. So depending on, it's one of those things where this is a process we're doing very manually. So the more efficient we can make it, essentially the more budget it carves out for itself is kind of part of the way it's being looked at. If you can follow that logic there. So if it's able to do this with a level of efficiency that if it carves out effort equivalent to like - A full -time employee? Yeah, yeah, full -time. If it came out to be as such as that way, if it was like, that's kind of, I think I told you this yesterday, that's kind of, we were, the budget is essentially, we would like to keep it under the cost of a full -time employee.
+
+>>Jasneet Singh Malhi	59:07
+Got it.
+
+>>mike williams	59:10
+But there's obviously, there's conversation to be had there in terms of this is a great scale. This is a concept of great scale. So if that's where I'd be interested.
+
+>>Jasneet Singh Malhi	59:30
+No problem, Mike. I completely understand where you're coming from. No problem. Let me, I think we have already have the call scheduled. My first goal is to kind of get that case management demo set up for you. Even if it is on a very basic level to kind of show you the functionality. Once that's the way, then we can do it in depth.
+
+>>Jasneet Singh Malhi	59:48
+Demo with your stakeholders, and then we can eventually then come and discuss the pricing as well. I'm sure that pricing would be the last thing that we probably discuss.
+
+>>mike williams	59:58
+I understand. In our industry, it's very similar for our selling process too, because there's so much involved in that. So I can definitely relate. So just trying to need to be prudent with comparisons and looking at other options and things too. And it will be a little bit different. Trying to create an apples -to -apples comparison will be important for us too, because some other providers seem to be looking in terms of number of documents versus number of pages. Translating it to a common realm and ballpark is important.
+
+>>Jasneet Singh Malhi	01:00:49
+Basically, I've seen that approach wherein companies charge on the basis of documents is not a very fair approach to the actual customer. And I'll tell you why. Companies would say that we would charge you, let's say, 30 cents or 50 cents for a document up to 30 pages or up to, let's say, three pages, something of that sort. But if your document does not meet that threshold value, you are paying all that money extra for a specific document. But what I've seen on a per -page level is that the cost is more accurate and you basically use what you pay. So that is another distinction factor. I'm not saying that that pricing logic is wrong or anything, but personally to me, logically, that does not make sense. Why would you pay 30 cents or 50 cents for a document which does not even meet the 10 -page or the five -page mark to get the most value out of it? So that's where I'm coming.
+
+>>mike williams	01:01:47
+Yeah. And even that statement you made there provides value for me there too, because we were looking at, if it was on the lower end, if we were doing 200 ,000 documents a year, that being 75 cents a document for those, 75 to 80 cents for those 200 ,000 documents, that's a different metric. It's multiples, right? Like you said, it is a better fit. It's a more precise fit the way that you're talking about it, but having to compare those things is important.
+
+>>Jasneet Singh Malhi	01:02:29
+Obviously. Yeah, no problem, Mike. I think we've already extended our time for today's call, but thank you so much for jumping in.
+
+>>mike williams	01:02:37
+Thank you.
+
+>>Jasneet Singh Malhi	01:02:37
+I really appreciate it. Actually, I think I will let Manan and Donna go, because they might have a hard stop, but thank you so much for your time. Really appreciate it. I will try to set up the demo and I'll see you next week.
+
+>>mike williams	01:02:48
+Sounds good. Thank you very much.
+
+>>Jasneet Singh Malhi	01:02:50
+Awesome. Thanks, Mike. Have a great one.
+
+>>mike williams	01:02:52
+Thanks to you as well.
+

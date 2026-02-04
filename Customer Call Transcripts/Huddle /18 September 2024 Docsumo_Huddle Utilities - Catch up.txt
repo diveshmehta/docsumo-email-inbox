@@ -1,0 +1,219 @@
+>>Laura Tavares	00:00
+Last we interacted in the month of August when there were a few issues going on. Yeah, we still have a few issues. Okay, so the main supplier is Southern where the dates, some of the dates are not picked up correctly. It still shows like for example 20th of January or whatever. But then I think it's because the box where it picks up the date is not big enough to collect all the data. So if that can be arranged that would be perfect.
+
+>>Vishal Arya	00:47
+Yeah, I think yeah, if we can, can you once for once share your screen and show me exactly you know which date you're referring to because we have I think three dates here. Issue date, service end date and service start date.
+
+>>Laura Tavares	01:03
+It is the services date, service date not the, sometimes is the issue of the bill but mostly is the service date.
+
+>>Vishal Arya	01:20
+Service date, service end date and start date both, right?
+
+>>Laura Tavares	01:24
+Yes, if the date is too, sometimes the box is not, it's not big enough to pick up the correct date. So if you go in and just ask the bill to be, no. Yeah, so Georgiana is sharing her screen.
+
+>>Georgiana Olescu	01:42
+Yeah, these ones when they combine the letters and the numbers, this format. Can you see where I'm circling? So for example second of SEP 2024 is picking it up incorrectly. I have to create the box around the date again So it would be picked up correctly.
+
+>>Vishal Arya	02:06
+Okay, can you go to that, can you click on review again? Sorry? Can you click on review again? Can you click on review again?
+
+>>Georgiana Olescu	02:17
+No, these bills have been reviewed. They are correct now. Everything's fine because I've been through them but when I blow them, I obviously have to review them and the issue date, the service end date, start date, sometimes is not picking it up correctly because it's got this mixed format.
+
+>>Vishal Arya	02:38
+Okay, okay.
+
+>>Georgiana Olescu	02:40
+So do you understand what I'm trying to get? So for example, let's say look at the previous reading date is 19th APR 2024, right? Are you seeing what I'm seeing or not?
+
+>>Vishal Arya	02:56
+Do you see my screen? Yeah, I can see it. It's this sudden bill, right?
+
+>>Georgiana Olescu	03:01
+Yeah, so it's the previous reading 19 APR 2024. I obviously have to, or the 30th of August 2024, I obviously have to create another box around it because it's mixed, it's numbers and word and another number.
+
+>>Vishal Arya	03:22
+Okay, so I think, Yeah, I understand this has been already approved. Can you click on review again one time? We will approve it again, should not be a problem. No, it's approved already.
+
+>>Georgiana Olescu	03:33
+It's approved, it's fine, but I'm saying when I blowed it.
+
+>>Vishal Arya	03:38
+Yeah, yeah. So that's what I'm trying to just introspect. I mean, anything, nothing is going to change.
+
+>>Laura Tavares	03:45
+I think what she means is that this bill is not is a is a copy of the bill that she'd done it previously. So it's not the one that she's working on at the moment.
+
+>>Vishal Arya	03:58
+Oh, okay. Okay. Okay. Got it. Got it. So the date that you're mentioning here is the 30th of August 2024, right? Is that the date you're saying that that was coming as incorrect, right?
+
+>>Georgiana Olescu	04:15
+Just a second. Laura is talking to me as well.
+
+>>Vishal Arya	04:26
+Yeah, I was talking about that.
+
+>>Georgiana Olescu	04:30
+No, you see bill date is the second of step that one is picking it up wrong in some cases and from and to that one is picking up picking it up wrong in some cases. It's not always, but I have to be careful at those dates and make sure that they're being picked up correctly. And I have to. So for example, you can see here 30th of August 2024 that is highlighted twice.
+
+>>Georgiana Olescu	04:59
+That's because I had to highlight it myself as it picked up the wrong date. But right now it's fine. I finished working on it. I don't have an actual example to show you right now because I finished with it. But yes, this is what we've been finding recently, that the dates are not being picked up correctly, especially when we have a mixture of numbers and letters. What else is not being picked up correctly? And sometimes, yes, with Southern, we do have some issues with the readings, but that's fine. It is not in all cases, but we do have to be careful with those.
+
+>>Vishal Arya	05:39
+Got it. And which other field are creating other issues? Apart from the date, any other field in which you're having these kind of issues?
+
+>>Laura Tavares	05:49
+Ok, so whenever I've noticed, at least with mine once, whenever we've got a big batch of bills to upload onto Docsumo, it misses a few bills from the original document. And obviously, we have to go back and add those bills again. But I don't think it should be missing those bills. So when I have a PDF, all the bills are there. But when I go onto Docsumo, not all the bills are there. Ok.
+
+>>Vishal Arya	06:27
+Any specific vendor for which this problem has happened?
+
+>>Laura Tavares	06:30
+Any specific what, sorry?
+
+>>Vishal Arya	06:32
+Any specific vendor for which this problem has happened?
+
+>>Laura Tavares	06:36
+I believe one of them, yeah, so United Utilities has happened on a couple of occasions. And what was the other one? And I believe it was Affinity.
+
+>>Vishal Arya	06:54
+Ok, United Utilities and what was the other name you said?
+
+>>Laura Tavares	07:04
+Affinity Water.
+
+>>Vishal Arya	07:05
+Affinity Water, OK. Yeah, Affinity Water, I call it. Can you do one thing? Can you share me two combined samples of both these utilities? Just to test it on my site, Affinity Water and the other one that we spoke about.
+
+>>Laura Tavares	07:24
+Ok, I believe those bills I have dealt with, but I'm not too sure. Bear with me. Let me see if I can find out.
+
+>>Vishal Arya	07:35
+Yeah, any random, just I need a combined one to see how the split is functioning. If there is an error in the split happening, then I need to look into that and sort it out.
+
+>>Laura Tavares	07:50
+Bear with me. So let me see. United Utilities was the latest one. Was it this one? Yes, 2014.
+
+>>Laura Tavares	08:38
+Ok, so I've got it here. Let me just quickly pick up.
+
+>>Vishal Arya	08:45
+In fact, can you share that file with me on the email? For The United Utility And Affinity Water. One, one just combined file.
+
+>>Laura Tavares	08:56
+Ok, so we've got this one, the part two. So this is one of the bills there was. No, I'm lying. Hold on. All right. Yeah, there's another issue that happens in here. So, for example, this one, the part two is a second bill that was joined with another bill, another bill that had to separate them. So if you can see, there's a part two, part five, part three. There's sometimes like two, three or four bills. They are combined into one. And then I have to go back and separate them. That is one of the issues that is happening as well.
+
+>>Vishal Arya	09:45
+Ok, OK. So. So just to, you know, test this out, I would need a combined sample. Give me at least one combined sample, you know, one or two combined sample in which, you know.
+
+>>Vishal Arya	09:57
+All the utilities are already there and the split has to function later on to split it
+
+>>Laura Tavares	10:04
+So i don't have anything now because all of this is things that happened in the past and i had to go back in And then um separate the bills um and separate the bills But i don't have any of any one at the moment that i'm working in i'm gonna be um um uploading a few bills And then if that happens uh
+
+>>Vishal Arya	10:31
+So so uh the original bill that you uploaded here uh is that there in your repository right now anywhere Okay
+
+>>Laura Tavares	10:38
+So right So Georgie's saying that what she understood is the original document that i've scanned that's the one that you wanted yes the pdf Yes all right so let me find out so this one was 24th of july i don't think i've got it here
+
+>>Laura Tavares	11:11
+But i have to find out and send it send it to you via email only because um i had a few issues with my computer recently And i've got things all scattered all over the place uh no worries no worries
+
+>>Vishal Arya	11:25
+Yeah i think that that is also fine uh i'll drop you an email anyways after our call And you can send me uh those files on the same thread and i'll get it checked with my engineering team and uh get this issue shorted so basically it should not happen ideally uh in a few of the cases we need to figure out what was the blocker uh because i see that uh for the other one uh you know it's working fine But uh these two vendors specifically will have to look into like you know what exactly went wrong there So yeah So once i get the file i will uh get it uh you know thoroughly tested and uh get that fixed and uh date issues uh you know all the three uh dates that we have in the uh document type uh i will uh you know test it and uh just see like you know what exactly is happening here with the date And uh we'll get that one also fixed okay
+
+>>Laura Tavares	12:17
+So a quick question so if this type of thing happens again um And i email you how long will it take for you to work on it because obviously now we are on the time restricted and we need to get things done as quick as possible um how long up until you pick up on the email and work through it 24 hours
+
+>>Vishal Arya	12:36
+Max Okay
+
+>>Laura Tavares	12:38
+All right perfect So if i find any issues with the the next bulk upload i'll email you in yes
+
+>>Vishal Arya	12:44
+Yes yes just let me know uh So so basically uh if it happens again uh i can uh we should not take much of time i mean uh just maybe something with a custom rule or something might have happened because there's a custom rule that we have written for a split uh So Yeah we will check that out And we will fix that immediately Okay All right perfect uh i have a couple of questions Laura so basically on the volume side uh you know you know on the utilization of uh the document type uh how does this uh looks like at your end right now because uh you know uh when this was taken up i mean uh long back I think uh in last year in the month of november or december when this started like you know the the volume projection was somewhere around you know 15 to 20 000 and i see this uh touching to 5k Maybe uh you know uh up till now so just wanted to check like you know uh is there a kind of you know uh shortage of the documents at your end or any difficulty like uh is there a scope of like you know volume getting picked up at your end uh in recent time uh no we do have a backlog of bills to go through um so once we've put those bills through because uh the last uh United Utilities bill that i went through
+
+>>Laura Tavares	14:04
+I believe i've done it manually because there were not a lot uh But then the the other suppliers that we do have we have loads of bills to go through so most likely we're going to be working through those ones shortly okay
+
+>>Vishal Arya	14:17
+So uh let me provide you an extra assistance here uh first thing i'll drop you an email after the call you provide me at least one or two uh you know combined original bill that were scanned for United Utilities and i will quickly get it sorted and the day you want to you know upload the do do the bulk upload for utility uh let me know uh i'll have two of my team members to sit here on our side and just see like you know everything runs smoothly and nothing is even pushed for a fix for even 24 hours if anything you know goes wrong or a split doesn't happen the team will take care of it from our side and we will immediately fix it like you know within
+
+>>Vishal Arya	14:56
+two to three hours. Okay. There is a smooth running and you are able to you know you know do it you know maximum. So we will continue the conversation on the email and of course do share that original scan document with me and anytime this week or next week you're planning to you know go for a bulk upload or I can just tell you that of the system is ready you can go for a bulk upload just just do it And I'll assign two of the members to just you know completely monitoring it in the back -end process from our side so that this transition is you know even smoother at your end And no difficulties are faced.
+
+>>Laura Tavares	15:38
+Right Yeah So it's just a few hiccups that we going through at the moment But I don't think is anything major But then again as soon as we we upload the next batch if we come across any issues whatsoever either myself or George you would will drop you an email with whatever queries we have.
+
+>>Vishal Arya	16:00
+Sure sure sure also like you know with the other you know customers who have you know you who are using Docsumo for your processing utilities they also do kind of you know these bulk uploads for example like they upload like five thousand ten thousand in one day So that's where you know extra assistance comes into picture because all we want our customers to process more and more documents So I mean anytime you need any such assistance let me know feel free to you know ping me about it And definitely I can provide that extra assistance that's not a concern.
+
+>>Laura Tavares	16:39
+Okay right So I've got a quick question so for example let's say that we do have a bill for one supplier that has got several pages but let's say it's got four pages but the only pages that we need to that it's got the actual data to be collected is only two pages would you still charges for the extra pages that were uploaded?
+
+>>Vishal Arya	17:06
+Usually yes the extra charges you know that goes along because see what happens is like you know when you upload a four pages of document the OCR still functions on the four pages so for that the costing is for the four pages that comes on the platform.
+
+>>Laura Tavares	17:24
+Even though even though only two pages have the actual data that we need Yeah it's going to be extracted from.
+
+>>Vishal Arya	17:32
+Yes exactly so what you can do is if you see a kind of you know pattern there like you know for this vendor it's always going to be like you know the first two pages will have data the two pages won't have the data so that split can be performed and an auto classification API can be added in the account that's where you know you up you upload only to the auto classification API it does an automatic split and pass on the pages which has data only to the document type to process those information and rest of the pages remains in the auto classification API and doesn't count for credit.
+
+>>Laura Tavares	18:16
+It doesn't take out the credit is that we say
+
+>>Vishal Arya	18:19
+Yes yes this is one way of doing things.
+
+>>Laura Tavares	18:23
+But at the moment if it will still charge us for the pages they are not does not have the data that we need.
+
+>>Vishal Arya	18:33
+Yeah Yeah So basically this process of you know passing it through auto classification we usually suggested to the people who have regularly having these kind of problem coming up just for a one vendor if it is happening then it's fine to like you know go let it go through the same document type. I mean yeah of course the four pages goes in the credit is for deducted for that you know document uploaded so that's how this system functions with the OCR extraction So Yeah That's the thing is right now.
+
+>>Laura Tavares	19:09
+All right perfect is Yeah I was only asking because obviously for those that have been going through I've been only selecting the ones that actually wanted on the on your platform but then again that is it's like it's taking me a bit more time to select all of those.
+
+>>Vishal Arya	19:30
+What we can do is a lot of what we can do here is like you know we can still work on the auto classification API So basically if it is going to be the case with all of your vendors or let's suppose 80 or 90 percent of your vendors that the number of pages are going to be you know different than what you upload so we can again sit together and you can tell us that Okay these are the two pages I need these are three pages
+
+>>Vishal Arya	19:55
+Pages I need from this vendor. These are the first three pages I need from this vendor. Like that, you can tell us. And we can write up an extra role in auto -classification. And so let me share my screen and show you how it works, actually. So that way, I can help you manage the credit and not get any extra credit exhausted for the unnecessary document that doesn't have any data. Basically, auto -classification document type, that also comes like the similar card, like this one only, which has auto -classification written over here. You just have to upload anything in auto -classification. What it will do is it will just split it inside its own, OK? And then the document which doesn't have data, it will keep it to himself. And the document that the pages that has data, it will be passed on to this utility bill huddle document type only. And the credit will be exhausted for only those pages. What remains in auto -classify, no credit exhausted. So yeah, no charges are calculated for that. But that's a thing that can be done for, for example, let's suppose you have these kind of vendors. So if all these vendors are 80 % or 90 % of the vendors have a similar case, then we can go ahead and we can build this auto -classify function for you.
+
+>>Laura Tavares	21:19
+Uh, right. Yes. I was only asking because, for example, it will depend from bill to bill. Because some bills actually have three pages that are necessary. Some others have got four and so on. So on my next upload, I'll actually, I will scan the bill as they come.
+
+>>Vishal Arya	21:50
+I'll send it to you.
+
+>>Laura Tavares	21:51
+I'll send it to you via email so you can see exactly how we receive the bills. And then you can come back to us with whatever suggestions you have. Yeah.
+
+>>Vishal Arya	22:03
+Sure. Yeah, that makes sense. Yeah, let me know when those big bills are coming up. Definitely I can help you with something, you know, sorting it out.
+
+>>Laura Tavares	22:13
+Nice one.
+
+>>Vishal Arya	22:15
+All right. So, yeah, I'll drop you an email then, Laura. And then show me the original scan document for United Utility and Affinity Waters. And I'll get the class, first of all, the split sorted. And date issues, I'll get it looked upon and get it sorted. And regarding the bulk upload, I mean, we can mutually decide, like, you know, you want to do it this week, next week. I'll let you know once the fixes are done. And you just upload, like, you know, 4 ,000, 5 ,000 documents. And we'll take care of the rest of the things on our site. We'll make sure that there is a smooth transition and processing of the document.
+
+>>Laura Tavares	22:49
+Ok, that's wonderful. Thank you so much for that.
+
+>>Vishal Arya	22:53
+Thank you so much, Laura. Thanks, Georgiana, for your time. That was it from my side. We'll remain connected. Like, you know, we'll try to catch up once in a month, you know, now onwards so that, you know, we have this conversation going on and we can look up after any other issues that come up. And yeah, we'll take it up from there then.
+
+>>Laura Tavares	23:14
+All right, nice one. Thank you so much.
+
+>>Vishal Arya	23:16
+Thank you. Bye. Bye.
+

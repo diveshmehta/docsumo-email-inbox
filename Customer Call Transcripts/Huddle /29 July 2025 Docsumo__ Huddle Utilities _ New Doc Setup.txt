@@ -1,0 +1,237 @@
+>>Manoj Racherla	00:00
+Start maybe we'll join in sometime Yeah Okay So let me share my screen so when I went uh back in here so this is what we created Oh okay
+
+>>Sigita Vaišnoraitė	00:27
+Something has happened I'm not sure why this is a forwarded email no this is not a forward um someone has replied oh that's bad Um okay this is painful um Okay So what I wanted to do So I just for you to check that Okay okay Because what I thought before this meeting because I checked it yesterday And I did not see anything to review um but also just seeing that there's so many to review I'm a bit concerned um you know what's going on um why do I need to review so many or is it because I've done something yesterday and these are looking like different types and I have to review all of them
+
+>>Manoj Racherla	01:53
+Okay Uh so how did you post all these documents to Docsumo why is that here how did I post
+
+>>Sigita Vaišnoraitė	02:01
+Yeah
+
+>>Manoj Racherla	02:02
+How did you ingested all these documents within the Docsumo why is that here you are you did this like converting them to pdf and then uploading it to Docsumo well the only change that I've done from last week
+
+>>Sigita Vaišnoraitė	02:15
+So I've added another condition so we had this condition new occupant
+
+>>Manoj Racherla	02:20
+Yeah
+
+>>Sigita Vaišnoraitė	02:22
+So when I when I had it here when when I logged in yesterday and I said this is just new occupancy I literally didn't did not do anything after our call and when I checked here yesterday there was like nothing so apart from the two that two cases that we have done so then I went back here and I added another keyword so the condition is four and added a tendency change So I assume suddenly it started to pick up some other cases um so I assume that's that so as if it has worked can you uh can you go to the zap is that your ones uh on your left hand side there is a gear icon can you click on that
+
+>>Manoj Racherla	03:18
+Yeah okay Uh the last the latest time it was 4 55 PM july 20 yesterday well I don't know Okay fine can you click on that just click on that Yeah okay Uh can you go to approve document last step last step here fourth step within the zip click on that run details click on the run details towards your right Yeah Okay configure Yes okay can you go to the first step here this one
+
+>>Sigita Vaišnoraitė	04:12
+No
+
+>>Manoj Racherla	04:13
+Yeah yeah Run details Okay fine that's fine Okay fine Uh so now you want to so whatever the documents or email that you uploaded within the that you send within the gmail that is getting printed out and then converted into pdf and then getting uploaded into the docs right well seems like
+
+>>Sigita Vaišnoraitė	04:44
+Yeah yeah
+
+>>Manoj Racherla	04:44
+So now you want to whatever the like documents that have uploaded you can just review it and see that whatever the fields that are getting extracted if it's correct or not and if it's not then you can just collect it and if you want
+
+>>Manoj Racherla	04:58
+Want to add any extra fields, then you can go ahead and do it as well.
+
+>>Sigita Vaišnoraitė	05:06
+Oh, OK. Can I ask, why do I have so many to review as if I have to review every single one? Or is it because these are very different emails?
+
+>>Manoj Racherla	05:18
+Are these different emails, right? Ok, wait.
+
+>>Sigita Vaišnoraitė	05:23
+I'm not sure, because so you see the problem, and so that's I mean, I can fix this. But right now, you can see, so this is the original email. Yeah, so we received notification. Someone is moving in, moving out. Ok. And then, so Miri, she has replied. But this is, but then it was a reply on a reply. And I think because this was a reply, so it thinks, oh, so I have to, you know, let's say we looked at this email before. Well, Docsmir has looked at this email before. But because this was replied again, so it looks at it again. I assume it's that.
+
+>>Manoj Racherla	06:02
+Oh, OK, got it. Can you, can you, what is your bottom left?
+
+>>Sigita Vaišnoraitė	06:09
+Bottom left.
+
+>>Manoj Racherla	06:10
+There is one of 61, right? Can you see one of, below that, below that? Yeah. Can you click on the arrow? Yeah. Go to the second one, second doc. Can you scroll here?
+
+>>Sigita Vaišnoraitė	06:25
+Yeah.
+
+>>Manoj Racherla	06:26
+So is this the same? No. Ok, fine. So what you want is you only want the email which has been uploaded first, like which has been sent first and not the forwarded one, or which was, which has been responded within the same email.
+
+>>Sigita Vaišnoraitė	06:46
+Yeah, the other bit, well, yes. But if that's not possible, I could just create a new inbox and forward these type of emails to a specific inbox. And then Docsimo can scan that inbox, like, constantly.
+
+>>Manoj Racherla	07:02
+Yeah, that would make it easier. That would be much easier.
+
+>>Sigita Vaišnoraitė	07:05
+Yeah. Ok, so then my question is, do I have to review every single one of those? So my question is, when is it going just to be, boom, just processed here?
+
+>>Manoj Racherla	07:19
+Ok. Ok, fine. So here, the normal process is, like, whenever a document gets uploaded, you have to review it. And then if whatever the data that you want is getting extracted correctly, then you can click on Confirm. It gets processed. And if you don't want that, you want to, like, automatically process it, what you can do is you can do, like, straight -through processing. Can you go to Configure?
+
+>>Sigita Vaišnoraitė	07:51
+Over here. No, no, Docsimo.
+
+>>Manoj Racherla	07:53
+Docsimo. On the Docsimo. Configure.
+
+>>Sigita Vaišnoraitė	07:57
+Here, towards your left. My left. Documents.
+
+>>Manoj Racherla	08:04
+Yeah. Can you scroll down a bit? Yeah, can you see? Yeah, drop down, click on the drop -down.
+
+>>Sigita Vaišnoraitė	08:16
+Sorry, on what?
+
+>>Manoj Racherla	08:17
+Click on the drop -down option that you have. Besides, yeah, enable this. Got it.
+
+>>Sigita Vaišnoraitė	08:26
+So now what will happen?
+
+>>Manoj Racherla	08:29
+So what will happen is it will automatically approve documents, only those documents in which the accuracy is high. If it's not, then it won't automatically approve. Ok.
+
+>>Sigita Vaišnoraitė	08:43
+Ok. So it will be in the review, then. So I'll have to do it.
+
+>>Manoj Racherla	08:47
+Yeah, you have to review it.
+
+>>Sigita Vaišnoraitė	08:48
+Until it gets confident.
+
+>>Manoj Racherla	08:51
+Yeah, so suppose, let's say, you open any document here.
+
+>>Manoj Racherla	09:13
+See, here, as you can see there, besides the field name, like address line 1, there is a field called address line 1. Can you see an eye icon besides that address line 1 in yellow? Yeah, that means for this field, the confidence score is low. Due to this, it won't be automatically processed. So if everything is correct, like this tick mark, with the right check, then it will automatically process.
+
+>>Sigita Vaišnoraitė	09:47
+Mm -hmm, yeah. Ok. So the area is that specific.
+
+>>Manoj Racherla	09:53
+Oh.
+
+>>Sigita Vaišnoraitė	09:56
+Ok, I got it.
+
+>>Sigita Vaišnoraitė	09:57
+Okay, my last question would be how to the last time you talked about setting the zaps to run automatically.
+
+>>Manoj Racherla	10:09
+Sorry, I didn't get you.
+
+>>Sigita Vaišnoraitė	10:11
+So the last time when we had a meeting, he said, Oh, you can set the zaps.
+
+>>Manoj Racherla	10:16
+If they run automatically, as if I did, once you publish it, they will run automatically whenever.
+
+>>Sigita Vaišnoraitė	10:22
+Right. So I don't need to do anything.
+
+>>Manoj Racherla	10:24
+Yeah.
+
+>>Sigita Vaišnoraitė	10:29
+So why, when we checked, you said the last, so you said here the last time that it was run was 5pm, shouldn't be something today?
+
+>>Manoj Racherla	10:39
+I'm not sure. Like, if you, if you have, have you received any email today within the mailbox with that particular configuration?
+
+>>Sigita Vaišnoraitė	10:52
+Yeah.
+
+>>Manoj Racherla	10:53
+Can you go to the zap once? Yeah. To homepage, homepage, not inside the zap. Go to the homepage of zap, yeah. Click on the zaps option here.
+
+>>Sigita Vaišnoraitė	11:08
+Yeah. Sorry, where?
+
+>>Manoj Racherla	11:12
+Okay. This is the zap, right? Untitled zap.
+
+>>Sigita Vaišnoraitė	11:16
+Most likely. Yeah.
+
+>>Manoj Racherla	11:18
+Open this. This is published. Okay. Fine. Can you click on the first step? Yeah. Setup. Go to setup. Setup. New email. Confirm. Go to confirm. Info. Okay. Can you go to your mail? Go to info.
+
+>>Sigita Vaišnoraitė	11:52
+One Sec. I can't see anything.
+
+>>Sigita Vaišnoraitė	12:03
+So for example, new occupants. That would be an email. Today. This one?
+
+>>Manoj Racherla	12:11
+Yeah. Okay.
+
+>>Sigita Vaišnoraitė	12:14
+This one as well?
+
+>>Manoj Racherla	12:18
+No. Nedually it should run. Go to zap once. Can you, do we get this step? Yeah. Go to the homepage once. Go to zap history here. What's your name? To the left, that is to the bottom, bottom.
+
+>>Sigita Vaišnoraitė	12:54
+Yeah, it got run.
+
+>>Manoj Racherla	12:56
+The last run was July 29, around 2 PM. Oh, so it is running.
+
+>>Sigita Vaišnoraitė	13:02
+Ok. Ok, fine. All right, that's OK. I think that's it. So if I want to change the, so what would I do if I want to change?
+
+>>Manoj Racherla	13:18
+You have to edit draft. There is an option of edit draft on top right.
+
+>>Sigita Vaišnoraitė	13:24
+So, Mm -hmm. Yeah.
+
+>>Manoj Racherla	13:28
+So now, you can see.
+
+>>Sigita Vaišnoraitė	13:31
+So I'll be selecting a different inbox. Ok. Yeah.
+
+>>Manoj Racherla	13:35
+Ok. Once you have set all the settings, then again, you can publish it.
+
+>>Sigita Vaišnoraitė	13:40
+Ok, so edit draft. And then, I think I can push. Ok, I'll try that. Ok, I think that's it. I'm not going to waste your time. I think that's enough. That's clear. Ok, I just want to make sure, yeah, that the ZAPs are working. But yeah, I can see that there's loads now to review.
+
+>>Manoj Racherla	14:11
+So if you have any questions regarding, like, future, like, saying, like, why Zap is not running, you can always go. There are two steps. One, you can check within the Zap, the runs of that particular Zap. And either, you can go to the Zap history, like just I've shown you.
+
+>>Sigita Vaišnoraitė	14:30
+Yeah, OK, perfect. Yeah, thank you. That's all clear.
+
+>>Manoj Racherla	14:36
+Thank you, Sylvia. Any questions for them?
+
+>>Sigita Vaišnoraitė	14:38
+No, all good.
+
+>>Manoj Racherla	14:40
+Cool.
+
+>>Sigita Vaišnoraitė	14:40
+All right, thank you.
+
+>>Andreas Wright	14:42
+Bye -bye, have a great day.
+
+>>Manoj Racherla	14:43
+Thank you, bye.
+
+>>Sigita Vaišnoraitė	14:44
+Bye -bye.
+

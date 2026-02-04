@@ -1,0 +1,612 @@
+>>Manoj Racherla	00:00
+Ok, got it. So we got your samples as well as the fields that you want to extract. So we had some questions in terms of like. What all like nomenclature and everything like you said that we have to identify based on the names of the files and everything, right? Yes. Yeah, so let me share my screen.
+
+>>Vishal Arya	00:25
+Yeah, so this is the search fields, right? The file with the search fields. Yeah.
+
+>>Manoj Racherla	00:31
+And you have also shared an Excel file as well, right? Correct.
+
+>>Vishal Arya	00:35
+Yeah, the search fields were in the Excel file.
+
+>>Manoj Racherla	00:37
+Ok, wait. Is my screen visible? Yes. Ok, so these are the like these are the samples, I'm guessing.
+
+>>Vishal Arya	00:50
+Yeah, well, these are the actual files that we're sharing with you. So these aren't the depends on how you're saying sample. I mean, these are the actual documents that the thousands of documents to go through.
+
+>>Stefan Z	01:03
+You're right.
+
+>>Manoj Racherla	01:05
+You're right.
+
+>>Stefan Z	01:05
+Your Google Meet screen is actually here. There you go.
+
+>>Manoj Racherla	01:11
+Yeah. So these are the companies.
+
+>>Vishal Arya	01:14
+Those are the companies and each of the warrants one, two, three and four.
+
+>>Manoj Racherla	01:18
+Ok, these are nested files within a company that are Israeli as we like that.
+
+>>Vishal Arya	01:25
+Yes. Oh, hold on. Let me.
+
+>>Stefan Z	01:27
+Yes. So there there will be some. It appears that that that is that does not appear to be a warrant for.
+
+>>Vishal Arya	01:35
+Right.
+
+>>Stefan Z	01:36
+So there could be some errant folders in there. But but I think it's OK to review those. You just won't find you just won't write more documents in there.
+
+>>Manoj Racherla	01:47
+Ok, so let's take it. There's one in three. These are the companies. And within this, we have these these documents.
+
+>>Vishal Arya	01:56
+So let's say correct.
+
+>>Manoj Racherla	01:57
+Correct. These are all warrants. And this is the support. Right.
+
+>>Vishal Arya	02:01
+Well, well, let's go through that. So if you can, you make that column wider so you can see the full file name. Can you. Yeah. So these these are supporting documents, but they're not actually the warrant document themselves. So to help you search and find the correct ones, if you go back to that search criteria document, I mean, if you want to save that Excel file, that's that's kind of our starting point. We want you to. Go through and this one. No, there's a criteria field on one of the upload documents.
+
+>>Manoj Racherla	02:40
+You know, there you go. Yes.
+
+>>Vishal Arya	02:42
+To help you find the correct document that we're looking for, there'll be a little bit of a filtering process here. So if you scroll down. Was there not one here? Ok, maybe it's not it's on a different document. Sorry. Let me let me go find the upload onboarding doc.
+
+>>Manoj Racherla	03:01
+Can you share your screen and explain this? Sure. Yes, sure.
+
+>>Vishal Arya	03:06
+I've got it here. I'll I'll share it with you. It's the overview file. But let me go ahead and share that. Ok. All right. Let me know if you can see this.
+
+>>Manoj Racherla	03:21
+Yeah, I can.
+
+>>Vishal Arya	03:22
+Ok, so we'll start with this. So this is kind of a high level criteria of what we want. We want you to retrieve PDFs. Right. And within the PDFs, you want to include only file names with company names that match the existing portfolio listings. And this is where some of the details on the other file kind of come in. So maybe I should have put them all in one.
+
+>>Manoj Racherla	03:46
+So what is this? Like, as you mentioned, Excel, it is.
+
+>>Vishal Arya	03:51
+So let's go here. Let me share the screen. Sorry. Change the screen.
+
+>>Vishal Arya	04:11
+All right.
+
+>>Manoj Racherla	04:17
+Here it is.
+
+>>Vishal Arya	04:17
+Entire screen.
+
+>>Manoj Racherla	04:27
+Ok.
+
+>>Vishal Arya	04:28
+So here's the onboarding file. Ok, can you see it? Yes.
+
+>>Manoj Racherla	04:35
+Ok.
+
+>>Vishal Arya	04:37
+All right. So within the so we've got these files, right, so I've made a separate onboarding file here and we've got the readme file kind of overview file. So within these files, you know, let me try to find. Let me show you an example.
+
+>>Vishal Arya	04:58
+What we're looking for. So let's just go to warrants one. Let's go to 10x. So you can see in this folder for this company, 10x technologies, there's a lot of supporting documents in here, right? Maybe 20 to 30. What we're looking for will have a similar workflow or naming convention as this one right here. So you'll have the company name, you'll have a date. And then you'll have a text string of these specific characters over here. It's basically a date and that's been in this format. So this is the format that we're looking for. We don't want anything that looks like this because that tells me right off the bat, this is not the warrant document. This is not warrant document. None of these are warrant documents, right? This is an email. So you can see, I think Stefan, we said we don't want contingency, right? Correct.
+
+>>Stefan Z	05:54
+Okay.
+
+>>Vishal Arya	05:54
+So this one is a warrant document, but it's almost duplicative because it's got contingency support, but this is the same as this one, but this just has a few additional documents, which we don't care for. So we want a simple kind of file that with this naming convention. If you want to use this as an example, right? And you can see this one has three different warrants. This is a warrant, this is a warrant, and this is a warrant. And they're all differentiated by these numbers at the end, which are basically the date and some number at the end.
+
+>>Manoj Racherla	06:28
+Okay. Can you add this format in that doc as well as a readme doc? Yeah.
+
+>>Vishal Arya	06:34
+Yeah, for sure. So do you want me to give you that naming convention?
+
+>>Manoj Racherla	06:38
+Yeah.
+
+>>Vishal Arya	06:39
+Write it down. Okay. All right. Would it also be easier to just make a separate folder with like a warrant document dropping in a real warrant document so you could see?
+
+>>Manoj Racherla	06:50
+Yeah, that would also work.
+
+>>Vishal Arya	06:52
+So I can take a few of these like this one out and just drop it into the onboarding doc and just add it right here as a reference.
+
+>>Manoj Racherla	07:03
+Okay.
+
+>>Vishal Arya	07:03
+Is that right? Okay. So again, this is kind of the parameters, right? We want to ignore the file name with contingency, like I mentioned, because we don't care for that and you want, but you do want files with these five, you know, numericals in the title.
+
+>>Manoj Racherla	07:18
+And then you are saying in the end, right?
+
+>>Vishal Arya	07:23
+You know, I'll have to, Stephen, I think these are all at the end, right? The date.
+
+>>Stefan Z	07:29
+Yeah. I mean, they're all pretty much the same format, company name, date, and the five digit or whatever it is. Yeah.
+
+>>Vishal Arya	07:37
+Right here.
+
+>>Stefan Z	07:37
+Here's another one.
+
+>>Vishal Arya	07:38
+Right.
+
+>>Stefan Z	07:40
+How many digits is it?
+
+>>Vishal Arya	07:41
+Eight. One, two, three, four, five, six, seven, eight. Yeah. Eight digits at the end.
+
+>>Stefan Z	07:53
+And is that what your document says? Eight digits?
+
+>>Vishal Arya	07:55
+Or is it, does it specify? Oh, I think it says five here. It was at least five. So I'll update this. At least five.
+
+>>Stefan Z	08:03
+Yeah.
+
+>>Vishal Arya	08:04
+At least five, right? We said at least five.
+
+>>Stefan Z	08:07
+Because there are some that are seven. There are some that are eight.
+
+>>Vishal Arya	08:09
+Are you able to build parameters around at least five, greater than five?
+
+>>Manoj Racherla	08:20
+Which are you asking me?
+
+>>Vishal Arya	08:21
+Yeah. Sorry. Yes. Are you able to, since it can be five, you know, five, six or seven or eight, is there a filter parameter you can put to be more than five?
+
+>>Manoj Racherla	08:31
+We can check that. We need to check that once.
+
+>>Vishal Arya	08:34
+And then with, yeah. Go ahead. Yeah.
+
+>>Manoj Racherla	08:37
+Good.
+
+>>Vishal Arya	08:38
+I was saying, and then again, here's another kind of drill down, right? Again, it can be specific to years of 2020 to 2025. So coming back here, we'll pick one and you can see there's a date right here, right? So there's a couple of different things. Again, maybe this is your first layer of the filter is checking for the date or second, or they can both work together in tandem in case there's not a date, but there is still a five or eight string digits, you know, at the end.
+
+>>Stefan Z	09:10
+So what was that criteria, Vishal?
+
+>>Vishal Arya	09:13
+The criteria was complete years from 2020 to 2025.
+
+>>Stefan Z	09:17
+No, that's 2000 to 2025.
+
+>>Vishal Arya	09:20
+Oh, sorry. 2000. Sorry. 2000. I misspoke. 2000 to 2025. So it's a large field. So I don't think you'll come across very much of that, but that's one we can put in. What else? So include only file names with companies and the company name will be the other file I gave you here, which is the warrant listing document. So here's the company name, right? So you want
+
+>>Vishal Arya	09:57
+Want to match this against the files?
+
+>>Stefan Z	10:01
+So let's discuss that, because it looks like so there's a couple of variances between the listing that Vishal just showed and what's actually in the file names. And the difference can be, for example, Temperate Technologies Inc. Can you just highlight that one? So the file name, it could possibly say only Temperate Technologies. It could say Temperate Technologies, Inc. period. It could say Temperate Technologies, no comma, Inc., no period, and every variation on that. So Temperate Technologies is sort of the meat of it, or the most important part of it. But it's not going to be an exact string. I think it's also, if I look at the files, I think they also did underscores for the spaces. So it might be Tebra underscore Technologies Underscore Inc.
+
+>>Vishal Arya	11:12
+Yeah, there could be a variation. On some of them, for example.
+
+>>Stefan Z	11:16
+Maybe not all of them, but.
+
+>>Manoj Racherla	11:17
+Ok, so you want, like, so first we have to filter out this criteria. And then we have to match the string, not entirely, but some of them from the Excel sheet that you're getting, from the files. And then if it matches, then only upload those documents. Otherwise, not.
+
+>>Stefan Z	11:45
+So I'm thinking, I'm starting to think through this. I mean, ideally, yeah. So ideally, you would only take the ones that are from that list. And the reason is because there are many more folders in the Sharepoint for companies that we no longer, will no longer, and never will have to deal with. So ideally, we wouldn't have that junk that's brought in. But we also don't want to miss current companies. So ideally, yes. So if there's a way to take this list that Michelle has given you, and be certain that we can take all of the companies from there, then yeah, filter out all the ones that are not on there. And I think there's a way to double check that, right? I mean, we should be able to do a, once you guys finish this up, you'll have a list of all the companies, of the ones you did take. We should be able to do a pretty easy match between that and the Excel file to make sure that everything's on there. Even if the names aren't identical, there should be a way to, you know, the first five letters or whatever. Because Tebra is always going to be there. Lurion is always going to be there. Pg is always going to be there. So yes, if you're able to filter out, understanding that it's not going to be an identical text string, it's going to be potentially a variant text string. But you're able to find a way to say, OK, I'm going to take all the ones for Tebra Technologies, I'm going to get all the ones that say Tebra, because I know that's going to cover all of them, then yes.
+
+>>Stefan Z	13:29
+All the ones that are not on that list, you can exclude. Ok.
+
+>>Manoj Racherla	13:36
+Also, I wanted to ask, so suppose, let's say, we filter out and upload a document. Once the document is uploaded, what all fields you want to extract from that document? Ok.
+
+>>Vishal Arya	13:47
+So that we have a separate document here.
+
+>>Stefan Z	13:53
+By the way, before we go to that, can you just go, so right here, stay right there. Can you go back, Vishal? Yeah. Up one more level. So one thing I noticed when you looked into the M -Wave, and right now I'm just, you can listen, but I'm talking to Vishal. So that M -Wave folder that you went into only had the 409a or something like that. It did not have the warrant document. Correct. And the reason is, and I just looked it up over here, the reason is because there are two folders. You know how when we do a search, there's always two folders that come up with the companies? One is within this warrants -1, 2, 3, and 4. There's another one that's in the restore underscore INC or whatever. So the M -Wave folder that contains the warrant document is under that folder. So they'll need to go through not just the warrants -1, 2, 3, 4, but that folder as well.
+
+>>Vishal Arya	14:54
+Ok, one second. Manoj, do you have access to that?
+
+>>Vishal Arya	14:56
+Access to this folder by chance? Can you check real quick?
+
+>>Stefan Z	15:00
+Yeah, the obvious problem is that there's duplicates.
+
+>>Vishal Arya	15:04
+Yeah.
+
+>>Manoj Racherla	15:04
+No, no, I don't have.
+
+>>Vishal Arya	15:06
+Okay, so Stefan, when we talked with Min and David on our end, we gave them access for DocsUMO upload where they will upload their data files after they're done. This is just the high level onboarding. We drop stuff in there, they drop, we just, yeah. And then we gave them access to these four. Now, are you saying they need access to this restore as well?
+
+>>Stefan Z	15:29
+Yeah, so go into there, go into there.
+
+>>Vishal Arya	15:32
+Okay, so you've got warrants.
+
+>>Stefan Z	15:35
+Go into warrants.
+
+>>Vishal Arya	15:36
+And you've got everything, almost everything. And then there's everything again. Oh, so this is.
+
+>>Stefan Z	15:40
+I don't think it's broken out, obviously, by, you know, A, B, K, or whatever.
+
+>>Vishal Arya	15:47
+I think this is literally just everything. So is this a copy or, I mean, or is this stuff that might have some, we don't know.
+
+>>Stefan Z	15:53
+I don't know how it got bifurcated. What I do know is that the two folders are not always identical. And we just saw.
+
+>>Vishal Arya	16:04
+I did, okay. And then let me get an email to our IT to give you access to this folder as well. Cause I didn't, I thought this was a restore, like duplicative thing. So we'll have to give you access to this as well. And so you should have, you know, one, two, three, four, five, full folders of documents to sift through and sort through.
+
+>>Manoj Racherla	16:24
+Okay, so the documents that are there in restore underscore, are these the same, which are there in warrants one, two, three, four?
+
+>>Stefan Z	16:33
+Yes and no.
+
+>>Vishal Arya	16:34
+Yes, it'll have some, but we also don't know if we're going to be missing any, right? Like what if there's something in here that isn't in one of these?
+
+>>Manoj Racherla	16:42
+So we do want to capture. So it is sort of a master folder wherein you have all the warrants.
+
+>>Vishal Arya	16:49
+We don't know. It could be here and not here. It could be here and not here. So to just be safe, we're going to take everything.
+
+>>Stefan Z	16:56
+So just to summarize at a high level. So in the restore folder, there are sub folders for every one of the companies. Just one sub folder under warrants that has every company A to Z. In the other folders, warrants one, two, three, and four are the same folders, the same company folders. Just warrants one is like A through whatever, A. It's just broken out by the alphabet, but it's the same company folders that is in the restore that are then broken out into the four folders here. The same company name folder, the contents of those folders could be different. They are different. We just saw that for the one that we looked at earlier. So, but we don't know which one is the correct updated. Could be the one that's under warrants four or it could be the one that's under warrants one. So we don't know.
+
+>>Manoj Racherla	17:58
+I understood.
+
+>>Stefan Z	17:59
+So what may happen is you may, for one company, you may pull a warrant document from the restore sub folder and you may pull the exact same document from the warrants two sub folder or something. I don't know how we deal with, I mean, if it's, I think what we need to do is if you pull two folders and they have the same name, then they're just duplicates.
+
+>>Manoj Racherla	18:26
+Yeah, that might be the case. Okay.
+
+>>Stefan Z	18:31
+And so maybe once you're crawling through all these different places, you've got one repository for all the ones that are duplicate emails or duplicate file names. You know, you can get rid of one of them.
+
+>>Manoj Racherla	18:47
+That makes sense.
+
+>>Stefan Z	18:48
+Because if a file does have the same name, it's the same document. It's just was stored in two different places.
+
+>>Manoj Racherla	18:56
+Oh, okay. Yeah, Vishal, you can go ahead with the fields that you were showing.
+
+>>Vishal Arya	19:01
+Yeah, so I'll get you access to this. And then, well, let's go back here. Oh, sorry. Onboarding. Okay, so now these are the search fields that you want to extract from the PDF. Yeah, from each of the PDFs, right? Let's go back here and just get you an example and we can keep side by side and you can see. Maybe not this one. Let's go find it. Okay, so you've got a warrant document that looks like this. And then we'll do your search fields. Let me see if I can pull this out.
+
+>>Vishal Arya	20:00
+All right, okay, so you've got the company name Let's see here This is interesting, okay, here's the company name Right, but with that we want The Sec Id can you Before you go further on this Can you pull up another one just to show how there are several different versions of this?
+
+>>Stefan Z	20:35
+Right because not all the documents look like this.
+
+>>Vishal Arya	20:38
+Yes. So this is one version, right?
+
+>>Stefan Z	20:44
+Look for a maze or something. I don't know something that we know is A bit more any of them. Okay. I just want to make sure you get an older one, right? Because yeah,
+
+>>Vishal Arya	20:55
+So so here's Here's an older one That's too old too old, Right?
+
+>>Stefan Z	21:04
+Look up a maze because I think you should be able to get like a 2000. Uh, it was in
+
+>>Manoj Racherla	21:09
+I guess warranty Let's see here a maze For example, pull up the the 2018 warrant just because it will have a put right in there
+
+>>Vishal Arya	21:21
+And we can write Here we go, nope, that's valuation that's right. That's funny. It's not in here Probably the other amazing
+
+>>Stefan Z	21:44
+There's only one Go to them to the main documents level you may have been searching Now do the search here Once there was same a software famous industries. I'm sorry teespring these print.
+
+>>Vishal Arya	22:07
+Oh, yes teespring had it He spring had to put Yes,
+
+>>Vishal Arya	22:23
+Oh Oh This one didn't Oh wait here It is he spring. Okay, so we'll go into this file 2018
+
+>>Stefan Z	22:39
+And so here's the Other view of what the warrant looks like so the point is is to show Eventually, we'll get to the book to the program, but there are different formats For the same type of document depending on you know, which year it was issued So so as you go through and say company name, here's where you'll find it You know, here's the spring but right go to the other one And you'll see it's in a completely different location
+
+>>Vishal Arya	23:08
+So they're not uniform Gordon Sec ID I think at the top of each one you'll see specifically Sec ID a comment written in A number of shares. Yeah, you'll have right here.
+
+>>Stefan Z	23:25
+Can you go back and forth just so that it sort of cameras?
+
+>>Vishal Arya	23:29
+Yeah, let me go find a different. I have to open up another tab. I was with oh you got
+
+>>Stefan Z	23:34
+Oh, Yeah I was up
+
+>>Vishal Arya	23:36
+I was in one But I can go back and find that first one Let's see if it's a Look for a maze software because we know that's a newer one. Okay
+
+>>Stefan Z	23:58
+Sorry, yeah, mine's taking forever to load.
+
+>>Manoj Racherla	24:03
+Yeah Get an older one like Kind of similar Actually, so
+
+>>Stefan Z	24:32
+Yeah,
+
+>>Manoj Racherla	24:33
+Oh maybe it was a newer one that are different it was a newer one the newer ones have that outline Great forgot what name it was
+
+>>Vishal Arya	25:05
+That Microsoft had a huge hack on their Sharepoint thing this week. I don't know if you saw that in the news. Yep. So it affected us, but definitely not.
+
+>>Stefan Z	25:20
+Go to Shoulder Innovations because that's one from 2015.
+
+>>Vishal Arya	25:23
+Did you find one? Okay.
+
+>>Stefan Z	25:32
+Never mind, that's the same.
+
+>>Vishal Arya	25:36
+Well, it's got one here, 20, let's.
+
+>>Stefan Z	25:39
+Yeah.
+
+>>Vishal Arya	25:40
+It doesn't really matter.
+
+>>Stefan Z	25:42
+I mean, the point is that they're different.
+
+>>Vishal Arya	25:44
+Yeah.
+
+>>Stefan Z	25:44
+This one has leading pages, right?
+
+>>Manoj Racherla	25:48
+Yeah. So, okay.
+
+>>Vishal Arya	25:57
+Even SecIDs, Stephan, I don't know if some of these have SecIDs written on them, right?
+
+>>Stefan Z	26:05
+Maybe not.
+
+>>Vishal Arya	26:06
+I really, because SecIDs were comments added after, because those are proprietary to Svb after the warrant.
+
+>>Stefan Z	26:12
+Yeah.
+
+>>Vishal Arya	26:13
+So, Secid might not be a field available in all of them. I'll say that. But again, I think your search will try to populate as many of these as possible, right?
+
+>>Stefan Z	26:24
+Yeah.
+
+>>Manoj Racherla	26:24
+Go ahead.
+
+>>Vishal Arya	26:25
+Okay. So, class of shares, we'll just go back to this. Let's see your class of shares. You'll see a number of shares. It will say a common stock or it will say, let's see, this one's different. Oh, it's still common stock. But if it's a preferred, it will say type of stock, common or preferred or series A or B. So, and then exercise price, same thing. Here's your warrant price. It's going to be labeled as warrant price on this one. I think they're all mostly warrant price. But again, we can work through that. And then initial shares, you'll have some that are contingent, as in you'll get an initial share right here, right? But then you're also able to get additional shares. So, that's where the two places for initial and additional can show up. There's a section for initial, a section for additional shares, and there'll be a value in there. Okay. Notifications, notice.
+
+>>Manoj Racherla	27:34
+Are these two same fields or because there is a comma in between? Notifications, comma, notice.
+
+>>Vishal Arya	27:39
+No, I think it's the same field, but a different version or a different wording of that.
+
+>>Manoj Racherla	27:45
+Okay.
+
+>>Vishal Arya	27:47
+I think Stephanie was second.
+
+>>Manoj Racherla	27:53
+Sorry, one Sec.
+
+>>Stefan Z	28:10
+Actually, I'm not sure what this is supposed to be, notification.
+
+>>Vishal Arya	28:26
+I don't know that, guys.
+
+>>Stefan Z	28:28
+I don't know what that's supposed to be.
+
+>>Vishal Arya	28:29
+I wanted to say, I think it seemed like this was it, because notice afterwards makes me feel like it's the notice of certain events. Maybe...
+
+>>Stefan Z	28:41
+But what information are they supposed to pull from there?
+
+>>Vishal Arya	28:45
+Exactly. I don't know. This was the template that we used. Because looking underneath, information rights, right? I think it's looking for this section, but I don't know what we're supposed to get out of information rights.
+
+>>Stefan Z	28:58
+We did a trial run on a bunch of forms. Do we have that output available that we can look and see for the test run we did? What information you guys pulled under those fields? Because I think we use these fields already on the test run.
+
+>>Vishal Arya	29:17
+Manoj, do you know if you guys have the results from the test files from a couple of weeks ago? Or was that the other guys that did that, just need or...
+
+>>Manoj Racherla	29:26
+Yeah, Justin might have done it. Like, apparently, I don't have. But I will check with Justin as well.
+
+>>Vishal Arya	29:32
+Yeah, see if... Because they ran a test on 10 of these files.
+
+>>Stefan Z	29:39
+There was like 30 of them.
+
+>>Vishal Arya	29:40
+Was it 30? Okay, 30.
+
+>>Stefan Z	29:41
+Yeah, it was a pretty big set.
+
+>>Vishal Arya	29:42
+And I think, would they use the same set of criteria? So let's... If you want to use that as a test, that'll also help you out.
+
+>>Stefan Z	29:51
+Double check of what...
+
+>>Stefan Z	29:53
+At what the outputs would look like.
+
+>>Manoj Racherla	29:56
+Got it. And also, are all these key value pairs, or it also contains a table or line items?
+
+>>Vishal Arya	30:05
+What was your first part of your question?
+
+>>Manoj Racherla	30:07
+So are these values, like fields, are these key value pairs, like initial shares, contain a value? Or does it also contain the table as well, like a company has name, address? Is this a table or line item sort of thing? Or is this, as well, the key value pairs?
+
+>>Vishal Arya	30:25
+I think it's going to be key value. There's not going to be a set of a table like this, right? Like issue date, this is the issue date expiration. As you can see, initial shares, you have to come to this paragraph, an additional share. So you're going to have to extract it from a paragraph.
+
+>>Manoj Racherla	30:43
+And there's a field called prorater. What does it mean?
+
+>>Vishal Arya	30:47
+Like, let's see here, how do I explain? So there's going to be some sections in here that, similar to right to Covest, put right, there's going to be a section here that's going to say, put right, notice. So it'll be the heading of a section. And within that section, you should still see prorater, the words prorater somewhere in the fields. And again, not all of them will have it. Not all of them will have these. Only a very small subset will have put rights or right to invest. But there will be just keywords somewhere within the document. Again, not everyone has them. I think if you go back to the initial sample, the 20 or 30 that we gave them, I think that had a good number that included some of these so that you could see the differences between them.
+
+>>Manoj Racherla	31:37
+Got it.
+
+>>Vishal Arya	31:38
+Can you scroll downwards?
+
+>>Manoj Racherla	31:40
+Yeah. Yeah. With a copy, too. What does this mean? Because from name, address, attention, these are twice mentioned.
+
+>>Vishal Arya	31:50
+Yeah, so you'll come to the warrant documents there at the very end around notices section. This is saying, hey, give us a notice to our contact information. And then also provide me, like you see here, with a copy, too. And this is basically the company or the company's legal representation. So we want to know the contact information that we have here. For a company?
+
+>>Stefan Z	32:20
+Or, sorry, this one down here. Exactly.
+
+>>Vishal Arya	32:23
+This one down here for Shoulder Innovations with a copy to their counsel or their legal representation. So we want to know contact information for both, which will be in this somewhat format, as you can see here. Company, attention, address, phone number. And you can see here it's blank. So we don't have a company contact, right? But we can reach out to their counsel and legal because they provided theirs here. That's what we're looking for. So you might have something. You might not have something on some of these fields again.
+
+>>Manoj Racherla	32:55
+Got it. That's fine. Rishabh, you have any questions?
+
+>>Rishabh Rao	33:00
+No. This looks fine. It would be helpful if, you know, what we can do is, I think, Manoj, we can write our understanding of these fields and have Vishal and Stephen vet those understandings. I think most of the fields are pretty straightforward. We'll also go through more documents and understand where these occur. So that's something that we can...
+
+>>Stefan Z	33:25
+I think it would be helpful, as Vishal mentioned, to go back to what the sales guys did with the 30 or so test run, because they ran through, you know, a representative sample of our warrants, you know, through your system. There was an output with basically the same criteria. So you'll see what the output is. You'll see the underlying documents, you know, where they got the information from, or I don't know, maybe there's a...
+
+>>Vishal Arya	33:55
+And we ran through it with them and they showed us the results, which seemed to be correct. So I think that's a good template for you guys to work off of. Hey, this was correct when we looked at it with them. So that'll be a good start.
+
+>>Manoj Racherla	34:09
+Sure, Vishal. Anything else? No, I guess we can wrap it up, Vishal.
+
+>>Vishal Arya	34:16
+Okay.
+
+>>Manoj Racherla	34:18
+You have any questions for them to ask?
+
+>>Vishal Arya	34:20
+No, that's it. I'll go ahead and get you access to that restore file in Sharepoint as well. So that can be used for your dataset. Definitely pull everything from there. And then after you guys have a chance to maybe put all this through and look at the samples, we can review it after you've done that.
+
+>>Manoj Racherla	34:37
+Yeah, one more question. Can you go to the Sharepoint ones, that folder?
+
+>>Vishal Arya	34:44
+Yeah, let me...
+
+>>Manoj Racherla	34:45
+Folder, folder. Yep. Warrants.
+
+>>Vishal Arya	34:50
+Let me...
+
+>>Vishal Arya	34:52
+Uploading real quick, well, one more. All right, well, that's not working here. Let's do this. Okay.
+
+>>Manoj Racherla	35:04
+Okay, so the first one, Doximo upload. So would that be like a output that you want to like upload here?
+
+>>Vishal Arya	35:11
+Correct, correct. And it doesn't, it can be a working sample that you wanna send to us, or we can do the sample on the call. But the idea here is once we have a good set of data that is usable for us, maybe it's the final product, we can put it in here so that we can, you know, review the document or review the file or do whatever we need to do with the data afterwards. So maybe this is something at the very end.
+
+>>Manoj Racherla	35:36
+Oh, got it, got it. Okay, fine. We will check at our end and we will read the previous and everything. And we will let you know if there are any further questions.
+
+>>Vishal Arya	35:46
+Okay. Sounds good. Thank you, Manoj.
+
+>>Stefan Z	35:49
+Thanks, everyone.
+
+>>Manoj Racherla	35:49
+Thanks, thanks.
+
+>>Vishal Arya	35:50
+It was nice talking to you guys. Bye. Bye.
+
+>>Manoj Racherla	35:52
+Love it.
+
+>>Rishabh Rao	35:53
+Bye, everyone.
+
+>>Manoj Racherla	35:54
+Bye.
+

@@ -1,0 +1,306 @@
+>>Jasneet Singh Malhi	00:00
+Nidhi will be our customer success rep. She handles customer success at Docsumo. And she'll be leading the project from today onwards, from an onboarding and implementation standpoint. All things customer success goes to Nidhi. All things technical go to Manoj. All things sales come to me. So that's the structure that we'll be following. And Nidhi, I'll just quickly give a minute to you to quickly introduce yourself. And then we can set the agenda that you have for the call today. Sure.
+
+>>Nidhi Vichare	00:27
+So yeah, thanks so much, Jasneet. And yeah, welcome on board team with Docsumo. We are super excited to onboard you. I think a lot of things have already been set up in the initial phase. And I'll be walking you through. I'll be like your initial point of contact throughout your implementation as well as post implementation, where we'll be looking into more adoption and stuff like that. So yeah, and along with me, Manoj will be our dedicated engineer for the solutioning. And yeah, Aniket has also joined from the engineering. I think you have already met Aniket and Manoj. So Yeah, I think we can get started with the agenda for today. Awesome.
+
+>>Jasneet Singh Malhi	01:15
+So Nidhi, do we have something planned from an implementation? And so this is like the first kickoff call that we have. So if we can walk through the team, how usually this works, like what are the resources that we need from them to make this a successful implementation and a successful Poc. And if we can also team work on some success metrics that we'll be looking at the end of the Poc so that we can, you know, work towards them and build them as a north star and then basis that we can define if the Poc was successful or not. So I think that would be a good next step from my end. But anything else, if you, you know, Manoj, Aniket, Nidhi, you want to add or the larger Saf team wants to add, we can work on that as well. Sure.
+
+>>Nidhi Vichare	01:59
+Also, if you can also give a quick understanding about like, if we can start with what is the expectation in terms of Poc, what are the document and the workflows that we are planning to implement? And what's, you know, the ideal outcome that we are looking into so that, you know, we can set up some metrics that we can define at the end of a three -month POC period. Also, because we have a three -month time, we want to make sure that, you know, the metrics that we are looking into, those are achievable. And, you know, we work together to achieve those metrics in terms of, you know, understanding if the Poc is working for you, how can, you know, help solve the problem that you have at hand at the moment. So, yeah, if anyone from your team, if you can, you know, pick up the, if you can help us understand that, yeah, that would be super.
+
+>>Lauren Boersig	02:45
+Yeah, on the, so we have two different processes. One, we didn't really set up for a proof of concepts because we figured if the, if we could, if Docsumo could understand the underwriting binders and they could read the check images. But we wanted to be able to prove that we can read different check images from different insurance carriers. So, we get a check image and then we get a statement. It's a two -page document. We collect a couple different data points. And from each insurance carrier, it's like a templated statement. But we have a lot of different insurance carriers. So, we want to make sure that, you know, across the different insurance carriers that, like, we're picking up the right data from the right insurance carriers because some of their templates are a little weird with, like, where the data is. And then for the closing binders, we want to refine the slicing and document identification process so that we could be able to tell. So, we get the closing binders, once again, from different companies. So, from the different companies and their different formats, being able to correctly, in different ports as well, being able to correctly identify documents by, like, a combination of, like, the keywords and the titles. Because we get, for one document, we have a couple different varieties of titles. But usually, they can be pulled out by the keywords as well. All right.
+
+>>Nidhi Vichare	04:07
+And have you also defined the data points that we are collecting in terms of what are the business critical data points for the Poc sake?
+
+>>Lauren Boersig	04:18
+I think we got, Abby, did we get all of the data points from? We'll have to confirm, but, yeah. Well, so, we wanted to, yeah.
+
+>>Abby	04:29
+My mic was on. So, the data points were just, I think they had all of that in the system. It was just a matter of tweaking what they took from some of the documents. Because some of the documents can be a little bit confusing. I know we did go through and list some more identifiers to make it easier. Because I know some of the documents, like, if we're dealing with a court order and then we have the settlement agreement, it kind of looks like the same thing because they're both issued from the court, but they are not. So, we're not. So, we're not.
+
+>>Abby	04:58
+So we went through and just clarified what titles you would ideally or usually see on these documents. And there are different variations depending on state and county where we're working.
+
+>>Nidhi Vichare	05:11
+Understood. So, yeah, I think we'll get into the implementation phase where we are, you know, we'll discuss more into the technical stuff. Just want to know all of you want to understand, like, how are you going to ingest all the documents? Are you going to upload the documents manually or, you know, are you going to send it via Api? What is the integration that we're looking at?
+
+>>Lauren Boersig	05:34
+For the checks, we have a call with Falls Fargo tomorrow. We're trying to figure out how we get. They have a transmission for the check images. So we're trying to figure out how and where that goes. But I think we might either be, we'll probably be importing those maybe from an FTP site. I'm going to confirm with them. And then for the documents, that was another question that we also had was with the, we have, we could send them, we could send all the documents through a centralized email address. But the thing with that is that we'll get a lot of different documents for a lot of different binders all coming to the same address. And they might not, like, whoever's the sender might not have a unique identifier on the document itself. So if it is, we want it, you know, to be as least messy as possible. So if we have to import it, then that, in this space, then that would be fine by us. Because we get, we also get, like, portfolios as well. And those usually go to some, like, shared file site. And it varies depending on who we're buying them from. Got it.
+
+>>Nidhi Vichare	06:37
+And do we have any defined numbers or kind of a percentage that certain, we're getting certain kind of, you know, binders from a particular agency or particular vendor so that, you know, we understand that this is your priority. Let's say, you know, maybe 60 or 70 % is coming from one type. So you're getting all of those documents in one format. Is it something that you have? Like, is there a categorization that we are having?
+
+>>Lauren Boersig	07:11
+Abby, do you know who there's a larger vendor originator?
+
+>>Abby	07:17
+That would probably be Black Square. They send us the most. They just have different titles, like different originators, AKAs, what have you. But their, their packages are the ones that I see the most. So they send us probably about maybe 40 % of what we do. And they're the biggest ones. Okay.
+
+>>Nidhi Vichare	07:36
+All right. So Lex Square, if I'm pronouncing it correctly, it is L -E -X, squares, right?
+
+>>Abby	07:42
+Black, like the color black, and then square. Yes.
+
+>>Nidhi Vichare	07:45
+Black square. Okay. All right. So, you know, we just have that understanding that this is our main priority. And, you know, we'll work more towards, because that's your larger, bigger vendor. So we'll work towards that more efficiently in there. We have them.
+
+>>Lauren Boersig	08:01
+And we also have another vendor, too. Then this is a portfolio. So with our portfolios, that's kind of, it's a portfolio. It comes from, it's one company they bought from, like, you know, maybe 10 or 20 different companies. And then it all comes to us. So we have a very large portfolio that we're looking to ingest as well. It's 3 ,500 binders. And those would be, we haven't even seen the binders yet. But I think those come in a couple of different formats, too. So, like, we also want to try and get, like, the variety in there as well, because that's what the portfolios are. But it's, the documents are very, like, because a lot of it has to do with legal statutes. So you have, like, legal phrases repeating throughout the different documents that you can use to help, you know, control the outliers. Right.
+
+>>Nidhi Vichare	08:51
+And how many different types of formats that we're looking at? Just a random number.
+
+>>Abby	08:58
+That's a lot. But when I get packages, I either get them already broken up into bits and pieces, or I get them in a full binder. With the portfolios, though, Lauren, I think they come in as complete binders and then just a whole bunch of, all bunch of.
+
+>>Lauren Boersig	09:18
+They can come either way, but I'm trying to remember what, it's probably going to be both with Habitus. They don't really do anything with their documents. It's, uh, they just, they just dump them. Yeah, they just dump them. Okay.
+
+>>Nidhi Vichare	09:34
+So you're saying that there will be documents that will come as binders, but there will also be documents which will be coming, you know, in, like, the files will not be collaborated. And that, that is something that you'll be updating from, like, you'll bind it up and then send to Docsumo. Is that?
+
+>>Lauren Boersig	09:50
+Oh, no, we would just send it in separately, but we would want to just toss it into the folder. So we have, like, a couple of, like, documents that, like, if, if we're buying something. Okay.
+
+>>Lauren Boersig	09:57
+If it comes even fully, all is one binder. If there's something missing, then they'll usually send it piecemeal. So then we like to, that's why we kind of like this idea with the folder in Docsumo is being able to add a file to like the case management folder so that it gets processed along with everything else because it might just be one or two documents missing. Right.
+
+>>Nidhi Vichare	10:18
+All right. Manoj and Aniket, if you have any questions along with the, you know, document ingestion, do let us know or if you can, you know, have that.
+
+>>Aniket Tatipamula	10:30
+Well, at least from my side, nothing. I think Abby, we, last time when we had set up the account, one of the things that we were struggling with was classifying those documents. And I think you, you caught it right there. Like one of the docs was misclassified. So we would need a little bit of your help. And we will surely organize this setup in a way that will create an Excel sheet, put together a bunch of doc type names, and then maybe we'll sit with you, fill up the, fill up that data based on the Pdf that you submitted. But where we are not confident, we'll probably pull you in and ask for help.
+
+>>Abby	11:06
+That is fine. I am used to getting asked a lot of questions. So that is fine for me.
+
+>>Aniket Tatipamula	11:12
+Yeah, that, that would be really helpful. Thanks, Ed. Thanks, Lauren.
+
+>>Nidhi Vichare	11:18
+All right. And how about, you know, the export of data? Like how are we planning to export the, the extracted data into? Is it like in a file format or you'd be sending it to our Api to your system?
+
+>>Lauren Boersig	11:30
+An Api to our system. We have a Postgres Sql database. All right.
+
+>>Nidhi Vichare	11:35
+And have you already tested out our APIs and extraction? How is it?
+
+>>Lauren Boersig	11:40
+No, we have that. We have not, we were waiting kind of for the kickoff call to see, we're in the process of building out our database. So we wanted to see what the different extraction possibilities were and then how we would integrate it into our database because we can just build it. So we're flexible there. All right.
+
+>>Nidhi Vichare	12:00
+All right. Understood. Yeah, I think we have most of the information that we need in terms of the, you know, the implementation phase. I'll just walk you through how the process will work, like how the, our Poc phase and the implementation will work. So initially we'll start, we started with the kickoff. So basically to understand like who's who and, you know, who'll be working with us. I believe Abby and John will be working with us alongside. And sorry, I just, I didn't get who'd be working from the tech side from your side.
+
+>>Lauren Boersig	12:34
+Abby and me will be doing the closing binders and then Mila and me will be doing the checks. And then John also has, he'll be, he also has someone who will be helping as well with the review for both.
+
+>>John Pascale	12:48
+Right.
+
+>>Abby	12:48
+Yeah. So in the beginning, honestly, I think you're going to be working more with me and Lauren with the binders until the checks start coming in. And then that would be, that would be different, but I get the bulk of the deal. So they don't always see it. If a deal falls through or we just decide we're not going to take a deal, they won't see that. Like John and Mila won't see those deals.
+
+>>Lauren Boersig	13:11
+Yeah.
+
+>>Nidhi Vichare	13:11
+Yeah.
+
+>>Lauren Boersig	13:12
+Mila, there's two separate processes, but Mila can help with the checks because there's a lot more, there'll be a lot more time consuming with the binders and the checks because the checks are very formatted. It's just getting the format.
+
+>>Nidhi Vichare	13:27
+And how about the Api testing from someone from the tech team, like who'd be working with us for the integrations for the extract? Yeah.
+
+>>Lauren Boersig	13:39
+I think it might be our contracting team. Let me confirm internally. Okay.
+
+>>Nidhi Vichare	13:44
+All right. Do let us know so that, you know, we can look them in while we are also setting up the data and the implementation phase. We'll also, you know, check for the export and, you know, integrating the Api as well, because that's your primary extraction or the method that you'd like. Got it. So, yeah. So how we'll start us? Like we'll oppose this kickoff call. We'll set up a weekly connects with you. We'll start the initial implementation has been done. So currently what we have, we have to work in primarily is on the auto classification of the documents, which will, which where we'll require your input and the case management setup. And we would want some basic setup has already been done in your platform. I believe everyone from your team has the access. If not, do let us know. We'll add them to your, to Docsumo platform. And post that we'll have weekly sync up calls. Do let us know if this time works for you, like Monday, same time works for you. I'll send the recurring invite for the team and we'll, we'll set up a feedback sheet where we'll be tracked.
+
+>>Nidhi Vichare	14:56
+All the issues that you're facing so once you start uploading all the documents let's say something is working something is not working we will you know track all those information along with the document types in the case map folders that you are facing those issues with so that you know our team can work on those and we can that that will be ideally our Uat phase once everything looks good you know we can just roll on to the life and you can start using the doxum on a regular basis so that's the whole idea all right now so do let us know what are your you know What's a good time for you to set up the recurring calls and we can connect the weekly on that I think this is good
+
+>>Abby	15:40
+I don't I'm not sure the time difference between us if you needed to make it a little bit earlier that would be great for me Anyway I'm not sure about everyone else
+
+>>Lauren Boersig	15:52
+Yeah
+
+>>Nidhi Vichare	15:52
+So we are in the eastern time zone I mean IST time zone but that this time also it's not a problem for us Yeah Okay
+
+>>Abby	16:00
+Yeah
+
+>>Lauren Boersig	16:01
+I could do as early as like on Tuesday I could do 10 a .m. But on Monday I could do as early as 11 a .m. today because I have calls until 11 but Okay
+
+>>Abby	16:14
+But like weekly like I said I'm available for for a lot of it so let me let you know whatever works for the team we can set up the same time for everyone
+
+>>Nidhi Vichare	16:26
+Yeah Okay
+
+>>Lauren Boersig	16:27
+And uh just to understand like how many uh cases are we looking at uh in terms of like binders are we looking at to process in a monthly basis just a rounding figure if you can have so we have two types of processing through our flow we're looking at about a hundred binders through the flow but through portfolios which is they occur throughout the year and there's kind of no rhyme a reason um it's anywhere from like uh like a hundred to two hundred binders in addition to the hundred to up to like a couple thousand like right now the biggest one I've ever seen is like the one we're about to do which is thirty five hundred binders but uh usually it's between like one hundred to eight hundred additional ones per month uh that we would also be looking to process all right and how is how how are you how is the team managing this process at the moment like if we before the doc sumo came to the picture how how is the team managing it that's me
+
+>>Abby	17:23
+I just I take the files I break them apart I underwrite them I send out emails that that that that is all I do all that it's like the process that you're following at the moment what was that so you're you're uh you know reviewing these documents manually yes every single one yes all right and if I can have a benchmark uh you know a duration that you're taking to uh you know process one binder let's say how much that would be um I'm gonna just to be safe I'm gonna say 45 minutes sometimes it takes less sometimes it takes more depending on how extensive that binder is and how much information I have to look through Yeah
+
+>>Lauren Boersig	18:02
+It's like 45 to 75 minutes Yeah So we've seen between depending on who it's coming from well I've been I've been doing this for 18 years it's gonna be next month
+
+>>Abby	18:11
+So I kind of know exactly what I'm doing before So I tend to be a little bit I tend to be a little bit faster so she's right like it's anywhere from 45 to 75 minutes
+
+>>Lauren Boersig	18:21
+Abby's super fast like she's the fastest at least the time the different people Abby is much faster if I did it it would take more than 75 minutes
+
+>>John Pascale	18:31
+Yeah
+
+>>Abby	18:34
+Well when you know when you're first starting off it's it's a lot of information to take in So if it's someone new it may take them about three hours to complete a binder from start to finish so maybe more
+
+>>Aniket Tatipamula	18:47
+Yeah we were we were expecting it would be in days But like I think you seem to be pretty fast
+
+>>Abby	18:52
+I I am kind of I don't want to you know toot my own horn But Yeah
+
+>>Nidhi Vichare	19:00
+And these are like we're looking at around 100 to 200 pages per binder right our average I think is about 150 anywhere around there per binder
+
+>>Abby	19:12
+Okay
+
+>>Lauren Boersig	19:13
+Like I said it depends on how much documentation is actually in the binder because the more deals they do the more I have to look through and some people uh a lot of the times if it goes over 200 those binders have a lot of like repeating information because they put like the exhibits for everything so you'll have like the purchase agreement be in there like four times um yeah which isn't particularly useful
+
+>>Abby	19:37
+But it's not it's not
+
+>>Nidhi Vichare	19:39
+So basically you know this is where we come into the picture probably that's the whole point of us uh you having us And you know we can help you uh reduce that time so that you know you can take your decisions quickly and efficiently So with that's will be know you you
+
+>>Nidhi Vichare	19:55
+Our, I believe, let's say that will be our initial metric to reduce the, you know, number of hours that you're put in to process all the binders. So that will be our initial go -to metric for our Poc, let's say. Does that work?
+
+>>Abby	20:12
+That works.
+
+>>Lauren Boersig	20:12
+For the binders, and we also want to do the checks as part of the Poc as well, because we haven't done, I don't think we've sent Dr. Sumo any samples of our checks at all. So we also wanted to get that covered as well, because we'll be getting, by the time this goes live, we'll be getting both check payments as well as binders.
+
+>>Nidhi Vichare	20:31
+Got it. Got it. All right. Understood. So Yeah, I think that is all from my end. Manoj, do you have any other questions or would you like to take anything?
+
+>>Manoj Racherla	20:47
+So Abby, in the initial setup we had done, like we had set up different doc types, right? So did you get tired to go through all the, most of the doc types and see the list of fields that we extracted from those doc types? Are they correct? Or any addition do we need to make?
+
+>>Abby	21:04
+There are a few additions that need to be made and a little bit of clarification for some of them. So when we start going through that, I'm going to, I didn't write them all down. If that's something you need me to do, then I can go through everything and do it again. But I just figured that we would go as the binders came in. Sure.
+
+>>Manoj Racherla	21:25
+What we can do is we can share an Excel sheet with you and you can list down all the fields and its data types and whatever the context for that field, the data needs to be extracted for that field. You can mention it there as well within the Excel sheet. So that it would be in same one place.
+
+>>Abby	21:41
+All right. That works.
+
+>>Manoj Racherla	21:44
+All right.
+
+>>Nidhi Vichare	21:45
+So I think we'll send out that Excel sheet access with all the team members and you can, you know, add all that information in here. I'll just walk you through how the sample sheet looks like so that you know how to add all that information too.
+
+>>Nidhi Vichare	22:11
+Let's just give me a break here.
+
+>>Nidhi Vichare	22:21
+So this is how the sheet will look like. So you add the document link here. So that will be ideally the, uh, your URL for the document URL. So when you open the document, whatever it will be the URL, you can add it here, the doc type name. So you can mention the name here and then add the comments. Like what are the issues that you're facing? Let's say the field, X field is having this issue or, you know, any, any, any, uh, uh, you know, problem that you are getting, you can add that information on the comments here, uh, mention your name. Uh, and, uh, what we'll do is we'll put that in, in process. And once let's say, uh, uh, we move that, we will work at work on those issues. We'll move it to Uat. So once this is Uat, we would recommend you to retry the document and then check the information, how that looks like. Once everything looks good, you can move it to yes. If, if there is some issue or it's still not working, you can put, move it to no. And our team will recheck this. If there are any limitations, we'll add it here. If there is, if, you know, we have reviewed and, you know, fix the issues, we'll be able to move that again to UAT. And again, you can check it out until, unless you tell us that, yes, this looks fine. We'll not move it to done.
+
+>>Abby	23:35
+Okay.
+
+>>Nidhi Vichare	23:35
+So this will be ideal, uh, you know, uh, happy flow where we want the issue to be fixed. When you say yes, it's fixed and we'll move that to done.
+
+>>Abby	23:43
+Perfect. That's easy enough to maneuver.
+
+>>Nidhi Vichare	23:46
+Yeah. I have a question. Yeah, sorry.
+
+>>Abby	23:50
+I'm so sorry. So if I'm doing, you're saying with the document type, if I have one document type, but I have multiple issues, do you want me to put it on the same or can I just scroll down and just keep going for the different issues without putting in a new document type? Yeah.
+
+>>Nidhi Vichare	24:05
+So let's say you can just mention document type name here, and then just list down all the, uh, document. Uh, if it is the similar document, you can just list down in the same field. If the same document has multiple issues, you can add it in the same, uh, one row itself. All right. If there are different documents, you can just add the links to the different documents and then, uh, you know, share the comments for different documents here.
+
+>>Abby	24:28
+Okay. Okay. That works.
+
+>>Nidhi Vichare	24:35
+All right. So what I'll do is I'll share the, uh, you know, all the points that we've discussed and what are the next section items, uh, by end of today. And, uh, let us know what was the best time for us to connect, uh, next week And I'll send the invite accordingly.
+
+>>Lauren Boersig	24:49
+Okay. Okay. And then if you need the check samples as well for, um, cause we, we never sent them over.
+
+>>Lauren Boersig	24:54
+Any check samples and statements uh yeah
+
+>>Nidhi Vichare	24:58
+So moroj if we uh do we have all the sample documents or do we need anything else from them Yeah
+
+>>Jasneet Singh Malhi	25:04
+I think we would need the check samples uh Lauren that's correct because i don't think we've seen any samples on the check -in And that will help the team to work on second workflow as well but we would also like need more binder samples for the first use case as well so that we can have a more comprehensive overview and test out the classification use case as well Abby do you want to send them some black square ones since that's a lot of the flow
+
+>>Abby	25:33
+Yeah Okay
+
+>>Lauren Boersig	25:34
+Yeah
+
+>>Nidhi Vichare	25:35
+So what i'll do is i'll share the drive link you can just upload the documents directly to those drive links
+
+>>Abby	25:40
+Okay perfect the documents i'm going to binders i'm going to send you i've already taken apart So we just started today So i haven't gotten anything in today but the documents that i will be sending you have already been broken apart and named so you can kind of it might make it easier for you to see which names it is and how many pages because they are all about the same there are some differences but that depends on the originator if we're just going to work with black square all of there is a uniform So i didn't know if that was going to be okay or if you wanted to test me putting it all together into one binder and see how that goes first would you read both just one way or someone else how do we want those uh documents in it can be of a one single binder okay or binders as well if you have multiple binders you can share it that as well okay All Right i'm gonna send both Just so you see the difference but with black square they usually they're the ones that send in it's one email with about 12 different attachments and it's all the documents that we need So i'll send in both ways so you can see that's basically how we get them either in one the whole document that's a closing binder 150 pages or broken down into smaller binders which you still have to take apart So i will send you both so you can see what we will be working with so also if you can you can share for share the binders of other vendors as well there
+
+>>Lauren Boersig	27:13
+Oh i will we have tons of those i will uh
+
+>>Nidhi Vichare	27:23
+And Yeah was i think i just uh completely uh forgot if we can also uh connect via slack or teams like whichever is your preferable uh channel we can set up a channel so that you know we can you know communicate even uh more efficiently in case there are any issues or something that we need to look into on ongoing basis i think teams is the preferred uh method because everyone's on teams Okay all right So what we'll do is uh i think i'll you'll have to invite us i'll share the team members email address so that you can invite all of us uh there and because we have a separate emails for team so if you can invite us to the um group we'll we can set up a clicking there Yeah Okay
+
+>>Lauren Boersig	28:09
+Um did you want me to make one for the checks and one for the binders or just one channel for both oh one channel works
+
+>>Nidhi Vichare	28:17
+Yeah one channel should be fine Yeah
+
+>>Jasneet Singh Malhi	28:21
+Awesome All right team thank you so much for joining in really appreciate uh everyone's input uh maybe can you confirm if i think the invoice has already been raised Right Oh yeah inbox has been sent out
+
+>>Nidhi Vichare	28:33
+Yeah Awesome
+
+>>Jasneet Singh Malhi	28:34
+So uh anything else from rnt No I think we are good for now perfect anything else from rns f team just to kind of check if we can help you with anything else
+
+>>Abby	28:47
+No i think we're good we're starting so awesome
+
+>>Jasneet Singh Malhi	28:52
+Awesome All right team thank you so much joining in appreciate it thank you thank you thank You
+
+>>Nidhi Vichare	28:59
+Thank you thank you bye
+

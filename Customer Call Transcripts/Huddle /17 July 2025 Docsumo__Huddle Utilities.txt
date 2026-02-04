@@ -1,0 +1,147 @@
+>>Sigita Vaišnoraitė	00:00
+But with someone else from your team, I'm not sure it was just like a call or or email exchange But yeah at that time it didn't it didn't work for us in a commercial from a commercial perspective So that's why we did go ahead And I think then up sometime you lower the price, but it still didn't Yeah, it still didn't make Commercial sense and right now for what we needed actually, we don't need and we don't need it at all So we've we managed to avoid that issue But I don't think Ali will join. I think using some other stuff But I can describe the problem that we're facing right now So So we are energy company. So we do work closely with Huddle because I think for Huddle you do You do scan the water bills So so we so we are their energy provider and we do get a lot of notifications When there is a change of tenancy, so that means one tenant has moved out
+
+>>Sigita Vaišnoraitė	01:16
+And Right, so it's a source then I maybe I just join you guys in the meeting room because why just stay here
+
+>>Ollie Davies	01:27
+Yeah Okay,
+
+>>Sigita Vaišnoraitė	01:30
+So So I started to explain but only I think you do actually know I'll stay because I will show you the examples Maybe I'll stay on this on the underscore. Yeah, I shall sir I'll stay because I might just demonstrate a few examples. So yeah, So we do get a notification of changes of tenancy and we do receive like various kind of information And we do receive from a Certain providers and I think I have at least five That are bigger ones So, yeah, so we thought would you would you be able from those emails Scan the data and put it let's say in a spreadsheet That is the question Yeah from an unprinted email.
+
+>>Ollie Davies	02:20
+Can you do it from an unprinted email? I know what you can do from something printed on a piece of paper
+
+>>Nidhi Vichare	02:27
+Right So how so basically we're just trying to understand that how will feed the data Feed that information in Docs, so Manoj here. He's our solution engineer. He'll be in can help us with this question
+
+>>Ollie Davies	02:42
+So Manoj, yeah, if you can take that up in an ideal world I don't know if this is possible could actually have access to an inbox and go through the emails in The inbox and scan the data in each email Automatically without us having to almost download each email and uploading it to the software Something like that possible
+
+>>Manoj Racherla	03:05
+Okay Okay, so based on the like the just Understanding what I got is.
+
+>>Ollie Davies	03:14
+So basically you want to read the documents within the email inbox and Then scan those documents directly It might be just the email itself you might just there'll be details on an actual email with like names Addresses scraping what we do Scrape it anyway, so if I gave you a piece of paper, you can scrape data like this I can see what you do And that's great We're wondering you actually do it from the email itself or does it need to come onto the piece of paper for your software to work
+
+>>Manoj Racherla	03:44
+Oh So you want to directly extract the whatever the email content that you would
+
+>>Ollie Davies	03:52
+Yeah Yeah, because we would train it so it would come from one of the companies that we've trained it You know the titles there this piece of data is there that piece of data is there so we do all of that I understand that and that's brilliant. Can it actually come? No, okay
+
+>>Manoj Racherla	04:09
+Unfortunately, like currently it's it's not feasible, but I will check Internally as well without product and engineering and if there is any walk around or solution for that as well and also, I wanted to know like in terms of So suppose let's say email you said that we have to read the email content within the whatever the email you receive right So The other the other way around what if let's say in the email there might be some attachments as well, right?
+
+>>Ollie Davies	04:42
+Yeah No No, there will be 30 types and we will have a template for each of the 30 like see you said three or four or five
+
+>>Ollie Davies	04:57
+Are very big but in time say there's 30 and we'll have all of the setup of the templates done on 30 and we just wondered at a point could it go through my entire inbox pick out those 30 companies bang in and put it on a spreadsheet so i don't even have to press print i don't even have to look at the bloody email you're just working in the background
+
+>>Manoj Racherla	05:18
+Okay can you share share some examples or share your screen with the that sort of nice
+
+>>Ollie Davies	05:28
+It's fairly basic stuff because we've worked with you before with other utilities and your software is perfect for it So
+
+>>Manoj Racherla	05:35
+Yeah um
+
+>>Sigita Vaišnoraitė	05:37
+So that's how the emails look like so why Ali said can you scan just the inbox because it has it does have in the subject it might have like a catchwords so for example new occupant moving in so this is something that we definitely look at And then the details that we want to capture is of is the address um then tenant when is the tenants because this is a moving in so we need a tenancy start date so that's basically a change date um the name of a new occupant the email address your phone number Uh yeah The reads as well why not Um so that's one um who's who's talking um uh sorry uh So then so that's one type then another type would be for example would be like this so again it has keywords tenancy change Um so this one looks slightly different because the address is here um the change date is over here
+
+>>Ollie Davies	06:54
+And it's also named guys can you mute yourself
+
+>>Manoj Racherla	07:02
+So you know thanks um right so another one
+
+>>Sigita Vaišnoraitė	07:11
+So again it would say new tenancy the address Yeah So we have the property address tenancy dates the name of a new tenant and phone number email So yeah
+
+>>Manoj Racherla	07:34
+So you see they are all different got it got it also uh may i know suppose let's say within a single email we may contain multiple utility bills like water and electricity or energy and water like that
+
+>>Sigita Vaišnoraitė	07:50
+So it um so these emails are received by Trenergy so it it doesn't matter what kind what kind of utility because we as energy supply are receiving so we just need to so the main thing what we need is the address the change date what kind of change it is moving in moving out void
+
+>>Manoj Racherla	08:13
+Uh we need names surnames uh forwarding addresses if possible if there i mean if there are any email phone number god can you show the previous email which is shown yeah just moving here not this one uh just moving the question scroll down a bit here so here as you can see there are two like it's a gas meter reading as well as well as electricity meter reading for one for one user right this is per address for address Yeah
+
+>>Sigita Vaišnoraitė	08:55
+You mean per tenant and no per address Because this address right okay This address would have in 100 of the cases one gas meter and in 99 of the cases one electricity uh metering Okay good
+
+>>Manoj Racherla	09:20
+So there might be a case like within a single email there might be multiple utilities like gas and electricity like gesture shown
+
+>>Sigita Vaišnoraitė	09:28
+Yeah But it really really rare Oh yeah
+
+>>Ollie Davies	09:31
+The main data we need to get is just the address details and the new occupants details um they're the main pieces of information it's in terms of the data extracting it's fairly basic it's not that the difficult bit that we're asking is scanning the email directly to the email because we could obviously download every email and upload it And you could still extract it and put it on social
+
+>>Ollie Davies	09:56
+I mean, that would still save us time rather than us copying and paste each piece of data. But it's still quite manual, us having to open each email, download it, and upload it. So can you cut that bit out as well, or find a better way for us to do that?
+
+>>Manoj Racherla	10:13
+Ok, got it. So we understand your use case right now. In terms of this, we need to check it with our engineering and product team as well if we have any further solutions for that. And yeah, and regarding the fields, you basically need address, town, occupant details, and then basic details, right?
+
+>>Ollie Davies	10:35
+Not the - I think, well, if it does have meter readings, yeah, it would be good to include those in. But yeah. But it'd only be the gas and electricity. Like Sajid said, there wouldn't be any information about other utilities. So the only addition, other than the house and the new occupants, would, I guess, be the gas and electricity meter readings. But I don't think it will deviate much from those three pieces of data.
+
+>>Manoj Racherla	11:06
+Ok. And may I know what would be the volume of such emails, like within a month?
+
+>>Sigita Vaišnoraitė	11:11
+So within the month, that would be if, one second, maybe over 1 ,000.
+
+>>Manoj Racherla	11:26
+Over 1 ,000. Ok, got it. Got it. Ok, that's, like, I got the details of the use case that you want to achieve. I will check it in mind internally. Nidhi, you have any questions for them?
+
+>>Nidhi Vichare	11:42
+Just want to understand that one address can have multiple tenants also?
+
+>>Ollie Davies	11:47
+The same address?
+
+>>Sigita Vaišnoraitė	11:48
+Yeah.
+
+>>Ollie Davies	11:48
+Yeah.
+
+>>Nidhi Vichare	11:49
+Ok, OK, yeah. So just wanted to clarify that. Yeah, I think that's all we'll require.
+
+>>Ollie Davies	11:54
+Do you want us to send any examples or anything across? We're not at this stage.
+
+>>Manoj Racherla	11:59
+Yeah, it would be better if you share the email examples as well with us.
+
+>>Sigita Vaišnoraitė	12:06
+Ok, I'll do that.
+
+>>Nidhi Vichare	12:09
+Also, if you can send a list of fields that need to be extracted. So let's say you just list down what all information we are extracting. So let's say name of the tenant, address, meter readings, and all those information. So along with that, you can share what other information that we want to extract. That will also be helpful.
+
+>>Ollie Davies	12:29
+Yeah, we can put a template together, yeah. Let's undo something. Cool. All right. Cool. Thanks a lot.
+
+>>Nidhi Vichare	12:40
+So we'll talk to you by latest by tomorrow, yeah.
+
+>>Ollie Davies	12:44
+Ok.
+
+>>Nidhi Vichare	12:45
+Yeah, anything apart from that?
+
+>>Ollie Davies	12:51
+Thank you. Cheers. Bye -bye. Bye. Bye -bye.
+
+>>Manoj Racherla	12:56
+Bye -bye.
+

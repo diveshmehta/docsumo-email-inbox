@@ -1,0 +1,921 @@
+>>Abby	00:00
+Great. Is Lauren also joining you? I honestly do not know. Oh shoot, I need my pen. Hold on one Sec. I just need a pen.
+
+>>Abby	00:23
+What was that? Hi. Hello.
+
+>>Manoj Racherla	00:28
+Okay, I'm back. Hi. I guess we can start, Abby. Okay. So I was going through the different doc tag that we uploaded, right? Within the doc tag, like port orders, Coa, seller IDs, etc, etc. Okay? Mm -hmm. So within that, we were like, in terms of extraction, and the field that we extra set up till now, are this sufficient? Or you want to like add new ones as well? Because we find some like in terms of, we have some queries in terms of what are, how do we like know for this particular feed what exactly needs to be extracted?
+
+>>Abby	01:18
+You're, you're talking, the ones that we had sent you, those were okay. Are you talking about the new ones?
+
+>>Manoj Racherla	01:25
+Yeah, new ones as well as the existing ones as well.
+
+>>Abby	01:34
+Let me share my screen.
+
+>>Manoj Racherla	01:35
+Let me share my screen.
+
+>>Abby	01:37
+Please.
+
+>>Manoj Racherla	01:40
+Please. So let's say this is the NOH.
+
+>>Abby	01:48
+This is, yes, NOH.
+
+>>Manoj Racherla	01:51
+For NOH, are these the only fields that you want to extract? Yes.
+
+>>Abby	01:59
+Okay.
+
+>>Manoj Racherla	02:00
+My question is.
+
+>>Abby	02:00
+State number court, county, state, originator, spouse. Spouse may not always be on there. Is that what you're asking? Like the ones that you want me to adjust? Like spouse may not always be on there. If the seller is not married, there's not going to be a spouse listed.
+
+>>Manoj Racherla	02:17
+That's fine. If it's not there, then it will be blank. That's fine. Okay. But yes. In terms of beneficiary, like how do we identify here?
+
+>>Abby	02:25
+It will say beneficiary.
+
+>>Manoj Racherla	02:27
+Yeah. So suppose let's say here beneficiary. It should be a, what should we extract here? Is it a beneficiary name? Yes. Or should we only say like, is it, is the, is this, in this, the beneficiary is present or not? Like a yes or no?
+
+>>Abby	02:45
+Um, the beneficiary would be a name because it would be somebody's name. But a lot of times we have beneficiary listed as the estate of, this is for notice of hearing is anybody that has an interest in the annuity has to get noticed. But a beneficiary is not always, that depends on state. So if that is left blank, that's fine. Okay.
+
+>>Manoj Racherla	03:08
+So let's say for this, let's, let's take an example for this. So in this, in this document, what should be the beneficiary value? The beneficiary scale?
+
+>>Abby	03:21
+Because I'm like, okay, so this seller is who is the seller that we're looking.
+
+>>Manoj Racherla	03:25
+Oh, that is. Okay. Okay, so if there was a beneficiary, it would be like George Maida or Tyreek Maida or whatever it is that the beneficiary, it's going to be a name, a person's name. Okay, so suppose let's say if we like it's like seller names or relative kind of thing.
+
+>>Abby	03:55
+Yes, but they don't always have the same last name because of marriages or whatever the case is.
+
+>>Manoj Racherla	04:02
+Yeah, okay. So in that case, suppose let's say we have different names, so should we consider that name as beneficiary here? No, keep it blank.
+
+>>Abby	04:16
+As a matter of fact, if you want to take that whole thing out, take that whole thing out because it's going to cause more confusion than not. With beneficiaries, it's tricky because we need to check the annuity contract for the beneficiary if there is one listed or any amendments that came through with the annuity contract and they are not always listed and not every state requires that you notice the beneficiary.
+
+>>Manoj Racherla	04:42
+Okay, so in terms of annuity contract, yes, at my time, so let's see, this one. So let's say focus.
+
+>>Manoj Racherla	04:58
+Yes. So within the entity contracts, we have two Ac and the Ac would be the right one because the Bl is just the benefits letter.
+
+>>Abby	05:08
+So it's not going to give you that information. Okay.
+
+>>Manoj Racherla	05:11
+So here, as you can see, the beneficiaries lag. Okay.
+
+>>Abby	05:15
+Go scroll down on this page and I will let you know. Go ahead. Keep going.
+
+>>Abby	05:37
+That's just a definition of what a beneficiary for the annuity contract.
+
+>>Manoj Racherla	05:54
+Okay. So here we have the application, right? If there was any beneficiary listed, it would be listed here, but there is no beneficiary listed.
+
+>>Abby	06:07
+So there would not be one on the NOH either. Okay.
+
+>>Manoj Racherla	06:11
+There can be multiple beneficiaries as well.
+
+>>Abby	06:14
+Yes, there can be.
+
+>>Manoj Racherla	06:15
+Okay. So let's say what in terms of validation, I'm thinking of scenarios. Let's say we want to do validation across Noh beneficiary and annuity beneficiary. And here, let's say we got two values, two names, but within the NOH, there is only one name. So what sort of validation do you want to add?
+
+>>Abby	06:43
+Not a validation, but a check if there's a way to make it so that it flags me so I can check that. And the only reason I say that is because if a beneficiary passed away, then obviously they wouldn't be listed on the NOH because we can't send notice to, you know, a grave And they're not going to come to the courts. That's with beneficiaries. It's tricky because they change with time, especially if the annuities are listed when, or are made up when the annuitant is a minor, once they reach the age of 18, they can change the beneficiary. And if they're married, they can change that beneficiary to their wife. When they get divorced, they'll probably change that beneficiary to somebody else. So with beneficiaries, it's tricky. There's so many things. These are just, who's going to get what, when you die, basically what a beneficiary is. So, you know, I'm married. I want my husband to get it, but if we get divorced, he's not getting squat from me. So I'm going to take him off a beneficiary. So for that one, if we could flag it, like, if there's a difference, if you see it, just flag it for me and then I can go check. But I don't know how to build that logic, unless what I'm saying makes sense to you and you can build something around that.
+
+>>Manoj Racherla	08:01
+Mm -hmm . So you want a logic within the document itself. So suppose, let's say here, this is a beneficiary. If it's blank, then you want to, like, add, uh, like a symbol saying that, uh, or you want, if it's not matching, then only you want any validation or a indicating point of thing.
+
+>>Abby	08:24
+Yes. If it's not matching is the only thing that I would, then I would, it would be a concern because I don't know what's happening with the beneficiary.
+
+>>Manoj Racherla	08:32
+Okay. So suppose, let's say within the, as I said, my previous example, within the beneficiary, within the Ac, the beneficiary is blank, but within the, anyways, the beneficiary has a one, name. So in that case, it won't match. So we will be highlighting like this, let's say, for example, so let's say it's a beneficiary versus let's say, here it's a beneficiary seller in, within the proof of entity within the Coa, we found that it's Dominic Meda and here the match is not there. So we just pass it like that. Yes.
+
+>>Abby	09:09
+Understood.
+
+>>Manoj Racherla	09:10
+Got it. Okay.
+
+>>Abby	09:13
+Okay.
+
+>>Manoj Racherla	09:14
+So here, uh, there was one thing, uh, in terms of dependent name. So as you can see here, these are all the violations based on the, here, this document we were able to identify. Mm -hmm.
+
+>>Abby	09:28
+Okay.
+
+>>Manoj Racherla	09:29
+So as you can see here, let's say for this doc, this is a CUI doc within that field settlement state. This, another doc seller ID within that field state, this should match. Yes. There's another CUI seller name, seller ID legally. This should also match this sort of validation that we were able to identify that you want to implement. You, uh, uh, you have the access of this sheet, right?
+
+>>Abby	09:56
+Where is this sheet? Because I also. T pitcher. What that looks like. What that looks like?
+
+>>Abby	09:57
+Need to send you the priority list for the sheets that you want so i need to make sure that i'm looking at the right stuff before i go messing around with your well this was shared with you in our mail itself
+
+>>Manoj Racherla	10:10
+Okay uh Okay at the moment this one right So this uh kickoff onboarding step this was shared with you you are here so as you can see here Okay this this will Nydia had mentioned you within this these are the validation sheet which i was referring to Okay
+
+>>Abby	11:36
+That's my bad because i missed that Okay I'll get it
+
+>>Manoj Racherla	11:42
+Okay Okay So and this is the sheet wherein you can add field names suppose let's say for court ordering what all fields you want to capture okay field names so let's say seller name legal name beneficiary what are the field names for separation for seller rider for coa here you can add in whatever the fields that you want to extract for each top type okay perfect And if you want to add any new document that you want to you just create a new tab within this give the name of that drop type and do the same thing and enter the fields
+
+>>Abby	12:24
+Okay So i will start doing that And then this is where you want me to prioritize what what i want as priority correct like what documents i consider priority over over others uh what you can do is you can create a separate list at your itself you can share that with us
+
+>>Manoj Racherla	12:44
+Okay don't don't include that
+
+>>Abby	12:48
+Okay I'll do that then Okay
+
+>>Manoj Racherla	12:50
+So i guess we shall let's send the anonym of our last call Right
+
+>>Manoj Racherla	13:13
+Yeah Uh so these are the action items that you will need from you Right Yeah Your document type priority reviewer confirm the mbqs or whatever the mistrust by document cases we will have any outstanding question regarding document relation exam petition and exhibits review the fields and this extraction of all dog types that we have set up till now that means like within Yeah
+
+>>Abby	13:42
+You're asking about
+
+>>Manoj Racherla	13:45
+Yeah this is the thing we was asking about because unless or until we extract or like the data currently correctly even if you build the values and that won't give you proper match right because the extraction of the fields is important Right
+
+>>Abby	14:03
+Okay
+
+>>Manoj Racherla	14:05
+Okay And apart from that had any check related issues to the new check step Uh Yeah
+
+>>Abby	14:14
+That's lauren the checks is
+
+>>Manoj Racherla	14:17
+Yeah So you have the issue sheet with you Right
+
+>>Abby	14:22
+Okay i just want to make sure Yes Yeah
+
+>>Manoj Racherla	14:25
+So that was that Yeah Yeah Yeah Yeah So here this is for our whatever petitions and everything we should that we have added we got the checks issues that Lauren can add
+
+>>Abby	14:47
+Okay Okay
+
+>>Manoj Racherla	14:49
+All right all right uh also one more thing yes
+
+>>Manoj Racherla	14:56
+Sorry to hold you up No no
+
+>>Abby	14:58
+No you're fine trust me
+
+>>Manoj Racherla	14:59
+This is what i told you you guys have questions you need to get in touch with me get in touch with me that's what i'm here for so in terms of divorce degree you mentioned here uh wait a moment uh former spouse name and divorce date as well as former spouse names and divorce date it has to say right
+
+>>Abby	15:19
+Yeah Okay
+
+>>Manoj Racherla	15:20
+These are two different fields right these are two different documents
+
+>>Abby	15:24
+Yes so one is under divorce
+
+>>Manoj Racherla	15:26
+Oh no what i meant is within the divorce degree document type there are two fields separate former spouse name is one day one field and divorce date is another field Okay Right yes within the co coa doctor former spouse name is one field and divorce date is another field right correct Let's uh let's uh have a look because here let's say coa this is the co right um here we didn't like we weren't able to find these speeds within the coa like that the one you mentioned uh former spouse name and divorce date these are the fields that you wanted to extract from this year right database who never marital status yes So so my question is let's say let's check the coa example one of them Yep So currently these are the fields that we are extracting in this like there is no I can't find field former spouse name and divorce date fields okay go back to the coa
+
+>>Abby	16:56
+And i'll show you if you scroll down a little bit on this one this one is one so marital wait right there Marit you see where it says marital status And it says single right there's also a list for divorce if they're divorced all of that where are you going you're going to power all of the information is right there under the marital status so you see it says have you ever been divorced if that was a
+
+>>Manoj Racherla	17:25
+Yes then we would put former spouse name and then county and state and then the divorce date so all of that information would be filled in there but this lady has never been married so you wouldn't find anything on this one got it understood but for that even if it's not married that can be we haven't added those feelings in here because within this sheet there is no mention of uh this this divorce date and spouse name as you can see Okay let's go i need to take a look through those sheets again
+
+>>Abby	17:56
+Yeah
+
+>>Manoj Racherla	17:57
+So let's say spouse name i'm adding new fields within the silhouette Yeah Okay Spouse name And uh what was that another one a divorce Yeah it was uh you want this in date format
+
+>>Abby	18:16
+Right yes that's it let's say this did you already have one that said spouse because those are two different fields spouse and former spouse are two different fields fields uh no like you want to add spouse as well as former spouse both fields within the sphere let me see go back up because i thought you had because we asked for marital status so i'm not sure let me see marital status is single So i'm gonna be sure i didn't name dependent so the previous address we didn't settlement so we call it spouse name Yes we need former spouse former spouse name for the divorce we need former spouse Okay got it
+
+>>Manoj Racherla	19:18
+But let's just rename that then Okay we don't need for our spouse Right we need former spouse former spouse
+
+>>Abby	19:26
+Yeah
+
+>>Manoj Racherla	19:27
+The other one is Yeah So in this expiration date let's just say within the seller i need the expiration date and the system date What system date means the current date irrespective of whatever the date is uh i don't i don't i don't i don't
+
+>>Manoj Racherla	19:55
+Here is expiration date prior to today yes or no Oh okay
+
+>>Abby	20:01
+Yes that's fine Yes Okay
+
+>>Manoj Racherla	20:05
+So what we need today We we have to just check expiration date is prior to current date whenever it's processed whenever that is processed yes prior to that particular current date or not that's it right correct because if it is expired and that means it expired before today's date we need a new one
+
+>>Abby	20:26
+So yes that's correct correct so another one is issue date is contract within the date and issue date is less than six months right what is the change uh can you explain this okay for our deals we need to make sure that a seller lives where they say they live it's one of the biggest things that we have like issues with um so in order for that to be no one can be an actual resident unless they lived in the state for six months or more so when we ask for additional proof of residency or that id is issued less than six months ago we need something else saying hey i've lived here for six months minimum so that's when we'll ask for that so that when i we say six months prior we mean how long they've had that idea that id or that passport or whatever it is that we're looking at so that means let's say for example so let's say issue date is currently let's say today is 23 october right
+
+>>Manoj Racherla	21:30
+Right and within the contract the date is uh let's say three months back that is july uh
+
+>>Abby	21:43
+-huh
+
+>>Manoj Racherla	21:43
+23rd July Okay
+
+>>Abby	21:46
+So
+
+>>Manoj Racherla	21:47
+In this so what should be like uh what sort of validation you want is it like just say if if it's prior to or not
+
+>>Abby	21:59
+Yes but this one there's not a lot let me see let me i'm trying to think of how to work this hold on i'm sorry bear with me all right So if a contract was signed three months ago and their id has today's date listed on it that's a problem and we need something else So i just need you to flag it or make it like red like how you have it on the other things like hey this that it was issued issued after the contract or it was issued as long as it's six months before that contract day so if july 23rd is the date of the contract we need the proof of residency dated for february 23rd the earliest that id issue could be is february
+
+>>Manoj Racherla	22:45
+Okay Okay got it so like what i can think office So suppose let's say here uh in terms of validation so let's say Yeah So suppose let's say here so for example this is the ceo versus seller id that we attend so let's say this is the date uh this is uh contract date And uh this is uh what was the other file it's uh issue date is what you look for yeah contract date and issue date right So let's say so the seller date is uh this is the issue date and this is a contract date let's say right
+
+>>Abby	23:33
+Okay
+
+>>Manoj Racherla	23:34
+So suppose let's say the coa value is today and this is one year back we have the issue date first or the contract date first uh what do you want to compare it uh it's ideally should be uh it's seller id is issue date and contract date issue date should be less uh less than that means we are comparing issue date with the contract date Right right
+
+>>Abby	24:11
+So the issue date has to be more than six six months or more before the contract is signed six months prior
+
+>>Manoj Racherla	24:26
+So suppose let's say if if that contract is signed in july the issue date should be in january yes correct so there is a seven month gap that means more than six months correct more than six months gap that has to happen that has to be what that we get if not we need additional information you you
+
+>>Manoj Racherla	25:00
+Yeah Between id issue date and the contract signature yeah issue ticket and contract Yeah
+
+>>Abby	25:23
+And one more thing so suppose let's say within this payment stream so here how do you want so suppose let's say do you want like whether it's man monthly quarterly uh half yearly or yearly and how do you what sort of data that you want to extract here the data i want to extract is how it it comes to play so for this one well how many pages is 12 so can you go to page 11 for this one you see how that's written out there those are the assigned payments that's where we're buying so it's 120 monthly payments in this month from here to here that's what i need to see or just one lump sum payment in this amount do this date
+
+>>Manoj Racherla	26:15
+Okay So is this the correct rate that we have extracted now or is it wrong it's not that it's wrong it's just confusing because you guys put the day before the month so that's fine that's why so can you help me like in which format you want adding the remarks in here okay or just like let me know within the chat So i can set it up instantly Okay
+
+>>Abby	26:43
+So you want me to send it via the chat Yeah
+
+>>Manoj Racherla	26:46
+That's possible for you Yes
+
+>>Abby	26:49
+I can so i'm gonna put in 120 monthly payments blah blah From 10 12 george i can't do this right now Sorry No no worries no worries from 10 12 25 through 11 no that would be wrong because then i would give you the wrong thing So let me just do it actually is 9 12 we're doing 10 years 35 and then that one lump Okay 20 the two dots are just for whatever it is 2 10 25 so that way it gives me the amount of payments like if it's 120 payments or if it's 196 payments or if it's 360 payments And then i can make sure that whoever did the documents on this uh calculated the correct amount of months passing by so is it like
+
+>>Manoj Racherla	28:15
+Oh wait i don't know where have you written it within the chat Right yes it's there it's 120 monthly payments dollar from why this is dollar like what's the
+
+>>Abby	28:31
+Because i didn't know i could you could just put a dollar you could put a hundred dollars it doesn't matter it's just the amount that the payment is okay this is the payment you mean yes 120 monthly payments like it can be hundred dollars or x amount right from this to this
+
+>>Manoj Racherla	28:48
+Yes and one lump sum amount that is whatever the amount is 50 000 100 000 1 million it doesn't matter so it's all listed out the same way that way
+
+>>Abby	29:02
+Okay you see how it says 120 monthly payments of this and this and the ruler on that thing understood
+
+>>Manoj Racherla	29:11
+Okay wait a moment where was this uh payment payment payment payment stream uh so in this case so suppose let's say disclosure suppose let's say let's take it this disclosure payment streams and contracts payment stream this should always match correct like exact word yes for word for word they should match Okay understood if it's not mess then we just say like it's not magic
+
+>>Abby	29:45
+Yeah you need to check it because something happened or that something got missed or whatever the case may be got it got it got it
+
+>>Manoj Racherla	29:53
+And you want
+
+>>Manoj Racherla	29:53
+It in this format currently it's we are extracting in this format monthly this this is this is this So And so yeah understood and then uh this one is the date one pod date and contract date number of days is greater than contracting what does this mean purity Okay
+
+>>Abby	30:22
+So pod date for pod we use proof of disclosure delivery so the disclosure that got sent out there should be either an email or fedex or Usps giving me a date that these documents were received by the annuitant depending on the state we're working on it's either anywhere from zero days to 14 days before they can sign a contract but it that is dependent on state is that something that you need to know what state requires how many days for you to to put that in correctly or can you just tell me how many days in between happened so suppose let's let's do a pod document so that would be better for our understanding
+
+>>Manoj Racherla	31:08
+As well okay the other one is pod contract
+
+>>Abby	31:28
+Yeah
+
+>>Manoj Racherla	31:29
+So within the pod here it's empty Yeah
+
+>>Abby	31:44
+So the pod date for this one if you go up okay keep going all the way all the way All the way up Okay you see where that date is june 25th 2025 that is also the date that the seller responded with i received it that is the date of pod
+
+>>Manoj Racherla	32:03
+So june 25th 2025 is a date that we're looking for here so it can be like whenever you receive the a like this uh document that's the pod date Yes and here the date is let's say 6 28 june 20 So that means there is three three three days difference
+
+>>Abby	32:26
+Okay that's three days difference
+
+>>Manoj Racherla	32:29
+Okay june 25th
+
+>>Abby	32:33
+Wait what state what what what state was in here uh sorry who is Dominic Meter what state is she in uh within the contract you are saying yeah hold on one Sec Yeah So it's been extracted from here it's 28 and another state can you go down wait where's her address yes one more please scroll down Yeah Okay I forgot they don't list it Okay So just can you tell me like how many days between pod confirmation and the contract signed okay got it
+
+>>Manoj Racherla	33:11
+So you may you want the difference between period date and the date here Yes indeed yes got it understood Okay that's fine uh just that's probably going to be the easiest way because like i said every state is different so some states are you can sign everything the same day some states have to wait three days some say so you have to wait 10 days and some states are how you have to wait 14 days so it depends on where we're working
+
+>>Abby	33:50
+Okay
+
+>>Manoj Racherla	33:50
+Okay Okay And in terms of list of dependents here so there can be multiple dependents right correct so you want to match all of them Yes so suppose let's say within uh lod there are three for a particular binder we are like we have extracted one loa document one coa document within that one lod document there there uh there are two dependents name And but within the coa documents there are three different three uh three names three different names So so there is an inconsistency right in this case so sure if it won't match correct i need something telling me hey it doesn't match
+
+>>Abby	34:35
+And you need to look at this if there's a missing dependent then i need to know about it or if there's an extra dependent that they decided to put in out of nowhere then i need to know about that got it understood and also we understood uh we like we like based on the validation that
+
+>>Manoj Racherla	34:52
+Whatever we have did till now so let's say for example here the legal name so let's say we are comparing coa seller name with seller id's legal name and even if the name is same you can see there is a spelling spelling mistake here it's called d -o -m -i -n And here it's saying d -o -d -e -m -o -n so that's why it's showing me it should be like this itself Yes yes the mass status should be failed even if there is small spelling mistake correct because then that means that something is wrong and if that's the case then our documents are wrong our searches are wrong everything's wrong
+
+>>Abby	35:32
+And we got to go back to square one
+
+>>Manoj Racherla	35:35
+Okay uh what about this uh benefits letter date and contract date plus 183 days um the benefits letter has to be issued within two months of them signing the contract within two months if it's more than two months if it's more than two months then we have to order a new one
+
+>>Abby	35:58
+Okay So what sort of validation you want um so for this one again just give me the days difference between days in terms of yeah between the benefits letter date so the date that it was issued and then the contract date so long as it's within those those two months then we are fine either direction It doesn't matter i just need to know how many days have passed Okay
+
+>>Manoj Racherla	36:27
+So suppose let's say this is the benefits letter right right here benefits letter is 625 and the contract is 620 like so that means there is a three days difference so we want only the number difference of days correct we only want the difference of days anything that's more than 60 days i think actually we decided on 90 days when we took this over for anything just list the days and then that way
+
+>>Abby	36:57
+I know if i see more than 90 days then i have to go look to see which way it is understood understood
+
+>>Manoj Racherla	37:03
+Okay Okay And what about document file stamp so suppose let's say how do we know if a document is stamped within any document let's say noh or so suppose let's say let's take an energy example uh original unredacted unredacted is not going to give you the time stamps unredacted usually means that it is not stamped it is just because they redact information that our investors want to see so that's why we named it that way
+
+>>Abby	37:33
+So if you go to redact it Okay And you go to the top of the file you see where it says filed ccl 623 25 that's that's your file stamp
+
+>>Manoj Racherla	37:45
+Okay So we have accepted correct correctly right that is correct Yes so it it extracted it correctly correctly that's fine so uh in terms of validation do you uh if it's not empty then it should be like yes it's present like that correct Yes if document files time yes or no if it's empty it should be no if it's like not empty like this it should be like yes Yeah Yes that's fine yes because the unredacted ones like i said they're not going to have it
+
+>>Abby	38:33
+And that's how we prefer it because the unredacted ones are going to give investors the information to look through because the unredacted ones are not so Yes and no is perfect
+
+>>Manoj Racherla	38:43
+Okay and same goes to this petition so document file stamp same thing
+
+>>Abby	38:50
+Yes Okay uh what does this mean contains lead paint lead paint so a lot us a few of our annuities originated from children eating paint that had lead in it
+
+>>Manoj Racherla	39:05
+Okay Within the entire document of petition whether this were like these words are present or not yes that has to be um it has to be together like that lead paint Yes yes yes understood and are this the same like petitions assigned payment stream and contracts they should be the same if they are not the same that means something changed and we have the wrong documents and uh uh uh Ucc and judgment so would this be two different octaves Thank you.
+
+>>Manoj Racherla	39:51
+Types or or this should be stored within the same doc that so currently as you can see here within our doximo how we have set it up is this is the You Uh -huh
+
+>>Abby	40:08
+I'm not laughing at you i'm laughing at sometimes it comes separate and then sometimes it comes together that's why i'm laughing you can put these two together because they are part of our searches and usually they go hand in hand but there are times where a judgment search is used by a different vendor and then a Ucc searches is produced by another vendor And so they come in separately
+
+>>Manoj Racherla	40:35
+Okay uh let me put it this way are the fields that we are extracting for both these fields different or same uh let me see the the fields that you're taking out for the judgments and the Ucc because i all i think you should be taking are the seller's name um wait let's uh check it here Okay Ucc data point that we are collecting your seller name state that's it Yeah
+
+>>Abby	41:03
+No we need to if there are any uccs listed we need those Okay But wait a moment let's go to judgment judgment with Oh somebody put it
+
+>>Manoj Racherla	41:22
+Okay This it is the judgment we have judgment in searches searches about uses you know we don't have specific after Ucc we have directly searches there is no specific different because they put it under just searches if you go right under addition go back under yeah under searches
+
+>>Abby	41:45
+So see because she put Ucc search data point So she's gonna liens and judgment phrases looks for liens and judgment that's what we would be looking for any liens or any judgments on that judgment search
+
+>>Manoj Racherla	42:04
+Okay So as per my understanding this would be like different so are the fields that we are extracting for same or not yes let's say so they are the same they're just going to be named differently because one is a judgment search and one is a Ucc search Okay So can we combine this into one one you can so if the fields are so suppose it's same lesson like this uh what do you call annuity contract so here we have is the annuity contract as well as benefits letter within the same thing right correct because the fields are same that we want to extract for both them Yes
+
+>>Abby	42:48
+So then you can do this the exact same thing for the judgment and the Ucc searches Yes you can combine them
+
+>>Manoj Racherla	43:02
+And Yeah
+
+>>Manoj Racherla	43:11
+So that's it from mine now you have any further questions me Yeah No i have no questions i have no questions one thing so in this there is one validation original disclosure Okay it might be under just regular disclosure it should be within the disclosures i guess then yes go down because i saw it went further down there it is i feel like Okay so let's say this one
+
+>>Manoj Racherla	44:52
+What you have written is originator seller name payment stream annuity purchase price yep originator seller name payment stream annuity purchase price cross -validation between same fields must match between original answer what does this mean Okay if you go back to the disclosures
+
+>>Abby	45:15
+Yeah
+
+>>Manoj Racherla	45:16
+So you are our ground truth i'm a what round truth like you are the source to our every detail
+
+>>Abby	45:33
+I it's just I've been doing this a long Okay So this is just this is one disclosure this is the Texas disclosure when she says original and supplemental this lady lives in Texas So this would be her original even though it says amended this is the Texas disclosure if you scroll past the Texas disclosure there will be another disclosure or there should be another disclosure you see this says Nebraska this is a supplemental disclosure because it is not where the seller resides okay any place that the seller does not reside so if the seller is in New York and we have disclosures for North Carolina California Massachusetts the California Massachusetts North Carolina disclosures are the supplementals because they are not needed for a transaction they are for insurance company purposes only and how would we know like from which state are the original disclosures so because this is for Texas this is for Texas so this is where the seller lives on the coa you capture the seller's address Yes yes
+
+>>Manoj Racherla	46:35
+Okay
+
+>>Abby	46:36
+So on the seller's address it's going to tell you hey the seller lives in Texas that's how you know the original disclosure disclosure versus supplemental disclosure
+
+>>Manoj Racherla	46:44
+Oh sure
+
+>>Abby	46:46
+Okay the original disclosure is only one disclosure and it is where the seller resides the supplemental disclosures could be anywhere from two to five additional disclosures depending on the insurance company
+
+>>Manoj Racherla	47:02
+Okay And so would this be different in terms of like so suppose let's say here within the same disclosure we have original as well as supplementary yes correct would this be always like this itself yes it will be and all of the information should match every single line should match
+
+>>Abby	47:25
+And if it doesn't then it's an issue that's why i think it says same fields because it's the cross validation so you're checking the originator if it's listed you're checking the seller name you're checking the payment stream so what you so what you mean is we have to do violation within the same document for us not the across documents both because you're also going to check that against the contract the payment stream so first
+
+>>Manoj Racherla	47:53
+We
+
+>>Abby	47:53
+Yeah
+
+>>Manoj Racherla	47:54
+So first we have to check the original uh disclosure state like what the original user date correct from where she resides and then we cross verify with the disclosures original this original disclosure state correct if it's same then that's fine the state
+
+>>Abby	48:18
+Yes and all the information that you're capturing on the original disclosures should match across supplemental disclosures too so if that matches then that's fine
+
+>>Manoj Racherla	48:29
+Oh god god understood so what you meant is suppose let's say these are the fields for original what are the values for the supplement uh disclosure within the same documents if it matches then let's say within what we can do is we can add a new section it says like validation here let's say we can add new fields like it checks if the difference between if the values are same between the original disclosures and the supplementary if it matches then yes no like that
+
+>>Abby	49:01
+Yes that's perfect
+
+>>Manoj Racherla	49:03
+So we have to just add new fields in within the disclosures to check the validation across the uh within the same document Correct right understood um Yeah That's it from mind are you sure there might be there might be more that is fine that mother might be more definitely it could be like as i like as we continuously work there would new new questions would arise that is that is perfectly
+
+>>Abby	49:38
+Okay I understand i already i anticipated a lot more questions So this is fine
+
+>>Manoj Racherla	49:44
+Okay and in terms of this country of issue seller id country of issue issue you you
+
+>>Manoj Racherla	49:50
+Is us yes Or no Yeah So within the seller
+
+>>Abby	49:55
+Id like do we have to add a new field of country of issue i think that's more for passport than the seller identification card because if we go to so suppose let's say driver's license it's not going to say does it say United States Of America i don't think it says United States America I don't think my driver's license says That either but it's i guess it said does say the usa up there on the top
+
+>>Manoj Racherla	50:28
+Yeah So if it's there so do we have to add this uh new field of this country us country of issue hold
+
+>>Abby	50:41
+Please i'm gonna check one because i did get one that was a foreign national so give me one second because i got to go to my other computer
+
+>>Manoj Racherla	50:48
+All right Okay i think we are gonna need that give me one second it's gonna come up
+
+>>Abby	53:13
+And then i'm gonna forward it to you so you can kind of see what i'm looking at okay uh are you sharing a screen i can attempt to But i'm not real good with the computer stuff Okay
+
+>>Abby	55:07
+Okay, I think I got it. Hold on. I'm going to bring up the email that I had open. Can you see my screen?
+
+>>Manoj Racherla	55:19
+Yes.
+
+>>Abby	55:20
+Okay.
+
+>>Manoj Racherla	55:22
+So, where are you?
+
+>>Abby	55:27
+Where did I put it? Here it is. So, do you see how this one is from Mexico?
+
+>>Manoj Racherla	55:35
+Yes.
+
+>>Abby	55:36
+Up right here. That's where we need to capture it. But most of ours are going to be The United States. So, when we say the country of issue, that's what we mean. This ID was issued through Mexico.
+
+>>Manoj Racherla	55:53
+Understood. So, you also want to extract the country name and also want to check if that license belongs to Usa or not.
+
+>>Abby	56:04
+Correct.
+
+>>Manoj Racherla	56:04
+Oh, okay. Two things. Understood. Okay. I guess that's all. That's it from my end for now. I've asked many queries with you.
+
+>>Manoj Racherla	56:30
+Hello.
+
+>>abby	56:34
+I completely locked myself out. Yes.
+
+>>Manoj Racherla	56:38
+Yeah. I guess for now, these are the queries that I had. So, what I want to do is like, as I told you earlier, that extract, review the extraction and the fields that we have captured till now, right? From our platform.
+
+>>abby	56:55
+Okay.
+
+>>Manoj Racherla	56:56
+Okay. Okay. And you have the access to the validation sheet as well, as well as the fields that you need to add. So, suppose it's any, any new fields or any existing fields that you want to add within the doc types that is currently not present. Just mention it the other sheet.
+
+>>abby	57:18
+Okay.
+
+>>Manoj Racherla	57:19
+Okay.
+
+>>abby	57:20
+Okay.
+
+>>Manoj Racherla	57:21
+Okay. And if you have any questions, you can like shoot it up or email to us.
+
+>>abby	57:26
+Of course. I will.
+
+>>Manoj Racherla	57:28
+And you can also like ping us on our team's channel as well. You are, are you, you are able to access it, right? Abby?
+
+>>abby	57:39
+Um, I am not actually able to access it. I've had issues with my teams. I can see the implementation, which they said, um, when I uploaded stuff on here, like if I go to files, I see where I have.
+
+>>Manoj Racherla	57:51
+Can you just share your screen once?
+
+>>abby	57:54
+Of course. If, if I, if I lock you out, I'm very sorry.
+
+>>Manoj Racherla	57:59
+No, it is nice.
+
+>>abby	58:02
+My stuff now. Here it is. Screen.
+
+>>Manoj Racherla	58:38
+Okay. So. Interventions teams.
+
+>>abby	58:41
+See, so I can see this, but I can't see any conversation. Like, um, Nidhi had, had, uh, mentioned me in an email and I'll get that. Through my email. But when I go to click on reply in teams, it tells me I can't because I'm not in the conversation.
+
+>>Manoj Racherla	59:00
+Okay. Can you click on the AL on top?
+
+>>abby	59:05
+Yeah.
+
+>>Manoj Racherla	59:06
+Yeah. No, no.
+
+>>abby	59:07
+The top, right.
+
+>>Manoj Racherla	59:08
+On top right. There is an initials, right? Al.
+
+>>abby	59:11
+Yeah. Right here.
+
+>>Manoj Racherla	59:13
+Yeah.
+
+>>abby	59:13
+I'll click on that. Yeah. Yes.
+
+>>Manoj Racherla	59:20
+Uh, wait a minute. Can you go to that email once?
+
+>>abby	59:29
+The view account?
+
+>>Manoj Racherla	59:30
+No, no. The email that you received saying that, uh, the Nidhi from the Microsoft saying that you're a part of this.
+
+>>abby	59:39
+Okay. Hold on. That one. I have to go through here. Let's go through here. All right. All right, thanks for turnings for this, guys.
+
+>>Manoj Racherla	01:00:04
+I can see your team screen only.
+
+>>abby	01:00:08
+You can only see my team. Okay. Hold on one Sec. I'm going to get it right back up.
+
+>>abby	01:00:36
+Whoa.
+
+>>Manoj Racherla	01:00:41
+So many of me.
+
+>>abby	01:00:44
+What is happening? What is this?
+
+>>Manoj Racherla	01:00:47
+That's fine. Go to the, yeah. Okay.
+
+>>abby	01:00:50
+Okay. So this is the email.
+
+>>Manoj Racherla	01:00:52
+Okay. Can you search for Microsoft? Just search for Microsoft email here. Close this. Close this. Yeah. On top, there is a search icon, right? No, no. Within your email box. Within my email.
+
+>>abby	01:01:12
+Okay. So just check Microsoft?
+
+>>Manoj Racherla	01:01:14
+Yeah. Just search for Microsoft.
+
+>>abby	01:01:16
+Sorry. Okay.
+
+>>Manoj Racherla	01:01:23
+Okay. Wait a moment. Scroll down a bit. Within the email. Scroll down a bit. Why is it not letting me scroll now? No, no. It's not. Can you go to the email box?
+
+>>abby	01:01:44
+Give me one second because I'm not sure what is happening with my computer now.
+
+>>Manoj Racherla	01:01:48
+That's fine. That's fine. Just go to the email box. Okay. Scroll down a bit here. Yeah. Just scroll. Yeah. Yeah. Microsoft invitation. Can you see?
+
+>>abby	01:02:00
+Mm -hmm.
+
+>>Manoj Racherla	01:02:02
+Can you accept invitation here?
+
+>>abby	01:02:05
+Mm -hmm.
+
+>>Manoj Racherla	01:02:19
+Okay. Use this. Is this the mail of yours?
+
+>>abby	01:02:26
+These are all mine. Yes. But they're different. One is for before we started off with Maven. We were with a company called Richmond.
+
+>>Manoj Racherla	01:02:34
+Okay. Do you have access to the, okay. The one you just opened the email box. What was that email ID?
+
+>>abby	01:02:41
+That was for safe.
+
+>>Manoj Racherla	01:02:43
+Safe, right? Can you go to that safe email, email box?
+
+>>abby	01:02:47
+It's where I am. Right here.
+
+>>Manoj Racherla	01:02:49
+Oh, email box. Email, email. Go to email box.
+
+>>abby	01:02:52
+Oh, s***. That's going to take me a while.
+
+>>Manoj Racherla	01:02:56
+Just open a new tab. Yeah. Hold on.
+
+>>abby	01:02:59
+One second.
+
+>>Manoj Racherla	01:02:59
+No, it's Abby at Richmond Capital, I guess. The one you got the email, right? Can you see it down? No, no.
+
+>>abby	01:03:07
+So if that's the case, then I got to, I got to add, get out of this one and go back to the other one.
+
+>>Manoj Racherla	01:03:13
+Go back to that. It's Abby at the rate, which one? No, not this one. This one. Abby at the rate, which one, right?
+
+>>abby	01:03:20
+Mm -hmm. That may be why.
+
+>>Manoj Racherla	01:03:27
+No.
+
+>>abby	01:03:28
+No. Let's go.
+
+>>Manoj Racherla	01:03:32
+Okay. Can you just click on the top right on top right there? Can you see Al? Yeah. Can you sign out? Just sign up.
+
+>>abby	01:03:47
+I didn't have it. Okay.
+
+>>Manoj Racherla	01:03:53
+Okay. Can you go to that again, the mail?
+
+>>abby	01:03:57
+Which mail? The Richmond mail?
+
+>>Manoj Racherla	01:04:00
+I mean, the Richmond mail. Okay. Sign out this. Click on sign out of your site. This is the other thing. If on first, first email ID here.
+
+>>abby	01:04:14
+You, this is the other one. This is not the one that, see, I don't have a Richmond on this thing. So I just have to add it.
+
+>>Manoj Racherla	01:04:21
+Uh, then. Okay. Just sign out. Okay. Fine. Can you add Richmond here?
+
+>>abby	01:04:32
+Yeah.
+
+>>Manoj Racherla	01:04:42
+Next. Next. Next. Okay. Thank you.
+
+>>Manoj Racherla	01:04:50
+I'm going to check your mailbox of which one. There it is. 90769.
+
+>>abby	01:05:15
+Nope. Why?
+
+>>Manoj Racherla	01:05:23
+It's asking for it. I can give you a number.
+
+>>Manoj Racherla	01:05:49
+Skip for now.
+
+>>abby	01:05:51
+Yeah, we don't do face anything.
+
+>>Manoj Racherla	01:05:54
+Stay silent. Now go to that link again. No, that's not that one. Not this one. Yeah, another one.
+
+>>abby	01:06:15
+So this one.
+
+>>Manoj Racherla	01:06:16
+First one, yeah.
+
+>>Manoj Racherla	01:06:32
+Yeah, now it's in order to be at The Richmond Cathedral, right? Can you, like, can you go to your chat here?
+
+>>abby	01:06:50
+Crazy chat.
+
+>>Manoj Racherla	01:06:51
+Can you go to apps, my apps? On top, on top. On top, right?
+
+>>abby	01:06:59
+Oh, yeah.
+
+>>Manoj Racherla	01:07:08
+Can you open your Teams ones? The one you had earlier open. What's the email ID of this?
+
+>>abby	01:07:17
+This should be Richmond, I believe.
+
+>>Manoj Racherla	01:07:25
+Can you, can you click on the AL on top, right? Yeah.
+
+>>abby	01:07:28
+Yeah.
+
+>>Manoj Racherla	01:07:29
+This is safe. Can you, can you, can you share that email ID with me once?
+
+>>abby	01:07:35
+You want this email?
+
+>>Manoj Racherla	01:07:37
+Yeah. Yeah. Just copy it or write it down.
+
+>>abby	01:07:46
+What the?
+
+>>Manoj Racherla	01:07:48
+Can you paste it in the chat?
+
+>>abby	01:07:53
+Right. Yeah. Yeah. You know what? I'm just going to email it.
+
+>>Manoj Racherla	01:07:58
+I'm just going to send it. Just, just paste it in the chat.
+
+>>abby	01:08:04
+Sorry. Now, where is my chat?
+
+>>Manoj Racherla	01:08:15
+I don't know what I did with you, Ninoj.
+
+>>abby	01:08:28
+I don't know where it is.
+
+>>Manoj Racherla	01:08:39
+Have you shared that email ID?
+
+>>abby	01:08:52
+Hold on.
+
+>>Manoj Racherla	01:08:54
+I'm getting it.
+
+>>abby	01:08:55
+Alounds at safe Llc .com
+
+>>Manoj Racherla	01:09:11
+Or I'm just going to say Z Uso for Fludenroeлем and I Ortiz.
+
+>>Manoj Racherla	01:09:26
+Okay. Thank you. You
+
+>>abby	01:10:04
+Did you get it
+
+>>Manoj Racherla	01:10:05
+Yeah give me two minutes did you get any email can you check once um i don't i don't have any share you can you share your screen
+
+>>Manoj Racherla	01:12:00
+Once
+
+>>abby	01:12:07
+Yeah give me a Sec
+
+>>abby	01:12:39
+I don't know why so many of you come up why do so many of you come up
+
+>>Manoj Racherla	01:12:44
+Okay uh can you go to the mail are you presenting your mail screen let me see probably not
+
+>>abby	01:13:07
+No Yeah click entire screen
+
+>>Manoj Racherla	01:13:21
+Yeah sure get it still scroll up a bit within the mail within the uh Which email Id is this this is my the Richmond email uh can you log into that email id that one which you shared of self one
+
+>>abby	01:13:51
+Oh safe Yeah Yeah We gotta go through here hold on one Sec that was four is this the self one there's no I'm getting there i don't have that one open at all times Oh my god can you go to me yes it's a it's a completely different animal for this one Okay
+
+>>Manoj Racherla	01:14:30
+I guess can you go to teams now you you you you you
+
+>>Manoj Racherla	01:14:45
+I'm sorry i'm in the wrong thing now all right can you click on see all your teams where am i going up here where am i going to do what now these are them Yeah give me two minutes give me two minutes Yeah click on doximo Okay fine can you click on the top right Al can you click on add another account here this one yeah send code click on check the email id of this Richmond captain so 0916 let's go
+
+>>Manoj Racherla	01:16:40
+Yeah can you go to uh can you on top can you see there is a three dots you know besides that there's another one Yeah okay On the am thing am icon Yeah click on it Yeah click on the aqua can you see aqua Yeah continue Oh my god i cannot stand microsoft for this nonsense i'm sorry i get upset 3 4 5 4 8 7 3 4 5 4 8 7 where did it go uh click on that again Okay now click on the al thing again
+
+>>abby	01:18:03
+Okay yeah
+
+>>Manoj Racherla	01:18:10
+Setting it up it now where can you see within the chats uh scroll down below you want me to scroll down on the chat and not the activity Yeah go to within the chats Yeah This one Okay So here we can communicate perfect so whenever so on top you can see Right Yeah You are on top can you click on that on top Right Yeah So so you can you have to just click on this echo analytics private limited to chat Okay thank you thank you for your help because Microsoft pieces me off and i just want to kill it same for me do you guys use slack as a channel what was that slack
+
+>>abby	01:19:17
+I don't even know what that is no worries
+
+>>Manoj Racherla	01:19:20
+Okay i don't know what it is Okay we know this Uh i guess uh we are done for now
+
+>>abby	01:19:30
+Okay thanks thanks for everything thank you I know i'm a little bit you know bananas when it comes to all right all right all right all right all right all right all right all right all right all right
+
+>>abby	01:19:43
+Bye have a great day thank you you too bye -bye
+
+>>Manoj Racherla	01:19:46
+And do do verify the extraction and the fields that we spoke about and the validation sheet
+
+>>abby	01:19:51
+I will i have everything written down
+
+>>Manoj Racherla	01:19:53
+So i can get it and also like uh the the types that you mentioned that which are priority wise high mid low like that
+
+>>abby	01:20:04
+Yes red yellow blue right red for priority yellow for me and then blue for Yeah you can do this whenever
+
+>>Manoj Racherla	01:20:11
+Yeah okay that would help Okay Okay thank you thank You thank you bye
+

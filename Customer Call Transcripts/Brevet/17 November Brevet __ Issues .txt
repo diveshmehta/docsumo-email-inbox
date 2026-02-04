@@ -1,0 +1,21 @@
+>>Aniket Tatipamula	00:00
+Dependent in a table as well. Yeah, because I have to write the validation, right? Yeah. Okay, you can do it in table. If we have multiple, then it would be multiple roles. But will there be multiple in a single document? Yes. Okay. Okay, then because once after you do that, you can share that with me and I can write a validation here.
+
+>>Manoj Racherla	00:25
+Sure. Majority of the cases, the data wasn't present in the document itself.
+
+>>Aniket Tatipamula	00:38
+Oh, Aaron actually did not accept the invite. Hi Aaron, how are you?
+
+>>Aaron	00:48
+Hey, how are you doing?
+
+>>Aniket Tatipamula	00:52
+Aaron.
+
+>>Manoj Racherla	00:53
+Hi.
+
+>>Aaron	00:57
+Aniket, could you remove the note taker, please? Okay. Updated private policy. No more.
+

@@ -1,0 +1,303 @@
+>>Manann Agarwal	00:00
+Aaron's joining here in a moment. I believe it's just, wait a minute here.
+
+>>Manann Agarwal	00:54
+Hi. Hi, Aaron. Hey, morning.
+
+>>Aniket Tatipamula	00:58
+Hi, Aaron.
+
+>>Manann Agarwal	01:06
+Can we start?
+
+>>Michael Bottazzi	01:08
+Yep, we should be good to go. Okay.
+
+>>Manann Agarwal	01:13
+So, essentially, you know, I think we have almost made all the changes that, you know, you had put into the sheet, right? There are a few that need to be discussed, but apart from that, you know, we more or less made changes to, changes as per the inputs that you put in. Great. So, I think if we can start with, you know, where we needed some clarifications, and then later on, if time permits, then, you know, we can also run over the changes that we made, if that's fine.
+
+>>Michael Bottazzi	01:51
+Yep, that sounds good to me.
+
+>>Manann Agarwal	01:53
+Awesome, okay. So, I'll just share my screen, just give me a minute. Is my screen visible? Yep. Okay, so, this issue where, you know, in the remarks, it was mentioned, remove the blank balance check, only need the check overdue, and not yet due amount, right? So, I just wanted to check, so does that mean that we don't need to keep the validation of the balance check, or, you know, what is it that you're looking for then?
+
+>>Aaron	02:33
+Yeah, we're saying we can just remove balance, like all together. Okay. Yeah, in simple terms.
+
+>>Manann Agarwal	02:41
+Okay.
+
+>>Aniket Tatipamula	02:49
+Yeah, remove validation, yeah, Okay.
+
+>>Manann Agarwal	02:55
+Next is, yeah, there's something, okay. So, essentially, if there are, you know, examples where, okay. Active port, let's just go over it.
+
+>>Manann Agarwal	03:19
+Okay. Okay, so you're saying that, so what you mean to say is that, let's say this was taken up as an income account business activity, so this is replacing the data of the earlier document, is that what you're saying?
+
+>>Aaron	03:40
+Yes, I agree. So, I'm assuming these are some subsidiaries that have some expenses and stuff, but there isn't, if you go into the validation, it's obviously returning a fail here, but there is an actual, like, active port exact match income statement, but, you know, that one was essentially being overridden by the later ones.
+
+>>Aniket Tatipamula	04:06
+So, Aaron, just to add that, Manan, can you please go back? Can you go ahead and, because we made a small change on the classifier, can you filter those document types, please? Can you select them all? Can you now, no, no, no, no, don't retry. Change document type, please. Yeah, auto -classifier, yeah. Yeah, you can remove that printer, please. Yeah, let's wait for it to process and see. Now, so Aaron, just while this happens, just to give an update, so what we have done is, I remember there was one more change that was requested by you regarding green ID. Like, there were two green IDs, and then one of them was overlapping the other.
+
+>>Aniket Tatipamula	04:56
+And what we did right now, we are using the numbering that you have done as a check to classify the documents. So this time around, if that works properly, and I did check it on a couple of packets, it was working really well. So you would not find any other document without a number being mentioned classified to a doctype. And that change just went like yesterday. So if you would have uploaded anything today, I hope you would have not seen this happening. Ok.
+
+>>Aaron	05:25
+Great. Yeah, let's take a look at that.
+
+>>Aniket Tatipamula	05:30
+Can you please go back? Can you change the tabs? Select the doctype. This is it, right?
+
+>>Aaron	05:45
+Looks good to me. Great, great.
+
+>>Aniket Tatipamula	05:48
+While we are at it, maybe we can also discuss that. So because you mentioned that we wanted two green IDs and you used the second one, I thought it may not be that great of a use if this works out properly. So we don't have to keep both of them, because that logic may become very complicated if you are keeping both of them.
+
+>>Aaron	06:10
+For green ID reports, unfortunately, we would have to keep both of them if possible. Because for all the other document types, it doesn't really matter. But for green ID specifically, it just means that if we're pulling it on the director, it means they have a high ownership stake. So if you could kind of, perhaps you can think about it and see what we can do on that end.
+
+>>Aniket Tatipamula	06:43
+Yeah. Sure, and that works. Thanks.
+
+>>Manann Agarwal	06:48
+Awesome. Ok. So I think, apart from this, Maniket, was there anything else that we needed to discuss?
+
+>>Aniket Tatipamula	06:58
+Can you please open that sheet once again, ma 'am?
+
+>>Manann Agarwal	07:00
+Yeah, sure.
+
+>>Aniket Tatipamula	07:01
+I think there was one more item that I cannot recollect. We discussed two.
+
+>>Manann Agarwal	07:09
+Yeah, the third one was green ID report, I think.
+
+>>Aniket Tatipamula	07:12
+Can you scroll up, please? There's nothing up, right?
+
+>>Manann Agarwal	07:17
+Yeah.
+
+>>Aniket Tatipamula	07:18
+Ok, scroll down, please. Green ID was the first one. The second one was remove balance check. Scroll down, please. Yeah, there was this one, active quote. I think this is already fixed, general issue. So this we fixed. You can mark it as fixed, please. I think we are done. Awesome.
+
+>>Manann Agarwal	07:41
+Ok. So anything else from Joran, Aaron, or Michael?
+
+>>Michael Bottazzi	07:47
+Yeah. So I think, ideally, as we talk about next steps, we're looking to set time up on Thursday with members of, or a member of our tech team that can assist with the Salesforce and Box integration, just because that is the next biggest step. And that has to work seamlessly for this to be effective through the stack. I know you have separate specific team members that work on your end as well. Do you know if they could be available for a call on Thursday?
+
+>>Aniket Tatipamula	08:23
+They will be. We'll make sure they'll add.
+
+>>Michael Bottazzi	08:26
+Ok, thank you. Appreciate that. And prior to that, is there anything that I should confirm internally before we meet that would be helpful for the meeting on Thursday? Or if we just come ready to discuss, does that work as well?
+
+>>Aniket Tatipamula	08:40
+We can do that as well. And maybe I can give a very generic brief about what we support on integrations on this call, because this will probably set up the next call properly. So right now, we have this inbuilt integration support. And we do support all of these integrations. And I'm pretty sure Box falls into it. But this will not be useful. I reviewed it, and I checked. The architecture right now on all of these integrations is we sync with one folder. So our files within the folders are synced. And this Box integration does that right now. So if we were to make a change, we may have to spend a little bit of time doing it. But we do support one more type of integration that's custom. So what happens here is we can create our own custom integration. What this code does is it runs every few minutes as it stays. It will run every five minutes or an hour. And we go ahead and check. We can do whatever we want. If you provide us your Box API key, then we can go into your account and see if there were new folders added.
+
+>>Aniket Tatipamula	09:54
+In the last one hour. And if they were added, then we will get it synced. So we can write that code here. And what would happen is every five minutes or every one hour, we'll keep on syncing those packets.
+
+>>Michael Bottazzi	10:06
+Okay, that's very helpful to know. That might need to be the route we go then, but to be honest, I don't wanna speak for the technical experts on my end. So that is helpful to understand, but Yeah, maybe as we speak as a group, it'll become more evident. Thank you for the color there though, that is useful. Okay, yeah, I think from our side, like - Should we go through the packets today? Sorry, what'd you say?
+
+>>Aniket Tatipamula	10:41
+Should we go through a few packets today? Like just to check if everything looks good?
+
+>>Michael Bottazzi	10:45
+Yeah, sure.
+
+>>Aaron	10:47
+Just this one. The others didn't really have issues, which is a good sign. Sorry, Michael, for cutting you off.
+
+>>Michael Bottazzi	10:58
+No, you're good, let's set this one.
+
+>>Aaron	11:01
+Yeah, you can ignore the beginning of financial period. That's on our end. I was saying, I know if you scroll down a little bit, the pending AI PNL on document five. So pending AI Pnl is passing right here, the entity name. Oh, my.
+
+>>Aniket Tatipamula	11:32
+Am I doing something wrong? Which check?
+
+>>Manann Agarwal	11:35
+Your entity name.
+
+>>Aniket Tatipamula	11:37
+Entity name, oh, okay, this one. Oh, this one was not supposed to... Oh, because this, I think for the name check, right? I think we probably added more. We maxed it out a little bit more, so it should not pass.
+
+>>Aaron	11:51
+I'm saying it should pass. So it's passing for five, right? Could you implement the same thing for like all the documents? For number three here, you can see that one's not passing, right?
+
+>>Aniket Tatipamula	12:06
+I'll get it implemented. I'll check what went wrong here.
+
+>>Aaron	12:09
+Yeah, and then if you scroll down a little more, same with the names. This thing, this one is capitalizations. And that was, you know, the systemic convention. So for the, what's it called? For document number three, I think there was one field that wasn't extracted. Okay, the account. Let's click into that.
+
+>>Aaron	12:49
+For this, I think it went into the next page, which is probably the reason why it wasn't there. The account number, 3044. But that should be a pretty simple thing too.
+
+>>Aniket Tatipamula	13:06
+Yeah, we'll get this thing fixed. We'll get this thing fixed on this document.
+
+>>Aaron	13:12
+Great, just putting it on your radar. Scroll down to document.
+
+>>Aaron	13:29
+Oh, if you could go to document 10.
+
+>>Aniket Tatipamula	13:32
+Document 10.
+
+>>Aaron	13:38
+Yeah, so refund is the wrong one being extracted. So let's click into that.
+
+>>Aaron	13:50
+Yeah, so the actual field we need to extract is a little bit lower. It's a little bit lower in the document.
+
+>>Aaron	14:01
+You have to scroll down more.
+
+>>Aniket Tatipamula	14:13
+Is this one?
+
+>>Aaron	14:15
+Even further. It's a total amount refundable. Right here, 422 ,000.
+
+>>Aniket Tatipamula	14:26
+Yeah, I remember we had talked about this. Manan, did you make any fix here for this one? You're on mute, Manan.
+
+>>Manann Agarwal	14:36
+Sorry, I didn't make a small fix. It did work for, I think, one situation. I think I'll just recheck that and update on that.
+
+>>Aaron	14:49
+Great, and the last thing, I think, is in the closing statements, when the field was extracted.
+
+>>Aaron	14:53
+Extracted for the sources and uses and you know, that was it. Everything else was passing as as intended.
+
+>>Aniket Tatipamula	15:03
+Ok, sorry, let me just open this up here.
+
+>>Aniket Tatipamula	15:21
+Yeah, which one was it?
+
+>>Aaron	15:23
+I'm closing statement 21 right here.
+
+>>Aniket Tatipamula	15:34
+So totally this is this is not extracted in it.
+
+>>Aaron	15:38
+Yeah, so there's no nothing being extracted.
+
+>>Aniket Tatipamula	15:48
+Where is the data? Yeah, it's at the very top.
+
+>>Aaron	15:55
+Underneath sources and uses.
+
+>>Aniket Tatipamula	15:59
+This one?
+
+>>Aaron	16:00
+Yes. So that should be for sources and uses should be on the right.
+
+>>Aniket Tatipamula	16:12
+Sorry, but can you please like let us know which field would be that for the users? Like which value?
+
+>>Michael Bottazzi	16:19
+So uses is going to be on the right side of this. Yeah. Right down. Yes, it should be that one.
+
+>>Aniket Tatipamula	16:31
+Yeah, it's very difficult. I think this
+
+>>Michael Bottazzi	16:33
+Yeah, the formatting is a bit. Strange.
+
+>>Aniket Tatipamula	16:37
+But there's no reference to it, right? Like I mean, maybe it will not be the only way.
+
+>>Michael Bottazzi	16:43
+Is you see how at the top you have your the header sources and uses and sources should be the left it to your point though. I understand because it's all very spread out. But uses is the right half of that data. I guess sure sure Michael understood.
+
+>>Aniket Tatipamula	17:04
+I think that it says this can like this. Maybe we'll treat it as an edge case, but we'll look into it. Like if we can do something.
+
+>>Michael Bottazzi	17:11
+Okay, thanks. And then I think I had I just had one that was having an issue yesterday. And I don't know if you have any others in this packet.
+
+>>Aaron	17:28
+I'm done with this.
+
+>>Michael Bottazzi	17:29
+Okay, if you go back out to screeching school into the yeah to see what the name of it was. You know what? I think it's just the one titled BPA And it's up a few. Yeah. Yeah, I think that one for numbers three, I think to re -familiarize myself, Okay. It's saying it's so it's passing number three, but the document date check failed just as a heads up. I don't know if that's just the checks doing what we need, but I'm just don't think that should have been a pass and they should be a fail. Yeah. Yeah. Yeah. I think that was really the big thing. The other stuff was related to, you know, a lot of the stuff here was like date related or an outdated document. So don't have anything in particular. Yeah.
+
+>>Aniket Tatipamula	18:39
+Okay. So just one last ask Michael as in when you talk about box so that our team can also be prepared for the call. So how do you store it? Is it like a single folder where you dump all the folders in it or like you just put everything outside folder by folder?
+
+>>Michael Bottazzi	18:58
+So for every case that we have here, there's a folder associated with it in box. So the files from the particular folder folder will need to be pulled into DocsUMO and have a case created similar to how we're doing it now. Hopefully to your earlier point like on an automatic basis or some sort of whatever hour -by -hour basis if we need that. Now where it gets tricky, which is what I've been thinking about is we have the split into two sections, right? We have the first 13 documents, which is pre -approval and then we have the last 20 or whatever that are post -approval. So in a perfect world, what's going to need to happen is a folder gets created.
+
+>>Michael Bottazzi	19:52
+Created in box, 13 documents go into it. They fall through box into Docsumo and get QC'd. Now the bottom half is all gonna say fail, right? Because there's no documents there. But ideally then the first half get approved and we use the Salesforce API, send a message back upstream to the Salesforce ID. Or if it needs to be manually checked because of some one -off issue, right? Like we can do that. Then what's gonna happen is in that same box folder, the next 20 documents are gonna fall into it. So ideally again, right? Like we have this auto cycle pulling, Docsumo then pulls the next 20 documents into the case and the bottom half of the packets are QC'd. Whether that, and this is just me thinking about the flow from our end, right? So like if there's limitations, I'm sure that there's things that come up, you know, whatever we can talk about it as a larger group, but that's how I'm envisioning this. The high level is documents hit a box folder, they get pulled and QC'd. Some message gets sent back, like some, whether it's a Salesforce trigger or an email or whatever. And then the next half of the documents get QC'd. Same box folder, some notification gets sent out, Salesforce trigger, email. That's how that, that's how that goes.
+
+>>Michael Bottazzi	21:34
+So I'm, you know, it's not lost on me that that is a fairly large undertaking, but at the same time too, we're trying to automate this process so that, you know, it is what it is And we can talk about it as a larger group, but that's sort of our flow. I think you're muted, I'm sorry, or I can't hear you, I don't know if anyone. Yeah, sorry, I was on mute.
+
+>>Aniket Tatipamula	21:56
+Thanks Michael, I think that helps a lot. Just one follow up question there, like you remember there was some documents that were in Excel format And we were converting it to PDF. So while the files will be uploaded to Box, will they be in PDF or will they be in Excel?
+
+>>Michael Bottazzi	22:13
+Well, right now they're all in Excel because that's the current flow, but I understand the limitation there. So we're going to have to figure out a workaround to get them into PDF format, but I don't think that's going to be, that's going to need to happen before it hits DocsUMO, right? Like there's going to have to be some sort of Salesforce update made on our side or whatever process update made on our side to make that happen, unless that feasibility is available, but my understanding is PDF format is what we need right now, right?
+
+>>Aniket Tatipamula	22:49
+I'll check with the team because the code that we are writing here, like maybe we can probably do something there. I'll check with my team once on that.
+
+>>Michael Bottazzi	22:58
+Yeah, please let me know on that because in a perfect world, if we can do the Excel, like yeah, that would be the way to go for sure. So yeah, just keep me posted.
+
+>>Aniket Tatipamula	23:09
+That helps Michael. I mean, thanks for clarifying.
+
+>>Michael Bottazzi	23:13
+Yeah, I made a flow chart too of how this works. I'll send it over to you guys. Sort of just outlines what I just talked about. It's pretty basic, but again, it'll sort of just, you guys can reference it as you chat on your side.
+
+>>Aniket Tatipamula	23:34
+Awesome.
+
+>>Manann Agarwal	23:35
+Michael, I didn't just want to check. So I think Vishal did send an invoice, I think yesterday or day before yesterday. So just wanted to check on that.
+
+>>Michael Bottazzi	23:46
+Yeah, no, I did get it. Yeah, I think we're still on target for that date. I do think the biggest thing that was going to be how we work out the integration and making sure that works, just because to be candid, like that needs to work to make this process flow. So I think we'll have a clear idea come Thursday about what's feasible. And then obviously as we move forward from there, we can just address it. But yeah, that's sort of where we're at.
+
+>>Manann Agarwal	24:16
+Awesome. Okay, so amazing. So I think that's about it. I will share the minutes and I'll also help schedule a call for Thursday.
+
+>>Michael Bottazzi	24:26
+All right, I appreciate the help. Let me know about the Excel thing. I'll send over the flowchart. And then again, just reach out for any questions.
+
+>>Manann Agarwal	24:34
+Okay, sure.
+
+>>Michael Bottazzi	24:35
+Thank you, man.
+
+>>Manann Agarwal	24:36
+Thank you.
+
+>>Michael Bottazzi	24:37
+Thanks, everyone.
+
+>>Aniket Tatipamula	24:37
+Thank you, guys.
+

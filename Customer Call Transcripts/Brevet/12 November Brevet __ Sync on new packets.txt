@@ -1,0 +1,501 @@
+>>Aniket Tatipamula	00:01
+But have you been seeing the things I've been putting in is like the way I'm wording it doesn't make sense. The other Equifax report, right? Just like any of the things. Yeah, I'm like, I think some of them are genuine fixes, so I'm fixing them one by one and I'll go through the issues. So I'll also explain what I observed, right?
+
+>>Aaron	00:25
+Okay, got it.
+
+>>Aaron	01:15
+Okay, great. All right. Let's start working on this.
+
+>>Aniket Tatipamula	01:24
+Yeah. So let's... The Equifax report, I think the team has noted. I think there is some issue on our side only. Okay. So the team is fixing it. So it would be one time fix and then it should work. Okay. So let's go through this one. Have you seen it? Let's start here. 02, Rnt date extraction, wrong. This side. I have not yet come to here, but let's go reverse because I can also see this one, right?
+
+>>Aaron	02:15
+No, scroll up at the very top.
+
+>>Aniket Tatipamula	02:21
+Okay.
+
+>>Aaron	02:22
+So it's here. Where is it? It's document dates at the very, very top. Okay. 3 October, 2025. I'm not sure where. Can you press on document dates?
+
+>>Aniket Tatipamula	02:34
+That's the document dates. 3 October 2025. Pick it up right. What? This 3rd October, right? 2025. But it did. It did not pick it up in Mmdd by the format. That's it. I think when Manan added it. Extract basic information, document date. Oh, the date will be written. It is output. Should we? Oh, no. I think we made a mistake here. So basically we added two checks. When we also extracted it as Mmdd and then we converted it to Mmddm1. Extracted at 10 .3, which is right. And then we run it. It converts it to 3 .10 back again.
+
+>>Aaron	03:18
+So I think there's a, there's a, there's a, there's a, there's a, there's a, there's a, I think it looks like it does have like some formatting, correct? Uh, yeah.
+
+>>Aniket Tatipamula	03:53
+Yeah. I think this was written because maybe there would be a case where it would have been written. So like, we're it always been word format. What do you mean? Would it always be in word format? Right. Like it will be taught 3 October. 2025.
+
+>>Aaron	04:08
+So it could be like 3 October 2025. It could also be like 11 24 2025. You know, it could be like. There's a there's a variety of ways it could appear, and I'm not completely sure. But I think making the code more flexible and here would would be the appropriate case.
+
+>>Aniket Tatipamula	04:36
+Now, the date will be written in Ddm and YLF format. Okay, so I cannot write this is what you're saying.
+
+>>Aaron	04:46
+So, but I think this was like probably in fix because there was like one specific case where like, we needed that fix. And now it's kind of.
+
+>>Aaron	04:58
+Appearing in some places and most of the time like it is working. I'll say that Like most of the time the R &D extraction is working. But there's been like 2 out of 10 where it basically flipped it, which is kind of it's a little weird. I don't think it's that complicated of a prompt.
+
+>>Aniket Tatipamula	05:14
+No, no, I mean, it just needs a little bit of context because we did not write that, right? So it's not really recommended the date will be written. The date can be because the only thing that I want to know is, can it, the date can be verbal or number, order, time, project, context of the date, some other text, only the output and only the format. Let me try this and then if this works, then we should be good. This doesn't, but this we'll take the note of it and then we'll get the date thing fixed everywhere. I'll take a note here.
+
+>>Aaron	06:14
+So it says like Ai not an 8. That looks the same on Ui.
+
+>>Aniket Tatipamula	06:19
+Yeah, so I made that fix. I basically, we were not doing percentage or fuzzy match because it was always a little tricky. So, but yeah, if you look at the original document, it looks like I, but it is L, maybe we picked it up as L. So that is the only issue. So right now we made a percentage fix, but if this persist, what I'll do is I'll go and make sure that if it is I or L, then we'll cover all of those cases where I or L can mismatch, right? So zero, oh, so we'll get that thing added. Yeah, as long as it works. Yeah, this is fixed. Uh, yeah, let's go to this one. I think you fixed it, didn't you?
+
+>>Aaron	06:58
+Yeah, I fixed it. It's fine. Um, it was extracting, it was extracting like a blank. I just needed it to extract a zero in an alternative case. So I literally just changed it to a return blank to return zero. Um, that's cool.
+
+>>Aniket Tatipamula	07:14
+Okay.
+
+>>Aaron	07:14
+No, it's the same.
+
+>>Aniket Tatipamula	07:16
+Yeah, it's the same. Same issue, right? Okay, yeah.
+
+>>Aaron	07:19
+Could you go into Foodorb? Let's look at that. Um, this again is a mistake, right?
+
+>>Aniket Tatipamula	07:45
+This is for saving. Yeah, in the meantime, something went wrong. You want me to go to Foodorb, right? Yeah.
+
+>>Aaron	07:59
+Okay, let's scroll down a bit. Um, okay. You see how it must be approved? Yeah. So it's being extracted as tech abstract, no?
+
+>>Aniket Tatipamula	08:15
+So I'll tell you what it is. So basically, it did not get extracted as tech abstract, it got extracted as this one.
+
+>>Aaron	08:21
+Okay.
+
+>>Aniket Tatipamula	08:23
+So now you have to tell me, like, if you wanted to do a partial match, I'll just do that And then we can be good with it. Because in the eligibility, we have tech abstract, we have tech abstract private limited, but we do not, like, obviously this is not a string, right? We, although we picked it up like this, or maybe we can change the prompt saying that if it ever says as, then you always use the text after the as, right? So that also works.
+
+>>Aaron	08:48
+Just do the partial match for now.
+
+>>Aniket Tatipamula	08:50
+Okay, let me do partial match. Yeah, let's do partial match. Okay, so reverse partial match. So, or maybe anyway, partial match, and then we will probably get it fixed. That's what it is, right?
+
+>>Aaron	09:04
+Okay, no worries. Um, what else is there? Um, Tervene, blah, blah, blah, Equifax report. Okay, it's all Equifax reports. Um, can you go into, you said you solved the secured party check?
+
+>>Aniket Tatipamula	09:21
+Yeah, I solved it.
+
+>>Aaron	09:23
+Do you want me to go again?
+
+>>Aniket Tatipamula	09:25
+No, I think we did not retry. The moment I retried, it worked.
+
+>>Aaron	09:30
+Okay, um, that's fine. Um, you know, I trust you on that. So let's go into Gridsoft. Um, is it a Gridsoft test? Yeah.
+
+>>Aaron	10:03
+New to five, okay, okay, you, okay, well, it's not returning anything here, but you see the document date for for gridsoft, can you just change that to 365 instead of 360 real quick? How easy is that for you?
+
+>>Aniket Tatipamula	10:22
+Yeah, we can do that. You want this document to be changed to the next event on a give us Yeah, 365 as a minor thing from credit.
+
+>>Aaron	10:34
+Okay, so what else can we do?
+
+>>Aniket Tatipamula	10:38
+You already had you added it somewhere, right? I remember you. Yeah, this one. I'll get it done. Great.
+
+>>Aaron	10:44
+Um, I tried to do it myself because I thought it was really easy. Couldn't figure out how to that's fine.
+
+>>Aniket Tatipamula	10:50
+It's in validation. It's not there. It's basically on the custom code. Okay, we'll do it. Yeah, no worries.
+
+>>Aaron	10:55
+So, okay. So, um, let me just let me just this. This is gonna be a little annoying, I think, but can you go into gridsoft again? Okay, so can you scroll down a little bit? You see the the tax agent one? Okay, so basically here, it's saying it has no outstanding liabilities, but they do have a liability, right? And if we scroll down a bit more, yeah, it's whatever, don't worry about it. Yeah, if we scroll down a bit more, um, to document nine, you see that here, we actually see the liability.
+
+>>Aniket Tatipamula	11:41
+Right? This one.
+
+>>Aaron	11:42
+Yeah. So, would you be able to essentially add overdue and not yet do for document nine?
+
+>>Aniket Tatipamula	11:54
+Yeah, we can do that. Let's add that. Let's see what exactly was written. Oh, okay. But it was there, right? No, no, no, this is this is good.
+
+>>Aaron	12:10
+No, this isn't actually a mistake on your end. This is like, we something from credit popped up this morning. And I asked him about it.
+
+>>Aniket Tatipamula	12:19
+Okay, okay. So it's kind of like anything, right? Was that do we have to change anything here?
+
+>>Aaron	12:26
+Yes.
+
+>>Aniket Tatipamula	12:28
+What do we have to change?
+
+>>Aaron	12:31
+Um, so if you scroll down to document nine, yeah, basically, add the value from overdue and not yet do together. And just make sure that it's less than 60 % of loan value.
+
+>>Aniket Tatipamula	12:47
+It's less than 60 % of loan value. And where is the loan value?
+
+>>Aaron	12:51
+It's in radium application. It's a reference.
+
+>>Aniket Tatipamula	12:54
+Okay, so I can. So I have to add both of this. And then where should that check show up?
+
+>>Aaron	13:00
+Um, yeah, less than 60%.
+
+>>Aniket Tatipamula	13:02
+So you need one more item here? Is it?
+
+>>Aaron	13:05
+Yeah.
+
+>>Aniket Tatipamula	13:06
+Oh, let me go there on the PC. This was nine.
+
+>>Aaron	13:16
+Um, but you know, most of the time, it's going to be zero. So it's like a just in case.
+
+>>Aniket Tatipamula	13:27
+So the existing check need to be there. It's just that we need to add one more check. Just some of will be less than 60%.
+
+>>Aniket Tatipamula	13:59
+That's it, you'll get this address.
+
+>>Aaron	14:01
+Yep. Now, because we're doing that, we can go into the tax comfort letter, and we can remove the the no outstanding liabilities.
+
+>>Aniket Tatipamula	14:13
+Okay, tax comfort letter.
+
+>>Aaron	14:16
+It's document three.
+
+>>Aniket Tatipamula	14:21
+And you want to remove this one?
+
+>>Aaron	14:22
+Yes, so we can just remove that.
+
+>>Aniket Tatipamula	14:38
+Great.
+
+>>Aaron	14:39
+Amazing. Okay, so because we're like, obviously, we're beautifying it now for the output, are you able to do something if you want to go back to the validation screen where if just like basically.
+
+>>Aaron	14:56
+Basically to not run the post approval packet.
+
+>>Aniket Tatipamula	14:59
+I can do that. I'll I'll get that thing done. If we catch up tomorrow and then I'll update this validation.
+
+>>Aaron	15:05
+Yeah, great, so let's uh, let's schedule 1030 tomorrow as a heads up, but for the validation thing I do want to give you a heads up in case. In case you're going to implement it in the way that you're going to say like, OK, if if no closing packet documents then you don't have to run it. Document 34 will be present in the pre approval packet. So just make a note of that. Document 34 is present in the pre approval packet because it's a. It's a standardized. It's the same documents used every single time. It's a one. It's like once in every three years. It's like a membership renewal. That makes sense. Having document 34 just means that they're like a premium member.
+
+>>Aniket Tatipamula	15:51
+Makes sense. So if I'm getting this right, if any of the documents for the default, if we if we find it in the packet, then we will show both as we'll show only the other one. Is that it?
+
+>>Aaron	16:05
+Yes, so if pre approval comes in, none of those with the exception of 34 will be present. So you can just you can just like yellow off or you can like not run the post approval validation checks basically.
+
+>>Aniket Tatipamula	16:18
+I'll just hide it And then I'll just hide all of those only pre approval will be visible. I'll get that thing done. Yeah, yeah, yeah.
+
+>>Aaron	16:25
+Yeah, I think that's I think that's very clear. Ok, so I had a question from from Eric, Eric's boy. He wanted he's basically still unclear on the replacement document stuff. And he really wants to know here. Let me read his question word for word or when a replacement document is kind of provided. Are we supposed to just literally replace it And it's going to automatically re trigger or what's the process for that?
+
+>>Aniket Tatipamula	17:00
+Ok, so initially they were asking whether they want to like when you say replace, there's no replacing as such in Docsumo. You can just add one more document to the folder. Right. And you can delete the document, the older document from the folder if they are not able to delete the document. So to delete the document, you would have to maintain the information of the doc ID. So for some reason, and you do have it on the validation view, by the way, on the validation response, you would get doc IDs as well.
+
+>>Aaron	17:26
+So we don't actually have doc IDs inside box.
+
+>>Aniket Tatipamula	17:31
+Then then and it will not be inside the box and it will be on Salesforce because that's where they are doing the integration. Right. If they are not maintaining the doc IDs, then just leave it at it. How many times would you ever update a document? Would it happen once in 10 packets or maybe it will always happen in packet? And then how many times would it happen?
+
+>>Aaron	17:52
+Say like one in 10.
+
+>>Aniket Tatipamula	17:55
+We can just make how many documents would that be?
+
+>>Aaron	17:58
+It might be like one. It could be like one or two.
+
+>>Aniket Tatipamula	18:01
+Then that's OK. Then don't do anything. Just ask them to add the document. We'll take care of the rest.
+
+>>Aaron	18:06
+No, but so the platforms team will go in. Let's let's say just like a very hypothetical. Right. Let's say the Equifax report is like too old. It's two years old. Ok, so we the platform team sends it through. They change the state on Salesforce and then I send it back. I'm saying, OK, we need a new Equifax report. They then go to the borrower. They ask for a new Equifax report or provides it. They're going to go into box and they're going to delete the old one and they're going to replace it with the new one. They're going to do all that in box. Now, Salesforce. So what do I have to do on like our end on integration and to make sure that them deleting it in box triggers or does something? Because from my understanding, that old document, once we deleted a box, is still in Docsumo, correct? Because, you know, we uploaded it. And if we if we pumped a new one through now, Docsumo or Salesforce has like two copies of that one.
+
+>>Aniket Tatipamula	19:10
+Yes, Salesforce would not have two copies in a way, because what we would do is on the validation screen, you would only show the latest one. So basically, from the validation perspective, you would not see the old one. So even if there are two documents, because that's exactly what happens even right now, right? You don't go out. There's so many documents here, but not all of them are visible to you on because we are not showing them up for you. So we'll do the same thing. Ok.
+
+>>Aaron	19:37
+Ok. So how about are you able to do a slightly later time to accommodate for Eric and you can tell him this clearer tomorrow?
+
+>>Aniket Tatipamula	19:46
+I can do it tomorrow. No problem. I'll also get that implemented and then test it out.
+
+>>Aaron	19:50
+Yeah, if you can get some of the things.
+
+>>Aaron	19:55
+Like the like the Equifax and the, you know, whatever we discussed today that hasn't been fixed and also what we discussed yesterday. I'll, I'll continue to put things through So we're going to get minor changes done. And then we can maybe schedule like 11. How long was this meeting? 1130? Um, let's do like, let's do 11. 1130 EST. Because Eric wakes up at 12 EST. That's like the earliest he can hop on a meeting. So we have 30. I mean, he's in Pst. So he's in he's in California. Yeah, we can do that. Yeah, so let's do 1130 to 12. And let's say that's validation. And then for Eric, let's do 12 to 1215, or whatever, 12 to 1230. It's 230 minute time slot. And then you guys can talk about anything that you guys need to resolve together as an integration end. And from there, if we want to continue to meet on Friday, I'll be completely in the office and I'm available. The entire day to put more things through basically. And from there, I think we should be in a good state, right?
+
+>>Aniket Tatipamula	21:13
+Yeah, from there, we should be in a good state. And then we'll try our best. So Aaron, the only help you would need is if you can pump in as many packets as you can. So that what happens is because I know like this will be very irritating and frustrating for you to go through all the packets and again, figure out the same issues. So that we would do it better than you just upload like 2030 50 of those packets, and then let us over the weekend fix all the remaining ones.
+
+>>Aaron	21:37
+Okay, so you want me to just literally, um, okay, I can do that. No worries.
+
+>>Aniket Tatipamula	21:42
+For the next one or two days, you do the testing, like I would not stop you from doing it, because we would need your help. But at the end of the week, right, just dump as many packets as you can, and then leave it to us. Because that what we will do over the weekend is we'll go through each packet and verify we are not doing anything, any minor mistake, right. And when we come back on Monday, we'll probably be better prepared, like to ask you questions. And these ones failed. Are they genuine or not?
+
+>>Aaron	22:03
+Okay, that's good. Um, I can do that. Um, that sounds like a plan to me. So for, we have a we have a recurring issue where some packets are being dropped when we put it through your you said that's due to the what the parallel might be.
+
+>>Aniket Tatipamula	22:18
+Yeah. Okay, so we're getting rate limited.
+
+>>Aaron	22:22
+So as a result, instead of dumping it all, like, pop like that, we have to do like one by one, right. So that's a that's on our end, we have to change the way that we're feeding documents into Docsumo. Okay. Um, I will alert Eric of that. Um, and yeah, let's put Yeah, just book, book an 1130 to 12 for me, and then book a 12 to 1230 for Eric. And I'll be there for both. Sure.
+
+>>Aniket Tatipamula	22:49
+1130 to 1230 all in all. Yeah, sounds good.
+
+>>Aaron	22:54
+Um, okay, so if you can, um, Okay, let me just do a final check to make sure that everything is everything looks all right.
+
+>>Aniket Tatipamula	23:04
+Yeah, we I could not get this one. Let's go to of them that I did not yet fix.
+
+>>Aaron	23:09
+Okay.
+
+>>Aniket Tatipamula	23:11
+I think this one I fixed. This one is working fine Ppsr is good.
+
+>>Aaron	23:16
+Sure.
+
+>>Aniket Tatipamula	23:16
+I don't know what document it is like maybe I this one, which one is it which packet.
+
+>>Aaron	23:23
+Um, frankly, I forgot. It's, it's fine. I think document eight is a, it's a tax agent letter. It's the one where we worked on yesterday, where it was like the table, and it was extracting 2024 instead of 2025. If that makes sense to you.
+
+>>Aniket Tatipamula	23:39
+And now I fix that it will not as in it was a rookie mistake like the name itself was start the field name was start date. And that's why it was picking up and it started finally but now we changed it And it always picks up and it.
+
+>>Aaron	23:52
+Okay, that's good.
+
+>>Aniket Tatipamula	23:53
+Um, so, yeah, let's go to this one. This one I did not understand. So let me open this one.
+
+>>Aaron	24:02
+Okay.
+
+>>Aniket Tatipamula	24:22
+I think the issue was extracting on document and extracting when you need for 10. Yeah.
+
+>>Aaron	24:47
+So, 805 962, can you click into document 10.
+
+>>Aniket Tatipamula	24:52
+I wanted to understand.
+
+>>Aniket Tatipamula	24:54
+Understand this because like what should we write, right? Because I think it's a big document.
+
+>>Aaron	24:58
+Hmm.
+
+>>Aniket Tatipamula	24:59
+And I think it does both the years of data, is it? Let's click it. Okay, that's actually good.
+
+>>Aaron	25:09
+I suspect it's document eight then. So that's actually my fault. I put 10 instead of eight.
+
+>>Aniket Tatipamula	25:14
+Hmm, document eight.
+
+>>Aaron	25:20
+Let's click the prior year refund.
+
+>>Aniket Tatipamula	25:30
+This we changed yesterday itself, right? I remember we had written a different project.
+
+>>Aaron	25:35
+Yeah, so you wanna retry this one? Let's retry it.
+
+>>Aniket Tatipamula	25:39
+Let me quickly check the logic once again.
+
+>>Aaron	25:42
+Hmm.
+
+>>Aniket Tatipamula	25:46
+Pick up the latest entry then. Oh yeah, I mean, I had one last question. Do we need to sum up? Because you're saying that it is always going to be only one entry, right?
+
+>>Aaron	25:56
+Yeah, it's gonna be one entry. You don't need to sum anything.
+
+>>Aniket Tatipamula	25:59
+Should I remove the sum then?
+
+>>Aaron	26:01
+What does the sum do?
+
+>>Aniket Tatipamula	26:03
+I remember initially like what you mentioned was, or maybe there were a few packets where it was not just one value. So there were two refunds and then we had to sum both the refunds.
+
+>>Aniket Tatipamula	26:21
+And now with this logic, it will not work because when you say pick up the latest entry, then this means it will probably only pick up the one entry that is the last entry. I mean, even if it is there, it's not gonna work. So what we are doing just to get everything right. So we extract all the transactions and then in the refund section, we have written a logic where we look for tax return companies in description, but should not contain Eft or amended. It's exactly what you wanted. If it has it, then it becomes true. If it becomes false, then what we've done is we've captured the process date. Earlier, the logic was we were having that last year check And then we used to find that last year and then sum them up. Now what we are doing is we are just checking the first iteration of it or first item in the list And then we just use that based on the date.
+
+>>Aaron	27:09
+Yeah, I think we can roll off this right now until it breaks. I think this is better than the current. Let's just, you know, I'll keep trying things and I'll just deal with it. And then once it breaks, we can figure it out. Or even I can figure it out, I think.
+
+>>Aniket Tatipamula	27:25
+Yeah, then let me just retry this once.
+
+>>Aaron	27:27
+Yeah, let's retry it. I think that'll work now. The ones I put in today didn't have this issue. So I'm pretty confident that what you did is good.
+
+>>Aniket Tatipamula	27:35
+Okay, then I'll just retry just for the sake of it. Yes, for that. If I 36, document number eight.
+
+>>Aaron	27:51
+Okay.
+
+>>Aniket Tatipamula	27:59
+This one, I think failed. We fixed the table extraction and then this was the same thing, just the table extraction issue. But it's solved. Equifax, I think it's an issue on R and we'll fix it independently. This, I think we just discussed, I also fixed it. This partial match, we'll fix it.
+
+>>Aaron	28:15
+Great.
+
+>>Aniket Tatipamula	28:15
+What's up, not extracted as this one.
+
+>>Aaron	28:17
+This is the date getting. This is the date you have that, right?
+
+>>Aniket Tatipamula	28:22
+Yeah. Yeah. You fixed?
+
+>>Aaron	28:24
+Yeah, I fixed it.
+
+>>Aniket Tatipamula	28:26
+We'll get the date fixed. Okay. I think that's about it, right? Are there any other issues that you're observing that you need to fix?
+
+>>Aaron	28:32
+No, I think that's it from our end. So Yeah, I think we're clear on the path forward, right? Let's just see this. What's it extracting now?
+
+>>Aniket Tatipamula	28:49
+917, that's what we wanted, right? 917, 2025. Document date.
+
+>>Aaron	28:55
+That's good. Yeah.
+
+>>Aniket Tatipamula	28:57
+It would work, it's just that we would have to, let's see, and then if it breaks, then we'll get it fixed. I don't see any big problem because this is something that we know what to fix, right? It's not a big problem for us. Yeah. We just re -tried that document, right? Document number eight. Five, six, seven, eight. Which still, we'll wait for a second.
+
+>>Aaron	29:28
+Yeah, no worries. Pretty fast.
+
+>>Aniket Tatipamula	29:48
+So one last item, Aaron. Like if that R &d advisor list keeps on expanding.
+
+>>Aniket Tatipamula	29:53
+I think that that would become a bit of a problem for us right like we would not how do you guys maintain it right now?
+
+>>Aaron	30:03
+It's not really expanding more so than like I keep adding names because the checker isn't like Isn't passing it. So I'm just like Okay just approve just add this to the list. You know what I mean?
+
+>>Aniket Tatipamula	30:20
+So the next minute happens will not do that.
+
+>>Aaron	30:23
+Then we will probably fix the logic properly I will probably think a little bit more on how to fix it Yeah, because every time I see like Like Treadstone Party limited I see like Treadstone enterprises party limited. I'm just like well, I'll just add it to the list. It's the same thing It's the actual list of advisors isn't really changed It's just that Like I'm adding another case because it's covering an edge case basically Yeah
+
+>>Aniket Tatipamula	30:55
+So I think that I'll do and maybe that check itself I'll update it a little bit like if it's if it is actually not matching Literally not matching then I'll probably put it as an error Then even if it does any partial match, then we'll just pass it through because I think that that's good enough for now
+
+>>Aaron	31:10
+Yeah, I think that's a good plan Yeah, and you're clear on the the document 9 the overdue. Okay, great. So I'm processing you
+
+>>Aniket Tatipamula	31:22
+Yeah document 9 You mean I you mean the edge check outside right summing up the overdue and not not yet you Yeah That that that I'm that I'm correct, but I'm going to do on the extraction Right extraction looks good
+
+>>Aaron	31:38
+Oh, no extraction looks good.
+
+>>Aniket Tatipamula	31:39
+Yeah, this is great Not sure why this is taking so much time Um, it's a little odd Yeah, it's it does sometimes what happens Aaron is Oh you have you do have it. That's okay Sometimes what happens is like we have Quite a lot of customers Uploading at certain periods right like we have one or two customers What they do is they dump all their documents at once like And they they honor the rate limits though But they dump all of them at once and that's where Every once in a while You may you may take a little bit more. It may take a little bit more time not all the time sometimes
+
+>>Aaron	32:26
+Okay I understand Anyways, we'll check this out.
+
+>>Aniket Tatipamula	32:35
+I think there could be something else as well going on Uh, I know the issue if it is not fixed. I'll let you know no point on staying on the call. Um So are there anything else like any major issue Aaron that you want us to fix that you feel would probably deal the entire operation
+
+>>Aaron	32:52
+Hmm So we discussed the um We discussed the excel extraction, um When do you think you guys are able to do that frankly because uh I'll tell you from our end if we want to make code in salesforce to to like um Set convert into excel And then you guys are going to do that where It's not really the most efficient thing For us to like have our software engineers to do that, too It's gonna it's gonna take time and it's gonna take decent amount of money, too
+
+>>Aniket Tatipamula	33:28
+So What we'll do is then i'll set it up for i'll set it up for you But the way i'll do it is i'll probably create a proxy api So i'll talk to Eric Tomorrow. I'll create a proxy and what that would do is it would just You would just take the document as is Convert it and then like you can upload all the documents there And then we'll upload it internally and then we'll send the response back So we'll create that api. So the only question for you then would be um, The document give me one second.
+
+>>Aaron	33:53
+Let me just open up that document Yeah, and I do know our excel has a couple of tabs, but we only look at one specific tab So if you need color on that I can do that, too But we could also figure that out tomorrow Um, we have 30 minutes tomorrow on the calendar
+
+>>Aniket Tatipamula	34:17
+Yeah I think it's a summary tab. Uh, that's the only tab that we should be looking at right? I think this one 13 All of them looks all of them look the same and we are just supposed to go to summary, correct? This is a document that we have to extract. Yeah, so it will always be this no matter what Yeah
+
+>>Aaron	34:37
+That makes it easier for you guys, right?
+
+>>Aniket Tatipamula	34:39
+Yeah, it will it makes easier for us. We will get this thing done So it will always be summary sheet with the name summary and it will always be in this section So we can create a pdf out of it and get it uploaded So this was one document, but there was one more thing
+
+>>Aaron	34:52
+More excel sheet right this is one we don't need that so let's look at 20 20 is also just a summary tab okay that also makes our life a little easy Okay this looks perfect what else 21 statement it's just this
+
+>>Aniket Tatipamula	35:21
+Yeah
+
+>>Aaron	35:22
+Okay
+
+>>Aniket Tatipamula	35:23
+That's about it Right Yeah
+
+>>Aaron	35:25
+That's about it so they should be I think it's all I think it's pretty straightforward But I'm not a software engineer so you guys can think about it um Yeah Yeah put it on my calendar I'll be there tomorrow And I'll have Eric be on to in the meantime I'll put two more things through as usual sure and that helps let me quickly check this so you guys have a good customer giving you guys
+
+>>Aniket Tatipamula	36:07
+Yeah we look into this and Thanks Yeah
+
+>>Aaron	36:15
+No worries I understand so like what we said about actually no you guys can discuss it with Eric tomorrow But Yeah That's great okay Again again
+
+>>Aniket Tatipamula	36:30
+Thanks thanks Adam do let us know if there are any major blockers so that like we can probably start working on it as early as possible that's that's the only request that no I understand um and uh like right now I don't have any
+
+>>Aaron	36:43
+But I'll do my best I'll do my best to make the system break you know if I can break it you can we can identify it so good All right thank you thank you guys
+

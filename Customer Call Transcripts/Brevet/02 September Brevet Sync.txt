@@ -1,0 +1,471 @@
+>>Aaron	00:00
+But just giving you a heads up. Sure, Aaron. Yeah. Yeah. I did try to set up as much as possible over the weekend. But I still imagine that there would be some fail sites. And I think we keep on fixing as we come by. Yeah, it's good. I saw the situational stuff was updated. So that's very good.
+
+>>Michael Bottazzi	00:28
+Ok.
+
+>>Aniket Tatipamula	00:29
+Ok.
+
+>>Aniket Tatipamula	00:38
+Then we can start, right?
+
+>>Aaron	00:40
+Yeah, let's get into it.
+
+>>Aniket Tatipamula	00:42
+So let me just quickly give an update of what has been done and what's pending. I think Michael left by mistake. So basically, as in whatever you requested for, most of the stuff that I could see on the cases, like with the matching of names, the situational data that you gave, and even the extractions, we've fixed as much as we could. We obviously did not fix the signature yet. And Manan was supposed to actually go through the data yesterday, but I think everyone was on leave yesterday. So maybe he'll take tomorrow and then go through the signatures once again in detail. Because I could see signatures are failing. So we'll get that thing fixed. For every other case, I did try to go through all the historical cases and try to fix as much as I could. But yeah, I was just checking the issues that you listed. We'll have to go through them.
+
+>>Aaron	01:45
+Could you just screen share? And I can walk you through maybe some of the cases we uploaded just today. Yeah, OK.
+
+>>Aniket Tatipamula	01:58
+Should be fine.
+
+>>Aaron	01:59
+Do you want to start with Hyperfire? I'm actually not too familiar with that case. It was a bit of late notice. You let me know.
+
+>>Aniket Tatipamula	02:09
+Like, which case should I open up? Yeah, let's start with that one.
+
+>>Aaron	02:15
+So this one, actually, a lot of it was passing. So this was just funded, I believe, today. If you scroll down, so obviously, we noted the guarantee and indemnity is situational, so.
+
+>>Aniket Tatipamula	02:35
+I just made sure. All the simple changes, I just added it.
+
+>>Aaron	02:39
+Oh, yeah, sorry. Ok, great.
+
+>>Aniket Tatipamula	02:44
+Yeah, this is all good.
+
+>>Aaron	02:47
+I mean, I think the first issue comes in here. Ok, so for the prior tax return, if you click into document eight.
+
+>>Aniket Tatipamula	03:00
+Keep a copy of this.
+
+>>Aaron	03:08
+Yeah, so this is the right number, 236. This is good, but the reference value is from document eight.
+
+>>Aniket Tatipamula	03:22
+Oh, you want me to open the reference value document?
+
+>>Aaron	03:27
+Number eight. This one?
+
+>>Aniket Tatipamula	03:30
+Yes.
+
+>>Aaron	03:33
+So I looked into the table, if you want to open that up. I think it's returning a true value for two things. So the first one is the correct one, where it says 236. So that is, you know, that's true, but there's also returning a true for an amended whatever it is. So it's basically adding up the two to get 410 ,000, which is returning. So the reference value is wrong here, basically. I see that sometimes it's working. Like I uploaded a few other ones and this issue wasn't present. But for some of them, I think just the prior tax return is still a little bit inconsistent. So I thought that should be noted. Yes.
+
+>>Aniket Tatipamula	04:20
+Let me quickly check how is it set up. This is tax return, company's income tax for the period.
+
+>>Aniket Tatipamula	04:38
+Check the tables column for row that has a value true, check table for this date. Column and if the year is the previous for all such rows, then it's okay. This is okay. There's nothing wrong about it.
+
+>>Aaron	04:53
+I think when we described it, we.
+
+>>Aniket Tatipamula	04:58
+We said the description is for this and that's written companies. Do you want this to be modified a bit? The one that you feel is right.
+
+>>Aaron	05:15
+Well, I don't know whatever works, right? The specific wording, the specific wording of the prior year refund should be pretty consistent. Maybe we can make the criteria a little more specific because it seems that with the current one, it's picking up a little more than just that one.
+
+>>Aniket Tatipamula	05:48
+So can I specify that it has to be companies income tax refund? That's it. And no other refund. What is EFT by any chance?
+
+>>Aaron	05:59
+Please say that again.
+
+>>Aniket Tatipamula	06:01
+What would be the full form of EFT? This one EFT, right?
+
+>>Aaron	06:11
+Actually have no clue, but it always says EFT like on these documents.
+
+>>Aniket Tatipamula	06:20
+Maybe if you just. Could you repeat that? Can we just safely ignore EFT refund? Would that be okay?
+
+>>Aaron	06:32
+Yeah, probably. I mean, yeah, that's fine.
+
+>>Michael Bottazzi	06:35
+I think EFT is just electronic fund transfer. So as long as we're. Karen mentioned not pulling both. We need to look at the I forget what that was the name of the other one.
+
+>>Aniket Tatipamula	06:48
+Yeah.
+
+>>Michael Bottazzi	06:50
+Return.
+
+>>Aniket Tatipamula	06:59
+Transaction is this in the description, but should not have EFT.
+
+>>Aniket Tatipamula	07:20
+Check and if transaction has tax return companies in the description, but should not have EFT in the description, then return has to and it's false. Okay, let me just quickly save this.
+
+>>Aniket Tatipamula	07:47
+Wait for a minute and we can go to the other checks in the link. Sure.
+
+>>Aaron	07:53
+I think for this one. There was also the Excel cases. Obviously their PDF for some cases. They're working fine. But for this one, it seems that there was some some issues with the extraction.
+
+>>Aniket Tatipamula	08:08
+Let's have it. Let's go through it, which would be document 13.
+
+>>Aniket Tatipamula	08:21
+Oh, it's actually this like in it's it's really bad like I need a solution. Yeah, that's the major reason because the upload I probably understood what the issue is. And what you would have to do is when you are exporting this, I think you would have to Excel sheet. You do have an option of keeping your screen size concise because now when you are exporting your exporting the entire sheet and this is a part of it and what we do while we process we cannot first process a very big document. So we scale it down so that like we can actually handle the OCR on it. And that's when this is actually going like, yeah, that's where we are losing the data. I mean, that's the major reason why would have not we would have not picked it up. Okay, we just kind of know where where would be if I can't read it and it's very difficult for machine to also figure that out. Yeah, I mean, it's it's all it's all over And it's not okay.
+
+>>Aaron	09:36
+Okay, so so far now we I think we have to work with this, but we will see if we can talk to the Salesforce people to see if we can essentially increase the resolution.
+
+>>Aniket Tatipamula	09:53
+Can you please explain how is this downloaded in PDF?
+
+>>Aaron	09:57
+Um, simply for now, because it's the salesforce is essentially just pulling like a sheet. We're just printing the summary tab.
+
+>>Michael Bottazzi	10:10
+Yeah, we're converting one sheet on an Excel doc to a PDF.
+
+>>Aniket Tatipamula	10:17
+Would it be possible to share one single sheet with us? What we can do is we can check like what's happening, and maybe help you like while getting this thing downloaded.
+
+>>Michael Bottazzi	10:27
+Like the Excel side of it? Yeah.
+
+>>Aniket Tatipamula	10:30
+Is it done via Excel directly as in you just open up the Excel sheet and then download it or are you using some software?
+
+>>Michael Bottazzi	10:37
+No, that's all we've been doing. Just opening it up and saving it down. If you want an example, yeah, we can we can send one over.
+
+>>Aaron	10:43
+I think you if you look into the documents, like whether like the box documents you have access to or within even Docs Sumo, I think they're all there already. Sure.
+
+>>Aniket Tatipamula	10:57
+And I will have a look at it then. Because what what happens is when you click on print here, you have an option right now it is actually printing the entire context of the document, but you do have an option to select how much you want to print. So there is a print selector option like this. I'll also have to check but when you do that, and then you only get to select that selection. So.
+
+>>Michael Bottazzi	11:21
+Right, we can look at something like that.
+
+>>Aniket Tatipamula	11:25
+Yeah, we'll just get back with how exactly it has to be done and then let you know or let the team know if you want us to have a call. Sure. Okay. And let me go back. And while we are at it, Aaron, Michael, as in because when you upload it into Docs Sumo, maybe we lose certain resolution. And this is just for our engineering team. If you can share that actual PDF with us as well, we can just open and check like how good the Pdf was and are we downscaling it. And if we can do something at R &D. Yeah, we'll email that over. Thanks, Michael.
+
+>>Michael Bottazzi	12:08
+Yeah, no problem.
+
+>>Aniket Tatipamula	12:13
+This is done. Let's check it. Still did not write.
+
+>>Aniket Tatipamula	12:31
+Okay, we will look into this, Aaron, we will get back to you on this, but it should be doable. We will get this fixed. Sure.
+
+>>Aaron	12:39
+Thank you.
+
+>>Aniket Tatipamula	12:40
+I think. Then let me go down. Yeah. 13 was the understood issue. 15 signature check. We know about this issue. This is basically the single director versus multiple director issue. You know, we are not picking up that signature properly. Okay. What is this wrong?
+
+>>Michael Bottazzi	13:10
+Minimum interest amount must match. What does it say? Must match value from document 13. Okay. Yeah, this should match. So let's see. That's 8331.
+
+>>Aaron	13:27
+I think for this one, the reference is poor because the reference is from the Excel document.
+
+>>Michael Bottazzi	13:33
+That's getting right. Misinterpreted.
+
+>>Aaron	13:36
+Yeah, that's probably same with 20.
+
+>>Michael Bottazzi	13:46
+This is probably all referencing against 13, which if there's issues extracting.
+
+>>Aniket Tatipamula	14:01
+I think the rest looks good. So major issue is the Excel and second one is a sign signature. So understood.
+
+>>Aaron	14:11
+Sure. I think the massive facility agreement here is failing, but everything looks fine.
+
+>>Aniket Tatipamula	14:24
+I'll look into this. What happened here?
+
+>>Aaron	14:27
+Great. If you want to pop into clear water or clean water.
+
+>>Aniket Tatipamula	14:36
+I'll just note this thing down for me too. Sure.
+
+>>Aniket Tatipamula	15:00
+Yes, Adam, which one should you want me to go next?
+
+>>Aaron	15:05
+Let's pop into clean water drinking solutions. Should be at the very top.
+
+>>Aaron	15:25
+Yeah, so the R &D advisor, something like, I don't know if this is too far removed because you're comparing William Buck, New South Wales Party Limited versus just William Buck. But something like that is what we mentioned with the specificity. There's also Rsm versus just Rsm Australia Party Limited or something of the sorts. So a lot of these examples, I think, are failing.
+
+>>Michael Bottazzi	15:56
+I wonder if we need to get them to list Aaron and just make it expensive by ourselves. I don't know. I mean, of course, if there's a way to do it with the AI or the extraction, that's great.
+
+>>Aaron	16:12
+Yeah, if necessary, we can literally expand the R &d advisor list to cover the cases. And then we can think of something of that. I think that plus a fuzzy check would probably solve most of these.
+
+>>Aniket Tatipamula	16:33
+Sure, Aaron. Yeah, you please share the ones that you feel should be added. I did see this earlier as well because when I was looking at other documents, I could see there's only a partial match and we did not match it. But you let us know what logic you want And then we'll keep it accordingly. Ok.
+
+>>Aniket Tatipamula	17:01
+I think this is also good. It failed only because of this and not because of this. So you wanted this check, right? Either Abr or Asic matches. And that's what is happening. It is not matching or registered, but Asic is registered. So we just mark it as warning. But if this would have passed, it would have been a pass.
+
+>>Michael Bottazzi	17:19
+Yeah, great. Yeah, that's great.
+
+>>Aaron	17:21
+Great.
+
+>>Aniket Tatipamula	17:28
+This failed. Do you want me to open this up?
+
+>>Aaron	17:34
+I think this one, I saw that the latest Ppsr was actually June 25 of 25. So I think theoretically, this should have passed.
+
+>>Aniket Tatipamula	17:52
+25, 25, 25. I think it failed. We will just change.
+
+>>Aniket Tatipamula	18:12
+Oh, I think in the specific date check, we first check this. Then we check this. Should be within 360 degrees. 360 degrees from today. We will look into this. I think this should have passed. Not sure what happened. Maybe there may be some issue with the code.
+
+>>Aaron	18:29
+Ok.
+
+>>Aniket Tatipamula	18:30
+We will look into this, Aaron. Did you note it here? Or should I note it down? It's not there, right? I'll note it down.
+
+>>Aniket Tatipamula	18:53
+Let's take the check on Ppsr.
+
+>>Aaron	19:10
+Ok.
+
+>>Michael Bottazzi	19:27
+If you want to jump to document 15, I believe.
+
+>>Aaron	19:46
+Do you believe the signatures here are actually good?
+
+>>Aniket Tatipamula	19:55
+Yeah, let me check this out
+
+>>Aniket Tatipamula	20:07
+Yeah, this code there is something there's some issue with this And and then we have to get it fixed There's issue at our end because we tried few things we could not Will we have asked our engineering team to look into this and figure out if we can fix this great Also for for this document for the business payment account For this one.
+
+>>Aaron	20:29
+It's extracting Macquarie Bank Limited
+
+>>Aniket Tatipamula	20:37
+Yes Yeah, basically Hey, actually, I need to jump off here if I have any other questions, I'll just email that works Yeah, thanks Michael Thanks, I think that's it for this For this packet, I just I scrolled through it myself
+
+>>Aaron	21:40
+So so those are the primary issues. I think There are still like a few other things that are just like here and there this and that But You know, I I just wanted to check in and bring this up to you. Make sure that you guys are aware of it I think there's some issue with my internet.
+
+>>Aniket Tatipamula	22:08
+Can you hear me? Yeah, I can I can hear you now if you want to repeat what it was Yeah, so what I was saying is Thanks for pointing these out if you can please add these issues to that issue list That way we can actually keep track of it And then the moment the moment we fix it I'll mark this as done because and that way you would also understand that which ones are actually done and then which ones are pending and Like for the next one week at least we will make sure that everything that you put here is like come like we fix it as it comes by and Ideally, like you should get these things done except for the signature check everything else You should observe that it is done the next day itself
+
+>>Aaron	22:50
+Okay, that's fine Yeah, so let's set up a call on what was it Thursday and then In the meantime, I'll see what I can do In terms of just expanding the list it will take me a little bit For The R &d expanded list And then I'll see if I can put some other issues. I've loaded two other packets Honestly, I'm not very familiar with them because I I didn't have the time to actually look at them But I mean if if the team wants to look at them, I'm sure there's there's a few recurring issues in these two Sure, I don't know.
+
+>>Aniket Tatipamula	23:34
+I'll personally go through it and then see what's happening I think this one is failing for sure because I think we are doing a very strong match here hmm I'll have a pass. I'll have a look into this and get it fixed for the rest I didn't I think it's just like is this thing genuine Jessica Oliver And then Did we pick it up wrong?
+
+>>Aaron	23:56
+No so for this one, they They screenshotted an email basically So So I think for this one You don't have to like fix it or anything. I think this is literally just the client did a poor poor job and providing a great document You know, it's a screenshot email So you don't have to like Sometimes when you guys I guess the general note is like when you see like a document Where you kind of feel like the extraction is doing what it's supposed to But just like the document was poor and just treat it as like a one -off exception Because sometimes it is up to the client to upload these things and sometimes they won't Understand or do a great job at them and then for those we can just we can feel free to look at them If it's just not that common
+
+>>Aniket Tatipamula	24:54
+Helps, thanks.
+
+>>Aaron	24:56
+Yeah, no worries. So if you want to look at this, and I can see if I can help out by putting any new stuff into this too.
+
+>>Aniket Tatipamula	25:09
+Sure, as you upload, we'll do our due diligence as well. And then we'll go through these documents. And then if you are putting issues here, that would surely be helpful to pinpoint them quickly.
+
+>>Aaron	25:21
+Great. Also, last note, give me one moment. I forgot which packet it was.
+
+>>Aaron	26:00
+If you want to go to Lifebox Digital, OK, great. So let's just walk through this one too. For this one, there's a few simple things, which is for the beginning of the financial period, it's 7 -1. But it's formatted as 01 -07. And it's being picked up as January 7th in the actual comfort letter. And then, I mean, for the estimated refundable tax offset, I think right now we're checking for exact match. But in the future, we may want to check that the radium application number is less than or equal to the R &D comfort letter number.
+
+>>Aniket Tatipamula	27:08
+Understood.
+
+>>Aaron	27:11
+So just a note of that. Can scroll down a bit more. Ok, so they actually do have tax liabilities. So it's good. Actually, it's a very, very good signal here that it was being picked up. Scroll down a little more. So until you see the next red. Ok, so for the integrated client account, I think for this packet, it was like an update document or whatever. And both of them are being categorized into this document. And basically, the one that is not relevant is being extracted. So as a result, there's no values.
+
+>>Aniket Tatipamula	27:57
+So we can do something about it. But what is the name of the document? It's the same. Then can we use a number in front of it? Like, can we use 09? And then it will only be used as 09, right? The document that's supposed to be used will start with 09, right?
+
+>>Aaron	28:17
+Yeah.
+
+>>Aniket Tatipamula	28:18
+Ok, I'll get that thing fixed. Not a problem.
+
+>>Aaron	28:23
+Just as a heads up, I know at the start, we were using the values inside the documents to sort them. But then now, because we have the names and stuff, we're primarily using the names is what I'm assuming. But I would be careful changing them for all of them. For example, the green ID report, sometimes we have multiple green ID reports. And for that, we do need to check them. But for the Ppsr stuff, they'll be very consistent. And this is just a one -off case, in my opinion. It's not very common that there's an updated notice or whatever.
+
+>>Aniket Tatipamula	29:05
+Sure, Aaron. And just for your info, if you want to ever correct this, then it's quite simple. I hope you know that, right? It should not take you more time. You just go to that document and then change the doc type. So I think in this case, it was document number.
+
+>>Aaron	29:30
+That's the first one. It's at the very top.
+
+>>Aniket Tatipamula	29:32
+Oh, it's the first. Yeah, if you want, then I can just change the doc type. So there is, I think we kept others here.
+
+>>Aaron	29:42
+Yeah, you can just make it auto -classifier.
+
+>>Aniket Tatipamula	29:46
+If you auto -classify, it will again start classifying it. So you cannot, like you'll have to put in others. And it's settling. And I think.
+
+>>Aniket Tatipamula	29:53
+If I'm getting this right, the actual one would have gotten properly classified now. And it should now work. Which one was it? It's 9.
+
+>>Aaron	30:08
+Ok. I see it now. Great. An overdue. Balance must not be listed.
+
+>>Aniket Tatipamula	30:19
+Is this correct?
+
+>>Aaron	30:21
+This is correct. For the balance, I think we might have to change that check.
+
+>>Aniket Tatipamula	30:32
+It must not be less than 0, right? And it's not less than 0.
+
+>>Aaron	30:38
+Give me one moment. Let me check with another case.
+
+>>Aaron	30:55
+Could you click into that one, the balance?
+
+>>Aaron	31:11
+I think instead of having it less than 0, we have to make it so that it can't have dr, like a positive dr value. What does dr mean? It means, OK, Dr is just debit. So it means that they owe money. Versus cr, sometimes they'll have like 1 ,442 cr. And that would mean they're owed money by the Ato. So essentially, dr just means they owe money. So it will never actually be negative. Because instead of negatives in the counting, it's dr versus cr.
+
+>>Aniket Tatipamula	32:01
+Ok. Both the balance and the overdue, right? Extract balance.
+
+>>Aaron	32:16
+The overdue should be fine. Because as long as it's going to be the same, like if there's something in overdue, but yeah.
+
+>>Aniket Tatipamula	32:45
+Yeah, it should hopefully work now.
+
+>>Aaron	32:48
+Great.
+
+>>Aniket Tatipamula	32:52
+We were on Livebox, right?
+
+>>Aaron	32:58
+Yeah, we're on Livebox.
+
+>>Aniket Tatipamula	33:03
+Oh, sorry. I think I made a mistake. Let me go back.
+
+>>Aaron	33:07
+No, you're good.
+
+>>Aniket Tatipamula	33:09
+Yeah.
+
+>>Aniket Tatipamula	33:17
+It worked, right?
+
+>>Aaron	33:22
+Yeah, that's good. Ok, very nice. Priority tax refund, extractor value is none.
+
+>>Aniket Tatipamula	33:36
+For this one, I think 616456717. Ok, this we will clean up And then we should be good. Yeah, so those are just a formatting issue.
+
+>>Aaron	33:44
+It seems that this is a first time issuer, basically. So they have no R &D tax refund and no value was extracted. So theoretically, that would be a pass, I guess, because no value and zero is functionally the same.
+
+>>Aniket Tatipamula	34:02
+Ok, I'll get this check updated.
+
+>>Aaron	34:05
+Great. A little bit of, if you want to scroll down into document 13, I'm assuming some of this is still due to the quality of the PDF for the Excel. But for the division, if you can make it less specific, honestly, sometimes these classifications aren't that rigid. It's kind of like whatever. There's a lot of hearsay. Instead of technology, if I say information technology or whatever, it's not really a big deal as long as it's not in high risk sector. So if you even want to make that check a lot looser or.
+
+>>Aaron	34:52
+Do whatever with that check.
+
+>>Aniket Tatipamula	34:56
+Yeah, maybe I'll just mark this check as a just to like a warning if it doesn't match rather than failing, I think, because if the only thing that you're worried about is high risk, right?
+
+>>Aaron	35:06
+Yeah, basically.
+
+>>Aniket Tatipamula	35:09
+Yeah, so if it doesn't match, then we'll mark it as a warning. Sure.
+
+>>Aaron	35:13
+It's not, it's not important. It can say like mechanical engineering versus like engineering And it's just not not an important thing. Okay, thanks for that. Um, minimum interest. You can.
+
+>>Aniket Tatipamula	35:35
+Okay, it looks like no worries document 16 document 13.
+
+>>Aaron	35:46
+Yeah. So I'm gonna, I'm gonna pull this up. Yeah, minimum interest is a, it's a very new thing. So, some documents like literally don't have it. Okay, so it is present in document But it's not being picked up because the quality is poor. That's fine. Secure loan agreement signature check falls. Great. This is working fine. This is once again another Excel document. It's having the same recurring issues. Circular. Great. Yeah. I mean, as you can tell, it's, it's like the same few things here and there were some differences. I think that's a good sign, honestly. And I think we're getting to a point where it's getting like extremely presentable. As long as we can figure out a solution. So, you know, as we go on to the next steps we recently scheduled a call with our Salesforce manager. And basically, we're thinking about the box and Salesforce API integrations and how that would work. So maybe that can be a topic in the next call.
+
+>>Aaron	37:28
+I know we have some questions regarding that. If there's any possibility of you giving a heads up in case you need like, there's another person who's responsible for the integrations rather than I know you guys are responsible for like the extraction fields more and the validation stuff. But yeah, just tossing that on your radar.
+
+>>Aniket Tatipamula	37:51
+Yeah, I would be the point of contact actually like I do. I don't just handle this as an I'm very specifically handling brevet because we really want to know what's happening here. So, but in general, like I look after the entire engineering team. So, should not be an issue. If I want to add like if you're going with box, then I will add the team lead from the box integration so that he can also join the call.
+
+>>Aaron	38:17
+Um, yeah, we're considering both options. But, you know, we let's let's get this down first and then we can we can worry about that, you know. And I think we're in a good spot. So, you know, I'll add some more things in there if necessary. And then let's let's see you said on Thursday. What time works. Do you use 930 still work for you. 930 AM yesterday.
+
+>>Aniket Tatipamula	38:46
+Thursday night. Yeah, I think 930 would work 930. This is actually Isp. I'll have to check. I'll just check my calendar because at the same time, as in anything beyond same time would work.
+
+>>Aaron	39:00
+So, Yeah, and you can let us know just just send an email back and then Yeah, this was good. Okay, let's get this done. And then we've been we've been talking to the executive team and such. So, It should be should be a good call sooner. We can present it will be great. Yeah, thank you for this call.
+
+>>Aniket Tatipamula	39:30
+Thanks. Thanks a lot. And then actually you taking a lot of time figuring out all of these issues. Yeah.
+
+>>Aaron	39:37
+You know, we're, we're just trying to, I want to make life easy for you guys, since you guys obviously come from an engineering background. Sometimes these are like business, business level decisions and changes.
+
+>>Aniket Tatipamula	39:51
+I think that's it, thank you so much.
+
+>>Aaron	39:54
+Yeah, no worries. Have a good one.
+
+>>Aniket Tatipamula	39:57
+Anything else, Aaron?
+
+>>Aaron	39:59
+No, I think that was it. You just said any, I mean, I can upload a few more in my free time. And I'm looking to upload the more recent packets, just so the dates aren't constantly failing. So for example, Hyperfire is quite recent. But besides that, if there's any additional issues, I'll try to put what I can in the sheets. But just like a disclaimer, I'm a little bit busy. So I might have to just leave it at that. But we've gone over quite a few of the things already in the duration of this call. And then as a long -term deliverable, we'll see if we can do anything about the R &D comfort letter. So on your end, maybe you can look into the fuzzy checks part of it more. But for us, we can expand the literal list of criteria. And the two together will create a cohesive check that is more comprehensive, more expanded, and still not too specific, where very simple things are failing.
+
+>>Aniket Tatipamula	41:05
+Yeah, that's what I said.
+
+>>Aaron	41:08
+Ok, that's it. Yeah, enjoy your night.
+
+>>Aniket Tatipamula	41:14
+Yeah, thanks, Aaron. Have a great day.
+
+>>Aaron	41:16
+Bye -bye. Have a good one.
+

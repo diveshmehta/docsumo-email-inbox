@@ -1,0 +1,165 @@
+>>Akash Nawal	00:00
+You guys were speaking to him in March, and you guys came back, so I was curious, so I'd like to watch it. So I thought you'd probably let me also jump on the call. Sure, sure. So nice to meet you, Jason. Yeah, nice to meet you as well. Oh, well, I guess I think it was like he's out, so I guess he'll jump back in at some point.
+
+>>Jason Cohen	00:22
+I always find Google Meet to be very not good, you know. Oh, really? Yeah, I don't know if it's us, or I don't know.
+
+>>Akash Nawal	00:33
+So what do you prefer generally?
+
+>>Jason Cohen	00:36
+I mean, Teams or Zoom seem to work better for us.
+
+>>Akash Nawal	00:39
+Teams or Zoom, got it.
+
+>>Jason Cohen	00:40
+Yeah, so it's been a busy year. What has happened is we're just too busy to do the things that we thought we could do. And so we still have the same issue, although the volume has grown. I think last time we spoke it was, I don't know, a couple thousand. I forget what it was. What do you think we're doing now, Stash?
+
+>>Stosh Sutkowski	01:10
+Probably coming up to 3 ,000, if not more. Okay. I'm thinking somewhere. Yeah, that's… Maybe more than that. It could be up to five, but some months, depending on the volume.
+
+>>Jason Cohen	01:22
+That could like double in the next couple of weeks as well. So we picked up a few new clients that we're onboarding at the moment, and so I know that they're check heavy as well. So we have the recognition side down, right? Like our recognition is getting the same results that Docsumo is. What we're lacking is the repair reject side. And so you guys just have a great interface for that. And so that's just where we're stuck. And so we're like, look, either we haven't been able to get our act together in six months to build it. I mean, it has been so busy doing other things. It hasn't been for lack of interest or trying. It just keeps falling down the priority list for us to do. And so Stash and I were talking, and it's still an issue that we need to solve in terms of how we're capturing checks. And so we took a look at the – we were able to hop back into the platform and use the 100 credits and sort of loaded some checks into that. And it's working the same way. Like it's doing what it did last time, which is good. Are there any updates or changes or anything to the system since?
+
+>>Jasneet Singh Malhi	02:47
+You will be surprised, Jason. I'm sorry, my internet was a little wavy, but everything's sorted now. But you'll be surprised, Jason. We have made a lot of changes, not only from a product standpoint, but from an Llm standpoint as well. We started using VLLMs for the extraction, which is basically a visual component of a large language model, which has more context. Now we also have the ability to write prompts for a specific field, which I'll quickly show it to you as well in just about a minute, which gives that added context to an Llm to do a job better. We also have something called a data table, which will single -handedly revolutionize, I think, your workflow. I'm not sure if you were able to kind of look at data tables, but it is basically just one. This was the last model, I think, that we created for you that we used on the last demo also. I started to share my screen. Please confirm if it is visible. Yep. So this data table is basically one consolidated view of all your checks across the entire, you know, all the ones that you've uploaded, right? And you can look at all the data here. You can basically ask it questions in Nlp. So let's say if you ask it a question, how many checks above $100, as an example, right? It will automatically go ahead and create a filter and give the data back to you. Then you can also go ahead and just click on one of these values, and rather than entering the actual check, you can quickly look at this from right here. So this, like, supercharges your operations team's workflow, and you don't have to kind of rely on going to every check, understanding what, you know, their value is and whatever, and then you can basically get the data in just one consolidated clean data table view. And the best part about this is that you can also go ahead and add a column at any point in time, right?
+
+>>Jasneet Singh Malhi	04:31
+So let's say if there's one more value that you want to extract, you can just name the column name as, let's say, amount, right? And write a prompt, extract the amount, as an example, right? And you can generate this, and then this will basically automatically run that code and give the data back to you. Now, right now, it's not working.
+
+>>Jasneet Singh Malhi	04:58
+Configured properly but you can just go ahead and basically tell it, write a prompt and give it more understanding and it will automatically take the first 10 documents, give the data back to you. Then you can also go ahead and clean the data, validate the data if there's some validation that you need to have, let's say with respect to a downstream system or you want to check that total amount data with an overall system. So a couple of things, I don't want to go all over the place, we also have some calculation rules basically. So we've kind of shifted to a more agile based model wherein we are now offering you the ability to write prompts in Nlp and basically they do the work for you. Similarly, so in this case as you can see I just gave it a prompt and it was able to kind of extract all the amounts without a problem and this is wherein it is extracting the amount from. So this kind of supercharges that entire workflow for your ops team and then they don't have to rely on these and everything. I'm not sure if this was something that you were able to kind of play along on your sandbox.
+
+>>Jason Cohen	05:59
+So looking at this, if I don't want the operator to see the whole check and they're looking at this view, they can only see that, correct?
+
+>>Jasneet Singh Malhi	06:14
+Like what exactly do you mean by that? Could you maybe repeat that?
+
+>>Jason Cohen	06:17
+I'm just, you know, sometimes if we've got like protected information on a document and we don't want someone to see the whole document, we just want them to capture the amount or the account number. By using that view of you're showing us there, it only brings up like that small part of the image. It does. Could you look at the whole image if you wanted to? Correct.
+
+>>Jasneet Singh Malhi	06:40
+You see this review in detail option, right? So basically your team has the entire, they're in the driver's seat, right? You can click on this review in detail and if you open this up, this opens that check like in the actual review screen, which is like the one that you might've seen the last time as well, right? So this is all the information that we were able to get. This is the data tables field. And then similarly, let's say in order to make sure that the productivity is not hindered, your user sees that, okay, this is the amount, this is the right amount. You can just approve the extraction and this goes flows into like a Google sheet or a downstream system. And basically the move, the status changes from review to let's say, right. And then I can, let's say also ask it a question. Oh, many X with, um, let's say a hundred thousand. It will basically automatically create a filter for you and only like give you the data across that entire, you know, field, basically run that through a query. And this will, this can also help your team to kind of understand if there's any sort of analysis that needs to be done. Let's say for this specific account number, how many checks did we receive? What was the total amount? So a lot of things can be done. I'm a little excited to kind of show this to you, but I'm happy to kind of take a step back and kind of understand how do you plan on using it? What exactly your use case? How exactly has it evolved? Because I think the last time we spoke, it was primarily about like check processing and just extracting the data and like having another team validate the data as well.
+
+>>Jasneet Singh Malhi	08:23
+So happy to take a step back and understand what's what, and then we can re center our conversation.
+
+>>Jason Cohen	08:29
+Yeah. So that, that use case is still the same. Um, we're still, you know, when we ran the checks through, we're still noticing just like a poor capture quality of the maker line of the routing account number, check number. Um, is it that the Ocr could, could we load fonts into the engine? You know, you don't have to do any of that, Jason.
+
+>>Jasneet Singh Malhi	08:58
+Basically, since I mentioned that we've now shifted to a Vllm, which is a visual component of a large language model. We have that context that we can give to the system. So if I go to field setup and let's say, if I go to the, so these are all hidden fields. If I go to account number and I tell the system that the account number will be, you know, in this particular, you know, place and will be in the maker font. It has that context because it is trained on the data set. So what the process is that the very first process is the Ocr process, wherein we Ocr the entire data and we send it to a couple of LLMs in the background, right? Let's say we send it to five LLMs, five different LLMs, right? Five different LLMs return us, let's say four out of the five LLMs say that this is, this should be the value. So four out of five, the confidence score is 80%. And if it is above that 80 % threshold, then it won't be flagged for a human review. If let's say three out of five LLMs say that this should be the value. So now the confidence score drops from 80 to 60%.
+
+>>Jasneet Singh Malhi	09:57
+So we will flag it for a human to review, and they can quickly review. And if you kind of look at the actual data table also, if the system was not able to find anything specific, they will give you this low -confidence yellow dot. You can click on it and understand where is this number being extracted from and if it is the right number or not. You can quickly click on Review In Detail so that you don't have to go in each and everything. Let's say if you want to have the account number extracted. So right now it is picking it up from somewhere on the top. But if I tell the platform that this is the account number that I want it to be picked up, and I can just create a box around this, and now the system will know. I can quickly check with the team that if there's also an ability to kind of add fonts to it, I think our engineering team would be able to kind of help us out on that. But I don't think it should be a problem, and we should be able to pick it up. Let me actually quickly.
+
+>>Jason Cohen	10:56
+So you see on that account number, right? Like those dire critical marks that are there, the two hashes and the dot and things like that, like all of those mean something, right, to the machine. But can we, well, you know, and these are all just minor, minor things, right? Like it would be nice to say, look, whenever you see those characters, you know, ignore them.
+
+>>Stosh Sutkowski	11:25
+That's what we're seeing when we were running that through, and same thing with like our other like AI engines we've used too, like it picks up everything else on the check very well. Like I think when I was going through them yesterday and today, it got the amount right every single time, the payee, all that other stuff. It was perfect for that. It's just the account numbers, the check numbers, and the routing numbers that it struggles with, which is the maker font. It's, I mean, we see it all the time with our check processing too, where it's just, it's hard to pick up that text.
+
+>>Jasneet Singh Malhi	11:57
+Now in this case, basically what I did was, Tosh, I asked, I wrote a prompt, right? And on the prompt, I told the system that the check number is at the below of the check and it is in the maker font, and it was able to kind of pick this value up automatically. Right, it gives you a low confidence score, but since we have something called as continuous training enabled, let me quickly show that to you as well. Excuse me one second. So we have, so you basically have the option of choosing like what model that you want to use, if it is, if it should be like a standard model or the advanced basic model. And this continuous learning is basically where all the magic happens, right? So let's say if there's any sort of annotation or correction that you're doing on the platform, and you're telling the platform that the check number needs to be picked up from here with the opportunity of writing a prompt and giving it more context, the system learns from it. So the next time onwards, you know, you don't have to make that same connection twice because now the system is learning from any sort of input that the user is giving you. And that is exactly where a machine learning algorithm is kicking in and it is making the system more and more accurate as and when more and more data is added.
+
+>>Jason Cohen	13:02
+And I think that the, you know, the challenge with the LLMs is that while it is, you know, learning from past things, I mean, every check that we get is different and it may not ever show up again. I mean, that's just the nature of checks. But, well, let's chat a little bit about the pricing model and has anything changed there? What does that look like? How does that work these days?
+
+>>Jasneet Singh Malhi	13:32
+Basically, Jason, our pricing model has now a couple of components, right? It depends on the volume, of course, and the kind of features that you would want to use, right? So let me actually share my screen, our pricing screen. So we primarily have like three plans, like growth, business, and enterprise. These are like all the, you know, features available in each of the plans, right? Based on this, we have a record in platform fee. There's the cost of the customer success and account manager. Then there is the cost for number of pages that you would want to extract data out of, let's say on an annual basis or on a monthly basis. So these are primarily the three costs overall. There's also one time onboarding on a setup cost, right? But like, since we've done most of the work for you when we set up that model, and we are like fairly confident that it should be able to support your, you know, thing, I can see if, you know, because most of the work is done, what is the kind of, you know, discount that we can give you on that, on that one -time cost? But yeah, so like that's how our pricing is structured. So three overall components, platform fee, customer success, account management, and cost per page, let's say for X, you know, the number of pages that you would want to extract data.
+
+>>Jason Cohen	14:45
+Right, and I think that the last time, you know, the issue that we had, but I think we had a work around was that the last time you did it, you were buying extra data.
+
+>>Jason Cohen	14:56
+Number of pages per month, and that didn't work for us. We just wanted to buy X number of credits, but not have a time limit to it. So then that way, we would just keep buying credits or whatever that we needed. Is that still the case that we can do that?
+
+>>Jasneet Singh Malhi	15:16
+Oh, basically, if you give me an estimate, I'm trying to kind of look for, let's say, 100 ,000 pages for the whole year, for example. I would go ahead and create a plan for you, in which you would have those 100 ,000 pages, and you will get all these, because we've started doing annual contracts, because I think that is where the most value can be driven, because we don't want to... Restrict is not the right word, but I'll still use it as a placeholder. We don't want to restrict your business to be limited to, let's say, X amount of credits in a month. That's why annual contracts make more sense, wherein we give you all the credits upfront. Now, you can use that in six months, eight months, for the duration of a year. And then we can basically reiterate after looking at your volumes again. And you obviously have the option of buying more credits. So in a way, it's similar to what you wanted last time around. Let's say, if you are buying X credits, and you use them in six months, then you can come back to us saying, hey, Justine, I used all my X credits. I want another two X credits, and we'll be more than happy to manufacture.
+
+>>Jason Cohen	16:19
+Right. So can you put a proposal together for us, Justine, that would do the, I'd say 25, 50, and 100 ,000 credits? Okay. 25, 50, and 100 ,000, Like those different tranches. And so that way, we can... Right, let's get started with this thing. And I still noticed like it was an unlimited number of users, so that we could have as many people as we wanted, you know, getting to the system, which is smart, because the more people I can have access to it, the more pages we're going to be able to run through it. And then really, for us, what tends to happen, I think, like most organizations, is that once we start using a tool, and other people see it, then it becomes, oh, look, we can use it for this, and we can use it for, right, like that would be sort of our, that sort of tends to what happened. I mean, would you agree with that, Sash?
+
+>>Stosh Sutkowski	17:16
+Like, you know? Yeah, to kind of figure out different use cases for it, and I think like a lot of the checks, like what we do a lot of now, for the extraction side, is, you know, we take these checks, put them into a CSV, or take all the data, spit them into a Csv file, and then we use that Csv file to upload to our document management system. And that just kind of takes those fields from the Csv file, puts them in there, so now the clients, when they go in and look at a doc, or a check, or whatever, they see all the fields kind of labeled there. They vary client to client, but for the most part, I think like all the fields that, when we were doing it, and the, are going through the review steps, like all those will match up. So we may or may not use all of them, but Having all those extra ones, I think, does help. So yeah, absolutely.
+
+>>Jasneet Singh Malhi	18:02
+Like, so that's why, like, we don't restrict you on the number of fields that you can extract, because we are anyway, like Ocring the entire data, right? So it's basically, you know, there for us, then you can use it. And that's why we also don't want to restrict the number of users, because that's detrimental to, you know, how you would want to run your business. So that is not, we are not in the business of doing that. We want to empower you rather. So okay, Jason, I will go ahead and whip up a proposal for you and your team. I wanted to check a couple of things. Is there a timeline to this project this time around?
+
+>>Jason Cohen	18:34
+You know, we need to, well, as always, right? Like, we need to get started immediately. So, you know, I think part of the changes that have happened in the last six months as well, is that Stas now has two other sort of IT developers under him. Well, under him, but work with him. And so we have a bit more capacity for that. So, you know, this is something that we can get right. It's not before it was relying upon just one person. Now we've got we can spread that workload amongst a couple of people to get it up and going. I know on the production side, though, there's the project manager, the production side is hitting a bit of a ceiling, because the method that we're using is just too slow. And it's just too intensive. So I know that me and Stas are getting pushed a bit by the production side to find a faster method.
+
+>>Jasneet Singh Malhi	19:35
+Got it. No, completely. I'm aligned on that on that bit, Jason. And I think that will also help Stas in that lift from from the dev team and ensure that everything is like at a level playing field. Completely understand that. So what I'm going to do is I'm going to whip up a proposal for 25, 50 and 100 K pages, right?
+
+>>Jason Cohen	19:54
+And
+
+>>Jasneet Singh Malhi	19:55
+I can come back to you with it. Can we set up another sync up call maybe sometime next week to kind of get your feedback on it and decide the next steps?
+
+>>Jason Cohen	20:05
+Yeah, that sounds good.
+
+>>Jasneet Singh Malhi	20:07
+What time would you be available if you have a calendar handy right now?
+
+>>Jason Cohen	20:11
+Yeah, let's see here.
+
+>>Stosh Sutkowski	20:13
+It looks like I got I got stuff Wednesday and Thursday next week, but I should be free after noon. Well, Thursday I'll be free at like at 11 .30.
+
+>>Jason Cohen	20:25
+Yeah, 11 .30 works for me. 11 .30 eastern time on Thursday the 6th works for me.
+
+>>Jasneet Singh Malhi	20:35
+Next November 11 .30 to 12. I'm going to send you an invite as we speak.
+
+>>Jasneet Singh Malhi	20:57
+Okay, I've just sent you the invite. Please, can you confirm if you received it? It should be showing up in your calendar in just about a second.
+
+>>Jason Cohen	21:09
+All right, yep, there it is.
+
+>>Jasneet Singh Malhi	21:11
+So okay, if you can accept it, we can have it on the calendar And then this is that it won't slip to the crack. We'll be sending you the pricing by the end of the day today. In case you have any questions, queries, concerns, feedback, please email away.
+
+>>Jason Cohen	21:23
+And do me a favor, Judge, if you don't mind, put another 100 credits onto our little demo account so that we can show the other developers. I appreciate that.
+
+>>Jasneet Singh Malhi	21:32
+So, absolutely. Is that the same address?
+
+>>Jason Cohen	21:35
+Yeah, yeah. Stas and I are just sharing that account right now.
+
+>>Jasneet Singh Malhi	21:40
+No problem. No problem. I'll go ahead and get another 100 credits added to that account and happy testing.
+
+>>Jason Cohen	21:47
+Thanks, man. I appreciate it.
+
+>>Jasneet Singh Malhi	21:49
+Always a pleasure.
+
+>>Jason Cohen	21:51
+Jazzy, great to talk to you again, buddy.
+
+>>Stosh Sutkowski	21:53
+Thank you.
+
+>>Jasneet Singh Malhi	21:54
+Always a pleasure, Jason. Thanks, Stas.
+
+>>Jason Cohen	21:55
+All right, take care. Bye -bye.
+
+>>Stosh Sutkowski	21:56
+Have a good one.
+
+>>Jasneet Singh Malhi	21:57
+Okay, bye -bye. Bye.
+

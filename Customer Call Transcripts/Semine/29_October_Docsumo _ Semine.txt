@@ -1,0 +1,429 @@
+>>Jarl Arntzen	00:04
+Hello, hi, how are you? Hello, guys.
+
+>>Jarl Arntzen	00:17
+Hi, Jeroen. Oh, you're on mute. Yeah, hi. Could you give me one minute, two minutes? Sure.
+
+>>Bjørnar (Semine)	00:30
+I forward the invitation to Alexander as well. I think he might jump in just to tag along.
+
+>>Bikram Dahal	00:38
+Sure, makes sense. We have a clear agenda, so I'll just open the agendas and go one by one.
+
+>>Bjørnar (Semine)	00:47
+Yeah, sounds like a plan.
+
+>>Bikram Dahal	01:17
+So, did you guys finish, you guys are also developing a platform where you guys wanted to test the accuracy between different platforms, right? So, like any timeline on when that platform will be ready to compare the accuracy between your current system and any system that you guys want to plug in.
+
+>>Bjørnar (Semine)	01:38
+Yeah, so there has been a few blockers on our end there, but I talked to the developer today and yesterday, and hopefully next week we will be in a place where we can connect to multiple providers. So, there's still a little bit of work left, but I will let you know as soon as we are kind of starting to plan the connection.
+
+>>Bikram Dahal	02:03
+Sounds good, then. The other question that I had is did you get a time to test the platform after we made the change to like the different Oci engine? Were you able to test it? So, I'm waiting now.
+
+>>Bjørnar (Semine)	02:18
+I will get today as well just a sample from one of our developers of different page counts and different type of tables just to give it a go, but hopefully I will have it tested by the end of today.
+
+>>Bikram Dahal	02:31
+Sounds good. Then, let us know on the Teams once you have done that testing. We'll also go through the documents and make sure that everything is up. Once you guys do a test, we'll just go through the documents just to make sure that everything is good. Okay. Sounds good, then. Let's go through the checklist the team has sent, and then I think we'll go through that agenda, and then we'll take it from there. So, let me just put this into Google Doc, and let me see it, and then we can go through them one by one. Just a second.
+
+>>Bikram Dahal	03:27
+Okay. Can you guys see my screen?
+
+>>Jarl Arntzen	03:32
+Okay.
+
+>>Bikram Dahal	03:33
+The first thing that we had on the agenda was the metrics invoice line item where you guys need to capture and flatten it out, because it's not just about capturing the information, but also flattening it out, that data into the format. One example that all of us have already seen is this one. I have a hard time pronouncing this, but Phoenix is the English name, so you can just say that. Phoenix invoice. One thing I wanted to understand on this part is, and the way to do it is, let me just log into, because we have an assist account. Give me a second. Let me just log into the account and show how we want you guys to test it on long run, and if the new format comes, then how it is going to happen. Give me a second. I'll just log in. We have only seen one example. Manoj, have you seen any other example of the metrics invoice on how it should be flattened?
+
+>>Manoj Racherla	04:36
+Yes.
+
+>>Bikram Dahal	04:40
+Do we have a set of invoice? I think the team has already set it up.
+
+>>Manoj Racherla	04:47
+Yes, we have set it up.
+
+>>Bikram Dahal	04:52
+Did you go through all the files? Is everything good?
+
+>>Manoj Racherla	04:56
+Yes.
+
+>>Bikram Dahal	04:57
+Okay.
+
+>>Bikram Dahal	04:58
+So the way to do that, like we discussed last time, is going to be that you will just duplicate one of the same voice, which have all the settings and everything. And then on this invoice, give me a second. Yeah. So the difference that we are doing is that we are putting our prompt and everything over here, giving some examples of it. So we'll show you some examples. And this is only used for the first invoice. And it is not used for later on. So later on, once you guys fix the issue, then it will automatically handle that for the future invoice. Sorry, Vikram. I just think Alexander is trying to join the call. Oh, OK. Yeah.
+
+>>Bjørnar (Semine)	05:45
+That would be great. Thank you. Sorry.
+
+>>Bikram Dahal	05:48
+No, no problem. So like I said, for this particular use case, the only difference between this document type that you guys have and this document type that you guys have is on this document type, you just provide the example of how it should do on the configuration on document description. There are some examples, like how should it flatten. And once you have it, it usually works quite well. And then once you approve a few of this document, combining that information, combining a few of this approved document, you should be able to get the data on the required format. So if you have all the invoice, then you will just make a duplicate of this over here and call it matrix 2, like duplicate. And then send that from that you have over here. So it's one sample of only getting invoice. So that is how we expect you guys to use it for matrix invoice or any kind of complicated invoice. And this one will have a test. We'll have to see how complicated. I'm not going to say that everything will work picture perfect. If you guys, with this template, Manoj has tried all 10 samples that we have. And we have confirmed that everything is working good on this invoice. You guys can test it once. And we'll just test it. And we'll let you know. There might be some invoice where this test might not work. But for at least 90 % of the cases, you should be able to get very good accuracy.
+
+>>Bikram Dahal	07:30
+Because some of this, you might have to do it a bit manually. Yeah, Zeyad. Yeah, so that's really good. I've had very good collaboration with Manoj. So thank you for that, Manoj. And last time I looked was several months ago, I must admit.
+
+>>Jarl Arntzen	07:56
+So I remember we got the recomposing of the number of fragments right, where that worked. But at that time, the only issue was that we were not able to capture many pages or only a few pages, maybe.
+
+>>Bikram Dahal	08:23
+Yeah, so over there on that case. Ok, Yusuf has not joined the call. So I'll get the team to test a few things. The thing that we have done is initially, we were sending the whole file when we did that exercise. But now, let me just see if that is already here. So we have a few parameters that we had added on the post -processing part of here. I'll have to check. So we have made a few of these changes over here. So that it will do Powerpage. I have to check it if it's done by default or not. So we send the information to Powerpage, and then later on, we'll combine. Because of that, a lot of issues that you guys were facing were solved on my last testing. There's only one issue, that because you are sending two pages, so you are sending pages, right? So you are sending page by page. What it had introduced is that, let me just look into one sample only. So in this case, if now, on that case, what was happening? And this will happen on this case also. So I'll just let you know what is the limitation of this one. Example, if this line item, you have two items over here. So if you see, you have two items over here. You have two items over here. And here, the new item has started. But if these three line items were of this only, like this, like what do you call this?
+
+>>Bikram Dahal	09:57
+Like, for example, you have this one order number. You have three items of this order number. And then later on, you have two. So let's say this value was here. And out of this, three of this were here. And three of this were in this space. And this line was not here. In that case, we can face issues. So that is a known issue. Because now that to solve the issue of long page not being handled, we are doing four pages. Even if you do two pages, then that issue always happens. In this case, this will not happen. Because I think if it is like this many, they could have put this value over here, and then put two of this in this space. But I think they don't do it, because they put everything in new page. So if everything is on new page, then you will not have an issue. But if it is broken, then there will still be an issue. And that's a trade -off that we have to do. Because on our system, we can say, send one page. Send batch of high page, or send whole document. And to solve the problem, because this is a bit more complicated, we are told that for tables and this kind of complication, we'll do four pages so that you don't have that issue of long document having that issue. I'll get it also from my ML team. But I just wanted to say that because it's done four pages, you should not have that issue. But that introduces a new issue, which we have not seen on that template. But we might see it on other templates.
+
+>>Jarl Arntzen	11:20
+Yeah. So we can just label it as a known issue. So that's acceptable, I would say. Ok. And over here, if you guys have more kind of metrics, this is just one type.
+
+>>Bikram Dahal	11:34
+Or there is other type also of metrics. Then we can go through that and see if the system works as it's intended. Any question on this side? On this one, taking the existing document type that you guys have and modifying and deciding what to do with that table. Because the table extraction is just one. Don't want it like a vanilla table extraction. But we want it a bit more customized. And this is the way. So if you have different templates, then you just make more templates over here and make sure that this explanation is like this. There are some examples that it can go through so that it does not make that mistakes. Any questions on the first line?
+
+>>Jarl Arntzen	12:30
+Yeah, so it's going to be a different document type for each matrix.
+
+>>Bikram Dahal	12:35
+Yeah, for now, it's better to do it that way. Let's do it that way. Because like I said, I didn't want to overpromise. Last time, I did a lot of overpromising and everything. I didn't want to. I would better, like you said, you want a more particular system than this one. So once you guys are done with it, you guys run this experiment, and then you guys figure out that, OK, everything is working good. Like I told you last time, there is a way to do that to the exact same thing that you are doing for a document. You can do it through here also, because it's exactly same. Because you can put that prompt that you put here over here. And then you can just say that for this template, for this template, whatever, you can do based on cellar reference or something like that. You can say that if this value is this, use this. And then you can go and add a new block. And then for a second case, use that. But I don't want to get into that mess, because the debugging and everything will be more tricky and everything. Once you guys are done with, let me say, five of this template, and it's worked perfectly for you guys on five templates, then we can decide, OK, five of this template, let's try to make one document type and put those five of this into this same document type and see the experimentation. So for now, until you guys have made a final decision on the platform, I would say please do it separately. And in future, if you say that, OK, you are making more than 10, and it's too difficult to do it, you guys better prefer it to go through the same document type. But you guys will be OK to maintain. Because then this is easier to maintain, also, if you think about it, because everything is properly separated out. So here, it's better to maintain. So here, you have one. So then you have two. You can just give it a name, also. You can say that this is block for x, block for y.
+
+>>Bikram Dahal	14:17
+So we can come to that later on, but not for until you guys make a final call on the platform.
+
+>>Jarl Arntzen	14:25
+Ok.
+
+>>Bikram Dahal	14:27
+Any other questions on the first talks?
+
+>>Jarl Arntzen	14:33
+Ok.
+
+>>Bikram Dahal	14:34
+The second is on the, OK, the second is, this one is one thing I wanted to understand a bit more. So what you guys are saying is that even if the invoice is exactly same, it's exactly same, the way the information is extracted can be different. So that one, I.
+
+>>Bikram Dahal	14:56
+Do not understand. I can understand it from metrics. For metrics, I can understand that they wanted to extract information a bit differently, even if you add the bot. This part, I was not able to understand. If you can provide me one example, then we can take it from there.
+
+>>Jarl Arntzen	15:11
+So it's kind of really what it says. We were just asked by our leadership or management managers to provide some kind of safeguard. So if we have the case of self -service, where our customer will do the Ocr training or the Ocr modifications, they are by definition, so they are not professional Ocr operators, so they may make mistakes. That's one thing. Or they may actually desire to, one customer may desire to focus on one group of fields while another customer desires to focus on another group of fields.
+
+>>Bikram Dahal	16:04
+Or invoices from the same supplier.
+
+>>Jarl Arntzen	16:06
+So it's just like, when we get to the self -service part, it's more like a question of whether we can consider creating separate training models or Ai models or not really sure what to call them per customer. So if a customer decides to do something really special in their instruction, that will not affect any other customer. That's the only question, really. Yeah, Alexander? Well, there will be cases as well where the customer actually wants something unique, just not through self -service, like Joffreud mentioned.
+
+>>Aleksander Larsen	16:59
+They're just doing it differently and they might have an extra field that nobody else have. So yeah, like Joffreud asked, the question is, do you have any suggestions on how that would be solved in a smart way?
+
+>>Bikram Dahal	17:15
+Yeah, so over there, the proper way is to duplicate a field. Like, because if I duplicate this, then call it the customer two. Then I know this has one of the questions. I'll answer that question as well because I think you will have that question. You have already sent that question also. So the best way to handle this one is that you just make a duplicate of this one and this is independent. Like you can go and this customer can decide that, oh, I just want three fields over here. I don't want all of this field. Let the document be processed. So the way to handle that is, there are two things. One thing is to like do it through duplicate. Then there's a separation of concern. Like you don't care about anything. Like it automatically, like you can do whatever you want with this document type. That's one way of doing it. The second way of doing it is to hide, like because, and this is for future. So you guys are thinking about self -serving in the future is that because in our system, you can make a field and hide it, right? And then like, but I know that will not work because if you hide it for one customer, it will hide for everyone. So I think that is also, because at least when you do hide, the information is extracted. I'll have to check with the backing team. You're getting this one. Right now the solution is this only. I don't think we'll have other solution is to duplicate and make it as a dependent. Then this is for customer X and this is for customer Y. So like that is the only way I can go back and check with the team regarding hiding. Because example, one thing that can be done is that what we do for sure today, I know that is that I can go over here and I can make a field and I can hide it.
+
+>>Bikram Dahal	18:57
+And if I hide it, then like it will be shown on the Ui and everything. But if you go to the Api, you can get that information to the Api and then you can decide, do you want to show it or not? And you can put that information on your site, but that also might be too much tricky for you. So the best one is to duplicate and then you will do whatever is not to be done on this document type. They can do whatever they want on this document type. So, and we support like large number of document types and everything, so that will not be an issue. So the, and I think that the case will be a bit less, but the best one way is to duplicate it and then just allow them to change whatever they want on that document types.
+
+>>Aleksander Larsen	19:32
+Yeah, of course we would have to have some kind of automation of this thing happening, Jalfrode. Because we are in a dilemma here, right? That we, the perfect scenario, we do the same supplier three times or 10 times, right? And then every customer gets the benefit of the learnings from that, but then a new customer comes in.
+
+>>Aleksander Larsen	19:55
+Comes in, they have an extra feel like, of course, you showed me now, or they have some different things they'd like captured than what's the standard thing, and they probably would expect that, oh, I just took it self -service, I did it three times, I expect it to work now in all levels, like self -service or just automatic, it should, yeah.
+
+>>Bikram Dahal	20:19
+So that's one thing why I wanted to highlight, because that question there has at least another second channel. Even if you make a duplicate and the system has not, like it has, like it has, it starts from very scarce, because when you make a duplicate, the system is going to start from scarce, because it does not have any document to learn from, right, because there's no document on it. But even in that case, if you see, the accuracy is already very high to get started with, because this is without geodocumentation in Docsumo, if you start, because that is what we have been working really hard to make sure that from ground zero, like even if I don't give it anything, the accuracy is already good. And the second important thing, that's the reason why I have not shown you guys the ML side of things, I have not shown you all the things that we do for the customer, is that, let me say someone makes a duplicate document type, they upload one sample, and they have a new field that they want to extract, so let's do the example only, right, and they say that, okay, now I want a new field, like let me say that, I'll just put that number and everything. Even if they put this, more likely the extraction will be like quite good, like even without doing anything, because by default, the accuracy is going to be high. But after they fix the issue, from the next document itself, you don't have to go and do our training, you don't have to go, like I don't have a section for you guys here, Yeah, you don't have to go over here and then say that, oh, manually go and now train the models and everything, because this is the old thing that we had, like I have not even gone through it and then like told you to like use it, because we have something called continuous learning. So on the second case, just to like make sure that like your content and everything is taken out, is that even if I make a duplicate, then you already start on the very good accuracy.
+
+>>Bikram Dahal	22:10
+And as soon as you fix the issue, the next document will automatically is non -continuous learning. So the lift that is required, even if they make a duplicate, it's not that the training is completely lost.
+
+>>Aleksander Larsen	22:22
+Then the next question, I guess, but that's something that's solved further down the line, Elfrude and Bjarne, but that is of course connecting this document with one specific customer, this document type with a specific customer in Semina and how that would work.
+
+>>Bikram Dahal	22:44
+Yeah, so that one, I think I have seen it because in our system, we have more than like 50 different document types, so people solve it differently. So example, I'll tell you, if the field is exactly same, like if the field, like name the schema, if the schema do not change, like if schema is not changing, like the schema is always same, then there are two ways of doing it. Either you do a duplicate or you also make a new user for that with a minimum role. And that user, you can do it through Api and that user will only have access to the document that they have uploaded or the document that came to them through their Api key. Because this Api key is different for every users. And so we use this Api key and Mlid to differentiate that also. So like if you have data permission and everything. So if the schema is same, the schema do not change, then one, you can do it through the, like you can do it through the, like if the vendor is different, then you can do it through vendor name and everything. But if the true supplier can get the same vendor name, you can also send some metadata into our system and reach to that metadata. So that is also there. But you want separation of concern for whatever reason. Then you can even choose to use separate account, which only has access to that document and only those documents that they have uploaded. So through the Api, if you call, then you'll only get those documents that they have access to, right? So there are multiple way of doing it. We can go down the right and see like what makes sense for Gerald, because Gerald also might be able to just send a user metadata. So he might be able to send some user, like document ID or something over here. And then you can use this to like differentiate that also.
+
+>>Bikram Dahal	24:26
+So like he might not differentiate it on the Ui side, but on his side, you can use this and then you can use this to route it back to like the required customer because at the end of the day, it's an Api in a payout. And this is skin that you guys have that you guys see over here. This is skin is completely like, if you have a shareable link, then people only have access to this one document. They will not have access to like, if you get this Ui, then they cannot do anything like they can just see it.
+
+>>Bikram Dahal	24:54
+This document and approve this document. They cannot go and then change anything else. So because the permission is granular to that one particular type or one particular folder, we also have seen people use that. We also have next one is we also have folders. So there are a lot of ways of doing it. It really determines on. There's a lot of ways to do it if the schema is the same. If the schema is the same, it's the same. But if the schema is different, then the only way is to break it. Right.
+
+>>Aleksander Larsen	25:28
+Because maybe I've explained this before, but that was also one of the things I was wondering about, Jotroden and Bjorn, and that was when we eventually offer self -service, maybe we want to limit them to what they can do in the self -service capacity. Because some of the stuff may should not be touched by the end customer.
+
+>>Bikram Dahal	25:50
+Yes, I'll give you one example. A member cannot go inside this and access the field. They can only upload a document and everything. So those kind of permissions are there. You can do it, find control and everything. So right now, we have a permission where, in case of self -service, once the document type is set up, they can only see whatever. And they can even log into the platform and see it, which you might not want it. But even if in that case, they will only be able to see the document that they are assigned and document that they have uploaded, like whatever is assigned to them, not just what is uploaded, but whatever is assigned. Because if you upload, it's automatically assigned to you. You can change it, but that's the thing. And we have a few other permissions that you cannot, the member cannot do it. So we can look into the way that works best for you guys.
+
+>>Jarl Arntzen	26:37
+Yeah. I mean, it could make a lot of sense for us to handle customer requests by modifying the templates ourselves, rather than having the customer run wild, because that's going to be - I think that's like, in a perfect world in the future, that would be the onboarding team's job.
+
+>>Bikram Dahal	27:02
+But the customer in the beginning, they will -
+
+>>Aleksander Larsen	27:06
+Yeah.
+
+>>Bikram Dahal	27:08
+So example, two parts, the two things that you guys have to decide is one is a schema. If the schema is same, then I strongly advise not making a new document types and everything for them. There are other ways to do it. But if you have to change the schema and say that this customer will need one extra fill, then the duplicate has to be - There's no other way around it, because one document type can only have one schema. So that is the thing for now. And then you can decide what makes better sense on your site. And like I said, the most important thing is that even if you embed this skin for whatever reason, you have to embed it into your system or you give it to third -party customer, because I've seen people giving this skin to third -party customers, because it's very easy. Like it has everything. You don't have to build. You can just go and say that, okay, I want to do this. So this is very specifically made for that document type and only valid for X amount of time. So like you guys don't have to worry about it as long as it's handled on your site. Like, so you can decide how long this will be valid for. That you add people, you can embed it into any system that you guys have.
+
+>>Aleksander Larsen	28:14
+Okay. I think we will find, it sounds like we'll find a way that will work here through that.
+
+>>Jarl Arntzen	28:21
+Yeah.
+
+>>Bikram Dahal	28:22
+And on this one, just to answer this question, because I think Zeral also had sent a query for the two days call, like are you getting, if I have multiple templates and everything, then training from one system, like you want to take training from one system to the next system, right? Like I said, like the only way, and for now I'll only give that one new way because the default accuracy is already good. By default, like even if we had a new fields and everything, you'd see like you have 89, 90, like a percent accuracy already up on the thing. And like for line item also, it's not that difficult. So like the first, you will start on the base of like 85, 90%. They start approving your document automatically without you running anything. You don't have to go to a place and manually change it and everything, but accuracy for that template automatically increases. So like that is the best way for now. Yes, there is a way to, we are working on a way to say that please use one set running of this to this document type also. If that is actually required, and then we can not anything, it will be for quarter four, because we have got the sequence few time, but most of the customer have been happy with that because of the accuracy. It's pre, like pre, like last language models, that was people are not happy because the accuracy was like just 60 % or 70 % or sometimes even low. So like, they were like, okay, I'm not going to like, so I'm not going to like, I want it in the model. And then I have to upload at least.
+
+>>Bikram Dahal	29:54
+So if you see this, we said that please upload 20 documents, 30 documents, 70 documents, 20 documents, 200 and 500 documents. And it's automatically chained on this thing. These people hated it. Because, oh, I've already done all of this. I've done the annotation. Your accuracy is already bad. It was 60%. I took it to 90%. Now if I make a duplicate, then you're not getting that chaining back to me and everything. So that time, it was difficult. So we also had a way to, whatever chaining was done, there was a way to attach that chaining back into this document type. So there was a way. But for now, because of LLMs and everything, the accuracy is already good. So we have not faced that issue. But if you guys, let's not face that issue. And if you guys really want it, then there's one thing we have done. I'll tell you. That code is just hidden. Over here, we just have one more parameter that says, for one -shot learning, please use this document type. You just select that. And then it will take this template also. So if it is empty or anything, then it will take a template from here. And then try to do one -shot learning. So that is also a workaround that we had on old system, not on the new system. But if you guys need it, we'll go through that route.
+
+>>Aleksander Larsen	31:09
+That's really, that could be interesting. But yeah.
+
+>>Bikram Dahal	31:14
+It has its own issues. That's my issue. Like I said, if one customer does it a bit differently, then it can cause more issues. Because it's not that predictable. So we can see whatever works better for you guys.
+
+>>Jarl Arntzen	31:25
+Yeah. We could also say that the order of items here should perhaps be opposite. Or at least number three should probably be number two.
+
+>>Bikram Dahal	31:38
+Which one are you talking about?
+
+>>Jarl Arntzen	31:40
+Just here. Large PDFs is probably a bigger issue. Yes.
+
+>>Bikram Dahal	31:46
+I'll come to that in a minute. So I think these two are now solved. At least there's a workaround, or we'll figure something out. Let's talk about this, because I think this is going to be the bigger crux. Because this is where all the putting is. So let's go one by one. Let's go one by one, and then we'll go. So the first question that I had is, if you have to do P98, I'll not do P100. So if you have to take your number of pages and do P95 or P98, then what is the maximum number of pages that you think will cover 98 % of your invoice, or let me say even 99 % of the invoice? So I'll take that number. I'll not take 100, because sometimes it will be too large, or things like that. So I'll get you back. But if you guys have that number, then I can have this conversation a bit on. I have an answer to all of this, because we are handling documents that are more than 500 pages and everything, because we get our mortgage binder, which has more than 40 different document types. And then splitting and classifying is what we do. So I have an answer to that. But before I go into give you a couple of these document types, I just wanted to know, if you do 99%, what will be the large? If you have to cover 99 % of your invoice, what is the largest number of pages that you guys might possibly get?
+
+>>Aleksander Larsen	33:08
+And I guess we could give a better answer at 95, Bjorn. Or 90.
+
+>>Bjørnar (Semine)	33:18
+But yeah, I'm actually looking for the photo, so I can give you the exact one.
+
+>>Aleksander Larsen	33:26
+But I can tell you, Vikram, that we've had a pretty large discussion the latest weeks, because this has also made us think about our internal processes and what we've been doing internally with these previously. And we have realized that we have to change that. And so it's also a bit about what you can do. We'll adapt, of course.
+
+>>Bikram Dahal	33:50
+Yeah. Then let's go with what we can do. And then I'll come one by one. So usually, when you get a large file, there's an upper limit on number of pages that I can process for document. So by default, if I have an invoice, then usually, I only go up to page number 20. But that can be increased up to page number 50, because we have bank statement. We process bank statement. And bank statement will be like 50 pages, so hard limit. So for document, for hard limit, one invoice can only be 50 pages. And it can only be up to 1 .5 MB. It cannot be more than 1 .5 MB. So I'll send some code. I'll send you the documents and everything. I'll send a reply to this also. So to answer the first question, let's answer the question one by one. Yes, we do this. Today also, if you upload a very large file in Docs .com, it will only process for 20 pages by default. And this can be increased to 50 pages by additional diameter. So basically, it's like that.
+
+>>Bikram Dahal	34:52
+So this is the upper limit that we have currently for invoice. Now let's come back. There is one more part. So I'm just answering the first question of this one, like what you can do. But this is only when you have to do extraction. Extraction, we have a hard limit of this. But for split, because it's a different thing. You can send me a 1 ,000 -page file and say that please split it every 10 pages and do the extraction and do the extraction. In this case, currently with one of the customer, we are doing 3 ,000 pages. I have to see if the product can support or not. But like on upper limit, the official limit is 500. Like if you have a big document and I have to split. Now that split cannot be more than 50 pages. So if I get 500 -page document, then the maximum split you will get is only like 50 pages. So maximum file you can make out of this is 10. But you can make it like 500 files also, right? Because 500 document, 500 pages. So the official limit, if you talk about me, I'll put it as 550. That is the, like this is for a split. If you have a split, add it to the mix. Now the split can be of, and you can decide. And you can decide and say that by default, because there are some questions and everything. You can by default and say that, please stop after 10 pages, absolutely. Because this by default, it stops at 20, 20. Right now, if you upload a very large file, to my best knowledge, it's 20. It will go through the system, but on the system, you will not be able to see after 20 pages. And so it will just say that it's 20 pages.
+
+>>Bikram Dahal	36:33
+Like you only do the exception on 20 pages. And it can be changed to one page. It can be changed to 50 pages.
+
+>>Aleksander Larsen	36:40
+I have a, maybe you've answered this before, but I have a quick question. Do you, maybe it's not correct, but I'm a bit curious about how you do the pricing regularly. Like, do you do it per page Ocr, or do you do it per?
+
+>>Bikram Dahal	37:00
+Per page Ocr. So basically, because for us, for us, what happens is that like, if you do the Ocr, then we'll do also do the extraction. And so there's a classification also. So there's a little bit of classification also. And we are trying to find out if we can allow different pricing. Because what we have also seen, I'm not promising you anything on this point, on this project, but I'm just giving you an idea on other customer. They have 500 page binder. Now they don't want to, out of this 500, they only have to purchase 100 files. Now they don't want to pay for that 400 pages, right? Because you first just do the splitting and you just do the classification. You don't do the extraction. In that case, then we charge differently for that classification only. So example, extraction can be charged on 10 cent, right? Example of like, let's give you an example. I'm just giving you an example of, we need to find out this one. So this is a 500 page document. And out of 500 page document, 100 page has to be extracted.
+
+>>Aleksander Larsen	37:53
+Yep.
+
+>>Bikram Dahal	37:53
+After a split and a 400 page has to be ignored.
+
+>>Aleksander Larsen	37:57
+Yep.
+
+>>Bikram Dahal	37:58
+Then usually what happens is that this 1000 page will be charged on, let me say 10 cents per page. And this audit page that is ignored will not be free. It will also be on like, let me say like four or five cents or depending upon your volume, it can even go to two cents.
+
+>>Aleksander Larsen	38:13
+Okay.
+
+>>Bikram Dahal	38:14
+That is how it's usually done. But if you discard it, example on this case, you say that I don't want to post this after 10 page, then you'll never be like, if you have a hard limit, that I don't have to look into this file at all. My job is just to do a hard limit. Then even if you change 100, like 1000 page file, then you won't be charged for 10K. Like 10 pages, you won't be charged for 100 pages. But if you have, if we have to write a logic to stop, like stop after certain logic that you guys have, then in that case, you'll be charged, till extraction, you'll be charged this money and whatever is ignored will be charged this because for this, you have to do Ocr and at least figure out that, okay, I need to do something, right? So you'll be charged on this way. But if you have a hard stop, then you'll not be charged for the rest of the page. Whatever is hard to stop, you do it till that page and we don't charge it for the rest.
+
+>>Aleksander Larsen	39:01
+I understand. That gives us some options we can think about. Yeah.
+
+>>Bikram Dahal	39:07
+Let me go one by one. So first one is like, you have a hard limit, like, so like you can have it. On this case, because it's a hard limit, we don't restore the rest of the file because of the cost of post -production and everything, you'll not be able to see the rest of the pages. You'll be able to see the original file if you want to see, like, but you'll not be able to see that on our EBS screen, rest of the pages and everything. So like, you'll be able to see the complete file if you want to see it through the, like all URL, you can just click on that and you'll see the original file. So hard limit is, and you'll only be charged for 10 pages, right? So charged for 10 pages because it's a hard limit. Now, 10 pages with logic. Here, one question that I had for you guys before I move to this, because usually people have to,
+
+>>Bikram Dahal	39:51
+Thing. First thing is that you guys only process invoice, right? You don't care about any other document type that is on the system. Is that correct to understand or do you guys also do like list of billing or like whatever you can have packaging list on this site? So just wanted to understand, you guys only care about invoice or do you guys care about other document types also?
+
+>>Aleksander Larsen	40:14
+Right now, primarily it is invoice, but this opens, I mean your technology opens up opportunities for us as well regarding other document types. So I wouldn't rule that out.
+
+>>Bikram Dahal	40:28
+No, no, that portion that is fine, but the question, the reason I ask you this question on this is that will that same document that you receive will also have invoice and will also have packaging order?
+
+>>Aleksander Larsen	40:40
+Okay, get it. I think our instructions are pretty clear that we only read the invoice when we have that situation.
+
+>>Bikram Dahal	40:55
+Okay, sure, that makes sense. In that case, then we don't have to, we only have to split, we don't have to do classification because you can send me a big invoice and the invoice first page, I know JL has given me some example and he has put it over here also. So he has given me an example that I have a like 20 page document, but last 10 pages is just term and condition. That's not the original like information and everything. I don't care about those. I only care till you have the net amount. And so your split is logical, like you make a logic saying that, like you make a logic saying that, okay, please like only process this till page and then do it. So we allow this, like we, so example, all of this is allowed, like allowed, like this is only one thing that is not allowed because for this to happen, like this is allowed. We have a logic for this one. This one also, you can decide, you can decide to like, if the one that is excluded, you can decide to put it in the unclassified or ignore document type. So that is also allowed. So like you can see it if you go to that file. So I'll just give you an example. You don't see it right now on this icon, but, so let me say this is the file. This is not multipage. Let me say find something that is multipage. Everything. Okay. Here's a page. So let's say only the two pages were supposed to be extracted and all of this is like ignored. So when you come to this document type over here, it's only see one of two. But when you go over here, you will see that one of two is Api and this will be ignored or unclassified. So you'll be able to see the original file and everything over here.
+
+>>Bikram Dahal	42:38
+In the case of, in the case of the, like in the case of script that is done like smartly. So that is one way you can also see original files like over here on that script side of things. This is a bit tricky to do because what happens on this case is you have to do the extraction from like, like extraction sometimes can be async and everything. So at least for now, we don't have that feature, but this feature itself is very, very robust. Like it's super robust. Like if you, the second page has like second page has all the common conditions or anything, then this will really do a very good respect. So like I said, we are doing it for mortgage binder with, I would have more than 40 document types and over there, the increases like 98 or 99 % as long as the names are clear. So in invoice, I know it will kill it. Like it will not make any mistakes. Right. So I think this would be good enough. And it's a smart, like it's a smart, you don't have to say page number or anything. So on the product we have, we have, yeah, So we have different kind of history that you can do. This is based on the fixed number of pages that you have last fall. Then you can say that this is split up every 20 pages. Right. So that is one way. And it also make a folder so that everything that is scripted is scripted on the folder. And then you can have text pattern, right? Your case will not be text pattern because it looks like a text pattern, but it's not a text pattern because everyone will write it differently because you have different language and everything. You can even say that, okay, it is split up of these pages or you can say split with Ai and then provide some example.
+
+>>Bikram Dahal	44:19
+And this does a very fabulous job. Like of all the system that we have, this is one of the most reliable system that we have. It does a very good job. And even for fixed page and pattern, we have started moving people to this split. Even we have QR code, like and also custom Api. So I know this is a very critical part of the split. So we have multiple ways of doing it. But for your use case, I would strongly recommend you guys using this with Ai, not this one, because then you'll miss, sometimes miss things like that and you'll cause issue.
+
+>>Bikram Dahal	44:50
+So this will be the best one. And this and this will be the best one. Because you guys are just doing invoice. If you're doing three different document types and everything and the document type had to be classified into first two -page invoice, three -page ignore, two -page into shipping list, two -page into this one, then it will be an issue. But if you're just caring about like this one, then this will be the best one to use. Yeah, so here manual override is allowed. So let me say if you make a mistake on, let me say I make some mistake on the split side. You come over here, because we know that there'll be a few mistake on out -of -100 -file, like let me say out -of -1 ,000 -file, there'll be like two or three mistakes over there. In that case, you can go over here. Let me say the split has done it this way. You can say, oh, this is wrong. I want to do it this, and then merge this. So I want three pages, I want two pages. So you can override it over here. You can say that, okay, for this document, okay, there was some mistake you guys were supposed to do. Not only ignore the last page, then you can do this. Or you can say that, oh, this is supposed to be two different document types. So this is in batch one, this is in batch two. You can do that. All right, so manual override and everything is allowed, like for document after you go to the Aba schedule. Okay, so yep, this was the majority of the question that you guys had, like on this one. So I think any questions on the, like last PDFs?
+
+>>Jarl Arntzen	46:25
+Yeah, I think you may have really answered it, but so say we go, like we have option C here now, C1 or CI. So the Ocr stops and it's decided now that this is the end of the actual invoice and the rest is just to be considered as an attachment, no matter what, right?
+
+>>Bikram Dahal	46:52
+Yeah, so usually, yeah, you're right on this one. So usually what we'll do is, in that case, you will not be uploading it into invoice. So you'll not be uploading, you'll be uploading it into auto -classify. So on auto -classify, I'll come to that in a minute. On this one, I need to think for your use case because you have different document types and everything, like routing and everything. So, and for temporarily, for temporarily, what we can also do is that like, so usually what we do is I put something called, put an attachment as a document type, and then the system will first upload and figure out what is invoice and what is attachment. And then it will put it into two different buckets, right? So it will put it in, one document type, it will put it into invoice, phase one, two, three, and next it will put into attachment.
+
+>>Jarl Arntzen	47:39
+Right.
+
+>>Bikram Dahal	47:40
+And attachment, you can just ignore it and you'll only be charged a lower amount for that. And for one where the information was extracted, invoice will be charged. But in this case, if it's just the script, then they can directly use here also. For now, you guys can try it using this. We'll figure something out on this one. This one, if you use it, then what will happen is it will make two different document types. It will just say sample invoice, one, two, five, invoice. It will put a next document type called sample one, two, three, five, two, seven. And then it will still put into this queue only, but we can work our way to like, like work a way to like remove that from this queue and put it into the attachment queue. So if you test it today, because I just want to make sure that you guys are testing it up today. So one is you guys can use a classifier and put that logic of splitting and classifying because that's your job, right? So either you are just splitting it or you are doing a split and classifying. So if you are just splitting it and like, so if I'm confusing you, then I'll send you an example also of video and everything. Just for your testing purposes and everything, like you guys can use the, like what do you call it? You can use the like a classifier with one invoice and one attachment document type. I'll set it up. I'll send you a video of this one and you will be able to see, like if it's a big document and two pages are invoice, two pages will go to invoice and five pages will go to attachment. And then you only have to care about the invoice. Got the point?
+
+>>Aleksander Larsen	49:20
+Yeah, I believe so. Yeah, right. Well, should we explain how it works now or maybe that's not the - No, because I also want you to test, right?
+
+>>Bikram Dahal	49:32
+Because one of the most important thing is I want you guys to test live and everything. So if you guys have some invoice or if you already have it, let us know. We can just make a demo video for you guys and send it to us.
+
+>>Aleksander Larsen	49:42
+Yeah, that would be perfect because we are now working with what conditions we should set.
+
+>>Aleksander Larsen	49:49
+And this will help us decide what we will land on. So, how this works?
+
+>>Bikram Dahal	49:56
+The only issue that I had, why I was a bit concerned when I told you this one, is because you have four different document types, right? Now, the thing about the A classifier is that A classifier will only send that document as an invoice, or it will send it as an attachment. Now, on invoice, on which invoice document should I send to is a tricky part. Now, it can be done through metadata and everything, but I'll not over -promise it. Like I said, I don't want to make your life complicated, because that's a feature that you guys want. Is there a workaround? There is a workaround. And then, if required, we can also build a new feature, because like we showed you last time, even on this onboarding, we have added three or four features for you guys, right? So, building a new feature and everything is not that difficult thing for us. We're also coming with workflow and everything, so that this will be even a lot easier. You can do whatever you want with the rules. So, what we'll show you for demo purpose and everything is that you can send us invoice and tell that, okay, only care till net amount. Upon net amount, I want that invoice to be split and put it into a different queue. I don't want to ignore it. For now, we'll put it into attachment. And then, I only see those invoice. You guys can send us at least 10 of this of varying size, varying format. We'll just configure this to classify that into... Give me a second. For now, I'll put it under Api invoice. That is what you guys have. And then, I'll just say that second should be attachment. And so that the document are properly getting splitted and then properly getting put into different category. So, that should be good enough demo for you guys to get you started. And once you go into next step, then we can decide how to best handle all of these queues and everything.
+
+>>Jarl Arntzen	51:39
+Actually, right. Could we even make this even simpler?
+
+>>Bikram Dahal	51:46
+Yes.
+
+>>Jarl Arntzen	51:46
+Maybe you've already covered this. I just wasn't able to pay full attention. So, I think we have discussed this previously and we have slight issues where we send one document and then we receive two documents, right?
+
+>>Bikram Dahal	52:06
+Yeah.
+
+>>Jarl Arntzen	52:07
+Yeah. So, we would really like to just receive one document.
+
+>>Bikram Dahal	52:12
+Yeah.
+
+>>Jarl Arntzen	52:13
+And really, if we think about it, right, we don't actually need the PDF.
+
+>>Bikram Dahal	52:19
+Yeah. The only thing that you guys want, if I'm understanding this correctly, is that I can send it to this invoice. You just want to make sure that it's not splitting. So, what you guys don't care about is, it's more about charge only, right? The thing about this is not anything. It's about charge. Like, example, I can take a 100 -page file over here and do the processing and give you the data back. You guys are not going to complain to me saying that, okay, oh, this document, because here, right, the information that will be extracted, let me say it's a 100 -page document, but the information was only on five pages. The rest of the page was just nonsense, right? And the information is properly extracted. Like, even on this, I'd say, so all the 100 pages, you don't care about it, as long as you guys are charged for only five pages, because that is what you guys care about, because the information is on five pages, you only want it for five pages. The rest of the document, as long as, like, you guys don't incur the cost for the rest of the pages, is what we're trying to optimize for. That's my understanding, right? Are there any other, like, things that you guys want to optimize for? Well, actually, we have genuine concerns with our end system.
+
+>>Aleksander Larsen	53:34
+When Invoice comes too large or there's too many lines being sent to our systems, Invoice lines. But really, like Elfrid said, we are not in need of the Pdf at all, because we have a pre -system that, you know, gets these original files and pretty much Docsumo in the middle, in the air. If that system is messaged, okay, it's received on the other end, okay, I'll send the file, the Pdf.
+
+>>Bikram Dahal	54:07
+If your question is just on the number of lines, then this solution will not be a good solution for you, right? Then you have to go with this solution only, because I can execute after every 10 pages, then that might be a better solution for you guys than this solution. Because let me say I have a 20 -page document and I only have to extract on 10 pages. But if this 10 pages have line items that are, like, really large because I've done flooding and everything, then your system itself will get overwhelmed. So that will not solve that problem completely. But let's also see, like, how often it happens. The better solution might be that
+
+>>Bikram Dahal	54:48
+That if it is, like I said, it is only 1 % of the file, then the duplicate might be a better solution. Then you don't have to worry about it. You have a special condition on duplicate. That duplicate, on the document type, is restricted to every 10 pages. And a folder is made, and then that folder, you can decide what you want to do with that. So if the concern is just that you guys will get such a large JSON back, because you don't get file. Because file, you guys already have it. You don't need it. And then, so if the only concern is the size of the JSON, then second thing we can also do. I'm just giving you a heads up on everything. Because we are building the workflow. Workflow can also make that, break that, and make it into two different ways. You can say that if the size of this is larger, then you will just figure out a way to send it as a two -part or something. Processing can happen in one go. As long as Docs Network can process 100 pages, you don't care about this one. And as long as this page is working fine, you don't care about it. If the concern is only that data, then let me get back to your team. Because my thought was your concern was made on the first side. Because if it is a 20 -page file, and I only have data on 10 pages, then why am I paying extra for this 10 extra pages? So that reason, my solution was coming from that. But if that is not the major concern, at least at the beginning, then you can think about it.
+
+>>Jarl Arntzen	56:11
+Yeah.
+
+>>Aleksander Larsen	56:12
+All right, both of this is a concern.
+
+>>Bikram Dahal	56:14
+So it can be of both concerns. I'll talk to you if there's some questions.
+
+>>Aleksander Larsen	56:18
+Yeah, no, I think you have provided us with a lot of information, Vikram, on the alternatives now. And I think it's just up to us to discuss a bit. Like, we have many mechanisms there. We could put a hard limit on our reception even earlier on before it hits DocsUMO. And yeah, Kjell? Yeah, like Alexander says, we want to stop this as far upstream as possible, right? So the ideal solution is that, of course, our customers, supplier, instead of sending 150 -page invoices, they just send 10, 15 -page invoices instead, right?
+
+>>Bikram Dahal	57:06
+Yeah.
+
+>>Jarl Arntzen	57:07
+So we want to make it really cheap to send 15 -page invoices and really expensive to send us 1 ,500 pages, or 150 pages, sorry. And that's really, so it's like we are looking at pricing models where we charge only the same, like the same amount for up to 10 pages, right? We pay the same, but above 10 pages, something really, you know, this price curve really takes off, right? Yeah, so that's our end. We are trying to stop this, like I said, as far upstream as possible. We are trying to stop it at the customer, but even at the supplier, you know, by punishing the customer, we are thinking they will start punishing their suppliers. But yeah, so that's a long -term view, really. But then, of course, we need some safety valves and mechanisms to, like, when we receive the file, we never send more than X pages, right? We never send more than 100 pages, say, for example, right? Even though the file may be, like, I think the record file we found in our system was 21 ,000 pages.
+
+>>Bikram Dahal	58:29
+Okay.
+
+>>Jarl Arntzen	58:30
+And, you know, it was 20 ,000 pages, 4 ,900 blank pages, so it's just some kind of misconfiguration, and Yeah, We got it, right?
+
+>>Bikram Dahal	58:42
+That's totally fine, because I have seen that the files that are really big are usually that telecom bills. Sometimes you have very large bills that are, like, insane. It has broken my system multiple times.
+
+>>Jarl Arntzen	58:54
+I know that, because - Yeah, yeah, yeah, no, sorry, completely ridiculous, right? So, and then, finally, we send a number of pages to you, up to a number of pages to you, and then, in your system, you try to figure out, you know, are we at the end of the actual invoice now? And then, after that point, you just stop, right? Even though you have 95 pages, you just stop after two, and then you just send that data back to us, and then we are happy, right? Because we already have the Pdf, so you don't need it.
+
+>>Bikram Dahal	59:32
+Okay, now, I think, but the solution, we can experiment it, look into some sample, and see, one is hard -edged stuff, like you guys said. Hard -edged stuff is also a good one, because it's good enough, like, you can, as long as it's a deterministic system, people are happy. You say that you cannot send more than 20 pages. If you send 20 pages, I'll only extract it.
+
+>>Bikram Dahal	59:47
+To 200 pages, yes, I don't care. Because we have done that with a lot of customers, and they never complain, because the hard rule was already set up. If you send it, you did the wrong thing. So it's your fault. They will not go and complain about it. The second is, like you said, the system is a bit more smart. It's not just doing a hard register, but it's saying that, OK, up to 50 pages, I'll support the document to 200 pages, but I'll only process invoice if it is that 50 pages. If it's more than that, I'll not process. Like you said, the hard limit is a bit dynamic. And it's more saving on your side. It's not for a customer, but on your side, saying that even if it is a 50 page document, and I only have 200 pages, then I'm not paying that extra amount for that 30 pages. So why should I pay that extraction cost where I didn't have to do the extraction? So that's the second part. So anyway, we have both the system. I think one of these will work. You can start with a fixed rule, and then let on make it a bit more relaxing as we go also. So whatever works for you. I'll send you a document. So for all the points that I talked about, I'll just make sure that I send you the support page. I'll send you some documentation, and then we can take it from there. And you're getting a manual override. You have it, so you can always comment and say that, OK, this one particular document, I need to have to extract more pages. I need to split it. You can come, split it, then the system will work. Let's say you have a 50 page document, but the document was 200 pages, and our system only did 50 pages. You can go to that and split. You can say that, OK, let me split here, here, here. And then this rest of the document, I'll put it into ignore. Then it will split for 20 pages, 20 pages, 20 pages, and then you guys will get the data with original ID and everything. So anyway, it's a technical side. We can have that also if you absolutely need it.
+
+>>Aleksander Larsen	01:01:28
+Great.
+
+>>Bikram Dahal	01:01:29
+Ok, then it sounds good. Then mainly on our side, we are looking for two things. We are looking for you guys to test the platform after we have sent the Ocr so that you guys don't have any issue on the last file. Second thing is on the metrics thing. I'll get Manoj to double test, check everything. And you guys can also get one more sample of metrics or some invoice. And you can try to set it up for yourself. Because now that you have used this platform, usually I am very, I don't want to give the platform to the people. But now that we have tested it too much, I think it's better for you guys to do that set up yourself. So we'll send you some documentation regarding the metrics invoice, like how it was done, maybe a small video. And then you can just do it and see if you are able to replicate that exactly same thing for one more document. So that's a thing. And one thing that I'm looking forward to the most is that if you can have a comparison report. What is your coin system and what is our system, that accuracy. Because that will really help you guys also make a decision and also either prove us that we're really good or provide us the data point to make a further improvement. So looking forward to getting that report also.
+
+>>Aleksander Larsen	01:02:38
+Sure.
+
+>>Bikram Dahal	01:02:39
+And regarding all of this point, I'll make sure that I make this into Google Doc, reply it properly, send the link, and then you guys can have it for future reference also.
+
+>>Aleksander Larsen	01:02:52
+Very good.
+
+>>Bikram Dahal	01:02:53
+Ok. Ok. Then add the Xm item on the both parties here. Ok. One more thing. This is more for the technical part and everything. I know the Poc and everything is, I think it has gone a bit longer. We'll be more than happy to support you guys and everything, but our final call has to be taken on the platform on certain time. So at least by mid of next month or end of next month, if you guys can take a final call on the platform, that will really help us. Because I'm really stressing with my tech team because the monitors and everything, getting the resources are a bit tricky for me without having that contract in place and everything. But like I said, because you guys have provided very good feedback and it's improving our platform, we're more than happy to increase our Poc for the next two weeks or even if required till the end of November. But then after that, we'll have to take some call on this one. So I just wanted all of us to work towards that goal. It's OK to say it's a failed experiment. Let's not do anything. Or we say, OK, this is good enough. Let's figure out a little bit of commercial on the side so that the team also has a little bit of motivation to make sure that things go smoothly.
+
+>>Aleksander Larsen	01:04:05
+Yeah, I think Bjorn will maybe send something regarding that.
+
+>>Bikram Dahal	01:04:09
+Sure.
+
+>>Bjørnar (Semine)	01:04:10
+Yeah, I will come back to you, Vikram.
+
+>>Bikram Dahal	01:04:12
+Ok, sure then. Main thing, I'm just looking forward for two things, the comparison report. You guys testing the platform on that complex table. And you guys are testing the platform for last table that you guys have, where you were facing the issue last time. So once you guys have this data on these three things, then I think you guys will also be in a better position to take a decision. Because if all three things come out really nicely, then decision making is very easy. So I'll also work with Manoj and Ishab and make sure that there's no hiccup on your account. Because I don't want you guys wasting time after you do the final test.
+
+>>Bikram Dahal	01:04:46
+Testing because you guys will have a bad impression and everything. So I'll also work with my team to make sure that you don't have any bad experience over there.
+
+>>Bjørnar (Semine)	01:04:55
+Perfect. Thank you so much.
+
+>>Bikram Dahal	01:04:58
+Okay. Awesome. Anything else we need to discuss?
+
+>>Jarl Arntzen	01:05:06
+Like the last thing you mentioned, I mean, I could say I know what we're hoping for. Yeah. I mean, we're hoping that this is really our solution. Just so you know, we have a very positive impression of you. So you just have to know that. You've turned around from being something we are not really sure about to be something that we are even impressed by. Yeah. And it's just like, we have done our initial testing now, we have the volumes we have. So we have learned over the years that we really have to apply a larger volume in order to really know. So even, let's say, next year, we are at a hundred thousand invoices per month, right? Or, okay, that was maybe optimistic. So let's say we are at 50 ,000, right? And then we start discovering some small issues here and there. And we believe that, we hope that, or we think that those issues will be smaller. Yes, absolutely. But they might need a slightly quicker turnaround, right? So that's just a heads up to you. It may be of the type that, you know, this particular supplier has this weird invoice and, you know, what should we do, right? Maybe sometimes it's just a matter of calling the supplier and saying, you know what, your scanned invoice is a hundred DPI.
+
+>>Jarl Arntzen	01:06:56
+So I think we are more than halfway there, really. And now we're moving into the known unknowns territory. We know that there's something we don't know, but that's the best we can do. Sure.
+
+>>Bikram Dahal	01:07:15
+I totally agree. And also like, because you already have a system in place, right? And the thing about when you have already a system in place, then the second system should be really good. It cannot be like 10%, 20 % better, right? It has to be on all the place because the time and effort it requires for moving into a new system is next thing. All right. So I understood that. I totally like, I agree on that one. That's also the reason why I have been involved with this call from the very beginning. So of all the 10 onboarding that I have, you guys are the one you are getting my complete attention for two reasons. The number one reason is that I'm just, the reason you've got a little bit of hiccup on the middle was because we're trying to put you guys on the latest and greatest system that was there. So that had a little bit of hiccups because if I had put on an old system, I knew that I had to ask you to make too many duplicate, too many things and everything. So I didn't want it to get you guys because I understand your problem. So I wanted to make sure that like, if I was on your shoes, what was the best solution I would put on the company? So the decision has been based on that. Regarding your thing, support, if you go into our G2, the only thing that people talk about is our support. Even not just doing Poc, you guys might like it, it happens with vendors. So on Poc, you get a very good support, but later on down the line, then the support is start dangling because they only care about the support towards the end of the disk. That is not what happens in Docs. So you can look into our G2 reviews, people talking about our support because we understand that if my system is down or something, then your whole team is not doing anything. They're waiting. They're just waiting on you because the issues that is wasted is next level. We cannot think about it. So we understand that. So we try to make sure that whatever comes on the side are properly handled. And like you said, you guys have provided a really good curve. And I also understand that you guys really want us to win.
+
+>>Bikram Dahal	01:08:55
+You guys are our champion. You face the issue, you see the potential on the platform, and then you really want this system to win so that your workload is lowered and everything. So I totally understand that. On our side also, like I said, I actually have no clear picture. If we're able to get that accuracy number, that comparison that you guys have, and solve that matrix thing, and solve that large document thing, then there's no reason that you guys will not go with us. It makes no brain.
+
+>>Jarl Arntzen	01:09:24
+Also because of our system, we have the opportunity to only onboard some customers before, even some customers, but only invoices below a certain threshold. We have some opportunities there, which is really good.
+
+>>Bikram Dahal	01:09:45
+So that will help us get the confidence and everything and then move the larger volume once you say Okay this system really works and like that's the reason why I like the comparison because then like the decision making is so easy and like you don't have to think like
+
+>>Jarl Arntzen	01:09:58
+Much
+
+>>Bikram Dahal	01:09:58
+Yeah okay totally understood uh then I'll work with Yusuf and Manoj and make sure that your accounts I'll just clean up whatever I did on your account I don't like like I'll just make a clean account I'll just delete whatever document that deals everything uh I'll send you a documentation regarding the metrics and what to do And then you guys can start testing the last documents and then like looking forward to getting that one -to -one report and for the rest of the point that you guys have put I have I think already explained I'll send you the reply back with all the explanations so that everything is accurate great thank you so much awesome guys have a nice day same to you can you guys stay please Okay Bye guys nice Okay Um so uh Manoj and Yusuf do you have
+

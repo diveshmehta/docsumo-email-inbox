@@ -1,0 +1,1152 @@
+>>Aniket Tatipamula	00:00
+Oh, let me get my notebook. Ok, I'm ready.
+
+>>Aniket Tatipamula	00:09
+Hi, Manoj. Hi, Abby. How are you? I'm well. How are you? Good, good. Lauren. So Yeah, I mean, if we are all good, Abby, Lauren, can we start? Yes. So Yeah, I mean, I think Vishal also joined the call.
+
+>>Vishal Arya	00:36
+He is also here.
+
+>>Aniket Tatipamula	00:37
+Hi, Vishal. Hi.
+
+>>Vishal Arya	00:38
+Hi, Abby. All right, I think, yeah, Aniket, they were saying we are full house, so we can get started.
+
+>>Abby	00:44
+Yes.
+
+>>Aniket Tatipamula	00:47
+So Abby, I'll just give you a bit of brief about what we've been doing for the last one week. And then we'll straightaway jump into the product. And I'll hand it over to Paripratan and Manoj. So Paripratan is the one who is working on our split and classification task. So as we already discussed, we have divided this task into two parts. Problem statement number one, making sure that we split and classify the binder as many when we get it as a complete packet. And the second problem is after splitting and classification, we extract the data from it and put together a validation stream. And we have, like, we've worked on all the parts. So we've worked on split and classification. We've worked on extraction. We've also worked on validation. So that's a good part. We'll get to see something today. And then we'll also get a bit of, we can also provide a bit of feedback on that. So let's start. Let me start by showing something. And then we'll go into Q &a, because that would probably pace up this conversation much better. Let me just share my screen. And yeah. So Abby, what we have done is for some of the binders, we've splitted them manually and uploaded them. As in, when I say we, it's specifically done by Manoj. So all credits to him. So Manoj has uploaded these documents, made sure that the document was clicked at the right place, that the right set of fields are set up in the account. And we've made sure the extractions are happening. There surely would be some hiccups here and there. And Manoj would go through those issues. And on top of that, we've set up this validation screen. So this is what it is. Like, we have all the validations that you have asked for.
+
+>>Aniket Tatipamula	02:27
+That was defined in the settlement binder PDF. You had a requirement PDF. From that Pdf, we went through each of the checks and then put together these checks. So let's go through one of them. And then maybe we can go through all of them in detail after we discuss it. This looks really good, you guys.
+
+>>Abby	02:42
+Like, I like this a lot. Okay, go ahead. I'm sorry, I didn't mean to stop. But this is different from, there's more information on this than there was before. A lot more information on this.
+
+>>Aniket Tatipamula	02:55
+That's good to hear, Abby. As in, we love our feedback when you feel it is good. So please do stop us whenever you want us to take a pause or you want to look at something. So Yeah, I mean, this is how the validation is generally set up for other customers. So we try to set it up the same way. But it's all up to you. If you feel you want it in a very different way, then we'll be happy to change it. All the validation summary at the top for each of the document types, the checks that it is supposed to pass. If it is passed, it's so that it's complete. If it is not passed, then we have issues found. And we go one document at a time. And then we list all the checks that you asked for. For example, in this case, this is seller name check. Like the seller name from Coa is matched with seller ID. Seller name from seller ID, right? It matches and then it is passed. Then the second item is seller Dob matches. It's good. Seller Ssn, it is not found because Ssc document itself is missing. So in this binder, then we go for settlement state. It matches. There may be some, like just giving a heads up while we are doing this. Sometimes what happens is there may be, everything may look perfect, but the validation may fail. It's not a big deal. And then we just take a note of it. And then the engineers would go ahead and fix the code. Because all of these can be a little too specific for Saif. It is that we have to make sure we get all of them right.
+
+>>Abby	04:26
+To be honest, I really like this, the way you guys have split this apart and then tell me exactly what it is that's missing. This is really fricking nice. So I'm excited about this.
+
+>>Aniket Tatipamula	04:40
+That's good to hear. If you are excited, then we will like probably work extra hard to make sure everything works out. Okay. So Yeah, I can. So one of the things that we do very often is, once we set up the rest of the stuff properly.
+
+>>Aniket Tatipamula	04:57
+When I say rest of the stuff, which is extraction and split and classification, we go and we go through a few binders with the client, like in this case, it will be you and Lauren and then we'll go through these binders with you And then we'll surely run into some issues. It's very natural. We will not be able to fix all of them on the first cut, but then we go through three or four binders and then you get to see where the system is failing. We get to see where the system needs improvement and then we work together and then keep on getting this fixed. Day after day, probably in the next couple of weeks, we will see something that is much, much more finalized in every which way. I hope I'm making sense.
+
+>>Abby	05:38
+You are. You're making sense. Yeah.
+
+>>Aniket Tatipamula	05:41
+Thanks, Abby. Yeah. Maybe I'll not go through this entire binder right now. We'll do it at the very end. I want to take up the prime time for problems and I'll hand it over to Paribartan first. Paribartan, over to you. Okay.
+
+>>Paribartan Timalsina	05:54
+Thank you, Aniket. Hi, everyone. So let me share my screen once. So is it visible?
+
+>>Aniket Tatipamula	06:05
+It is. It is. Yeah.
+
+>>Paribartan Timalsina	06:07
+So let me start. I will first go with the split and classification issues that we are facing and we need the issues that we need discussion. So the first issue is that while I was exploring the documents and the ground truth that have been provided to us, what I've seen is some of the pages like this, for example, let's say on the page number 116 to 134 for the Dorian Robinson binder, there are not any labels that is mentioned for these pages. But while exploring those pages, what I've seen is the some of the pages are like maybe disclosure statement or some maybe petition as well, or some maybe list of dependents. And we are having a problem. The trouble we are having here is why are these pages not being classified? Although they look like some kind of dog types, the first issue is this. And not only on one document, I have also this issue has been on like five to six documents I have seen this issue. And similarly, for next example, on the page 38 to 53 for The Daniel Brown, what we have seen is for all page 38 to 53, there are no any labels that have been provided, no any dog types label have been provided to us. But while exploring those pages, we have seen like these pages are the petition documents. But what is the reason for not providing any kinds of ground truth for this? That is the first concern for us.
+
+>>Abby	07:34
+What is the what is ground truth? What does that mean?
+
+>>Paribartan Timalsina	07:37
+Ground truth?
+
+>>Aniket Tatipamula	07:38
+I'll take it. I'll take it. Give me a second. So Abby, what what Parivartan is referring to is when you provided us the document, right, like the binder and the information about where the binder pages are marked as a document type. So you had provided it as a dog X, right? Parivartan, can you please open one of the binders and show that this document is OK.
+
+>>Lauren Boersig	08:00
+So that would be great, because I think it's probably an exhibit to a petition.
+
+>>Aniket Tatipamula	08:10
+Can you please open the document?
+
+>>Paribartan Timalsina	08:13
+Ok, sure.
+
+>>Aniket Tatipamula	08:15
+Lauren, can you please repeat which page number 116, right?
+
+>>Abby	08:18
+Yes.
+
+>>Lauren Boersig	08:19
+116.
+
+>>Abby	08:20
+116 to 134. Yeah. Ok, can you scroll up just one more? I want to see what this is attached to. This is attached to a docu sign. So this is just the document itself. I'm not sure why this one is not. This should be the declaration or the BIA. Ok.
+
+>>Paribartan Timalsina	08:46
+So I'm like, it's just the documents all together.
+
+>>Abby	08:51
+I'm not sure why they're not. Yeah.
+
+>>Paribartan Timalsina	08:54
+I've taken this instead of this page. Yeah. This was the screenshot that I've taken, and this is mentioned as a disclosure statement. And so, but this is not mentioned as any of the document type given to us, right? On this on this file. So why and why is the reason for that? That was our concern. And not only on this, not only just a second, let me answer.
+
+>>Aniket Tatipamula	09:19
+Thanks. Yeah.
+
+>>Abby	09:21
+Hold on.
+
+>>Lauren Boersig	09:22
+Can you scroll to the bottom of the page, because if there's an exhibit, sometimes there's like a sticker on the bottom.
+
+>>Abby	09:27
+No, this one, I was looking at it. It wasn't it's not part of the exhibits. It's actually part of the stuff, but I can't remember if this one had two binders. And so there's two different disclosures, like we're buying from two different deals. Ah, so give me a second. And that may be why I did not put it in because some of our binders have two different insurance companies in them.
+
+>>Lauren Boersig	09:49
+And I wanted to go down to the disclosure so she can see the payment stream. Um, the 500 if you go down a little bit more.
+
+>>Lauren Boersig	09:57
+Um, on the first page, it's like the first paragraph for her. Yeah. Yeah.
+
+>>Abby	10:03
+Right there. So 500 from two one 24, this is Daniel Robinson, right? No Dorian Robinson. Five hundred dollars to one 24, two, three, one 28. Can you go back to the page where I listed out where the documents are? Yeah.
+
+>>Paribartan Timalsina	10:25
+Okay.
+
+>>Abby	10:25
+So I put down the disclosure under what page 91 to 90, 91 to 98. Can you go to 91, 91? No, these are the exact same payments. Three one 28. These are the exact same payments. So I don't know why they probably, maybe they sent them in twice. And so that's why I was like, nope, this is a duplicate. So we don't need it. That's the only thing I can think of. Two five, two six. Can you go back to page one, six, one 17? Was it? Yeah, I think one 17, one 17, two five, two, six, one eight.
+
+>>Lauren Boersig	11:12
+Oh, well, it's a little longer right there. The little bit.
+
+>>Abby	11:16
+So I can see the docu -sign certificate two, five, two, six. This is a different docu -sign certificate. What happened?
+
+>>Lauren Boersig	11:23
+The aggregate, I think changed because it's two 42 there. And then if you go back to 91, I think it was not two 42.
+
+>>Abby	11:32
+One 23rd page, one 23.
+
+>>Lauren Boersig	11:35
+It's one 41, five 25.
+
+>>Abby	11:38
+Oh, they changed the deal. Okay. That may be why I didn't take it and didn't.
+
+>>Lauren Boersig	11:43
+The lump sum, I think, increased like a little bit because it's one 99, five 25. I think it's 200 and the other. All right.
+
+>>Abby	11:50
+Let me, I'm going through my, I'm locating my, uh, Dorian underwriting to see what I said about that. Yeah.
+
+>>Lauren Boersig	11:59
+Sometimes I change the payments a little bit. So this is like a scenario where they may have, like, they hear from the person, how many payments they have, and then they might have been misinformed. So like they'll increase it to the full amount. Cause if, you know, they're going to get $200 ,000 on February 1st, 20, 2037, then the company will just buy 200 ,000 versus, you know, buying one 99, five 25. Right.
+
+>>Abby	12:26
+Or the insurance company told them that they can't buy just a portion of it and they had to amend it.
+
+>>Lauren Boersig	12:32
+Yeah. Cause otherwise they're saying like $475 to somebody in 12 years, which doesn't make sense for anybody.
+
+>>Abby	12:39
+So this, this was my mistake, you guys, because I shouldn't have sent you this binder with different documents in it, even though that's not my future. So those would be classified as disclosure. So it would be up to me to determine which disclosures were correct and which ones were not.
+
+>>Lauren Boersig	12:56
+Yeah. So this will be the original version and the amended version has the other amount, but they would both be classified as disclosures to decide which one is the final, like the final version of it. Sure.
+
+>>Aniket Tatipamula	13:15
+So if I'm getting this right, I understand this is an edge case, but if you were to do it, we would, you would mark both of them as disclosures, right? And that should be good enough.
+
+>>Abby	13:24
+Yes, that's fine. That's fine.
+
+>>Aniket Tatipamula	13:26
+Cause I can make the determination.
+
+>>Abby	13:28
+Once that happens, looking through, um, T value. Well, not that you guys would, I don't know if you used to T values or not, but things like the, where the originator sends us exactly what it is that happened and what the payment should be.
+
+>>Aniket Tatipamula	13:43
+So, um, I'll be, I'll impose this, right? Like if, if this is a little bit digression from the problem, because this is only for classification split right now, what Paripratan is referring to, but once let's say we bought two disclosures and on our validation view, we would have, then what would you want to see? Would you want to see both the disclosures matched or, or we just select one of them and then try to match it?
+
+>>Abby	14:09
+Um, in cases like this, I'd rather you try to see both disclosures match. If they don't match, then I know there's an issue just to make it easier for you guys, instead of having to determine it yourself, like, Oh, we're just going to skip the next ones because if I need the documents that I'm going to be like, Oh, the system's not working, but it is working. It's just that we have two different disclosures with two different payment amounts. So if you could take them out and classify them as they're supposed to be classified for the disclosures, and then I'll go through and I'll make, I'll see what happened. I'm looking for my underwriting. I can't find it. Hold on.
+
+>>Lauren Boersig	14:42
+Yeah, it's a good, it's a good one because if it changes, then she has to re go through. Cause like there will be, depending on how far along the deal got, she might have to go through the contract and the court order too, and all the other documents.
+
+>>Lauren Boersig	14:55
+With the payment streamlist to determine which ones are correct and which ones are current right now.
+
+>>Abby	15:04
+Understood.
+
+>>Aniket Tatipamula	15:05
+That makes sense. Then I'll hand it over to Paripratan again. Paripratan, let's go one issue at a time so that we get some resolution. Yeah.
+
+>>Paribartan Timalsina	15:17
+Sure. And the same issue has been repeated in other doc type as well. So on the 38 to 53 page number of Daniel Brown as well, there are not any doc type mentioned on the file that have been provided to us. But it seems like these documents are petitioned. Shall we look into that document as well?
+
+>>Aniket Tatipamula	15:39
+Yeah, let's have a look.
+
+>>Abby	15:40
+This is the petition, OK, yeah.
+
+>>Paribartan Timalsina	15:41
+Sure. For The Daniel Brown.
+
+>>Paribartan Timalsina	15:54
+Ok, from page 38 to 53. Ok. So this was the case. What we have seen here is from 38 to 53, we are missing. There is not mention for any document type name. But while looking on the page 38, I think it looks like petition document, if I'm not wrong.
+
+>>Abby	16:18
+That is correct. Go back to the Word document, if you could, please.
+
+>>Paribartan Timalsina	16:25
+Sorry, I didn't get you.
+
+>>Abby	16:26
+I'm sorry, the list that I sent you where I split it up, where I broke it up.
+
+>>Paribartan Timalsina	16:30
+Sure, yeah.
+
+>>Abby	16:32
+Ok, so I have petitions from 23 to 37. And then from 38, OK, go back to the document itself. Because that should include the exhibits too. So then this one, is it just double quote authorization? You said it's 23. Can you go back to 23? Ok. I think that's where I said that that one started. 10 -5 -20 -23. And then go back to 38. 10 -5 -20 -23.
+
+>>Paribartan Timalsina	17:22
+Yeah, this is the page, not 38.
+
+>>Abby	17:29
+38 is the missing page, though, right? The one that I didn't put in? Yeah. Yeah. Ok, so 10 -5 -23. It looks like it's a repeat. Back to 23. 23 -CV -197 -JW.
+
+>>Aniket Tatipamula	17:46
+Can you please type it again? I don't think the last time it went to that page. Can you please click and enter?
+
+>>Paribartan Timalsina	17:53
+Page 23?
+
+>>Aniket Tatipamula	17:54
+Yeah, I don't think it went there. Can you scroll up please?
+
+>>Paribartan Timalsina	17:59
+Yeah.
+
+>>Aniket Tatipamula	18:00
+Ok, so it's the same. It looks like exactly the same page, right?
+
+>>Abby	18:04
+Yeah, it just looks like it was repeated.
+
+>>Lauren Boersig	18:07
+If you go to 38, though, I think at the bottom there was like a sticker on it.
+
+>>Paribartan Timalsina	18:12
+Sure.
+
+>>Lauren Boersig	18:14
+If you go to the bottom. Oh no, sorry, not that one. Ok, never mind. It's on a sticker on something, but I think it was a different page.
+
+>>Abby	18:23
+No, I think this is just a repeat. Like they sent it in twice by mistake or it got scanned in twice. One is for Bright House. Ok, go back up to 23. I'm so sorry to make you go back and forth. I just need to double check that what I'm telling you is correct. Ok, Guru Dan, this is Bright House. It's the same. It just looks like it's one document that they sent in twice or they got scanned in twice. So I ignored it. It was exactly the same.
+
+>>Paribartan Timalsina	18:52
+Got it. So and what I want to ask is, will there be any issue if we classify the same 38 to 53 also as the next petition or that will cause the problem?
+
+>>Abby	19:03
+No, absolutely not. Go ahead and classify it as you see it. So that way you don't have any more adjustments to make to the system. And I'll go through and I'll look. Because if I see two different petitions or three different petitions, because sometimes there is a redacted one, then I know, OK, I have a duplicate in here.
+
+>>Lauren Boersig	19:20
+If there's multiple versions of it and we're pulling certain data points, would you be able to compare if the data points were the same across documents? So then Abby would know if it's the same or if it's different.
+
+>>Aniket Tatipamula	19:34
+We can do that, Lauren. We can give it a try, though. Because not each and every field may match. Sometimes extraction may also do differ. But we can do that. Like if all the documents are petitions and if the values that we're getting are all the same, then we can mark them as the same document.
+
+>>Abby	19:54
+Yeah, that works.
+
+>>Abby	19:54
+Works. I'm pretty sure that this one is a repeat. What I sent you was how I split it up and sent it off to the investor. So if I don't have a document in here, it's because we didn't need it or it was too much or it was double info.
+
+>>Paribartan Timalsina	20:15
+Yeah, got it. Okay. Okay, so let's go on to the next issue. So yeah, what we have discussed and what we have also encountered, the problem that we have encountered is the CO notice and admin fee was one of the documents I've given to us. And similarly, there was a single document types in court order and admin fee as well.
+
+>>Abby	20:38
+Court order is the document from the court. It's stamped by the court. It's got a court name, but the CO notice is a letter to the insurance company that should be with the admin fee. So it's just a notice to the insurance company that we have a court order.
+
+>>Paribartan Timalsina	20:56
+Got it. So you mean that we need to have all these three, this is the separate document type that we need, and these two are the separate documents type that we need, right?
+
+>>Abby	21:05
+Well, admin fee and admin fee, those are the same. Those should still be the same. But CO notice and court order are different, but admin fee is the same.
+
+>>Lauren Boersig	21:15
+I feel like it's printed on the same page, which is why it's combined because they'll have the letter And then they'll place the check on top of it And then they'll scan it. So it's just one page for both.
+
+>>Abby	21:23
+Right.
+
+>>Paribartan Timalsina	21:26
+Okay, got it.
+
+>>Aniket Tatipamula	21:27
+Did you get it, Paripat? Yeah. Because they are scanned in a single page. So we will not be able to split as well.
+
+>>Abby	21:35
+That doesn't always happen though. That's why sometimes we get them separate. The letter comes separate from the check, the admin fee check.
+
+>>Paribartan Timalsina	21:45
+Okay, got it. So you mean to say that should we have a CO notice, court order and admin fee as three document types or should we keep CO notice and admin fee as a single document type?
+
+>>Aniket Tatipamula	22:00
+Paripat, that is for us to answer because if it is scanned on the same page, right? If it's scanned on the same page, then it will be together.
+
+>>Abby	22:08
+Yeah. But if it's scanned separately, then it would be separate and then your system would come back with a fail because it's not, it's separate. It's not together. Okay. I don't know. How can we resolve that? Hold on. I'm thinking. Well, no, because the admin fee we're going to send out so we don't even need this part. Do we, Lauren?
+
+>>Abby	22:38
+Lauren, you're on mute if you're saying something.
+
+>>Lauren Boersig	22:42
+Sorry, I was trying to find the browser. We, I mean, the portfolios we may need it, but I don't know. How, how critically do we look at the admin fee of a portfolio?
+
+>>Abby	22:54
+Not very, because if we've got the Stip or the acknowledgement, then technically it's moot because we got everything we wanted.
+
+>>Lauren Boersig	23:02
+I think we don't have to worry about that then. Yeah.
+
+>>Abby	23:05
+We can probably take that out because we're the ones that are going to be sending out the admin fees now.
+
+>>Lauren Boersig	23:10
+Yeah, that makes sense.
+
+>>Abby	23:12
+Yeah. Okay. Well, you don't even need that. You can just strike that from your, your list. Okay.
+
+>>Paribartan Timalsina	23:18
+So we don't need admin, admin fee, right?
+
+>>Abby	23:22
+Or CO notice. Correct. Okay.
+
+>>Paribartan Timalsina	23:26
+Got it. So the next issue is on some documents, what I've seen is although they have been clearly mentioned as the petition, amended petition, right? They are like amended petition or the on this document, like the amended petition for something like this, but they are on the, on the doc document types that have been provided to us. It is written as petition.
+
+>>Abby	23:51
+As just petition, which means I only got one.
+
+>>Paribartan Timalsina	23:55
+That's why I listed it as petition.
+
+>>Abby	23:57
+So they never sent me the original petition. All they sent me was the amended. So all I have to list it as is petition.
+
+>>Paribartan Timalsina	24:06
+So if that case arise in the new documents, like if we have only the amended petition, should we need to classify that as the amended petition or the petition?
+
+>>Abby	24:14
+You can leave it as amended petition because either way, I'm going to have to go back to the originator and ask for the original petition, which they did not send in the binder. And then I'm going to have to upload it to the file. So I still need both, but while you're extracting for your extraction purposes, you can just list it as petition or I'm sorry, amended petition.
+
+>>Paribartan Timalsina	24:33
+Okay. Got it. Yeah. So yeah, on the, on the petition side, we have, I think around six subtypes for petition. Petition, petition redacted, amended, RNS petition and petition P and D. So Yeah, We, we got to know about these four, four types of petition, but we will get to that.
+
+>>Abby	24:58
+Okay, so here's here's the thing the RNS petition is actually a settlement agreement petition so it should not be part of the petition. It's the release and settlement agreement is the case that happened why the seller gets these payments. So it's the original like settlement agreement that that is listed on there. So it should not be listed as a petition because it's not part of the petition to this order. So there's there should be logic built around that that if it's an RNS petition, it's going to be earlier like in the past further in the past than any of our current documents.
+
+>>Paribartan Timalsina	25:38
+Okay, does that make sense? Yeah, got it. And what about this petition P and petition D? Okay, what happened Manoj before we? I had one question. So in terms of RNS petition, if it's not like it should not be considered in petition. So should it be considered as RNS agreement? Yes, as RNS agreement or settlement agreement. Either name is fine. Okay, that's where that should be. So then on the second question, I'm sorry, I'm a second question petition P and petition D.
+
+>>Abby	26:12
+So those were separated because we had to go to the original court to get approval to bring the deal in the state where the seller resides. So there's going to be a petition for where the seller resides. So let's say the seller resides in Texas. That's where this was a probably a PA deal. So the seller resides in Pennsylvania, but the original the settlement agreement, the settlement happened in Delaware. So we have to go to the Delaware court and get approval from them to bring the case to Pennsylvania where the seller lives. So we're going to have petitions for different states in that instance. That's what the PA and the DE are for. It's Pennsylvania and Delaware for this specific one. But it's not always Pennsylvania and Delaware. It might be New York and New Jersey or California and Iowa. It depends on the settlement agreement and what language is in there.
+
+>>Paribartan Timalsina	27:03
+So there are still petitions.
+
+>>Abby	27:04
+They're just petitions for different states because this specific file required both.
+
+>>Aniket Tatipamula	27:12
+So before we go forward, like even though we sub classified them into these many categories, especially the last two, would they affect value? Because from the classification perspective, we just have to classify it as a petition. Right. And then maybe somewhere in the document there will be a state information that we'll have to pull. And how would that change the validation view itself?
+
+>>Abby	27:37
+Well, the information still has to be the same for the validations on the petitions. They all have to match. They all have to have the same type of language. That's not a problem. I know this part is confusing. I get it. But they will all have a state listed because the petitions come from the courts. So they have a county and a state listed on each of them. And this, well, in Pennsylvania, it is common Delaware, too. We have to go back to the original court to get it. So there are times that we'll have two petitions from two different states and they're both accurate. We just need them both.
+
+>>Aniket Tatipamula	28:14
+Understood. So from the classification perspective, the reason I'm asking this question is, do we even have to do that? We just we just extract it as a petition and then we run all the validations on each of the petitions. Yes, that's correct.
+
+>>Abby	28:28
+I'm so sorry. I'm explaining so much to you and you guys don't need all that.
+
+>>Aniket Tatipamula	28:35
+We really appreciate the explanation, because otherwise we will also not be able to connect the dots. And then it's because you are able you are explaining it And we can connect these dots. So thanks a lot. I think that answers your question, right? Like we don't have to classify it as on the classification layer. We just have to extract it as a petition and then on the validation, we'll run the validation. Please correct me if I'm wrong.
+
+>>Abby	29:00
+No, that's correct. That's the only difference. The only one that I would say it would be you don't do this for is the RNS petition, because that should be with the agreement.
+
+>>Aniket Tatipamula	29:09
+Understood.
+
+>>Paribartan Timalsina	29:10
+Understood. Ok, got it. So on the next issue, I think this has been discussed on the previous call as well. The issue of proof of residency and the seller ID, seller ID thing like the seller ID also resembles all the characteristics for the proof of residency. And because of that, that we can get confused. Like both of these two documents are currently provided to us as a proof of residency. But this seems to be like seller ID as well as the identification card on the definition of that structure that have been provided to us. The identification card resembles seller ID. So because of that, we are having issue on this side as well. Either we should keep this on the.
+
+>>Paribartan Timalsina	29:52
+Proof of Residency or the Seller ID?
+
+>>Abby	29:56
+Ah, OK. If it has to be one or the other, then leave it under Seller ID. And then we'll use any other documents, like the bank statements, as additional. We'll leave that as Proof of Residency instead of the Seller ID. So anything that confirms the address that we've received, we'll put in for Por. And then we'll leave these as Seller ID if it's causing an issue. Because it is what it is. It's an ID. So it's fine.
+
+>>Paribartan Timalsina	30:25
+Ok, got it. And on the next issue, we have seen some labels as Passport and then Proof Of County as well. But these are also similar to Seller ID. Yes. These are the identification cards or some kind of license or anything like that. And because of that, we are getting it as the Seller ID. And currently, what we are planning to do is keep all these PORs as the Seller ID. Keep most of the identifications, driving license, and those things as the Seller ID. And will that cause an issue or not? That was the concern.
+
+>>Abby	30:57
+That wouldn't cause an issue except Proof Of County. What did I list as Proof Of County? Was it a Usps printout, United States Postal Service printout?
+
+>>Paribartan Timalsina	31:07
+No. So let me see once. I will look there. It wasn't. Only one instance of Proof Of County was there. So.
+
+>>Aniket Tatipamula	31:32
+I think we can check the binder as well for reference.
+
+>>Paribartan Timalsina	31:36
+Let me verify from here, and then we can do that. On the Daniel Brown of page 81. Might be on this. Yeah, this one. Where is that? I think this is the one.
+
+>>Abby	31:54
+I listed this as Proof Of County?
+
+>>Paribartan Timalsina	31:56
+Yeah, I think so, because let us see that. Yeah.
+
+>>Abby	32:00
+81. I think that's supposed to say Proof Of Annuity. Right? That's an annuity check. Is it not to the seller? Yeah, I'm sorry. This was supposed to be Proof of Annuity, not Proof of County. I messed that up. I must have been asleep, like half asleep for that one. That's A Proof Of Annuity. It's the check that he gets from the insurance company.
+
+>>Paribartan Timalsina	32:25
+Got it. Thank you. Thank you. So yeah, this. Ok.
+
+>>Abby	32:31
+Sorry, that was my fault. That was Proof of Annuity. That shouldn't even be part of Por.
+
+>>Paribartan Timalsina	32:37
+Ok, so it means that we don't have any Proof Of County document type, right?
+
+>>Abby	32:41
+No. OK, got it.
+
+>>Paribartan Timalsina	32:45
+Oh, yeah. Going on to the next issue.
+
+>>Aniket Tatipamula	32:49
+Yeah, man.
+
+>>Manoj Racherla	32:51
+In terms of Proof Of Residency, so should we consider documents like utility bills, bank statements, and leases only in terms of Proof Of Residency? Or is there any other different documents as well? No, that's it. Anything that proves that he lives where he lives.
+
+>>Abby	33:11
+So any vehicle registration, it's going to be a document of some nature showing an address to verify his current address. So you can leave those as Proof of Residency. Those shouldn't change. But with the seller IDs, I understand why the confusion. So just leave those as seller IDs.
+
+>>Manoj Racherla	33:29
+Ok, and in terms of extracting field as well, I guess we have to extract only two fields, like seller name or seller address from Proof of Residency when compared to the seller ID.
+
+>>Abby	33:40
+Correct. Understood.
+
+>>Manoj Racherla	33:42
+Thanks. Yeah, Bharathan.
+
+>>Paribartan Timalsina	33:46
+Yeah, the next issue is that on this Daniel Eckhart document, what we have seen is on the page 78 to 84, it was termed as a religion settlement document. So let me open that as well. Let me see.
+
+>>Abby	34:04
+Daniel Eckhart.
+
+>>Paribartan Timalsina	34:05
+Yeah, page 78. Yeah, this is the one. So from page number 78 to 84, it is written as a religion settlement. But while exploring the documents, I think it resembles more as a court order kind of thing, or like the order approving minority compromise. It seems like that document. I might be wrong as well. So while I was looking on the page 78 to 84, more than RNS, it seems like a court order document. So can you please confirm that?
+
+>>Abby	34:52
+R &s is a court -ordered document. So this would be the court -ordered document because it is not only for the minor listed on top, it is for all of them. So Jennifer Eckhart, who is not a minor, it is listed, she's listed individually and as next friend of the other two, the other two minors. So technically this is not an order proving minors compromise, it is just a release and settlement agreement, so R &s. Because it includes all of them. The Oamc is only for minors, so it will only list the minor payments.
+
+>>Paribartan Timalsina	35:31
+Okay, so and what can be the difference between court order and The R &s?
+
+>>Abby	35:38
+Well The R &s, you mean a court order for what you're verifying?
+
+>>Paribartan Timalsina	35:44
+The court -ordered document type and The R &s document type, we have two separate document types, right?
+
+>>Abby	35:50
+So an R &s is always going to be in the past, it is what initiated our deal. So this was signed when in Tarrant County, does it have a date?
+
+>>Paribartan Timalsina	36:03
+Down?
+
+>>Abby	36:04
+Okay, so it was signed in 2008. So this deal generated from way back when, so that's your difference is the date. It's going to list a court order, our court order is going to be current, it's going to coincide with what we're doing. And it is only going to have one person listed as far as seller goes, like our seller, who you're verifying information for. A settlement agreement, an R &s is going to have all the parties that were involved, who the original defendant was, who the original plaintiff was, and it'll list all those parties. Our court order does not do that, it lists an originating company, and it lists our seller, whoever that seller may be.
+
+>>Paribartan Timalsina	36:49
+Got it.
+
+>>Aniket Tatipamula	36:52
+While we are at it, Paripratan Kiri, please go to the document. I'm just wondering, like, how did you figure out it's 2008, and if you cannot read it? Can you please scroll down the date?
+
+>>Abby	37:02
+The date?
+
+>>Aniket Tatipamula	37:02
+08, right? Yes. 08, right?
+
+>>Abby	37:04
+Yes. You can keep going, if you keep going down, the signature will usually have a date listed as well. Sometimes the date is in the body itself, and then sometimes, you see 2008. Okay.
+
+>>Aniket Tatipamula	37:17
+This is more legible, yeah.
+
+>>Abby	37:23
+Yes. So, that's the difference between The R &s's. They're all court orders, they're going to be court orders, they're just, we label them differently because an R &s, or an Oamc, or an Oas, that is what originated the payments for the seller. So, the seller, what happened, why they get the payments, that type of information is on there, but it also includes all parties that were involved in the lawsuit.
+
+>>Paribartan Timalsina	37:49
+Got it. Yeah. Abhi, I have one question. In terms of R &s agreement, and within the binder, can we have both as well, like R &s agreement as well as R &s affidavit as well? Yes, you can. And would it be always together, like in terms of page?
+
+>>Abby	38:11
+They should be close in the pages when they come through, because most of our originators send the benefits letter, annuity contract, R &s, Q &a, they send everything usually in the same section. I don't have a lot of originators that separate them or put them like one in the front package and one in the second, but they can list more than one. In some instances, we'll have an R &s and we'll have an Oas, even though it looks like it's the same document, it's not. One is an order approving and the other one is a settlement agreement that gives us the information. And then the Oas is the one that's telling everyone else, hey, this court order was approved by this court, and then these are the rules that you have to absolutely follow. There are instances where you're going to have more than one settlement agreement. It's not more than one. It's just that it's part of whatever the court itself, what they wanted put into their systems.
+
+>>Manoj Racherla	39:13
+Okay. Okay. Got it. So it's just for like, I was asking just for our sake, like how do we identify if they are together? R &s agreement and R &s affidavit, how do we like split it and classify it into correct documents because both are different documents?
+
+>>Abby	39:28
+All of them are going to have a cover page, like a start page with the court information on the top. And then there's always going to be a judge signature on the bottom before the next one starts.
+
+>>Manoj Racherla	39:40
+Got it. Okay. Yeah.
+
+>>Paribartan Timalsina	39:44
+Okay. So, yeah. On one of the two documents that what I found is,
+
+>>Paribartan Timalsina	39:50
+So, this was the previous page and this was the next page and what I have seen is so let's look at the page 26 to 27 of David Spencer what we have here is the page 26 is termed as notice of hearing and this is correct because we are getting the title as notice of hearing as well and the second page here is certificate of service and I think that the certificate of service resembles more to the proof of service but it has been given to us as notice of hearing as well. This page has also been labeled as notice of hearing and the confusion here is either this page is the extension to this notice of hearing so this is labeled as the notice of hearing or we should label it as the proof of service.
+
+>>Abby	40:34
+That is notice of hearing. It is page 2 of the notice of hearing. So, when they send out a notice of hearing when the attorney send out a notice of hearing they also include a certificate of service saying on this day I sent a copy of this and this to the correct addresses. The proof of service is going to be different wherein it is going to have either the Fedex or the Usps like green tickets, green labels for service to the address or it will have on top of it with all of the court information certificate of service. That would be different. This is just a continuation of that first page of notice of hearing.
+
+>>Paribartan Timalsina	41:21
+Okay, got it.
+
+>>Abby	41:25
+Do I have a document that has the certificate of service where we use that as POS?
+
+>>Paribartan Timalsina	41:32
+Yeah, there are two documents there on the combined binders and this is also the same case. This is the notice of hearing and this certificate of service it was labeled as notice of hearing. So, I got it understood.
+
+>>Abby	41:44
+It is part of the notice of hearing. If you see on the first page you see where it says District Court Clark County Nevada in the matter of the petition of Rising Capital Associates blah blah blah. Do you see that on top? Yeah. Okay, so a certificate of service a POS would have this same information on top with the certificate of service information on it. Because it does not have it, it is just a continuation of the notice of hearing. So, we cannot use this as POS. This is part of the NOH.
+
+>>Paribartan Timalsina	42:17
+Got it.
+
+>>Abby	42:19
+Because if it is just a certificate of service we have and we do not have the Fedex labels or the green tickets, then it has to be filed with the court. So, it would have its own court document with a certificate of service with the court document listed up on top. Because it is not, it is a continuation of the previous page or the notice of hearing.
+
+>>Paribartan Timalsina	42:42
+Got it. Thank you, Abby.
+
+>>Abby	42:44
+You're welcome.
+
+>>Paribartan Timalsina	42:44
+Yeah, the next page is like, yeah, So, What we have here.
+
+>>Abby	42:51
+I am just going to before you even worry about this one, we are going to take this one off because we are not going to send you the admin fee stuff as we are the ones that are going to be handling that. And even our portfolios, we are not going to need to track it so long as we have the information that we need.
+
+>>Paribartan Timalsina	43:09
+Okay, so, you mean we can completely exclude admin fee and admin fee tracking from our splitting, right?
+
+>>Abby	43:14
+Yes, you can.
+
+>>Paribartan Timalsina	43:16
+Sure, thank you. Okay, got it. Then we can exclude this. Yeah, on the Ipa side as well, there were four subtypes for Ipa. Ipa election, Ipa letter, Ipa waiver and Ipa statement. And Ipa waiver is clear and we can get that on the Ipa election and Ipa letter side. I think this resembles similar to Ipa statement in my opinion. I might be wrong as well. And currently, we are, these two are also being classified as Ipa statement. Will that cause an issue or not? That's the first concern. And currently, what we are doing is we are only taking these two into consideration, Ipa waiver and Ipa statement. And this Ipa letter and election are being splitted into Ipa statement.
+
+>>Abby	43:58
+Okay.
+
+>>Paribartan Timalsina	43:58
+Will that cause an issue or should we go on with these four subtypes?
+
+>>Abby	44:02
+No, I'm going to fix it for you right now. So, Ipa statement and Ipa letter are exactly the same.
+
+>>Paribartan Timalsina	44:10
+Got it.
+
+>>Abby	44:11
+Okay, because the Ipa letter has to be a letter from the attorney's office. So, that's Ipa letter and Ipa statement are the same. So, you can classify those the same. Ipa election is when the seller says, okay, I'm going to go talk to somebody and I'll let you know who I talk to. So, that's what Ipa election is. Ipa waiver, obviously, they waived it and then the Ipa letter or statement is the letter from the attorney from their election saying, hey, this seller did contact me and we did speak and here's the letter showing that we spoke.
+
+>>Paribartan Timalsina	44:44
+Okay.
+
+>>Abby	44:45
+Ipa is not always required. They don't always have to speak to an attorney or a certified public defender.
+
+>>Abby	44:49
+Accountant, they can decide to do so if they think it's in their best interest and that's up to them so they'll elect to speak to somebody that's why it's listed that way but Ipa waiver I mean I'm sorry Ipa letter and Ipa statement are exactly the same. Those are the same.
+
+>>Paribartan Timalsina	45:06
+It means we can we can remove the Ipa letter and we can keep these three as the subtypes for Ipa?
+
+>>Abby	45:12
+Correct.
+
+>>Paribartan Timalsina	45:13
+Got it.
+
+>>Aniket Tatipamula	45:15
+Can you please show the one that got misclassified?
+
+>>Paribartan Timalsina	45:21
+Ipa election one?
+
+>>Aniket Tatipamula	45:22
+Yeah let's go through one.
+
+>>Paribartan Timalsina	45:24
+Just look. You mean document right?
+
+>>Aniket Tatipamula	45:27
+Yeah because it got misclassified right?
+
+>>Paribartan Timalsina	45:31
+Yeah Ipa election was classified as Ipa So I think there is only one instance for Ipa election as well let me search here once.
+
+>>Aniket Tatipamula	45:38
+Then we can do one thing we can have a look and then come back that's okay Let's go to the next one.
+
+>>Paribartan Timalsina	45:43
+Okay I found it. I found it. On the marking list, the marking list 30 Ps 39.
+
+>>Aniket Tatipamula	45:58
+Abby, Lauren, please do stop us if this is getting a little too overwhelming as in because we are taking a lot of your time right? We can probably do it tomorrow once again in a shorter session if you if you wish to do so.
+
+>>Abby	46:11
+No worries no worries. So see here is he saying I hereby certify that I have obtained professional advice from the following professional regarding this proposed transaction or the transfer. So he is getting Ipa we just don't have the Ipa information. So this is an election I chose to get this.
+
+>>Paribartan Timalsina	46:35
+Okay got it.
+
+>>Abby	46:36
+Okay So election is just that they chose to get Ipa. If you bring up an Ipa waiver it will usually have both. I choose to waive Ipa or I choose to accept Ipa in some of the instances. So they have the choice in certain states to select to get Ipa or not and then in certain states it is absolutely required they can't get away from it and we need both the election and the letter in the system.
+
+>>Paribartan Timalsina	47:03
+Got it.
+
+>>Abby	47:05
+Does that make sense or do you need me to clarify that a little bit more?
+
+>>Paribartan Timalsina	47:09
+Got it Yeah I understood it.
+
+>>Abby	47:11
+Okay.
+
+>>Paribartan Timalsina	47:14
+Okay.
+
+>>Abby	47:17
+Yeah. So Yeah
+
+>>Manoj Racherla	47:22
+In terms of like Ipa waiver and Ipa statements like I like I was seeing these documents I can see that in both the Ipa waiver and Ipa statements like we are extracting the same field as seller name right? Correct. So in terms of Ipa election if you are also considering these as a separate doc type then we should also like extract the same seller name from the Ipa election or is there are other fields you want?
+
+>>Abby	47:50
+No it's the same thing because we don't with the Ipa election like I said they're not always required to get it so they can get it. It doesn't make a difference to me but all you're doing is verifying the seller information that they did sign this one. Okay
+
+>>Manoj Racherla	48:03
+So and within the same binder can we get multiple like Ipa statement and Ipa waiver and Ipa election separately?
+
+>>Abby	48:11
+You should not get them But But I will say that there are times where if we start a deal and it's in a waivable state meaning the seller doesn't have to get it and they decided Okay I'm gonna waive it you're gonna have the Ipa waiver but if the court turns around and decides you know what I don't like this deal you're gonna have to have the seller go speak to somebody then you will have an Ipa election and an Ipa statement so there is a possibility it all depends on the court for this though for that that part right there it all depends on the court. Usually you will not have all three but there are instances that it has come up it is not often it's very rare but it does happen.
+
+>>Manoj Racherla	48:57
+Okay since it's very rare can we consider whether if it's Ipa election or Ipa waiver and Ipa statement as a single DOCTYPE and since the fields are also same across the document irrespective of its election waiver or statement can we consider it as same within the same DOCTYPE we classify all the sub DOCTYPES like election waiver and statements within the same DOCTYPE of Ipa would that work for you?
+
+>>Abby	49:28
+You're just gonna notify like click it off like hey this is an election or you're gonna say it's just the Ipa that's it period.
+
+>>Manoj Racherla	49:37
+Yeah it's just Ipa so would that work for you in that case?
+
+>>Aniket Tatipamula	49:44
+We can always have just to add to Manoj and Abhi if it's a DOCTYPE
+
+>>Aniket Tatipamula	49:48
+You can always have one more field inside the document type saying that which kind of Ip it is, rather than me trying to classify it at the forefront and create a new doc type. So we just classify all of them as Ip, but there will be one field on what classification it is. Is it election, letter, waiver, or statement? Yeah, we can add that as well.
+
+>>Abby	50:08
+Ok, yes, then that sounds good. That's easier for you guys to get it split out correctly. That's fine. We can work with that. Ok.
+
+>>Aniket Tatipamula	50:18
+Perfect.
+
+>>Manoj Racherla	50:19
+Perfect.
+
+>>Aniket Tatipamula	50:20
+Thanks, Abby. Thanks, Manish.
+
+>>Paribartan Timalsina	50:22
+Yeah.
+
+>>Aniket Tatipamula	50:23
+Over to you, Paripartanil.
+
+>>Paribartan Timalsina	50:25
+Yeah, So Yeah, as we have excluded the tracking and admin fee, we can exclude this issue as well.
+
+>>Abby	50:32
+Wait, wait, wait. No, no, those are not admin fees. That's POS. Yeah, So
+
+>>Paribartan Timalsina	50:37
+Yeah. Ok, so what I mean to say is currently it was being classified as admin fee on while we were experimenting. But as we will remove it.
+
+>>Abby	50:45
+Oh, OK.
+
+>>Paribartan Timalsina	50:46
+But as we will remove the admin fee and admin fee tracking, I think that is because this is given as proof of delivery, right? Yeah. And so because of that, it is being classified as something like admin fee tracking because it has some tracking numbers as well. But we will be excluding those admin fee and admin fee tracking. And it might be now we will also change the instruction for the proof of service. As you have said, it will have some Usps or Fedex like kind of things. Then it can be declassified.
+
+>>Abby	51:17
+Ok, that's fine.
+
+>>Paribartan Timalsina	51:19
+So it will not be an issue.
+
+>>Abby	51:20
+Ok.
+
+>>Paribartan Timalsina	51:23
+Yeah. So on the release and settlement petition, what we have seen is release and settlement petition is also a SOP type for a petition, right?
+
+>>Abby	51:34
+No, RNS petition is for the settlement agreement.
+
+>>Paribartan Timalsina	51:38
+Yeah, it's a different type.
+
+>>Aniket Tatipamula	51:39
+We just mentioned that.
+
+>>Paribartan Timalsina	51:40
+Ok, so it means that the things, the exhibits or the documents that will follow a release and petition should not be classified as release and petition, the thing that we do with other petitions.
+
+>>Abby	51:54
+Right, this is different. This is part of the settlement agreement. So a settlement agreement, so the petition is also going to list all the parties that were involved and will also be in the past. It is not a petition that you need to take apart and c***. What's the word I'm looking for? You don't validate the same thing as the petition because it does not have the same information. This would all be part of the settlement agreement, Rns, Oas and Oamc.
+
+>>Paribartan Timalsina	52:30
+So can we classify this RNS petition as RNS only or will that cause an issue?
+
+>>Abby	52:37
+That will cause an issue because I can't use it as an RNS if it's not signed or it's not finalized because an RNS petition is just that, just a petition to say, hey, this is going to be settled and this is what it's going to be, but that may change by the time they get to the signing, the judge agrees to it. That's why it's labeled differently.
+
+>>Paribartan Timalsina	52:58
+Got it. Yeah, so an RNS petition must be different from petition also, right? We cannot classify this as petition also.
+
+>>Abby	53:07
+Correct, that has to be different. That one has to be different.
+
+>>Paribartan Timalsina	53:10
+Okay, got it. Thank you, thank you. That was from my side and these were only issues. Now for the extraction issues, over to you, Manoj.
+
+>>Aniket Tatipamula	53:21
+I'll take a pause, Parivartan. I'll take a pause. Abby, Lauren, are we good to go or did we exceed the timeline?
+
+>>Abby	53:31
+I can stay on for another 15 minutes. I'm not sure about Lauren.
+
+>>Lauren Boersig	53:35
+I can stay.
+
+>>Abby	53:37
+Okay.
+
+>>Aniket Tatipamula	53:39
+Thank you, thank you. Okay,
+
+>>Paribartan Timalsina	53:43
+So Yeah, That was from my side.
+
+>>Abby	53:46
+Okay.
+
+>>Aniket Tatipamula	53:46
+So over to Manoj, right? Yeah, over to Manoj. Thanks, Parivartan.
+
+>>Manoj Racherla	53:52
+Oh, here. I'm audible?
+
+>>Aniket Tatipamula	53:55
+You are, you are.
+
+>>Manoj Racherla	53:58
+Okay, let me share my screen.
+
+>>Manoj Racherla	54:08
+Is my screen visible, guys?
+
+>>Aniket Tatipamula	54:10
+Yes.
+
+>>Manoj Racherla	54:16
+Okay, so while extracting the fees that were mentioned in the settlement PDF document, like we observed that there are some like confusion or inconsistency in terms of extraction for some fields, like we will go one by one for that.
+
+>>Abby	54:39
+Okay.
+
+>>Manoj Racherla	54:41
+Okay. So in terms of, let's say dependent names, in the binders, whatever the,
+
+>>Manoj Racherla	54:48
+List of dependent document that you have shared in that the list there was no list of dependents name mentioned so should we consider it as Like a blank value or should we mention it as a like a legal name? Let's say it's if the List of dependence document is for Maggie Davis. Should we consider the dependent name as Maggie Davis?
+
+>>Abby	55:10
+No, because she's not her own dependent If the document is not if there's no names listed meaning she has no dependents It's just because she's older and her her children are older. She has no one that depends on her anymore But we still need to know whether or not she has any or none
+
+>>Aniket Tatipamula	55:30
+Okay Sorry to interrupt so in that case and it please roll up You know match that should have happened, you know, can you please hover over the right? Validation because the dependent validation was online. Can you please hover over dependent validation, please? Yeah, we not extract any dependent from Coa, but we ended up extracting people dependent from LOD Can you please open LOD document that should not have happened, right?
+
+>>Manoj Racherla	55:58
+Yeah
+
+>>Aniket Tatipamula	55:59
+And yeah, let's refer to docs. Otherwise this information will be lost here So do LOD
+
+>>Manoj Racherla	56:07
+So ideally this shouldn't have happened.
+
+>>Aniket Tatipamula	56:10
+Yeah, so we have to get this fixed then there's no dependent here. Okay
+
+>>Manoj Racherla	56:18
+And In terms of disclosures originator like we weren't able to extract any originator name within the disclosure document So, can you confirm if let's say within this disclosure for Maggie Davis?
+
+>>Abby	56:32
+Mm -hmm Basically, so, you know the disclosures don't always list the originator. So if it does not come up with anything then that is fine Scroll down because if they did list it it might be in the last page No, it's not listed on this one Okay, and also one more thing like in terms of disclosures like this is this disclosure like contains multiple state disclosure This is a Pennsylvania, this is a Delaware.
+
+>>Manoj Racherla	57:02
+So is it always combined here like this within the date?
+
+>>Abby	57:06
+Yes within the dot within the binder. They always put them together
+
+>>Manoj Racherla	57:11
+Okay Got it There was one more disclosure one which can you please go to the next topic? Yeah, and Also in terms of this, this is a disclosure affidavit So should we consider this as a disclosure only or should it be a different doctor?
+
+>>Abby	57:30
+This is a this is a different document completely and this is not something that you'll get all the time either I only have two companies that currently issue this It is just telling us. Hey, we sent the disclosures on this day via email or via Usps and then they still have to send the proof of it because we can't just take a disclosure affidavit That's why only two companies use it
+
+>>Manoj Racherla	57:52
+Okay, if it's a different document So should the fields be different as well in terms of like what needs to be accepted from disclosure affidavit?
+
+>>Abby	58:00
+Yes, because it's not gonna have anything but the seller name seller address and how They sent the document and on what date they sent the document. That is all it has on it Any other information on it?
+
+>>Manoj Racherla	58:15
+Yeah
+
+>>Lauren Boersig	58:15
+There was um the even if they've sent it by email Then we also don't uncollect the email address because that would be compared to the application right Abby.
+
+>>Manoj Racherla	58:23
+Yeah All right, and in terms of validation like in terms of let's say we extract seller name date and etc like Across which document we have to validate disclosure affidavit.
+
+>>Abby	58:37
+You're gonna Check it against because all you're checking is the name the address and the email and The date it was sent You're gonna check that all against the Coa because all that should be listed on the Coa or the application
+
+>>Manoj Racherla	58:56
+Okay So we have to extract seller name address email and date and this Foot and these four field needs to be validated with the Coa correct
+
+>>Manoj Racherla	59:22
+Yeah, and in terms of here Yeah in terms of this in the NOH is the like we extracted it as Morris James Llp from the NOH but within the
+
+>>Manoj Racherla	59:47
+Contract is extracted as global monetary group incorporation so is is it the correct value that we extracted in terms of originator name from which that more shames is the attorney that's representing the originator it's an attorney's office it's not the originator Okay So this is a wrong but this is the right one correct Okay
+
+>>Abby	01:00:09
+But when we like see that's the attorney's office that represents the originator Okay
+
+>>Manoj Racherla	01:00:31
+So that But but here within this dog this global monetary group incorporation is originated in terms of contract but when we search for this global monitoring within the image it's not we can't find anything it should be go to the first page you're going too fast go up Okay this is the first page
+
+>>Abby	01:00:58
+Yes this is the first page if any interested party Superior Court I'm not sure why they didn't list the originator on this but it should always be listed it should always be listed
+
+>>Manoj Racherla	01:01:15
+Okay
+
+>>Abby	01:01:15
+Yes you see where it says attorneys for petitioner petitioner is the originator But they didn't specify on the first page who the petitioner is also that was their fault understood so in that case should we keep it as blank
+
+>>Manoj Racherla	01:01:32
+Yes you keep it as blank and in the in terms of like we didn't found from the combined binders we didn't found divorce decree document like I wasn't able to find any divorce decree sample documents so that we need to check the validation of that document as well is she divorced I don't remember if Maggie Davis was divorced can we go to the Coa in the document Hmm Okay
+
+>>Abby	01:02:19
+Yeah He's retired she was widowed from Bob Davis she was widowed You know not divorced So we wouldn't have a divorce decree she was widowed understood
+
+>>Manoj Racherla	01:02:42
+So do you have any such binder in which divorce decree is present yes would you like me to send you one Yeah it would be better if you send it because none of the combined binders contains divorce decree like we check it all the combined binders that we share with us And you want do you want me to send it your teams or do you want me to just upload the binder itself you can send it via teams as well and In terms of file stamp so here so in terms of file stamp in the annual should it be always like a boolean value yes or no or should it be a exact specific value that you know you're just gonna give me the value
+
+>>Abby	01:03:36
+Yes
+
+>>Manoj Racherla	01:03:36
+Or no that is all you don't need any specific value like here that we extracted and in some cases like here as you can see you And you be sure for petition is Metro life insurance company but in Ac
+
+>>Abby	01:04:05
+And you take on that here it's Metropolitan Tower life insurance company so in this case it's showing us for that walk or it should be a partial match it should be a pass but because it failed that means that they messed up on the petition which happens if they don't have a benefits letter so that is a possibility happening you just leave that just as it is because then I know I have to go back to the insurance to the originator and be like hey you guys have this wrong you need to change it it should match if it doesn't match then there's something wrong somebody messed something up so I got to go back to the originator okay understood and in dumb
+
+>>Manoj Racherla	01:04:46
+In terms of docket number under the court, is it the correct one that we extracted that we just wanted to confirm it?
+
+>>Abby	01:04:54
+Yes.
+
+>>Manoj Racherla	01:04:55
+And is there any particular format for docket number that we have to look in?
+
+>>Abby	01:05:03
+It's not a particular format. It's just every court names it differently. But if you look, that's the filing. That's where it's filed. If you go underneath the title of where it says in The Superior Court of the state of Delaware, there's another case number, and it matches the one that's filed, it will be easier for you to extract the information from the second part underneath instead of the filing. Because the filing doesn't always have, the file stamp doesn't always have the case number listed.
+
+>>Manoj Racherla	01:05:37
+Understood. Ok. And also, it can be like, so based on our last discussion, so in terms of for assigned payment stream, like you wanted in a particular format, right? Yes. So like we extracted this. So if you see here, so this statement was extracted as 92 monthly payments, 3 ,000 from Jan 1.
+
+>>Abby	01:06:03
+Perfect. That is beautiful.
+
+>>Manoj Racherla	01:06:07
+Ok.
+
+>>Manoj Racherla	01:06:16
+Ok.
+
+>>Manoj Racherla	01:06:33
+And in terms of country of issue, so is it like always a Usa since these are all US documents? Or is it there can be different countries as well?
+
+>>Abby	01:06:45
+There can be different countries.
+
+>>Manoj Racherla	01:06:46
+If any particular document, there is no country mentioned within the, like, let's say, this seller ID. Here, there is no specific mention as Usa. I guess, yeah, it's there. But in case if it's not mentioned, so how are we able to, like, based on the state, should we decide if it belongs to which country?
+
+>>Abby	01:07:15
+Well, you've got the state and seller, where the states are going to match. So if it matches where the seller lives, then that's the state of the, I'm sorry, the country of issue would be The United States. There are times that we'll have a Mexico ID or a different country ID, but that will state what country they're from. And they're in a different language.
+
+>>Manoj Racherla	01:07:45
+Understood, OK. Manoj, let's go through issues that are a little difficult to identify.
+
+>>Aniket Tatipamula	01:07:52
+These are, I think, we can probably infer.
+
+>>Manoj Racherla	01:07:56
+Are there difficult ones? No. In terms of, like, while reviewing the binder, we got, like, this Ac check as well. So should we consider this as an annuity contract, or should it be, like, a different check? Doctor?
+
+>>Abby	01:08:16
+The Ac check should be considered. You can consider it part of the annuity contract, because it's just proof that they've gotten it. And a lot of times, the Ac check has their policy number listed. And it'll only have the issuer listed. So it's just confirmation of the annuity. So you can put it down with annuities and benefits letters.
+
+>>Manoj Racherla	01:08:38
+Ok, got it. And what about the authorization to release? Because we've got to see that, like, this is a new doctor, I've got to see.
+
+>>Abby	01:08:45
+Yeah, this one, you don't have to worry about. This one is just, it's them authorizing us to run the credit and searches. That's all it is. It's not, it's a document by itself. A lot of times, it's included with the application on the last page of the application. But we do have a few companies that send us a separate one that's more specific.
+
+>>Manoj Racherla	01:09:06
+So that's all that is. We don't need any validation for that.
+
+>>Abby	01:09:10
+And you can just check for that one.
+
+>>Manoj Racherla	01:09:14
+Ok, understood. Ok, this is done. This is also clear. Yeah, and one of the slides behind us, like Catherine Hernandez, in that, there was one file called SSVerification .pda. So this belongs to which particular doctor? Is it any separate term? Or is it the existing? It's Social Security. Social Security.
+
+>>Abby	01:09:37
+Social Security, I'm sorry. Ssverification is Social Security verification. It means we don't have a Social Security card, but we were able to run a search.
+
+>>Abby	01:09:45
+On a search and validate her social security number.
+
+>>Manoj Racherla	01:09:49
+Got it. And within the Pacer document, there was one field called search field. What exactly needs to be extracted for the search field? So let's go here. I think there was a new word.
+
+>>Abby	01:10:03
+The Pacer is just going to have their social listed.
+
+>>Manoj Racherla	01:10:06
+So that's all you're going to be extracting on this one. So let's say this is a PACER document. And here is search. So is this the extracted value for it, or is it wrong?
+
+>>Abby	01:10:23
+I don't understand what that is. Search criteria is just a party credit. It's just what we use to search. So if you look in the box itself, you see they have the social security number listed. This one? It's right there. Yep, 2087040232. That's her social security number. So that's what we use for the validation on this one.
+
+>>Manoj Racherla	01:10:43
+But in terms of search field, what exactly needs to be extracted here in this field?
+
+>>Abby	01:10:51
+It's a bankruptcy search.
+
+>>Manoj Racherla	01:10:52
+That's all it is.
+
+>>Abby	01:10:53
+Just do they have bankruptcies or not? I don't know what else to put in there. Because you're not searching for anything. It's just a PACER document.
+
+>>Aniket Tatipamula	01:11:03
+I think, Abby, what Manoj is asking for, I think that field would have been mentioned in the binder document that you shared.
+
+>>Manoj Racherla	01:11:10
+Was that not clearly defined, Manoj?
+
+>>Aniket Tatipamula	01:11:12
+Can you quickly go through that document? Data points to be collected is Ssn.
+
+>>Manoj Racherla	01:11:26
+There's no field, though.
+
+>>Aniket Tatipamula	01:11:27
+I don't know why we created that field.
+
+>>Abby	01:11:30
+If you go up a little bit, it's just the company that's used for bankruptcy searches. But all we're looking for is the social security number on that that they ran it correctly.
+
+>>Manoj Racherla	01:11:43
+Ok, got it. So I guess we can explore this field in terms of.
+
+>>Abby	01:11:49
+Yeah, you don't need that field. That's why I was like, I don't know what that is.
+
+>>Manoj Racherla	01:11:54
+My bad.
+
+>>Abby	01:11:55
+No, it's not your bad. It's fine.
+
+>>Manoj Racherla	01:12:04
+Yeah, and also, there was one doctor called corrective addendum. Like, is this part of an existing doctor?
+
+>>Abby	01:12:15
+I need to see that document. A corrective addendum is usually for our courts if we've messed something up, if we've like how, remember, you said that validation where the issuer was Metropolitan Life Insurance Company, but on the other one, it was Metlife Towers, our resources group.
+
+>>Manoj Racherla	01:12:33
+Ok, so how frequently we can get with this type of document within the binders?
+
+>>Abby	01:12:38
+We're not going to get this right. We get this maybe like one in every like 50, 60 files.
+
+>>Manoj Racherla	01:12:45
+It's not very often we get these, and maybe less than that. I'm talking about flow deals.
+
+>>Abby	01:12:50
+Because usually by the time we get it, we can make any changes before we get to court. So this would only happen if there was a court order already in there.
+
+>>Manoj Racherla	01:13:00
+Understood. So this might be a part of a court order itself, you'll see.
+
+>>Abby	01:13:05
+It wouldn't be part of the court order because it would come in separately.
+
+>>Manoj Racherla	01:13:08
+They would have to file it separately.
+
+>>Abby	01:13:11
+But it's not something that we get very often.
+
+>>Manoj Racherla	01:13:15
+Like, I'm sure I only gave you one binder that had that, correct?
+
+>>Abby	01:13:19
+Yeah, yeah, It was only one binder.
+
+>>Manoj Racherla	01:13:21
+So that's what I was saying.
+
+>>Abby	01:13:22
+It's very, very, very, we get those very, very infrequently.
+
+>>Manoj Racherla	01:13:26
+Ok, So but do you want in terms of extraction for this particular document? Or can we exclude this?
+
+>>Abby	01:13:34
+That one is a little bit hard to define because it's corrective. So it could be correcting the issuer. It could be correcting the owner. It could be correcting the payments.
+
+>>Manoj Racherla	01:13:42
+It could be correcting just about any of the originator. It depends on what's being corrected. And it's not always named corrective addenda.
+
+>>Abby	01:13:50
+Sometimes it's named as an errata. Sometimes it's named differently. So that one is hard one to kind of narrow down and say, oh, yeah, you can do this and this because it's, if you're going to search, I would have to have you search everything in the document to see what was changed.
+
+>>Aniket Tatipamula	01:14:13
+Yeah, please, please go ahead.
+
+>>Abby	01:14:18
+I think I'm finished. I was just saying this is hard to define because if it's corrective, it could have corrected anything in the binder or in the file or in the pleadings. And I'm not sure how to classify this. It's so general. It's just like, we'll file it if the insurance company is wrong. We'll file it if the annuity owner is wrong or if the payments are wrong and we need to amend it. Like we got the wrong payment date or we got the wrong date.
+
+>>Abby	01:14:44
+Wrong payment year, we would have to amend it that way. But for me to sit here and be like, Oh, yeah, you can define you can search for this and this and this. And then that'll come. It's not that simple with that document. Because that addendum could correct a plethora of different things.
+
+>>Aniket Tatipamula	01:15:06
+Understood, Abby. So basically, so what we are concluding is right now, it may not be necessary. Later on, if required, we'll set it up.
+
+>>Abby	01:15:14
+Right?
+
+>>Aniket Tatipamula	01:15:14
+And it becomes a big problem.
+
+>>Abby	01:15:16
+Okay. If it's something that's that's, we're having to do all the time, then that's different. And then I'll come back to you guys. And I'll be like, Okay, here's the parameters, here's what I need. But right now, there's not, it's so large, like the differences in them that it doesn't make a lot of sense to do. Because there's so much information that could be corrected in the binder for us to have a corrective addendum.
+
+>>Aniket Tatipamula	01:15:44
+Makes sense, Abby. Sure. Thanks.
+
+>>Manoj Racherla	01:15:47
+Okay, again, that's it from me. Thanks, Manoj.
+
+>>Aniket Tatipamula	01:15:55
+I think this was a very productive session, I guess. I think we understood a lot of the nuances from the from the binders. So Abby, one request to you. I'm not sure whether you should start testing things right now. I still request one more week. And maybe during this week, if we can connect, probably one more time with the fixes that we would have done and verify that everything is working fine, that would be great.
+
+>>Abby	01:16:25
+Yeah, if you want to, I think I don't have a lot on Friday, if you want to get together on Friday before next week's meeting and just go through any other questions or what have you, I'm perfectly fine with that. And okay with that.
+
+>>Aniket Tatipamula	01:16:38
+Perfect, then we'll figure, we'll figure out like, if you've made a solid progress, then we'll set up a call on Friday, as we'll do it on next week itself.
+
+>>Abby	01:16:46
+Perfect. In the meantime, I'm going to send you a binder with a divorce decree. So that way you guys have it. And then we'll go from there. Okay, perfect.
+
+>>Aniket Tatipamula	01:16:54
+Yeah.
+
+>>Abby	01:16:55
+All right. Thank you guys.
+
+>>Aniket Tatipamula	01:16:58
+Thanks, Abby. Thanks, Lauren.
+
+>>Lauren Boersig	01:17:00
+Thank you.
+
+>>Manoj Racherla	01:17:01
+Bye.
+
+>>Abby	01:17:01
+Thank you, everyone.
+
+>>Manoj Racherla	01:17:05
+Okay, guys, let's connect tomorrow only. Bye -bye. Okay.
+
+>>Paribartan Timalsina	01:17:12
+Bye. Bye, guys.
+
+>>Manoj Racherla	01:17:13
+Team 2 now. Bye.
+

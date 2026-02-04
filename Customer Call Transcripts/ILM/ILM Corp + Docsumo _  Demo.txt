@@ -1,0 +1,261 @@
+>>Jasneet Singh Malhi	00:00
+Else? Everyone is here and like I just mentioned Molly and Brandy are project managers so their responsibility is working with the client and getting the work in and getting the work out on time and accurately so. Awesome. Perfect. Welcome Molly, Brandy, Stash, Jason. Today you know so I just got the documents yesterday from Stash and we were able to kind of set up a demo based on these documents as well. Only thing like we didn't have were the kind of fields that you wanted to extract So I've just put them through my standard model and the fields that the standard model already comes with we were able to extract those fields as well but bear in mind whatever you see on today's call is completely customizable we can add more fields remove more fields as well as per your convenience in your use case. So what I'll quickly do without any further ado I'll just quickly share my screen please confirm once you can see my screen it is visible?
+
+>>Jason Cohen	01:01
+Yep it's visible.
+
+>>Brandi Deloach	01:02
+Perfect.
+
+>>Jason Cohen	01:03
+So team, we'll just give you a rundown. Brandy may want to mute just some feedback. Thanks.
+
+>>Jasneet Singh Malhi	01:11
+So we'll just give you a rundown of the entire you know product once again since Brandy and Molly are just joining us today. I think Jason we gave a very brief overview of the product to Jason and Stash but we'll just kick things from scratch. So team where we're starting the demo today is our AI model sub this is basically the Docsummer platform which is kind of like our AI library which has 50 plus ready -to -use models that are basically like a plug -and -play system wherein we've kind of created a baseline model you can just use this as the you know base and train it on top of your data set to custom train a Aiml extraction model for you within minutes. So we have you know models like bank statements, checks, in procurement we've got bill of lading invoices, we've got a bunch of insurance form, tax forms you know other you know models as well And then we also have a custom model document type as well. So let's say your use case is not sufficed in any one of the pre -trained models or any of the any one of the plug -and -play models you can just use a custom model to train it on top of your data set and have you know an AI extractor you know build out for you within minutes and it also comes with automatic field generation as well in which you won't even have to specify the fields that you would want to extract the system the system is smart enough to analyze what the document is and suggest you that these might be the fields that you would want to extract and automatically give that to you. So basically it kind of ensures that you know you are spending most of your time you know in looking at the quality of extraction obviously you will have the option of adding or removing fields as well But we want to kind of automate that whole process on its own. I'll take a quick pause to see if there are any questions if not we can kind of move into the actual model that we've created for the demo.
+
+>>Jason Cohen	02:54
+So again just so I understand I was just sort of popping between a couple screens so the custom document type we would be able to sort of run our own documents through and train the system ourself? Correct. Okay all right great.
+
+>>Jasneet Singh Malhi	03:09
+Right subsequently Jason I can like once we're done with the check use case demo because you mentioned that is a priority I can quickly demo this custom creating custom document types as well it is very simple and it this is you know really where like the product shines because or every company might have their specific documents that they want to extract information out of which may not be you you know as a pre -trained model or right off the bat so that's where the custom model comes in and kind of helps you to look at it from that perspective. All right team so I'll just move to document types so this is a demo account of a bunch of models created here but for the purpose of today's demo we'll just be focusing on the checks model that I've created for Ilm right in this case the first and the foremost way is you know getting these documents in on the you know platform we've got a bunch of ways manual upload And then we have auto import as well I think Jason on the last call we we touched on how we would getting the how we would be getting these on the platform you mentioned manual upload is the way that you would want to you know go ahead because essentially you scan these checks and then manually upload them to the to the platform another way is that we can connect the system through an API through a drive so let's say any document that you put on the drive will automatically be pushed into the Docsimo platform and the extraction process can start to work so that is another another way we can import that automatic automate import that process as well.
+
+>>Rushabh Sheth	04:34
+Jason just one question I don't know whether we covered this last time But right now from your scanner where does it go?
+
+>>Stosh Sutkowski	04:45
+From the scanner it goes on to one of our file servers where we're kind of hosting all of it doing all of our you know QC checks and whatnot and then when it's ready to be delivered to the client we'll post it to like an online.
+
+>>Stosh Sutkowski	04:58
+Document management system. So it goes up into the cloud.
+
+>>Rushabh Sheth	05:03
+So it goes into a file server. Where is this file server?
+
+>>Stosh Sutkowski	05:07
+It's local here. It's on our internal network.
+
+>>Rushabh Sheth	05:10
+Oh, I see. I see. Basically, it goes onto your own internal file server. And from that, how do you push it to the document management system?
+
+>>Stosh Sutkowski	05:20
+Depending on which one we're using, we have a bunch of different ways. Some of them are you can use a FTP client to connect them. And some of them we're creating for like checks like this. For what we're doing now is we create a CSV file of all the data. So we'll have the file name, the file path where it lives, and then all the data being the amount, the check number and whatnot. And that gets ingested into one of the document management systems through an importer tool. And then that spits it all out into there.
+
+>>Rushabh Sheth	05:51
+So it's all this client's document management tool or your own?
+
+>>Stosh Sutkowski	05:56
+It's ours. I guess we kind of share it. It's theirs technically. It's all like all their data. And it's not shared between clients. But we're the ones that create it and host it. And we're the ones that create it and kind of feed into it. Understood.
+
+>>Rushabh Sheth	06:13
+The reason why I asked is typically we have seen two ways of operations. Sometimes what happens is the client has the document management system on their side and they just give access to, let's say, someone like Ilm user access. And sometimes we have also seen where it's almost like a managed service where you sort of manage the Dms as well on behalf of the client, where you procure the license, whatever is needed to sort of manage the Dms. So just curious as to which mode of operation, because that typically governs how you can push data into the system.
+
+>>Stosh Sutkowski	06:49
+Yeah, we're definitely more like the second option. They were kind of the ones creating the site, creating the users. We're the ones doing all the back end admin stuff. And then the client is mainly just using it to kind of grab their files, do any kind of workflow items and stuff in there. But, yeah, we're the ones mainly doing all the admin stuff. Got it.
+
+>>Rushabh Sheth	07:09
+That's pretty good, because in that case, then you can also control the data pipe.
+
+>>Jasneet Singh Malhi	07:18
+Right. So team will just quickly move forward. So I'll open up this model to kind of show you, you know, how it kind of looks like. So these are all the files that we were able to upload. Right. And in this case, you'll be able to see that. What I quickly do is I'll go ahead and download this one file and re -upload it, actually, just to kind of take you through the entire process of how it would look like. Right. So I'll just get downloaded. So as soon as the file enters into, you know, the Doximo platform, the first phase it goes through is the processing phase. Right. So let me just re -upload this. The first phase it goes through is the processing phase in which the AI and the OCR are working in conjunction and they are able they're extracting all the data that we wanted to extract from the document. Right. Once the processing phase is over. Right. So in this case, you'll be see that this document is processing. And you can also go ahead and look at all the information in terms of where exactly it is processing. And, you know, how many documents are in processing, how many documents are in review and how many documents are in the processed phase. Right. So let's say if you go ahead and look at this document, once the processing phase is over, this will then be pushed into the review phase wherein someone from the team can quickly go ahead and look at, you know, what is the quality of extraction. If I open this up, you will be able to see that this is essentially where the system has given you all the information that it was able to extract from a specific file or a specific document. Right. Now, this is, as you can see, a handwritten check in which the first and the foremost position where we're picking up is the account number.
+
+>>Jasneet Singh Malhi	09:00
+Right. And the system is confident that the account number is this specific value and it is giving you a high confidence score. So basically, it does not warrant a further review. Then we have an amount in number field, which is 150. This was a handwritten field that we were able to pick it up. And then we have one field in amount in words, right, which is one hundred and fifty dollars. Now, the system was probably not sure since this was a handwritten field. It kind of gave you a low confidence showing that someone can quickly manually check this once. And then if it is good to go, they can just click on this and the confidence score from low changes from low to high. Right. Similarly, since the check date is this specific field, the system was not entirely sure. You know what, if it is right or not. So in this case, what I'm doing is as and when I'm correcting these specific fields, the system is using this as the review or as the, you know, annotations or correction that you're doing, which will help it train on this day on this information.
+
+>>Jasneet Singh Malhi	09:57
+And be more and more accurate the next time around right so in this case you'll be able to see that this review screen is again a very powerful tool why because it is helping not only telling you what is the quality of extraction but it is also telling you where exactly the data has been extracted from this from a specific check now in this case let's say for example if I want to understand what this value is right I can just hover on top of it And it will tell me that this is the routing number Right And if I want to let click on it and see you know it will guide me that where exactly was it extracted similarly if I want to understand you know where exactly the account number or where exactly is the check number on the field I can click on that value on it the system will tell me where exactly was it extracted from so your team can basically focus on looking at the quality of extraction rather than finding these values on a document and ensure that you can save a lot of time just by you know looking at the check and at the document and you know looking at the quality of extraction I'll again take a quick pause to see if there are any questions Jason I do have a couple questions one is can you change the orientation of that screen to say I only want to look at the account number field and what it's highlighting to or do you have to look at it all the just in the format that you have as in do you want to just just look at the account number
+
+>>Jason Cohen	11:20
+Well I'm just saying like right now we're looking at whatever 12 fields Right account number amount what if we just wanted to as an operator reviewing this I only want to look at the account number field And then what it's highlighting to it is that just sort of in your review mode is this the only structure of it or do we have ability to sort of modify that so you can hide the other fields let's say you just want to look at account number I'll hide all the other fields right
+
+>>Jasneet Singh Malhi	11:51
+And then if I click on save and extract confirm you'll be able to see that the system will only give you one field which is the account number and nothing else
+
+>>Rushabh Sheth	12:00
+Okay in the output Jason it will still send all the data Okay
+
+>>Jason Cohen	12:06
+But if okay But if we only have to validate one field But there is is not a way Okay Yeah It's slightly different from what I'm asking But I understand then my next question is so we have different clients that get different checks right like this particular client maybe what we notice is the majority of his checks are handwritten can we group like clients together and perform their own like this is client A And they're all checks this is client B
+
+>>Jasneet Singh Malhi	12:38
+And they're all checks can we do that just in just a quick question to that are you also looking to extract different sets of information from different clients yes is it just for okay Because if it is just for you know grouping them then we have a system wherein we can have different folders here right we can create different folders for each client let's say client one
+
+>>Rushabh Sheth	13:04
+So I think given just need typically given my experience with Walter tech and a few other companies it's better for them to just create checks client one checks client two things like that so Jason I think we can separate out the logical cues overall because I think your input and output will also destinations will also differ by client so correct
+
+>>Jason Cohen	13:29
+So yeah
+
+>>Rushabh Sheth	13:30
+So typically you can just duplicate the same model and then again like hide or view whatever fields you need to review for that plan and have my separate cues Okay
+
+>>Jason Cohen	13:42
+Yeah And again different clients have different requirements as to what we capture from a check So we you know we just want to be able to speed up that process that if we only need an amount number right we don't need anything else I don't want to be having our folks looking at all these fields that they don't need to and it looks like we can do that even though the system is capturing them on the back end and we can delete them or for we can do we can manipulate it anyway that we that we want Okay
+
+>>Rushabh Sheth	14:12
+And you Jason get any cases where let's say you have a batch of checks from the same client for invoice so so for example so there are two modes like with for the same client also you can have a folder where let's say for one invoice someone has made like five different check payments things like that in that case the folder system is helpful so that batch of checks gets processed as one particular transaction Yeah
+
+>>Jason Cohen	14:42
+I mean so we certainly have a big mix of capture And so Yeah you know I think when we spoke the other day what we're trying to do is solve this problem we have the checks And then you know with the custom
+
+>>Jason Cohen	14:56
+You know, type modeling, you know, maybe we can continue to solve other issues that are, that are, you know, going on, but right now this is the, this is the one that's, you know, that's sort of top priority.
+
+>>Rushabh Sheth	15:13
+Makes sense, Jason.
+
+>>Jason Cohen	15:18
+So, so also, when in the review and refresh my memory because we've been looking at a lot of these things. So going back to that directory of all the, the, what you were showing of all the images that were ready to be reviewed. Can multiple people be working in that simultaneously or do you control for that? Or how does that work?
+
+>>Jasneet Singh Malhi	15:43
+So basically, if I just go to the configure setting, there are teams that you can assign, right? Let's say you want to assign a different sort of teams or users, you can do that. Let's say if a group of users, you want to work on one specific folder, one specific client, we can do that. And then basically, you can also notify the users after X amount of hours. So let's say I uploaded a batch of checks, right? And I upload, I kind of assigned stash to that, that batch of checks, right? Stash will be notified after X amount of hours, or you can like set on any variable limit here, maybe 30 minutes, one hour, two hours, etc. Right. And let's say if they are still in the review phase, or they're still in the processing, in the review phase, then we're going to also notify additional users that these checks have not been moved to the processed phase or are still in the review phase as well. So we have that entire access control with built within the platform itself.
+
+>>Jason Cohen	16:41
+Okay, yeah, I could see us assigning just like a group of people without a time specification to it. So that way, when Molly and Brandy assigned them tasks, they would just open up the system and whatever is available, they would then be able to work on, I just wanted to make sure that they weren't going to be working on top of each other. You know, if we have multiple people working in the in the system at the same time. Yeah.
+
+>>Rushabh Sheth	17:09
+And typically, these views are not like you can have the same person tied to two clients. For them, how that would work is if you go into all documents, just need, they can just say they can just basically filter by their like it would for them, it would only show their this thing right now, this is an admin account, which has access to everything. But if, let's say, just need a few filter by meet or someone, or Angela or someone, it would only show them. Those documents. So, so basically, for the person doing the task, it only shows their documents, whether it's from client A client B, it comes in one single queue. Okay, great.
+
+>>Jason Cohen	17:50
+And then does, um, I see there's like date modified date added, does it keep any sort of metrics in terms of how long someone took to complete a batch and how you know, like how many were in that batch and things? Does it does it keep metrics to that? Yes.
+
+>>Rushabh Sheth	18:09
+So typically, Jason, if you go into so just need if you go into that particular doc type and go into analytics, that will that will also give you the time. So here you can see that how many can can you stay at the top, just please. So 51 were uploaded. In this account, we have not really put straight through. So essentially, if you get confidence, you can also toggle straight through. Which means that I think last time you had mentioned you had one validation between the value and the number that we'll sort of build while onboarding. And if you use that to say that, okay, the amount and for this client, if the amount and name matches, then you can just process it straight to then it directly goes into straight to essentially you can choose to not have a human review for that particular match. And if you scroll down a bit, just need it also shows like how much average time it took for document and like so again, like the turnaround time and the API response. Basically, there are two, two things that add up. One is how long did Docsomer take to process, which typically is like pretty small, like it should be less than 30 seconds. And then one is the turnaround time that the team took. So that is also a big thing.
+
+>>Jason Cohen	19:34
+Okay, yeah, no, that's good. And I think that's what we're just looking to make sure that you know what those throughput speeds look like. So, okay. Molly, Brandon, did you guys have any questions at this point? No.
+
+>>Jasneet Singh Malhi	19:59
+All right.
+
+>>Jason Cohen	19:59
+Yeah, guys, go ahead and please.
+
+>>Jasneet Singh Malhi	20:02
+Perfect. So this is like how the extraction would work. I will just open up another example to kind of show you another way. So let's say this was a full page that we got in which the check is a digital check. And we were able to kind of extract all the information. Let's say the account number, account name, and then obviously you can remove any of those fields and get the output. I can also download the output in an Excel or a JSON file as well. I think we touched upon this the last time as well. What would be a preferred output method, Jason?
+
+>>Stosh Sutkowski	20:36
+I think for the most part, we're normally just doing an Excel file. And then for the document management system that we have to upload to, we're converting that to a CSV. So we can just do that through Excel.
+
+>>Rushabh Sheth	20:50
+If you can go back to the data table. So typically, you can also choose on the data table, there's like a export data table. And essentially, that exports that table as a JSON.
+
+>>Stosh Sutkowski	21:02
+Ok, so that'd be a big all of them at once, basically.
+
+>>Rushabh Sheth	21:06
+Correct. And anyways, in a week or two time, there is like smart filtering that will get added to this data table. So essentially, you can set, OK, like the download frequency and things like that. Ok. So you probably would not even have to come here. It would just send you an email with the data.
+
+>>Stosh Sutkowski	21:27
+Ok, yeah, that's great.
+
+>>Jasneet Singh Malhi	21:30
+So basically, just to kind of show you the output of the data table once, I'll just share my Excel screen. Team, please confirm if you can see my Excel screen.
+
+>>Jason Cohen	21:39
+Yep.
+
+>>Jasneet Singh Malhi	21:41
+Right, so in this case, this is the metadata, basically, that we're getting, the doc ID, what was the type of document, where was it uploaded from, if there's any specific user working on it, like what was the user doc ID. And then similarly, what was the current status, when was it created. And this is basically the URL that we pass. And then this is the information that we kind of extracted from all the checks across the board. So let's say in this case, what was the information of the Payee name, the Payee name to what was your organization address, the organization name. And then similarly, what was the check date, the amount in number, the amount in words, routing number, and then what are the other amount in words. So we can run all sort of validation here and kind of give you the entire dump of the data all at once, so that it is easier for you to put it in your data pipe.
+
+>>Jason Cohen	22:33
+And so if we're uploading a file with a file name, can we also output that file name so that we can make sure that we associate the right image to the row of data? The file name as in? Well, we'll use the file name of the image that we're uploading as a unique identifier.
+
+>>Rushabh Sheth	22:58
+Yeah.
+
+>>Jason Cohen	22:58
+And so we want to make sure, so Yeah, the title column B is what I was asking for. Okay.
+
+>>Jasneet Singh Malhi	23:06
+Yeah, so we have that passed in the CSV itself.
+
+>>Jason Cohen	23:10
+Okay, yeah.
+
+>>Stosh Sutkowski	23:10
+Cool, that's perfect.
+
+>>Jason Cohen	23:12
+Yeah. Okay. All right.
+
+>>Jasneet Singh Malhi	23:15
+Moving back to the actual tool again, then we have the training bit wherein you'll be able to see that the system, as in when we keep on feeding it more and more data, the accuracy will keep on increasing, right? So right now the accuracy is 92 .5. As soon as it hits the first milestone of processed, 10 processed documents or annotated 10 processed documents, the system will give you a baseline accuracy. As in when we keep on adding more and more data, more and more checks to the platform, we keep on hitting more of these milestones, the accuracy will keep on incrementing with more data, right? So any sort of annotations or any sort of corrections that I do on the underlying document get recorded as part of the model training and it keeps on making the model more and more efficient and more and more accurate. This also impacts the processing time as well. So as in when if we have a good model with a high accuracy, the processing time also keeps on getting much and much lesser from an API side because the system is just, is confident enough and it does not require a review further and it kind of processes all the documents in a much more faster way.
+
+>>Jason Cohen	24:28
+Okay, good.
+
+>>Jasneet Singh Malhi	24:31
+So then we have a bunch of configuration settings as well that we can kind of go through. But all in all team, this was like a very high level overview of the whole product from processing to the output of what is the output that we can get. Just want to take a minute and see like, if this is something that you're looking for, if this makes sense, what should be our next steps? And then we can kind of take it ahead from there.
+
+>>Jason Cohen	24:59
+What do you guys think, Brandy, Molly, Stash?
+
+>>Stosh Sutkowski	25:03
+Yeah, I think it looks good. I think like for some of our clients right now, that CSV that you just showed us is kind of what we're like, you know, take columns from it, but that's kind of what we need to go ahead and push it up into the our Dms system for them. So that would kind of reduce a lot of the time spent creating that CSV on our own.
+
+>>Brandi Deloach	25:26
+Yeah, that's great.
+
+>>Jason Cohen	25:31
+So I guess the next thing is so so for us, I think probably the next steps would be, I think we're probably looking at we're in the business. I'm looking at your website. We're in the business column, right? And so we would probably start just doing it monthly just to make sure that it's doing what we're wanting it to do. It looks I mean, the checks are sort of the low hanging fruit, as I would say for this. I think some of the other things we would if we could then once we have this start experimenting with some of the other, you know, models that we'd like to try. I think it's important for us to you know, what we don't want to do is this sort of back and forth back and forth with you guys on that. We'd rather just be like, look, here's a form. We want to try it to start pushing it through the system and sort of seeing how it does. And as we run into roadblocks, or we need help, then reach out to you and say, Okay, what? You know, how can we improve this? What do we need to do better on this? And so I think that's what we would need what we would need to do. I've been Jason.
+
+>>Jasneet Singh Malhi	26:45
+Yes, that that relationship is always there. So every customer comes with a named customer success manager who will be working in tandem with you. So any sort of issues, problems, concerns that you have, they would be a dedicated point of contact and they can kind of reach out to you or you can reach out to them. So it isn't like that you won't be left hanging, right? There is a specific person who would be dedicated to your account. And if you want to kind of, you know, get started on a new use case, there'd be a point of contact and everything goes through them.
+
+>>Jason Cohen	27:14
+So here's what I'd like to do, because I what I don't like is the what I don't like about the at the moment is like a clock is ticking against us. Right. And as you know, like, we're all working on nine gazillion other things. This is just one of them. And I don't want to be like, Oh, my gosh, like, we've got two days to do this. Otherwise we lose that. I'd like for you to come back to me to let me purchase, like three months, 30 ,000 credits, okay, at once. And then that way, we've got a little bit more time that we can be evaluating, you know, your product, because we're looking at we're looking at verify and we're looking at Mindy as well. Just right, like, we just have to make sure that that everything is hitting all the points to us. And we know like, you know, this stuff is like, is like finding a spouse, right? Like, you just need good enough. It's never going to be absolutely perfect. And it's really more towards me that my wife gave up a lot when she settled for me. So we just want to make sure that we're doing our due diligence as well. So that would be the one ask I have is, hey, let me let me buy a three month package. You know, and then that gives us again, three months to make sure that we're giving the consideration that we need, and that you guys are being properly compensated for the credits that that we're buying.
+
+>>Rushabh Sheth	28:41
+Even better, like, it's a month to month contract, like, basically, you decide when you want to start paying 2500 use it if you don't like just discontinue it. So no, I understand.
+
+>>Jason Cohen	28:52
+But But it's my understanding that the 10 ,000 pages per month expire every month. Oh, yeah.
+
+>>Rushabh Sheth	28:59
+So okay, so you want the 30 ,000 upfront so that you get more time to?
+
+>>Jason Cohen	29:03
+Yeah, yeah, let me just buy 30 ,000. If I can get a little discount to that, that would be great. Because, you know, I'm giving you 30 ,000 or buying 30 ,000 credits, too. So if you want to just sort of doodle that around a little bit, and then come back to me and in an email, and then and then also within that what the onboarding time looks like for us to once we give you guys money to say, great, how fast can we get this going? And it seems like the check thing looks ready to play, ready to go forward really fast. So that that would be good. I know Molly and Brandy are ready. So the other ones responsible for making this happen.
+
+>>Rushabh Sheth	29:46
+So and Brandy, Molly will work with you like basically we like what we have realized is that automation is as much about people.
+
+>>Rushabh Sheth	29:53
+People because it won't happen. So we have like a customer success manager actually sets up calls with your team, at least once a week, in that first one or two months to make sure that you guys are able to see value. Because at the end, like, you are the ones who has to give a thumbs up to Jason at the end of that three months. So drop off another call.
+
+>>Jasneet Singh Malhi	30:18
+I think Russia will be here. Yeah, sorry for that.
+
+>>Jason Cohen	30:21
+But I'll take the rundown from Russia.
+
+>>Jasneet Singh Malhi	30:22
+Thank you so much, everyone.
+
+>>Stosh Sutkowski	30:23
+So thanks. Yep.
+
+>>Jason Cohen	30:25
+Okay, well, well, great. I think the agency he's in New Jersey, right? Or New York.
+
+>>Rushabh Sheth	30:30
+I'm in New York.
+
+>>Jason Cohen	30:31
+Oh, you're in New York. Okay.
+
+>>Rushabh Sheth	30:32
+I know one of you guys were close to us.
+
+>>Jason Cohen	30:34
+So that's, that's great. Yeah. So awesome. Yeah. So, so Yeah, we'll, we'll, we'll let you go because we're gonna go as well. But if you can just put those two things, well, what is the three month thing and then also just what the onboarding looks like, email that over to me or stash And then we'll jump on to that.
+
+>>Rushabh Sheth	30:52
+Awesome. And let us know, again, like, as you mentioned, we don't want to force you to anything you need. We don't want buyers remorse. We want a good G2 review. You can read about our G2 reviews. We want you to refer us. That's how we approach business.
+
+>>Jason Cohen	31:07
+So yeah, same for us, but it needs to be fair. And you guys need to be compensated for what you're doing. But we know we need the time to make sure that we're evaluating it properly.
+
+>>Rushabh Sheth	31:17
+Makes sense. Awesome. Connecting
+

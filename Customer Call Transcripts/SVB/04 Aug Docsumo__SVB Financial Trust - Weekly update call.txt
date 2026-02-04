@@ -1,0 +1,300 @@
+>>WarrantsTeam	00:01
+No, it looks like what, we got this on Friday. Is that the one you're talking about? Yeah. We haven't had a chance to discuss with the team. Let me take a look at the email again. Yeah, there's, you know, that's what's unfortunate about this whole process is that there are a lot of inconsistencies. So it's really hard to pick and, you know, grab all the data from the same process, right? I don't, let me, wait one second, let me message here.
+
+>>Bikram Dahal	00:50
+So the main issue we're facing is the, it is okay if the person was only 5 % or 10 % of the folder do not have a file. It's just that even if you search the name, you cannot find a name at all on the database. It's not that, oh, like the name is mismatched or like, what do you call it? The different name is taken and everything. So that is also fine because we are manually looking into each and every file, taking the short name, like just the one word and trying to figure out if you can find that word. Now we are not even able to find that folder of that word, which means that nothing exists for that company. So that is a place where we are facing a bit of an issue. Let's see if there's anything we can do before we start the extraction.
+
+>>WarrantsTeam	01:33
+You know, again, this is, let me see if Stefan's going to join.
+
+>>WarrantsTeam	02:16
+Okay, so Stefan will be joining. I understand your question. We have also come across the same thing because our role is pretty much the same thing. We have to go find using the Excel spreadsheet, go find Sharepoint. So what we've done is if we have an issuer, we do search, you know, keywords, maybe the first word out of the two name company, or if it's a letter and a word together, we separate them, so making a space. The other thing is we just do some research. We find that the company was acquired and there was actually a new name. So in the Sharepoint, you might have the new name of the company and our Excel file might have the old name still. So we basically have to go into our Sharepoint, find that new file and on that folder name, just put also called this. That way it pops up in your search results.
+
+>>Stefan Z	03:10
+So my apologies for being late.
+
+>>Bikram Dahal	03:13
+Sorry about that.
+
+>>Stefan Z	03:15
+So what is the yellow column? Is that the column that you found or?
+
+>>Bikram Dahal	03:19
+Oh, no, the column that we found is, so there are two, one using rule, like if I found it using rule, then these are like given over here And we also manually went and figure out if something was missing. So sorry about like too many things over here. I'll give you a context And then we'll figure out like what to do into, right? So let me go one by one. So this is a, give me a second. Okay, so I think that list is not here. So like for now I've removed it. What I did is first job, let's look from the very beginning, file match. So I just looked into all the files that is on Sharepoint and use the logic of you should have a date And you should have a number, that pattern. Like I did not care about the company name because company name can be anything and because at the beginning. So I just did the swatch of, there should be a pattern of year and a number. Based on that, I found 4832 files. So 4820 files that have that pattern, right? After that, for those folder where this pattern was not there, I just looked into if there are two Android scores because what I came to realize is sometime you will have a space over here. Sometime you'll have a space over here. Sometime this number is going to be at the beginning. Few cases, not a lot, but like a lot of time like the pattern can be a bit left and right. So the second logic that I used was find
+
+>>Bikram Dahal	04:58
+Any name that have two underscores right forget about anything I just get me the name that have two underscores so based on that I got second set of files now this need to be further filter will I come to a minute because we went so in total we found five to six four files from the 50 ,000 files that we had because all your folder has 50 ,000 file so these are the file based on the logic that you have sent this should be a warrants Okay So that's the first one the second that we did was this is the Excel sheet that was sent to us I just remove the share number and everything just to make it simple so this is a simple file of the the Excel sheet that your team has of 4432 The total number of like company that you guys have after both of this was done I just clean the name so I removed dot ink and everything on both of this thing so this is just pure based on this pattern I just remove the names I just remove commas and everything else I remove majority of the things from here and then like try to try to do a look between this two and this two in this case we were only able to find about 1 ,100 files then after that I got my team to manually check like you said right sometimes the maths cannot be exact so it because you sit on this way so I also got my team to check for like example in bio is like it may be something else so we just like check few things on this case so we just try to figure out like um like can I do a little bit of more manipulation do a text based search and then get more names over here
+
+>>Bikram Dahal	06:46
+So for those case that are matching it means I have a equivalent file over here I can do one -to -one mapping for this case also you can do one -to -one mapping because like up like there are some lookups will fix it And then we'll be able to do one -to -one mapping now for this case is Where it has but for these cases where you have you don't you have any And also you don't have file exists is called to is blank we don't have a file at all so even if I do like off the daily and if I go to see a point I cannot find the files and this number is quite high
+
+>>Stefan Z	07:24
+I'm sorry do you mind moving the the Google meet window Yeah
+
+>>Bikram Dahal	07:32
+So let me just make one for the one this so that it will be easier so these are the files that have no match
+
+>>Stefan Z	08:13
+So I'll just make one more folder I'll do one more folder where I'll say that if this is empty can I just point one thing out that that that it's probably going to it won't take off a whole lot of the list but it could take off quite a few or yes several of them what we've seen here so for example row 18 so So so your formula is taking Q bio instead of Q 3 2 bio Yeah So so the numbers are an integral integral part same thing with h1 insights at 28 29 go one global at 34 so this one was just done to remove things
+
+>>Bikram Dahal	09:00
+So because the same logic that I have used on this I understood that will make sure that that is extracted this is not exact this is just a simple Okay
+
+>>Stefan Z	09:08
+So you need to account when when you're comparing somebody Says okay Yeah
+
+>>Bikram Dahal	09:11
+So like if it is Q bio over here this will also take you by only so the logic that is used to clean the name I have got it use the same logic so that like it can just do look up for now And I don't even know correctly also I've removed ink and everything so to make sure that like if they have ink dot this and that And we have just removed everything So I understand now the question that I was trying to figure out because if you see and this is manually verified about 100 files we have manually verified so we got pretty confident that like the thing do not exist for if there's no match over here so what we're trying to figure out is that like like you said there might be a lot of reason but the normal looks if this was just 5 % or 10 % we would have like to look a fine like that
+
+>>Bikram Dahal	09:57
+There can be some issue. Let's just do the complete extraction, then we'll see. But in this case, this number is too high. So our thought process was, is it? And some of this issue might be solved after we do the extraction, because currently, this is just based on the file name and everything, right? But this wind will also have some name inside the file. So maybe once we do the extraction, maybe this release will be able to use that extraction name, not the file name. Like you said, in case of file name, it might be something else. So I was thinking that, is it? And this is not a lot. If it was 10 ,000, then I would have told not to do it, but this is not a lot. So my advice was that, let's extract information from all of these files. That is 4262. Once we do the extraction, then we'll figure out how to filter with it. So would that be good enough to get started with? Or do you guys think that it's not worth extracting data and even matching? Because I'm not able to figure out how to match more of these documents.
+
+>>Stefan Z	11:03
+Well, I can tell you right now. So part of it is what Vishal had mentioned before, that the company that's listed in the client name has either been acquired since that time or changed their name.
+
+>>Bikram Dahal	11:23
+One thing we can do then, one thing this is interesting because of use of LLM, because we are just going to use the company name. Maybe I'll give it one more shot because at least like Jiminy or ChargeJPT should be able to figure out if the name will change because they are quite good with those things.
+
+>>Stefan Z	11:41
+Those information will be on news and everything.
+
+>>Bikram Dahal	11:43
+So they are quite good.
+
+>>Stefan Z	11:44
+So one more thing that I'll try to do - By the way, if you do that and you recognize that some of those should change, could we have that information? Yeah, we'll make sure that - We should update our files as well.
+
+>>WarrantsTeam	11:57
+Yeah, so just an example, right? Employee Navigator that you pointed out. I searched on our site just like you did. I couldn't find anything. I went online and I searched and the company was formerly known as iPower.
+
+>>Bikram Dahal	12:12
+Okay, iPower.
+
+>>WarrantsTeam	12:13
+So I also searched iPower though and Sharepoint. I couldn't find anything. So this is a very clear case of more research. This is what I would do. I would dig in and just say, what other names could it be? And I have no idea. Even in our files in Sharepoint, I don't see iPower or Employee Navigator. So more work needs to be done on this one on my part as well. So let me do this.
+
+>>Bikram Dahal	12:36
+Let me make your life easier because I understood this problem because there was my thought. If this original file list that I had, if it was like 10 ,000 or 12 ,000, then I would have not extracted everything. And anyway, when we did this project, we always told that we'll have about 4 ,500 files. And this number is around 4 ,500. So like for extraction purpose, like let's extract the information from this. Once we extract information from this, because one thing I just want to be very clear, is there, that's the reason why I did this, like this fallback approach. And primarily I think we're clear because this format is very clean because you have date, you have numbers, and then like everything is extracted. The thing I want to be absolutely sure is that there is no second pattern for the wiring that we're missing. That we're sure, right?
+
+>>Stefan Z	13:32
+If that is true, then - Can you just scan through just really quick? Sure. Not real fast, but just - Sure. Let me do that.
+
+>>Bikram Dahal	13:38
+Let me show the primary one because fallback has two logics. It should have two underscores and it should have more than five number, so like on the number, on the digit, on the name.
+
+>>Stefan Z	13:51
+So some of these are not true, which will remove it, but some of this makes sense because - So can I point out, I'm sorry, before you move away from this, so row 631 and row 675, so those are not warrant agreements.
+
+>>Bikram Dahal	14:10
+Yeah, so -
+
+>>Stefan Z	14:12
+And the reason is because it has, so a different pattern is, it has other description of the title in there. So that's a warrant that the, well, actually, no, that one is, but I'm sorry, but on 675, for example, the merger agreement is not a warrant document.
+
+>>Bikram Dahal	14:32
+Yeah. Oh, this one, we'll check it because I just put the fallback just to see if there were about 5 ,000 fallback, then maybe I could do something. So this one, we'll clean it out. So my team even have gone through each and every file and seen if any of these files are warrant or not. And usually what we have seen is that these are not warrant. So this is warrant, but this is not warrant, or like this is not warrant.
+
+>>Bikram Dahal	14:56
+That, we have done a few analysis, because we wanted to make sure that our patterns, at least, is a superset. So it's better to get a superset than to miss a data. Because later on, if you get a superset, you can go and say that this row is not needed, because it's not warrant. Then being able to miss that. Because, example, this was not the pattern that we had thought about. But this is a pattern. You have the number after date. And sometimes people have underscore here. And they don't have, like, they don't have, they do dash. They don't do underscore. So this, we know, is a warrant. So we have done the superset and everything. So we'll do one of cleaning. And we'll make sure that we extract information from all of this document. Once that is done, then we'll try to figure out, can I match it? Example, either by knowing that this company was acquired, using, like, what you call, you know, can I, for those that is already matched, this is good. For those that is already matched. For those where it is not matched, I might have to write some rules. So we'll just, like, write that rules and everything and make sure that there is no issue. And then the last part is, we'll also send it through chat Gpt and everything, and try to figure out if this has three other names. And see if we can match one of these names. So that we can route it back to, like, the final one. So, like, that was the thing, like, it was taking a bit longer time over the weekend because I had to, the number were not making sense to us. So we just wanted to make sure that all the files are in place before I start extraction, right? So we just wanted to send this information to you, see if there's any other, we're not missing any other file that we have to scan.
+
+>>Bikram Dahal	16:40
+And also, like, how to make sure that this number, this match number is better than this one. Because this one is currently, I would say, 50%. Which is not good enough for you guys, so.
+
+>>Stefan Z	16:50
+Can I give you a few search terms that you could look for to know to exclude the files?
+
+>>Bikram Dahal	16:58
+Yeah.
+
+>>Stefan Z	16:58
+So if included in the file name is the term, either certificate. Okay. Or entries. Okay. Or agreement.
+
+>>Bikram Dahal	17:10
+Yeah.
+
+>>Stefan Z	17:12
+Then it's not a warrant document, but there are files that might have gone into there. So I don't know how many there would be. Yeah. I've just seen five, you know, just in the one or two pages I just saw. Maybe that doesn't take too many out, but. Yeah, yeah. The more you can dig out of there, the less you have to verify secondarily.
+
+>>Bikram Dahal	17:31
+Okay. So we'll do that. Because, like, anyway, this one, they're only for Net44, and if we go through once, then I'll be able to, we'll be able to figure out which of these two is warrant and not. And thanks a lot for those who use that. And on top of that, we'll see if there's any pattern that we can find.
+
+>>Stefan Z	17:46
+There could be more, yeah.
+
+>>Bikram Dahal	17:47
+Primary is very clear, because it's a very, like, this list of primary 482 is, like, very clean, because it has the exact pattern that you guys need. So this one is a no -brainer. We just have to clean out this 44, this one, which we'll do in, like, I was just finishing a few of these things. We'll do after that.
+
+>>Stefan Z	18:06
+Okay.
+
+>>Bikram Dahal	18:08
+Then let me know if you guys are able to find any other patterns on your side, because I've seen you some files where we are not able to find the real name, like, the name. So, like, the way you guys did, like, if you guys, like, one of the things you guys told us is look into the previous company, like, if you can find that pattern, right? So if there's anything else that you guys could do manually, I can look into automating it, because you will also be doing Googling only, and we can automate that step, right? So let us know, like, if there's a way, like, if you're able to do something, and then you're able to find this name so that we can make it into a bit larger scale so that we can find it for the rest of the names also. Okay.
+
+>>WarrantsTeam	18:48
+Okay, sounds good.
+
+>>Bikram Dahal	18:49
+Okay, sounds good. Sorry, I know we have to meet up this week. You guys should have data, but there was this thing, so we'll just finish a few things on our side, do our cleaning, and then start the extraction process by tomorrow or the day after.
+
+>>WarrantsTeam	19:01
+Okay, sounds good.
+
+>>Bikram Dahal	19:03
+We'll make sure that whatever we find is here with you, right? So, like, whatever, like, list and everything that, so all of this, you guys will receive so that in future, like, what are the methods, the file that match and everything. We'll make sure that this is properly delivered to you guys separately. Whatever is in the product, you guys will have it. Whatever resources we make doing this project, if you need Python code and everything for matching and everything, we'll send you across also. So, like, we'll just finish it up, wrap it up, and then make sure that you guys have everything if you need to use it for future projects and everything. Great.
+
+>>WarrantsTeam	19:34
+Perfect. Thank you.
+
+>>Bikram Dahal	19:35
+Awesome, guys. Like, sorry, it's taking a bit longer time. We are just doing some last bit of things just to make sure that nothing is missing. Then we'll make sure that this project gets delivered by the end of this week. Okay.
+
+>>WarrantsTeam	19:47
+Thank you.
+
+>>Bikram Dahal	19:48
+Okay. Bye, guys.
+
+>>WarrantsTeam	19:50
+Okay. Bye.
+
+>>Stefan Z	19:50
+Thanks, bye.
+
+>>Bikram Dahal	19:51
+Bye, guys. Manoj, do one.
+
+>>Bikram Dahal	19:55
+One thing on this Spb list, can you just remove those, like, or just put one more field, and remove those that are not YNs. You can just do based on name only. Can you do that? And once that is done, then I'll make everything ready. I'll just start uploading it into our account. And then, like, see, like, we'll do 100, see the extraction and everything, and then we'll do the rest of it.
+
+>>Manoj Racherla	20:18
+Should I highlight that, like, by coloring it to another, or directly remove it? No, don't remove it.
+
+>>Bikram Dahal	20:23
+Put a column, YN or not, over here.
+
+>>Manoj Racherla	20:28
+Okay, got it. That I can do.
+
+>>Bikram Dahal	20:30
+Yeah, YN or not, and then only use for, look for fallback, don't look for other. Sorry, man.
+
+>>Manoj Racherla	20:36
+Only for fallbacks.
+
+>>Bikram Dahal	20:38
+Where is YN coming up? Oh, yeah, So Yeah. Now you can just look into the, only for YN, because, like, only for fallback. Prime meter, it's a YN, we know that. We just, for the fallback, just use a filter, add a new column, and do two R falls, and then, like, one that is done, then that will upload it, and then we'll figure out, like, how to match it to here. Because otherwise, it's very difficult to, like, match it out.
+
+>>Manoj Racherla	21:08
+So I have a question, Vikram.
+
+>>Bikram Dahal	21:10
+Sure.
+
+>>Manoj Racherla	21:11
+So as you said, like, as you suggested then that, instead of earlier, like, filtering out based on the company name, why don't we, after extraction, do it?
+
+>>Bikram Dahal	21:23
+Yeah, that's my thought, because some of this might not be correct. One quick thing that I had is, you have told that Biolab is here, but Biolab, oh, but you have not only checked if the Biolab name exists, not if the file exists, because I removed the non part of it. Oh, one more thing we have to ask them, we did not on the call, is, you can write on the email also, some of this folder will not have files. There's no folder. Can you check once? Because for those cases where we have written that, like, there should be a folder named this, can you see if that folder has a?
+
+>>Manoj Racherla	22:00
+File, warrant file.
+
+>>Bikram Dahal	22:02
+Warrant, because, Yeah. I don't know how much, can you also add that, like, over here? Just to make sure that, I want to know if I have to change the, I have to change the match logic. I know I have to change one match logic. Mp. I know I have to change one match logic, where it is giving it comma and everything, but except then that, what logic should I change? Because this I cannot change, because this will not work. Here, I'm not able to find, this, I don't find anything.
+
+>>Manoj Racherla	22:38
+Which one?
+
+>>Bikram Dahal	22:40
+A -A -R -U -R -o -N. I didn't find it any, here also, I don't think I find it here also.
+
+>>Manoj Racherla	22:47
+A -Double -L -U -R -i -O -n. Okay, wait, wait, let me check.
+
+>>Bikram Dahal	22:53
+Yeah, there's no folder with this name. So if I look into warrant, there's probably that they don't have, even if there's a folder, they might not have warrants.
+
+>>Bikram Dahal	23:18
+There's warrant amendment.
+
+>>Manoj Racherla	23:22
+Yeah, Eluron Technologies Increment.
+
+>>Bikram Dahal	23:24
+Yeah, there is file, there is file. Then why am I not getting the file?
+
+>>Manoj Racherla	23:28
+There is file, there is warrant in this Eluron.
+
+>>Bikram Dahal	23:32
+Yeah, then why am I not getting this warrant on? That's the thing, that's what I was worried about. Why am I not getting this warrant?
+
+>>Manoj Racherla	23:40
+Let me check for Bio -Edge as well. Yeah, in this also, the file is there.
+
+>>Bikram Dahal	23:49
+Then why am I not getting it? Give me a second. Warrant, warrant one. What was the name of the warrant? Bio... Bio -Edge. This file are not downloaded or not? Why it's not downloaded?
+
+>>Manoj Racherla	24:08
+It is in...
+
+>>Bikram Dahal	24:10
+Warrant one, right?
+
+>>Manoj Racherla	24:12
+Yeah, it is in warrants one.
+
+>>Bikram Dahal	24:21
+Okay, let me see here, give me a second. Let me see. And it's under... Why is this not getting downloaded? Just a minute. Now that will be tricky. If that is the case, then okay. It's warrant, warrant from FI, warrant one, Eluron Technology 5017. So this is where I was worried about all of this. This list not being complete. Name content, Eluron.
+
+>>Bikram Dahal	24:56
+Just a minute.
+
+>>Bikram Dahal	25:10
+Is this error text coming from... Okay. Correction, I did this one. Following file has not been downloaded. The following file and files has not been downloaded. So, where the error is coming from this is on Wind1 or 1. Wind1 or 1. Give me a second. Let me check if that is the thing. Then wind2. Oh, it has.
+
+>>Manoj Racherla	25:36
+It has that text. But it didn't get downloaded. Yeah, I understood.
+
+>>Bikram Dahal	25:45
+So, I have to download one more time. Let me download one more time and then read on that thing.
+
+>>Manoj Racherla	25:52
+Can we, like whatever the code you have written, can we run it only for those files which haven't been downloaded instead of...
+
+>>Bikram Dahal	26:01
+No, you cannot. The code is not written. That's the thing about this. So, what I have done is that I have just taken from here and downloaded. Because of that, it has to download.
+
+>>Manoj Racherla	26:16
+So, how did you get that file, errors .txt?
+
+>>Bikram Dahal	26:20
+I think it automatically made it. I think it came with the... When you make a zip, and for some reason when you make this zip, the zip does not have that file. Then it's making that file, I think, which is good. Then at least I can be sure that for those cases where you don't have error, then they don't have error.
+
+>>Manoj Racherla	26:37
+So, okay, then that's fine.
+
+>>Bikram Dahal	26:38
+Let me fix this. So, on your case, then at least those files where you have manually put the value, we should be able to get it.
+
+>>Manoj Racherla	26:47
+Let me fix that.
+
+>>Bikram Dahal	26:48
+Let me see what they downloaded and I'll see. Okay, then let's wait for me to complete this And then I'll get back to you on this.
+
+>>Manoj Racherla	26:57
+Yeah, till then I will add that for fallback files as well. If it contains warrant files or not.
+
+>>Bikram Dahal	27:04
+Yeah, okay. Anything else?
+
+>>Manoj Racherla	27:07
+No.
+
+>>Bikram Dahal	27:08
+Okay, then talk to you later.
+
+>>Manoj Racherla	27:10
+Yeah, sure.
+

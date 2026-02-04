@@ -1,0 +1,330 @@
+>>Bikram Dahal	00:05
+I'm good. How are you? I'm good. So I'm just, this is Lenny. He's one of the underwriters like you requested. Okay. We got, we've got Boris here and uh, I'm just waiting for Liana. How are you guys? All good. Uh, I think the weather is not that great on New York, a lot of fast flood and everything. So hopefully things will get better.
+
+>>Lawrence Pross	00:28
+Are you all in New York?
+
+>>Bikram Dahal	00:30
+I'm in New York. The team is in India.
+
+>>Jasneet Singh Malhi	00:35
+Really hot here at Lawrence Lake.
+
+>>Lawrence Pross	00:38
+We've got Liana here also.
+
+>>Bikram Dahal	00:42
+Hey Liana.
+
+>>Jasneet Singh Malhi	00:43
+Nice to meet you. Okay.
+
+>>Bikram Dahal	00:46
+Um, okay. Uh, I think you guys might have already met because Aniket looks after the engineering team. Um, I think the team has talked a lot with the like team. Um, so just my quick introduction for like the team, I'm Bikram, I'm the CTO and also responsible for the delivery in Docsimo. Right. And the reason for the call is Lawrence had sent a message regarding the Docsimo performance. So we just wanted to, uh, we have a few plans in place. We also have made one more change on our side just to make sure that like, um, everything gets, um, like, um, fixed and everything. But before we present our plan to you, we just wanted to understand a few expectations and a few, uh, like few things so that whatever plan that we make, uh, we don't have this issue in the future. So just wanted to understand the expectation and everything correctly. Um, that's the main agenda of this call. Uh, we'll present you with a plan and everything after the call. But before that, I have a few questions. So if you guys team has questions, we can go with that. Otherwise I have a few questions. I would love to like, uh, brainstorming around that And then I'll present our plan for you. Okay.
+
+>>Lawrence Pross	01:59
+Okay.
+
+>>Bikram Dahal	01:59
+Now, first thing we wanted to understand is regarding the underwriting process that you guys currently have to our best knowledge. Uh, and this is based on, um, the information that has been shared with us is the underwriter do not look into the, um, bank statement extraction until and unless something looks odd. Is that correct? Or do you guys go through all the bank statement, um, uh, and review like what was the website you mean on your website? Um, uh, yeah, No, you know, I website. So like, uh, do they go through that or no?
+
+>>Lawrence Pross	02:36
+So the question was, if an underwriter looks at the bank statements?
+
+>>Bikram Dahal	02:43
+Yes. Yes.
+
+>>Lawrence Pross	02:44
+We, we look through the bank statements for sure.
+
+>>Bikram Dahal	02:47
+Um, so from Salesforce, like open the docs, most of like application and you go through the, um, um, bank statements. Yeah.
+
+>>Lawrence Pross	02:57
+And the, the applicant, they submit an application and three bank statements. Yeah. When, when under, when the underwriter receives the opportunity, I see in, in, um, Salesforce that, you know, the, the page, which shows just the opportunity, the name of the, the business, the merchant name, all of that. One of the first things that I do is open up the most recent bank statement. Um, you know, I, we have, we have a cash savings program, which outlines the current debts that the merchant has the current Mca positions. And I would look at, I kind of look at that first, just to see what I'm dealing with in terms of, you know, how many positions the guy has, what their expirations are. And then if it at all looks like something, even if it doesn't look like something I could work with, I'm going to still open up the bank statements. But I mean, if it looks like some kind of a thing, I can make a deal. I have to open up the bank statements. Now, if we're, we have the summary. Yeah. Uh, yeah. Uh, in that, in the CRM, I almost don't look at that at all. And neither do the other underwriters because it's so random. There's so much variance in, in how correct or how, how much errors it has. It actually hurts me more than it helps me. If that wasn't there, it would be easier just to open up a bank statement because when I see that first and it shows, like, let's say it shows in May, a hundred thousand in deposits. And then in June, 5 ,000 in deposits, you start having like a preconceived idea of what the file is. I almost want to decline it at that moment.
+
+>>Lawrence Pross	04:38
+Then I opened up the bank statements and it says something completely different. And now I kind of have to start from if I didn't see that first incorrect section that provides, I would have a much easier time just opening the bank statements and, and dealing with that and with it that way. Now we had other companies before.
+
+>>Lawrence Pross	04:58
+More accurate in that bank statement section I still like to you know I still open up the bank statements themselves Yeah Because you know trusting it entirely it gives you summaries doesn't give you like the exact number of deposits and visually when you're an underwriter and you see how those deposits come in and the kind of deposits you start building an image like oh every day the guy has got these kind of deposits It's okay You want to see that to make your offer sometimes your offer becomes stronger the kind of deposits are better I'm not sure having that in a summary section somehow is going to be the same effect for me as an underwriter as seeing the bank statement so I'd like to see the bit I'd like to open it But there's a lot of deals that things could go much smoother and faster if I could trust what Doc Sumo has And it's actually doing the opposite for me and and the other underwriters not only could we not trust it it's kind of slowing it down by having us look at something that's incorrect and having us to we have to unwrap it and try to figure out what is correct rather than just having the bank statements alone you know what I mean But but we're not only opening the bank statements in certain cases we were be opening them in most cases Okay
+
+>>Bikram Dahal	06:16
+And when you open you just open the bank statement not our reviews can I anything you just open the bank estimate is a PDF file on the sense and just look at the things I wanted to show you guys
+
+>>Lawrence Pross	06:28
+Is I know we could open up the Doc Sumo like look here Yeah now you see these bank statements in the documents Genesis made 2025 you see these two little arrows you click on the arrows wait this is processing it you know don't you have to click just on the bank statement it's a Yeah right And Yeah And Doc Sumo pops it up Yeah And it'll go right into Doc Sumo I just gotta I gotta log in again But it goes right into Doc Sumo and Shannon shows you the actual bank statement and from there we could figure out maybe what what the problem is so I've seen that where Doc Sumo highlights where it's pulling the data from you know my problem is that sometimes these bank statements are not sometimes more often than not a kill that they're not even processed so so you've got a bank statement that says you know ready or I forgot what the what the tag is where Doc Sumo didn't process it But But in our CRM there's some sort of summary there And I have no idea worth pulling the summary because sometimes the numbers are just outrageous like 456 trillion dollars deposited in in May and clearly nowhere those numbers appear on any part of the bank statement So it's just if it wouldn't put anything there like what if some error occurred and Doc Sumo didn't pull that and there would just be nothing in the bank section Fine I'd look in the bank statements but the part of the issue is when it's not processing And it's populating But I don't know why it's doing that
+
+>>Lawrence Pross	08:09
+And so we can't trust that And then we can't trust that half the time sometimes it'll read a chase statement correctly and sometimes it'll read a chase statement incorrectly which is it's not like we're dealing with a chase statement versus a credit union Yeah So so Liana did a comparison yesterday to see if this is occurring with the big banks or the little banks because I would expect it more to occur with the little banks the credit you need ones that you don't see that often But it's just it's across the board it's Bank Of America chase small banks big banks you know national banks It's all across the board Okay
+
+>>Bikram Dahal	08:49
+So on that point like up So we're just trying to wrap our head around one thing so the issue of certain amount coming like too often that I recorded on our seat right the go next see issues it are there more issues than what is recorded over there because I understand it is an extra walk and people might not put that information into that seat so the issue that you guys face there are more issues than that is what is put on this it let me just quickly share the screen with you pretty much everything I think Liam is putting things in very accurately there's a lot of issues there okay to to tackle so we have like example for the like today
+
+>>Lawrence Pross	09:45
+Right so these are the little listed from the very beginning imagine a machine train it where the mistakes are being made sometimes it doesn't make any sense like you're saying speaking
+
+>>Lawrence Pross	09:57
+Have numbers that are not in the statement at all. Yeah, so what I'm asking them is if we can assign two of our people to, you know, go into Docsumo where it's making these mistakes and maybe train it or find where the problem is. The issue is, is that some of the numbers even, the numbers are correct, but when it calculates it, they just make no sense.
+
+>>Bikram Dahal	10:22
+Okay. So on this one, that's exactly the same thing, what will be done on our team.
+
+>>Lawrence Pross	10:28
+Yeah.
+
+>>Bikram Dahal	10:28
+For next one week or next one month, we are putting one person on our team to manually review all the extraction and give us the daily input to make sure that we don't have any issues. So from tomorrow itself, I have already allocated a team member in our site. The same thing that you talked about, right?
+
+>>Lawrence Pross	10:45
+Your site, but we're going to have to work maybe a little closer with you somehow. Maybe like Lazaro and Liam, maybe through Slack or some kind of chatting so they can, you know, your guy over there, if he has a question, he can ask it and they could look at it and show him where the issue is.
+
+>>Bikram Dahal	11:14
+Yes.
+
+>>Lawrence Pross	11:14
+You know, if we can start doing this and start seeing improvements, then we're heading in the right direction. But if we're not seeing improvements right now, we're paying for a service that doesn't work. We can't use it. You know, it's better for me to go back to the guys who we were using because their thing was 98 % of the time it was accurate. Sure.
+
+>>Bikram Dahal	11:40
+There's also one other thing we'll do on our side, because in our side, what I think that is also the mistake we'll talk with Eugene and everything, and we'll also talk with Boris. Right now, we are just extracting all the information and giving it to you so that you guys can review it. But in our side, if we say that the tag match is not working, or for whatever reason, we say that this document we're not able to extract, then we'll make sure that those extractions do not happen. Like you guys see empty, like what the team says, it is better to see empty than to see a wrong extraction. And in case of empty, also, I'll get my team to review it and see if today, let me say for next, like three of the bank history from X company was empty. So I kind of get my team to like fix that issue and in the next like four or five days, can that be added back to the queue, right?
+
+>>Lawrence Pross	12:28
+So just to explain, like with our other provider that we were using, they did all the calculations on their end, like total deposits, total debits, they did that on our end, and they delivered it to the proper fields, it was mapped to the proper fields on our side. What the calculations we did was on averages, like average amount of deposits, because we would take the three months bank statements of all the data you delivered us, and we will calculate average amount of deposits, average amount of debits, things like that. They were delivering us the data on a per statement basis, and we were then, our side was doing all the averages.
+
+>>Bikram Dahal	13:24
+So I don't think there'll be any issue on the average, because at the end of the day, average and metric calculation is not that big of an issue, because these are just calculations and there cannot be a lot of mistakes over there. The only mistake will happen if the exact result has happened wrongly. Example of the case of trillions and everything, what happens on our side sometimes is that the reference number is taken as an amount. That's the reason why you are getting that trillion number that Tim talked about. In that case, in our system, we can flag and say that something is wrong with this statement, like something does not make sense, because the running balance is not matching, or average balance is not matching, or something is not matching. So two systems, and before I go into this one, what I wanted to understand is regarding the turnaround time, because you guys will upload a document, and then it will take some time for document to process, and if I have a team, my team on my side, then it will take certain amount to give you that document and give you the final results. So what I'm trying to understand is that, is there the expectation, is the underwriting done as soon as you guys receive a file, or the file comes?
+
+>>Lawrence Pross	14:36
+There's a time period before the underwriter gets to it, because file comes in, we send it for parsing to you guys, there's some time between that point and when an underwriter will actually get to the file, because there's other files ahead of you.
+
+>>Lawrence Pross	14:56
+So there's a time period, you know, at least, what would you say, 10, 15 minutes, 20 minutes between? 20 minutes. But here's the thing, right? So we're discussing how to improve the data to be accurate, but even if we get everything that we're talking about right now done, it's no benefit to me as an underwriter or any of the underwriters to even use this because it doesn't speed us up compared to just looking at the bank statement. We need additional things. Like the company that we used before, they also found the Mca pulls throughout the bank statement, right? So they would find that, oh, within this merchant's bank statement, on deck is a repeating pull or some other Mca company was a repeating pull. And they would send that data to us and that data would go to a deck sheet. It would populate a deck sheet. This is what speeds our system up. This is ultimately what we need to get to, not just making sure that the deposits that's on the bank statement transfers to our CRM because I can open the bank statement and see those deposits. But the time that's wasted is going through that bank statement in the actual deposits or subtractions, line by line, and finding those Mca payments and seeing if any of them have altered, adjusted, or anything like that. This is the goal, really, with using Docsumo.
+
+>>Bikram Dahal	16:23
+We have, Tony, on this one, I think we have that, right?
+
+>>Lawrence Pross	16:27
+Yeah, we do have one.
+
+>>Boris Teper	16:28
+We have a tab, Mca tab, next to the bank statement. It shows you per statement all the Mca transactions with the amounts.
+
+>>Lawrence Pross	16:36
+I didn't see that in most of the, like, when I pull up a file that has, I mean, in the bank statement section, like I said, the deposits come all over the place sometimes, right? They're completely wrong or the number of negative days or Nsfs or these numbers are all over the place. But when I go to the Mca tab, I don't see anything populated, usually. So I'm not sure if that system's working or not.
+
+>>Boris Teper	17:00
+No, it's working. I'm looking at one right now, and it's listing all the Mca transactions.
+
+>>Lawrence Pross	17:06
+Which deal is it for us?
+
+>>Boris Teper	17:08
+I'm just looking at The Bean Brothers.
+
+>>Lawrence Pross	17:11
+Bean Brothers?
+
+>>Boris Teper	17:12
+Yeah. I just opened it for the opportunity.
+
+>>Lawrence Pross	17:15
+Because I check every now and again, and I don't see... That's right there. I'm seeing transactions.
+
+>>Boris Teper	17:24
+Mca transactions. I see by June, if you click on the arrow down, you can see all the transactions in there.
+
+>>Lawrence Pross	17:32
+Yeah.
+
+>>Boris Teper	17:34
+Yeah, we have this.
+
+>>Lawrence Pross	17:36
+Can you see this? It's arranged weird. I mean, there's some of them that are picking up that are not Mca transactions. Those, we have... I forgot to put it.
+
+>>Boris Teper	17:43
+We have a list that are not Mca transactions on the Dexoma site that we can add. So next time, it's not going to recognize the Mca transaction.
+
+>>Lawrence Pross	17:54
+All right. I mean, we have to get Dexoma, whatever we have on our end, that'll help improve this.
+
+>>Boris Teper	18:01
+Yeah, they have a list, and they have a list within not Mca transactions that we can put in there next time.
+
+>>Lawrence Pross	18:09
+But ultimately, this is what we need. We need to be able to trust the data that's coming to us. It needs to be accurate, and that will help us actually speed up. To answer the question you said, does the underwriter open up the bank statements? If I open up one bank statement, and it matches everything I see, I don't have to open up the other two. Now, I just didn't waste... I saved 60 % of the time that it was going to take me to open up the other two. For that application. For that application. The next application, you have to... I'm fine with... Again, the trust comes in when I open up the first bank statement, because I'm not going to just blindly shoot out an offer without at least spending 20 seconds looking at it. That's not the hard part, right? So, you just open the bank statement, and quickly you see what it kind of looks like, and if it's matching very closely or exactly to what I have in the summary section, you get a visual of what the deposits sort of look like, how they're coming in. I don't need to look at anything more. I know what I'm looking at. I can put out the offer. Stuff like that. Otherwise, I have to start combing through it, you know, line by line. It's a very different scenario. So... I have a question. What have you guys learned from the issues that we've recorded? And some of them have been fixed, and thank you for those fixes.
+
+>>Bikram Dahal	19:30
+Yeah.
+
+>>Lawrence Pross	19:30
+We are seeing those issues coming back again. Yeah. I'm very interested in the root causes. Have you identified them and put some mitigations in place, and why the mitigations are not working? Sure.
+
+>>Bikram Dahal	19:43
+I'll give you the idea on this one. Usually, the thing over there is that there is one more. It is like we'll be pushing today and tomorrow. So, we have taken... So, there are two things on extraction, right? So, let's divide this into two.
+
+>>Bikram Dahal	19:56
+This problem into two parts. One is the extraction only. And I understand extraction is not the goal, but you also want to do classification and everything. Classification and everything is a solved problem. I don't think we'll have any. We need to further improve our Mca list and everything. But the system is already in place and everything. Those things are already solved. The biggest issue that we're facing was the extraction problem, where sometime some tables were not picked up. Sometime the reference number was picked up as an amount because of the Ml system and everything. So using the feedback that you guys have given us, what we have been able to do, just to give you a number, is there is something called tally check in bank statement. Because all the bank statement have opening balance and closing balance. At every bank statement, you usually have opening and closing balance. And if I extract all the transaction, and if I run the total, then opening balance plus transaction history of debit and credit should be equal to closing balance. Now, if that is true, then you can be confident that all the information I extracted properly from balance sheet. That number, when you started, when you started this project and everything, and this is across Docsimo, because this API is also used by other customers and everything, that number was around 82%. On 82 % of the documents, everything was properly extracted. Today, that number is 95%. So in 95 % of the document that is sent to Docsimo, we make sure that opening and closing balance plus minus debit and credit are matching.
+
+>>Bikram Dahal	21:48
+That is what we call tally check. So what you will see is less of this issue, like less of this issue of wrong extraction, wrong, what do you call it, appraised balance and everything. So that is going live on this one. But this 5 % thing that I talked about, it's very difficult that, I don't think it will ever be 100%. Extraction of 100 % will be very difficult. So this 5 % for now, because I want the system to be learning and everything, for now, that 5 % will get our team member to review this document and make sure that this 5 % are also collected. So that we can learn from, so that the kind of feedback that you guys are getting, we get it from our own team, so that you don't have to maintain those seats and everything. So that we can take that accuracy from 95 to 97, 98. I don't expect it to be more than 98, because these are very complicated, it's different than everything. So to answer your question, the feedback from your side is, we have increased the accuracy, we have taken that accuracy to the higher level. And then, so that the kind of mistake that you guys see are minimized over there.
+
+>>Lawrence Pross	23:04
+Boris, is Liam posting every single file that has a problem, or just the ones you guys are picking up on? I'm not sure. Ones that he gets highlighted on. It's just, I wanna know like what the rate is, what the rate of files that are coming back with bad data. So, yeah, versus total, just as a percentage. So we can see, you know, we can see if that percentage starts going down, we know there's improvements being made. How do we do that? So, how many we got by week? But how do we, but he's not flagged on everything. You know what I mean? So our data entry people are gonna have to stop and start checking to see if there's anything that's in the bank statement versus in that section that's mismatched, and then flag it, you know, tag it. You're not reporting every issue. I don't see it. They can't. They can't possibly slow down and report every issue. I have an idea, Boris. Is it possible for you in this bank statement section, maybe put a check mark box for, let's say, the underwriter. So when the underwriter gets a file, if he notices that the data that's in here is incorrect, he can mark it off. And then this way, we could just look at all the files that are being handled by an underwriter, take them off, and we'll have a percentage. You know, 200 files were handled by an underwriter. 30 of them got marked as incorrect data. That's 15%. At least we'll start getting a count of, you know, whether or not the improvements are helping. You know, the idea is to see that percentage go down.
+
+>>Lawrence Pross	24:47
+Yeah, well, the clients are gonna - Or you could just tag me on every single one that's wrong. Just put my name and I'll keep a record.
+
+>>Lawrence Pross	24:55
+Nobody Morris to put a check mark right over here. It's just easy for them to check it off and that's it Yeah, check mark will be either them Set up a report we can make it we can say, you know 200 files were handled, you know 180 of them were checked off that they were good and 20 of them were checked off back And We this way we'll just have a percentage You know, we'll see whether the work that you know, these guys are doing If it's if it's helping if we see that number going down We know there's improvements being made And then we can start looking at where the the bad data still is and work on those improvements Yeah, exactly because I'll just give you one number that was a bit bothering me
+
+>>Bikram Dahal	25:45
+So yesterday, I think we process around 400 bank statement and the number of issues that we had Was only two right So just want to that's also reason why I'm Getting my own team to look into this. It's an AV document because I want to see the number so the we have we don't have a issue on 95 percent of the documents and 5 % of document if we are able to plug and say that there is some issue of like we are not able to extract and People can directly not depend on Docs more data But they can directly open the bank statement like you said And I'll do it then that might be a good enough solution so that not we're not wasting our time And we'll be working to make that into 98 % or 99 % like working hard on that one, but Make sure that's what the work you're doing is improving it.
+
+>>Lawrence Pross	26:33
+Yes, because if we're not seeing improvements then you know, we have to start Yeah, moving elsewhere But I'm confident that you guys can make the improvements.
+
+>>Bikram Dahal	26:43
+Yeah, I totally agree so the first part two parts on this one first part, I'll make sure that the This goes through one more on a preview on our side also just to make sure that you guys have less of this issue I'll play come on our side Like on our side also on your side also like low ends. I like your idea Let's put that check mark so that we can talk in numbers next time you guys can come to us and say that Okay, 80 % of the files like it's good But 20 % is bad but 20 % also it will be good if you are able to highlight this 20 % without my Like how like my team going into that like example Like I said tally check if I can say that if the tally check is really good Like it's opening and closing balance is are matching with David and credit Then we're pretty confident that the extraction has been really nice and on top of that We need to look classification a base calculation and everything that part is already solved So we work with boys and see if there's any issue on those number But I don't think there's any issue on that number. It's a for Improving the Mca list which anyway, we already have a build a system where the team can update and next time You'll not have that issues, right? So like I think that might be a good starting point so that we can like see the numbers see the issue go down For the next call And we're gonna have on our side.
+
+>>Lawrence Pross	28:03
+Also, we'll send you a daily report You guys can also send us a weekly report so that we can see that number going down From the issues that we already identified and this is a good plan going forward to see if it's the numbers of issues is going Down, but the one that we already identified Yeah, the fact that they're coming back again and again, maybe if you can log into the issue log the break fix what you found at what you fixed and For the next time and next time we should be aware. This is the same error or you should be aware
+
+>>Bikram Dahal	28:37
+Yeah, my concern is that they are they are reoccurring so on this case like up like like on this case what happens is that I expect those issue to Sorry to reoccur out of hundred files on five files or two files I expect it to reoccur because like I said, there will be some S cases like over there so I would never say that on a hundred percent of the file that issue not a year for because The thing about all these models that we have build and everything is sometimes they work in orbit different scale So out of hundred file on two or three files I expect that you know to be there, but we'll also work together to make sure that those are ready But that issue cannot be up in 20 files out of hundred files Initially if you are having those issue on 20 files, then that 20 files should be reduced to like two or three files But would that it should not be on the product at all I don't like it's not possible because of lot of other Complexity that comes in the picture because of new template Sometime even in case of change because we are using machine learning sometimes works as a black box So the only point that I'm trying to highlight is those issue. We want to make sure that that issue is very small But would that completely go away? I don't think so like we'll still have like two or three percent of issue will happen, but we'll build the system
+
+>>Lawrence Pross	29:54
+So that those are highlighted the other the other company we work with they also they weren't perfect Yeah, I wasn't a hundred percent, but it was closer to 97 98 percent Yes, exactly same way we can get you know somewhere over there, then we're we're doing fine We know it's not going to be a hundred percent. Maybe eventually it'll get there, but you know We're not expecting a hundred percent
+
+>>Bikram Dahal	30:19
+Sure I had given to the team is I think at least the team has reported 95 % of like This week like on the report and everything where we put at 95 And we'll be working more to make it to like 97 98 Percent that is also our good actually like we'll be monitoring that season We are putting one our own person to review those files So that we can get catch this information on very granular detail Like I'm like the team said right underwriter are already busy with their own work Sometimes they don't have a time to put those issues into their like system like they'll forget They will be like so p***** off like forget about it Let me write the underwriting my job is not to give all the feedback But with your feedback having the checkbox might make their life easier So like a police have that checkbox and then unless collect that data so that we can see that that number The number of issue that you guys have on your file should not be more than three out of hundred That is also our goal on our side and I think we're gonna easily achieve that in next three to four weeks So looking forward to them Okay All right One quick thing I had sorry about like loans on this one because the team are like up Like I'm like the team told me That like you guys are not getting the summarization about things are quietly or like Those retired Those are You guys were getting some Calculation or Mca list from old vendor, but from us you guys are not getting the correct and like least or something I so that more likely Boris is Might be something on UI Right you guys are getting All the data all the matrix that the last company used to send we are also sending it
+
+>>Bikram Dahal	32:02
+I say there's a mismatch on that Let's have a separate call for this one But like I said, the biggest problem over here is extraction like once you do the extraction extraction is correct Whatever you need on top of that Mca list repetition of transaction recurring transaction everything are Already on the API and if required we can add more matrix over there very easily because of very easy part So let's make sure that because on our engine side we think it is easier But on the writer like like found writer that we do a very big feature because it would save a lot of time So if there's any feature that you guys think or any matrix that you guys think is good to have and you are not able To see on the UI for whatever reason because there was some change you guys are sending or if doc summer is not sending it across Please let us know because I don't want to just focus on extraction like the team said also want to make sure that Your whole process is fully automated not just the extraction path, okay? So anything from us right now One thing that will really help and it can be separate or my influence alone I think you guys might not like be required but one like one Session for Aniket and the team to just see how on the writer Do their work on by sharing their skin and see like what is missing example like the team's told right the Mca list was missing
+
+>>Lawrence Pross	33:22
+So if we could get that one training session That would be really helpful for further making the product and everything and working with using and making sure that Even for tomorrow where if you can maybe like Aniket will sit on like a screen share with Lazaro while he's actually underwriting it live so he can point out like what he's seeing and talk Yes, and what is missing over there?
+
+>>Bikram Dahal	33:50
+Like what they do manually that you think that we can help that that also might really expedite the process So that will be really helpful because I think on the gate would be more than happy He has been asking me that so would love to have that one session just to make sure that We understand that whole process
+
+>>Lawrence Pross	34:03
+Okay We can arrange that. Um Let me follow up with him as tomorrow good for you guys Yeah, like at this time if you guys can do that this time that'll be great because Aniket is very sort of India So like after this one is a bit like let's say 1 to 2 p .m. This time I will Cc Aniket and and Lazaro and Guys could set up like a Google meet and then Lazaro could do a screen share live as he's actually doing it So and he could point out like where he's seeing the mistakes Yeah, and what are the information missing that he has to do manually also?
+
+>>Bikram Dahal	34:42
+So like an Aniket will drive that call because he knows what needs to be done He'll make sure that he acts the questions and everything so that it becomes Okay, so
+
+>>Lawrence Pross	34:52
+Yeah, So we'll set up
+
+>>Lawrence Pross	34:53
+Up with Lazaro tomorrow between one and two.
+
+>>Bikram Dahal	34:56
+Okay, so Ti Exxon Atom on both the side then this is the like a thing that we'll do for now. For now at least for next one month we'll make sure that every bank statement that comes to Docsumo is properly reviewed by our team also so that the extraction issue and everything is minimal over there. On your side also like you guys will put a button on the UI to tick those cases where you guys have like wrong extraction or there is something wrong with the extraction side of things.
+
+>>Lawrence Pross	35:30
+I'm gonna when we get off I'm gonna speak to Boris about it I'll tell him where to put that so our people could check off yes Or no you know if the data is good or if it's bad And then we'll start having an actual percentage like how many are good versus how many of that.
+
+>>Bikram Dahal	35:46
+Sure and Aniket like I will set up one call with Aniket so that Aniket can look at that the complete underwriting and see like where all we can further improve on the systems.
+
+>>Lawrence Pross	35:57
+Okay, all right.
+
+>>Bikram Dahal	35:59
+Okay, sounds good like Aloin and Boris and the rest of the team like thanks a lot for your feedback we'll make sure that this time is properly used to make your life easier on long run.
+
+>>Lawrence Pross	36:08
+Thank you so Liana will send an email right now I'm going to work with Boris on what he needs to add in. Liana will send the email to Aniket and Lazaro for 1pm tomorrow and then Aniket you could just send them a invite and you guys will do a screen share.
+
+>>Bikram Dahal	36:28
+Okay, sounds good.
+
+>>Lawrence Pross	36:29
+All right, thank you guys. Thank you.
+
+>>Bikram Dahal	36:33
+Okay, Aniket can we hit that number 95 percent?
+
+>>Aniket Tatipamula	36:39
+I think we can like I'll just share my screen right like we did a lot of stuff today to release and we released it And I think Vikram you can also test it out if you are then it's just one additional parameter that you'll have to keep.
+
+>>Bikram Dahal	36:51
+Okay, I'll check that.
+
+>>Aniket Tatipamula	36:55
+Yeah, so I mean this is this is the top 100 right now with VLLMs. Yeah, if you look at it right like I think we are able to get all of them processed. The only problem here is like once we get the extraction out doing this right as a localization is like very bad Like I mean it's not it's not very good to localize and someone would have to manually go through But that's okay But the tally check is like properly calculated that's one part of the story. We did that on their account too which is go back this is Nexi documents and out of 101, 89 of them are passed and the ones that are not passing are genuine like it's not like they have like the extractions would be good maybe the opening and closing balance is not properly picked up because there's no opening and closing balance or maybe there is some issue with So I think the numbers like we're getting right now is good the only thing that happened is like after we released we made it live for some time And then we saw one false positive And then we were like Okay now we have to because one document tally passed and it had a debit and credit mismatch So then we thought Okay
+
+>>Bikram Dahal	38:12
+I think that's not like that Anyway I think I initially thought that like I think the issue is coming from them themselves not understanding because that guy did not know that it could get a Mca transaction Also right And people just seeing one number wrong And they're not trusting the system because that is how the people are like they see they don't know Because Yeah But the thing is that person right because I think Lawrence took the initiative himself saying that let's see the person because as soon as you see that 90 % of the files are good then like you'll force his own team to work on this right Like you'll force his own team to like look into this one I think the issue is happening because like he said one issue that he told was he is able to see the number but don't see the document so I think the issue is stemming from issue on their Salesforce product only and a little bit of issue on our side on extraction on the extraction side also like he said right on our side we might be able to like if we know that if this number is like really good on this level like you guys like you guys are like anyway once you guys do better test and everything we have the time if I see the numbers numbers and everything and then like if we see this kind of accuracy then I think they'll be fine like he said he Also it's a told himself right like um like they were only I know 100 % they will not achieve 98 % he's just saying 98 % because they'll be achieving what 90 % something I is putting 95 because you know that if I say 98 at least 95 will be achieved so that is how like this guy is looking into so on this one you have to talk with these guys also see the underwriting thing we need to help them like I think there's some issue on the voice and using side a little bit of issue on our side outside
+
+>>Bikram Dahal	39:52
+We'll at least fix it with this one. Let's also get an interest in that person to review this document. Because for those documents that is on review, let's make sure that he approves and everything, at least for a week, so that we have less of this. Let them not cry about it. If you don't cry about it, then what will happen is that we'll get a little bit of time to make sure that this number. So even if I were to hit this number to 95%, like 95 % or 90%, I think they'll be fine. The second issue is Mca classification. Like I said, I don't think that will be a big issue for anyone, like let's figure it out. So let's get into the call, understand their workflow. You guys work on this one. Let's get this live into the product. Let's also get an interest in him, at least for a month, just to make sure that the extraction and everything is good and see if there's any escape. Because this will also, if you make it live, then you can also have that person that is also like a validation. He's just validating the data and everything. So if everything goes out, then as long as we hit 90 % I think we should be fine.
+
+>>Aniket Tatipamula	40:51
+Yeah, Vikram, I agree. The only thing that I did not, because I did not ask, but I don't know whether he answered it or not. He did not give you the time. He actually did not give you a turnaround time properly. Like, because if these guys were using Acrolas, we would have at least gotten that one day, right? Because I don't think Acrolas at least takes two hours or three hours.
+
+>>Bikram Dahal	41:08
+I don't think it will happen. He's not giving a name. He's taking heroin, but the company that he's using is not giving a name. Because even they also, he told multiple times, like I did not place him, but we have to figure out a way to get it from other people. Lawrence will not give, because there's no way I'll give you that name because you're going to screw me up. Because like Acrolas is going to charge 30 cents. You are charging me 10 cents. Just the 10 cents, right? It's the 10 cents.
+
+>>Jasneet Singh Malhi	41:37
+We need to, Vikram, but it was somewhere around this only.
+
+>>Bikram Dahal	41:40
+Yeah, so like, so then they are expecting, we are doing too many document types. We are giving more features. We are getting more, this one, and then we're charging less, like it will come and bite him. So Lawrence will not give the number. We'll have to figure out from other sources, if you can talk with this people and everything, like not directly, but indirectly, let's figure out if we are able to figure out, because I'm partial, if it was heroin, then they're using money from, like we said last time, like they're not, the only person who can give a better accuracy in this thing is Acrolas, because this one, but the prices would be like insanely high, like, that's also the reason why he's tolerating us, right? If you think about it, the reason he's tolerating us is his character number and everything is also the cost, because he has been able to reduce this cost. And my assumption, but that is what we're going to, like what we have. So let's do, Aniket, let's do a simple thing for now. You work tomorrow because it's already late for you and everything, you do a battle test because we have tomorrow day, and you make it live if everything is good. Once you make it live, you get that one person to redo all the files, right? That do not go to Alipay and everything. Let him fix the issues for now. Let's have, at least for next two weeks, let's have minimum issue on their side. You also go into the call with them, figure out how they use the systems and everything. And then like, and see like if there is any place, the way that they are getting confusion. Even the better solution, Aniket, might be, for those cases where there is no tally check or where we don't have confidence for whatever reason, it might be better to like send it empty and ask Eugene to not publish the data onto the recommended sources or something. I don't know. Like we have to think about that also. Because one of the things you told, and I totally agree.
+
+>>Aniket Tatipamula	43:17
+Yeah.
+
+>>Bikram Dahal	43:19
+When you say something is extracted, you have to, the HTTP, that is why HTTP is also important thing, right? It's okay to show that only 70 % of the document I am processing, 30 % I'm not processing. They'll be still fine. But now the data that is extracted, this one, right? So if it makes sense, then let's also force Eugene to say that only put 90 % populated this one. 10 % for now, just use the old method. Like whatever the people are doing, right? If you're able to get that, and in the case of bank estimate, we can do that. Before we could not do it, I agree, because it's very difficult to do it. Like, but for bank estimate, because you can do a tally match, we can do it. For now, we can just like do it. And then like, see, like, let's see that. So let's attack this problem from three steps for two reasons. First one, it's a big customer. Second thing is if you're able to please him, then bank estimate is a solved problem. Like next time we don't have to please anyone on the bank estimate. So like anyone comes, we can say like, go and start using it, right? So, and on top of that, you will also like, we'll also have an understanding about how they do things on those cells first. Okay, and now that they start tracking the number, I think it will be good. Like it will work on our favor. Like I think Lawrence also wants that number.
+
+>>Aniket Tatipamula	44:29
+Yeah, if they track and then it will be on our favor because the thing is, I understand, like if you see one wrong or two wrong or three wrong in a day, and maybe like if that guy is a leader, people will just bring issues to him, right? And he'll only see issues, not the problem. So that, let's see.
+
+>>Bikram Dahal	44:44
+Okay, then sounds good.
+
+>>Aniket Tatipamula	44:46
+Take care of it, yeah.
+
+>>Bikram Dahal	44:47
+Okay, sure. Let me know if you need anything on my side, like.
+
+>>Bikram Dahal	44:51
+And that person will work for one night shift only. So let him look into this and then see what we can do.
+
+>>Aniket Tatipamula	44:58
+Sure, Vikram, I'll try to understand the Tad from the underwriter as well, if they are able to give me that info. Because if the Tad is good enough, then we can always do it in the morning too, right? If that number is right. Otherwise, we will do it at night.
+
+>>Bikram Dahal	45:14
+Yeah, if you can do modding, then that will be even great, because then the document comes. And then someone, you have a big notation team and everything, so that things become easier.
+
+>>Aniket Tatipamula	45:23
+Sure, Vikram, cool.
+
+>>Jasneet Singh Malhi	45:25
+Awesome, thanks, Vikram. Thanks, Aniket. Aniket, I just wanted to check, will you be able to join that call with trial?
+
+>>Aniket Tatipamula	45:30
+There are a lot of people on that call, Jasneet. I'm not sure, like, I think there are too many people from Docs.
+
+>>Jasneet Singh Malhi	45:35
+It's their executive team only. And I don't have the access to the final, the new demo for validation that we have. And this is primarily going to be a pricing discussion only. But if we want to show them the new UI of the validation screen, then I just would want your help for a minute or something.
+
+>>Aniket Tatipamula	45:54
+Sure, I'll try to join. It should not be an issue. But that validation screen has client data. So if you have some samples from them, then maybe I can put them in there.
+
+>>Jasneet Singh Malhi	46:03
+I don't have any samples per se. But we just need to show them the overview. We don't need to take them through the whole process. We need to show them, if it comes up at all, we need to show it to them. And I'm sure, like, Rishabh would want us to show that new validation screen. So that is why I wanted you to be part of that call. We'll try it.
+
+>>Aniket Tatipamula	46:23
+Not a problem.
+
+>>Jasneet Singh Malhi	46:24
+Thanks. Thanks, Vikram. Thanks, Aniket. I'll talk to you.
+
+>>Aniket Tatipamula	46:27
+Thanks, Vikram. Thanks, Jassi. Bye -bye.
+

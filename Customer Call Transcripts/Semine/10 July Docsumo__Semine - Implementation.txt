@@ -1,0 +1,708 @@
+>>Bikram Dahal	00:04
+Hey, hi, Robert. Thank you, Mr. Roberts. Hi, everyone. Hi, Vikram. Hi. Hi, Robert. Hi, Vikram. Ok, let's get started then.
+
+>>Nidhi Vichare	00:28
+All right, so I think we have already set up the documentation as per the Xml that has been shared. So Manoj, would you like to share what we have set up right now? Like, we'll give a quick demo, and then we can dig into all the questions that we have.
+
+>>Bikram Dahal	00:46
+Robert, I think, like, before that, Nidhi, can I have a quick introduction between the?
+
+>>Nidhi Vichare	00:51
+Yeah, sure.
+
+>>Bikram Dahal	00:53
+Ok. So I'll just go about myself. I'm the new editor. I think you guys have been discussing. I know about the team you guys might have talked with yourself and the AE a lot. I'm Vikram. I'm the one who is responsible for all the deliveries in Docsmob, to make sure that your Poc is successful and you guys are happy with the product. I overlook the product, and also I'm the CTO of the company. So I can also expedite certain product -related features if you guys need it. And the purpose of me being in this call is, first, to make sure that, because you guys are moving from one system to the next system, I want to make sure that we do whatever it takes to have a minimal impact on your side. Because one of the reasons the project gets delayed is, if you guys have a lot of things to do on your side, then the project will get lost and everything, because it's just not very expensive. So my job is to figure out how are you guys currently using the point system? How do we use Docsmob to replicate those and even make something better, so that your testing between the point system and our system is so seamless that, if you want to decide to flip, it's like a no -brainer. So that's the main thing. For that to happen, there's one extra request that we have for today. We wanted to, we got your XML. We went to that XML. We have a few questions regarding that XML. That is one. And second thing is, we also want to understand how does your point process looks, if you guys can share the screen and show that whole process and where the major pain point is and everything, so that we can see how we can automate. And we have next eight weeks to do things.
+
+>>Bikram Dahal	02:34
+I can also expertise certain features, because it might be on roadmap, might not have it on Docsmob. But I see that it was very useful to you. Then I can expertise, because we do a biweekly release in Docsmob. So I can expertise those features. So that's the main purpose of me being in the call. And sometimes I tend to speak very fast. So please feel free to stop me if I'm speaking too fast. But yeah, looking forward to seeing your point use cases, looking into what you are expecting, and what will really flip the table on our side at the end of the Poc, so that this became no brainer. Ok, so I'm going to ask a lot of questions. You guys might have already answered it. But I will be asking it one more time, because I like to know information from the first, without middle people, because it really helps me take a decision.
+
+>>Robert Kristiansen	03:23
+Vikram, could you just repeat for all your positions so that he gets it, because he was joining a bit late.
+
+>>Bikram Dahal	03:29
+Yeah, sure. I'm Vikram. I'm the head of product at Docsmob, and also the CTO for Docsmob. I'll be overlooking the delivery goals and everything on high level. I might not be on a lot of calls and everything. But you guys will have a direct contact with me on Slack or our team, whatever you guys finally decide. And if there's any major issue that you guys face, or anything that you guys need, you guys can directly contact me also. More likely, the team will always keep me updated. And I'll be on this call, like, bi -weekly or something, just to make sure that everything is good. But you guys have a direct connection with me. And if something has to be advertised, or some team is saying to you that, oh, this is not possible, this and that, then you can just confirm it with me also, just to make sure that the whole experience is easy. Ok, can I have a quick introduction on your side, so that I know that who I should contact for what in future? Then we can move to the Xml file, and also the overviewing your client process.
+
+>>Robert Kristiansen	04:30
+Yes, I'm Robert. So I have been responsible for the initial research here. So I basically work with the research and give that to the product department. And they will develop and do integration. So that's my role. Bjarne is our project manager. You can go next.
+
+>>Bjørnar	04:52
+Yeah, so I will be the project manager for Poc, also product manager.
+
+>>Bjørnar	04:58
+In Semina. Started in May, so quite new. So, yeah, I will be kind of the main point of contact from your side, Vikram. So, if there's anything you're wondering about or need from our side, you can just contact me and I will involve people necessary from our end, if it's Alexander, Robert or Jarl.
+
+>>Bikram Dahal	05:21
+How do I pronounce your name? Sorry, I'm really bad with names. I just wanted to make that I'm withstanding it.
+
+>>Bjørnar	05:26
+Yeah, no, you can. It's Bjornar or Bjornar.
+
+>>Bikram Dahal	05:31
+Okay, Bjornar. Okay. So, like, I just am a bit careful. Okay. Perfect.
+
+>>Bjørnar	05:39
+Thank you. Alexander, do you want to go next?
+
+>>Robert Kristiansen	05:45
+You're muted.
+
+>>Aleksander Larsen	05:47
+Yeah. My name is Alexander and I'm currently responsible for our current OCR and our annotation tool or whatever you want to call it. So, I am head of day -to -day, just operating the system we have and I'm also coordinating and and, yeah, responsible from our side of the team of annotators or operators in India.
+
+>>Bikram Dahal	06:25
+So, it's my job to make sure that you are happy with our system so that you can switch.
+
+>>Aleksander Larsen	06:31
+Yeah. Okay.
+
+>>Bikram Dahal	06:33
+Makes sense.
+
+>>Aleksander Larsen	06:34
+So, yes, I am closely in contact and knowledgeable about their pains and what they need and what we need. Okay.
+
+>>Nidhi Vichare	06:49
+Jarl, do you want to go next?
+
+>>Bikram Dahal	06:54
+Are you on mute? Right.
+
+>>Jarl Arntzen	06:59
+How about now? Yeah.
+
+>>Bikram Dahal	07:01
+Perfect.
+
+>>Nidhi Vichare	07:01
+Right.
+
+>>Jarl Arntzen	07:02
+Yeah. I'm Jarl. I've been here for quite a long time. So, I've been there from the beginning and I've used various tools for OCR and invoice capture, as I like to call it, because it's beyond just optical character recognition, right? It is capturing actually the content, right? So, I've been part of the implementation, collection of keywords, validation rules, whatever, in Flexcapture. And, yeah, we, both me and Alexandra has a lot of experience in Flexcapture. I have a lot of experience in OCR in general with, for example, Accessoract. Yeah. What more to say? Yeah, we know we have, like I said, we've used Flexcapture for quite a while. It is, you know, not bad, but it has certainly some weaknesses. Not so much around the data capture itself, but certainly around the administration and other parts of Flexcapture. Yeah. So, we're very much looking forward to see how you can handle those challenges.
+
+>>Bikram Dahal	08:29
+Okay. Sounds good. I think the team can give a quick introduction. I think you guys have already met. And then we'll move to, like, I know you, like, we have a lot of questions that you guys have sent. I have replied to that to my team. I'm not sure if the team has got a chance to reply back to you or not. So, we'll answer those questions also on the call, right? So, like, so, yeah. So, the team, you can go ahead. And then we also have a few questions regarding the Xml file. Like, we'll go through those. But first, team, you guys can give a quick introduction to the rest of the team. And then, like, we'll continue with that. Sure.
+
+>>Nidhi Vichare	09:00
+So, I'll be the custom success manager for this Poc and even beyond. And along with me, we have Manoj, who is our solution engineer. So, we'll be your, like, day -to -day point of contact. So, Manoj will be actually working on the implementation part and the setup part for us.
+
+>>Manoj Racherla	09:19
+Okay.
+
+>>Bikram Dahal	09:20
+Yeah, Manoj, sorry.
+
+>>Manoj Racherla	09:23
+I guess myself, Manoj here. So, I will be your go -to buddy for everything in terms of technical aspects or anything on the DocsML side.
+
+>>Robert Kristiansen	09:33
+Okay.
+
+>>Bikram Dahal	09:34
+Yeah.
+
+>>Robert Kristiansen	09:34
+I just have one comment before we start. Yeah. So, we have started to give you some questions. But I talked, yeah, I think I gave that as a comment to Jalfur yesterday, because we don't have training on the product. So, of course, we are just trying our best to understand how to navigate the interfaces. So, for example, today, we thought there was no German
+
+>>Robert Kristiansen	09:57
+Language support. But then we tried a prompt to translate the content first. So we understand that there is some kind of skill set we need to train ourself to. So now you support German. So that was great to see.
+
+>>Bikram Dahal	10:16
+Yeah. Sure. I totally agree. So we have support page, but we lack a few of these videos and everything. And also, I'm extremely sorry, your questions and everything, like we usually answer it within the same day and everything. And like for last two days, the questions has been a bit on lingering stage. And I had already sent the reply, like I said, but I'm not sure if the team has replied or not. And in future, I'll make sure that the reply and everything comes really fast. One thing on that, I don't know if it was discussed on the first call or not. We usually make either a Slack channel or team channel. So are you guys on Slack or a Microsoft team?
+
+>>Robert Kristiansen	10:55
+We are on Teams. So Teams is best for us. Yes. Sure.
+
+>>Bikram Dahal	10:59
+Is it possible, because we are on Slack, is it really best for you guys to add us? So I'll send you the list of emails. Can you please make a channel over there? And can you please add us? So that we'll be monitoring those channels and we can reply things on async. Because on email, usually people take time and everything. On Slack, people reply instantaneously.
+
+>>Robert Kristiansen	11:20
+So we'll take responsibility from our side.
+
+>>Bikram Dahal	11:24
+Blake, please send the list of that, because even our sub is really interested. So we'll also be on that channel. So all of us will be on the channel just to make sure that everything is going as well. So that's the first agenda that I had on today's thing. And you're getting this one, like a robot. There are a lot of things, like you can try the protocol and everything. That's the reason I wanted to be on this call, understand your process so that I can give you a best course of advice. Because some of these things, it's better for us to do at least one or two setups so that we understand the nitty gritty and help you guys. And I understand that you guys have already export on this field. So they might want to try a few things on this side. So probably the platform is built in that way only. So after today, I'll make sure that all the equipment and everything is gathered. We'll send you the proper training videos and everything, like how it works. It's scattered on a lot of places, but it is there. So we'll make sure that those things are properly sent to you guys. And also, if there's any questions, we're going to answer within one hour on your team channel so that the whole process becomes much smoother.
+
+>>Robert Kristiansen	12:28
+I think what I have seen so far is we are very interested in, and I realize, I guess you just released the AI -based orchestration of the prompts and so on per fields. But we are, in general, very interested in that. But there is very little documentation. So I guess you need to give us some training and we can do some recording of that and so on. But what we have seen so far is, for example, today we had a German invoice. So we tried to do a field setup. It failed, but then we entered the prompt. So we said, please translate from German to English. And then it had success. And then there was a second thing. So in Germany, they use comma as a separator between the figures and the thing. So we are getting to that, whether we should have an installation for Germany, because all the invoices will have comma in Germany, for example. So instead of using the prompts for every field setup, for example. I guess these are things we need to discuss and agree on in the config. And then, Jalfroden Alexander, especially Jalfroden is the specialist we have on that from our side. But we are quickly coming into that kind of things. And then we also played with a use case yesterday that was to change the representation of the table.
+
+>>Robert Kristiansen	14:16
+So that we wanted to do some prompts on the table itself, but that was not possible. We could only do it on the row level in the table. So of course, if you can expand the features and support that kind of things would be nice for us, as we are very interested in the tables. Yeah.
+
+>>Bikram Dahal	14:37
+So I agree on that 100%. So I know a little bit of context would have been clear. So there's something called complex table. And that is on old UI, but it was not ported to new UI. And on new UI, it is coming in this week or mid of next week. It's a way like you can even write very complicated case.
+
+>>Bikram Dahal	14:56
+Like if this template comes and everything, this is a prompt and this is the output that I need. There are a lot of things that can be over there. Like we said, we're in the middle of little bit of transition, so little bit of the features that were available on the old UI has not been ported and everything, and you might not have been easily able to get that. There's a way to do it, but not easily able to do it. I totally agree regarding, we don't have a lot of documentation regarding the AI side of the things up, like we just release it And we are escaping and everything. Also, the best practices, because some of these things, like you said, is it better to have a Xamarin invoice as a separate document type and have all the prompts related to that or add Xamarin back to the same invoice type and everything and make sure that you guys can do the integration and everything very easily, because it makes no sense to have multiple document types and everything with a full -size thing. There are multiple things that we have implemented with multiple customers, and we can give you the best advice regarding what is the best way to do it. That's a thing. Let's start with this one. Regarding your questions and everything, I'll answer those also. But before I go into any of these things, and sorry if this looks a bit repetitive. You guys might have already explained it to the team. Team has explained it to me, but like I said, I want the information from the first hand. Can you help me understand what are you guys trying to automate and what does the client system do? Let's start with that. Then I'll make sure that I map all of the thing that you guys say to our client system and give you our best advice, maybe send you a very good email regarding, okay, this can be done by this, this can be done by this. If that makes sense to you guys and if it is not too much of a task for you guys.
+
+>>Bikram Dahal	16:39
+Does that make sense? Does one of you see the client workflows? Then all the email comes, what are the document type you're going to use?
+
+>>Robert Kristiansen	16:46
+Just as a start, so we have, I think around 200 -250 shared service centers. From an administration point of view, we will have shared service centers that are using our software, and so we need a way to not mix all of them together. I guess that is, you need to help me here. But I guess that's a starting point at least, like we need to be able to distinguish that. That is the first thing, and then it is the countries. We are operating in Norway, Sweden, and Finland, but we have customers that have deployed our software in a lot of countries. For example, Germany is very important for us, but also other languages that we will have knowledge about. Of course, that is there, and there are different rules and validation we would like to execute.
+
+>>Bikram Dahal	17:57
+Yes.
+
+>>Robert Kristiansen	17:58
+As per each of the languages, and the original of the buyer and the seller from this. This can be conversions of numbers, or it can be whether certain fields need to be in place. There can be validation of the unique payment references, and so on. We have done that kind of implementation in Abby, and Jarl has been responsible for that, so he will have info on that, and maybe that can be ported, or he could give you the code for that, and you could help us set it up. I don't know. Yes, that's the thing. When it comes to the actual day -to -day process, then Alexander and Jarl need to reply to that, but that's the overall picture of it. Yes, our customers, they are very interested. We are extracting the tables every time.
+
+>>Bikram Dahal	19:06
+Yes.
+
+>>Robert Kristiansen	19:08
+We are very picky with that, and we are extracting a lot of the fields.
+
+>>Bikram Dahal	19:13
+Yes.
+
+>>Robert Kristiansen	19:14
+We will have a standard set of fields, but we will also have custom fields that we are extracting.
+
+>>Bikram Dahal	19:20
+That is different between the service center, or that is different between the countries, or it can be either one service center in Germany might have their own field, and the next service center might have some unique fields. They might be standard, but they also might need two things. So is it -
+
+>>Robert Kristiansen	19:36
+Yes, yes, yes. That's what makes it complex, because there will be different setups for each of the shared service center, or our customers, and then there will also be differences in the vendors that they have.
+
+>>Bikram Dahal	19:54
+Yes, okay.
+
+>>Robert Kristiansen	19:55
+So for example -
+
+>>Robert Kristiansen	19:55
+We have an airline, for example, they will be very interested in the airport tags, stuff like that. Like a constructor will be very interested in the project code, the buildings, the articles. And then we have retail, which is interested in colors on the t -shirts and the quantity and so on. So we have a lot of different, yeah, you call them document types. The only thing we would like to do is we would like to receive an invoice on behalf of this shared service center. We will know which shared service center it is and we will know the vendor. And then we would like to use an extraction model that takes out as much as possible without us having to do anything in the background, idly. Just push it to the customer and for them to do actual review or validation. That's the dream scenario.
+
+>>Bikram Dahal	21:09
+Okay, I think I understood a little bit of it. I'll have a lot of questions. So let me break it up because I have done this kind of implementations for two or three of these customers. So I have a few questions before I go to the solution side of things. So first thing is that the document that you guys are receiving, if this is for account payables or there are also other systems that you just extract those information because customer need it, right? So it is just credit note, Po and invoice or are there other document type you receive?
+
+>>Robert Kristiansen	21:41
+Three main documents. So invoice, credit memo and purchase. So for the invoices, it's non -PO based invoices And then it's the Po based invoices. It can also be contract based invoices.
+
+>>Bikram Dahal	21:58
+Okay.
+
+>>Robert Kristiansen	21:58
+That is the three main. Our focus is invoices.
+
+>>Bikram Dahal	22:01
+Okay.
+
+>>Robert Kristiansen	22:02
+So that is invoices with attachments.
+
+>>Bikram Dahal	22:05
+Yes.
+
+>>Robert Kristiansen	22:06
+So sometimes we also would like to extract stuff from the attachment.
+
+>>Bikram Dahal	22:11
+Okay.
+
+>>Robert Kristiansen	22:12
+So the initial classification of the document, whether let's say it's 50 pages and the 10 first pages is the invoice And then the next is maybe only just images with some attachment that really doesn't need extraction. We need to be able to classify them.
+
+>>Bikram Dahal	22:34
+It's split and classified. So like big document, you first split and say five pages are invoices, five of this page are just the Nxr or whatever. And then you say, okay. And then from this 10 pages, you extract the basic information from the next 40 pages. Like for some customer, you might want to extract something. For some customer, you might not need to extract anything, but might need something out of it.
+
+>>Robert Kristiansen	22:59
+And it's very important for us to measure what the fields we're able to extract the correct in those. And also especially why our hypothesis is at least that if we have a document setup or a document type with the required field for that service center and that vendor, they can know that we have collected all the necessary fields and we have executed the necessary validations and we don't need to manually check for it every time. So to reduce the manual burden.
+
+>>Bikram Dahal	23:37
+Yeah. So that part I understood 100%. One question on this, you told me that you already know what is a vendor and what is a service center it is coming from. So in that case, this documents currently comes, do you guys have a platform or they forward you the email? How does that document get collected on your site currently to add you or maybe if you have your own system?
+
+>>Robert Kristiansen	24:07
+Yeah. So we have our own platform. So we have quite a huge... The size of our company is equal to your size. So we also have developed for many years, but we have not been focusing on capture. We have been focusing on everything else apart from the capture. So what we do is that we have an intake. We have our own platform. So the emails can submit the emails into this platform. And then we have an API that will communicate with Abby on the extraction and receivable. So we will do the same with the Docsumo on that. So in that, and that product is called DocFlow.
+
+>>Robert Kristiansen	24:54
+Here. This is the name. Jarl is the one designing it, so he knows everything. He knows a lot about many things. When it comes into DocFlow, we will know our customer and maybe know the supplier.
+
+>>Bikram Dahal	25:16
+On the supplier side, because when I saw the Xml file, what I saw is that the information from multiple documents were combined into that one XML file. Is that correct? For example, what I mean to say is that for you guys to process one document, you will have to make sure that the information is extracted from a credit note on the purchase order and on the invoice. Make sure that all the information between this matches and you need a final one JSON that says that everything matches between purchase order and invoice. Is that the case right now? Right now, we do not care about those things. You just give it an invoice, it will just give you an XML of invoice, and then it's your job to combine the information between these three documents for that same PO number. Just wanted to understand is that... Sorry if I can break this down.
+
+>>Robert Kristiansen	26:09
+No, it's a very good question. I don't have a question. I don't have any answer for this.
+
+>>Jarl Arntzen	26:14
+Jan, I have an answer.
+
+>>Aleksander Larsen	26:15
+Jan, let me know the answer.
+
+>>Bikram Dahal	26:17
+Yeah.
+
+>>Jarl Arntzen	26:19
+Basically, the job of the invoice extractor is simply to extract all the information from the invoice, whether it's a credit note, a Po invoice, cost invoice, doesn't matter. The rest of the logic, what we do with those invoices, if we connect it to existing invoices or to POs or stuff like that, all that happens inside our product or a seminar. So you don't have to think about that, really. Your main focus should really be to extract just the fields and the values, and then perform some kind of validation calculation. So we ensure that the sum of all the net amounts equals the invoice net amount, because that's a very easy way to check that you've captured all the lines and all the line net amounts correctly.
+
+>>Bikram Dahal	27:23
+Yes.
+
+>>Jarl Arntzen	27:24
+So that's really the level we're talking about here. And I'm thinking, since it seems like there is no written list of requirements or anything like that, I'm thinking I will start on a list of requirements and also tell you a little bit about the volume here, so you understand, right? And then I would say we would have two lists of requirements. One is, what does it take to get up to the current level that we have? And then the new list, which is where we hope you can help, is what would it take to solve the issues that we have currently in Flexicapture? So how to get above and beyond what we have currently, right? So those are the two lists, really. And Robert has mentioned, for example, formatting of numbers. That's part of that list. That's just the basic requirements. We can get back to that, of course. But what we're really interested in is, once we have covered all the basics, then we can get on to the interesting stuff, which is, you've seen already one example of this, the matrix invoices, where we have a lot of matrix invoices in retail. That's really where we think that we can improve quite a lot by switching from Flexicapture to something else.
+
+>>Bikram Dahal	29:11
+100 % agree on that. And I looked into that problem. If you guys had come to us around one year ago, I would have told that, OK, this is not possible. But now it's possible. A lot of things are now possible.
+
+>>Jarl Arntzen	29:22
+And what I think is that we can have meetings like this. Yes, absolutely. But I think it's easier for you to respond and answer our requests if you get good examples, right? Good examples of each type of challenge that we're looking to address. So Robert has listed some of these challenges now, but I think it's really up to us to actually...
+
+>>Jarl Arntzen	29:53
+You know, agreed with our customers that we can share quite a bit of the invoices. So I think a very natural next step now is to share a few examples and say that, okay, this is the invoice and this is what we would like to have back from you, right? And then you can go about, you know, solving it whichever way you want. And you should know that it's, we're very happy to work with, you know, regular programming, rules, reg access, right? All the classic tools, you know, recently AI. So we're not, you know, we're not bound to any particular way of solving it. We're just looking for, you know, what's the most efficient way to do it.
+
+>>Bikram Dahal	30:41
+Sure. I totally agree on that. But to see if like, I'm like, I'm listening to, so one other question, like one other question that I had is, because then I see two main things that need to be solved, right? The first one is, like you guys said, you have like 250 more service center and each service center might have a different, a little bit of different requirement from the, for the extraction part of it. Or there might be difference between like even two, and the same service center, if you have two different vendors, then they might have different requirements because some vendor will say that I need line items, someone vendor might say that I don't need line items and everything. Is that correct?
+
+>>Jarl Arntzen	31:25
+Or like, Yeah, I mean, that's correct, you know? So we have, you know, I don't know, 230 customers is what we call it, right? They receive, each receive invoices from at least a hundred different vendors or suppliers as we call them. Some receive invoices from up to, I think, 5 ,000, 6 ,000, 7 ,000 different suppliers, right? And of course, each of our customers do not have any real control of what the invoices look like, right? So one of our customers may receive invoices from, a lot of invoices from Norway, some invoices from Finland, one or two invoices from Germany, you know.
+
+>>Bikram Dahal	32:14
+Okay.
+
+>>Jarl Arntzen	32:15
+And so on and so on, right? So it's really, the variation is really at least as much between the suppliers as it is between our customers, right?
+
+>>Bikram Dahal	32:25
+Okay. Okay. On that point, what I wanted to understand is, at least for one supplier, so let's now focus into like, let's not divide the countries by language and everything. Let's divide the, like things by company A, right? So does company A, no matter who the invoice comes from, no matter what language, do they always extract the same field? Or is there also a difference between, okay, on this kind of invoice, I just need this field. On this kind of invoice, I just need this field. Or is there a difference on output structure for a company, even on language? Yeah.
+
+>>Jarl Arntzen	33:04
+So if you look at all the suppliers, I would say 95 % of the fields are exactly the same.
+
+>>Bikram Dahal	33:11
+Okay. Okay.
+
+>>Jarl Arntzen	33:13
+So that's the short answer.
+
+>>Bikram Dahal	33:15
+And on this 5 % of the cases, like how do you guys currently handle it? Or like, do you guys like, let me give you a simple example. So anyway, I think Manoj, do you have that, like do you have that Google Sheet? Can you quickly share that Google Sheet? So from your XML, we were able to get the list of the field that were on that. Xml file, right? So I just wanted to understand, are this the 95, like field that is extracted by 95 % of the customers? So first we'll start with that, and then I'll have a lot of other follow -up questions, but Yeah, let's go with that.
+
+>>Jarl Arntzen	33:51
+Yeah, right. Yeah, I must admit that I haven't looked into that particular XML file, but there's a good chance that you're covering most of it. Yeah. So, but this is header fields, right? Do you have any line fields?
+
+>>Bikram Dahal	34:11
+On the line, I think this was like a discipline.
+
+>>Jarl Arntzen	34:13
+You've just listed that as a table, right?
+
+>>Bikram Dahal	34:16
+Yeah.
+
+>>Jarl Arntzen	34:17
+Okay, so this is the line items, right?
+
+>>Bikram Dahal	34:19
+Yeah, that is a line item from 22 to 28, 29.
+
+>>Jarl Arntzen	34:24
+Yeah, I mean, very roughly, this is what most invoices contain, yes.
+
+>>Bikram Dahal	34:30
+Okay.
+
+>>Robert Kristiansen	34:30
+And again, very - What about discount and those columns, Jan -Pole? Just looking at - We disregard those, right?
+
+>>Jarl Arntzen	34:39
+As you know. Okay. But we would like to have them, but it's not used for anything.
+
+>>Bikram Dahal	34:47
+Okay, so understood. So today, right, like, so -
+
+>>Bikram Dahal	34:52
+So let's look into the current Abi system. So if you guys have a skin, if you guys can see it, that will also be great. So the customer sends their invoice to your portal. And on that portal, you guys receive an invoice. You guys don't know the language of the invoice, because they might get it from different country and everything. The thing that you know is who the company is. If you know the company, then you will know the service center by default, because more likely one company will have one service center, although it's a multinational company. So it's, yeah.
+
+>>Jarl Arntzen	35:27
+So there's one slight difference here, right? So the customer doesn't send the invoice to us in many cases, right? The supplier sends the invoice to us, right? So via email, some kind of automatic email.
+
+>>Bikram Dahal	35:49
+And on that email, do you guys pass that email and only get the vertical attachment and upload it into your system? Because you guys have told that you will use API. So the front end will have it more on that part.
+
+>>Jarl Arntzen	36:05
+Yeah, so this is the part of the process, which is handled by Docflow, right? We receive an email. We have told the customers to tell their suppliers that we would like to have one invoice per email. So that's what we can see, right? So based on that, we know the -
+
+>>Bikram Dahal	36:34
+And that's, sorry, is that email different for different? So example, if I'm a supplier for company number one, then I get a separate email ID.
+
+>>Jarl Arntzen	36:43
+No, you get the same recipient address. So you would send it to our customer at semina .net, right?
+
+>>Bikram Dahal	36:55
+Oh, your customer, OK. So it is a different email?
+
+>>Jarl Arntzen	37:00
+Yeah, and then in this email, of course, we know who sent it. Because it's supplier at some supplier name dot com, for example, right? Know who sent it, right? But this is before you see it, right? So then it's received in Docflow, and then we route it, right? We pick out the PDF file, or Tiff file, or Png file, or whatever. And then we route that to the invoice capture.
+
+>>Bikram Dahal	37:31
+Which is like in this case, OK. So in this case, do you guys also get all the document, like what Robert was talking about, right? That document also might have other thing attached to that file. That is a big file, and you have to separate that into invoice and credit memo, right? Does that happen? And currently, how is that handled, or that's not handled by AVI?
+
+>>Jarl Arntzen	37:51
+Yeah, so I can explain how that's handled now, right? So again, we receive the email. We get the PDF file, right? So the PDF file may be just one page, or it may be 25, or it may be 10. And then we just ship it all to Flexicapture, right?
+
+>>Bikram Dahal	38:13
+Ok.
+
+>>Jarl Arntzen	38:15
+And then Flexicapture has some logic that we have built, where we just capture the first table that we find, and then we assume that the rest of the pages are attachments, right?
+
+>>Bikram Dahal	38:32
+Ok, so like, but the thing is that the table might be on two different pages.
+
+>>Jarl Arntzen	38:39
+It might be wrong, right? Yeah, so a couple of things happen here, right? So say, for example, we capture the first table, and in many cases, we're able to determine that it continues on the next page, right?
+
+>>Bikram Dahal	38:56
+Yes.
+
+>>Jarl Arntzen	38:56
+So remember the validation calculations, right? So we capture the first page. We add up, summarize all the net amounts, right? And then it turns out that, oh, the net amounts do not equal the net total of the invoice. And now we know that, oh, we haven't captured all the tables yet, right? So then an operator will step in and then do the capture of the rest of the tables, right? That happens with a certain percentage of the invoice.
+
+>>Bikram Dahal	39:31
+So in that case, that is skin that you have. That's a Abi skin that it took. That operator is using DocFlow to do that changes, or his skin is Abi? No, no.
+
+>>Jarl Arntzen	39:44
+All the operators work in Flexicapture now.
+
+>>Bikram Dahal	39:48
+Ok, they work on Flexicapture, like, only. And then they go to and -
+
+>>Bikram Dahal	39:51
+And there you have one operator. The operator is not a, sorry, I'm asking a lot of these questions so that I can design the system and everything for you guys on this one. So the operator do not care about the vendor. He just has a queue and his job is to like go and fix whatever is mistake on that queue or is operator only particularly for one vendor?
+
+>>Jarl Arntzen	40:13
+No, it's one operator. We distinguish between junior and senior operators, right? So we've got 32 operators or more actually. And we also have a separate set of operators in Latvia, was it? Okay, anyway. Okay, so in any case, right? So all in, we have junior and senior, right? So the juniors receive the invoices first and if they can resolve them, right? And they, and everything adds up and all the validation calculations add up, right? They have, they will be able to post them, right? And right, and everything is fine. If they can't solve it, they will be handed to a senior operator. And just to answer your question, all operators can handle all invoices. Okay, but in practice, some operators are more experienced with German invoices, for example. So they will do the German ones and so on, right? And also since we have some suppliers, especially for the airline companies, right? So they have very heavy invoices with a lot of special fields and we haven't made any automation for capturing all the fields. So for those special cases, then there are a few operators who specialize in capturing those fields.
+
+>>Jarl Arntzen	42:00
+So, it's a mixed bag, I would say.
+
+>>Bikram Dahal	42:04
+Okay, that makes sense. So how does the routing happen in a sense that, okay, the queue, because you have a queue and you have 32 people working on that queue, are they randomly assigned an invoice and they have their own queue and go into Avi or like there's some logic to assign this invoice to some operator, like, or it's downloading, like everyone gets any invoice?
+
+>>Jarl Arntzen	42:27
+Well, all the, we don't have any particularly advanced routing in DocFlow. It's just first in, first out, that's it, right? So the routing happens in Flexicapture. And in Flexicapture, we still don't have any really advanced routing other than we have, yeah. Since we have, in Flexicapture, we have different projects for different customers.
+
+>>Bikram Dahal	43:07
+Yes.
+
+>>Jarl Arntzen	43:08
+So the operators who have responsibility for particular customers will have that particular project open as well as having maybe five or six other projects open on the same screen at the same time, right? So very typically when they work, they know that for one particular customer, they get really big invoices. So they start opening those invoices and they switch to another task while the invoice is opening in the background And then they switch back, right? So it's a bit like that. Sure.
+
+>>Bikram Dahal	43:41
+And the AVI that you guys are currently using is a cloud version or like a cloud version of every Flexicapture, right? So like the data - It's a cloud version, yes.
+
+>>Jarl Arntzen	43:50
+It's not self -hosting.
+
+>>Bikram Dahal	43:51
+Once they approve that document in Avi, then it will be sent back to your DocFlow and then whatever office is done. Is there a way to catch error? What I'm trying to figure out is that, let me say like the extraction happened and on extraction, there was some issue, like think maths. Example, one validation that you talked about and that's quite common is grand total should be equal to like a line item. That's one validation. Second thing is your ID will have some kind of rule. Example is German, then the cell ID cannot be more than five characters, whatever. Some rules you can set up and those can be like, will be validated by Avi also. But let me say there is a mistake. The invoice number is wrongly captured, right? It should be captured one value, but next value was captured and your rule also did not catch it because the rule can be, oh, it should be five character or six character or like some kind of that rule, but it cannot be like, it cannot do a lot of more validation on top of that.
+
+>>Bikram Dahal	44:51
+If those mistakes happen, is it cached down there? And those validations cannot be figured out. Women can also make that mistake. Sometimes, when they are looking at the file, they might not look into that number rigorously. So is that your cache later down on DocFlow or by the client? Or can that kind of issue happen today?
+
+>>Jarl Arntzen	45:16
+Ok. I think the keyword is just regex. No.
+
+>>Bikram Dahal	45:20
+It's regex. You do it. But even in case of regex, sometimes the pattern might match between the regex. But it's still like, what do you call it? It might, like, OK, I'll give you a simple example. No, no.
+
+>>Jarl Arntzen	45:30
+But let me just talk you through what we do, right? So we have, of course, values, which can be calculated, right? So then we have validation calculation in Flexiaptor, right? And also in Zemina. So every amount on the invoice, right? Net amount, total amount, that amount, et cetera, right? That's calculated to verify that we captured everything, right? Then we have the other values, which we can't calculate. And then we have to ensure that they are both to look for the value in the invoice and then also to ensure that we captured the right value, we simply use regex, right? We know that, for example, the payment ID should be between 2 and 25 characters. It should survive a checksum calculation. And if it does that, then we conclude that this payment value, or Kid, as we call it in Norway, is a valid one. And then we can pass it on, right? So that's a particular calculation, which is called mod 10 and mod 11, right?
+
+>>Bikram Dahal	46:53
+Yeah.
+
+>>Jarl Arntzen	46:55
+And then there are other fields which do not have any checksums, right? That would be, for example, the invoice number. We can't know. We can only know the length, probably. And we can, for particular suppliers, we can know the length that we should be expecting. And sometimes the pattern, right? Sometimes it will start with two characters and then a dash and then some numbers, for example. And that's the level of validation we have on those fields. So there is no calculation involved. We can't calculate whether the invoice number is valid. We only look for the pattern, right?
+
+>>Bikram Dahal	47:42
+Yeah, there's one more thing on the validation that I have seen other customers do it, but I'm not sure if it is possible on your case or not. Example, sometimes what happens is people are going to send an invoice, and their name will be short, right? So they'll write a short name on the software. They'll not write a full name. But for you to process, you need, like, and usually you use ID, because ID is, you cannot change the ID, usually. The invoice have GST or Bat or what kind of customer ID, then that is a better way of using it. But do you guys have the data set of those ID and what is the supplier it should be, right? So do you guys do those kind of check anywhere on your system or, like, whatever is captured is captured. You guys don't have a way to validate that against any database that you have. So do you guys make any database of suppliers that get validated through the pipeline? Might not be an ID. Just wanted to understand, does it get validated?
+
+>>Jarl Arntzen	48:36
+Yeah. So we have two ways, right?
+
+>>Bikram Dahal	48:38
+Yeah.
+
+>>Jarl Arntzen	48:40
+So for the list of suppliers, right? We have a database for that.
+
+>>Bikram Dahal	48:48
+List of suppliers, but that will be only for a company one. Right?
+
+>>Jarl Arntzen	48:51
+So example, you have a separate for each companies or, like, do you guys have, like, It's a separate list for each customer.
+
+>>Bikram Dahal	49:01
+Where is this maintained? It's maintained on your doc flow, it's maintained on Abi, where is that maintained?
+
+>>Jarl Arntzen	49:05
+This is the really heavy part in Flexicapture.
+
+>>Bikram Dahal	49:10
+Okay.
+
+>>Jarl Arntzen	49:10
+This is where Flexicapture is kind of failing quite a lot.
+
+>>Bikram Dahal	49:14
+Okay.
+
+>>Jarl Arntzen	49:16
+Because, so the way it works in Flexicapture is that in order for Flexicapture to recognize a certain supplier or vendor, right?
+
+>>Bikram Dahal	49:25
+Yeah.
+
+>>Jarl Arntzen	49:26
+It just, it has a big table of 10 ,000 suppliers for a given customer, right?
+
+>>Bikram Dahal	49:35
+Yeah.
+
+>>Jarl Arntzen	49:36
+And that table contains the customer name, bank account number, organization number, VAT ID, street address.
+
+>>Bikram Dahal	49:46
+Yeah.
+
+>>Jarl Arntzen	49:47
+Anything that you might find.
+
+>>Jarl Arntzen	49:50
+On a PDF invoice, right? And then what it does, it looks for the best match across the entire invoice, right? It doesn't matter whether, there's no requirement to have the supplier name in the header or anything like that, right? It very often, very typically it's in the header, but it might be a supplier name, it might be in the header, the bank account details might be in the footer, there might be some streets mentioned on the right or on the left, whatever. But the point is that when Flexcapture has found enough of this, it concludes that, okay, this supplier is the closest match, right?
+
+>>Bikram Dahal	50:36
+Okay.
+
+>>Jarl Arntzen	50:37
+And in many ways, that mechanism, it works, but this is where the administration part of Flexcapture is very heavy because it can only handle a certain amount of suppliers before the projects actually end up corrupted, right?
+
+>>Bikram Dahal	51:03
+Yeah, it makes sense.
+
+>>Jarl Arntzen	51:05
+Yeah, pretty bad. And everything goes slower and slower. So this is the way Flexcapture works. And of course, in our system, we have additional information that we can't use directly in Flexcapture. Okay. We have already, when the supplier sends us an email, we know who sent it, right? We have the sender's email address.
+
+>>Bikram Dahal	51:33
+Yeah.
+
+>>Jarl Arntzen	51:34
+So only based on that, we could actually determine the supplier without looking at the PDF at all. We can know that, oh, this is sent from you, for example, right? So we can see that on the email address. So we know already that it's you who sent it, right? And that's the weaknesses we're dealing with. Corrupt projects, we can only update this list manually. It's very slow and so on, right?
+
+>>Bikram Dahal	52:07
+Yeah.
+
+>>Jarl Arntzen	52:07
+So that's the list, that's the table of predetermined values that we're looking for. And then for other values, we don't have, although we have a technical ability to look for a certain list of, say, project numbers, for example, we don't do that because the administration around this is even worse since we're running the cloud service, but we haven't been able to use their API to keep this list updated and so on. I think, like, we had a question. Yeah, go ahead. Yeah, no, I just want to break in and say we're running a little bit out of time. Oh, yeah.
+
+>>Bjørnar	52:50
+But yeah, I just want to make sure, Vikram, that you basically have all the answers you need in terms of setting up and helping us with everything regarding the onboarding process, obviously. So if you have more details or questions you need answers to, could you please just forward those to me on email? And from our end, we were really interested in knowing when we can have, like, a few training onboarding sessions with you guys because we are in the holiday season in Norway now, so people are coming and going a little bit. So we were hoping maybe early next week, Monday, Tuesday, Wednesday, if it's possible, any of those days, to have a few onboarding sessions, get some training, because we have already started using the product. So we just want these walkthroughs onboarding so we get to know how everything is set up.
+
+>>Bikram Dahal	53:41
+Okay, we'll do that. Like, one thing, if it is possible, I think, like, the reason I'm, like, I just want clarification on this question is because this will really help us decide a few features and also prioritize me. So one thing, if it's possible, I think, Jeral, I think you are the one, like, it's Jeral, J, how do you pronounce your name? Sorry, I butchered.
+
+>>Bjørnar	54:01
+Yeah, B -U -R -N -O -F, yeah, anything is fine.
+
+>>Bikram Dahal	54:03
+I'm talking about Jeral, J -A -L -L, Jeral?
+
+>>Bjørnar	54:07
+Oh, Jal.
+
+>>Bikram Dahal	54:08
+Jal, okay, so is it possible to have one quick call between only, maybe not the whole team, because I think you understand the system only into it, and I think I'll have a very good communication with you. Can I have a half an hour call with you tomorrow, same time, if possible? Because I have some acts, like, I'll make sure that those acts and everything is, like, send it across on the email. Just the act that we have is some samples. Anyway, we'll set up this document type and everything, and we'll make it, everything ready. I'll also work with the team and make sure that if there are no, any training videos for certain sections, those are also - I think, Vikram and Jal, you would need two, three hours.
+
+>>Robert Kristiansen	54:45
+Yeah, because I really - To get some -
+
+>>Robert Kristiansen	54:49
+More in -depth from Jarl. That's nice. What me and Bjarne is interested in is testing the product more to see the different document types and not maybe going into the actual deployment setup right away. So we have a different interest there.
+
+>>Bikram Dahal	55:08
+Understood. Let's do this. Then I'll make it simpler on this one. First thing is that the field are already, I think we have found what other field that is required. I have two requests from your team. Can you guys send us the sample invoice? Based on the maximum, based on the volume. So I think the major issue that we will face is one is on the information that needs to be extracted. And second is on the language. Because at the end of the day, both of these can be complicated. So one thing I'm not sure, Nidhi, have you received some sample from the team on the invoice? I know we have received the Xml, but have we received any invoice from the team?
+
+>>Nidhi Vichare	55:54
+Yeah, so we've received the cost invoice and credit notes. How many have you received? We have five samples of each.
+
+>>Bikram Dahal	56:01
+Okay, so in this case, can you guys do this? Can you guys do at least like 20 or 30 samples from different countries? Because I think the biggest issue that you guys will face and everything is going to be concrete. So on our side, we can upload those and see what is the best practice and everything. Make it ready so that you guys do not have to spend too much time on learning And we can make a video out of it. So from the top five or six languages.
+
+>>Robert Kristiansen	56:21
+Exactly, I agree with this approach. Because that is the most important for us is to see how we can actually extract from the various templates. I'm not worried about the setup. We can deal with that. We would just like to see if we can do better extraction first. That's the Poc goal.
+
+>>Bikram Dahal	56:46
+So let's do this on the Poc goal then. The first part is the field that you guys currently have sent that are the very minimum one. If that is good enough, we'll send you the Excel file and everything so that you guys, I think I'm not sure if Manoj has sent it or not. We'll send you the Excel file. If any field I'm missing, you guys add that field and then make it ready. That is one.
+
+>>Robert Kristiansen	57:07
+I think as Bjorn was saying, let's schedule training. So you give us training on the tools.
+
+>>Bikram Dahal	57:13
+Sure.
+
+>>Robert Kristiansen	57:14
+We have a lot of invoices. We have like thousands. So we already have a secure debt from a larger customer because we need Nda between this. So we have one customer that has a lot of challenges that we would like to play around with in the Poc. And based on that results in the Poc on the extraction, we should plan for how we actually deploy it together with DocFlow.
+
+>>Bikram Dahal	57:49
+And then Jan will be the specialist.
+
+>>Robert Kristiansen	57:51
+But I think in the first stage, and correct me if I'm wrong, Jan, but you have limited capacity for this project as of now, right?
+
+>>Jarl Arntzen	58:02
+I can do one hour a day.
+
+>>Robert Kristiansen	58:05
+Yeah. One hour a day. Yeah, exactly. So we can do the heavy lifting and then Jan could be a contact when it comes to the overall setup of the complex, like how the data is flowing, the templates, the extraction models, the validation, the language, the fields, mapping to our data model, all of that. So me and Bjorn don't have a scale set on that. So the only thing we can do in the Poc is to verify the extraction.
+
+>>Bikram Dahal	58:43
+Sure.
+
+>>Robert Kristiansen	58:43
+So let's do this.
+
+>>Bikram Dahal	58:44
+Let's make it simple then. What you guys do is that there are only two things we need on our side to give you a training, right? Because then I want to make sure that we also, I involve my head of Ml and he gives me a best advice because you have multiple languages. If it was a single language, then I would have given you the platform today only and told you guys, okay, start using it. Like you don't have to do anything. You have two videos, just start using it. There is nothing to be done. But because there's a language here, I just want to pass this to my Ml team head also and get his best advice regarding, should I make multiple document types? What should we do with this one, at least for the Poc phase? So if possible, on your side, can you guys send us some sample of, let's say like around a hundred with variety. What's like a different language, different thing, you can make a different folders and everything. If you can do more, even better, but minimum hundred, that is one. Second thing is like, if you guys, the case that you guys send, right, regarding the metrics, like where you to convert that into a metrics and everything. So can I also get one more document type?
+
+>>Bikram Dahal	59:48
+To be extracted is not simple. It's a bit more complicated. What are like, what does the original field look like? What are the fields to be extracted? And what is the final output you look like? And for that sample, if you guys can send us 20 of those example, then we can set up this two types easily on our side, run all the experiment. Then we can give you a training regarding how to improve that first version. Like if it happens and everything what happens, like how it's going to improve on long -term and everything. And the second version is, how did we set up that second version? So on your POC, you want to set up two of these versions because these are more complicated. Then you guys can replicate whatever we did for that second version and make your own document type three and four, which are more complicated than that the first, like first version, right? So that way you guys will also get the confidence and you also know like, okay, where the tool can work and where the tool will not work and everything. So if we, on our side, I would love to do those set up by my team, run it through my team so that I can give you a proper training so that you can do more set up and document type yourself. Does that sound like a plan?
+
+>>Robert Kristiansen	01:00:53
+Yes.
+
+>>Bikram Dahal	01:00:54
+Okay, okay. Then I'll like, then, sorry, I'm a bit over the time. So just to make sure the action item are clear, like, and regarding your questions, whenever like we'll make sure that I'll, we'll reply to that questions and please add us to the Slack channel so that like we'll be on the same page. And from your side, outside we'll send you the Excel workbook. Please go through that and make sure that that are the four fields that you guys need. And then after that is done, I'm like, let us also get one more template where the field are a bit different and a bit more complicated. And please send us 20 sample of those so that we can set those up. Then next week, only next week, Monday or Tuesday, we can have one call, give you a training. You guys can start using a platform, even set up your own document types.
+
+>>Robert Kristiansen	01:01:38
+Okay.
+
+>>Bjørnar	01:01:40
+Sounds really good. Yeah.
+
+>>Jarl Arntzen	01:01:43
+Just very quickly in the end here, you can write out your API as well.
+
+>>Bikram Dahal	01:01:48
+Yeah.
+
+>>Jarl Arntzen	01:01:50
+So I'm very happy to, you know, talk, Jason.
+
+>>Bikram Dahal	01:01:56
+Oh, sorry.
+
+>>Jarl Arntzen	01:01:57
+No, I'm very happy. I mean, we don't have to, we can talk directly, you know, technically about this.
+
+>>Bikram Dahal	01:02:05
+Yeah, yeah.
+
+>>Jarl Arntzen	01:02:06
+Just to, so, you know, I'm proud to use your API. I don't know if I'm sharing the screen now.
+
+>>Bikram Dahal	01:02:11
+Yeah, you are sharing the screen.
+
+>>Jarl Arntzen	01:02:13
+Yeah. So I just tried using this and what I wanted to do is just to connect to the API really and upload the samples here directly. And, but, you know, so I'm happy to map, for example, each of the PDF fields to the target values here if that helps.
+
+>>Bikram Dahal	01:02:38
+I know, I think that one, we can do it on our side only. So like we'll make sure that this name and total amount changes to what you need. So all of those can be done on our side. You'll have to do a mapping, but we'll make sure that your mapping is very easy. Like all of this name will be changed to whatever you guys need over here. If you call total amount as total due and underscore due or something, then we'll make sure that you get exactly that on the JSON response so that it's very easy for you to integrate.
+
+>>Jarl Arntzen	01:03:04
+All right. Nice. I can also, you know, what would be, what I would thought was the end goal here is to map it to our integration API data model.
+
+>>Bikram Dahal	01:03:21
+Okay. That I did not understand. So like, so, oh, you mean that will be mapped to the, you guys want the output on that XML format that you guys have over?
+
+>>Jarl Arntzen	01:03:30
+The Xml format was kind of a bit unfortunate because that's not the target format.
+
+>>Bikram Dahal	01:03:37
+Okay.
+
+>>Jarl Arntzen	01:03:38
+The Xml is really just was sent as an example of what we get from Flexicapture really.
+
+>>Bikram Dahal	01:03:48
+Okay.
+
+>>Jarl Arntzen	01:03:48
+But it's not the target format.
+
+>>Bikram Dahal	01:03:51
+Okay. So the target format is JSON or something else?
+
+>>Jarl Arntzen	01:03:54
+The target format is JSON. We have an API, we have a schema for it.
+
+>>Bikram Dahal	01:03:59
+So. If you guys can fill that, then we'll convert that. Like in our side, we can convert that into the required format.
+
+>>Jarl Arntzen	01:04:05
+So doing anything via this, I mean, this XML was just for informational purposes. It's not the target format at all. And doing anything via this Xml format is not really interesting because it's just, that's just going to be an intermediate step that's totally unnecessary. Yeah.
+
+>>Bikram Dahal	01:04:26
+Well, can you send out the JSON format, that schema that you guys have? Because then we'll convert everything to that schema.
+
+>>Jarl Arntzen	01:04:32
+And then the next problem is that, yeah, I can send you the schema. You will probably understand most of the fields, but we still need to have a mapping between our schema and your schema, right?
+
+>>Bikram Dahal	01:04:43
+Yeah. So we can have one form, like once.
+
+>>Bikram Dahal	01:04:47
+We get the schema, I will do a setup, and we can have one call to make sure that everything is smooth over there.
+
+>>Jarl Arntzen	01:04:52
+Yeah, nice.
+
+>>Bikram Dahal	01:04:54
+Okay, okay, then, sorry, guys, I think I asked a lot of questions and everything, like, and thanks a lot for cutting at the very end. So, like, I think the action items are clear. Nidhi will also make sure that she sends the minute and everything, just to make sure that the action item are clear for both the parties. The first one is, Jerome, please do send us that JSON schema. It's interesting for me and the team. I will work it on background and make sure that everything is in place. That's number one. Number two is for you guys to give you the list of the field that we'll be sending. And these are the field that we need. And then give us some option of you guys can do a setup on this field. You can easily go and change that field later on, but at least on one level, I want that, I think. So, for one template. That is 11 to 95 % of the case, what you talked about.
+
+>>Jarl Arntzen	01:05:43
+Yeah.
+
+>>Bikram Dahal	01:05:44
+We need one more template. Where is that unique S case? Which is not, it might have 80 % of the field extracted that is there. But 5 % is a bit more complicated. You have to do post -processing and everything. We want that one, like one invoice, like templates. This is a template. These are the field that I need from here. And if you guys can highlight it on the PDF, it will be great. And about 20 or 30 of those samples of that S case handling kind of document. And for the first case of where it is 11 to 95 % of the cases. Then if you can receive 100 of these samples or more from different countries, different type, right? So, that's a second job. After that is done, we'll do the complete setup. We'll make sure that on the first, like Monday or Tuesday of next week, we'll give you guys a training and everything so that you guys can start offering more template, see the improvement it is making. And if you want to set up one more S case on your own, then you guys will also be able to set it up on your own. So, these are the action item that I have from this call. Is there anything else we missed or anything else you guys want to add into the action items?
+
+>>Bjørnar	01:06:58
+Now, as I mentioned earlier, Vikram, if you have more questions regarding functionality or things you need to know for the setup, just send an email, let us know. And we'll come back to you guys with a sample, hopefully by tomorrow. Sure.
+
+>>Bikram Dahal	01:07:13
+One more thing, please add us to team. I think it will be easier for us in confirmation. So, I'll make sure that I'll send all my questions and everything into teams only because that makes things easier. And then you can use general to that one and then we'll make sure that all the questions and everything are actually with you. I'll also send an email if there's anything additional that I think might be required over there. Otherwise, I would prefer to do it on team because it will make things very faster.
+
+>>Bjørnar	01:07:43
+Okay. That sounds good.
+
+>>Bikram Dahal	01:07:44
+Okay. Awesome, guys. And then thanks a lot for bearing my, all the questions and everything. I got a lot of details over there. Looking forward to getting the samples, setting those up so that you guys can start testing and providing any kind of improvement that we need on the platform.
+
+>>Jarl Arntzen	01:08:01
+Same to you.
+
+>>Bjørnar	01:08:01
+Thank you so much, guys.
+
+>>Jarl Arntzen	01:08:02
+Perfect.
+
+>>Bikram Dahal	01:08:03
+Have a nice day.
+
+>>Bjørnar	01:08:04
+Have a nice Thursday.
+
+>>Nidhi Vichare	01:08:05
+Bye. Bye.
+
+>>Jarl Arntzen	01:08:06
+Bye.
+
+>>Manoj Racherla	01:08:07
+Have a nice day.
+
+>>Bikram Dahal	01:08:14
+Okay. So, did we reply to the question?
+

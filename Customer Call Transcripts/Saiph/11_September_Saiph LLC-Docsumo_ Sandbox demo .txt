@@ -1,0 +1,402 @@
+>>Jasneet Singh Malhi	00:00
+Call. Okay. So yeah. So our team, while everyone is probably joining in a minute, I'll give you a context about what are the things that we will be looking at today. Primarily, we've set up the demo account to, you know, make sure that we are able to show you how the process would be completely automated right from when we get the binder document to the point wherein it is okay and the data is ready to be pushed out of the system to your underwriting platform or for your underwriting team. So basically the whole origination and the automation process. So we'll be primarily covering the pre -processing, which is the classification. We will be covering the extraction bit obviously, and we'll also be covering, let's say, the validation beta also, wherein we will be checking if the data is matching. Let's say the seller ID matches the name, the seller ID on the actual proof or the actual identification document that the seller has provided. So these are the three things primarily that we'll be covering on this demo. Is there anything else which is more priority for us other than these three features that you would want to see on today's call?
+
+>>Paul Kosinski	01:17
+I don't think so, but I think important to us is kind of the workflow around that. Like that is, from my perspective, of utmost importance.
+
+>>Jasneet Singh Malhi	01:29
+For sure, for sure.
+
+>>Paul Kosinski	01:30
+Let me just ping Lauren because she may have some thoughts.
+
+>>Jasneet Singh Malhi	01:34
+No problem.
+
+>>Paul Kosinski	02:18
+Hello?
+
+>>Jasneet Singh Malhi	02:19
+Hey Lauren, how's it going?
+
+>>Paul Kosinski	02:31
+Lauren, can you hear us?
+
+>>Lauren Boersig	02:32
+Sorry, I didn't know it was on mute.
+
+>>Paul Kosinski	02:35
+All right. Yes. All right. Jasmine, you can get kicked off. We're all here. Awesome.
+
+>>Jasneet Singh Malhi	02:43
+All right, team, so I'll quickly share my screen and we'll get started. Just give me one quick second. So, Lauren, primarily on today's call, we'll be covering three things. I was actually speaking to the team today. We'll be looking at the pre -classification stage, which is basically when once we get this binder on the Docsmo platform, how can we break this into different document types, right? Because primarily each document type is an individual document type, and then we're extracting individual data. That's the first stage, which is the classification stage. Then we'll also be looking at the extraction bit. What are the data points that we are extracting from this whole document type? And thirdly, we'll also be looking at the validation engine also, wherein if the seller ID on the application form meets the seller ID on the document ID or the proof of ID that the seller has uploaded, right? We also have Solomon with us on today's call. Solomon is one of our finest sales engineers. I just added him on today's call just so that if there's any sort of technical question that I cannot answer, we have Solomon for the backup for that. Lauren, team, is there anything else apart from these three features that is more priority on this call? Of course, we'll show and this will encompass the whole workflow. But is there anything else that you would want me to focus on today's call?
+
+>>Lauren Boersig	04:00
+I think that's good for today. Awesome.
+
+>>Jasneet Singh Malhi	04:04
+So, team, I will quickly share my screen and we'll get started. So I know that on the very first call, you got a brief demo of the platform, but just so that you have enough context, I will take things from the very scratch and quickly set some more context. So, team, this is basically the Doximo platform. What you see in front of you right now is our AI models. Now, what exactly is Doximo? Doximo is a document AI platform that helps you to build document AI first agentic workflows that not only help you in extraction of the data, but they also help in the classification, extraction, validation, analytics, basically getting everything and anything done with data. We can extract data out of any sort of unstructured documents and give the data back in a very structured form. Now, team, what you see in front of you right now is that AI models, which is basically our AI library of 50 plus ready to use models, wherein we have invoice, bank statements, checks, you know, utilities.
+
+>>Jasneet Singh Malhi	04:59
+Driving licenses. So these are some of our pre -trained models where we've done most of the heavy lifting and we've set up a baseline structure in place. You can go ahead and use this as your baseline model and train it on top of your data set and customize it for your use case. Right. We also have something called as an AI auto classifier, which I was speaking to you about. The AI auto classifier has the ability to look at what a document type is and then intelligently it can send it to the right bucket. Right. So now even if these documents are part of one single parent document, like in your case, we have a binder document with 150 pages over 30 different document types. The system can understand which document is where and then based on that, it can go ahead and segregate the documents automatically. On today's call, we just had, I think, three sample documents. Bear in mind, this is an AI auto classifier. So as and when we keep on adding more and more data, it keeps on becoming smarter and more and more accurate. And then we also have the option to custom create your own document type as well. If your use case is not present in one of these pre -trained models, you can also custom create your own document type, which comes with automatic field extraction, which basically means that the system, if the system has never, ever seen a document type before, it can understand what it is. And then basis of that, it can suggest you that these might be the fields that you are, you might be looking to extract out of this document type. Right. And it happens absolutely automatically. And with this, you can set up your AI ML based extractor engine within minutes. I'll take a very quick pause here, team. This is the basic context of what we do, what we are. Right. Any questions for me?
+
+>>Lauren Boersig	06:35
+Not so far. Awesome.
+
+>>Jasneet Singh Malhi	06:37
+So we'll quickly move to the document type space. So team, this is like some of the document types that we've created. Right. From what we could understand from the document. Right. This is the model that we've set up, starting off with the AI auto classifier. So let's see how exactly can we get these documents onto the system in the first place. Right. So typically, there's a drag and drop where you can drag and drop files And then it can basically process through the AI auto classifier and then the magic can happen. We also have auto import via API as well, wherein if there's a front end platform that we are getting, we can connect it through API keys. And as soon as a document is uploaded onto your platform, it can, we can make an API call and the document can be uploaded onto our platform as well. Automatically, we have auto import via email as well, wherein we can go ahead and connect our system to your email. Any and every attachment that is received on this email will automatically be uploaded onto the platform. We also have the ability to pass the actual email body as well and upload it as a separate file. Right. So we actually did this with one of, you know, one of the biggest lenders, which was in the Mca space, wherein a lot of their borrowers were sending emails of their merchant cash advance balances, right? In the email body. So we had the ability to pass the actual email body and upload that as a document type to extract the data out of that email body as well. So that is also something that is doable. And then finally, we have auto import via integrations. Let's say if there's a centralized repository like Amazon S3, Azure Blob, Google Drive, Sharepoint, what have you, we can connect it to it directly. And as soon as you upload a binder on one of these repositories, it can travel onto the Doximo platform and the process can start.
+
+>>Jasneet Singh Malhi	08:21
+So team, this is step zero, wherein we are automating the first of all, the ingestion of these documents onto the system in the first place. Quick pause to see if there are any questions now for me.
+
+>>Paul Kosinski	08:35
+Awesome.
+
+>>Jasneet Singh Malhi	08:36
+So team will quickly review what and how the classifier works. Right. What I'll do is right now, I've uploaded a bunch of some some documents. Now, before I upload a document, let me actually show you the actual logic behind the classifier. Right. Now, basically, in this case, what I've done is that I've written a prompt for the classifier to understand, first of all, to make it understand first of first of all, what exactly is it doing? Right. So we will in when we eventually end up onboarding as a customer, we will work with your team to understand and make this prompt better, because from what we could add, the prompt was based on our limited understanding of what we could infer from the document that Lauren very graciously worked on. And it really helped us a lot in the whole process. Right. So we've written a prompt that you are classifying and splitting the documents from a structured settlement closing binder. Each document must be classified into one of the following categories. And then we've given it the list of categories. And then we've also given it the rules, like what are basically the rules for the classification. What is the CEO, a seller application? What is the end of the seller application? So we've written a very detailed prompt here. Right. So this is for the classification to take place. But since these documents are part of one whole binder before classification, there is another step, which is the auto split that has to take place. Right. So in the preprocessing, we have written another prompt in which we are splitting with AI. So what did what this?
+
+>>Jasneet Singh Malhi	09:57
+Basically means is that the system needs to have a logic in terms of how exactly it is supposed to split a document. Right now it is splitting with AI wherein I've written a prompt and I've given the rules for the split to happen. But you can also split on the number of fixed pages, a text pattern, a QR code, we can write a custom API for you as well. But right now these are the rules that I've given it to the system that what a seller ID could have been a driving license state ID or a passport, it should be unexpired, the proof of residence. So basically I've given this all the rules for how the classification will happen. Now the system will first of all split this document on the basis of this rule. Once it is split then it will move it to the classifier and classify it into different document types and automatically send this data. And all of this happens automatically. I know it has become a little bit more technical and feature centric, but I'll again take a very quick pause to see if you have any questions on the auto split or the auto classification that I just explained.
+
+>>Lauren Boersig	11:02
+Perfect.
+
+>>Jasneet Singh Malhi	11:03
+So team, basically the idea is that we are able to kind of do this. And then if I go to the classification, this is where I can typically upload a file. Let me quickly see if I have a file I can upload. Ok, there you go. So I have uploaded a file. So right now the classification, the classifier is still in a learning phase, wherein it is also understanding what are the different document types it has. So that's why you see some of these documents are unclassified. But most of these documents have been moved to the petition acknowledgement stipulation phase automatically. If I look at the view document screen, it will basically also give me a suggested document type as well. But this has a low confidence score. That's why it was that it is just a suggested document type. So that's the reason primarily the system has not moved it to the right thing. You can quickly look at the document, what the document is, and then basis that. Yeah, so this looks like a court order, correct? Team, is this a court order?
+
+>>Lauren Boersig	12:09
+No, it's a Pik stock.
+
+>>Abby	12:16
+It is what it is. So it's part of the settlement agreement. Right.
+
+>>Jasneet Singh Malhi	12:20
+So if the system was not able to like automatically classify, you also have the option of moving it to a specific doc type as well. Right. And then it will learn from it. So let's say if I move this to, let's say, one of the document types, it will understand that this document needs to be moved to this thing. And that's where the classification of the machine learning algorithm kicks in. Team, so the idea is that as and when we keep on adding more and more data to the system, it keeps on learning from any sort of annotation or correction that we do, and it keeps on becoming better. I was actually trying to upload a file, but it says file too big. I'm not sure what the issue is here. Let me quickly do it again.
+
+>>Jasneet Singh Malhi	13:09
+Okay, this should work. Bear with me for one quick second.
+
+>>Abby	13:17
+Okay.
+
+>>Jasneet Singh Malhi	13:23
+Okay, this should probably work. So this sandbox was set up from the backend team. So if the file is big on the front end, then probably they did something on the backend. But it is in the processing phase right now, and the system is classifying these files that is splitting it. It might take like a minute. While the system is doing this, I'll quickly move to the different document types that we've created. Right now, team in the binder, as I've told you, the code order would go into the code order bucket, the stipulation would go into the stipulation bucket, the seller ID would go into seller ID bucket, so on and so forth. Right. Let's first of all, open up the code order to see how the extraction engine works. Now, team in this case, as you can see, the system has already like this is the processing that it was able to get and move it to the code order phase wherein it is processing this document. Now, once the system gets the model gets the actual file, the first phase that it goes through is the processing phase, wherein the AI and the OCR, they work together and extract all the information that we're looking to extract out of this document. Once the processing phase is over, we move into the review phase. I can quickly open up the review phase to show you how the extraction would work. Now, in this case, you can see the actual document and the detail and the information that we were able to extract side by side. There is also a two way mapping here, wherein if I click on what information is extracted from where it can quickly tell me.
+
+>>Jasneet Singh Malhi	14:56
+Without me going and searching for it or squinting my eyes really hard to kind of find what exactly is where. Because one of the biggest challenges that operations team tell me is that even though the data is extracted, there is no way for them to actually realize where the data is extracted from within the document, right? And it could lead to a false positive case as well. But the system in our case gives you a complete understanding of what exactly is extracted from here with a degree of confidence as well. So in this case, this green tick mark icon that you see denotes that the confidence score of this field is good. And this is where it was extracted from, right? And if there's this yellow icon, this means that the confidence score of this field is a little low. So basically what the system is saying is that I was able to get this value for this specific field, but it is not entirely sure if this is the right value or not. So rather than assuming wrong or fault information, it basically gives you a low confidence score saying that this was the value that I was able to extract, someone can review. Now, two things can happen. Either this is the right value and you can just check mark this and the confidence score changes from low to high. Now, when I did that, the system changed the confidence score from low to high, but it also learned from it. So the next time onwards, when the system sees the specific document ID, it will no longer have a confusion that if this is the right value or not, because it has learned from a connotation or a correction that you've done manually on the platform.
+
+>>Jasneet Singh Malhi	16:38
+Second case could be that if the system was not able to find anything altogether for a document, then also it gives you a low confidence score. So let's say the intermediary for this document is let's say this line, right? I can quickly create a bounding box around this and system will automatically pick it up and it will remember that the intermediary needs to be picked up from here. So it continuously learns and evolves as in when you keep on feeding it more and more data and keep on reviewing more and more documents. So when we onboard you as a customer, we request you a lot of different sample files and work on these edge cases to take the model to a certain level where it is self -sufficient and it can go ahead and automatically extract all data without the need of reviewing a lot of things. So we kind of do that list on our end. I know I've been going on a bit of a monologue team for quite some time. I'll quickly see to stop if there are any questions.
+
+>>Abby	17:36
+No, not for me.
+
+>>Jasneet Singh Malhi	17:39
+Lauren, does the extraction of this document look accurate to you? Are these the fields that you're looking to extract and has the system extracted the right fields?
+
+>>Abby	17:47
+Yes.
+
+>>Lauren Boersig	17:47
+Not the intermediary and the intermediary address, but other than that, yeah.
+
+>>Jasneet Singh Malhi	17:52
+So intermediary, I just like, you know, showed you for example.
+
+>>Lauren Boersig	17:56
+It doesn't exist on all documents. It only exists on some documents. So that's the one field we're expecting to take a minute to train because we're gonna have to just pull a bunch of very specific documents with that.
+
+>>Jasneet Singh Malhi	18:07
+Right. So basically, if I just go back and show you maybe another file. So in this case, there were like a bunch of things that we were not able to extract because primarily they were not on the actual document. So this was also redacted data. So not able to extract, but we were able to extract. This was a superior code from New Jersey. The state of New Jersey, the docket number is 2007 slash 15. Right. If I want to take the L as well, then I can do that as well. Now this, okay. I think I need to cross it out and do it again. But since, so the system, oh, this is the field we're in. Okay. So it's a string value. So I can change the value of type and make it that as well. But if there's something I can actually write on the actual system. And so basically this is, the person who's reviewing the document has the full authority to kind of see if there are any corrections that needs to be made. And as soon as you click on confirm, this data can flow to your downstream system. But if you want to confirm it after the validation engine, we can do that as well. So that is completely doable. But since like this, this does not have a lot of like purchase price was not available on the document. So rather than like assuming or giving you false positives, the system like basically gave you a low confidence score. And this was how the system, the extraction engine would work. Team, is this the expectation that we have from the system to, this is how, do you want the extraction to work like this?
+
+>>Abby	19:46
+It works well from Kern where you had all the information available. Everything that was on the side was exactly what I would look for.
+
+>>Jasneet Singh Malhi	19:56
+Right, but in this case like since the purchase price is not available only I think on the actual document or is it or did We like miss it or somehow It's it looks These are older files.
+
+>>Abby	20:10
+So they are redacted when we get the binders.
+
+>>Jasneet Singh Malhi	20:13
+It will not be redacted like this Right, so that's something that we we have the ability to kind of extract the information as long as the information actually exists on the Document if it does not then we can just give you a low confidence code Saying that we were not able to find it or this is the best guess that the LLM is taking at this point
+
+>>Lauren Boersig	20:34
+Yeah, I think It's we have the right fields for to test it in the sandbox because we do have more files We just pulled a couple And I think a couple were redacted But I think it's put up so that we can test it for more orders because like we have a slice Binders that we can pull additional documents for Got it Got it.
+
+>>Jasneet Singh Malhi	20:55
+And then basically if I go to another document type of the stipulation right similar similar use case Wherein I can open up one of these files And the system can tell me what was the data that was extracted from here Oh, I think this was just a stipulation date that we need to extract Nothing else so we can actually move to another document type So team I just wanted to check with you Is there a specific document type that you would be more interested in looking at?
+
+>>Lauren Boersig	21:25
+What about the seller at the Coa that would be interesting because that's uh, we have um There's they do do some electronic applications, But there's a lot of handwriting as well Got it.
+
+>>Jasneet Singh Malhi	21:39
+Let me see how the system performed on The Coa Oh Data is redacted But let me see if there's a better example.
+
+>>Jasneet Singh Malhi	22:04
+Oh, this is also redacted. I think okay, this should probably work. So This is like how like the data that we were able to get from the actual thing Let me actually do one thing. Let me download this this specific thing again And show you how easy it is to set up a custom model also Because I think that will also help you understand the context a little bit better Right and show you how the custom model would actually work and how we would have set up this model for you So if I just go to our AI models up again, and I create a document type Let's say which is automatic. So let's say I name it as Coa2 and I will quickly go ahead and upload this specific file. I'll click on proceed to field setup So this is you know an example of if you want to create a different document type altogether, right so in this case, the system is basically understanding what the document type is and it is running its Running its algorithm to see what might be the fields that you're looking to extract, Right? So basically all the fields that we would extract from this it hardly takes around 30 seconds So we can give 30 seconds to look at the extraction
+
+>>Jasneet Singh Malhi	23:37
+Okay, so basically the system understood like these are all the details that the user might be looking to extract And then you also have The ability to write prompts here as well If you want to give more context to the extraction engine for it to do a better job, right? So right now in this case, it says extract personal details So it is personal details and extract the first name, right? Except the first name if I want to give it more context the first name Would be on in the first line or it would be under it would be about date of birth or something of that sort Basically any sort of context that I want to run And then this is the extraction block that I've put in right now I can also put in a block for the cleaning of data. That's if I want to you know convert USD into maybe some other You know currency type just giving an example if I want to you know Have a signature your identification if this document is signed or not. I can do that as well So right now we'll focus on the extraction bit only right? Let me quickly go ahead and Save it. Okay Let me just go ahead and save it and show you how the extraction engine would work Now I've saved all these files and basically the system will upload the document. It will process
+
+>>Jasneet Singh Malhi	24:54
+And it will give us the data of all the things that it was able to extract from this file. So it hardly takes around 30 seconds for the system to process and extract the data. So right now, the AI and the OCR, they're working together, and we are looking at all the data that we can extract from the Coa application. Right now, it took less than 30 seconds. It is in the review phase. I can quickly click on this and look at the quality of extraction. Oh, okay. I think this is a... Let me actually go ahead and turn on one thing. Okay.
+
+>>Jasneet Singh Malhi	25:43
+I'll quickly retry this. While we're trying this, basically, team, I'll quickly show you some more features that we have on the system. From a seller ID standpoint, if I open up, let's say, the driving license, the system has the understanding that... So this is also redacted. But since most of the information is redacted on this, the system is giving you that this is not a driving license. Because if we were able to get the actual details, then we can go ahead and actually clarify that this is a driving license. But since most of the information is redacted, the system is basically telling that this is not a driving license. So that sort of validation can also happen. We can also do that validation as well. More, we also have a data table, which is basically... Let me actually show you the data table on the document types only. So if I open up the data table, it is basically an understanding of all the data across all your files in terms of what exactly have you extracted. And if I go to all data, you can look at, let's say, all your individual document types. That's if I open up the stipulation, I can look at all the data that I've extracted out of stipulation. And I can quickly open up this specific field and it will show me where exactly was it extracted from. So you don't have to go on, let's say, document type to document type. This is like one view where you can get everything in just one go. And these are all the credit reports from the document types that we were able to extract. So this is, again, sample valid social security number. This is what we've had extracted it from.
+
+>>Jasneet Singh Malhi	27:25
+So all the data is already there. Coming back to the actual binder that we were able to see, now it has done a better job wherein it was able to extract all the data that we wanted it to extract. Ssn was not available. So it basically came up with nothing. So we basically trained the model and make it more impactful and effective. Do you have a question, Lauren?
+
+>>Abby	27:49
+Yeah, that was me. I just said, okay, because that was right.
+
+>>Jasneet Singh Malhi	27:56
+Awesome. Perfect. So team, basically, this is how the extraction engine works. Primarily, it kind of covers the entire thing. And we basically make sure that we work on all edge cases and issues that arise during the onboarding phase. And our customer success teams works with your team to work out all the edge cases and clear out all the things. So I'll go back and we'll look at case management, which is basically the validation engine that we've set up for you. But in this case, since most of the data was redacted in the document, I'm just giving you a basic understanding of the feature. But this is something that we would still need to set up for your use case. So let's say if I open up the Coa and the seller ID use case, in this case, the system is taking the Coa and the seller ID. And if I go to the validation screen, it is basically telling me that the data was not found for this case. But if let's say the seller ID matches the Coa, then it will give me a validation if the validation has passed or not. So since we were not able to find a lot of data and we've just set up like a case management or the validation screen for a bunch of different document types. But once you have the data, we will set up an engine in place wherein we will tell the platform that this specific field, let's say the seller name, needs to be mapped and matched with the seller ID or seller name on the actual ID. And if it matches, it will give you a true or a past validation with a green highlighted checkmark. If it fails, then it will give you a red validation. So you can before even sending the data to your downstream system, you can ensure that everything is completely checked and all the data is completely validated.
+
+>>Jasneet Singh Malhi	29:48
+But since like most of the data was redacted here, we were not able to set it up very properly.
+
+>>Jasneet Singh Malhi	29:53
+But I'll quickly, you know, see if there are any questions here to understand.
+
+>>Lauren Boersig	30:04
+No, I just have a question overall. So with the sandbox, if we put in a couple more binders and, you know, map those binders without the redaction, then we see an additional demonstration with like the case management and how it would go from there.
+
+>>Jasneet Singh Malhi	30:20
+But I would prefer that if we can first get these documents once, because right now the auto classifier is not that trained on the level that we would want it to work. But if you want to upload individual documents in individual files, you can completely test the extraction engine that works completely well, based on all the data that you would want to extract from, let's say, a file. But if you want to look at case management, we will have to kind of set that up for you. But if you go and upload, let's say, one individual file, then that is something that we can definitely do.
+
+>>Lauren Boersig	30:53
+Yeah, we have both sliced out like individual files for each of the case types for training. And then we also have we have full binders as well for like the case management. So I don't know if it'd be easier for us to test and train the individual slice files for the different file types. And then to then from there to then go to the case management, just for a couple more files for the different file types to confirm it's working, or if you want the binders to map because some of the fields like the intermediary are just they're very like niche fields in our system. So we want to make sure that we can pull the right thing. And then how would we how would that like interact with it?
+
+>>Jasneet Singh Malhi	31:35
+Lauren, if you want to test like individual documents, then the system is well capable of handling the extraction. For the case management, for the actual validation engine, we will need to kind of set it up for you. If I click on start reviewing, it will basically. So this is all the information that we were able to extract. But if I go to case management And I go to all cases and let's say if I look at this folder and if I run the validation on this. Oh, this is an error file. So this might not work. Just give me one quick second. Tim, I also see that we have also Vishal with us on today's call. Vishal is the head of Cs. And he heads all onboardings and ensures that we do a good job on setting up the engine or setting up the basic baseline model in place. So if you have any questions from an onboarding standpoint, Vishal would be the best person to answer these questions.
+
+>>Abby	32:26
+Hi, everyone.
+
+>>Vishal Arya	32:27
+Hi, Shneet.
+
+>>Abby	32:28
+Hello.
+
+>>Vishal Arya	32:29
+Hi. Nice to meet you.
+
+>>Jasneet Singh Malhi	32:33
+Yeah. So on the validation front, let's say the name matches or the seller ID matches, it will give you a pass fail validation. You can also run analytics to see how many of these passed or how many of these failed. And then the one that failed, you can quickly review it manually as well before passing it on to the system. So we have to kind of configure it, write a code for it. But this is all part of the standard onboarding itself. Tim, so this was like a very high level overview. I just wanted to take a minute and understand what should be our next steps from here on onwards and how should we proceed forward?
+
+>>Abby	33:06
+Actually, I have a question. I know that some of the documents that were some of the binders were sent that were redacted. But the one for Kern that had the actual information listed, was there anything that was mapping there? Like, were there issues or can we see the back end on that just to see if it captured everything else that we needed? Sure.
+
+>>Jasneet Singh Malhi	33:30
+So that's why I wanted to understand, is there a specific document type that we want to look at? Because I just opened up the closing book and this is all the information that we were able to extract from the closing book. Similarly, is there any specific document type that you would want me to focus on? Because I think just created another document type for Coa too. And basically, we were able to extract whatever information was there to extract on the Coa.
+
+>>Abby	33:59
+Ok. Just the Coa, though, nothing else on this one, because I know this one was it was more complete. The only thing that was redacted on it should have been a social security number.
+
+>>Paul Kosinski	34:12
+So social security number, we weren't able to extract.
+
+>>Jasneet Singh Malhi	34:15
+I think home telephone, all this information was not there. So, again, this came up to have a low confidence code. Email address, we extracted from it. Then name of the employer is disabled. So this is how it took it from. Then how long? What is how long? It's 15 years.
+
+>>Abby	34:38
+It's over to the side.
+
+>>Jasneet Singh Malhi	34:40
+Ok.
+
+>>Abby	34:40
+Is that the right? Disabled. If you go down, it says he's been disabled.
+
+>>Jasneet Singh Malhi	34:45
+Yeah. Basically, it was the right value, but the system was not sure. So that's why it gave you a low confidence code.
+
+>>Jasneet Singh Malhi	34:52
+If I go ahead and tell the platform that this was the right value that it picked up, then it can go ahead and get this value as well. City, I don't think the city was mentioned here. So that was a low confidence score. Zip was not mentioned. So basically whatever was mentioned on the actual document, we were able to extract the data. So all this information that you see with the low confidence score was not available anywhere on the actual document type as well.
+
+>>Abby	35:17
+Now, does it do this for every document? Because if he's disabled, obviously he's not going to be working. So all of that would be no. Is that something that we can train it to do or no?
+
+>>Jasneet Singh Malhi	35:30
+I'll lean on Solomon and Vishal to answer this question. Vishal, if we are not able to find the document, can we set up a validation that then this would be basically no?
+
+>>Vishal Arya	35:42
+Yeah, I think we can do that. We can just prefix that. So yeah, that can be done.
+
+>>Jasneet Singh Malhi	35:47
+So actually let's try it out. Basically, if I can go to the field setup and write a prompt to the system that if it was not able to find a specific value, then return the output with a no.
+
+>>Vishal Arya	36:00
+Yeah.
+
+>>Jasneet Singh Malhi	36:01
+If that works.
+
+>>Vishal Arya	36:02
+Simply you can add one single prompt. If the no data is extracted, you can just put that keyword, like what exactly you want there to display. And that will be coming up automatically. Or you can also, second way, you can also set up a default value for it if the extraction happens, or else the default value will be coming up. So that's how you can do that as well.
+
+>>Jasneet Singh Malhi	36:25
+Where do we, like, do I write the prompt for each and every file, Vishal?
+
+>>Vishal Arya	36:29
+In which field you want to mention that?
+
+>>Abby	36:32
+Or you want to do it on all?
+
+>>Lauren Boersig	36:33
+On all fields, because we have a variety of fields that don't exist on every binder. So we just wanted to say like no data across the binder for those fields. But then if the fields exist, obviously to pull it so that the person who's reviewing it isn't seeing a bunch of empty fields. And then with the compilation, there's some fields where if it were missing on certain documents, then we would want that to show as a flag because it's supposed to, like it's not there and it's supposed to be there. So like someone has to look to make sure that it definitely isn't there and then request a corrected document with the field.
+
+>>Vishal Arya	37:11
+Yeah, yeah. Yeah, just put the no data and in the double inverted commas. Yeah, and just put a hyphen between middle name and if. That's just a directive kind of like, you know, instructing to, yeah.
+
+>>Jasneet Singh Malhi	37:33
+Let's run a test to see.
+
+>>Vishal Arya	37:36
+Now we have the data here. So it is going to put that name.
+
+>>Jasneet Singh Malhi	37:40
+This was for the current spouse middle name. Current spouse middle name is not there, so.
+
+>>Vishal Arya	37:45
+Okay, can you just click on run test or you can click on apply?
+
+>>Lauren Boersig	37:51
+So if data, no data is found.
+
+>>Vishal Arya	37:58
+Okay, click on apply. Yeah, click on run test or yeah, that also works.
+
+>>Jasneet Singh Malhi	38:22
+So it hardly takes around 30 seconds. So we'll just give it a minute. But while this is getting processed team, let me quickly see if there's another feature that I can quickly show you.
+
+>>Jasneet Singh Malhi	38:50
+Basically, you can go to configure and write the document description prompt here as well. Let me see if it would make more sense here.
+
+>>Jasneet Singh Malhi	39:09
+Okay, I think it is in the review phase. Yeah, probably we'll have to take this with the backend team to understand.
+
+>>Vishal Arya	39:22
+Yeah, I'll just modify the prompt, it will work once again. Yeah, maybe we'll even continue Jasneet, this will be done.
+
+>>Jasneet Singh Malhi	39:28
+Yeah, so that is something that, you know, we can check with the team and get back to you. It should be able to, you know, work because that is how we can set up the platform. If it does not, then we can also hard code it. So that will not be a problem. Yeah.
+
+>>Lauren Boersig	39:44
+So if we provided two more binders to train, how many binders would you want to train? Like, how many would it take to train to get to the -
+
+>>Lauren Boersig	39:51
+To the point where if we've uploaded a binder, it's still not in the set up already.
+
+>>Jasneet Singh Malhi	39:58
+If you could first give us some individual documents with actual data, that would give an accuracy boost to the actual platform, right? Because right now, whatever you're seeing is basically the LLM only that has given the extraction. And then if you can also give us binders, we can also in the meantime start to refine the auto -classifier to ensure that the auto -classification engine would make sense. But on a very high level, is this something that you're looking for for automation of your auto -origination process?
+
+>>Lauren Boersig	40:30
+Yeah, yes, it is. We just wanted to know, I guess, the point of how many documents would we need, what we needed to train on, is it like to be 10, is it 50?
+
+>>Jasneet Singh Malhi	40:46
+So basically, we would want as much documents as we can to train the model, but all this refinement of the model happens in our actual onboarding, right? Because what you see in front of you right now actually takes effort on our end to set up the whole structure in place, set up the validation engine in place. It requires one engineer on our side to write the actual validation code to ensure that the validations are working. So we usually do this when we actually onboard another customer, because anyway, we'll have to do all this in the onboarding and the implementation of the actual product.
+
+>>Lauren Boersig	41:21
+Okay, and then how many documents would you need for the case management, just to see what that would look like?
+
+>>Jasneet Singh Malhi	41:30
+So do you want to look at the validation for case management for all documents, or just like a couple of validations to understand the idea would work?
+
+>>Lauren Boersig	41:41
+I think we probably want to see it for a couple of key documents towards the maybe like the, I'll be like the court order, right? Probably, because that has the most.
+
+>>Abby	41:55
+Yeah, that has the most information that we need to.
+
+>>Lauren Boersig	41:59
+Yeah, so we'd want to see it for like the court order, maybe against the court order, against like the contract and the.
+
+>>Abby	42:09
+Disclosure.
+
+>>Lauren Boersig	42:10
+Disclosure, yeah. Yeah, so for like those three documents, because they have a lot of information that they share. And we also look for specific words in them. So it's the mix of like the two primary like types of data we're trying to extract.
+
+>>Jasneet Singh Malhi	42:24
+So within this document, which were the ones that you would want to look at?
+
+>>Lauren Boersig	42:30
+The court order, the disclosures and the contract.
+
+>>Abby	42:34
+Right.
+
+>>Jasneet Singh Malhi	42:35
+So court order. Disclosure of the contract. Oh, my bad. I hate it when that happens in Microsoft Word. Court order, where exactly is the disclosure?
+
+>>Abby	42:53
+Down a little bit.
+
+>>Jasneet Singh Malhi	42:59
+All right, so we would, if you can send us like some files for court order, contracts and disclosures, I'll go ahead and set up the validation engine for all these three and show you how the extraction and the validation would work for this. And then that should be a good point for us to kind of test out the platform. Does that make sense?
+
+>>Lauren Boersig	43:21
+Yeah.
+
+>>Jasneet Singh Malhi	43:22
+Awesome. So team, when can we set up another working session? Maybe sometime next week, once we have received the documents. So if you all have your calendars handy, can we set something up right now?
+
+>>Lauren Boersig	43:34
+Yeah.
+
+>>Abby	43:37
+I'm open all next week. So whenever you guys have the time.
+
+>>Lauren Boersig	43:43
+Would Tuesday work if we got the documents over today? Because we have two files and then I'm going to find two more with that intermediary thing on it. Sure.
+
+>>Jasneet Singh Malhi	43:53
+Tuesday, same time works?
+
+>>Lauren Boersig	43:55
+Yeah, that works.
+
+>>Abby	43:56
+Yes.
+
+>>Jasneet Singh Malhi	43:58
+Lovely. I will set up the invite for Tuesday same time and then we can take our conversation ahead from there. So Tuesday is 16th of September. Correct. Awesome. All right, I've sent the invite. Please confirm if you received it.
+
+>>Abby	44:27
+I have not received it yet.
+
+>>Lauren Boersig	44:30
+Oh, really? I did, yeah.
+
+>>Abby	44:31
+I just know.
+
+>>Jasneet Singh Malhi	44:34
+Awesome. Awesome. All right, team. Looking forward for the next session. Thank you for extending. I think we have extended by 15 minutes, but thank you so much for your patience. If you have any questions in the meantime, feel free to reach out to me and I'll make sure to get back to you in a flash.
+
+>>Lauren Boersig	44:50
+Okay.
+
+>>Lauren Boersig	44:50
+Thank you so much.
+
+>>John Pascale	44:52
+Thank you.
+
+>>Paul Kosinski	44:52
+Thank you. Thanks, all.
+
+>>Jasneet Singh Malhi	44:54
+Thanks, Lauren. Thanks, John.
+
+>>Lauren Boersig	44:55
+Thank you.
+
+>>Vishal Arya	44:56
+Thank you, everyone.
+

@@ -1,0 +1,63 @@
+>>Manoj Racherla	00:01
+All right, Manoj, yeah, let's get started. Yeah, sure. So, Vishal, have you reviewed the documents? I guess you have gone through most of the documents, right? Yes. Yeah, and you were pretty satisfied with the extraction that we discussed on our last call.
+
+>>Vishal Patel	00:20
+I believe so, yes. And I was able to extract the results in CSV form. And we are still taking a few more, sorry, we're still reviewing the file in advance for completeness. Yeah.
+
+>>Manoj Racherla	00:42
+Okay, so, like, based on our understanding, like, we have exported all the warrant files based on the requirement from the Sharepoint to Doximo and the CSV file as well, based on the requirement. So, is there anything else? Requirement from your end, or?
+
+>>Vishal Patel	01:04
+Nothing, nothing at the moment. Again, I think what we'll do is we'll have to review, you know, the file and details to maybe check on some of the data points that we were looking for, we need, and if we see any gaps, we might come back to you on anything that was missed. But that's it from our end at the moment. Great.
+
+>>Manoj Racherla	01:27
+Yeah. Okay. Vishal, you want to add anything?
+
+>>Vishal Arya	01:36
+No, I think everything is fine. I think when I also went through the account, like, you know, it seems fine as of now. So, I think, I just wanted to discuss the next step because we have that production credit to be added in the account. So, we can go ahead and we can, you know, add it, you know, just to, you know, you're going ahead to utilize that in production. So, yeah, just wanted to, you know, check on that, if we should do that to itself or, like, should we wait for a couple of more days.
+
+>>Vishal Patel	02:04
+So, on that production credit question, to make sure we understand it, you're saying that now that we have a good set of data points here, the production credit will go towards any re -extracts that we need to do, potentially? Is that correct?
+
+>>Vishal Arya	02:22
+Yes. Okay. I don't know if we extract as well, like, moving ahead. Moving ahead.
+
+>>Vishal Patel	02:28
+Okay. What if we need to re -extract on existing data points that were not captured correctly? Does that credit still count towards that?
+
+>>Vishal Arya	02:38
+Yeah. So, for that, Manush, we were using the production credit or the testing credit, like, was it the testing credit completed? Testing credit itself. Yeah. So, for the existing one, like, you know, we will also just make a count of, like, you know, what have been utilized up until now and whichever testing credit is still remaining. We will credit that as well while resetting it. We'll send you a clear explanation of, like, you know, what is the testing credit left and what is the production credit left so that if you need to retry, it doesn't, you know, put a toll on your production credit. Right.
+
+>>Vishal Patel	03:11
+Yeah.
+
+>>Vishal Arya	03:11
+So, so, so, so, so that way it should be fine, you know, in your direction as well. Nothing is getting exhausted from the production side.
+
+>>Vishal Patel	03:18
+Okay. Okay. Perfect. That's what I want to make sure because I do see, you know, a couple of gaps in information where we expected some things to be. But again, we'll have to go through this in depth and, and comb through all the gaps just to see if it lines up. Sure. Sure. We'll need another, we'll need a little bit more time. A hundred percent.
+
+>>Vishal Arya	03:39
+I completely agree. Like, you know, that that's completely fine with us. Like, you know, you can share those feedback, but what would, you know, I request you is to, you know, keep sharing us the feedback time and again, even when we are in the production, because what we want is like, you know, of course there are, there are edge cases, which is expected once in a while. So, and of course, edge cases sometimes have the solution. Sometimes we may not have the solution to it. So we would still like, like to give it a try in course of like, you know, making that model. You know, that level of accurate where we're still able to get it to those kinds of edge cases. Yep.
+
+>>Vishal Patel	04:13
+Understood. That makes sense. Yeah. We'll try to keep you apprised of any changes that we notice or any issues. Sure. Perfect.
+
+>>Vishal Arya	04:21
+Perfect. Yeah. I think that should be all from my side, Manoj. Anything you have to, you know, add on to that or you have to put that.
+
+>>Manoj Racherla	04:31
+No, nothing specific. We felt like a still needs time. And I guess we can move to the production credits now. And we will continue the testing.
+
+>>Vishal Arya	04:41
+So, so Vishal and Stefan, next thing we'll do is like, you know, after this call, like, you know, when we're sending the, you know, Mmo for our meeting today, I will send you the credit calculation as well. And just to, you know, you know,
+
+>>Vishal Arya	04:55
+Keep things transparent and highlighted like you know this is what it does so uh Yeah you'll receive it from my site And then uh we can take it up from there
+
+>>Vishal Patel	05:02
+Okay that sounds good stephan any questions on your end Nope not for me okay That sounds good Okay
+
+>>Stefan Z	05:12
+Thanks everyone thank you thanks
+

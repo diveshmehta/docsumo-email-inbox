@@ -1,0 +1,1134 @@
+>>Abigail Lowndes	00:00
+We're going to need to see what works for both. Um, I D when it has to, it has to have both like for a flow deal, we may not necessarily have a court order, so we can't just say all from the court order because they're not going to have it. So it's always going to be a fail that would only come into play for a portfolio. Yeah. So it has to be through the contract.
+
+>>Abigail Lowndes	00:42
+Okay. We're, we're going to have to get back to you on that one. I'm sorry. Okay.
+
+>>Aniket Tatipamula	00:51
+Thank you. Then let's go to the next item. I think country of issue. This was just a field, I think on the document, we pick it up and then we match it to us. So that should be good. Let's go to the next check. Disclosure validations state. Okay. We got it as Louisiana on disclosure, but we have not got it on Coa. So can we please open that document? Maroche is, is the state mentioned anywhere, Abby, can you scroll down?
+
+>>Abigail Lowndes	01:34
+Yeah, this is a settlement state. It's not going to, because this is the same application where we're just looking at where he didn't list the County or the state where the, um, the settlement happened, but if you go back to that question, I want to make sure that it is for the prior settlement and not for the current, where we're bringing the deal for the target.
+
+>>Lauren Boersig	01:54
+Yeah.
+
+>>Aniket Tatipamula	01:56
+I'm going to speak open the validation.
+
+>>Abigail Lowndes	02:01
+So where are we? So target document, target field settlement state. That should be seller state, not settlement state. Okay.
+
+>>Aniket Tatipamula	02:14
+We'll, we'll take a note of it. So, uh, if you are there on the call, can you please take a note of it? That would be, yeah.
+
+>>Manoj Racherla	02:22
+Uh, Abby, one question in terms of seller state, you mean this state, right?
+
+>>Abigail Lowndes	02:28
+Yes, because we need a disclosure for that state where the seller's living. That's why I said, okay, that might be in the past, but I need that one to say seller state because we're checking the disclosures against whatever state he lives in, it needs to be a pass or fail. That would be La or Louisiana.
+
+>>Manoj Racherla	02:48
+Okay. Uh, but in this case, suppose, let's say if there are initials, should we still match it as past? So let's say in CEO, it's that will, that will match it.
+
+>>Aniket Tatipamula	03:00
+State it's okay. Initials. Yeah.
+
+>>Abigail Lowndes	03:02
+Yeah. Yeah.
+
+>>Aniket Tatipamula	03:05
+Okay. Then let's go to the next. We will correct this up, Abby at our end.
+
+>>Lauren Boersig	03:11
+Okay.
+
+>>Aniket Tatipamula	03:12
+Then let's go to, um, sell a name. I think that's some, that's a match. That's good. Um, purchase price matches. That's good. Payment stream that matches. That's good. Originator was not found. Let's let's go to, let's go to the disclosure and let's see.
+
+>>Aniket Tatipamula	03:43
+Okay.
+
+>>Abigail Lowndes	03:44
+This disclosure doesn't have the originator listed. So that is okay because it's not listed. Um, I'm not, not all of the companies listed. I don't think this should be a fail.
+
+>>Lauren Boersig	04:04
+We can leave it as fail, but would have not would still pass if it's not found and it only fails if it were two different names.
+
+>>Abigail Lowndes	04:12
+Yeah, that would be better if there were two different names, but if, if the originator doesn't put the name on the disclosure, though, it's always going to be on the contract, but it may not always be on the disclosure. There are very few originators that put their name on the, on the disclosure anymore from the ones that I've been seeing lately.
+
+>>Aniket Tatipamula	04:32
+Understood. Sure. I think we can make that change. So if it is not there, we will, we are good. If it is there and it doesn't match, then we have to fail it. That's fine. Okay. Consistency check only one disclosed disclosure found multiple disclosure check, not applicable. So I think this is also good. Yep. Okay. Then let's go to proof of disclosure delivery. I think a pod date.
+
+>>Aniket Tatipamula	04:58
+And contract date right signed within three days. I guess that's is a bus that I Okay, let's go down a bit This Yeah, I think email address is also matching. That's good. So let's go to the next check Abby, let me also take a pause here Okay, do let us know if we are missing out on any of the checks because maybe because we've set it up But we would have forgot to add a couple of validations or maybe we would have added extra validations Do let us know if you missed or if you overdid anything Okay Okay, then let's go to contract. I guess seller name and seller ID seller name matches. That's okay. Payment stream matches. That's okay Originator again the same issue disclosure did not have originator. We already checked we would use the same plot here to purchase price matches That's okay policy number Not present on the contract. So can you please open the contract?
+
+>>Abigail Lowndes	05:58
+That's fine Actually, I can tell you that I don't it's not listed on the contract there the policy number is not listed on this contract
+
+>>Aniket Tatipamula	06:07
+So it should be feel right Abby.
+
+>>Abigail Lowndes	06:09
+Yes, it should be Okay, but it's actually okay because that's the way that this contract is written.
+
+>>Aniket Tatipamula	06:16
+So that's okay Okay, so what should we change the check or should we leave it as it is?
+
+>>Abigail Lowndes	06:22
+No Leave it just like that because I still want to know if they've listed it or not And so if it says unknown TBD, I just got to go back to the contract to make sure So leave it the way you have it right here Perfect.
+
+>>Aniket Tatipamula	06:37
+Okay Annuity sure not found. I think in the other case it found this is fail.
+
+>>Abigail Lowndes	06:44
+This is correct The contract didn't have the annuity issuer Can we go back? Yeah, can you please open that that is an issue? I'm sorry for the noise. They are Annuity issued by it's right there metropolitan life insurance company. Yeah, it came up here. So what is it not?
+
+>>Aniket Tatipamula	07:09
+Okay, maybe maybe it's an issue at our end. Can you go back manage? Maybe we'll check this and go back to the validations were there multiple contracts or maybe we picked up the Yeah, I got it. Let's let's open that one piece. So I understood what we have to do This isn't a contract.
+
+>>Abigail Lowndes	07:28
+This is an assignment Assignment so that would make it an assignment. Yeah, this is an assignment This isn't a contract so it shouldn't have been checked against for the Ac for the annuity contract. I'm sorry the hapless annuity issuer or Owner Yeah, the title has assignments
+
+>>Lauren Boersig	07:51
+And then they also have language like a signer an assignee
+
+>>Aniket Tatipamula	07:54
+And It's one page usually, but I Think this is something for us to fix before what because we added that subtype just today and so that sometimes specify that it is An assignment so we will modify the validation and then make sure the other one gets picked up. So that we should be good Okay, perfect Okay, buddy, but then do note all of these down please and then because we'll need it
+
+>>Paribartan Timalsina	08:19
+Sure, sure until I'm in there Thanks
+
+>>Aniket Tatipamula	08:23
+Yeah, man, which then let's I think the the owner is also the same thing. Let's go down. We'll fix that. We understood that problem Okay, LOD Not found not specified this looks good, right For LOD yes, because he doesn't have any children so this is fine Okay Is CBL proof I think name matches Beneficiary not specified. Is that the case or I Would need to see the Ac on this one.
+
+>>Abigail Lowndes	08:54
+Hold on. I have it open on my computer. So Can you also please open that one?
+
+>>Aniket Tatipamula	09:03
+Beneficiaries listed the as the estate of Markin Lee to do it Let's open the Coa Ac added Coa did not have it So, you know, I did not have it but the Ac did have it, correct Okay, so I have you just confirmed. Can you go back to patients, please? One much, please go back to the validations. So this would be a class right in this case
+
+>>Abigail Lowndes	09:33
+Yes, that's fine Okay It did catch because I'm not there it says the state of it. Yeah, that's good Perfect
+
+>>Aniket Tatipamula	09:48
+The last one is benefit letter date was not found on the Ac and contract date was found Can you please open benefit letters as an Ac and BF?
+
+>>Aniket Tatipamula	10:03
+Yeah, can you scroll down there is a date like did we miss one on the date Abby it is August 18
+
+>>Abigail Lowndes	10:09
+You didn't we don't have a benefits letter We only have an Ac on this one on this one to the annuity commencement date.
+
+>>Lauren Boersig	10:17
+Isn't that the annuity contract date?
+
+>>Abigail Lowndes	10:20
+Yes, that is the annuity contract date, which is missing on just the left.
+
+>>Lauren Boersig	10:24
+Yeah
+
+>>Aniket Tatipamula	10:27
+Sorry, I said I had some internet glitch. So we are good right Abby here Hmm.
+
+>>Abigail Lowndes	10:32
+Yeah, we're good because it's not a benefits letter. It's an annuity contract, but it does have the annuity contract date So that does have to be captured That may 15 2016. Yeah
+
+>>Manoj Racherla	10:43
+Yeah, so this is the annuity contract date. You're missing.
+
+>>Aniket Tatipamula	10:46
+Yes Okay, can you can you please capture that Manoj Okay, because we'll we can probably check it on the validation. So that makes sense. Let's get this fixed later on Let's go back to the validation Okay, then let's scroll down So that check was supposed to fail right Abby as in it it did the right job, correct?
+
+>>Abigail Lowndes	11:16
+That is correct Okay
+
+>>Aniket Tatipamula	11:19
+Okay, then let's go to this section. I think we should just set it up to let us know if you've set it up properly This is the miscellaneous sections where there are a lot of checks. We've merged them all together. So let's go one by one I think a lot of these documents are missing. So they are failed right away. I Think the last three Ipa we got the name. Correct. It matched. That's good BIA we got the name it matched and BIA payment stream matched.
+
+>>Abigail Lowndes	11:49
+So We have a bit We are In this binder, we do not have the Oas OAMC or the QA so we do not have the QA So those are correct, but we do have the RNS app David in this one Manoj can you please open I Don't think we have it.
+
+>>Aniket Tatipamula	12:13
+Do we have it? Oh, we have it here. Can you please open? Okay, I'll get it at it. Maybe we added this document Recently, okay validation would not have we'll get it. We'll we'll cover it. Okay, Abby.
+
+>>Abigail Lowndes	12:32
+Perfect
+
+>>Aniket Tatipamula	12:34
+So this is good. Then let's go to an OH then An OH
+
+>>Abigail Lowndes	12:41
+The name does not match Is this This is wrong, so if you go to the NOH where you're picking up that John that's the attorney that's not the Okay, so it's picking up the attorney name instead of the seller name if you scroll down on this one on this page You didn't put this the seller's name on here Okay, so this is a doctor that this would have failed and this is something that I would need to get in touch with the originator For because I'm not sure why the name of the seller is not listed on here on this document All right.
+
+>>Aniket Tatipamula	14:00
+I think we are we good. We will anyway fix the Fix that data extraction logic as well. So that should do the job Okay, the next check past spouse not specified former spouse not specified I think that should be good, right Abby.
+
+>>Abigail Lowndes	14:17
+That is good. Yep.
+
+>>Aniket Tatipamula	14:19
+I Think annuity sure. I think we made a mistake on annuity. We sure and I need to And also I'm not sure whether in this Document it was not present, right? Noh
+
+>>Abigail Lowndes	14:29
+If you go back up to the first page to right, yeah, you know, he didn't list anything on here
+
+>>Manoj Racherla	14:56
+I guess there is no mention of an issue or owner.
+
+>>Abigail Lowndes	14:59
+No, he didn't list anything on here, which is not common. So it's correct. Your system is correct. But this one is an unusual one. This NOH should have the issuer, the owner, and the seller name listed. So we're going to continue. So we're going through a few binders, correct?
+
+>>Aniket Tatipamula	15:21
+Yeah, we will go through a few others. And then we'll just quickly wrap this thing up and then go to the next binder. We'll be a little quick the next time around, Abby, because most of it would already been covered.
+
+>>Abigail Lowndes	15:33
+Ok, I'm going to write that one down, but I'm going to hold off. I want to see what it looks like on the other binders, because the Noh should have that information listed. And for this one, it doesn't.
+
+>>Aniket Tatipamula	15:43
+Sure. I think even the beneficiary was not listed. So is that?
+
+>>Abigail Lowndes	15:48
+No, the beneficiary is fine. That's fine.
+
+>>Aniket Tatipamula	15:51
+Ok, and it should fail, right? The check should fail, correct?
+
+>>Abigail Lowndes	15:55
+Yes, that is correct.
+
+>>Aniket Tatipamula	15:59
+File stamped, yes. File stamped required document should be stamped. I think this is just a stamp check, so that's OK. It's just an extraction. Petition, OK. So on the petition, the seller name is mentioned as Mt. And seller ID, it's like you have to let us know. I don't think we can match Mt with the complete name. That would be wrong, but this is fake.
+
+>>Abigail Lowndes	16:23
+That's OK, because that's fine. It's his initials is what it is. So it wouldn't have a seller name. So leave it as fail, so I know what they put in for the seller. Sure.
+
+>>Aniket Tatipamula	16:34
+I think the rest of the checks are passing, so we'll not go through all of them. If there's anything not found anywhere, then we can check. The last one, file stamped, it's OK. Document content, no lead pain mentioned. I think should not. I think we made this check. So if you want, Manoj, can you please open this doc type? Petition, and then let's go to that check quickly, just to see if we picked it up correctly.
+
+>>Aniket Tatipamula	17:11
+I mean, it's a field phrase, I guess. Where did we pick that up? Can you go back? Can you go back to the validation view, please?
+
+>>Abigail Lowndes	17:29
+It was a wrongful death, so it wouldn't have lead paint. So that's correct.
+
+>>Aniket Tatipamula	17:35
+Yeah, OK. We will get it checked, because we've written so many validations. We just have to verify they're not being invalidated.
+
+>>Abigail Lowndes	17:44
+No, it's not going to mention it if it's not lead paint. So that's fine. This case was a wrongful death case, so it wouldn't say lead paint. So it would be fine to pass it.
+
+>>Aniket Tatipamula	17:53
+Sure. Thanks. Then let's go to POS. I think on POS, a lot of things are failing. Attorney not found. Anybody sure? Ok, let's go one by one. I think attorney is not found on both POS as well as settlement docs. Did we miss this, Abby? Or is it not there on the document?
+
+>>Abigail Lowndes	18:18
+The POS.
+
+>>Aniket Tatipamula	18:20
+Can you please open, Manoj, quickly on the right tab?
+
+>>Abigail Lowndes	18:22
+I got it. I'm opening it.
+
+>>Lauren Boersig	18:28
+There's only an affidavit, right? The RNS affidavit?
+
+>>Abigail Lowndes	18:32
+Yeah, we don't have any of the settlement agreement or the order approving. So you wouldn't find it because we don't have it.
+
+>>Aniket Tatipamula	18:44
+So perfect. That's great. Can you go back, Manoj? So that should be a fail then.
+
+>>Abigail Lowndes	18:51
+It should be a fail. But that second one should not be a fail.
+
+>>Aniket Tatipamula	18:58
+Yeah, second one, as in why it failed is because the names are Metlife versus Metropolitan Life. If you want, we can maintain some short forms in our repository or maybe in our check so that we match. We do it for other customers as well. But Metlife versus Metropolitan Life would not ideally match because there could be two companies with that kind of a naming. Ok.
+
+>>Abigail Lowndes	19:24
+Ok, I see.
+
+>>Lauren Boersig	19:27
+Yeah, we'd want a correlation between the two and then just giving you the short form for that because there'll be a couple like that.
+
+>>Abigail Lowndes	19:33
+There will be that have their own name. But this is you said for the POS? Metlife Insurance Company, Inc? Yeah. Can you go to the POS that you have here? Ok, so this is Mark Kinley. If you go to the next page.
+
+>>Abigail Lowndes	19:55
+One so it's metropolitan life insurance companies um it's two this nope not that one down where it says two there's two of them met Life Resources Group Inc and then metropolitan life insurance company
+
+>>Aniket Tatipamula	20:12
+Yeah we have recorded the second line manoji if you are not able to see just the body address Yes Yeah That's it can you select that uh but even note this And then maybe we have to figure out how to catch this Yeah Okay
+
+>>Abigail Lowndes	20:25
+Then um this is the two portion of it if that makes it easier for you it just marks who it's going to Yeah And then on the seller name um on the first one obviously that was the one to the seller um which isn't picking up the seller what did it pick up then it picked up the um attorney that sent them out so this should always be used when you're using the for the pos the two who it's going to understood
+
+>>Aniket Tatipamula	20:56
+We will we'll get that thing fixed Okay okay That makes sense Okay Manoj Please go back to the validation Okay
+
+>>Abigail Lowndes	21:09
+I think uh the third check the annuity also on the two on the second form where we saw the metropolitan life insurance company so the second form it's right here on top of metropolitan life insurance company is met life tower Resources Group Inc So would it always come in a bunch of two pages and the data would be on the second page it doesn't always come in this way sometimes it's an actual court document um that is filed with the court that shows who it who received a copy of the petition of the notice of hearing so that one is easier because it spells it out But the fedex labels tend to if it's a company where um who else is in New York life and American general they have the same address that they send documents to so it will come out like this on a fedex label So what's the first label and what's the second label like what's the difference between the two labels can you scroll up manoj the first label is to the seller that's a different address he has his own address the second label is to the issuer and the owner of the annuity contract because they are they are interested parties so they need to be aware that this is happening so they get a copy of the petition and the notice of hearing and how did you get that context savvy like did you was it mentioned somewhere in this document or based on the address that you saw somewhere else you or name you figured it out What what you mean
+
+>>Aniket Tatipamula	22:46
+I know what i mean is between the two right as in the seller and the person we are selling sending it to so what i'm trying to understand is is there some reference letting us know about that in this document or that's something that we have to get a context from outside um well what was that Lauren the context is outside of the document because you have the coa already so you're looking for the names from that
+
+>>Lauren Boersig	23:16
+Right Yeah
+
+>>Abigail Lowndes	23:18
+But the coa is not not going to have the issuer and the owner listed either but that will be from the Ac and the bl
+
+>>Aniket Tatipamula	23:23
+So we so basically we would first have to look at Ac and the bl and then get a context as to which is the owner
+
+>>Abigail Lowndes	23:34
+Right
+
+>>Lauren Boersig	23:35
+Okay
+
+>>Abigail Lowndes	23:37
+Okay we already grabbed that information from the annuity contracts true
+
+>>Aniket Tatipamula	23:45
+So what we have to do here is we'll have to extract all possible names and addresses And then we have to figure out based on the Ac and Bl if it is present which one is which to get this context i think because we would again have to write the same program right like you're you are running the context in your head but the machine would not know And we'll have to write it somewhere that's why i asked like is there in the doc
+
+>>Abigail Lowndes	24:07
+Okay that's that's that's where we get it from so the seller i the seller name which should be on the pos you're going to get from the coa and the id is everything that you check And then the issuer and the owner are going to be on the annuity contract and then if there is a nudity contract is it on the contract all the time it is on the contract the issuer and the owner are always listed on the contract understood understood okay that that that helps heavy thanks Lauren thanks Abby then let's go to the next validation manoj
+
+>>Aniket Tatipamula	24:39
+Um i think we okay No no hold on don't don't scroll that fast scroll up please the seller spouse not specified former spouse not specified i think we are good you are good Yeah And let's go to quote order quickly Okay
+
+>>Aniket Tatipamula	24:54
+The first one, file stamp, that's OK. Docket number matches, that's OK. State, settlement state on Coa was not present. I think that's what we discussed, right?
+
+>>Abigail Lowndes	25:04
+Right.
+
+>>Aniket Tatipamula	25:04
+So that's OK. County matches, court matches, that's OK. Purchase price was not found on court order.
+
+>>Abigail Lowndes	25:14
+That's OK, because it's not always going to show on the court order.
+
+>>Aniket Tatipamula	25:19
+Sure, OK. Then that's perfect. Annuity owner, annuity issuer, assigned payment stream, that's all good. Phrase checks, OK. Let's do one thing, Manoj. Let's open the document quickly, and let's verify the phrase check. Because that has nothing to do with validation. We just pick it up from the document. You have already, yeah, OK.
+
+>>Aniket Tatipamula	25:46
+Yeah, let's go through phrase checks quickly. So Abhi, do let us know if any of these phrases were wrongly picked up, right? Transfer check, yes, yes, yes. No, no, let's do it here only, Manoj. Scroll down on the left side, please. Are there more fields or no? These were the only checks? You're on mute, Manoj.
+
+>>Manoj Racherla	26:08
+Yeah.
+
+>>Aniket Tatipamula	26:09
+So where are the no's coming from then? Can you please give me validation? Oh, OK. We wanted these checks, right, Abhi? Fair and just. She understands. He understands.
+
+>>Abigail Lowndes	26:31
+Fair and just. But there has to be more to she understands or he understands. I don't know what the, what is this, the required phrase? On the, all the way on the right, what does that say? He understands that she is. Is this supposed to be for the beneficiary information?
+
+>>Aniket Tatipamula	26:47
+This is all for court orders. On court orders, you asked us to, like I think in the binder document, you had given us your phrases to check for. And I think we did not add them on the document. That's why they're all failing.
+
+>>Abigail Lowndes	26:59
+We will get it added.
+
+>>Aniket Tatipamula	27:02
+But let us know as if any of this is relevant or if you want us to be, want any of this to be removed.
+
+>>Abigail Lowndes	27:08
+Ok. State session recall rate cap or prior transfer. The transfer is fair, just, and reasonable. We do need that check on here.
+
+>>Manoj Racherla	27:18
+That is the only check that we need.
+
+>>Aniket Tatipamula	27:21
+The rest are not needed.
+
+>>Abigail Lowndes	27:22
+No, no, no. I'm looking through, hold on one second. No matches were found. There was one on this one. Why?
+
+>>Abigail Lowndes	27:39
+That's because it's not needed in Louisiana. That language is not needed in Louisiana.
+
+>>Manoj Racherla	27:47
+Ok.
+
+>>Abigail Lowndes	27:47
+And then the two, Pei understands that she is, or Pei understands that he is. Those actually are on the contract. On page two.
+
+>>Aniket Tatipamula	27:58
+No, no, no, it's our, it's our, it's our mistake. Yeah, we did not add those fields. Oh, OK. So it's our mistake. What we just want to check is whether the checks are needed or not. We'll get that fixed right away.
+
+>>Abigail Lowndes	28:13
+Yes, those are needed.
+
+>>Aniket Tatipamula	28:15
+Ok, perfect. So we'll, Manoj, please do add those checks. We have to add them, yeah?
+
+>>Manoj Racherla	28:20
+Sure, sure.
+
+>>Aniket Tatipamula	28:22
+Ok, then let's go to the next document. Stipulation, I think the entire stipulation was missing, so we'll skip this. Let's scroll down. Acknowledgement was missing, we'll skip this. Let's scroll down. Ssn not found on credit report. Is that, does that look correct, Abby?
+
+>>Abigail Lowndes	28:42
+No, that does not.
+
+>>Aniket Tatipamula	28:45
+Ok, can you please open the credit report, please?
+
+>>Manoj Racherla	28:59
+There's no credit report.
+
+>>Aniket Tatipamula	29:02
+We did not find it in the binder. Abby, is it not there in the binder? But it was there in the binder, right? We could find the other fields. It would be. On the validations, please. It's missing, OK. It's missing. I think it's missing, so it's OK. But even if it is missing, I think we marked the last three checks as false because the phrases would not be found.
+
+>>Abigail Lowndes	29:29
+If it's missing, they wouldn't be found. But it should have been in the binder that I sent to you guys. So that may have been an issue on my end if it did not come through.
+
+>>Manoj Racherla	29:42
+Ok, this is the Markinley binder.
+
+>>Abigail Lowndes	29:45
+This is from Markinley?
+
+>>Manoj Racherla	29:48
+Yeah.
+
+>>Abigail Lowndes	29:50
+Oh, I know why it wasn't in the binder because I ran this credit report before.
+
+>>Abigail Lowndes	29:53
+Myself. It wasn't something that came from the originator. It's something that I did separately. Okay. If you go back to validations, if the credit report is not in there, then yes, just missing is fine. That means I have to run it. It's not something that you can check. It's something that I would have to run.
+
+>>Aniket Tatipamula	30:18
+Sure. So we'll fail all of the checks. I think we, it is our mistake. We should fail it. If it is missing, then we'll get that corrected. Scroll down.
+
+>>Abigail Lowndes	30:26
+If it's missing, just fail everything. So I know that it's missing. Sure.
+
+>>Aniket Tatipamula	30:32
+Let's scroll down please. Ucc search. I think the selenium matches. That's okay. Ssn is not found on Ssn because the document itself is missing. Is that correct, Abby?
+
+>>Abigail Lowndes	30:47
+That's correct. You're not going to be able to verify it because we don't have the social security number. The social security card, I'm sorry.
+
+>>Aniket Tatipamula	30:55
+Perfect. Date. I think it was must be within 90 days. That's, I think that's passing. That's failing. Okay. Check not found, not found. Can you please open this document once again? Did we cover the face check? Why is this?
+
+>>Abigail Lowndes	31:14
+I'm sorry. Before we go on the date, it says 749 days.
+
+>>Manoj Racherla	31:20
+Is this because it's an older binder?
+
+>>Lauren Boersig	31:23
+Yeah. Cause it's from 2023.
+
+>>Abigail Lowndes	31:24
+Okay. I just, okay.
+
+>>Lauren Boersig	31:26
+Make sure that I'm getting that right.
+
+>>Abigail Lowndes	31:27
+Cause I'm like, wait a minute, hold up. We got to see what that is. Okay.
+
+>>Lauren Boersig	31:30
+We can discuss that too with the portfolios as well.
+
+>>Abigail Lowndes	31:32
+Yeah, we're going to, okay. Search.
+
+>>Aniket Tatipamula	31:43
+Okay. Abby, then we'll fix the phrases. I think Manoj will get it added.
+
+>>Abigail Lowndes	31:47
+Please scroll down.
+
+>>Aniket Tatipamula	31:48
+Manoj, I think we're done.
+
+>>Manoj Racherla	31:49
+Okay. Perfect.
+
+>>Aniket Tatipamula	31:50
+We did one binder. I think, thanks Abby. Thanks Lauren. I think we are a little quick. So yeah.
+
+>>Manoj Racherla	32:03
+Okay. Okay.
+
+>>Aniket Tatipamula	32:06
+Let's go to the next binder. Abby will not actually go through each checks right now. We'll let, I think there's something wrong with the validation.
+
+>>Aniket Tatipamula	32:26
+Okay.
+
+>>Manoj Racherla	32:33
+David Spencer binder.
+
+>>Aniket Tatipamula	32:35
+Yeah. Let's, let's slowly scroll down and Abby do stop us. If you feel anything is off. Okay.
+
+>>Abigail Lowndes	32:43
+We're David Spencer is what we're doing, right? Yep.
+
+>>Manoj Racherla	32:47
+Yes.
+
+>>Abigail Lowndes	32:51
+Okay.
+
+>>Abigail Lowndes	33:24
+For this one, it says the Por was missing.
+
+>>Manoj Racherla	33:34
+This one, I think.
+
+>>Abigail Lowndes	33:37
+But it is on page 99 of the binder. Or do I have more than one Spencer deal?
+
+>>Manoj Racherla	33:55
+Okay. On 99, we classified it as a seller ID.
+
+>>Abigail Lowndes	34:02
+That's correct.
+
+>>Manoj Racherla	34:03
+Since this is an identification card.
+
+>>Abigail Lowndes	34:08
+Okay. So back to the validation.
+
+>>Abigail Lowndes	34:23
+So Por, we decided to use as seller ID, unless we needed more.
+
+>>Manoj Racherla	34:30
+Yeah.
+
+>>Abigail Lowndes	34:31
+That's what we said, right? Okay. So then that's, that's fine. That's acceptable.
+
+>>Manoj Racherla	34:35
+Okay.
+
+>>Abigail Lowndes	34:36
+Because you don't need an additional Por. Okay.
+
+>>Lauren Boersig	34:42
+Did you want it to check against the ID though?
+
+>>Abigail Lowndes	34:46
+What'd you mean?
+
+>>Lauren Boersig	34:47
+Did you want the Coa to check against the ID if they're like before, check against the ID and then also,
+
+>>Lauren Boersig	34:53
+Check against additional Por, if there was additional?
+
+>>Abigail Lowndes	35:01
+Well, this is the seller application, right?
+
+>>Lauren Boersig	35:06
+Yeah.
+
+>>Abigail Lowndes	35:07
+And then the seller ID checks the dates for when it was issued versus the contract and everything else. So, it's fine this way because the only way they would have Por because we decided to separate it, is if they had the additional Por, which was the bank statement or the lease or what have you. So, we don't have Por, like additional. What we're using is the seller ID. We had to separate it because the system was confusing itself between seller ID and seller Dl and Por.
+
+>>Manoj Racherla	35:38
+Okay.
+
+>>Lauren Boersig	35:39
+And you don't check the address on the ID?
+
+>>Abigail Lowndes	35:47
+It's not on there? No, I don't. I see the country and the address isn't checked on the ID.
+
+>>Lauren Boersig	35:56
+Okay.
+
+>>Abigail Lowndes	35:57
+The state is or country issued. Thank you. No, the state is not checked either. Okay, so we need to add a state check to the seller ID.
+
+>>Lauren Boersig	36:12
+I think it's right above it.
+
+>>Abigail Lowndes	36:14
+Oh, yeah. Okay, so then it's there then and we're good. We're good.
+
+>>Abigail Lowndes	36:29
+That was a disclosure. That's going to be fine. The date. This is Indiana, right?
+
+>>Aniket Tatipamula	36:49
+Yeah, it's Indiana.
+
+>>Manoj Racherla	37:06
+We didn't find originator in this binders disclosure as well.
+
+>>Abigail Lowndes	37:11
+Yeah, no, that's fine because it's not always going to be on the disclosure. So, that is okay to fail. I was looking at the POD confirmation for this one. We don't need one. So, it's fine that it fails because we don't. It's a zero weight state. So, that's fine. The originator is covered. It's not on the disclosure. That's fine. Policy number is not listed and that's fine. But these two should not be.
+
+>>Manoj Racherla	37:45
+The annuity issuer and annuity owner of contract. Correct.
+
+>>Abigail Lowndes	37:49
+They should be listed on there.
+
+>>Aniket Tatipamula	37:51
+I think it's the same issue. Maybe there are a couple of them. Let's quickly check that.
+
+>>Manoj Racherla	37:57
+Yeah.
+
+>>Aniket Tatipamula	38:00
+There's only one. Okay. But it's an assignment. We did not pick up the right contract. It's some type of assignment, right?
+
+>>Lauren Boersig	38:11
+Terms writer.
+
+>>Abigail Lowndes	38:15
+This one is actually a contract.
+
+>>Lauren Boersig	38:17
+Yeah, it's a contract and assignment agreement that does both.
+
+>>Abigail Lowndes	38:21
+So, this is going to be, if you go to the, this is going to have the issue and the owner listed on the last page. This contract.
+
+>>Aniket Tatipamula	38:31
+I think we did not pick it up on the validation. Because it's already picked up on the document. Can you go to the validations, please?
+
+>>Manoj Racherla	38:39
+Yeah.
+
+>>Aniket Tatipamula	38:39
+I think it may be an issue. Can you please click on the field quickly? Is it opening the right document? I don't know what. I think you moved. Click on the field, please. On the annuity issue. On the contact validation. Yeah. Okay. This is our mistake. And then we'll get it fixed.
+
+>>Lauren Boersig	39:07
+For the identification as contract is a sale and assignment. So, it's two documents instead of a sale assignment, like, which would then just be the assignment. But since it's a sale and assignment, it's both. So, it's considered the contract.
+
+>>Aniket Tatipamula	39:22
+Okay. So, we'll note that thing down. Please note it down. We have one more category, which is sale and assignment. So, if it is sale and assignment, then it would be confirmed as a contract. Right.
+
+>>Manoj Racherla	39:32
+Okay.
+
+>>Aniket Tatipamula	39:33
+Perfect. Thank you. Can you close the pop -up? Okay.
+
+>>Aniket Tatipamula	39:48
+I think this time around, we did not find the benefit.
+
+>>Aniket Tatipamula	39:51
+Just hold on. Is that correct?
+
+>>Abigail Lowndes	39:54
+That is correct. Okay. And you don't have the Oamc or the QA, so that's correct as well.
+
+>>Aniket Tatipamula	40:08
+Last one did not get picked up properly, I think. Payment stream. Can you please open the document, Manoj?
+
+>>Lauren Boersig	40:15
+I also had a question too for Abby.
+
+>>Abigail Lowndes	40:18
+Sure. The payment stream is not listed on the BIA. That's why you got to fail. Oh, okay. All that's listed is the purchase price.
+
+>>Aniket Tatipamula	40:34
+Yeah, I think that's what we think. So that's okay, right?
+
+>>Abigail Lowndes	40:36
+That's okay. That's a fail. Lauren, what was the question?
+
+>>Lauren Boersig	40:41
+For the Oas, it says David, Spencer, Ann, Cole, so I'm guessing it was multiple calling K. Is that okay?
+
+>>Abigail Lowndes	40:48
+That's okay. Yes, because it just tells me who's part of the settlement and what happened.
+
+>>Abigail Lowndes	41:00
+They were the plaintiffs on it because I guess they were both involved in the accident.
+
+>>Abigail Lowndes	41:14
+Everything looks good there. No lead paint. Good job. The attorney is Brian Mack. Can you show me this one?
+
+>>Abigail Lowndes	41:47
+That is the attorney that sends it out. Our attorney. Metropolitan, that's good. Where's the other name that I was seeing?
+
+>>Manoj Racherla	41:58
+So the name is David Spencer.
+
+>>Abigail Lowndes	42:00
+That's correct. But there was another name listed on the validations.
+
+>>Manoj Racherla	42:06
+And I wanted to know where that is.
+
+>>Abigail Lowndes	42:08
+It says F4.
+
+>>Lauren Boersig	42:13
+That's from the settlement agreement.
+
+>>Abigail Lowndes	42:17
+Okay. Okay.
+
+>>Manoj Racherla	42:24
+Is this the correct one? I have to see what's listed underneath.
+
+>>Abigail Lowndes	42:43
+If you can close out that Fb So I can see what's.
+
+>>Manoj Racherla	42:47
+Yeah.
+
+>>Abigail Lowndes	42:48
+Attorney for plaintiffs. Yes, that's fine.
+
+>>Manoj Racherla	42:52
+So this is correct. It's not matching.
+
+>>Abigail Lowndes	42:56
+It's not matching, but that's because one is for the settlement and one is for the transfer, which is what we're doing. That's why it's not matching.
+
+>>Lauren Boersig	43:05
+Do they need to send one to this to the settlement lawyer?
+
+>>Abigail Lowndes	43:08
+Not on this file. No.
+
+>>Lauren Boersig	43:10
+So should it say missing as a source value because we're looking for the plaintiff's lawyer as in the proof of service?
+
+>>Abigail Lowndes	43:17
+Yes, it should say.
+
+>>Lauren Boersig	43:21
+This is another one of the context ones where we're looking to see if they sent it to F Boyd. Yes. And if it's not there, then then it's not.
+
+>>Aniket Tatipamula	43:33
+It's not just for us to understand. Yeah. Maybe we go through a few. And if you feel you want us to fix it, good. But I think this should not be a big issue, right?
+
+>>Lauren Boersig	43:48
+Yeah.
+
+>>Abigail Lowndes	43:48
+No, that's not a big thing. That one is not a big thing. So annuity owner Metropolitan Insurance and annuity and then annuity owner Metropolitan Insurance. Oh, I see. We we've we shortened it on one. So that's why we've got to fail because it's shortened. Yeah. Yeah. Ok.
+
+>>Lauren Boersig	44:09
+This will be the short form.
+
+>>Abigail Lowndes	44:10
+Yeah.
+
+>>Aniket Tatipamula	44:15
+I think the court order is missing in this case. Scroll down, please. Missing.
+
+>>Abigail Lowndes	44:25
+Yeah. You don't have any documents in this one. Correct.
+
+>>Aniket Tatipamula	44:35
+Ssn not found in either of them.
+
+>>Abigail Lowndes	44:39
+This one should be found. We have a Social Security card in this one.
+
+>>Manoj Racherla	45:11
+I guess there is no Ssn, it's four -digit. I guess Ssn is not a four -digit number, right?
+
+>>Abigail Lowndes	45:18
+It's not a four -digit number, but that's the last four digits for this credit report. That's how they verify. Can we do a partial on this one or no?
+
+>>Aniket Tatipamula	45:30
+We can, we'll have to figure out how to extract this though. Sorry, Lauren.
+
+>>Lauren Boersig	45:34
+Yeah, so it'll be the last four from the right. Right.
+
+>>Aniket Tatipamula	45:38
+Sure, we'll work on this, we'll take a note of it, but the - Wait, that's wrong.
+
+>>Abigail Lowndes	45:43
+6314, that's not the same number.
+
+>>Lauren Boersig	45:46
+Can you go back to the credit report? Is it somewhere else on the report that - Can you please search for 6314, Manoj?
+
+>>Aniket Tatipamula	46:00
+It's not there.
+
+>>Manoj Racherla	46:03
+It's not there.
+
+>>Abigail Lowndes	46:04
+No, it's not here. This is the experience report off of micro bill. I'm not sure where they got that social from, the last four digits of that number.
+
+>>Lauren Boersig	46:20
+So it would be a - A fail, a big fail, yeah. Yeah.
+
+>>Abigail Lowndes	46:26
+So then that was, it's not that it's not found, it's just that it failed.
+
+>>Aniket Tatipamula	46:32
+Yeah. Can you please go back, Manoj, to the validation view? And not find this on the Ssc, Ssn, that we have to fix. So Parivartan, please take a note. Yeah. The rest of the face checks we did not add, so we are good, and then we'll get it added. That's okay, on the credit report. No, Manoj, don't exit. We have that last check, the searches. Are they looking good, Abby, the searches?
+
+>>Abigail Lowndes	47:04
+The searches, I'm wondering about this 9926, because that is not our social security number.
+
+>>Aniket Tatipamula	47:11
+Can we please open that, Manoj, searches, Ssn? You can click and open.
+
+>>Abigail Lowndes	47:33
+Is this for his business? I'm not sure. This was his business. This was a bankruptcy search.
+
+>>Lauren Boersig	47:43
+So it's failed too, though, because that's not the number.
+
+>>Abigail Lowndes	47:45
+Yeah, that's not, it should be failed too, yeah. Ooh, random.
+
+>>Lauren Boersig	47:52
+This is a good check for checking when they send the wrong people over.
+
+>>Abigail Lowndes	47:57
+It is, because I'm deciding he has warrants. Let me go to my pacer.
+
+>>Abigail Lowndes	48:17
+Can you go to the top of his document?
+
+>>Manoj Racherla	48:21
+Yes.
+
+>>Abigail Lowndes	48:22
+Five on four, this is not him. I'm looking at, I ran a pacer, and I'm looking at his, this is probably why I ran a separate pacer. I'm looking at his documents, and this is not, this does not match the bankruptcies that I have listed. So this was not our seller.
+
+>>Lauren Boersig	48:42
+So they sent over a document.
+
+>>Abigail Lowndes	48:43
+They sent over a document that was not for our seller. So I had to rerun everything. So that's, it should have failed, yeah.
+
+>>Aniket Tatipamula	48:59
+Let's go down.
+
+>>Manoj Racherla	49:00
+Well, that's good.
+
+>>Abigail Lowndes	49:01
+At least we know it works. It's not finding it.
+
+>>Aniket Tatipamula	49:06
+We are happy.
+
+>>Abigail Lowndes	49:11
+Okay, all right.
+
+>>Aniket Tatipamula	49:13
+Okay, Abby, I think we are good here. So, but we don't want to end the call without you uploading a document. So we want you to upload, and then let's see how this works, because that's our real test, right? So can you please share your screen, login, and then upload one of your new binders that you have not shared with us?
+
+>>Abigail Lowndes	49:30
+Okay, hold on one second. I'll have to switch off my Teams thing.
+
+>>Aniket Tatipamula	49:37
+Yeah.
+
+>>Abigail Lowndes	49:56
+Oh, I just closed it out. Tease, I have to change this.
+
+>>Abigail Lowndes	50:39
+Need a full binder.
+
+>>Abigail Lowndes	50:54
+Yes, this one is a full binder.
+
+>>Aniket Tatipamula	51:14
+Abby, you want us to keep on sharing or like, do you want to share?
+
+>>Abigail Lowndes	51:18
+I'm trying to get it up to, so you guys can see the binder itself.
+
+>>Aniket Tatipamula	51:23
+Sure.
+
+>>Abigail Lowndes	51:24
+Hold on.
+
+>>Abigail Lowndes	52:16
+Login. So you want me to, like this.
+
+>>Aniket Tatipamula	52:31
+If you want to share, you can, else you can just drop us an email and then we'll upload. Up to you.
+
+>>Aniket Tatipamula	52:51
+I guess the rest of the team members left it.
+
+>>Abigail Lowndes	52:53
+Window. You just need my window, right?
+
+>>Aniket Tatipamula	52:59
+Yeah.
+
+>>Abigail Lowndes	53:00
+Just the one.
+
+>>Aniket Tatipamula	53:02
+Yeah, perfect.
+
+>>Abigail Lowndes	53:06
+Can you see it?
+
+>>Aniket Tatipamula	53:08
+Yeah, we can see it, Abby, thanks.
+
+>>Abigail Lowndes	53:10
+Okay.
+
+>>Aniket Tatipamula	53:11
+So you would have to upload it to Ai Autoclassify. Yeah. It's already there in front of you.
+
+>>Abigail Lowndes	53:19
+Case management or.
+
+>>Aniket Tatipamula	53:20
+You can go to case management. Let's go to case management. Because you are on the right track. Sorry. Case management, the last tab on the left. Yep. Thank you. There's an option on the top right.
+
+>>Abigail Lowndes	53:34
+So I'm going to upload.
+
+>>Aniket Tatipamula	53:36
+Ai Autoclassifier and upload a folder. Or upload a file. Sorry, upload a file. Sorry, it's my bad. Just a file? Yeah, just a file. It's a single binder, right?
+
+>>Abigail Lowndes	53:46
+Yes. It's a single binder. So let me get it. It's not. I'm going to give them one that's not sliced. But it is very complete.
+
+>>Aniket Tatipamula	54:00
+Okay, let us see.
+
+>>Abigail Lowndes	54:03
+I have put it in, though I don't see it now. Oh, it's still processing.
+
+>>Aniket Tatipamula	54:11
+Yeah, it will take some time. Parivartan, Manoj, chip in, like.
+
+>>Manoj Racherla	54:19
+Yeah.
+
+>>Paribartan Timalsina	54:21
+Yeah, Aniket, I'm here.
+
+>>Aniket Tatipamula	54:27
+It will take some time, Abhi. Because it has to first understand the document and split. Once it does, it will create a folder first. And then inside the folder, there will be files. How much time does it take? Parivartan or Manoj?
+
+>>Paribartan Timalsina	54:43
+Yeah, I think on the split side, it might take 40 -45 seconds. And for Ocr, it might take a couple of minutes.
+
+>>Paribartan Timalsina	54:48
+Or something like that, it might take other few seconds.
+
+>>Aniket Tatipamula	54:53
+Sure. Thanks.
+
+>>Paribartan Timalsina	54:58
+And it depends on the pages also, I think. What is the number of pages for this document?
+
+>>Abigail Lowndes	55:05
+I don't remember how many pages this document was.
+
+>>Paribartan Timalsina	55:08
+So let's see if we can. Hold on one second.
+
+>>Aniket Tatipamula	55:10
+That's OK, Abby. We'll wait. I think however it would be, let's see what happens. We can't see your screen right now. It's like white.
+
+>>Abigail Lowndes	55:21
+It's 228 pages is what this is.
+
+>>Paribartan Timalsina	55:25
+Oh. OK, then this is the longest document that we have.
+
+>>Abigail Lowndes	55:32
+This one is completely complete. That's why. It's very, very, very complete.
+
+>>Aniket Tatipamula	55:40
+Abby, this is like the math problem, right? You give us 2 plus 2, and then in exam you ask us integration.
+
+>>Abigail Lowndes	55:50
+I'm sorry. I never said I was a good teacher.
+
+>>Aniket Tatipamula	55:57
+Should we refresh the screen, Parivartan, as in, is that the case, or will it pop up?
+
+>>Paribartan Timalsina	56:03
+It will pop up on all documents. We can see that it gets uploaded correctly. Let's see what happens.
+
+>>Aniket Tatipamula	56:12
+Abby, in the meantime, can you just click on Review tab, please? Sometimes it does happen that. Please click on Review tab, and then go back. There's a tab like All Files Review Skipped.
+
+>>Lauren Boersig	56:22
+Does anyone else know how that works?
+
+>>Aniket Tatipamula	56:25
+On the case management. Yeah, I think it works now. We just wanted to switch between the tabs to see.
+
+>>Abigail Lowndes	56:30
+Yeah.
+
+>>Aniket Tatipamula	56:31
+I think it is taking some time. Oh, something happened. I could see a number getting increased. Can you please leave? Yeah.
+
+>>Abigail Lowndes	56:47
+All right. So you want me to hit the Review, right?
+
+>>Aniket Tatipamula	56:50
+Yeah, something is happening. So yeah, can you go back to the case management, please?
+
+>>Paribartan Timalsina	56:54
+Yeah, it is split. I think we have got the information on the bottom side.
+
+>>Aniket Tatipamula	56:58
+Can you please open the, yeah. It will take some time, Abby, while all the documents get processed, right? Let's wait for a second. I think it should be good. 16 of them are getting processed. Three are left. It looks like there are some discussions going on between like, are they talking about this on their own?
+
+>>Aniket Tatipamula	57:45
+It sounds really nice. This weekend, that is good. But I'll set it on track. So Abby, while this happens, how is it looking? Right now, do you see everything going on track?
+
+>>Abigail Lowndes	58:01
+For right now, yes. But I want to see what some of these are, like this one.
+
+>>Aniket Tatipamula	58:10
+Maybe we should go to the validation and quickly see. But yeah, this is not classified. So this is basically still in auto -classification state. So we could not classify it.
+
+>>Abigail Lowndes	58:23
+Ok, so you want me to go to one of the classified ones?
+
+>>Aniket Tatipamula	58:26
+Yeah, you can go to classified ones. This would have been classified as what? It's already written on the outside. So it's quite easy for us to check. I think this is.
+
+>>Abigail Lowndes	58:40
+This is part of the settlement. So it's not the court order.
+
+>>Aniket Tatipamula	58:46
+Can you go back, please? It detected as court order. It should not be. Ok.
+
+>>Abigail Lowndes	58:52
+Let's see the order of proven minus compromise.
+
+>>Abigail Lowndes	59:04
+Ok. It's a part of it, but it is not the full order of proven minus compromise. I went too far.
+
+>>Aniket Tatipamula	59:17
+Yeah, I think all of them are.
+
+>>Abigail Lowndes	59:18
+We have another court order here. This is the same. This is the same. Ok, this is the court order. So this is correct. We do not have a purchase price listed. So that is fine to fail or to come up as blank.
+
+>>Abigail Lowndes	59:47
+Like this, that's right. Okay. And this has the phrase checks done. So now can I go to the validation on this one?
+
+>>Aniket Tatipamula	01:00:20
+But I fear that we may fail on a lot of them because if we misclassify something, the validations would fail. So a lot of these are dependent upon reclassifying it properly. So, but we still would be happy to scroll through because this is a good check for us, right? We never uploaded complete batch yet.
+
+>>Lauren Boersig	01:00:40
+So we'll get to look at it.
+
+>>Aniket Tatipamula	01:00:43
+We were a little optimistic though, like I was expecting all to pass, but that's okay. And then I think we'll work a little harder next time.
+
+>>Abigail Lowndes	01:00:54
+Okay, so the Coa.
+
+>>Aniket Tatipamula	01:01:04
+It is missing. So we would not have classified it. Yeah, can you please click on it? Apply. We would not have classified. So basically if a document is missing, Abby, this means we would have not classified it. So it would probably be in an unclassified state. Can you please remove the filter?
+
+>>Abigail Lowndes	01:01:24
+Yes, but it should have been listed. So I'm not sure.
+
+>>Lauren Boersig	01:01:29
+We have to classify it And then it will.
+
+>>Abigail Lowndes	01:01:32
+I have to classify it?
+
+>>Lauren Boersig	01:01:33
+Yeah, you have to.
+
+>>Abigail Lowndes	01:01:36
+Okay.
+
+>>Aniket Tatipamula	01:01:38
+So can you please go to documents again? Oh, sorry, it's all documents, sorry. It's okay, Abby. Can you go to the case management documents because you don't have to travel that far. I know this may be a little too complicated on a platform, but Yeah, Can you please open the, yeah. And yeah, you are on the documents. So there are three tabs on the second panel if you look at it. Documents, validation, and analytics, right? So you can swap easily. So documents and validation is where you would probably spend most of your time, yeah. Okay. So right now we are on documents and I think one of the, can you please do one thing? Can you please filter using AI auto -classifier?
+
+>>Abigail Lowndes	01:02:22
+Filter using?
+
+>>Lauren Boersig	01:02:23
+Yeah, type in AI auto -classifier because Yeah, that one's fine.
+
+>>Aniket Tatipamula	01:02:28
+Yeah, now please open documents one by one and let's see which one of them is what, yeah. So you can navigate from the bottom, by the way. You don't have to go back. There's a, at the bottom, right, center, you have that navigation panel.
+
+>>Abigail Lowndes	01:02:40
+This?
+
+>>Aniket Tatipamula	01:02:41
+Yeah, Yeah. You can click left, right, yeah. The one of six, right? So there are six documents that were not classified. So maybe one of them would be the doc type that we want to look at. Either that or we misclassified.
+
+>>Abigail Lowndes	01:02:54
+No, none of these are the document that I'm looking for. This is the credit, the bankruptcy search, which was not classified. This is bankruptcy, this was not bankruptcy. This was the Pi case docket. This is the original settlement, how it happened, and this is the docket showing when it started versus when it settled.
+
+>>Aniket Tatipamula	01:03:25
+Yeah, so we would have misclassified then. So let me do one thing, because doing this on the call may not, like it will take a lot of our time. Okay. What we can do for sure is if you can just, why do you want us to do, Manoj? Any specific reason, re -uploading the binder?
+
+>>Manoj Racherla	01:03:55
+Like I just checked in the Aiot classifier, the limit was 150.
+
+>>Aniket Tatipamula	01:04:00
+The page limit was?
+
+>>Manoj Racherla	01:04:01
+Yeah.
+
+>>Aniket Tatipamula	01:04:03
+Let's do one thing anyways, Abhigay. Maybe you share this binder with us. What we'll do is the team will check this out because this is the complete binder, right? We'll spend a little bit of time and get back to you what would have happened. What I would request in the meantime, you don't have to do anything on the platform yet because we are still working on it. We'll fix whatever we've discussed on the call today. We'll look at the binder that you just shared, and then we'll want to do this exercise again, where we do it in a blind way, where we set up everything And then you upload the document again. And then we want to be confident enough that whatever we have set up is working out for you before you actually spend time working on it. Otherwise you will just be looking at things that are failing, which we don't want. I think we made a lot of progress in setting up.
+
+>>Aniket Tatipamula	01:04:46
+Of the validations right will cover that gap so problem statement 2 would be solved as fast as possible which is once we split and classify the extractions and the validations are working fine and will slowly and steadily completely focus on split and classify because that will take us a little bit of time we have to look at few more binders to understand how to do it Right
+
+>>Lauren Boersig	01:05:07
+Okay
+
+>>Abigail Lowndes	01:05:08
+I hope I am making no that makes perfect sense again I understand like I tried to explain like all these binders they all look different depending on what state we're in what originator we're using so they all kind of look a bit bananas especially one like this that's huge So I understand it's not but is that 150 is that our cap like we can't go above that we can go above that that's what Manoj was saying he just changed it on the product but we don't want to do it again on the call we'll do it at Ireland and then we'll get back to you with the results Okay that works do you want to set up something for later this week So we can go over or do you want to wait till next week
+
+>>Aniket Tatipamula	01:05:50
+No no we if we will try to set up one more call in couple of days if possible because we want to pace up this development so likely it will be somewhere at the end of the week if not as in next week hundred percent so But we'll try to do it this week itself Okay perfect just to update Manoj like which week we are in right now of sorry fourth week or fourth week
+
+>>Manoj Racherla	01:06:18
+Okay
+
+>>Aniket Tatipamula	01:06:19
+Okay Cool Abby will drop you an email with all the updates that we had discussed on the call and we'll also test this binder please share this binder with us and we'll we'll keep on fixing just one feedback that we want like do you see we going on the right track from the call today or are we swaying somewhere
+
+>>Abigail Lowndes	01:06:38
+No no you guys aren't swaying anywhere this is I forgot to put to take into consideration portfolio deals which is where we're coming with a few of the things So I've got to get with Lauren so we can kind of come up with an idea for those because those are going to be a big bulk of deals before we get to the actual flow of things sure Abby that helps us and we have a couple of additional requirements we're just waiting for a confirmation that those are the finalized requirements so it's a couple of extra phrases
+
+>>Lauren Boersig	01:07:13
+Right Abby I think we might have a lot of them we do have a lot of them Yeah we're just waiting for the final list so we can check everything sure Lauren will be happy to set all of them up so great
+
+>>Aniket Tatipamula	01:07:27
+I think we took I think it's been an hour an hour and a half So thank you for patiently being on the going through all the binders and Yeah
+
+>>Abigail Lowndes	01:07:36
+Thank you so much and have a great day thank you guys for the work that you've been putting into this because I know it's a lot thanks Abby Abby
+
+>>Manoj Racherla	01:07:45
+I have one suggestion so can you put this like this binder that you just uploaded on the teams as well so that we can download it from there yep
+
+>>Abigail Lowndes	01:07:54
+I sure can sure
+
+>>Aniket Tatipamula	01:07:59
+Okay sorry to just ask this at the end Manoj Paripratan did we miss anything that we should have asked Abby or Lauren Not not not because we can discuss on a couple of days sure okay perfect then thanks Abby thanks Lauren thank you bye -bye
+

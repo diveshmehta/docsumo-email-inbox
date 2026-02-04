@@ -1,0 +1,397 @@
+>>Lauren Boersig	00:00
+You know is for your use case i wanted to first take a minute and understand if there's any feedback on the product And then we can also come on the pricing and discuss the next steps from there on as well so you know we I we like what we've seen from the products um i don't know if Abby has more comments i don't i don't have any more comments i'm good
+
+>>Jasneet Singh Malhi	00:35
+Awesome uh Paul John anything from you folks on the product And
+
+>>Paul Kosinski	00:40
+And then we can obviously like i know a big pointer of this meeting it also discussed the pricing feedback as well so we can i guess um Abby and Lauren are there any gaps in the process as you see it now that doc sumo would not be able to cover under this this current proposal when you say gaps are you referring to documentation or the information that's coming through yep the information that's coming through the association and validation of that information and like how much you know i just want to make sure that there's nothing that you have as a big wish that this is not doing at this point in time um it it's just
+
+>>Abby	01:18
+I think going to be a uh factor of retraining or training the ai to get everything that we need so just an iterative process of going through it uh you know time and time again and figuring out
+
+>>Paul Kosinski	01:30
+Yeah
+
+>>Abby	01:31
+I think that's that's basically where it's gonna where my basic concern is just because i don't know i'm not great with ai So i'm not really sure how it works But from what i've seen it does pick up a lot of things i think it just needs more examples and the more we do it I think it'll get a lot faster better
+
+>>Paul Kosinski	01:50
+Okay
+
+>>Jasneet Singh Malhi	01:52
+So Paul we basically also have roshab here Roshab is our co -founder and co he's based out of New York Uh i just invited him on today's call because he comes with a plethora of experience on working on cases like this uh
+
+>>Paul Kosinski	02:04
+Roshab
+
+>>Jasneet Singh Malhi	02:04
+I was just taking feedback from the team on the product i think Paul had a question in terms of if are there any scenarios where toxomo is not able to address the gaps within the current workflow and abhi to kind of answer your question or to kind of give you some more flavor on that you see we have Solomon and Manoj also on part of today's call these folks are from the cs team uh and basically if you look at the pricing that we've shared with you folks uh the first lift on our end basically the implementation and setup that you see is wherein we kind of make sure that uh we are you know creating the models and setting up the workflows for you uh and ensuring that the baseline structure is in place Right And we want to give you a system which is basically you can plug in into your production and basically get automation from day one Right so that process wherein i think you your concern is that you don't know how to kind of set it up and how to train the model that is anyway we that is a service component and we take care of that And we do the heavy lift on our end So i hope kind of that kind of answers your question or gives you a little bit more flavor on that but rusham if you want to add anything on that that could be helpful is there a way that just just to add on so this is there a way that i can adjust some of the things if i see it on the fly like
+
+>>Abby	03:20
+Oh my god this is not taking right Like what can i adjust or do i have to call you guys And then you guys figure it out with me
+
+>>Lauren Boersig	03:27
+So uh
+
+>>Rushabh Sheth	03:29
+Yeah Yeah uh hi Lauren Paul uh John great to meet you guys uh so abhi to answer your question uh you you can uh basically uh uh adjust it yourself But uh the point is that uh basically uh it will take you longer to learn the tooling like it's quite a complex product by now because we already work with uh quite a few of the vendors we work with uh everyone from Arbor Graystone The Coast Bank next like a couple of them are also in Florida So essentially what we realize is that uh it's just easier for to have like our let our solutions engineering team fix it for you rather than you trying to uh configure it because otherwise you'll get stuck you'll that iteration cycle just goes longer like at least for the first use case we just want you to just put cases through use it and get
+
+>>Jasneet Singh Malhi	04:26
+Value okay another quick thing abhi just adding on to that so we we provide a hyper care model uh you know when you when we onboard you as a customer Right so the first implement in the implementation and setup we provide you a three -person team which is basically a solutions engineer a project manager and a customer success rep and these three folks uh make sure that you know whatever we've discussed in the in this evaluation phase is set up uh in in a way right once the implementation phase is over then we move into a more uh hyper intensive model wherein the customer success
+
+>>Jasneet Singh Malhi	04:58
+Will be your point of contact throughout the duration of your contract and if you have any questions queries concerns you can basically reach out to them and they will make sure to kind of you know help you resolve it within the given slas and the given time frame Right So okay if you figure out something
+
+>>Rushabh Sheth	05:13
+Yeah Yeah and abhi just to be clear like we do charge for setup and this thing it's just quarter end we want to get this one in and roll with it so that's why we have waved it off But like if you don't make money on this then we are just like it's it's it's a lot of work to be honest like because we do make sure that in that first month or two you are able to push through and like because what we have realized like we work with quite a few lenders now and what we have realized is everyone's like requirements and underwriting differs by the asset type differs by how they analyze cash flows and things like that So again just the benefit of quarter end we want to reel this one in and basically start working with you otherwise we understand that it will get pushed out but we do definitely charge for setup and this one to the big guys for sure no worries
+
+>>Abby	06:01
+I wasn't asking about initially because initially i don't think i'd be good for anything i'm you know just like a dog looking at a snack and that's basically all it is so i was meaning like in the future if there's something that happens after that initial period that we need to add or something else that needs to be extracted is there do i always have to go back to you or is there a way it's there a way that i can adjust it myself is what i was asking you can adjust it yourself abhi um
+
+>>Rushabh Sheth	06:28
+And you can like either or if you want to adjust it you adjust it otherwise if you see on the second on the annual subscription the ongoing account manager solutions engineer is charged for uh so if basically you're like just done for you sort of a service we'll also do it Okay basically the whole thing is we don't want you to learn new setups and all of that we just want you to like push through cases and consume data Okay All right i only ask because our industry changes fairly frequently exactly we we know we know like we have like now have experience setting up like we have set up for like Mca lenders we have set up for commercial real estate lenders within that also we have done like multi -family retail um so across the across the loan types we have sort of seen like And yeah i completely understand abhi But you should you will be able to do either or so really up to you
+
+>>Abby	07:27
+Okay thank you
+
+>>Paul Kosinski	07:29
+So jesney real quick um on the uh implementation do we have an idea of how many models will be required to accommodate our use case And you know how long in the past has it taken to set up a similar number and breadth I mean we're a very specialized industry right and our our underwriting is very uh nuanced right
+
+>>Jasneet Singh Malhi	07:49
+So so do you have any general sense of are we going to be at the the the shorter end of the spectrum in terms of time implementation the longer end the complexity like i i want to know what your thoughts are so Paul the easiest way to answer that question is that during the demo setup we have mostly like looked at the document types and we've set up most of the models already what we just need to do right now is to refine them with more data right so in your plan you can see you have unlimited models within your plan Right So there's no cap on let's say the number of models that we would create for you but because of like how how complex your document binders are and the document types are we already kind of seen through them and created baseline models in place so i don't reckon it will take a lot of time standard time i think of around four weeks or even being less than that would would be you know something that we'll be looking at to set up the models
+
+>>Paul Kosinski	08:40
+At least if that answers the question Paul it does um and one thing i'm just i'm thinking about is that we i think we've mentioned to you we may have an opportunity to acquire 3 500 records in the very near future which i should be having a call this afternoon so before we pull the trigger we want to make sure that that's somewhat datable I understand your pricing is not flexible because the same number of documents and same processes have to go uh through that But but where is the price break come into play if we have let's call it you know 5 000 cases for the first year not 1 000 cases
+
+>>Jasneet Singh Malhi	09:13
+So volume uh basically we build all the models for economies to scale Paul so if you have like if you bulk buy 5 000 cases then we can you know basically the per cost per case goes down right So that volume break would automatically come in right so around three to five thousand cases the cost per case would automatically go down so that is the price price break that we can offer Okay is there a way in this contract to uh detail what the price breaks will be yes like when when we you know finalize the first iteration of the contract we can kind of mention the con in the order form itself that these are the price breaks so basically that will really help and we can also like uh adhere to it as well
+
+>>Rushabh Sheth	09:57
+And then as in when you want to add more cases we can either sign an addendum or basically you can buy credits and we can just uh take it right from there Paul to your point i just wanted to make sure that we like uh have the same understanding like all the 3500 uh cases that you're planning to acquire what type of cases would would that be a mixed bag or all all of them are similar product type similar type just the review is not as labor intensive for us
+
+>>Paul Kosinski	10:27
+Right it's more of a a seasoned portfolio review versus a new origination review so we look at some key documents But not all of them So we don't need all of the bells and whistles but it's it's nice to have to to be able to identify a segregate uh detailed information But it's still they're the same types of documents they're probably a bit old though i mean the quality might not be great
+
+>>Rushabh Sheth	10:49
+Yeah because that is where like the nuance comes because if you're acquiring a mixed portfolio then you might need a different uh what do you say case for each of these like if you're doing like Mca versus term loans or something else
+
+>>Paul Kosinski	11:03
+Yeah now these are all annuities and they're going to have some different You know flavors to them But they're all annuities understood
+
+>>Rushabh Sheth	11:09
+Yeah
+
+>>Paul Kosinski	11:10
+Okay um so is the request for us to sign up today so we get a significant price discount so you get your curly targets is that what i'm hearing well can i be honest with you it's actually my birthday today so master salesman by the way Yes i see i'm not even kidding it's actually my birthday i can show you my birth certificate happy birthday thank you so much for that
+
+>>Jasneet Singh Malhi	11:37
+But uh if we can if there's a possibility to close it today i will hit my quarterly numbers and that would be like the best gift for me ever
+
+>>Paul Kosinski	11:46
+Okay i would like to see i would like to see you know the tiering by uh scale um as a first thing uh i obviously have to debrief with the team and make sure that there's no major concerns um And yeah get me some tearing there if you could do listen at 67 dollars per binder where you know we can't offer the market much uh you know we can't charge the market much more than that So it's at best the break in proposition and we have underwriting costs so 25 per case is not ideal for us But and you know some of your competitors are a little bit finer there so if we could bring the baseline from 25 to something below that and then show the economies of scale from there that would be helpful makes so for the first iteration Paul would you want to get started with a thousand cases because if let's say we're getting more cases then obviously that price break i think we start with the thousand But then then the contract should reference
+
+>>Rushabh Sheth	12:36
+Hey if we come in with you another 5 000 cases we can buy up to this level and this level will be at a reduced cost per case makes sense and Paul just to give you a sense about this uh please uh do check our G2 reviews like uh our industry works on uh recommendations so you will see like all of our ratings are the same again like the thought process is pretty simple we want you to see success and then you we want you to refer us to the next Yeah
+
+>>Paul Kosinski	13:05
+And in that um i believe we've mentioned this before white labeling the solution in our environment would be ideal uh so is that something that you still offer or is that something that was not discussed so Paul uh i don't think how like basically you can you can put the so typically
+
+>>Rushabh Sheth	13:24
+What we have seen is that the technology teams directly use the apis in their environment and they don't really need like their ops team uses the products but the customer never sees the this thing like your web app interface remains what it is today as soon as someone clicks upload on your interface you call our api send us the document we take care of it send you back the data so other way we have seen implementations is on salesforce where you put an iframe within salesforce you have a salesforce object which so we have a uh i don't know if you have seen this video But uh salesforce uh let me just send you the link uh so you can have a look at it how this implementation happens as well um so on salesforce we like we create a custom object and you can sort of like put data into that uh but that being said the entire application is powered with just one code base so there is no way to like change colors or things like that so essentially the the good news is your your ui looks exactly like our ui in terms of our workflow processing system so it actually looks very similar um scarily similar um so
+
+>>Paul Kosinski	14:37
+But uh yes uh i get it I guess Lauren we should just talk about the use case with with our consulting clients because i think there's an opportunity for us to leverage this with our consulting guidance uh to get them to a place that could help uh digest these things um we don't deal in the big loan uh
+
+>>Paul Kosinski	14:56
+Type transact. That's a big market. Ours is very specialized and not many people who deal in specialty assets, you know, have the ability to scope, engage, you know, and see through a project like this, but we do.
+
+>>Lauren Boersig	15:16
+We have a, we build a custom database in Azure. Could we integrate Docsumo, like the same thing with Salesforce? Is that possible? Yeah.
+
+>>Rushabh Sheth	15:26
+Lauren, absolutely possible. Are you, my question is, are you using any API middleware or something to push API into Azure?
+
+>>Lauren Boersig	15:36
+I think so. We have, we've outsourced our development team.
+
+>>Paul Kosinski	15:40
+Jorge, do you know what API software is being used?
+
+>>Jorge N.	15:44
+Yeah, we have a bunch of Azure functions running, but whatever you guys have with the API, I like the specs. It'll be fine. It won't be a big lift. I think it was just matching schemas and things like that. Exactly. Okay.
+
+>>Rushabh Sheth	15:58
+So you might need to, uh, so our API documentation is also pretty robust. I'm not sure if this was discussed earlier, but, uh, essentially, uh, anyone who does volume does API integration. Uh, but most people start off with just the underwriting team or the ops team sort of, uh, uh, uh, using it as is, and then basically putting time into the API integration. Okay.
+
+>>Jorge N.	16:24
+Yeah. I, I think as far as we had discussed Lauren, uh, once everything was created on the UI through doc Sumo, we would then just utilize the integration from then on and have users push it through on the UI on our, our side and just take care of everything with the APIs. It should be pretty straightforward. I assume, right?
+
+>>Rushabh Sheth	16:46
+Uh, George, it's pretty straightforward. You can look at our, uh, our, uh, API documentation. I've put the link. We'll anyway, send you the links to the API documentation as well. Um, it's pretty robust. Like we, we take pride in our API documentation.
+
+>>Jorge N.	17:04
+All right. Good.
+
+>>Paul Kosinski	17:05
+Gentlemen, in terms of, um, uh, time payment schedules, what, um, you know, in the contract, it's not clear to me what's due when, can you also lay out timing of payments and, and how the, the amounts will be billed and, uh, you know, paid just neat.
+
+>>Rushabh Sheth	17:25
+You're not just neat. If you're speaking, you're on mute.
+
+>>Jasneet Singh Malhi	17:28
+Oh, I'm so sorry. Uh, hate that when that happens. Right. So Paul, it's pretty straightforward, right? Essentially, uh, how we set up the, uh, the structure is that we would be creating an order form, right? For, uh, and retailing out all the price breaks and everything, which is, you know, for this, uh, thousand cases. Right. Um, and you can, you know, we'll have a kickoff call, which is, which is usually scheduled for Mondays. So we can have a kickoff call next Monday. Uh, once like the CS teams has a handshake, uh, with you, with your, with your team and sets everything up, then, uh, we would raise an invoice for the subscription cost, which is the annual cost. And then, uh, once that is cleared, then we can move towards the setup and implementation and, you know, get, um, so the fall 67 is due up front. Correct. Okay.
+
+>>Paul Kosinski	18:13
+All right. So from a capital budgeting standpoint, we just got to take that into consideration. It's a monthly licensing cost. It's a 12 month contract, right?
+
+>>Jasneet Singh Malhi	18:24
+Correct.
+
+>>Paul Kosinski	18:24
+So you don't have a monthly option?
+
+>>Jasneet Singh Malhi	18:27
+Uh, no. For, for this cases, we run, uh, uh, the minimum is an annual contract, uh, but if you want to sign a multi -year contract, then obviously there's a multi -year discount also that we can offer, but this is basically the, uh, we run.
+
+>>Paul Kosinski	18:42
+Right.
+
+>>Jasneet Singh Malhi	18:43
+Okay.
+
+>>John Pascale	18:44
+So it's a 67 plus the 20.
+
+>>Jasneet Singh Malhi	18:47
+Uh, the 20 is waved off. Uh, so 20 ,000 is waved off.
+
+>>John Pascale	18:52
+Okay. Got it.
+
+>>Paul Kosinski	18:53
+Yeah.
+
+>>Jasneet Singh Malhi	18:54
+So that is how we've structured the contract. It's, uh, struck off.
+
+>>John Pascale	18:59
+Got it.
+
+>>Jorge N.	19:00
+Are there any, uh, these associated with the API usage?
+
+>>Jasneet Singh Malhi	19:03
+Everything is completely built in on the platform. You, what you see is what you like get, like nothing. Uh, so everything is included. Models are unlimited. We have the, uh, all these features, we have the API documentation and the API as well. So there, there are no hidden costs, right? Because all, uh, all things are factored in, even the support is also factored in. So you won't be required to pay anything more, uh, for the thousand cases. But if you plan to like bulk buy more cases, then obviously, uh, that cost will be corrected.
+
+>>Paul Kosinski	19:32
+So, so Jesse, how does it work with the proof of concepts construct, right? So we have, uh, you know, six to 12 weeks to get it implemented. To make sure it works for us. What, how does the annual upfront payment either? I mean, how does that work in that construct?
+
+>>Jasneet Singh Malhi	19:48
+So we are pretty confident that, uh, you know, this is because we have a lot of experience when it comes to working with lenders and
+
+>>Jasneet Singh Malhi	19:55
+Basically we are pretty confident that we'll be able to make it work for you, right? So that is why we've gone ahead and also waved off the implementation as well because we know that this requires considerable effort and in order to kind of incentivize it for you better and since it's the quarter end as well, that is where we are coming from. And we are pretty confident we'll be able to make it work for you. Okay.
+
+>>Paul Kosinski	20:18
+Yeah, one ask I might have is that maybe we prorate the proof of concept period for the three month period that we pay that upfront and then pay the remainder at the time that we are out of Poc. Because I mean, I don't want to go out of pocket for a full year's worth of licensing fees that, you know, if it doesn't work, we have to separate, right? And then, you know, we don't want to fight that.
+
+>>Rushabh Sheth	20:39
+Makes sense. Cool, Paul, I think fair enough. We will take that and we'll create the order form. We'll basically do a three plus 12 so that you get, you can, you buy the three months and then - Yeah, just one piece, Paul, which you mentioned because so we have not talked about the embedding piece because whenever we would want to understand like, what is it that you wanted to embed? There are a couple of pieces that, which are under development and we are actively looking for like design partners. So eventually like we are working on like like an entire form, form, embeddable forms inside. Essentially, like one of the key requirements that we have from a couple of customers is to be able to send out an email with a link. You click a link, it has a page. You have requirements that you want your customer to fill out, like upload things on that page and that becomes your primary interface. So, so that is coming up, but happy to sort of take that up.
+
+>>Paul Kosinski	21:44
+So we're a little reactive on the, on the initial onboarding, right? So there are a few forms that we would love to have filled somewhat live with our counterparties. But usually we're getting a package and it's pretty much full. But I guess, Abby, you know, the closing statements to annuitants and stuff like that, that might be a good test case for the, the form fill like live, you know, back and forth between us and the clients. Or I'm just trying to think what could, what could might be better?
+
+>>Lauren Boersig	22:14
+What we wanted to embed in our database was like the case management side. So that the user, when they were navigating to the, the case related to the documents, they can see the case management. Um, report, uh, because that's kind of going to be like our historical, um, you know, proof of underwriting.
+
+>>Paul Kosinski	22:40
+Yeah. Listen guys, uh, we're actually pretty flexible too. There's, there's a project and a solution that you're looking to out, roll out. I mean, we, you know, to the extent we have the, the, the capacity and resources, we don't mind being guinea pigs, so to speak. Right. And, and helping out and figure it out. So, um, yeah, well, I, listen, I, yeah, we can certainly give some insight into how it would work for our use case.
+
+>>Rushabh Sheth	23:02
+Yeah. Makes sense. As in Paul, we can take it up. If let's first get you up and running in that three months. And then if you want to embed it and use the forms and all of that, by that, it would already be released. We would already have tested with a few customers and we can come back to it.
+
+>>Paul Kosinski	23:17
+Got it.
+
+>>Jasneet Singh Malhi	23:18
+Okay. Just one question for the three month POC period. How many cases are we looking to have in this three months so that I can structure the order from accordingly?
+
+>>Paul Kosinski	23:27
+Yeah. I mean, uh, Lauren, what do you think? It's, uh, probably going to be a few hundred.
+
+>>Rushabh Sheth	23:37
+Makes sense.
+
+>>Lauren Boersig	23:38
+I mean, we have a bunch of test cases that we could put through. So the recommended volume to prove out proof of concept.
+
+>>Paul Kosinski	23:46
+That's, that's a good question. Yeah. Jasni, what do you think is a good sample size?
+
+>>Jasneet Singh Malhi	23:54
+Honestly, Paul, with an AI solution, as many, you know, samples we can get is less. Right. Because the model is as good as the data that we feed into it. So if you can like, if you want, because for the Poc, you would need to define what our success metrics are and, uh, a closed Poc will need to define, like, these are the cases and this is the automation rate that we could achieve. So it would be helpful for us to also structure the Poc, uh, and the order form and also kind of define those success metrics and backtrack to that when we want to get to the.
+
+>>Rushabh Sheth	24:26
+So what we can do is we'll just, uh, prorate it. Anyways, like, uh, we are pretty confident you'll go into this. The, it won't expire. Basically it will just roll over into the 12 months following that. So the easiest option is to just prorate this and then whatever you use. We will do more than mobile.
+
+>>Paul Kosinski	24:43
+Yeah.
+
+>>Rushabh Sheth	24:44
+Yeah. If you need more, then that's even better scenario than you just buy. Yeah.
+
+>>Paul Kosinski	24:49
+I think in the instance, we're going to need more than one quarter of, uh, in the first three months. Right. Yeah. Cause I, we have.
+
+>>Paul Kosinski	24:54
+Tons of cases that we could use as test cases and again there's 3 500 i should get a not pretty quickly
+
+>>Rushabh Sheth	25:00
+Yeah um exactly so at any point like if this is working you said Like okay i just need more volume just let us know Okay yep
+
+>>Paul Kosinski	25:09
+And that that uh cost per case you know is really what's going to drive that Yeah
+
+>>Rushabh Sheth	25:13
+Okay Awesome awesome
+
+>>Jasneet Singh Malhi	25:16
+So our team we run our kickoff calls for every monday so would it be okay if i can set up a kickoff call for the 6th of october which is next monday Yeah
+
+>>Paul Kosinski	25:24
+Well why don't you send across the uh the updated uh contract let me circulate it to the internal stakeholders make sure we're all on the same page there's no questions concerns um we'll try to get back to you today this is where we could try to fund things up and then yes if it falls no i think maybe we'll you can pencil in monday or Lauren Actually you're the one who's most you know you let us know what works for you because monday at noon uh this is eastern time
+
+>>Jasneet Singh Malhi	25:52
+Yeah
+
+>>Lauren Boersig	25:54
+Awesome
+
+>>Jasneet Singh Malhi	25:55
+So i'm just putting up a placeholder for noon right now i'm duplicating the same invite uh once we have i'll after this call i'll be sending and sharing the order form with you folks uh and once that is out of the way uh we can pencil that in for monday so just give me one quick second sixth of october so you said 12 noon
+
+>>Paul Kosinski	26:20
+Right
+
+>>Jasneet Singh Malhi	26:20
+Yeah Yeah
+
+>>Rushabh Sheth	26:30
+Perfect
+
+>>Jasneet Singh Malhi	26:31
+I've just sent it across as a placeholder uh And then i think we can once you send across the order form we'll take a look and we'll come back to you with any any thoughts and Paul you'll be the signing authority on the order form like i'll need to address it perfect
+
+>>Rushabh Sheth	26:50
+All right
+
+>>Jasneet Singh Malhi	26:50
+I'll be sharing it with you by the uh by in in the next half an hour and then hopefully we can get this out of the way today okay sounds like a plan perfect thanks Paul thank you Bye bye thank you
+
+
+
+
+>>Rushabh Sheth	00:00
+I have my kids live in New York so i get to go back to see all the seasons and i usually get one snow day when i go back And it's plenty for me very nice I can bet like i'm in India So it's more humid humid if not like same But Yeah I i guess uh India weather is similar to Florida in a lot of ways i was there uh Actually i visited Miami in february this year i was there for like almost a week
+
+>>John Pascale	00:26
+But it was probably like on the cool side Right yeah Because i think i don't think i can take like Florida summers either it's too old i've been here for almost 30 years now and believe me when it gets below 70 i'm freezing and i used to you know my blood really thin you get used to it John we have to get you to India because you've already developed quite some resistance to it so the plan is to get to India in the next couple of years one of our um colleagues uh who used to work for me here in Florida She her family's in India And she moved back temporarily so she's still working with us So she keeps trying to get us there you should like we'll we'll be more than happy to do that awesome
+
+>>Paul Kosinski	01:15
+Hey Paul how's it going today happy how was your birthday jasmine Uh it was well Paul it was like you were working all day uh they don't give you a rest today
+
+>>Rushabh Sheth	01:26
+I i think this is a question that Paul i have to ask to ask you like do you give holidays No we don't we don't have vacation
+
+>>Paul Kosinski	01:36
+No we live in the US there are no holidays we're slave drivers Yes and Paul we work when you are working that's right that answers it appreciate it uh awesome
+
+>>Jasneet Singh Malhi	01:49
+Uh so i think uh team so um again thank you so much for uh you know quickly jumping on today's call so Lauren we quickly want to just understand uh you know the check processing use case ones in a little bit more detail so that we just don't miss out on anything important so uh we there are two ways either we can just you know get started with the scope that we have right now on the order form or we can take some time understand the check processing use case understand what volumes would it would be and then update the order form accordingly and Then uh have both of these tested out in the poc itself Yeah
+
+>>Lauren Boersig	02:27
+I think we want to do the scoping um just because with the pricing we want to confirm like what the pricing would be because the the the pricing right now is just it's higher than it would take our it doesn't make sense for us to go with a solution that's not going to be the solution for both ends of the the uh workflow so that's what it comes down to
+
+>>Paul Kosinski	02:48
+And and again i don't think this is you know all that labor intensive of a process Right i mean checks have been around since forever i'm sure banks Ocr them All the time right They're typically within a very finite number of places the information that we're looking to extract so um you know short of edge cases where we have some statements and stuff that go along with uh remittances uh it should be pretty cookie cutter and Paul this is for your servicing function correct Yes
+
+>>Rushabh Sheth	03:17
+And so how many how much how many debts do you service per year and how many payments are you looking at well
+
+>>Paul Kosinski	03:24
+So right now we're starting from whole cloth Right So we we were in a position in our previous company where we were doing 10 000 plus checks a month right uh or payments now we're starting a new business in that same space so all the originations we're going to be doing for the file onboarding the the case management are going to translate into 40 year streams that we have to collect payments over right So it'll accumulate over time it'll be low volume up front but high volume down the road uh which is you know uh the kind of the opposite of what nations looks like understood and so uh so as of now you don't have volumes for the servicing but that's right uh this would all be new uh we are we have a couple bids on bringing in some portfolios that 3500 records we've been talking about that would be in on a servicing basis so that will start crash falling pretty immediately put another bid in today for another few hundred records Right So we're actively out there sourcing these so we can get to somewhat of a scale pretty quickly but not all these annuities pay every month current Right so a portion of them do and a portion of them pay annually But uh you know we can get to a few hundred checks a month in the first year i think got it
+
+>>Rushabh Sheth	04:33
+Okay I think got it Paul uh understood essentially it's just a good to have add -on as of now uh at least till you sort of like if till it becomes like a major portion on the servicing side of things uh did you have a price point in mind because like like either ways it doesn't matter because it's uh Yeah I mean we need to be close to a dollar
+
+>>Paul Kosinski	04:55
+Right So you're almost five x four to five x
+
+>>Paul Kosinski	04:58
+Right now uh can you do 1 .5
+
+>>Rushabh Sheth	05:01
+All then we'll just send it to you like just just to make sure that uh i'm sorry can we do 1 .5 1 .5 dollars for that uh check processing because we still have to run through in the in the slot in the small scale yes uh once we get to a larger scale we're gonna
+
+>>Paul Kosinski	05:16
+Yeah
+
+>>Rushabh Sheth	05:16
+We'll get to it and then can we just put that as for the first year would that be like thousand So you're talking about 1 .5 times thousand uh so that would be fifteen hundred dollars yeah
+
+>>Paul Kosinski	05:28
+There's a thousand that'll be the price point similar to the files where and then we're gonna break above a thousand Yeah Correct
+
+>>Rushabh Sheth	05:35
+Yeah then basically as like all of this works like if you ramp up faster and you acquire that portfolio and suddenly you're getting like 3 000 checks then we'll just ramp it up like as you can just say let us know in multiples of 500 of how much we want to top up
+
+>>Paul Kosinski	05:51
+Okay Lauren did that work for you Yeah
+
+>>Lauren Boersig	05:54
+Okay
+
+>>Paul Kosinski	05:55
+Okay
+
+>>Rushabh Sheth	05:56
+So then practically there's not much difference in the order form we just wanted to understand that because at least so we work with arbor and their servicing team is huge they service like in tens of thousands of loans so basically like we just wanted to make sure that like we understand like how how much of a big
+
+>>Paul Kosinski	06:13
+Yeah it's again it's a ramp Right so it will be it's going to be some time before we get to that level uh Yes But but we fully intend on doing it at a bigger scale so uh this will be leveraging the software longer term it's just again we got to figure out a solution we don't want to go down this path on the case management and then pick another vendor for the check management and then have to integrate both and manage both so great cool Paul then we'll put it on the order form we'll put like uh basically thousand times 1 .5 and then prorate it for the first three months
+
+>>Rushabh Sheth	06:44
+Okay all right all right and are we still good on the monday start So we'll send you like the checklist for uh all the things that we need uh in terms of most of it we have because i think one of the things that we loved working with your team is that document you guys sent because that was super clear uh So Yeah i really appreciate that when someone does that because that like makes it easy for everyone to work along because then there's no ambiguity uh But i'm pretty sure like on the data side our success team will have certain questions because some of the points that you had put over there like were questions like check this check that But what does it mean in terms of like the actual data points like the data types is it like a string number date if it's a date then are you looking at things so basically we'll send you that checklist once our team starts looking at it But uh we'll keep monday like i'll basically prime our team that monday we kick off with you guys Lauren you good with that
+
+>>Paul Kosinski	07:44
+Yeah
+
+>>Lauren Boersig	07:45
+I'm good with that Okay
+
+>>Paul Kosinski	07:46
+Abby uh well Lauren we need the whole team or is this the first scoping is going to be i think we need Abby and me
+
+>>Lauren Boersig	07:53
+Okay
+
+>>Paul Kosinski	07:56
+I'll probably set out the first uh the first kickoff call But uh we'll be dropping in every now And then
+
+>>Rushabh Sheth	08:01
+Yeah awesome uh awesome team then we'll update the order form we'll send it to you and uh then if we reconnect once once everything is good once we sign off we'll we'll send you uh the invoice also and we'll also um tell our success team to arrange a call for monday
+
+>>Paul Kosinski	08:21
+Okay sounds good sounds good Awesome great thanks everybody appreciate your time
+
+>>Rushabh Sheth	08:26
+Okay
+
+>>Paul Kosinski	08:31
+So we'll quickly just update the order form
+
+>>Rushabh Sheth	08:38
+Yeah
+
+

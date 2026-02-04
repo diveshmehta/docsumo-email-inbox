@@ -1,0 +1,513 @@
+>>Bikram Dahal	00:00
+Fire today? Yeah, it was a really bad three hours, so everything is back to normal. Yeah, so overall like hopefully we'll not have any more issues now. Got it. Yeah, I know some of those are unpredicted. It's tough. Yeah, also like we could not do literally anything. Like for Cloudflare, we don't even have a backup plan, which like it's our DNA, so like we have not even thought about it. So we need to go back and plan some like some... Back to the drawing board a little bit? Yeah, because like it handles everything. Like it's very complicated because it's not just app, it's all our emails, everything. Nice.
+
+>>Neil	00:42
+I think we use, Manisha, Scott was saying we use a little bit of it too, but it didn't seem like we were impacted.
+
+>>Vinisha	00:49
+Yeah, we are not impacted much.
+
+>>Neil	00:51
+Maybe the region? Yeah.
+
+>>Bikram Dahal	00:55
+Awesome. Yeah, Neil, just to give you an update, Workflow finally got released this week, so I just wanted to catch up with you guys because it's not live on your account right now because we will make it live at least by mid of next week because we are just doing some testing on the three accounts and some other final testing because it's a very big feature. We're just making sure that everything is stable before we enable it on the paid customer. So now that everything is ready on our side, we just wanted to catch up with you guys and also get the idea regarding the APIs and then plan this project forward.
+
+>>Neil	01:33
+Right. Yeah, I'm not sure if Manisha mentioned, but we did a lot of work on... Manisha did a lot of work on the APIs. We are still testing some, but in theory, the needed items for the carrier, anything with appointments related is complete, but we're still fine -tuning some of our testing. We would like to actually do some testing obviously with your solution as well to help at that Api. I don't know. I think last week I sent you guys a link of our Api documentation. I don't know if you guys had a chance to look at it.
+
+>>Bikram Dahal	02:17
+Yeah, I had a chance to look at it. So I had a few questions. So I just wanted to, because Manisha is also on the call, I just wanted to ask a few questions And then we'll take it from there. Yeah. Okay, so let me just share the screen and sorry guys, my voice might not be a bit clear. I'm having something on my tongue, so please stop me if I'm not clear. I'm more than happy to repeat it.
+
+>>Neil	02:44
+Okay.
+
+>>Bikram Dahal	02:46
+So I have the documentation over here. So mainly, like you said, the order and the appointment APIs has been done by Manisha. Now the first question that I had, because you need X client ID and X Api key, I wanted to know is this X client Api and this one, is this a master Api keys or it is different for client?
+
+>>Vinisha	03:18
+Yeah, so... Oh, go ahead, Manisha. It depends per client. Right.
+
+>>Neil	03:24
+Okay. Yes, you're right, Manisha, but I think what we would want from your guys' solution is we would get you guys, you guys would be a client in some sense, but Manisha, yesterday we kind of talked about having another Api call by user. So like you're gonna get emails, you know, sent to you and those email accounts, email addresses are users, potentially. So there needs to be an Api call to validate that that user has access to whatever customers or carriers.
+
+>>Bikram Dahal	04:07
+Yeah, so that was the part I was trying to like understand. So like, because there are two parts of it. The first one is like, how do we do that authentication? So on this workflow, the first one is, we receive an email and we send an email to, we capture that email and we send that email to a certain Api and that Api will give us this two information or like that Api will give us something else. So that's the one part, authentication part, that I just wanted to clarify if you guys have thought about it or like just wanted to understand that and then we can move to the next thing.
+
+>>Vinisha	04:46
+Right.
+
+>>Neil	04:46
+I think we're still thinking about it, but I, Manisha, chime in, but what I'm thinking would be, there would be an Api call for user authorization to send back to Docsumo
+
+>>Neil	04:58
+The pretty much the carrier and the customer and warehouses that they have access to that user But we would give doc sumo a separate client ID and scroll up the and the Api key so they have like their their one their one for their whole solution, but having a user author authorization Call I don't know finish if you've thought about it or not or separate per person That because these people are gonna change, right? Yeah, because this plan I want to change or another idea is we obviously don't want The person needs to have access to our portal number one, right? That's how we can Security we could Venetia we could maybe assign a client ID and Api key for every user on our portal that we want like Okay, like maybe not everyone but one that we want to use And then they can doc sumo can them Pull that based off of the off of that call right there. Maybe I don't know.
+
+>>Vinisha	06:08
+No, actually Neil we don't need By user we can give in like admin Access because all these emails are the internal users, right?
+
+>>Neil	06:18
+No, no, well right now you're seeing I'm porting you some they're internal but these are gonna be External like, you know long -term, let's say But we need to make sure that those you know that external email has that user has portal access
+
+>>Vinisha	06:36
+But you mean that? External user gonna give their email access To I mean for this one
+
+>>Neil	06:44
+So Okay, so right now we get email. So we get emails daily to our team to to you know, change something or do something right and That email address the sender The Yeah the sender of that email also has portal access Okay
+
+>>Vinisha	07:07
+So I was thinking I Was thinking these They'll go through emails only of the internal users and then they get these data.
+
+>>Neil	07:15
+I mean at first yes, because we're gonna take this very slowly right Like We probably would especially in testing we would probably forward some emails and and see what it does but the intention would be to Take that aspect of a customer service You know
+
+>>Bikram Dahal	07:35
+Yeah, so Vanessa just to give you idea You can see my skin, right?
+
+>>Vinisha	07:42
+Yeah, I can see you
+
+>>Bikram Dahal	07:42
+So once they send the email will classify and we figure out like what is this email about? The customer is just asking for the etc stick then I will Like we'll get that email Id We'll set that email ID to your system and say that this does this user have like Ss to Ss to your platform or not Now if they you have you say that you have access to this platform Then we'll say that does this user have access to view this this order ID? And if they have Ss then like you send us that information back so what we'll do is that like we'll go to orders and then We'll do a search base of this parameters and then whatever output that we get We'll make that into our email and then send it to that person back So that whole process where people do that manually we're looking into automated So for that purpose and for security purpose It's not good idea for me to always as we have a admin SS because we can become like out bought So not have admin SS, right? You should only have a Ss example if I go to email ID from and this is the email ID example I have received from one of the customer what he wanted to do was he wanted to delete a apartment and based on pure number And you have told me that there's a pure number please find this pure number on your account and please delete the Appointment now what we want to do is that once I receive this email I have an email ID I want to send it to the email your system and say that Does this email ID exist or not if it exists if you say this is good. This is the Like valid user Then I'm going to make this request But this request I'll also send you the information about that that email
+
+>>Bikram Dahal	09:28
+And then you have to tell me that Oh here is the Order detail or you say that Oh this user Do not have access to this or to view this order. So then you have to block it, right? So that whole process has to be completed on your APA
+
+>>Neil	09:46
+Yeah, so I think we have to kind of Figure out how we're going to we haven't done the the user authentication You know that that they're gonna be passing an email address. That's the only
+
+>>Neil	09:57
+Only thing that's what we can validate if there's access. I guess the question becomes, do we want to assign a client ID Api key per user and pass that back for you guys to then use to call the next step? Or if we give you guys a master client ID and an Api key, technically you can call on anything, which I don't know if that's best from a security standpoint.
+
+>>Bikram Dahal	10:31
+That also might be fine, because in our case, also, we'll put a thing on our system, because all of this are AI -based. Or they are not completely AI -based. But there's a rule -based system and everything. So none of this job is done by, only a certain part of the job is done by Ai. Example, figuring out if this email is about checking a status is done by Ai. But this action of checking the status is never done by Ai. It's a fixed Api call that will be made. And before I make this call, I'll assign a block over here that will just give them that Api key only. They will not give it the next Api key or other Api key, even if I have access to it. So that way, those security will be there. For demo purpose, because we are using testing environment, we might be able to use the admin access. But on production, once you guys go live, then it's better to make sure that either you guys give us that Api key and client ID, or we have it on our system. When this bot runs, it will only be able to pick up that client ID and see if it can do those operations. So we need to think it from both perspectives.
+
+>>Neil	11:43
+That's what I'm thinking per user. I don't know. Vinisha, what do you think?
+
+>>Vinisha	11:51
+Actually, I was thinking to make another Api call, which is not authorized or something. And then show something to connect to our portal and say what access this user have and what warehouses this user have.
+
+>>Neil	12:06
+Right. Ok, so they would pass the email address to that Api call, and you would pass back what they have access to.
+
+>>Vinisha	12:15
+Yes.
+
+>>Neil	12:16
+And then from there, so we would just give Docsumo one client ID Api key, and then they would, or what's your thought on that, Vinisha?
+
+>>Vinisha	12:26
+Yeah, I was thinking to give one Api client. Yeah, I was thinking to give one. But I was thinking to restrict them from getting all these accesses until they pass a special one, which I passed. Ok.
+
+>>Bikram Dahal	12:42
+I'll give you one example. Like, let me say email comes from Vikram at the rate Docsumo .com. And Vikram at the rate Docsumo .com is a user on your system. He runs a company called Wine1234. Let's say he runs a company called Wine1234. Like, an email comes. My system took Vikram email ID, sent to your system. Your system says that, oh, this is valid. Like, this is valid. Like, this is the user ID of this user. Because when you make your access to your system, either you'll use an email ID to further filter, or you'll use some ID, user ID, either email or user ID. On your system, you say that, oh, Vikram is a valid user. You might also send all the metadata, what access I have, what company I have access to and everything. You might send those data. But in my system, what will happen is after I get that validation on that email, I have just told that, here's the Po number. Give me a status of this Po number or this order number. Now, when I make an Api call to you, here, let me say on this Api, I will just give you the order number. In this call, the order number, when I send you that information, you'll also have to double validate because that order number might be, or let me not give example of order number. It might be Po number or something. That order number also, I might be asking access to order number of third person because on your system, if you don't validate this order one more time, saying that this person should, there should be one more filter saying that client ID or something, then even if I don't have access to that order ID, you'll be giving me the information about that order because your system has that order, but maybe it's not, I'm not authorized.
+
+>>Neil	14:40
+So I see what you're saying. On this one, once you guys see our data better, our order number includes the client ID prefixed with the order number. So, and also there, what we didn't send to you guys is,
+
+>>Neil	14:56
+Some lookup values that you would pass on certain things like what to expect and some of these parameters we have that documented as well.
+
+>>Bikram Dahal	15:06
+So example in this case I always have to send you a client ID example for Bikram I love to always send a client ID and you're also using that client ID and that order number then there's no issue because then like as long as it's authenticated as long as I use a master like key And I always send you that order ID sorry user ID And you are going to use that to filter it out then we should be fine like we don't might not need extra like Api key and everything because anyway you are not going to see across all the all the like all the order ID you are only going to look into that customer that order ID So just I don't know if I made sense or not But yeah That might be fine
+
+>>Vinisha	15:54
+Yeah actually that's what I was telling like I need the email address uh yeah
+
+>>Bikram Dahal	16:00
+The email address or the user ID to validate that sure then that is the case then like then that's what you find because on this case on this schema I always have always had to send the user ID and or user ID or something from ID from information either I have it already or I get it from this authentication then which would be fine because you can just make sure that if you can get those information you can just send a 40 or some 402 request then like you will not get the Ssi so that should be good enough solution for like it's a not even that's good enough it's a good solution for the future also Yeah okay
+
+>>Vinisha	16:36
+That makes sense actually that's what I was trying to tell okay
+
+>>Bikram Dahal	16:40
+Sure then that that might be fine Neil like we can experiment and then see if there's I'll also get my moving team over there just to see if there's a hole on my assumption but usually that should be good enough but Neil I have a question so they doesn't have access to their warehouses or any like it's an outbound or inbound
+
+>>Vinisha	17:02
+So they'll pass only the pivo number
+
+>>Neil	17:05
+So these all links doesn't work so I might need to create a new one or well hold on so that's for that Api call but the expectation would be before they which Api you want to scroll up a little bit uh it's auto So uh uh collapse that one and go go a little bit down so Venetia we have another one called um what get opened orders that that doesn't require as much detail right but it requires whether it's an outbound or inbound
+
+>>Vinisha	17:38
+Right right
+
+>>Neil	17:40
+Right Right so um I'm wondering one more thing is from the email they don't know which warehouse uh right But could they pass on on our Api call Venetia could they pass a multiple uh in that string for warehouse um
+
+>>Vinisha	17:58
+No currently I didn't allow that
+
+>>Neil	18:00
+But maybe we look into that because they'll get our warehouse based off of the user Authentic authorization
+
+>>Bikram Dahal	18:05
+Right
+
+>>Neil	18:06
+Yeah
+
+>>Vinisha	18:06
+Yeah okay
+
+>>Neil	18:08
+What about uh inbound and outbound would they can they can you pass both or
+
+>>Vinisha	18:15
+No um I can pass both okay because
+
+>>Neil	18:20
+Yeah You depending on what how they write the email you know you guys in dosimo you guys may not know if it's a delivery or shipment I mean maybe depending on how what you know pick up but how does your because how does the user know it's outbound or inbound uh because they yeah Based off the email they kind of read it and have you know hunch you know and and kind of figure it out um but and can that auto number or pure number be both inbound and outbound very rarely I
+
+>>Bikram Dahal	18:58
+I mean I think I think that's very very very low risk then that's really fine because you can try both and then whatever we get uh like we can also like once we get that we can also verify it one more time asking Ai does it make sense and Then like then uh or put that into review if you find to both on inbound and outbound then we can just have a review thing so that people don't you don't take action until someone comes and says that Okay
+
+>>Neil	19:23
+This this is correct and Ai might be able to pick it up because like you know they're gonna write an email I want to change this pickup you know I want to Yeah Like I have a feeling because that's what's going on right now our our team's reading the email and said okay I'm whatever words they say that's most likely an inbound and most likely an outbound
+
+>>Bikram Dahal	19:41
+Yeah that should be easier like I think uh like uh it should be right 99 percent of the times Okay sounds uh sounds good then um one other thing Uh like Neil I wanted to
+
+>>Bikram Dahal	19:55
+To finalize, because on the same thread, sometimes the conversation happens multiple times. And so that is one part where we need to see some emails and everything. But that is one part where we had some confusion and we need to do more testing. But because what happens is that if it is just like asking additional information and everything, it's not that difficult. But sometimes what happens is that you are talking about one order, you finish that information, and people just send a next request about something else on that same thread. And then that thread will just continue and then you have more than 20 threads. So that is one other thing that is a bit like, on our side, we are just trying to figure out how to make sure that are properly handled on our side and also shown on the Ui, so that people know that, okay, the thread is the same, but this is, we are talking about the second thing, not about the first thing. So that is one thing where we are trying to figure out that is case and everything. I will give you guys a posted, like once we see more of this case and everything.
+
+>>Neil	20:56
+Right, yeah, it kind of depends on.
+
+>>Bikram Dahal	21:00
+Yeah, I had one other question regarding the volume, right? Because I have not received a lot of like emails, like in total, like I only had about 30 or 40 emails. So I just wanted to know what is the volume that you guys have currently for the day? I know last time you told me 200, but not everything has to go through our system. So I just wanted to know what are
+
+>>Neil	21:20
+The - Well, I think the purpose, we're manually forwarding it to you. So I think she's probably getting sidetracked. But these types of emails that you're seeing, yeah, the volume is probably a couple hundred a day. We can, I can have, I can ping her to send you some more examples. And then if you stop seeing it from her, just give us a caller.
+
+>>Bikram Dahal	21:47
+Okay, sure. Anyway, on that case, like for the experimentation purpose and everything also, anyway, I think at least we'll need enough email for a week, just like forwarded only, like not done anything, but just forwarded only. Because the major issue, like Neil, because we are doing a lot of this scenarios and everything with other customer, like on this one, the bigger issue that we see are just all these S cases. And usually I like to get more data from you guys and make sure that those S cases are solved at the very beginning of setup so that you guys have better wow moment. Because 10 to 20 % of the cases will be solved as like a no brainer, because it's a very simple request, simple thing, this one. That 30 % is where like a lot of wow -ness and lots of complexity happens, right? So is it possible, but I know like we cannot directly get the Ss to the, we didn't want to make, we don't want to make any Api call to the production right now during the testing phase. I totally agree on this one, but I would still like to see like those emails get collected and maybe we'll simulate those things on our testing environment.
+
+>>Neil	23:01
+What we can also do too, we can send you some more emails, it's not a problem. The Api call right now is only synced to our dev environment. So I think the next step is to, obviously we have a lot of data, we have to do the authorization part, but we need to do some testing with just test data. And we can maybe like, what we can probably do is, we can pass down the same orders that are in production into test, and then we can store those emails and kind of see what it does.
+
+>>Bikram Dahal	23:34
+So one thing I was thinking about is that like, if it is easy, then maybe we can do it right now so that we have those emails. Vinisha and maybe Neil, you also know the answer. Your testing environment, can you guys completely replicate the production environment of last, like let me say today or like maybe last one week or like whatever time, and can you make sure that that testing environment is one -to -one replica of your production environment, T minus seven. So what I mean to say is that today, if you want your testing environment to be a complete replica of production, can that be done or that cannot be done?
+
+>>Neil	24:14
+From data standpoint?
+
+>>Bikram Dahal	24:16
+Data standpoint, because if we do that, then what we can do is, we can go through that email that we already have on our system and then see, like make the changes into that testing environment. So can the, whatever is on production, can it be replicated into your testing environment or that is, that sync is like, you have to do it manually.
+
+>>Neil	24:36
+Vinisha, don't we have another portal that over the long time ago that was using the production data, but test still or no?
+
+>>Vinisha	24:45
+We have that, but that uses production data, but Vikram is asking that, can we replicate, like there will be another database. So,
+
+>>Vinisha	24:55
+The thing is, it is very hard for us to replicate the production to dev because we need to update a lot of tables. Oh, okay.
+
+>>Bikram Dahal	25:05
+Yeah. Okay. Because the thing I'm thinking right now is there are two things, right? Like, all of these things has to be later on, for next one week or two weeks, there's no issue. Like, we'll just run a small experiment. But for you guys to get the confidence, I'll have to run you through, let me say, a thousand or even 3 ,000 different emails, and then we have to do a dry run. And for us to do a dry run, we'll have to make sure that at least there is some database in your testing environment where the Ai can go and make those changes. Otherwise, you guys will never get that confidence. Because it's not like... I mean, it's not like that Bol, because Bol, because we test 10, because it's on the same format, we could go into production in no time. But here, like, we have a lot of things. So, usually, we test at least 1 ,000 to, like, 3 ,000 emails, both from our side and your side. And we need to do a complete dry run, in a sense that, like, it has to have complete access so that it can make those changes. And it's still... You guys don't have any... Like, you have to put the confidence on Ai, because that's so many important. Like, having confidence on Ai is a very tricky part. So, I'm just trying to figure out for a long run, before this goes live, what is the best way for us to make sure that test, and also make sure that that test can run something on the dev environment, completely end -to -end.
+
+>>Neil	26:25
+I mean, we can push manually the data, right, Vinesh, but we probably have to redo it every day. I don't know if we can make a job that can do that.
+
+>>Vinisha	26:37
+You don't have to do it every day.
+
+>>Bikram Dahal	26:38
+We can only do it for the time frame, like, for example, we'll collect an email for next one week. All right? And then that email comes to us, and you guys forward all the email that you guys have for next one week. Then we just need to make sure that at the end of the week, whatever data is on that needs to be on our testing environment. And that can be all. Like, you don't need more day -to -day, right? As long as whatever email we decide to test, it can be next one week, or December 1st, one week.
+
+>>Neil	27:06
+I think a couple of days, because the problem is the request that you're going to get, the emails you're going to get are going to be usually within that same week. So if we wait, like, let's say you save the emails, and then we refresh on Friday, the orders may already have been shipped, let's say. And when you try to pass the data, it's going to be, I mean, you'll get, you'll still get a message. You can validate that the order, you'll probably get a message saying order is shipped, you know, which is still fine. But maybe a couple of times a week. Sure.
+
+>>Bikram Dahal	27:36
+One quick thing. Sorry about that. Neil, I caught you in the middle. Vinesha, in our system, is it allowed to exchange the order from ship to packaging, right? So I know I have worked on e -commerce company, and sometimes it's only one way transaction. You cannot never convert an order from a ship to a package, right? So you can only go from package to ship. So does it allow us to change those kind of things, like things like on the e -commerce platform also, or that is not allowed?
+
+>>Vinisha	28:11
+You mean changing the statuses of the order by yourself?
+
+>>Bikram Dahal	28:14
+Yeah, example, on the system that I was working on, on e -commerce company, if the document is processed, sorry, the order is delivered, they did not allow me to change anything on database. I cannot go and change anything. But on our system, even if the order is delivered, can I go and change the carrier of that? Is that allowed or not allowed?
+
+>>Neil	28:35
+No. So our lock status is shipped. So once it's in that status, there's no other changes that can happen.
+
+>>Bikram Dahal	28:43
+And you cannot even go to, even if you have an Api, you cannot go and change the carrier if you have to change it. Like, you're going to, the Api will know.
+
+>>Neil	28:49
+I mean, we got to test that. But yes.
+
+>>Bikram Dahal	28:51
+Yeah. So, OK. That one is the case. If that is the case, then that's a ticket. But maybe on a single environment, we can make it a bit more relaxing, because if that is there, then we can always test it completely. So like, so you can check it out. You are right, Neil, because whatever people email, people send, that are already done on database. So then what is the AI going to do? Right. So that's a very interesting point that you brought. Let's see if the reverse thing is allowed. If that is the case, then we should be fine. Or maybe we can go to, we can go to the testing database and make everything into new from back end. Like, you cannot do it to the Api, but on the back end, we can say that all the data is now put it into new. And then Ai does whatever it needs to do. So it is on testing database. Maybe we can do something like that.
+
+>>Neil	29:36
+I think, yeah, I think we'd have to kind of play with our options on, because at first, you know, like, we'll start very small, right. And kind of build our way and we'll probably find our way, what the best approach is. But, yeah, we need to be able to test thoroughly before we can do that.
+
+>>Neil	29:53
+We, you know, in -test before we even attempt it in prod. And once we decide to attempt it in prod, you know, very controlled, where we pass you the emails And we see the results before sending it off to the customer type of thing until we gain some confidence.
+
+>>Bikram Dahal	30:08
+100%, like I think that is the most important thing about the Ai system right now.
+
+>>Neil	30:12
+Right.
+
+>>Bikram Dahal	30:12
+Okay, okay, then sounds good. Then let's do this. Like, there are two things, the action item for you guys and action item for like us. Benissa, one more thing, one more time, fabulous job on the Api. Like, I think they're coming out really nicely. And because we have used FastAPI, it was very easy to get all the details and everything. So like, great job on that. So, and this also really helps us, like, do a few things very easily. And we'll probably do some feedback because one of the things that I see on order number is, I know that order number can also be sourced using other parameters. Currently, I think we only allow it based on order number and something, but sometimes I have seen the email where I need to be allowed to source order based on Po number or based on something else. So maybe we'll probably do that feedback also, saying that, okay, this should have additional parameter and everything. So that one, anyway, we'll look into more email and we'll get you back to, like, with this one And then we can work together on that.
+
+>>Vinisha	31:08
+Okay, yeah, sounds good.
+
+>>Bikram Dahal	31:10
+And then the second thing is, let's first look into the, like, let's look into the authentication because that's a tricky part. So you guys, like, Benissa, if you can start looking into Intexel site and if we figure out that, then this Api is good enough to get this, let me say, 100 or 200 into Int on our system so that we get that confidence and then we can do it into larger scales.
+
+>>Neil	31:32
+Yeah, I just pinged Erica. So she's our main go -to if you don't see emails. You know, she's gonna send some today, but if you don't see them going forward, just make sure you guys reply to us.
+
+>>Bikram Dahal	31:42
+Okay, okay, sure, Neil. One more thing is, on that case, Neil, can we also make it automatic if, like, anyway, we'll discuss a little bit of things at the end. If everything sounds good on all the site, then I would love to have it automatically forwarded at least a week email. Right now, we can get through emails by heart. That is totally fine. But, like, if everything plans out and everything, I would love to have the complete one.
+
+>>Neil	32:08
+So what we probably can do is we could pick a handful of email addresses to auto -forward, you know, from that sender to auto -forward. You don't want everything because we need to control what we're gonna send to you guys as we get to meet new ones. But yeah, the top, you know, whatever, we'll definitely send to be automated.
+
+>>Bikram Dahal	32:28
+Okay, sounds good then. Looking forward to getting some more emails on your site. On Authenticant's side also, you guys can, like, figure it out. On our side also, we are making everything stable. We have a very clear plan in place. There are a few new features to be added to make it, like, really work on everything on your site. So that is also going to get you this in, like, next one week. So everything is ready. And, like, we'll make a weekly plan called, maybe, like, weekly. And, Neil, are you guys on Teams or are you guys on Slack?
+
+>>Neil	32:59
+Teams.
+
+>>Bikram Dahal	33:00
+Teams, okay. Then I'll get my team to make one common channel so that the conversation can be asynced so that we are on the same page.
+
+>>Neil	33:09
+Yeah, and on our end, Vinisha will work on the user Api and emails. We already talked about that. Should we set up another call in a week or so or two weeks just to kind of...
+
+>>Bikram Dahal	33:21
+Yeah, let me quickly have one talk with Divya regarding this one. I just need to look at a few of my issues because this is a bit more complicated project than rest. I would love to have it on the week, like, next week.
+
+>>Neil	33:34
+Even in...
+
+>>Bikram Dahal	33:34
+Yeah, you know what?
+
+>>Neil	33:35
+Next week is Thanksgiving, right? So... Oh, okay, okay.
+
+>>Bikram Dahal	33:38
+Then even better. Then let's do it, like, next week. Yeah, you're right. 27th is Thanksgiving, so let's do it, like, the week after then.
+
+>>Neil	33:47
+Yeah, that's fine.
+
+>>Vinisha	33:48
+Neil, I'm off from Wednesday to Monday.
+
+>>Neil	33:52
+On that week, December, or...
+
+>>Vinisha	33:54
+Yeah, December 4th.
+
+>>Neil	33:56
+What was it again? What day is it again?
+
+>>Vinisha	33:59
+5th, 6th, and 8th.
+
+>>Neil	34:01
+Okay, so maybe can we do it before that, maybe? Maybe we do... You're working part of that week, right? Or no?
+
+>>Vinisha	34:08
+Yeah, I'm working, but I don't think I can figure out the authentication by that because I need to work on other things, too.
+
+>>Neil	34:15
+Okay, so let's look at it. Then go to... Hold on, where are you on your calendar? Go to December, I think the second week of December.
+
+>>Bikram Dahal	34:24
+Sorry, I was a bit fast. I was in February. I was like, what? Okay, so... Well, maybe the week of the 10th.
+
+>>Neil	34:29
+The week of the 10th, I think, right, Vinisha?
+
+>>Vinisha	34:31
+Yeah, that sounds good.
+
+>>Bikram Dahal	34:32
+Okay, so we can go to December. Yeah, week of 10th.
+
+>>Neil	34:36
+So... Or 8th, yeah, sorry. 8th, yeah, Yeah.
+
+>>Bikram Dahal	34:38
+8th, I'll be traveling, so we can do 9th, I think. So I'll be back on 9th. So I'll put some time, same time on 9th, and then from there, we'll have weekly, right? By then, I think you guys will have figured things out.
+
+>>Neil	34:50
+Then you can have a weekly.
+
+>>Bikram Dahal	34:51
+We'll have a six -week plan.
+
+>>Bikram Dahal	34:52
+Because this is a bit more complicated, and then make sure that everything is ready, that you guys get the confidence. And that will also be a good time for Deves and the team to build whatever needs to be built. So it will be a good time for everyone.
+
+>>Neil	35:02
+Okay, yeah, that sounds good.
+
+>>Bikram Dahal	35:05
+Okay, that sounds good. Neil, we need to discuss a little bit about the finance side of things. Can we discuss with Vinisha?
+
+>>Neil	35:11
+Yeah, yeah, yeah. Okay, I'm sorry.
+
+>>Bikram Dahal	35:14
+Okay, so two parts of it. So first thing is I wanted to discuss about the, I know we have sent it separately regarding the BOL. I think your Bol has dropped drastically. So I want to understand what is going on on that side.
+
+>>Neil	35:27
+Yeah, so that account was mainly for, the driver would bring in a bill of lading, and we would use DocsUMO to capture the data, and then put that data into our Wms HighJump, and receive in the product. What has happened is pretty much the main customer that we were using that for within this past year has been able to give us, you know, 856 EDI. So that has that data there. So that's the reason for the volume drop, long story short.
+
+>>Bikram Dahal	36:08
+Okay, that sounds good. Then like on this case, I think you guys only want to process 10K of additional product for BOL for the rest of the year, right?
+
+>>Neil	36:17
+Say that again, I'm sorry.
+
+>>Bikram Dahal	36:19
+You guys only want to process 10k Of Bol.
+
+>>Neil	36:22
+Yeah, for a year. And I get it if you need to bump up the price a tad, that's, I understand.
+
+>>Bikram Dahal	36:29
+Yeah, so one thing was, like we wanted, because usually we just bump it a bit more, but on this case, because we have a relationship, we will just bump it by 10%, like on that price. But I had one other request, if it makes sense for you guys, without bumping the price also. So like, because you guys also have Pod, right? That gets done on July. And I think Pod is going normally. I think you guys will have a usage, how much you guys have purchased. I just wanted to streamline all of this, like subscription. So like if you guys are not, like if you guys want that price increment to be like removed, then what I can do is that whatever extra credit you guys think based on your projection, you guys will use from July to November next year. If you guys purchase it right now, then we'll just give you on the same price. Because I just want one subscription at the end of the day, one going out on, like because you have three subscription right now. One is for invoice, one is for Pod, and one is for this one. So it's just getting too much confusion. And I also don't want to increase too much price for you and everything, because you guys have a good customer. So my thought is one is simple. We just increase it by 10 % and we send you the invoice for BOL. We forget about it. We come on July and we do the Pod And we go through that cycle. Or today, we just put the same price for BOL. And then for what it's about, it's allocated based on our projection that you guys will use from July to November. You guys purchase it right now. And then we just bundle it up and then make one, like what we call, we send you one invoice, you pay it. You don't pay it for Poa Pod in July. You just pay it in November moving forward.
+
+>>Neil	38:06
+Send me, when you get a chance, send me these two options. I need to run it by our accounting team and see what they prefer.
+
+>>Bikram Dahal	38:12
+Sure. Okay, sure. I'll send you both. That's the one. And regarding this project, so we have two proposals. This one, we'll divide it into two, because like you said, the setup and the Poc is important on this project because we need to get that confidence and everything. So we'll divide this into two projects. One is next two, eight weeks or two months, two months of Poc. And at the end of the Poc, you guys will be able to test 3 ,000 to like 4 ,000 invoice through the system so that you guys get that confidence. So Poc for eight weeks with all the support that you get on Slack, the weekly calls and whatever for 15K, that also includes your testing credit. And if everything is good, if you guys agreed about it, then we can go with, once Poc is done, then we go into 12 month subscription with a price of two email, like $2 per email for case resolution.
+
+>>Neil	39:18
+Say that last part again, per what?
+
+>>Bikram Dahal	39:21
+$2 per email, per case resolution.
+
+>>Neil	39:25
+Case solution. Okay, got it. Yeah, send me that again. Send me that as well. And then we'll review on our end.
+
+>>Bikram Dahal	39:34
+Okay, sure. I'll send you both. I'll send you two separate email. One for new project, one for the old subscription that are running. On old subscription, I'll send you both the options, whatever you prefer. For the new, I'll just send a separate email. You guys can have that discussion and then take it from there.
+
+>>Neil	39:47
+Okay, okay. Sounds good.
+
+>>Bikram Dahal	39:49
+Okay. Anything else?
+
+>>Neil	39:52
+Not on my end, no.
+
+>>Bikram Dahal	39:53
+Ok, awesome. Awesome, then. Thanks a lot. Looking forward to starting kicking up this project on the second week of December.
+
+>>Neil	40:01
+Yep.
+
+>>Bikram Dahal	40:02
+Looking forward to getting that email so that we can plan two things on our side also.
+
+>>Neil	40:06
+Yep. Yep.
+
+>>Bikram Dahal	40:07
+Ok, awesome. Thanks a lot, guys. Bye.
+
+>>Vinisha	40:10
+Thank you. Thank you. Bye.
+
+>>Bikram Dahal	40:12
+Bye. Yeah, Divesh. Sorry, I forgot to ask if you had any questions. I was supposed to ask, but then something got interrupted.
+
+>>Divesh Mehta	40:22
+No, no, it's OK. I anyways didn't have a lot of questions. So I set time for tomorrow.
+
+>>Bikram Dahal	40:27
+Ok.
+
+>>Divesh Mehta	40:29
+We'll just note down a list of tasks and see, like, you know. So you're saying, like, by 10 December, we should give them some working solution.
+
+>>Bikram Dahal	40:36
+No, no, not working solution. We'll just say start.
+
+>>Divesh Mehta	40:38
+Ha, ha, OK, OK. So we'll just start noting down the tasks because I want to make stuff reusable, right? So I want to take, like, four or five days to see how we can make it reusable. So we'll just note down the task between Yumi and Nikit so that he also knows, right? He's not on the call today. I'll need his support also. And then we'll get it started. But I think it's good, man. I mean, this is a good thing to do. Good money to bring in.
+
+>>Bikram Dahal	40:58
+And he did not finish on price also. He really did not finish on price. You'll ask for discount, but that we'll give it later because I have met this guy in, like, I know it's a bit late. I'll just give you a little bit of history about this guy. This guy slowly is a second in command on Bear Gazebos.
+
+>>Divesh Mehta	41:16
+Yeah, you had told me, yes.
+
+>>Bikram Dahal	41:17
+Yeah, and then, like, people charge him $300 for one -hour tasks. Oh, yeah? Yeah. Consulting staff, people charge him $300 per hour for a consulting project and everything. Because it's a Ca, California, right? So last time when we went with him for launch and everything, it was like, you guys are so cheap on the consulting side. I'm like, how are you guys even charging it? Don't screw me up next time. Because I'm saying this, don't screw me up next time. Like, but you guys charge it very small. So, like, a very small fee for the consulting and everything. So anyway, let's do this. Like, regarding the old subscription, I'll talk with Bishal. Regarding the new subscription, let's make that as one email and send it to him.
+
+>>Divesh Mehta	42:01
+Regarding the?
+
+>>Bikram Dahal	42:02
+New pricing for this project. The Poc and the ELA subscription, right?
+
+>>Divesh Mehta	42:08
+You want me to send it, or will you send it?
+
+>>Bikram Dahal	42:11
+I can send it also.
+
+>>Divesh Mehta	42:12
+Yeah, because he doesn't know my name, right? Oh, yeah, yeah, you do not know.
+
+>>Bikram Dahal	42:15
+I've just been on calls.
+
+>>Divesh Mehta	42:16
+I purposely keep my camera off also to not distract, like.
+
+>>Bikram Dahal	42:19
+Yeah, yeah, OK. So, no, no, you're right, you're right. Like, he.
+
+>>Divesh Mehta	42:23
+Coming from me, it might be weird for him, like, who's this guy sending me email?
+
+>>Bikram Dahal	42:27
+No, no, no, I'll send it. Because, like, we have too good a repo. Ok, that sounds good. Like, I'll make that email And I'll send it across.
+
+>>Divesh Mehta	42:34
+Yeah, tomorrow we'll discuss the task And then I'll get to it, then.
+
+>>Bikram Dahal	42:37
+Ok.
+
+>>Divesh Mehta	42:38
+I want to bring some revenue on workflows name, man. Like, it's good.
+
+>>Bikram Dahal	42:41
+Ok.
+
+>>Divesh Mehta	42:42
+Yeah.
+
+>>Bikram Dahal	42:43
+Anything else?
+
+>>Divesh Mehta	42:43
+Ok, cool. No, we're good. We're late.
+
+>>Bikram Dahal	42:46
+Bye.
+
+>>Divesh Mehta	42:47
+Bye.
+

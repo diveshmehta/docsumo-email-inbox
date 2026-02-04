@@ -1,0 +1,924 @@
+>>Aniket Tatipamula	00:00
+Maybe give it a few moments, see if Alex is joining. I think someone is.
+
+>>Aniket Tatipamula	00:28
+There we go.
+
+>>Ale	00:28
+Sorry about that. How are you guys doing?
+
+>>Aaron Yu	00:31
+Hey, Alex.
+
+>>Ale	00:38
+Hi, Alex.
+
+>>Aaron Yu	00:47
+If we're all here, I guess, Ankit, would you and Manan want to run through the progress you guys made in the past week? Maybe you can run us through the new interface. Saw it already, but see it from your perspective.
+
+>>Aniket Tatipamula	01:05
+Yeah, sure. Let me quickly share this. Give me a second. Sure.
+
+>>Aniket Tatipamula	01:48
+Is my screen visible? Yes. So I'll start off with a couple of things that we have done. One, we have made some changes to auto classify so that this time around the classification does not, I mean, it does not get confused. You'll find much better classification accuracy. And I'll probably give it a try right in front of you. So I'll upload one more pack quickly. Upload a folder. But I'll delete a few files from the packet because the packet had a lot of. There was one question from my side. The packet had a lot of files in it. But I could only see that we've added a validation document. So is that the exhaustive list or would we go beyond that? Or will you be uploading documents beyond those 12 documents as well?
+
+>>Aaron Yu	02:46
+Yeah, we're going to be uploading documents beyond the 12. And I actually have the I have the validation criteria for all of them ready. So, yeah, long story short, we can talk about it soon after. Ok, understood.
+
+>>Aniket Tatipamula	03:04
+So basically, right now we are limiting ourselves to the first 12, but maybe slowly we'll add more. Let me just quickly upload them.
+
+>>Aniket Tatipamula	03:39
+I think the only one was already uploaded. Yes, I uploaded the same one again. Never mind. But, yeah, I mean, what I wanted to showcase was this thing. Like if you if you saw the classification is right now quite better because the way we are, we made some changes on our classifier to make use of the file name. So this was mainly for like Brevet because we did not come with this. Like we did not have this use case before. So we made that small change on our classifier to make sure that we use file names to classify. And if the document is there with us, if the doctype is defined, it will get classified. If the doctype is not defined, then it will be on the auto classifier itself. So, I mean, that's that's the beef of it. The second change that we had made was on the validation screen itself.
+
+>>Aniket Tatipamula	04:38
+We went through the setup that you asked us to do and then we try to replicate it exactly as you had requested like the validation summary the references and then document by document we Added all the checks required. So this was one major change but apart from that we also made sure that we went into each of these fields and make Like as much as we could we try to fix if things did not work out But I guess there will always be some it will require a little bit of to and fro because for example, right like this R &D advisor name check like if you see it's Dell innovation and advisory while it's not being matching with Dell innovation because the percentage match that we have kept may not be like Properly set so we will have to probably work on this figure out the best check that we should be adding and then Make all of these happen, but these are less and this will be quite swift the moment We realize what we have to do here will make those changes and put it on the validation screen Yeah, while we are at it, maybe we can go through a few packets that we have already processed I think that will give us some idea as to what is working and what is not working if you're okay with it and Or
+
+>>Aaron Yu	06:00
+Yeah, yeah, that sounds good By the way when when you start working with the Different validation criteria and you find that there is like maybe it's the validation is better done If we extracted something else or we did it a different way. Just feel free to reach out We can always we kind of work around and change these things to an extent Understood that
+
+>>Aniket Tatipamula	06:25
+And I didn't know maybe that would be helpful. Yeah Okay, then let's let's start with this I will skip the validation the primary summary because and there's there's nothing much to it We'll go through the docs itself 3dm application. Everything looks good. They are all references R &D comfort letter. I think this did not match because of advisory R &D advisor eligibility I think this this is this is something that we are matching against the list that you had provided But I don't think that list is exhaustive So you have to let us know what do you want us to do? So, I mean the check looks like this must be a part of eligible list of advisors right now It's only like these three, but you'll have to let us know what that list should be
+
+>>Aaron Yu	07:08
+Yeah, I have the list repaired so I can walk you guys through that in a little bit
+
+>>Aniket Tatipamula	07:13
+Okay, okay, then I'll this is one such change I'll go back again, of course
+
+>>Aniket Tatipamula	07:30
+Yeah, I think the second one is tax Agent comfort letter, I guess tax agent comfort letter There was no extraction on the firm and this does happen like quite often I think either the firm name is not defined or maybe we did not pick up What should this be in this case This should be all this financial, okay, this did not work so the way to fix this is Second we will wait for a couple of seconds That should fix this issue. Yeah, I think that's this is right, right?
+
+>>Aniket Tatipamula	09:07
+So just to explain what I did is sometimes what happens is like the document that you share has images as well as the PDF that can be passed. So our system recognizes that and sometimes don't look it just gives the images So image part of the document So I've just made it mandatory for it to extract everything And then that what finally ended up picking it up But yeah again the again, the name did not match because if you look at it like it's
+
+>>Aniket Tatipamula	09:37
+I'll test financials while the name is very different. So probably you'll also have to let us know, Aaron, what do you want us to do? What match do you want us to put here?
+
+>>Michael Bottazzi	09:50
+Yeah, we'll have to think about that. The percentage thing works in theory. But to your point, something like this is going to throw that. Unless you know off the top of your head, Aaron, let us come back to you on that.
+
+>>Aaron Yu	10:04
+Yeah, let us think about it. Yeah. Do you have examples of how this was done in the past? Obviously, with some of these letters, it's difficult for us to request the providers to literally change something. These documents, they are what they are. How do you guys kind of mitigate that?
+
+>>Aniket Tatipamula	10:27
+I think with respect to the names of the company, it comes down to two things. One is the fuzzy match, as in the percentage match as we've talked about. And the second is we expand. And I think that's what we've also done here. We either clean up or remove certain values, like private limited PTY Ltt. And then these can be removed from both the. But in this case, Altus Financials can actually be the name of the company, while financials can just be a subscript. So it's very difficult in this case. But every other case, we've been removing these. We can remove these two, like PTY Ltt, because these are standard extensions, and keep only the business name.
+
+>>Michael Bottazzi	11:11
+But in this case, we're not. Yeah. We'll confirm. But I'm wondering maybe if the best move there is to just say Altus or William Buck, or whoever the tax agent is, since these are very specific names, if it just matches a specific part of it, right? Like whether it's Altus Financial or Altus Business Advisors. That might be the cleanest route to go. We'll check though. But yeah, I see what you're saying.
+
+>>Aaron Yu	11:46
+Could you, so that was like kind of option two, where we just kind of like clip it, where we append to the back view, like whatever, probably limited. How does the fuzzy match work?
+
+>>Aniket Tatipamula	12:01
+It's the, like how many characters? It's the percentage. Fuzzy match itself is the percentage. Like we'll give it a confidence, and then it tries to match as much as the word match happens across the view. I see.
+
+>>Aaron Yu	12:14
+Yeah.
+
+>>Aniket Tatipamula	12:15
+But that can actually break, because you have to be very specific. And even if you put 80%, in this case, sometimes it can fail, because the length can increase, right, the text. Yeah, that's true. We'll have to figure something out here.
+
+>>Aaron Yu	12:31
+Sure, we'll keep it in mind.
+
+>>Aniket Tatipamula	12:35
+I think on the Equifax report, for example, right, if you see this, Lumi, I think even though they are not same as an edit, it's still matched. Petitions, let me just check, why did we not pick this up? Yeah, there are two checks, and then I'll go to this one first, and then the other one. Petitions greater than, yeah, this is. This is greater than 12 months. Okay, I think this did not get picked up. Maybe, Manan, we'll have to look into this, why it did not happen. But in this case, it should have been zero. Maybe we'll look into this. And then the other one was this, the division itself sometimes is not present in the document. I mean, is it like, is it something that is right, or like we've been not been able to pick it up?
+
+>>Michael Bottazzi	13:38
+I'll need to see an example where there is the division. I don't recall normally where it sits. I can pull one on my end.
+
+>>Aaron Yu	13:48
+Yeah, let's give us a moment.
+
+>>Michael Bottazzi	14:18
+This is the Equifax report, right? Yeah.
+
+>>Manann Agarwal	14:31
+It's generally there on page three. I think it's page three.
+
+>>Michael Bottazzi	14:35
+Three, okay.
+
+>>Manann Agarwal	14:37
+Yeah, if you can scroll down a little bit Yeah, industry classification it comes under this It's not not available So so if you go to Tell you which one I think if you go to I think it's ok. Yeah For a cracks pharma if you go to that document that packet So that packet would have
+
+>>Aniket Tatipamula	15:15
+Yeah Okay, yeah,
+
+>>Michael Bottazzi	15:24
+I'm looking at another example in my end now as well and there's no industry information Aaron can we make a note of that and check on our end and see how necessary that is? Wondering if that's even being looked at
+
+>>Aaron Yu	15:39
+Yeah We can make a note And then if necessary we I know other documents I include it so we can extract it from other documents instead
+
+>>Michael Bottazzi	15:49
+Okay, we'll get back to you on that specific one Thanks, and then one last thing right?
+
+>>Aniket Tatipamula	15:56
+I think this is where things Feel a little bit like the division that we are getting from the reference is information media and telecommunication while if you're not able to Find it and sometimes I've observed that the match does not happen Like what we've extract from the Equifax does not exactly match to the extraction here So what should we do? Should we just mark it as fail or like?
+
+>>Aaron Yu	16:21
+For this one, I think it's in the document I shared somewhere But I can I can walk you guys through that again I think we don't really care what the vision is as long as it's not like gambling prostitution We we have a certain blacklist and as long as it's not a blacklist. We we really don't It's not a big deal.
+
+>>Aniket Tatipamula	16:44
+Okay, I'm sure I don't if you can share that blacklist because that would be better We'll focus more on the blacklist and if you can also let us know which document actually has that guaranteed Maybe that would be better way to go Sure Okay I'm Going to the director summary, but I think this is fairly straightforward I mean, we are extracting all the directors and then putting them one below the other I hope we did not make a duplicate yet. I think on that one.
+
+>>Michael Bottazzi	17:13
+That's failing. It's just picking up the Yeah, it wasn't
+
+>>Aniket Tatipamula	17:19
+Yeah, there's the period in the know there
+
+>>Michael Bottazzi	17:29
+I don't know if that is doing anything
+
+>>Aniket Tatipamula	17:34
+Well, I think maybe It may be a check on our end. I'll just check what happened is the same document. I like which one failed on There's a dot I think after yeah,
+
+>>Michael Bottazzi	17:46
+I think it's the period at the end of the in the second row there.
+
+>>Aniket Tatipamula	17:51
+Oh We will build and we will get that thing fixed should not be an issue.
+
+>>Michael Bottazzi	17:55
+Oh, yeah
+
+>>Aniket Tatipamula	17:57
+We will get that thing fixed Okay Then I think yeah, this is what it is green ID report nothing much here Yeah this year borrow a legal name. I think it did not match them in the picture. It did not match, right? I think there's something going off here. Oh No, I mean Which one should we take this one or the one that's mentioned here?
+
+>>Aaron Yu	18:33
+Let's just take the one on the front page consistently
+
+>>Aniket Tatipamula	18:37
+Okay Marantini please note this thing down for this document. Okay That yeah, I think this is one more place where I think we were not able to do stuff like the extracted values I think for this one Can you scroll
+
+>>Michael Bottazzi	19:17
+Okay, no, you know what it wasn't can you go into the reference for this document
+
+>>Manann Agarwal	19:22
+Yeah, I I think I negate the Z document number zero eight. That's where the issue is happening most probably The reference value itself. Yeah, it's one
+
+>>Aniket Tatipamula	19:35
+Right? I think prior year refund.
+
+>>Michael Bottazzi	19:39
+So in there I think we saw a scenario where it was pulling one from a few years prior but as long as it's pulling the most recent one the top line item so I think that's correct.
+
+>>Manann Agarwal	19:58
+So Michael what we've done here is we have actually uh So uh Aniket if you can just expand the transactions Yeah So what we've done is we categorize the line items into whether it's a refund or not based on the description Right And uh since it's a prior year refund that we're talking about Right So uh we add out all the debits uh where it's a refund in the last year that's what we do so in this case it's just one which is the top one uh the first line item but there are some cases where you know there are two line items which are refunds and uh of the prior year
+
+>>Michael Bottazzi	20:39
+Sure okay that makes sense so this is failing because they submitted 597 or the other document at 597 the reference is pulling 559 so I can see the 597 shows on the September 17th 2024 line item the credit Um sorry I think we made a mistake man
+
+>>Aniket Tatipamula	21:11
+And I guess it should not be debit while because it's a refund so it should always be credited if I am making sense I think maybe we did it reverse
+
+>>Michael Bottazzi	21:20
+And then you'll have to change the formula we can look at another example too um I'm just trying to see if it's failing across the board if it's just this particular
+
+>>Manann Agarwal	21:33
+No it's a it's a tax ledger right of sorts So it's always going to be a credit on uh the ID's side And it's going to be a debit on our end as in Okay
+
+>>Aniket Tatipamula	21:46
+Yeah
+
+>>Aniket Tatipamula	22:00
+Okay um I think that was one and the next one is Pss Ppsr report verify that the reports are reflects current date I think this one is genuine because uh the current date itself would not be recently verified so the date uh that we pick up may not be current it's 30 days right 30 days from now Yeah
+
+>>Aaron Yu	22:26
+We we have some changes for this document um it's a little it's a little granular and specific So if I could like take some time to walk you guys through that and you guys can ask me some questions um the validation criteria for this document wasn't set so strongly when I communicated with you so it's on us sure so should we do anything right now this is okay for now Yeah that's fine for now we're we're doing a pretty big overhaul on this
+
+>>Aniket Tatipamula	22:57
+Okay makes sense So I'll we'll probably go to the next case then sure let's go to the channel flow Okay references looks good beginning of the financial period on the comfort letter is different end of the financial period looks different so let me quickly check 9 30 24 12 27 24 is this the right place to pick up give me a moment I'm going to open it up on my end I think that is correct um but Darren yeah open it up on on your end
+
+>>Michael Bottazzi	24:05
+Yeah
+
+>>Aaron Yu	24:06
+That looks correct so it must be it must be the radium application
+
+>>Aniket Tatipamula	24:12
+Okay let me quickly check that as well it's it's like it's written in a different way
+
+>>Michael Bottazzi	24:37
+Ah, OK. So that assessment start date and end date fall within that financial year, right? Because the financial year was July 1, 24 to June 30, 25, I think. Maybe that should be the criteria, if it's greater than the start date and less than the end date. Like, if it's within the financial year, I think.
+
+>>Manann Agarwal	25:08
+So it will be a subset. That's what you mean to say.
+
+>>Michael Bottazzi	25:13
+Sorry, can you please repeat that?
+
+>>Aniket Tatipamula	25:15
+So it should be within the period. So whatever we are getting from the documents, the document gave us 07 -01 -24, while what we are assessing it is after The July 1. And then we are also assessing the end period is also before the extracted value, which is 12 -27 -24. And we understood. We'll make this check change and then put it in the process. Correct, right, Aajan Manan? Did you have anything else in mind?
+
+>>Manann Agarwal	25:48
+No, no, no.
+
+>>Michael Bottazzi	25:49
+Yeah, I think that's correct. I'm just going to think. Yeah, let's do that. I'm just going to think about on my end if there's use cases where something could be correct but fall out of those bounds. If that is the case, I'll just reach out and let you know. But for the time being, yeah, let's do that.
+
+>>Aniket Tatipamula	26:09
+Sure, perfect.
+
+>>Michael Bottazzi	26:10
+I guess there could be a scenario where someone comes in a year after their financial year and goes to, well, no, actually, that should fall on. Yeah, it should fall in line with their assessment. Let's do that. If there's an issue, I'll raise it. But let's do that for now.
+
+>>Aniket Tatipamula	26:29
+Sure, Michael, thanks. R &D advisor contact name. I think R &D advisor eligibility was no. Let me check what happened here.
+
+>>Michael Bottazzi	26:40
+Yeah, without the list, they're probably all going to fail. We'll send you that list.
+
+>>Aniket Tatipamula	26:47
+Yeah, that's the list problem. Let's go to tax agent. Comfort letter, we add Abn of this while we picked it up like this. That doesn't, oh, we picked up on the number 536, did not get picked up.
+
+>>Michael Bottazzi	27:08
+Yeah, it's not like the Acn. Oh, an Acn.
+
+>>Aniket Tatipamula	27:20
+So basically, we have to, what we had set up is if we find Abn, then we pick Abn. If we find Acn, then we again pick it as an Abn only. Maybe we'll have to pick it up as two different values and then try to match it independently. Is this right?
+
+>>Aaron Yu	27:35
+Yeah, they're two different values. That's different tax agencies, basically. Ok.
+
+>>Aniket Tatipamula	27:43
+Is that in Radium application, Acn as well?
+
+>>Aaron Yu	27:47
+No, it's not in Radium application. I believe it reappears in the Ppsr report.
+
+>>Michael Bottazzi	27:56
+I think it's somewhere else, too, though. Let me see.
+
+>>Aniket Tatipamula	28:05
+It looks exactly the same except for 536.
+
+>>Michael Bottazzi	28:08
+That's what I was going to say, too. The Acn is just the Abn without the first two numbers, I think. So I think it's like a short -term fix. That could probably be logic as well.
+
+>>Aniket Tatipamula	28:20
+Ok, then we will make sure that we'll write that. Check if it's a subset of Abn, then we are OK with it.
+
+>>Aaron Yu	28:26
+Ok. Yeah.
+
+>>Michael Bottazzi	28:28
+Sorry about this.
+
+>>Aaron Yu	28:32
+Change URL.
+
+>>Aniket Tatipamula	28:37
+Has never been subject to an audit or dispute with Ato. I think the answer was supposed to be yes, but we got it as no, with the negative results of finding. Is this correct?
+
+>>Aaron Yu	28:54
+It looks like the, could you click on where is the no coming from?
+
+>>Aniket Tatipamula	29:01
+I mean, sometimes it may not pick it up properly. But it will have that context. So because it tries to map value to the value in the document, but this may not work out. But it does refer to the same section. Has never been subject to an audit. But it's getting picked up from here. That's for sure.
+
+>>Aaron Yu	29:23
+Yeah, I think this is just an extraction mismatch.
+
+>>Aniket Tatipamula	29:28
+You mean to say, has never been subject to, but it's mentioned, right? Has never been subject to an audit or dispute.
+
+>>Aniket Tatipamula	29:33
+With Ato or with a negative result. So when it says a negative result, does it mean it is subject to it?
+
+>>Michael Bottazzi	29:40
+No, no, no. That's a good thing. We want it's never been subject to an audit to Ato with a negative. Sorry, let me back up. We want it to have never been subject to an audit. Well, no. Let's say.
+
+>>Manann Agarwal	30:02
+Double negation.
+
+>>Aaron Yu	30:03
+Yeah, I was going to say it's a, if it's been an audit, it's fine.
+
+>>Michael Bottazzi	30:07
+I guess the big thing is we don't want, we don't want a positive finding. So there being a negative result. So you go back to the document. I just want to see how this is raised.
+
+>>Aaron Yu	30:23
+From my understanding, it is a double negative. So it's a positive here, but if it was, if we did have a problem, for example, if there was like a past audit, a tax dispute of sorts, it would say has been subject to an audit or dispute with the Ato or Aus industry with negative results or findings. Just as a pure negative at that point.
+
+>>Michael Bottazzi	30:47
+Okay, so that's what we want then, negative results or findings.
+
+>>Manann Agarwal	30:51
+But the next line just says, please note Geneflow was subject to an Ato review regarding 2024 lodgment.
+
+>>Michael Bottazzi	31:01
+Yeah, it doesn't say to accept a voluntary disclosure.
+
+>>Aaron Yu	31:04
+So it, so all five of these bullet points are what we're looking for. But in the scenario for the fifth bullet point specifically, if there was a problem, it would say has outstanding disputes or has outstanding Ato tax liabilities directly without saying like has no, if that makes sense.
+
+>>Aniket Tatipamula	31:29
+Okay, so should we still be picking up everything or is it like we have to pick up everything, but the last one is more important?
+
+>>Aaron Yu	31:38
+They're all equally important. They all refer to essentially like different things with the tax agencies. And any one of them being like, if they've been in a dispute with negative results, that would raise a flag.
+
+>>Aniket Tatipamula	31:58
+Understood, okay, this makes sense. I will get that thing fixed. I think it just states that it was under review, but it does not state that it was under dispute. So makes sense. Okay, we'll get that thing fixed.
+
+>>Aaron Yu	32:14
+Okay.
+
+>>Aniket Tatipamula	32:29
+Then, yeah, this one, I think we could not find that.
+
+>>Michael Bottazzi	32:33
+We used the black box thing, I guess. Send you the, yeah, the bad industries. Oh, this was the one with the information available. Yeah, we're probably gonna have to change where this pulls from, Aaron. I feel like a lot of these aren't gonna have the... Let's just get it from the loan summary. I'm pretty sure it's there.
+
+>>Aaron Yu	32:54
+Yeah, okay, well, we'll work that out.
+
+>>Aniket Tatipamula	32:58
+Okay, I think the rest is director. There was only one director in this report and it looks good for the director. Green Id report looks good, company report looks good. I think this one was missing. Aaron, sorry, Manan, did you make any changes and do we have to re -run this document for it to work?
+
+>>Manann Agarwal	33:27
+No, which case is this? Oh, one second, just let me check.
+
+>>Aniket Tatipamula	33:34
+Because it did not pick up the prior year refund.
+
+>>Manann Agarwal	33:43
+Just give me a minute.
+
+>>Aniket Tatipamula	33:48
+For some reason, I'm not able to see the data as well. Not sure what's going on here.
+
+>>Manann Agarwal	34:01
+Oh, it has extracted.
+
+>>Aniket Tatipamula	34:36
+No, it did not.
+
+>>Manann Agarwal	34:39
+Not the prior, yeah. Again, because this was 2025, so that's why it didn't pick up the debit here.
+
+>>Aniket Tatipamula	34:57
+2025.
+
+>>Manann Agarwal	34:59
+The process date is 2025, right? And the logic is set for previous year from today. That's 2024.
+
+>>Aniket Tatipamula	35:09
+Oh, OK. There is no prior year refund yet.
+
+>>Michael Bottazzi	35:19
+I think that logic's working the way we would want it to. And if this flagged, it would need to be looked at on an individual basis anyway. It should be the prior year refund. So if this is being submitted and pushed through, we'd probably want to look at that if I'm understanding correctly.
+
+>>Aaron Yu	35:41
+That's beautiful.
+
+>>Michael Bottazzi	35:45
+Maybe leave it for right now, I think.
+
+>>Aniket Tatipamula	35:49
+Ok. I think then that check would fail. Let me just quickly check what the number is. 3686. Ok, there's no such number. They would have just summed it up. Ok.
+
+>>Aaron Yu	36:09
+Let's take a look at that.
+
+>>Aniket Tatipamula	36:14
+Ppsr, OK. Verify that the borrower has not granted. I think recently verified. Again, the logic, not so sure about it. And I think this, Aaron, you are saying that you will look into it and get back.
+
+>>Michael Bottazzi	36:31
+Yeah, I'm not sure. Yeah, literally, right after this.
+
+>>Aaron Yu	36:35
+Swap you through.
+
+>>Aniket Tatipamula	36:37
+Then I'll leave it at it. I think that's it. Let's go through one more case. If you are OK, let us know if you want us to stop.
+
+>>Michael Bottazzi	36:49
+No, let's do it.
+
+>>Aaron Yu	36:50
+Yeah, let's swap through. Looks pretty good.
+
+>>Aniket Tatipamula	36:54
+This one is Accrux, OK. Ok, borrower name does not match. I think there's a difference, Joanna Johnson. And then we've added that check, Aaron, what you requested. Either we match, we try to first match with the name, legal name that's picked up here. Sorry, for name. If it doesn't, then we'll go and try to match it with a company name, legal name. If both don't match, then I think that's what happened here. We'll open and check that out one. And let me just open it here. It'll be faster. Accrux, this is some kind of letter. Yeah, I think it's Ms. Joanna Johnson representing Accrux. So I'm not sure if this would have worked any other way.
+
+>>Michael Bottazzi	37:58
+Wait, so why did it fail, I guess? Because, so Joanna Johnson's good. That's who it was addressed to. That's her company.
+
+>>Aaron Yu	38:05
+That's the CFO from, not, instead of the CEO, from what I can tell.
+
+>>Michael Bottazzi	38:10
+Oh, got it. All right, so Michael Katsanas was on the reference.
+
+>>Aaron Yu	38:15
+Yeah, it's like if it was directed to Sean Burke instead of Doug Monticello. So I think what we were thinking here is you see how the borrower legal name, Accrux Pharma Property Limited. If we can kind of do like either a fuzzy or whatever, like appending the back check and have the borrower legal name be green here or make it pass. And then we were thinking kind of like, if either the borrower name or legal name is correct, then the entire thing passes.
+
+>>Aniket Tatipamula	38:53
+Understood, we'll do that. So, I mean, we'll run both the checks, but if either of them, I would say borrower legal name should at least pass if I'm not wrong. If that passes, then we're good. If both of them pass, we are good as well.
+
+>>Aaron Yu	39:07
+Yeah, basically. They're both checking if the document is pertaining to the actual company. So if one is correct, we can make assumptions here with that.
+
+>>Aniket Tatipamula	39:23
+Sure, and I think in this case, we picked up this side. Not sure like what we can do. We will check something.
+
+>>Aniket Tatipamula	39:31
+Something out. But in this case, is it that they have these two or did we make a mistake here?
+
+>>Aaron Yu	39:43
+It could literally just be that that that might be like the official legal name. And what we are getting is, you know, like a short initial, it could also be that this is like, one, maybe like Acrix Limited owns the other or the other way around. And then this audit is essentially identifying both at once, versus only one of them is essentially borrowing from us, from what I can tell.
+
+>>Aniket Tatipamula	40:15
+Sure. Not sure, like, what would you want here? But I mean, what kind of check would you want here?
+
+>>Aaron Yu	40:23
+So, so would you, would you be able to kind of, with the, let's say, like 60%, would would this be able to pass? Because it has, you know, it has Acrix Limited and but it also has The Acrix Pharma Party Limited, which is one to one match to the reference value.
+
+>>Aniket Tatipamula	40:45
+Yeah, this, this will pass a subset check. What I mean is like that, because reference value, if it is completely present in the extracted value, then we can just make it pass. I think that would be much more controlled and easier to validate.
+
+>>Aaron Yu	41:00
+Yeah, sounds doable.
+
+>>Aniket Tatipamula	41:05
+Okay. The rest looks good. Ernst and Young, the numbers look good. Mark, Chan and Brenda Lee. Not sure, like, if, why did this happen?
+
+>>Aaron Yu	41:18
+I think this was an extraction error. I remember taking a look at this.
+
+>>Aniket Tatipamula	41:22
+Oh, yeah. I mean, please contact Brenda Lee on this while we should have picked up Mark Chan. Okay, this makes sense. We'll, we'll, Manan, please note this. I hope we have not taken, so we would have picked it, Yeah. Well, we'll, we'll get this fixed. Then R &D Advisor, I think this we've already discussed. Tax agent did not pick up Apn. Let me go over to the tax agent.
+
+>>Michael Bottazzi	41:53
+What if it's Acn again?
+
+>>Aniket Tatipamula	41:57
+I think there was no Apn anywhere.
+
+>>Aaron Yu	42:03
+So for this, we were also thinking of doing, like, between the borrower name, legal name and Apn. As long as one or two of them pass, we can, we can just push it through.
+
+>>Aniket Tatipamula	42:19
+Understood, Aaron. Let us know, and then we'll set it up accordingly, as per the requirements.
+
+>>Aaron Yu	42:24
+Great.
+
+>>Aniket Tatipamula	42:26
+Yeah, I think the rest looks good. Everything is extracted and matching. Equifax report. I think everything got picked up here. In this case, it's only the division that did not get picked up. Let me just quickly check that out. Yeah, this seems like a recurring issue.
+
+>>Aaron Yu	42:45
+It seems that it's not present on the Equifax as much as we thought.
+
+>>Aniket Tatipamula	42:51
+Manufacturing. Yeah, but it's completely different while it's mentioned on the application.
+
+>>Aaron Yu	43:01
+That's true. So, yeah, if we can implement the, as long as it's not gambling, not prostitution, not all of these, like, blacklisted things, I think that would make the check a lot more broad, right? So it doesn't matter if it says technical services or manufacturing, because they would both pass regardless.
+
+>>Aniket Tatipamula	43:23
+Sure, Aaron. I mean, please share that, and then we'll share those lists of items that you want us to look for, and then we'll make that change.
+
+>>Aaron Yu	43:31
+Sure.
+
+>>Aniket Tatipamula	43:34
+Okay, let's proceed further. Directors looks good. Green ID looks good.
+
+>>Manann Agarwal	43:44
+I think for the Equifax, you know, those high risk are already set up. So if we can just open up that document once, and, you know, we can just show them the prompt.
+
+>>Aniket Tatipamula	43:57
+But the high risk is something that we've added against the check here on this value. So we'll make, okay, you just want to see the values. I think these are the ones gambling casinos. Yes. I'll share this with you on the chat. Like, but if you feel something has to be changed, please let us know.
+
+>>Manann Agarwal	44:24
+Yeah, this was there in the Excel that you shared, right, Aaron?
+
+>>Aaron Yu	44:29
+It was.
+
+>>Aniket Tatipamula	44:30
+In the Excel.
+
+>>Manann Agarwal	44:32
+Awesome. Ok.
+
+>>Aniket Tatipamula	44:34
+Ok, then let me cancel this, and let's proceed further.
+
+>>Aaron Yu	44:46
+Could you look at the adverse information for the company beneficial ownership report?
+
+>>Aniket Tatipamula	45:14
+It's marked as yes, but we have to check where we picked it up from. We'll have to make some changes on our extractor as well. What happens is, the way we've set it up is we're just checking only the outcome. But we will have to find the value first and then mark it to the outcome. Ok. This information. Ok, let me quickly. I mean, this is what I do. I quickly check this out and then.
+
+>>Manann Agarwal	45:56
+I think it's on page 8.
+
+>>Aniket Tatipamula	46:03
+Adverse information is not mentioned for accuracy. Yeah, it's not mentioned. So did we flag it? Oh, yeah, we flagged it as yes.
+
+>>Manann Agarwal	46:16
+I think it's on page 8.
+
+>>Aniket Tatipamula	46:18
+Oh, it's on. Ok, if it's on page 8, then I think this will not work. Give me one second, cancel. Don't save. But yeah, I mean, we will probably get something implemented here so that we know where exactly we are getting it from, or at least some information.
+
+>>Manann Agarwal	46:37
+Yeah, yeah.
+
+>>Aaron Yu	46:41
+Ok, interesting. Ok, so I guess it is working as intended. Adverse information is present. Great. It's actually a good catch.
+
+>>Aniket Tatipamula	46:56
+Ok, then prior year tax refund again fails. So I'm not sure what happened here. Let me. It's coming from prior.
+
+>>Aniket Tatipamula	47:26
+Oh, this one is the. Sorry, it's not the reference, right? Maybe the computation itself was wrong, even in this case.
+
+>>Michael Bottazzi	47:35
+Yeah, can we look at the reference?
+
+>>Aniket Tatipamula	47:40
+Business activity income statement. 08. 0 to 08.
+
+>>Aaron Yu	48:06
+I think the refund is only true to twice.
+
+>>Aniket Tatipamula	48:13
+23, 24, 25, 98. So it will be some of these two, Maayan?
+
+>>Manann Agarwal	48:26
+The first one. This one and this one. No, no, line number 1 and 4.
+
+>>Aniket Tatipamula	48:31
+Some of line number 1 and 4. Understood, OK. That's 2023. That's just like it's 250k, so it would not have made a lot of difference. 1 .59.
+
+>>Aniket Tatipamula	48:52
+How are you doing this check, Aaron or Michael? Like, how do you guys do this check?
+
+>>Michael Bottazzi	49:00
+I think it's just I think it's being manually compared. I think the way this is set up, the way you guys have this set up is correct, actually. Like, this probably should throw a flag, right? What was the other figure? So this is calculating 1 .59. The other figure was 1 .6 or something like that. It was off by whatever.
+
+>>Aniket Tatipamula	49:29
+I mean, the calculated is 1 .6. I'll just open that up as well.
+
+>>Aaron Yu	49:41
+Do you think it's so what I sent you guys last time with the validation, I've added way more to it. And we're planning for the Excel. At the very start, we mentioned taking and extracting Excel. But you guys said it's not a function. So we're thinking of just PDFing the Excels and then creating validation criteria for it. So on that topic, the Excel is kind of like an answer sheet. Whatever is in the Excel is right. It's de facto. And I think all these fields that are like, oh, which one's right, which one, I think those are all present in the Excel. So if it's helpful, maybe we can refer to that.
+
+>>Michael Bottazzi	50:27
+Yeah, I do think that works. But I also like this tax return should be looked at as well. Can we leave this check the way it is for right now? And when we put through the Excel sheet, we can talk about that. But I'd rather not get rid of this.
+
+>>Aniket Tatipamula	50:51
+Sure, Michael. Then let's open. I think the other items are these. Verify any existing ends. Let me open PPSI.
+
+>>Aaron Yu	51:05
+It's OK. I think the PPSI, you don't have to, because it's going to be so different from what it is right now.
+
+>>Aniket Tatipamula	51:14
+Yeah, I mean, let me know if you want us to go through one more packet, and then we are OK. Or if you have some other thoughts that, because now, I think it will be up to us and your team to upload a bunch of them and then check where all it fails. We can do it at our end as well. We just have to let us know which packets to test. Or should we test it on all the ones that you shared?
+
+>>Aaron Yu	51:39
+Yeah, honestly, I think this was pretty good. So we can, well, I can kind of review these in my own time. And I'll get some reasoning back to you guys on this. But I think it's a good time for us to maybe walk through the total stuff with all the, basically, like the big picture thing now.
+
+>>Aniket Tatipamula	52:02
+Sure, just one last question, Aaron. I think I saw this, and I uploaded this. And I saw that there's a $1 difference between the offsets. So what should we do here? It's a mismatch. It's an actual mismatch.
+
+>>Aaron Yu	52:19
+Can you just create a buffer of $5? Is that possible, $5, $10?
+
+>>Aniket Tatipamula	52:27
+It's possible.
+
+>>Aaron Yu	52:28
+I think anything within that is negligible difference. So it should be fine.
+
+>>Michael Bottazzi	52:33
+Yeah, plus minus $10, I feel like that's a good rounding number there.
+
+>>Aniket Tatipamula	52:39
+Sure, makes sense. We'll set that thing up.
+
+>>Michael Bottazzi	52:42
+That should be OK.
+
+>>Aniket Tatipamula	52:45
+Ok, I think over to you, Aaron. Do you want us to go through anything else?
+
+>>Aaron Yu	52:55
+Honestly, I think that was really thorough. It brought some things that we weren't thinking about up. So specifically about how you guys are extracting. So we'll also have to think about that. But on that topic, there is still a lot of documents. So I'm thinking I run you guys through some of the new documents, like the documents that we've been skipping, run you through literally side by side to check in the document so you guys can understand what it is. I'm going to just share my whole screen.
+
+>>Aaron Yu	53:41
+Ok, great. Ok, I'm just going to use Australian Bay Lobsters. So on the right, this is a total of all the documents. So we have a pre -approval packet here, which is what we were previously checking, these 12 documents. And then we have starting from loan, loan model and summary. That's kind of like where we cut off previously. So I'm going to share this with you guys after, by the way. And I might add some stuff to it. So it's based on what we were talking about today. But first of all, I was kind of thinking a lot of these are required, but some of them are kind of option dependent, depending on the nature of the deal.
+
+>>Aaron Yu	54:28
+And such. So with the green ones, it's like, we always want these to be there. And if there's, if it's not there, then it's a problem. But with the with the yellow one, that's more like, if it's not there, we can, we can kind of just like, pretend it's not there, because it's not. But if it is there, just give a notification because we want to know that this deal specifically has, you know, like a Gsa token, or has a guarantee and indemnity report, and such.
+
+>>Michael Bottazzi	55:00
+Yeah, specifically, like, if, if it's not there, no issue, if it is there should be checked. So not required, but if present, due to be checked. Just for the yellows.
+
+>>Aaron Yu	55:15
+Yeah. So going, going into the actual thing, for the R &D comfort letter, I got some new dates. So great. So here, you can see that it's April 8. Obviously, you know, it's not April 8 anymore, because this is in the past. But we just want to know if it's within 30 days. So this is kind of like a recurring check throughout. Basically, we just implemented a lot these kind of dates. And then for the R &D advisor, eligible R &d advisor, I have the list here. So these are the approved R &d advisors. And I think you can simply for from your end, copy paste this into the validation box, it should be fine. Okay, so those are the two new checks for the R &D comfort letter. For the tax agent comfort letter, we're also doing the same thing. And it must be within 30 days. Let's just assume that this was submitted on like April 9, or something. So this would pass because it's within 30 days. And here, this one would actually fail. Because while all the others were like April 8, current date, let's just say it's April 9. Right now, this one says December 5, 2024. So it would actually be a failing criteria here. And that's the only new check for this. Um, for the advanced finding certificate, this is a kind of option dependent one. So let me just find one for you guys.
+
+>>Aaron Yu	56:57
+So for this document, they you might not actually find one in the packets we shared. And if not, we can kind of work on that. But high level overview, we're just looking to see that the R &D entity is pertinent and matching the radium application. Same with the company Abn matching the radium application. And then for the first income year finding, if it's for 2025, we're looking for 2023 to 2024. If it's for 2026, we're looking to for 2024 to 2025. And then here has a has findings one findings two, sometimes that's findings threes. But we're mainly looking to see this line just right below the finding, it's gonna say it is a supporting R &d activity, meets all the conditions in this act. Get another one for you guys. Yeah, so this one, it's gonna say something here, pursuant to this kind of act, these are all core R &D activities. So this is a certification that it's eligible. And here in finding two, it says pursuant to this act is a supporting R &d activity. And this is not that common of a document, but creating the check in the scenario that it appears we want to be, we want it to be there. Otherwise, it's just gonna throw like a foreign document error. Um, please let me know if you if there's anything I need to stop.
+
+>>Aaron Yu	58:37
+Otherwise, I'm just gonna keep chugging along. For the Equifax in depth report company trading, we're just looking for the we're looking for the report created date. So I just want to raise your hand or something.
+
+>>Manann Agarwal	58:53
+Yeah, I don't I had I had three questions. Yes, please. So for one was, so you said right that let's say document number four, which is advanced finding certificate, if let's say that's not present, it's fine. If it's present, then we extract it, right? So my question is, let's say you push in a packet. And obviously, Docs more would extract and validate data across documents, right? So what do we do when there is a mandatory document that's not present in the packet? Do we proceed ahead with extraction? Or you know, do we just stop right there?
+
+>>Manann Agarwal	59:27
+And say that this is a mandatory document which is missing. And we'll just stop right there. Or do we just proceed with extraction and then just notify you, saying that this document is missing, but you've extracted all the other documents?
+
+>>Aniket Tatipamula	59:54
+Michael, you're on mute, if you're saying something.
+
+>>Michael Bottazzi	59:58
+Sorry about that. Right now, if I upload a packet without a specific document, does the entire document fail? Or does it say document not found or something like that? I feel like I've seen that. Is that the case?
+
+>>Manann Agarwal	01:00:12
+Yes, it says document missing.
+
+>>Michael Bottazzi	01:00:16
+Ok, I think regardless of, I mean, Aaron, I don't know what you think. But I think if a mandatory document is not there, I guess, do you have the functionality to say mandatory document missing versus just document missing? Or is that too granular?
+
+>>Aniket Tatipamula	01:00:35
+We can do that. That should not be an issue.
+
+>>Aaron Yu	01:00:38
+Are you kind of saying that before it even gets to us, it gets flipped back to the underwriting team, seeing that, like, oh, this thing is missing? Which means that before extraction even commences?
+
+>>Aniket Tatipamula	01:00:54
+I think there were, sorry. I think what Manan is mentioning is, how do you want to see it on the UI? We will not be able to notify you any other way. Like, if you upload the documents, and when you come on the validation screen, and then at the very top, would you want to see a document if it is missing as a document missing? Or do you want to see nothing at all, like if the document does not exist? That's what he's asking.
+
+>>Aaron Yu	01:01:21
+Oh, yeah.
+
+>>Manann Agarwal	01:01:22
+So what Michael asked, that right now, we are just showing that document missing or the field is missing, right? So what Michael said, where, let's say, do you want a tag saying mandatory document missing, please check, in red or something like that. Something on those lines.
+
+>>Aaron Yu	01:01:39
+Yeah, I think that would be good. For just as a general example, from what I can imagine, if we don't have, if a document packet doesn't have the advanced finding certificate, so be it. Because only probably like one in 30 have it. But if, let's say, the R &D comfort letter is missing, that's a very, it's a big issue. So we, at the very top, if it's like big red, missing R &D comfort letter, I think that would be the way to go.
+
+>>Michael Bottazzi	01:02:09
+So, sorry, to be crystal clear, for the optional documents, you don't have to throw any sort of flag or error. If they're not there, we'll proceed as normal. If they are there, they'll get checked. If a required document is missing, we should throw an error at the top that says, like, yeah, R &D comfort letter missing or something like that.
+
+>>Manann Agarwal	01:02:30
+Awesome, OK. I think that answers my questions. Ok.
+
+>>Michael Bottazzi	01:02:33
+Ok, cool.
+
+>>Aaron Yu	01:02:34
+Great. Yeah, so the Eagle Facts report, we're looking at the report created specifically. So it should be this one line up here. And I think this is static across all the documents. We're just looking to make sure that this is within 360 days or a year within today's date. So that's the only change we did here. And then I think we mentioned the high -risk sectors, but they're here for your reference. So I think this one here, as long as it says agriculture, forestry, and fishing, so as long as it doesn't say these fields, I think it's fine because that's all we're really looking for. We just want to avoid these fields specifically. So director summary, nothing has changed there. Chugging along with the Green ID report, our requirement for it is 180 days or six months. So you can find it here. Ok, so if you look at the verified dates, shoot, if you look at the verified date specifically, I think for these, it's updated every time we pull a new one. So this date, or you can just look at the top one since they're all the same, 2024 -12 -9. Stick it in here if it's within, if that is outside of the six -month period. So this would fail if this was done today, but this was done in April 9th. So this will pass, if that makes sense.
+
+>>Aaron Yu	01:04:17
+Same with the company beneficial ownership report. We're looking for this to be done basically every single time. So for this, we're looking for it to be done every month.
+
+>>Aaron Yu	01:04:27
+That we're doing 30 days, so it's a kind of grace period. There should be a date. So the report was created on April 8th, 2025. And this was uploaded on April 7th. Well, that's the time zone difference. But functionally, 30 days difference within of today's date should be fine here. Chugging along, documents eight and nine. It has the date generated. These are automatically pulled from the website. So the tax office website, we can essentially just generate this at will. So it's, once again, a 30 -day difference period that we're looking for. Same exact thing here. This is April 7th. Imagine today is April 9th. This would be valid. But if today is, you know, August 12th, then it wouldn't be valid. Prior tax return, that's fine. I think that's fine, yeah. So for the Ppsr, I remember at the start, we were kind of really broad, and we were just saying that kind of like, oh, verify the security interests, the liens, whatever. But now this is kind of the more granular check. So it's more specific. And also from kind of your perspective. So when you kind of look in here, you can see that there's a lot of liens. Every single page is a lien on a property or such. So what we're looking for is innovation structured.
+
+>>Aaron Yu	01:06:07
+We're looking for innovation structured finance co, specifically. So you can see that there's actually multiple instances, and that's because this person has multiple loans with us, which is why there's, you know, there's multiple here. And once we identify innovation structured finance co, we're looking for, so first, the lien to our company is present. And then we're looking at proceeds specifically. We wanted to specifically say all present and after acquired property, which is a requirement. So here, this is these two that I just talked about. And then the specific date. So the specific date would be something like this, registration start date. We just want to make sure that this is within a year of today's date, which is all we're really looking at. But most importantly, we're looking to make sure that essentially the organization name, the lien exists in our name, and that the formatting is all present and after acquired property. And then at the very top of this report, this has a time here. It's a bit of a weird formatting, but it says the search reflects the data contained in the Ppsr at 2025, April 9th. So, and here's a time that we don't really care about, but this would be the date that we verify. And then we're looking for this specific date to be within 30 days. Yeah, does that kind of make sense?
+
+>>Manann Agarwal	01:07:49
+Yeah.
+
+>>Aniket Tatipamula	01:07:50
+Yeah, it makes sense.
+
+>>Aaron Yu	01:07:52
+Great. So for the Ausindustry registration, we're looking at the prior year. So once again, if the year is 2025, we're looking for 23 to 24, income year 23 to 24. If it's 2026, we're looking for 24 to 25. And it's what I mentioned for the advanced finding certificate too, same concept for the prior income year functionally. And then - Does that make sense?
+
+>>Michael Bottazzi	01:08:26
+We need, okay.
+
+>>Aaron Yu	01:08:39
+Okay. So this is a page that we're looking to essentially PDF. Just like a check here. Do you guys think it's, this is fine to PDF and fine to process?
+
+>>Aniket Tatipamula	01:08:57
+Did not get you, Aaron. Like if you convert this to PDF, will we be able to process that what you're asking?
+
+>>Aaron Yu	01:09:04
+Yes.
+
+>>Aniket Tatipamula	01:09:05
+Yeah, we should be able to do that. This is, that should be, like as long as you can extract it, like printed as a PDF, we will be, it will be okay for us to extract.
+
+>>Aaron Yu	01:09:14
+Great. Yeah, so we're looking to create essentially criteria for this too. But for here, we're just really looking for, see the name as relevant. Once again, name Abn.
+
+>>Aaron Yu	01:09:26
+And then the refund accrued is here. Here it is, the risk metrics at origination. And then we're also looking at the original loan amount, which is present under the summary of key loan terms at origination. And then we're looking at the prior year R &D refund amount. So this is where I was kind of saying, like, you know, if you guys are kind of looking at it, it's like, oh, which one should I be referring to, the debit or credit, or like which line item? Whatever this sheet says is supposed to be what the prior ones are supposed to be referring to functionally. Because how we check it right now, we're essentially going into this document and making sure that it matches this, because this is a direct Salesforce -generated document. So this is like an answer key of sorts. And then lastly, we have something called loan service ratio. So we're looking to see that this value here is below 90%. And if it says something like 92%, we want a flag. So that's all it is for this document. And I made a note that we're going to PDF because currently it's in Excel form, as that's what our standard procedure is. But PDF it, and then we're going to toss it in. So, yeah, Aniket, please.
+
+>>Aniket Tatipamula	01:10:54
+And I had one question. You mentioned that that document is pulled from Salesforce. What I'm trying to understand is who fills that in? Like, is it coming from Radium application, or it is someone who is manually filling it? And if someone manually fills it up, then what is your source of truth? Like, how do you know this one is, like, bear me as in I may be asking a very wrong question. But what I'm trying to understand is how would this become a source of truth as compared to Radium application?
+
+>>Michael Bottazzi	01:11:24
+Yeah, no, that's a valid question. Yeah, for right now, let's not change that one. Let's have it still pull from the existing criteria you have set up. Because I kind of agree with you, if someone were to input something wrong, and it slips through, and this is looked at as the source of truth, that could present issues. For certain things like the Lsr maturity, that definitely needs to be pulled from this. The other ones from this sheet need to be pulled from here. Let's come back to the poll prior to your refund accrued.
+
+>>Aniket Tatipamula	01:11:57
+Thanks, Megan.
+
+>>Michael Bottazzi	01:11:58
+Thanks, Aniket.
+
+>>Aaron Yu	01:11:59
+Yeah, okay. Yeah, let's just go along. And so documents one to 13 are strictly pre -approval. So this was actually something we're kind of curious about, because from our team's perspective, they create a folder. So actually, I can just kind of show like the whole how our box looks right now. So this is kind of relevant.
+
+>>Michael Bottazzi	01:12:28
+Yeah, well, Michael, I'll just say even backing up a step, like without even Box or Salesforce, the way that this flows through on our side is we have a pre -approval process and a post -approval process. Both sets require documents. So everything that you guys just walked us through, the first 12 or 13 docs, that's the pre -approval. The back half of what Aaron's going through right now is the post -approval set. So the pre -approval goes through, passes criteria, and then the folks at Radium put through the second half of the documentation. And this, I think, sorry, Aaron, I'm going to cut you off so you can jump back into it. But I think the question we have, and this probably also kind of relates back to the demo you were showing us last week in some capacity, see what Aaron has, A03221, that case. If I were to upload a packet for A3221, goes in Docsuno, does the checks, great, pre -approval, first 13 criteria, validation shift set up, awesome. And then I were to upload A3221 again as a second folder with only the second half of criteria. Could Docsuno understand that they're both A3321 and just group them together? No, not right now.
+
+>>Michael Bottazzi	01:14:09
+Okay.
+
+>>Aniket Tatipamula	01:14:10
+Not right now, Michael.
+
+>>Michael Bottazzi	01:14:12
+No. That's fine. I think we're just, just to give you context as to how it works on our side, that's like our existing kind of flow. So I wanted to see what the system was there, but that's fine.
+
+>>Manann Agarwal	01:14:25
+But Michael, what you can do is the folder that was earlier created, let's say you put in your pre -screening documents as a folder, right? What you can do later on, let's say post screening is or post approval, sorry, is you can, you know, in the in the same folder that was earlier created, you can just go there and add the remaining documents and based on, you know, whatever validations that did not run previously because let's say the validations were missing out document 14 to 30, right? So then they would get activated and then they would run.
+
+>>Michael Bottazzi	01:14:55
+Okay, that's good. I was not aware you could go into a file and then just add more. So that's helpful or a folder and then add more. Taking it a step further and it's all right if we don't know the answer to this yet, but I know on the Docsumo site, there's an integration section for Salesforce, Box, various other plug, Google Drive, whatever. If I were to, if we did Box, right, the way Aaron has it right now and we created a folder and put the pre -approval packet in, it would, in theory, straight through process, straight to Docsumo, right?
+
+>>Aniket Tatipamula	01:15:31
+Yeah.
+
+>>Michael Bottazzi	01:15:32
+If I follow that same logic and then put the post approval packet in, could it do what you just said, Manan, and sort of upload a second group of documents to the same folder? Like if I messed with an existing folder in Box and we had the integration set up, does that flow through to Docsumo accordingly?
+
+>>Aniket Tatipamula	01:15:55
+The only problem there, Michael, is, I'll answer the question, is we sync a folder and I'll have to check if we can sync a master folder and then all the subsequent folders get synced the way you wanted. So that's something that we may have not done it.
+
+>>Michael Bottazzi	01:16:11
+Or even if it was all in one folder, I guess, would that work?
+
+>>Aniket Tatipamula	01:16:14
+Everything would go in one folder and that would probably not work for you. But just, we understood your problem. We will go back to the team and then check if we can pull this off.
+
+>>Michael Bottazzi	01:16:27
+No, no worries. And for what it's worth, too, like, we're open to trying to understand how to make it a clean process in our end, too. Just sort of giving you color as to how our current situation looks. So if there's anything on your end that would be, you know, behoove us, just let us know. But sorry, Aaron, I didn't mean to take the reins from you there.
+
+>>Aaron Yu	01:16:46
+No, no, please. You explained it better than I could. Yeah, so, you know, frankly, we have borrowers who come multiple times a year. So we kind of have cases for each person and we even have them separated into fiscal years and see that he's come a plethora of times throughout the 2025 fiscal year. So we're just looking to see how we could work with that. But for the post -approval packet documents, I think all these should be new to you guys in terms of, like, maybe understanding them. So it's everything, the spreadsheet that I'm looking to share with you guys, everything blue that I highlighted is essentially new. So everything here is new and I'm going to try to walk you guys through as best as I can. The underwriting rules checklist, we're not going to really look at that. It's simply just, it's a standard document checking what number of documents, but Docsumo has that function, so it's a bit redundant. But this is meant for humans, obviously, when it was created. So for the secure loan agreement, we're once again verifying the name and then we're looking at the date of the agreement. So here it is, it's on April 9th. So this would be the same day. It should not be 30 days in the past. Loan amount, we're verifying this against what was previously said. Loan amount, you know, it happens quite a few times. You see the loan amount, just making sure that this is the agreement, essentially, secure loan agreement, making sure that it's constant and standard.
+
+>>Aaron Yu	01:18:29
+So for the designated account name, it's here somewhere, but it might be this where it just says Innovation Structured Finance Co. We're just trying to make sure that the money flows to Innovation Structured. So here it is once again, and then we're looking for the signatures. So here it's all signed off, executed by two of the directors of the company. So this would be a check because the two signatures are present. And then for another part, we're essentially pulling the business payment account. So this is separate from everything else. These are all references, these five things.
+
+>>Aaron Yu	01:19:24
+We're taking the branch, Bsp, Swift number, account number, and account name. We're taking them as references in this document, but then we're going to verify it again in a later document, if that makes sense. So that's it for the secured loan agreement. For some of these are very document heavy because they're all simple agreements. They have a lot of pages. But in reality, anything that's important is completely in, you know, it's in schedule one line, it's on page 20. Everything before that is all standardized. So for the specific and featherweight security agreement, we're once again looking at the name, looking at the Acn slash Abn. I think for when we're looking at the date of the agreement, to make sure that it's not 30 days, more than 30 days in the past. And once again, this is on the same day. And then once again, we're looking at the executed signatures. So this document is fully executed.
+
+>>Michael Bottazzi	01:20:26
+Yeah, so for a lot of these BATCAF ones, you can probably already see the theme. But it's a lot of name, date of agreement, Abn, signature. And for some of these, there's various specific items. But Aaron, I don't know if you disagree, but across the stack, that's a lot of what we're looking at on this BATCAF docs.
+
+>>Aaron Yu	01:20:50
+Yeah, I completely agree. Even the guarantee and indemnity agreement, which is a, this is not required, by the way, this document specifically, just tossing that out there. But once again, you can see the theme. It's a radiative document. Primarily, we're looking to see that the date of agreement is not 30 days in the past. Here, it's a guarantor. We're just looking to make sure that a guarantor exists. And then we're looking to see that the guarantor exists, what the name of it is. Sorry, it's right here. And then we're looking to make sure the borrower name is the same and that, once again, it's all signed off. These two boxes at the bottom, signed off by the counterparty to us. So that's the GNI, Guarantee and Indemnity Agreement. The Ppsr receipts, we're referencing this against the report. So in the report, we're going to have a, I believe we're going to have a number here. So it may not be the search number, actually. Ok. Let's go to the document first. Essentially, we're looking to take this registration number and also verify that it's for Australian Bay Lobsters Producers Limited. Before, with the receipts, with the overall report, we saw all the liens, but this one is pertaining to a specific lien that we put on his account.
+
+>>Aaron Yu	01:22:39
+So we're just looking to see the yes, all present and after acquired property. So once again, this is the same thing as the Ppsr report. And we're looking to see that it is Innovation Structured Finance Co. So that's the four requirements here. And then for the registration number here, we're just taking a reference for now from this document. And we're immediately verifying that against the receipt, against the token, sorry. So the Ppsr, the registration number should be the same for this one and the receipt. And then the token, we're looking to verify the token against the revised loan model and summary, where you'll see that in the Summary tab here, we actually have the Ppsr token. So we're verifying this here to make sure that they match each other. And then, OK, so I do want to clarify that there's a lot of different Ppsr receipts. So the two, just a regular baseline Ppsr receipt and token, these two numbers pertain to each other. So these two are kind of connected, right? But for the non -PMSI Ppsr receipt and Non -pmsi Ppsr token, these two have different registration numbers and different tokens, which can get confusing.
+
+>>Aaron Yu	01:24:21
+So we're
+
+>>Aaron Yu	01:24:23
+I specifically named it non -PMSI PPSI registration number, and that should match the registration number of this document specifically. Same with the Gsa one and same with the Fsa one. They all essentially are kind of very similar, but the difference is with the filing tax committee or the government agency, which is why they're all slightly different, and they also have these varying numbers and tokens. Understood. Yeah. Ok, great. So moving into just a revised loans model summary, this is essentially the document number 13, but with some more enhanced information because it includes some information from the closing packet at this point. We're still looking to implement the exact same checks here, which is that the original refund accrued, the loan amount, prior year refund, these are all static numbers that should not have changed from document number 13. Once again, the loan service ratio at maturity, but we're also looking.
+
+>>Michael Bottazzi	01:25:38
+Sorry, real quick. That's 90 .0 to be clear. Maybe just put that in there to avoid any doubt.
+
+>>Aaron Yu	01:25:46
+Yeah. So we're looking specifically at this line here that was not present before. Ppsr clear on refund. We're looking for yes specifically. And then for the token, we're verifying this against document number 19, the Ppsr token. These are realistically, these are the only two new things that are appearing here. We're kind of rechecking these that were present in document 13.
+
+>>Michael Bottazzi	01:26:15
+Any questions so far with the Ppsr stuff? It's kind of complicated.
+
+>>Aaron Yu	01:26:22
+Great. So when I mentioned the secure loan agreement, the business payment account information, these five references, essentially brand new references, this is what we're kind of referencing and comparing it to within the closing statement. With the closing statement, you might notice it's an Excel document. So we're going to PDF just the statement part. We're looking to see the transaction name is Australian Bay Lobster Producers Limited. So that's just the referencing to the name. It shouldn't be more than 30 days in the past because it's generated at time of. And then making sure that the loan amount, so here's the loan amount. The loan amount is still the same as it was before. The reason we did a sources and uses here is because we have these sometimes almost miscellaneous fees. But here's an international transfer fee. That's an additional $20 grouped up here. So we're just looking to see. So this is separate from verifying loan amount. But we're checking that the sources and the uses, in this case, will match each other, which they always should, whether it's like $100 ,000 or $1 million. They should always be equal to each other. And then going to the account information, we're essentially looking to verify this information, the information present here, account name, account number, Bsp. We're looking at bank name, SWIFT number. These five criteria are directly being compared to versus the secured loan agreement here.
+
+>>Aaron Yu	01:28:05
+And I believe I even put a comment here. These items pertain to the bank account name. So the reason I wrote this is because when we're looking at the borrower name, it doesn't matter on an R &D comfort letter whether it says like Australian Bay Lobster Producers Ltd. But for this, it does matter because it's a bank account name. So we want this to be an exact match. So I can even write here exact match required. So it should always be the same lowercase, same name, same capitalizations, same format. Yeah. It's all for this document. So a non -PMSI Ppsr receipt, this is almost exactly the same as the Ppsr receipt and token. But the difference here is that it has a different registration number. So we're taking the registration number from the receipt as a reference. We're making sure that it says, yes, all present.
+
+>>Aaron Yu	01:29:22
+All present and after -acquired company's property, sorry, and then the security party's innovation structure. So it's taking directly from proceeds and organization name. Then for the non -PMS Ippsr token, we're looking to see that the number here is reflective of what was stated in the receipt. Then the token, this token is not useless, but we're not verifying or validating this against anything. But at the same time, we do want to pull this. So you can even just say that's like info, make it gray. I think you guys have done that for something. So just make it info and just have that there as an informational and for Michael, if he ever has to look at it, it's just there instead of having to go into the document. I don't have a Gsa receipt ready, but it's functionally the same exact thing. The document is exactly the same. It's just that it's a Gsa PPSR receipt and it's going to have a different registration number. That's once again going to be compared. It's going to be compared to the Gsa receipt and the Gsa token, and then we're going to be taking this as info. Same thing for the Fsa, same concept. We have the registration number here. We have, yes, all present and after -acquired property. We have animation structured, and then we're verifying this against this.
+
+>>Aaron Yu	01:31:07
+So these two should be matching. As you can see, it's 298. This one's also 298, but the token is once again just an info, if that makes sense. Circular resolution, it's a relatively standard document. We're looking to essentially just see that these signatures exist. Theoretically, however many directors there are in the Equifax report is something I wrote here. So however many directors on Equifax report should be the number of signatures here. I don't know, I don't think we have to be that granular with this, but checking to see that these confirmed signatures are present is mainly what we're looking for in this document specifically. Federal way security agreement, do what you will, but we no longer use this. So this is kind of a legacy thing that exists. We no longer use federal way security agreements because it's just bundled in with document number 16 now. It's a two -in -one.
+
+>>Michael Bottazzi	01:32:17
+Sorry. So to be clear, do they need to do anything with that?
+
+>>Aaron Yu	01:32:19
+No, they...
+
+>>Michael Bottazzi	01:32:20
+All right. Let's just remove that then just to avoid confusion.
+
+>>Aaron Yu	01:32:25
+Declutter this. So we can just skip 29. So the general security agreement, so it's not a common document, but at the same time, we also put some, maybe put some checks for it.
+
+>>Aaron Yu	01:32:47
+It's another standardized Razium document. We're really looking to see that the grantor name, here it says Abyss Solutions Party Limited. If it was for Australian Bay Lobsters, it would say Australian Bay Lobsters Producers Limited. We're verifying this against all the previous other documents, literally what Razium application is saying. Abn, Acn, same thing, pretty standard check. Or it's actually not listed here even. But we're looking to see the state of agreement is within 30 days. So this is actually very recent, July 30th, 2025. And we're looking to see that it's fully executed in the form of signatures, which is already mentioned. These are, a lot of these documents will follow this style. In terms of a tripartite agreement, we're looking, just exclude, exclude Dopr, that it's a priority registration. We can ignore that for now. We're still looking to get that figured out. But for something like a tripartite agreement, there's something at the very bottom called the original lender, the borrower and the new lender. It may also be called the assignee. So we're looking to see that signatures are present.
+
+>>Aaron Yu	01:34:21
+Present for every single section. Yeah, so it's David Weir. But here we're just looking to verify signatures once again. And for the last document, number 34, it's a master facility agreement. We're looking to see that the company name is consistent and it's all in, should be on schedule one and scrolling all the way to the bottom once again. Australian Bay Lobster Producers Limited. We're looking at the Avn, Acn. This should be standard, standard check. The date of the agreement should be within three years. So we're saying 180 days.
+
+>>Michael Bottazzi	01:35:08
+1080 days, 1080 days.
+
+>>Aaron Yu	01:35:09
+Oh, sorry, 1080 days. And then here we also has the interest rate discount. Interest rate discount should always be 1 % here. And that's all we're really checking. Oh, besides the fact that the signatures are fully executed. So here, let's toss that there too. So yeah, I mean, I just talked a lot, but do you guys have any questions about any specific documents?
+
+>>Manann Agarwal	01:35:42
+No, pretty clear.
+
+>>Aaron Yu	01:35:45
+Okay, great. I hope the way that I have been sharing these Excel files with you guys is pretty helpful. Cause I know not everything, you guys can refer to the recording too, but you're not gonna remember everything that was said here. But I'll definitely, I'll double check this And then I'll pass this over to you guys. And then just tossing this here, since we're doing these full packets, I have the requirement criteria here too, which is what we were talking about.
+
+>>Michael Bottazzi	01:36:19
+Yeah, and if anything does need, oh, sorry.
+
+>>Aniket Tatipamula	01:36:23
+Yeah, Michael. So Aaron, regarding those new checks that you added, right? Like I remember in the last case, we had requested you to add the reference document and the reference -
+
+>>Michael Bottazzi	01:36:39
+Oh, you're frozen on, oh my bad. I missed that. Did anyone else, was it frozen for anyone else?
+
+>>Aniket Tatipamula	01:36:44
+Yeah, it was, sorry, it's at my end. So I was saying that last time when you shared the sheet, as you mentioned for each of those checks, what was the reference document and what was the reference field? If you can also do that right now, that would probably like clear out most of the issues for us. I would see you did it in some cases, but not sure whether you did it in all.
+
+>>Aaron Yu	01:37:05
+Okay, I can definitely add those. I'll be more specific with those.
+
+>>Michael Bottazzi	01:37:10
+Yeah, we can definitely do that.
+
+>>Aniket Tatipamula	01:37:12
+That's pretty simple on my end. Thanks, Aaron, that would be helpful.
+
+>>Aaron Yu	01:37:18
+Yeah, no worries.
+
+>>Michael Bottazzi	01:37:20
+And then just as a note as well, we are showing some folks on our office the functionality that's already in place on Thursday Eastern time, just as a note. So if there's any small tweaks or whatever that you're gonna make between now and Thursday, just a heads up. But yeah, this is once all of this is in, this should be all of the documentation we need processed. So this is the back half of those post approval packets that we were talking about earlier.
+
+>>Aniket Tatipamula	01:38:00
+Sure, Michael, thanks.
+
+>>Manann Agarwal	01:38:04
+Awesome.
+
+>>Aaron Yu	01:38:07
+Great, I'm gonna stop sharing.
+
+>>Michael Bottazzi	01:38:15
+Also, cognizant of the fact that that's a lot of, those are a lot of documents. So Aaron is probably rolling off when Aaron, at the end of this week?
+
+>>Aaron Yu	01:38:31
+Yeah, on Friday.
+
+>>Michael Bottazzi	01:38:33
+Yeah, so I wouldn't expect all of these to be in right by Friday, but please reach out to me as updates happen or questions come up as well. We can make sure those get addressed appropriately and they don't get lost in the void somewhere. Just a heads up on that as well. Cool, yeah.
+
+>>Manann Agarwal	01:39:05
+Awesome, anything else, Aniket, Alex, Aaron, Michael?
+
+>>Michael Bottazzi	01:39:12
+Nothing from my side. I mean, I think even if they're not all the way complete or something like that,
+
+>>Michael Bottazzi	01:39:20
+We should set up a call for Maybe like end of week just to address some, you know, if you start working through things and some high -level Questions come up. Let's just address them quickly And sort of just we can you know assess progress or where we need extra hands on on our side and things of that nature So maybe if you could let us know your availability for Friday Or Monday, maybe I don't know whatever works for you, but just some sort of interim meeting
+
+>>Manann Agarwal	01:39:51
+Sure, I'll I'll drop you an email on let's say Thursday. We'll we'll go through You know these documents and the new checks tomorrow and you know If there's anything that's unclear or if you require some more clarity on anything, you know We'll drop it in the email as well as you know, set up a meeting as soon as possible either Friday or Monday
+
+>>Michael Bottazzi	01:40:12
+Yeah cool, we'll get you the the references as well as I Think we owed you a few answers as to questions that came up early in this meeting We'll check that out as well and come back to you.
+
+>>Manann Agarwal	01:40:27
+Yeah Michael there was one more thing. I just wanted to check with you So I was having a word with Abhishek and Vishal. So I think Vishal had dropped you an email With the invoice.
+
+>>Michael Bottazzi	01:40:41
+Yes Yeah, I just chased on our side again the Apologize for the delay there as well the it gets outsourced to a third party for the processing So I just chased them again to see what the status was. Um, everything's approved on our side It's just as a matter of the wire early, so I'm gonna follow up with them And I'll chase them again But yeah, you should definitely have that shortly Awesome.
+
+>>Manann Agarwal	01:41:08
+Perfect. Perfect that that should do.
+
+>>Michael Bottazzi	01:41:10
+Okay. All right. Appreciate it.
+
+>>Manann Agarwal	01:41:12
+Apologies for the delay again there Nobody's awesome. Okay, then that's it from my end Then thank you guys, thanks for that and thanks for the detailed walkthrough appreciate it.
+
+>>Michael Bottazzi	01:41:26
+Thank you
+

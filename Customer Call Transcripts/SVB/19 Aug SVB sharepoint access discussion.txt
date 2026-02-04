@@ -1,0 +1,192 @@
+>>Ashish Rayamajhi	00:00
+I'm not familiar with the back -end. Okay. I guess we can start then. Ashish, you can go ahead and start. Yes, dear Monods. David, so you have provided us with a delegated permission for the Sharepoint access. What's happening right now is as Monods only have the access to those documents for the variant files. What he need is he should have authentication code flow. He have to authenticate and get the authorization code. The access token that we get for the Sharepoint. What's happening right now is whenever he's trying to login to the account, if Monods, you can share your screen and show what's happening. The link that I provided you before, if you screenshot and show that. It's asking for the admin consent, David. Am I clear?
+
+>>Davide Basso	01:05
+You want me to share my screen, right?
+
+>>Ashish Rayamajhi	01:08
+No. I think Monods, can you share?
+
+>>Manoj Racherla	01:10
+Sure. I'm sharing my screen.
+
+>>Davide Basso	01:11
+Okay.
+
+>>Manoj Racherla	01:12
+Let me know if it's visible. Is my screen visible?
+
+>>Ashish Rayamajhi	01:18
+Yes, it's visible.
+
+>>Manoj Racherla	01:19
+Okay. Let's say this is wrong. Selecting the email. I got the verification code.
+
+>>Davide Basso	01:41
+Yeah.
+
+>>Ashish Rayamajhi	01:42
+When we got delegated Permission, it requires for that main operable.
+
+>>Davide Basso	01:47
+Okay. That's on.
+
+>>Davide Basso	02:02
+All right. Let me see. Sorry, just a second. I always get lost here.
+
+>>Nicholas Reyes	03:01
+I'm on mute. Okay. Yeah. Permission. We just granted the consent for the application. Try again.
+
+>>Manoj Racherla	03:10
+Yes, sure.
+
+>>Manoj Racherla	03:43
+It's just showing new admin approval.
+
+>>Nicholas Reyes	03:47
+Can you share your screen for me real quick? Sorry? Can you share your screen so I can see? Yeah.
+
+>>Manoj Racherla	03:55
+Sorry. My bad.
+
+>>Nicholas Reyes	04:30
+Let's take a look here.
+
+>>Nicholas Reyes	05:17
+Okay, okay, so I've got one more time Okay Which resources are you trying to access because right now you've got the selected site, and you've got a user dot read
+
+>>Manoj Racherla	06:01
+Okay, so for this Correct me if I'm wrong Yeah, yeah,
+
+>>Nicholas Reyes	06:06
+So you've got you've got access to that entire entire site But you're using your app to log in with what resources are your app trying to let me? Take a look at the sign -in logs real quick
+
+>>Ashish Rayamajhi	06:16
+Yeah, I think it's trying to Like get the site info if we like and see the site in properties.
+
+>>Manoj Racherla	06:24
+I Think the sites.
+
+>>Ashish Rayamajhi	06:26
+Oh, yeah
+
+>>Manoj Racherla	06:30
+Because when I go backwards to the document to the root folder, you know, let's say Yeah, I Can't
+
+>>Nicholas Reyes	06:41
+Yeah,
+
+>>Davide Basso	06:41
+Okay. You were granted just that that folder not the folder You were technically granted the entire site
+
+>>Ashish Rayamajhi	06:59
+Okay, I wonder if this is Also, I just we wanted some key right of that particular site site ID like We got that You need access to this
+
+>>Davide Basso	08:03
+So you need that? So you're trying to access the This the full site not a single folder, right?
+
+>>Manoj Racherla	08:10
+Yeah
+
+>>Nicholas Reyes	08:11
+Okay Let me see what's in here I'm honest.
+
+>>Ashish Rayamajhi	08:24
+Can you like try the link that I have the same just just accessing the side one this one. Yeah I mean,
+
+>>Davide Basso	08:43
+Yeah, it's showing you that mean.
+
+>>Nicholas Reyes	08:50
+Yeah. Sure. You mean give me one second here
+
+>>Nicholas Reyes	11:20
+Sorry, bear with me here, I'm just getting logged into a bunch of things. No problem.
+
+>>Nicholas Reyes	14:12
+All right, so I'm connected to the site's warrant.
+
+>>Manoj Racherla	14:21
+Nicholas, are you sharing your screen?
+
+>>Nicholas Reyes	14:24
+No, no, I'm just PowerShelled in. So I can see what you have access to here as an application, because you're connecting in with the application, correct? You're .qmo? Okay. Okay. Okay.
+
+>>Nicholas Reyes	14:58
+All right. And then, yeah, you have access to that whole thing. Let me just give you a bit more finite, right? So warrants slash documents.
+
+>>Manoj Racherla	15:44
+Can you also share the same access with Ashish as well? Ashish, can you share your email ID in the chat?
+
+>>Nicholas Reyes	16:13
+Is this account even a part of the site?
+
+>>Nicholas Reyes	19:16
+Yeah, your document, your program has read permissions.
+
+>>Davide Basso	19:26
+Manoj, can you try one more time? I just add you to the root of the site.
+
+>>Manoj Racherla	19:31
+Ok.
+
+>>Manoj Racherla	19:50
+Is my screen visible?
+
+>>Manoj Racherla	20:04
+Is it working now?
+
+>>Manoj Racherla	20:15
+Yeah, it's working. It's working.
+
+>>Davide Basso	20:19
+Oh, great.
+
+>>Manoj Racherla	20:19
+Ok. Have you shared the same access with Ashish as well for the email ID that I just shared in our chat?
+
+>>Davide Basso	20:25
+I'm adding them right now. So give me a couple of minutes. Yeah.
+
+>>Manoj Racherla	20:37
+Ok. I add the Bikram customer success, your account, visual area, the site route.
+
+>>Davide Basso	20:52
+So you might wait a minute so the permissions are synced.
+
+>>Manoj Racherla	20:57
+Yeah.
+
+>>Davide Basso	20:58
+And that should be fine.
+
+>>Manoj Racherla	20:59
+Ok. Ok.
+
+>>Manoj Racherla	21:21
+Ok. All right. Ok. Great.
+
+>>Davide Basso	25:15
+Okay, um, I know can you try again and or any of your team With Ashish or Ashish you see let me see if it's actually in this
+
+>>Davide Basso	25:46
+Okay, I just saw the Ashish Ashish can you check once
+
+>>Ashish Rayamajhi	31:04
+Yes, I'm able to access the topics perfect.
+
+>>Manoj Racherla	31:12
+Ok, you need any more details from David Onykos?
+
+>>Ashish Rayamajhi	31:19
+I think I'm fine with it right now.
+
+>>Manoj Racherla	31:32
+Thanks David and Nicholas for you to come on this call on such a short notice.
+
+>>Vishal Patel	31:47
+Thank you.
+
+>>Manoj Racherla	31:47
+Goodbye.
+

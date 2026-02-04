@@ -1,0 +1,225 @@
+>>Erik Zboyan	00:00
+Can particularly given that Roman will need to go and do stuff you know that don't work doesn't require a meeting but everybody did have some questions so just as an update of where you're at you know um and roman jump in if i miss state like where we're at with it is That these he has built out the ability to uh retrieve to place the files into the folders that need to be created on your side so he's gone through your api to do all that right roman Yeah
+
+>>Roma	00:35
+Maybe i can share a screen and show you Right Yeah What i have been done and uh yeah you can guide me from there So if we go to here i have an account which is probably not related to any of the custom apis you have developed that might be the first challenge But anyway So i have that account where i am able to create a folders from the api And then i upload the files from the api so that's good Right So your api is pretty straightforward I i can do that uh And then i was testing something like let me just go to your document uh no that's not one So you shared that uh this one where is a document Yes So i i was able to create a folder Right So here's a test folder which i created the api i have been able to upload the file to the folder So i think one of them Yeah So just this is a file which i was trying able to upload right i'm good Um i was not super sure about where which files to process it's probably because your upload is asynchronous and i need to wait a couple of minutes right or can you maybe explain now
+
+>>Aniket Tatipamula	02:12
+Yeah Roman So what happens is when you upload as in if you upload a document you would see can you can you go back and then i'll just show you can you just can you just hover over that uh check box And you just click on that check box Yeah And we re -try Can you please read right we try
+
+>>Roma	02:29
+Okay
+
+>>Aniket Tatipamula	02:29
+Okay can you confirm please Yeah So what happens is the moment you upload the document it would be in this state processing state and when you try to access the data when while it is getting processed you would not be able to see uh you're not able to see the data it will just show you that it is in process like in the extraction progress and yet now it's done like now it's complete So once it's completed it's in review state So when we say you have to wait you have to wait for it to go to this review or processed i see
+
+>>Roma	03:02
+So it's a asynchronous process which is started once i upload a document it takes a couple of whatever minutes to process it on and only then i can start sending that uh document to your custom validation process Yeah
+
+>>Aniket Tatipamula	03:20
+So basically once you upload if you look at it right there's the second there's this third api uh support docs .com And this one api user document list so what happens is yeah this one if you hit this api uh you can go to the support docs you can actually try this out in real life like can you do one thing can you please go and put your api key here you're not working to put in the api key
+
+>>Roma	03:44
+So i think it's here Right So i copy that well here uh where should i put it Yeah
+
+>>Aniket Tatipamula	03:55
+Can you please scroll down Oh here
+
+>>Roma	03:59
+Yeah Yeah
+
+>>Aniket Tatipamula	04:00
+And can you copy that
+
+>>Roma	04:02
+Please yeah uh folder let's take Wait i don't let's take i'm sorry not the document not the document
+
+>>Aniket Tatipamula	04:18
+Yeah
+
+>>Roma	04:19
+Yeah I'm searching the folder with the documents wait uh so empty folders uh wait we have how can i find which folder this document uploaded to um can you do one thing can you go back please
+
+>>Aniket Tatipamula	04:33
+Yes can you go to all documents yes can you there's three dots next to upload on the top right side uh
+
+>>Roma	04:44
+Yes
+
+>>Aniket Tatipamula	04:44
+Yeah can you please show files only can you click one of them i think one of them would be in the folder the first one should be in the folder can you click one of them Uh okay
+
+>>Roma	04:57
+No i think that would not
+
+>>Aniket Tatipamula	04:58
+A little tricky to find Okay can you just move them as in can you just create one new folder it will be pretty quick if you're not able to find one Okay
+
+>>Roma	05:06
+This creates a new folder with different name uh where can i create a new folder from Ui on the three dots the same three dots
+
+>>Aniket Tatipamula	05:15
+Oh okay
+
+>>Roma	05:16
+Uh Yeah Okay Let's say api test we create a folder you can move any if you you can upload that's okay Okay wait let's just move existing one so uh files only take that document move to that folder Okay uh And i take that folder Id Yep And then i need to pass it here Yeah
+
+>>Aniket Tatipamula	05:44
+Okay
+
+>>Roma	05:44
+And i'll try
+
+>>Aniket Tatipamula	05:46
+Right
+
+>>Roma	05:46
+Yeah
+
+>>Aniket Tatipamula	05:47
+Yeah Now what you see is uh the document is only one document so inside the document it's an array and there's one item in the And it tells you the doc id and the status of the doc can you please scroll down there would be metadata and there would be status for it this I Because this is processed as in all it's it has all the extracted data as well uh you can do one thing you can try to retry the document again and then i'll showcase this uh this not not here not yet can you go back Please okay Yeah Yeah And can you please now go and try this quickly right try it again I think it is cached for some reason No
+
+>>Roma	06:40
+Okay
+
+>>Aniket Tatipamula	06:42
+Yeah I'm not sure why this is cached But
+
+>>Roma	06:51
+But uh what are you trying to show me now Yeah the first step right Yeah
+
+>>Aniket Tatipamula	06:58
+So basically this is just there for you to wait so if there are 10 documents you would see some of them not in that process state so let me quickly check at mine
+
+>>Roma	07:07
+So i'm just saying like this And then there is a state where you're saying something should be unprocessed Right
+
+>>Aniket Tatipamula	07:15
+Yeah there will be uh metadata for status give me one second status here reviewing yeah status is reviewing so this status would not be in reviewing it will be in processing state so while it is crossing steady able to use the data or you'll not be able to uh get it with the other api Okay So i i wouldn't be able to submit the folder to that end point you will be able to submit but you will not be getting the right validation data
+
+>>Roma	07:45
+Okay So okay Okay So that means once i uploaded the files i need to wait until the status where is going to the reviewing and then only then i can submit the whole folder to to your custom validation api Yeah
+
+>>Aniket Tatipamula	08:02
+Okay
+
+>>Roma	08:03
+Um so first question i was having when i submitting the documents i need to provide the document type in the document type as i understand it's a custom types which you create right and then based on this type you kind of doing this analysis right uh what is the type i need to provide for the documents it's very specific one or how this will be configured
+
+>>Aniket Tatipamula	08:32
+Yeah that would be ai auto classify uh robin can i share my screen because that would probably be a little faster i'll quickly explain what happened Yeah I'll shoot on private account itself
+
+>>Roma	08:43
+Okay maybe you need to add me to that account where everything is enabled right that was also my question because now i'm using this trial account which has no nothing configured
+
+>>Aniket Tatipamula	08:54
+Yeah sure i'll do that as well as in is my screen Yeah It's yep you can see it so this is their account and if you look at it there are a lot of document types defined but we do not we do not upload to a very specific doc type we can do that as well But we chose to use auto classifier So what happens user would just upload a document here and the document that then gets classified into the doc type that is required so what we have to do is we have to use this doc type let's let's test it out quickly and let's test it out with the doc type that we have uh here it will be auto classify ai right Okay And let's take the i key and let's upload a document let's upload it inside this folder
+
+>>Roma	09:57
+Demo i that's okay
+
+>>Aniket Tatipamula	10:05
+We'll just upload it outside for now because there's no setting here let me just upload one of the docs uh let me just download radium application for a second so now when i upload as in uh what happens is uh it will be uploaded and you would have something status would be in processing so now it is actually not ready So if i go out i go to all documents if i look at you would see this document this document right now is in processing state it's not yet processed and um If i i'll just show how to fetch the details document details as in id this is just for the sake of showing and there's nothing much happening yet settings you have to do it before it gets processed Right Yeah So what you see here is is the document is still not processed as in if you look at the document it gave all the data And then there will be metadata as well Okay the status is reviewing yes that is reviewing is this one actually got reviewed So um i guess i took a lot more time to fetch that's fine Okay
+
+>>Roma	11:42
+So once it's reviewing we can see we're good And then we need to now start submitting to this external another api Or Yeah
+
+>>Aniket Tatipamula	11:53
+I'll just quickly showcase what what we will do So okay we will probably try to add it here Okay let's add a new one let's add a new one request let me open up the docs
+
+>>Aniket Tatipamula	13:20
+Yep uh i'll put the api here quickly and then let's go to the folder id where something is happening let's go back and let's go with this let's take this folder Id Okay So when i do this uh it will go ahead and fetch the validation for this specific folder So this has all the validations in it uh for each of the tables but let's do one thing as in uh just for the sake of it Right let's let's imagine that this gets reprocessed so what would happen ideally it would be something like this Right all the documents are in the moment you upload and if you don't wait and if i do this like if you see a lot of these checks are now pass fail pass fail but it doesn't it doesn't show missing but if i hit this api again while the documents are in processing it would be very different for some reason as an entire if can you see it's missing required missing required missing required because the documents are not yet ready So uh you would be getting something that is incorrect of a validation am i making sense
+
+>>Roma	14:48
+So you're already giving the data on the moment when i hit the api after they are in the status review
+
+>>Roma	14:56
+You so you don't do in callback No
+
+>>Aniket Tatipamula	15:00
+But why you have a callback endpoint then why because then you you can get this data right away the reason I asked it is because this is something that we're doing temporarily later on what we'll do is you don't have to make this call we would probably the moment you upload we have a workflow that is gonna work on this data when all the documents are ready we'll go ahead and hit that Api directly so this feature will probably be ready in a quarter or So Okay
+
+>>Roma	15:30
+So I see so You okay good for now you're not going to do callback You just will be waiting me to to retrieve this data once everything is processed I see no that's fine Okay good I'm just now trying to okay But the problem is when I I need to be added to this account Right so because when I now do this uh skinny skinny case view validation I'm not getting the same results is it Oh yeah
+
+>>Aniket Tatipamula	16:05
+I'm dependent
+
+>>Roma	16:06
+Yeah
+
+>>Aniket Tatipamula	16:07
+Yeah It's it's document type dependent you'll not get the same results because it's very specific to your documents Right
+
+>>Roma	16:12
+So that's why I have now trial account if you can add me to that account that would be even uh helping a lot so then I can really test that all end to end
+
+>>Aniket Tatipamula	16:26
+I'll I'll add you to that account I'll get you added to this account and share it across the email program Okay
+
+>>Roma	16:32
+Okay That's good but Then uh yeah That makes sense So I then how how long would it take to process all the files like maybe 10 15 minutes or I can keep trying until I will get of a response with everything is success can you go back to the postman Please Yeah Uh so you have a success error what is it missing right Uh so I can keep hitting this Api until I will get everything either pass or fail no don't do that that is not that this is actually not the status to check if the document is ready so there's one more Ap that's the one that you have to
+
+>>Aniket Tatipamula	17:15
+And I'll just showcase that as well give me one second let's try this out uh let me put the Api give me a second folder ID Okay
+
+>>Roma	17:26
+So you have one Api to check whether the folder is ready and one Api to retrieve the results you are right
+
+>>Aniket Tatipamula	17:34
+So this one is to uh this is all files yes we want to fetch all files Okay And then uh yes the Api key Api key yep by now Yes if you look at this there are multiple documents in it Yeah And uh there will be status here which is reviewing so let me retry all the documents again so that it's much more easier for us to notice the ones that are still getting processed we try we try Yeah now all the documents are getting read right let me actually copy this to postman Yeah
+
+>>Aniket Tatipamula	18:44
+Can you see the status right now would not be processed this one is reviewing it Yeah Okay
+
+>>Roma	18:55
+Yeah
+
+>>Aniket Tatipamula	18:55
+This one is basically the ones that are getting processed so you would ideally need you would ideally the only thing you're going to check is none of them are on you so if any one of them is on you then you would you there's no point in making this second call because if you make that you would get an incomplete result
+
+>>Roma	19:15
+Okay um i got it one more question um there is a pdf which is get generated as a results and this is what was coming from Eric i think uh is there a way to retrieve that pdf maybe somehow instead of me retrieving this json parsing it and then creating pdf on my site
+
+>>Erik Zboyan	19:38
+So what what he's talking about is that you know the summary screen that uh New York has seen brevet has seen where it's pass fail and it tells you like what passed what failed is that ringing a bell Yeah
+
+>>Aniket Tatipamula	19:56
+You mean this one Yeah
+
+>>Roma	20:01
+Yes
+
+>>Erik Zboyan	20:02
+Yeah
+
+>>Roma	20:06
+You you want this one it's the same what you're doing you're just hitting the same api and just parsing and showing as a table Okay it's not a pdf Good Okay
+
+>>Aniket Tatipamula	20:18
+No Yeah
+
+>>Roma	20:19
+I see i see i can do that uh that's Okay good Yeah just add me to that account because that's i see this account is having more than just my trial account And i think that will be helping me to to proceed sure roman
+
+>>Aniket Tatipamula	20:36
+I'll i'll get that thing done that that's it right like are there is there anything else i think that should be the only other thing that i i would have created the confusion and sorry about it like this but the reason i asked you to create a new one is just so that later on what would happen is we are building something called as workflow and uh all of this uh the the thing right the thing that you're doing here you don't have to do any of it you just have to upload the files you don't have to wait for it we would complete the we will wait ourselves once we are ready we will go ahead and hit your api the api that you get with the validation results that we are generating here
+
+>>Roma	21:13
+And okay But you're saying it will be just the next quarter or or so Right So okay No that's fine I just And we will be doing a callback once your job is completed uh Okay now let's let's keep it like this I will just uh yeah do this uh steps 1c the check the status once the status says everything is not new then i will hit another api for the uh for the validation results Yeah Yeah
+
+>>Aniket Tatipamula	21:41
+That works
+
+>>Roma	21:42
+Okay good I don't have anything any other questions for now thanks a lot to get your help all right
+
+>>Erik Zboyan	21:49
+Yeah We'll hit you up if we got anything you know he'll obviously email the group here if he's got any questions on it But um um maybe we'll touch base the beginning of next week you know with an update Thank you thank you thank you thank you thank you thanks for jumping on quickly appreciate it take care Thank you
+
+>>Aniket Tatipamula	22:06
+Bye
+
+>>Roma	22:07
+Bye bye bye
+

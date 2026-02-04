@@ -1,0 +1,468 @@
+>>Bikram Dahal	00:00
+Okay, a little bit of rain, but I guess it's that time of the year. Oh, okay. Very rainy. Yeah. Yeah. So... So, one news on my side, currently I'm in the US, but back home in Nepal, we had a complete government change in one week. So we had a big revolution over there, and the government has completely changed, you have a new prime minister in one week.
+
+>>Jarl Arntzen	00:28
+So...
+
+>>Bikram Dahal	00:30
+Wow. A lot of things back home, but at least, like, it was a mix of everything, you guys can check it out if you guys are interested about Nepal. So the whole government got changed in, like, one week, it was a big revolution. Now, it happens, change of government is not a big thing, but usually it happens between the parties, alliance and everything. So this time the whole parliament got dissolved, and the chief, ex -chief justice was made a new prime minister, and we were supposed to have an election in the next six months, in one week. Okay.
+
+>>Bjørnar (Semine)	01:08
+Speedy process.
+
+>>Bikram Dahal	01:09
+Yeah, it's like, it's crazy, like, Next level S*** going on over there, but anyway, like, the Timo was a bit more, like, it happened so fast that we didn't even get the time to react and everything. So it has not hampered Oxfam that adversely, but it's a big toll for people because it was a lot of uncertainty for, like, last one week. Okay. Awesome. Okay. I think mainly there are two agendas on my side for you, for you. One is to provide the update regarding the template -level, template -level, server -level training. That is one part. And second thing is also to provide you an update regarding all the things that you guys have, like, given the feedback on the podoc and what is done, what is not done, and everything So we have prepared a simple Google Sheet with, like, what is done, what is left, and everything. So these are the main two things I have on the agendas from my side. On the second side, I just wanted to, I know that there are a few issues on a few things and everything, but I just wanted to understand regarding what are the next steps, like, can we test with, like, large, even for seller, especially with testing, we'll have to test it with, like, large sample of, like, large sample of data to make sure that that system is working and everything. We have done our system on our side, because we have some live customers, so we have already enabled it and seen the improvements and everything on our side. But we wanted to make sure that we have large enough experiment. When I say large, it's not, like, very large or everything. It might be, like, 500 files, maybe 20 windows or something like that, so that, like, we can see the improvements, like, on that side. So how to do that. So that's the second part of the agenda that I wanted to discuss.
+
+>>Bikram Dahal	02:51
+And then, and then, like, just wanted to know, like, where you are on this, regarding the integration, what is the next thing that we need to solve? What are the improvements that we need to do on the product? Okay. Do you guys want to go first regarding your side or should I go first regarding the thing that you guys have posted and where we are and, like, how we're getting the seller supply level training that you guys can start with?
+
+>>Bjørnar (Semine)	03:21
+Yeah, you can just kick off. We're really eager to see the supply training. So that would be very great. Okay.
+
+>>Bikram Dahal	03:29
+Sure. Sure. Then let me just, like, let me just take it from there. So.
+
+>>Bikram Dahal	03:48
+Okay. Can you guys see my screen?
+
+>>Bjørnar (Semine)	03:54
+Yeah. Okay.
+
+>>Bikram Dahal	03:56
+Sure. So the main, like, what do you call it, main, like, main thing that we have worked on, on the product improvements and, like, what do you call it, product improvements and on other side is that there was an issue regarding the date formatting and you guys wanted it on, like, YYDDMM and on the product it was not on that format. So this has been solved and it is edit. So what we have done is quickly show it to you guys in a second. Okay. So I'll just show one quick thing over here. Okay. So over here, what we have done is for all the dates, we have edited the format section. So over here you can choose the format that you want. So your YYDDMM and everything is edit. So it's already on your account, but just to let you guys know that any on any of this date, if you go to this three button and if you click on this option to even the display will be correct.
+
+>>Jarl Arntzen	04:58
+Okay.
+
+>>Bikram Dahal	04:58
+You'll be able to see everything on YYDDM format. There are more format also, but this is the format that you guys wanted, so you guys can do that. So that is done. Yes.
+
+>>Jarl Arntzen	05:13
+Yeah, can I just ask immediately? So does the same format apply to both the API export and the display? Yes, so now what we have done is that whatever is displayed is whatever get exported because till now on the display we could not show it, but on export we could do it.
+
+>>Bikram Dahal	05:37
+So I think that season we had done a few things. We didn't want it to complicate you guys with a lot of things. So last two weeks, and that's the feature people had asked for it. So we just told the engineering team that whatever is on the UI, I want to export that. You can easily change it, but if you decide. But like for now, if you have done a code on export, then whatever you see on the product is whatever you see like on the export. So that part is done.
+
+>>Jarl Arntzen	06:01
+Awesome, good, thanks.
+
+>>Bikram Dahal	06:03
+Yeah, and the second part over there is that there was an issue with like number and date format. So if you guys remember it correctly, so the two dot date format were working correct. If you have comma and dot, then it was correct. Like it was working like fine. If you have a space, everything was working fine, but this case was not working fine. Comma zero zero. If you had this, then you would see an error because we were not able to convert this into a good format. So this also now has been solved. But you just have to write like code and everything, which is already done on the account. So like, no matter what format you receive, it will be always converted into three, four, five, dot zero zero. And this was also possible, like possible before on API, but it was not possible on the UI. But we have done it in such a way that now on the UI also, if you have that, then the format of like, what you call the format is always converted into the format that you guys needed so that you don't have to worry about listing and everything, it should be a proper format. Okay, other things are simple thing. I think this was the main two port of implements like that was done to make sure that it's on the same format. So the other things were like more of the thing that you guys asked for and everything. So like I'm not going to nitigate it. I'll just go into two things that are currently in progress where it's still like trying to figure out like what to do it. So I think this is also done like extra multiple, make history and everything. And the only part that we are currently looking into is we have a solution for one document, but we want a long -term fix because you'll have different vendors, different suppliers and everything, right? So the one that was, if you had a back number on a table and it was, you wanted it on the line items, right?
+
+>>Bikram Dahal	07:45
+That was the one of the requirement that your team had. So that is currently like being worked on. A few other things like if the quantity is just one, so usually what happens is that like when you have a quantity is just one, and then sometimes it can have Oci issues and everything. So like it was causing some issues. So that is just like a work in progress. This and these two things are still work in progress because these two things are fundamental. It happens on some files and it happens on longer files when you have just have one or something like that. So the team is just working on these two fixes like to figure out what is a long -term fix. Just for that document, we can do it, but we're not looking into just solving it for that document, but we're also looking into solving it for all the documents. So we'll keep you updated. Hopefully we'll have some good ideas about by end of this, like end of this like week, regarding these two fix. Okay, so we'll keep you updated on this one. I'll make sure that those are solved on like all the cases, not just for those files. Okay, the last part over there was regarding the vendor training, because that is one of the thing that for certain template, if the information is not accepted, then you want it to be able to, you want it to be able to like, and you did that data. And if I do it for three or four times, the next time it shouldn't make any issue, right? So next time when I upload the same vendor, then we should not have any issue, right? So that is what we, when you guys were talking about supplier level training, is that correct? So on that, let me just quickly share the screen, like it's going over there.
+
+>>Bikram Dahal	09:27
+So we have done one version of it. It's working, it's working really well. I would also wanted to test it. We have tested for the customer. It works like it takes the equity from like 70 to 80 % to 97%. So the test has been really great, but we wanted to make sure that we get few ideas regarding how to test on your account and everything. If you guys have sample set or like how to like, you guys get that confidence, right? So, because this is done automatically. It's not like a graph or something that you can see on our site. So I'll just come to that in a minute. So I'll just.
+
+>>Bikram Dahal	09:57
+Like, show you what is being developed to make it better. But I'll just give you some XML that we have run. And then we'll come to that part over there. And also, the team has done some tests. So let me see if I have your account or not. So they have made a new document type, and they were testing it also just to make sure that everything is good. And your team also can test it. So give me a second if I have that account.
+
+>>Bikram Dahal	10:32
+What is the username, Nidhi, for the team? Can you send me, please? Sorry, I didn't have it logged in, but I have been back -to -back meeting. It's Monday, so unfortunately, I don't have it logged in. Give me a second. Okay, just a minute.
+
+>>Bikram Dahal	11:08
+Okay, I'll take one. I'll just show the numbers, and then I'll log in on this one. So what we did is that we used a different... Okay, so what we did is we have different approach on the, like, what do you call it? We have different approach on, like, approach on template matching to figure out which is the supplier and what training should I do on that supplier. So one way of doing the template matching to figure out what document has been already, already, like, what document has been already processed is going to be the VAT number, because on all of this document, you have VAT number. Now, VAT number is a bit easier to extract the name, because in the case of name, what happens is that, like, sometimes this name will be short. Sometime it will have private limited. Sometime it will have something like, something will always, like, you have to first standardize that name also, which can be a bit tricky over there. So first thing, we just use VAT number, and we're just trying to figure out, like, what is the Max portion that we find? So what we did is we had about, like, we had about, like, on your case, I think we only had 14, but we have, all the customer, we have, like, 50 ,000 documents and everything. So, like, what we did is we tried to figure out how reliably can you match two template based on, like, VAT number? And this can be changed to SELA number. It can be changed to other number, Ipn numbers, or whatever. And on most of the, majority of the cases, like, I'll not bore you with a lot of these things. You can just look into the first one. We just look into what portion of document do I match based on that logic. And we also have our own matching algorithm, right, that we have built that uses the text, the image, and a few of the parameters.
+
+>>Bikram Dahal	12:55
+It's a mix of, like, multiple parameters. So in that case, we look into that. So the VAT number match, we're able to do, like, 90, like, what do you call it, 90 % of the times, the VAT number was able to match the template, but our system was able to match the template of, like, 100 % of the time, right? No more, once we have more templates and everything, once we do testing, because this testing is done for a simple set of 14 different vendors that was available on your account. Maybe this number will change, like, down the road and everything. But, like, what do you call it, but, and this we did not just on your account, because your account has a small set of data. We have another set of data where you cannot just, kind of, experiment and everything. But on, and we didn't just look into one template. Now, what happens with all of this recommendation is if you just look at one template, then sometimes the SQL is able to get started to skew. That's the reason why we want at least 20 templates. And we need to look into overall accuracy also, because if you just look into one file and there's an issue on this file, then, like, it'll be a lot of things. So what we usually do is that, like, we initially upload two or three files of this 20 template and see the accuracy. After you're approving it, you upload the file one more time, and then you see the accuracy. And you change this matching based on, there's a parameter to change. So you change from this to this and see, like, which would give you the better results, right? So on this case, time and again, I'm not talking about just, and your case might be different. That's the reason why we added this method also, because I cannot say that whatever applies to a different customer will be applying to you, because on your case, because of complexity, bad number or other seller name might be a better approach to, like, fix the accuracy of changing that model than, like, doing it over there.
+
+>>Bikram Dahal	14:43
+But we want to run both experiments on your site. Like, once you guys have that data set up, 20 or 40 or 50 customers with at least five files. If that is on the account, let us know. I know my team was able.
+
+>>Bikram Dahal	14:56
+To pull about 85 files or something, and different vendors. So those things came from those only. So we'll run it across both the methods. One is using, say, the bat number and everything, and figuring out what are the improvements that was done on that bat number, so that next time if you upload, those things get fixed. And we'll also use our own algorithms, which combines multiple key factors, like text, image, and other parameters over there, and then figure out whichever gives the highest accuracy on this method. We'll just decide, okay, this might be a better method to use for that training. And on your side, you don't have to do anything. The only thing that you guys have to do is make sure that our documents are approved before you upload the next batch for experimental purpose, like just for experimental purpose and that sort of thing. You guys have to do it. But I'll also show you something that we are working on, which later on you guys can stop and say that don't post a file. If I get new files and everything, don't post this file until I have approved two or three of those files. So those things are also work in progress. That is not live. It will only be on October 1st and everything. I'll just give you a quick preview.
+
+>>Jarl Arntzen	16:12
+Yeah. We could call that for, that could be referred to as delayed processing, maybe. Delayed processing. Okay. So over there, let me just stop sharing the screen because I have too much thing on the screen. I'll just get that diagram And I'll get back to you regarding how we are looking into doing that. Yeah.
+
+>>Bikram Dahal	16:33
+So give me a second. Yeah.
+
+>>Jarl Arntzen	16:40
+I may have to go and get my power cable. No problem.
+
+>>Bikram Dahal	16:44
+You can do that. By then I'll just log into your account also and also make sure that this is ready.
+
+>>Jarl Arntzen	16:51
+One minute.
+
+>>Jarl Arntzen	17:22
+Okay.
+
+>>Bikram Dahal	17:23
+Give me a second. I'm just going to get to B2R10 and get the password.
+
+>>Bikram Dahal	17:40
+Okay. So I'm logged into both. So let me just share the screen. Okay.
+
+>>Bikram Dahal	18:00
+Can you see my screen? Yeah. Okay. Awesome. So Bob, I have already told you guys, but I think when we talked about it, it was on a very early stage and everything. So we didn't have this ready. This is just one thing I made for different customers over there. And we're looking into using the same thing for delayed processing and everything. So on our system, we have built a workflow. So I know General has seen it and he has provided some feedback, but he was more interested in coding part of it more than the UI part of it, because a developer really likes a predictive system that you can code and everything. So we have finished one version of it, which will be live from October 1. So over here, when the document are processed and everything, then you can make a branch and say that, okay, because all the documents that will be processed will figure out if there's a template. Now, if it is a template, then you will go forward. If there's no template, then we say that, please wait till this many documents are processed. And during some interval, the thing is that it's not to be live because there's an engineering issue over here. So what will happen is that every half an hour or every two hours or something, we'll say that if the document which do not have a... which you uploaded, it's already... There are two logic ways. This is a bit more complicated. It's that you also want to process at least two, three documents for those templates that you have not received. Because if you don't process anything, then people are not going to give you those files.
+
+>>Bikram Dahal	19:40
+Because for you to... this thing to kick in, you'll have to at least give you one or two files of new templates. But rest of the file, you don't want to review. You don't want it to process. You just want it to be stocked and you want it to be processed later on. So like we are building a system.
+
+>>Bikram Dahal	19:55
+Way, either based on bat number or whatever we decide, or based on the bat number or based on our logic of matching, it will figure out that, OK, I have not seen this template. So it will allow at least five documents to process. But after that, if it finds a document that is on eReview but not processed, and I don't want it to be processed, then we'll make a block something like this, which will check those. And it will stop the document from going from one status to the next status. So we are building a few blocks based on those requirements and using a few of the blocks that are already there. So this will be live on the first week of October. Hopefully, everything goes as per plan because it's a big feature over there. So that feature is going to come on the first week of October. And then you guys will be able to test this one. For now, you guys can just upload because you guys are getting 20 vendors or 30 vendors. And you guys can, like, oh, I have logged into your account. The team was testing that only, so AI auto -logging. So it's just a duplicate of the inbox table only. It's not anything complicated or anything. So the team, we just go to the configuration. And so, yeah, So the team are just enabling everything over here and then testing it out. So for your team to, there's nothing different about this document type when, like, inbox table or anything. We just wanted to have it on one container so that when I give the results, things are very easy to like, easy to get all the results and everything because when the experiment is over, we want to get both what was the initial accuracy and what was the accuracy after you approved X number of files.
+
+>>Bikram Dahal	21:49
+So we just make a different container. So, like, you guys can just upload two or three file of 20 vendors, approve it, whatever mistake it is making, and then, like, upload the rest of the files. And then, like, and for now, you guys can do based on that setting. Once the document is uploaded into your system, we'll run this against both this setting and this setting, and we'll give you a complete report regarding, like, which gives us better results.
+
+>>Jarl Arntzen	22:25
+So what you're saying is that on any of the document types, we now have supplier -specific training or not?
+
+>>Bikram Dahal	22:36
+So currently, if you want to enable supplier -specific training, I'll get back to the team. Currently, we have this, like, supplier -specific training, not based on bat number, but based on our algorithm to match that supplier. So if you remember, we had discussed about, like, how do you match the supplier? So matching a supplier, you have to show us just one way of doing it is using bat number or, like, seller identification. But that right now is not giving us the best result. The one that we have is giving the best result. So we want to explain both the ways. So continuous learning is enabled on all of these documents, but continuous learning by default is enabled based on our, like, based on our, like, logic, not based on the seller logic. But they are the same, like, they're exactly the same.
+
+>>Jarl Arntzen	23:27
+And they're definitely the same. So just to be clear, when we're going to test this supplier -specific training, can we then test it on any of the document types, or should we use the open learning?
+
+>>Bikram Dahal	23:42
+For now, use this. The reason for that is we wanted to make sure that we are tracking it properly, not for any other reason, because sometimes what happens is we add field, this and that, and sometimes the S case happens. The reason why I made that different container is so that, like, we don't, I'm not doing a lot of other experiments with this experiment. We're not, like, changing field. We're not changing multiple things over there so that we can have a controlled environment and then, like, do these things. And once you guys are okay with this one, then you guys can do it on any document type. That's not an issue. But for this control thing, I don't want you guys to face any other issues. And then DLL and everything.
+
+>>Jarl Arntzen	24:16
+So my question is, which document type should be in use?
+
+>>Bikram Dahal	24:20
+Auto -learning. For now, you guys can try it.
+
+>>Jarl Arntzen	24:22
+Auto -learning. Okay, auto -learning. Okay, got it. All right.
+
+>>Bikram Dahal	24:25
+On this one, you guys only take the context learning. They are done for now. I know it won't work, but sometimes there'll be S case of this and that, because you guys are power users, right? So sometimes there'll be S case of, not on auto -learning, but some other features. So on this document type, even if the, like, I'll check if the date format and number is correct or not. I'll make sure that everything is good on the date format and number. Manoj, is the date format and number thing also the latest, like, have you fixed all the things over there? And is the latest, like, latest,
+
+>>Bikram Dahal	24:54
+Are like that we have on the product.
+
+>>Manoj Racherla	24:58
+Yes.
+
+>>Bikram Dahal	24:59
+Ok, then that should also work. The only thing I was talking about is if this document type has any other issues that like regarding the number format or date format, then we don't want to go into setting and change those things. I want to use that to those for you guys to get 20 or 50 samples, different vendors. Get two or three sample of each. Upload those two or three sample first, F2 bit, and then upload the rest of those like five or six sample that you might have for that vendor.
+
+>>Bjørnar (Semine)	25:27
+Yeah, so we have prepared a sample of 300 invoices with 30 different suppliers. But just to be 100 % sure before we approach the testing, so what you want to do is to upload three from one supplier and then annotate and process it.
+
+>>Bikram Dahal	25:44
+Yes, and if you guys only have 300, it will be too much of a task for you guys to separate out. You guys can send us those 300 sample. We'll make that into two sample set, testing and validation. Like so on testing will be uploaded first. You just upload those testing. You do the annotation, and then you upload the validation set and then see the extraction.
+
+>>Bjørnar (Semine)	26:08
+Yeah, that's no problem. We have already divided the sample into different type of folders. So I think we are good to go from that perspective.
+
+>>Bikram Dahal	26:20
+And on the field, like field to be extracted, these are all the field that you guys are looking at, right?
+
+>>Bjørnar (Semine)	26:28
+Yeah, it looked like you had all the fields set up there. So by the first look of it. If not, we can add in any.
+
+>>Bikram Dahal	26:36
+Yeah, so you guys start. Let us know on the field side, because like I said, I don't want, it is an auto -extraction, because like if I select on 100 % of it, it might not match. So let me say one of the vendor is not matched or something, then I want to be able to give up and everything. I don't want to have any other experiment that is running on that auto thing, because I know this is very critical to you guys, because if we are able to prove this part, then implements, you guys have already seen it. Like we are able to do things very fast. Whatever you guys had feedback, we're able to do it. All right, on the accuracy also is quite good. Like that is what the team has, you guys have told us, because you guys are not too much worried about accuracy. The last link that is remaining over there is I think this continuous running, because if we kill this, then I think the major concern that you guys have is done and we can move to the next step. So I'm just looking at it from the next step only. Let me know if there's any other concern that you guys have for you guys to make a final decision on Doxomo. More than happy, but I think this is one large step and very critical for you guys also. So that is like when you guys do the testing, I just want to make sure that there's no other variables and everything, and you guys spend a bit more time figuring these things and everything out. So let's test the auto classification on this one. Let's see the accuracy and everything. Whatever improvements we need to do, if you have to do it on invoice table and everything, we'll do it after this experiment is over.
+
+>>Bjørnar (Semine)	27:55
+That's perfect. But I will notify the rest of the team as we learn that the learning is only used for this purpose as of now, that we use that for this testing.
+
+>>Bikram Dahal	28:05
+And do you guys have a timeline regarding from when you guys will start testing it? Or like, yeah.
+
+>>Bjørnar (Semine)	28:12
+If it sounds fine with you guys, I think we will start tomorrow morning.
+
+>>Bikram Dahal	28:16
+Okay, awesome. That will also be good. I'll give you a little bit of time. I'm just going to get my Ml engineer just to test because he has already uploaded a few files, but I want him to test at least 10 different files just to make sure that there's no thing, because I don't want any issue on your side. So please, you guys can start testing it from tomorrow because my team starts pretty early from Nepal. So I'll just make sure that my team has done a good job over there. Before you guys test, you guys can just send a message to Manoj on the chat because he starts a bit early. I start a bit late because of the Esc time. He starts early to match both European time and this time. So before you guys start, just let Manoj know so that everything is properly set up. We don't have any hiccups. My team also has done one round of testing. And then we'll see the results. And we'll see both the results. On your side, we are enabling the best template master. You guys will do that. And once that is done, my team will download the data and also test it using the seller, that number. So that we have results on both. You guys only test the best. We'll test the both and we'll give you the result both on the seller template matching based on that number and seller template matching based on our algorithms.
+
+>>Bjørnar (Semine)	29:27
+That sounds perfect. If there are anything you see that where you want us to wait a few hours tomorrow, just let us know, but we are ready to go.
+
+>>Bikram Dahal	29:38
+Okay.
+
+>>Bjørnar (Semine)	29:39
+Into full testing tomorrow. So, yeah.
+
+>>Bikram Dahal	29:42
+It's just that, like I said, I made one assumption But I just want to make sure that my assumption is correct. For your team to finish the final testing on Docsimo, this is the one biggest part. And there are two issues. We'll look into that issue and we'll look at it.
+
+>>Bikram Dahal	29:53
+And we'll solve it. But other than that, is there any hurdle or you guys think there'll be some blocker and that might not allow us to move forward with Docs? Is there any other points?
+
+>>Bjørnar (Semine)	30:08
+Currently, I'm not sure. This is like the supplier testing and seeing that the supplier, that we can basically get good accuracy on supplier matching or supplier templates or what you call it. And obviously, what you said, you are looking into this thing where if you have like a five, six, seven pages or 20 pages that the tables breaks, vertical captures and stuff. So it's, yeah. But our focus for this testing on supplier matching tomorrow or supplier training will be one and two -page invoices. Yeah. So yeah, as soon as we are done with 150 to 300 invoices, we will let you guys know so you can take out the numbers and have a look.
+
+>>Bikram Dahal	30:58
+Sure. And tomorrow, like once you guys are done also, like once you start and once you are done, let us know because we'll also prepare all the inputs and my team will also stick it on their site also just to make sure that we'll be able to see some info on the Ui also, but we'll make a detailed report regarding what the template match or not because we have those code already to run the detailed testing because like I said, this is very important. There's also one more step on top of that, but I'll not bore you with this one, but like I have a separate team whose job is to do this. So I'll make sure that they run whatever analysis and everything they can run after you guys finish your experimentation so that you can also learn to further improve our product.
+
+>>Bjørnar (Semine)	31:37
+Yeah, that sounds good. I guess we will also probably need a few days to process and go through everything and validate the invoices from our end to see that everything looks good. So, but we'll keep you updated in the Teams channel. So that's great.
+
+>>Bikram Dahal	31:52
+The last act that I had for you is, are you getting the multiple template, Multiple page that thing that issue that you guys have like sent to the team? Unfortunately, I have not gone in very detail. Manoj, you are on the call, right? How many sample do you guys have for those long invoices?
+
+>>Manoj Racherla	32:13
+Long invoices?
+
+>>Bikram Dahal	32:15
+That way we are having a table like section each of quantity or something, right? So that long invoice. So like how many sample do you guys have?
+
+>>Manoj Racherla	32:22
+Around five, six.
+
+>>Bikram Dahal	32:24
+Okay. And this one, like if you can get, I know this is also good enough to get it started with, but if you guys can, because you guys are keeping data set and everything. So if you guys can at least make 20 of those, then that will also really help to make sure that all the Skc and any sub of same vendor or sub of a different vendor, the five templates that you have.
+
+>>Bjørnar (Semine)	32:42
+Yeah, we should be able to, we can talk about that, John. Sure. To try to find more excellent.
+
+>>Bikram Dahal	32:49
+Because one of the things that will happen with managing team and everything is that, because you also manage team and everything is, sometime with this team, it's better to give them a bit more varying sample so that they don't do the solution for some input. I know they will not do it, but sometime when they have this like a bit larger set, then they do a better job. Because they, okay, they can think about, okay, this cannot be generic source and this has to be this one. So like on the site, not urgent or anything, but we would love to like, because here's the thing, I don't want to solve it for the five template and then six template you upload, then there's some issue. Then like the trust and everything is a bit broken, right? So like, anyway, this also will be a good start, but if you guys can collect some more so that we can do, once this fix is done, we'll do a one -on -one beta testing so that we don't have any issue in the future. Okay.
+
+>>Bjørnar (Semine)	33:33
+Yeah, that sounds good.
+
+>>Bikram Dahal	33:35
+One last thing I'll let you know, this is regarding the same thing. Not this one, regarding this one. So one of the thing about this, this will further improve and everything on the site, but this is a very powerful mechanism that we are introducing in Docsumo, which later on you guys can use on supplier, because you guys also have supplier tables and everything, and you have to add information back into supplier table and a lot of things you have to do based on those information. So this is going to be very powerful for you guys to further automate any kind of custom workflow that you guys have from routing, like routing invoice to different people, or like there might be a lot of other features. I don't have an exact thing over there, but just giving you a heads up on this one. We'll have more videos and everything on October, but we are expecting to automate even small litigators and everything. And this is a bit more different than the workflow that you guys on Rpa or any powerful like Jpa that you guys have seen, because we did a lot of analysis that I use something like that, generic and everything, but this is very custom built into Docsumo, very differentiated, because at one point we even thought about using something like Jpa, embedded into our system, not Jpa, but there are a lot of other.
+
+>>Bikram Dahal	34:52
+Open like other product that can be implemented into Docsumo. We decided to go against that because we wanted this to be completely integrated into our X -axis pipelines and everything so that the automation can be very complicated. It can call APIs, it can figure out a lot of things over there. So not for now, but just giving you a heads up later on, this will also be able to talk to your system using APIs or using UI so that if you guys want to decide, okay, I have to add this supplier, I have to do this and that a lot of things can be automated. Just giving you a heads up, we'll come to that later on once it is released, then we'll provide you some guide and everything and see how you guys can use this to automate those things which might not be possible right now and will be possible using these systems. We'll give you more updates later on, I'm just hyping it up and hopefully it lives to that expectation, but just giving you a heads up that we are building that part so that it can be, a lot of things that people do can be fully automated.
+
+>>Bjørnar (Semine)	35:52
+Sounds very nice.
+
+>>Bikram Dahal	35:57
+Sounds good then, like looking forward on our side, we'll just make sure that that long invoice and everything is related to that are solved. Again, the seller matching, everything is ready, we'll just finish a few things over there, looking forward for you guys to upload it and then test it. And then after that is done, then looking forward to getting the final release so that we can move to the next stage of the project.
+
+>>Bjørnar (Semine)	36:18
+Perfect, thank you so much. And as I mentioned, if there's anything, the team's channel is just right there and we will keep you updated when we have run through the sample that we have prepared.
+
+>>Bikram Dahal	36:29
+Okay, sounds good then.
+
+>>Bjørnar (Semine)	36:32
+Really good.
+
+>>Bikram Dahal	36:33
+Okay, anything else, Jeroen?
+
+>>Jarl Arntzen	36:35
+I have maybe one question.
+
+>>Bikram Dahal	36:38
+Sure, Jeroen, you are not like audible.
+
+>>Jarl Arntzen	36:46
+Right, so regarding this delayed problem, not really? Okay.
+
+>>Bikram Dahal	36:54
+There was a delay, I think, Yeah. I'll just turn it off.
+
+>>Jarl Arntzen	36:56
+You can turn it off now?
+
+>>Bikram Dahal	36:57
+Yeah, it's better now.
+
+>>Jarl Arntzen	36:59
+It's better now, okay, right. Okay, so what I was trying to say is, or ask for is really the delayed processing that we talked about.
+
+>>Bikram Dahal	37:09
+Yeah.
+
+>>Jarl Arntzen	37:11
+Yeah, so what I imagined, I could probably share my screen, I guess. Yeah, so what I was thinking about, Oh yeah, here we are. So you see this window, right?
+
+>>Bikram Dahal	37:35
+Yeah, I can see it.
+
+>>Jarl Arntzen	37:38
+Probably not really big, is it?
+
+>>Bikram Dahal	37:40
+Yeah.
+
+>>Jarl Arntzen	37:41
+Okay, right. So what I was thinking is that, as the invoices come in, right?
+
+>>Bikram Dahal	37:51
+Yeah.
+
+>>Jarl Arntzen	37:53
+You don't have to do really anything advanced, I would say.
+
+>>Bikram Dahal	37:59
+Okay.
+
+>>Jarl Arntzen	38:02
+I mean, don't get me wrong. I think what you told me was totally reasonable, and maybe I misunderstood it also. So what I just wanted to show you my thinking is, so we get the invoices in, right? And so in order to delay processing, we only take in five invoices, for example, right? And for us, it doesn't really matter which ones, right?
+
+>>Bikram Dahal	38:39
+Yeah.
+
+>>Jarl Arntzen	38:39
+You can just pick them by arrival time, for example, right? And then, so in the beginning, this is all we know. This one arrived first, then this one, then this one, then this one, and so on, right? And then we start OCRing, right? And then we know that for the first one, we have supplier A, second supplier B, third one is supplier C. And we have never seen these suppliers before, so we have no training for any of them, right?
+
+>>Bikram Dahal	39:12
+Okay.
+
+>>Jarl Arntzen	39:14
+Yeah. And then, just in random order, we get three more invoices into the queue, right?
+
+>>Bikram Dahal	39:22
+Yeah.
+
+>>Jarl Arntzen	39:23
+And now we have still supplier A, and then we have supplier B twice, right?
+
+>>Bikram Dahal	39:29
+Yeah.
+
+>>Jarl Arntzen	39:30
+So here we have, now we have one training for supplier A, and we have one for supplier B, and now we have two for supplier B, Right?
+
+>>Bikram Dahal	39:40
+Yeah.
+
+>>Jarl Arntzen	39:41
+And now we just let in four more invoices at random into the system, right? And now we have one training for supplier C.
+
+>>Jarl Arntzen	39:55
+two for supply A, three, and then four. At some point, right, we're going to have enough training that it will start to take effect, really.
+
+>>Jarl Arntzen	40:16
+This is just my feedback, really, and it's like you don't, in my opinion, and I may be wrong, of course, I think this simple system will do the job.
+
+>>Bikram Dahal	40:34
+So one thing, Jl, I'll give you one scenario, because we have been streaming on this one. Let's say the Labian, like this system is working nicely And it's good, right? So like this one, can you put a number Labian in voice? If you put a number Labian in voice, can you please put a D? Let's say the D template comes, right? And then you have like, what do you call it? Let me say for Tuber also the template comes, can you duplicate that into three rows? Like Tuber Labian D, Tuber D, 13 D. 12 D, right? And then 13 also D. Right now, let's say that because the number Labian has not been processed, right? So number Labian template has not been processed. So like you can put dash on number Tuber and 13 also. So because it's a new template, and then it has not been processed. So like it came at one.
+
+>>Jarl Arntzen	41:32
+That's true. That's true, right? So if all these come in at the same time, yes, then we will have this and this, right? Yeah.
+
+>>Bikram Dahal	41:41
+So now the thing that is a bit tricky on our side is that you have to at least process two of these. Like in this case, let me say if the D, because on your side, what you had told us is that the supplier will send all the invoice in bulk. And if it was not coming in the bulk, example, D will come. And then after that you have 14, under 14, the A will come and C will come. So let me say this three, I just do the processing. And you do the approval. And then after one hour or two hours, more D comes. After one or two hours, if more D comes, then there's no issue. As long as there is a process file, the model will work. But the biggest issue that we were facing is that if someone uploads in 30 minutes, if they upload 10K, like 1000 D, let me say in like one hour, people uploaded 10 ,000 D.
+
+>>Jarl Arntzen	42:38
+Yeah.
+
+>>Bikram Dahal	42:38
+But let's say your team has not processed any of D, right? They have not processed D. Then what happens is that the learning that after one hour, you come and approve two Ds. Like after one hour, you come and approve two Ds. Then for the files that has already come into our system, the automatic training will not kick in. Because the document already processed and this one. But if they come tomorrow, then there's no issue. As long as this document is processed today, tomorrow day comes, the learning happens really fast. But the main thing is only on the coin system where if people send on the bulk file, we want to make sure that if I get 100 of D, then only three days we want it to go to review. The rest of the three days we want it to be on the queue. But let me see a file A or C comes, then those have to go into review because you already have templates.
+
+>>Jarl Arntzen	43:41
+Okay.
+
+>>Bikram Dahal	43:42
+Was I clear like where the issue is happening?
+
+>>Jarl Arntzen	43:50
+Yeah, kind of. Yes. It's just different philosophies, right?
+
+>>Bikram Dahal	43:55
+Yeah. So the only issue that we are facing right now is that like if people, let me say people send A, B, C, D, A, B, C, D, every two or three, every hour, like what do you call it? Every minute and people are always available on the computer and they do a review, then the system works perfectly. Example D, you might have five templates before the automatic things kicks in because one of the out of the file document that is on review, one of the document was approved. So now that system will kick in. But on your case, people can do a burst of same supplier and the things becomes a bit tricky because we need to figure out, okay, this supplier, I need to send this document of this supplier into review. And yes, this supplier, I do not have to send them into, I have to even process. So that's the part where it's a bit tricky for your side. So we're just trying to figure out.
+
+>>Bikram Dahal	44:50
+Out What is the best case so like if it comes in the mix then there's no issue because most of the customers in our side like they comes in a mix so that season is there's no issue But if people just upload one supplier only then and people are not even it They are waiting for one day then it becomes a bit tricky But anyway anyway the default algorithm is also not that bad you'll get very high equation the default algorithm um like default which because it's not that if the d comes then it's empty Right It's not like the d even if the template is not matched then it's not that the extraction is not happening at all one level of extraction always happens we can also look into there are also other things we are looking into so anyway Like for now like um for now anyway we don't have this system of um delaying it um So you guys do one out of experimentation and general thanks a lot for this one we'll also see if we can make a bit of the system simpler um and then like um like um then we'll get back to you and if you have some ideas regarding how to make this system obvious simpler would really like um love to like because you always have given us a very good ideas and everything so we'd love to hear your ideas also you come up with some simple approach because our point approach is a bit more tricky and needs a workflow But if you can have some simple approach then that will be great Yeah
+
+>>Jarl Arntzen	46:06
+So uh i mean the the first thing i was thinking of was just that you just receive the invoices you do nothing with them until we have less than like for like just to pick some number right
+
+>>Bikram Dahal	46:20
+Yeah
+
+>>Jarl Arntzen	46:21
+Like you you receive a hundred invoices
+
+>>Bikram Dahal	46:23
+Yeah
+
+>>Jarl Arntzen	46:23
+You do nothing with any of them right Yeah then you pick the 10 first ones
+
+>>Bikram Dahal	46:31
+Yeah
+
+>>Jarl Arntzen	46:32
+Those are extracted yeah as usual as usual right
+
+>>Bikram Dahal	46:37
+Yeah
+
+>>Jarl Arntzen	46:38
+And then um once they are um like when the first one is confirmed Yeah uh you pick another one in number 11 right And that one is extracted Yeah right
+
+>>Bikram Dahal	46:53
+So that is also something called clustering So we're also looking into that approach that you talked about so basically what happens is when you receive this 100 files you don't ask people to randomly do 100 files What you say is that out of this 100 file there's a cluster of i know that this is the 100 file is of 10 vendors so i'll pick up two vendors of each of this and then give you for you to annotate it and then after that only you can start annotating yes 80 right So that is also one of the approach that we are looking into can we cluster it on our side only and then say that Okay i got a new cluster i need to get this person to enter three of this file before i can post this cluster So we're also looking into that approach of so that like you do not have to be complicated you can just be saying on the document type you can just say make a cluster right So that is also one of the efforts that we are looking into whatever makes a bit like easier on our side because on this case example in case of tuble 11 tuble 14 it can be def also right because you can have three clusters so like we you also need to figure out Okay two of e two of d two of f So like anyway um like we are also trying to look into that we'll see like what makes better sense over there Yeah
+
+>>Jarl Arntzen	48:05
+I would say that uh due to the volumes right since so so one thing one good thing about having high volumes is that you can in many cases you can you can actually make the algorithms simpler i would say yes true you can make them quite quite a bit dumber uh in many ways um And and due to the volume they will still work so so imagine here we just take in 10 invoices boom like that
+
+>>Bikram Dahal	48:33
+Yeah
+
+>>Jarl Arntzen	48:34
+And then we will have no training here even though we get like five invoices from supplier a here we have no training But you know now we take we start taking the next batch Right okay it turns out that this is a And now we have like five training here Whoa so of course that's that one is going to resolve very quickly and so on right So it's um it's it's it's a simpler algorithm And yes absolutely it does have some side effects that we have to be aware of
+
+>>Bikram Dahal	49:10
+Yeah
+
+>>Jarl Arntzen	49:10
+But um as long as we know um that Okay this is um you know um it's like 10 invoices invoices at a time for example then you know that is something we just have to take into account and that is something that we just have to know um but we even though we get many um invoices from the same supplier we can still look at the time stamp and we can have you know As or we we can have a we can look at the total number of Yeah we can um Yeah Yeah I know you know
+
+>>Jarl Arntzen	49:49
+It's a bit tricky. It doesn't work.
+
+>>Bikram Dahal	49:53
+Like, that's also one of the reasons why I'm looking into that workflow and everything, because you can play with this kind of logic very easily on that workflow. Because that's also the thing, clustering, right? Because the thing about clustering is clustering is not that difficult, because you can do the hashing of the images. And hashing of the images and everything are very short things. So you can even combine whatever you talked about with hashing. And then make sure that the clustering is smart. For example, right now, it's not just top 10. But even in the case of top 10, you can say that, oh, I have this 100 documents. I have a cluster of 10 documents. So let me pick up two documents of each and then only do that processing, right? So those things also can be a bit thought about. So we'll do some more brainstorming. And then see. And one more thing is, we might not need this kind of complicated case also, because we see that accuracy is already 98 or 95. And then this template matching is not going to improve that accuracy, just include a small accuracy, then we might not need complicated system. Because the system will run from a service file and then things might not have to be that complicated. So anyway, we'll first run that experiment that you guys are doing, and then we'll have more ideas. That's the reason why I told you, once you guys are done testing your system, my guys is going to run a lot of testing on our side. And then figure out what will be the better approach for those kind of cases.
+
+>>Jarl Arntzen	51:14
+Yep. So, yeah. So I'm just trying to highlight that, although it sounds like, you know, higher volume is going to be more complicated, in some cases, it's kind of the opposite. It's kind of easier in many ways. So we can, like, as long as we can see some batch number or something, we can make some assumptions based on that, right? So that's probably, you know, that's one way to think about it. So we're open to many alternatives, but I think we're open to many alternatives and many options, many ways of doing the same process. So I'm just trying to say that, you know, even though it seems very, this may seem very simple, it's in many cases, simple is good because then it becomes kind of predictable.
+
+>>Bikram Dahal	52:10
+Predictable, exactly.
+
+>>Jarl Arntzen	52:13
+But yeah, thanks.
+
+>>Bikram Dahal	52:15
+Okay, awesome. I will keep you updated on this one and thanks a lot for giving that confidence because sometimes what happens is that I think the customer needs a bit more complicated solution and it's good to know that, like, as long as it works, you guys are happy with the simple solution because it also makes our life a lot easier because I tend to think a bit more for the customer side And then I make things a bit more complicated sometimes. So it's good to know that, okay, you guys are thinking from that lens and as long as we are getting good accuracy, even if, let me say, if we have very smart, a smart system, the accuracy improvement might be 1%, but having a simpler system will give you 1 % less accuracy, then that might be a simpler solution because it's more predictable. So make sure that we keep those things in mind and thanks a lot for giving us that confidence and we'll get back to you regarding what is the best way to handle that high, because if it's not high volume, then that is already solved because we already have other customers. So the only concern that I have is if someone sends a 1 ,000 file and the 1 ,000 file have a simple supplier name mistake and if I don't pass it through my training, then all the document will have supplier name mistake, but if I just enumerated four or five files, then I don't have to fix issue on all this 1 ,000 file of supplier ID. That is where we save time. That is where we'll have war factor, right? So looking forward to, we'll see what is the best approach to that so that it's not also that complicated, but also solve your problem because the last thing that I want you guys to be doing is that there's one and the number might be very low, right? For example, the issue is just on one supplier name, the increase is 98%, but changing that supplier name on 1 ,000 files is not fun. And like trying to make sure those issues are not there because that is a small thing and that is where like you guys will say, okay, this product is wow.
+
+>>Bikram Dahal	54:01
+So we'll see like what is the best, how we can achieve it by not making things too complicated, but also solving your problem.
+
+>>Jarl Arntzen	54:08
+Yeah. I think we're just speaking from our experience really, because in our system, we also have very complicated setups sometimes and we have ended up, our customers also have very complicated setups. And of course, sometimes we end up with a setup that's so complicated that we don't really know what's going on. And yeah, it's happened many times. So, and we have sort of realized that many times a more
+
+>>Jarl Arntzen	54:49
+Basic approach seems too simple in the beginning, but then given the rest of the system that's also kind of complicated, it pays off to be that some parts of the system is simple while others are more complicated because then it's easier to say what's been going on. So again, it's just general feedback. It's not nothing.
+
+>>Bikram Dahal	55:20
+I totally agree on that, like Gerald. I'll give you one example, because I have worked as a data scientist for one of the job portal and we tried building a combination algorithm, right? We have tried a lot of things, this and that, we're sending a lot of newsletter. But at the end of the day, the popular, right? Whatever was popular on the website, sending that on newsletter was giving you better results than trying to make a very complicated algorithms like context -based. There are a lot of algorithms and everything, right? So sometimes the simplest solution gives you the results and are very easy to debug and everything. So totally understand, I have faced those things even in my system, my own job, and even in Doxomo, we'll make sure that... And here also, like I said, if the acquisition is already very high, sometimes for this training, I'll just give you one experiment that was running. Just sending one or two example of the template that is similar, not exactly same, but similar, was giving us very good accuracy without us even finding the real template. So there are some experiments happening on that side also. Maybe if that experiment works really well, then we don't have to even worry about any of these things. So it do not have to be that, because you guys have so high volume, after you do 1 ,000, it do not matter if you found that exact same template. As long as it's similar, then it's good. And that's the end result parameter, it will not be enabled by default, but that might be a good enough solution that you already have high accuracy that you guys don't care about, like, oh, it has to find the exact match. But it will really depend upon the case, like what kind of mistake the model makes and everything, but just letting you know that we are running multiple experiments just to make sure that the system is very simple.
+
+>>Jarl Arntzen	57:03
+Yeah, nice. Okay.
+
+>>Bikram Dahal	57:07
+Awesome, guys. So my team will just do a final test on this one. Two things on our side is to make sure that, Nidhi, please make sure that you send it to the group also, the team also. So on our side, we'll be looking into long invoice. We'll do a final testing for auto -learning, and then make sure that everything is good. Give you guys a heads up, regarding you guys can start testing. On your side, you guys will do the testing. You guys will give us a heads up once it's over, and then we'll prepare the report for both the cases, like using the bat number or one of the unique identifiers, or using our way of template matching, and we'll see what kind of numbers we receive on both of these.
+
+>>Jarl Arntzen	57:49
+Yeah.
+
+>>Bikram Dahal	57:51
+Okay, awesome. Anything else on the team?
+
+>>Bjørnar (Semine)	57:57
+Nothing from my end.
+
+>>Bikram Dahal	57:59
+Okay, sounds good. Then, like, hopefully this, we don't have big things in our thing, because last week was a different thing over here, like I said, about the government and everything. So really, the things will be a bit more stable for my team over here. Yeah, so looking forward to seeing things on our side and seeing the results at this very end of the week.
+
+>>Bjørnar (Semine)	58:20
+Perfect.
+
+>>Bikram Dahal	58:21
+Bye, guys.
+
+>>Bjørnar (Semine)	58:23
+Okay, thank you so much, Vikram, and to all of you. Have a nice Monday.
+
+>>Jarl Arntzen	58:28
+Yeah. Bye.
+

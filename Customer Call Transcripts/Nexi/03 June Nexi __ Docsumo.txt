@@ -1,0 +1,246 @@
+>>Aniket Tatipamula	00:00
+Yes, we're doing good. Doing great. Yeah. So I'll straight away jump into the conversation. Hope we did fix a lot of the issues that Boris you pointed out and William. You pointed out and even you didn't pointed out few items and we've been on top of it since yesterday. Uh, quite a few issues from that. There was some issue with the classification is, uh, we changed that classification model a little bit now that cross classification between, uh, lending details and, uh, application form should not happen. Then we went on to fix, um, extraction of state. We made sure that for each of the state extractions, as in now it'll only be two letters. Um, uh, I think there were other issues with the entity name, the legal name. It only was extracting Llc. We also made sure now it has the entire name. So a few fixes were made today. I hope that works out. Um, but the part of where, uh, I think we had issue or we did, we could not understand what is going wrong is the Salesforce, uh, integration of, um, lender information, right? Like the, the debt positions, uh, because the debt position is coming out in table. I just wanted to check with Eugene, uh, if, um, the issue is at our end, or is it the passing end that, uh, you would have to do at Salesforce? I, Liana, uh, Eugene, did you get the question?
+
+>>Eugene Yaromik	01:48
+Sorry, what question? I don't know. Okay.
+
+>>Aniket Tatipamula	01:52
+Then I'll probably, I'll probably share my screen and then explain. Let me just check if I have, this is it. Just give me one second.
+
+>>Aniket Tatipamula	02:13
+Is my screen visible?
+
+>>Eugene Yaromik	02:18
+Yeah.
+
+>>Aniket Tatipamula	02:20
+So, so Eugene, as in, uh, I think we have a problem with, uh, lender details, uh, getting filled into Salesforce because, uh, William and, uh, Liana pointed that out that, um, they cannot see this information in Salesforce and am I getting this right? Yes.
+
+>>Eugene Yaromik	02:40
+I think, uh, it happens when, uh, Doc Summer fails to recognize all these debts into Mlbuddy And we don't receive, uh, this webhook about debt. And, uh, it's okay.
+
+>>Aniket Tatipamula	02:59
+Let me, let me actually check that out because when we were checking, Yeah. Yeah. Eugene, sorry.
+
+>>Eugene Yaromik	03:08
+You were saying something.
+
+>>Aniket Tatipamula	03:10
+I know. Uh, can you see, as in, this is the document that, uh, was mentioned in this sheet, uh, I opened that folder ID and I opened, uh, the document for the debt positions and, uh, this, uh, file has the extraction.
+
+>>Eugene Yaromik	03:40
+I also checked like several Doc Summer folder IDs, but, uh, I saw that, uh, it didn't recognize, okay. I'll check it.
+
+>>Aniket Tatipamula	03:58
+Uh, this folder ID just, uh, it's the last one.
+
+>>Eugene Yaromik	04:14
+Yeah. On a Google sheet. Yeah.
+
+>>Aniket Tatipamula	04:17
+The last one on the Google sheet, this one, Abcb3, uh, number, yeah, in this case it did not, but in that case it did, uh, in our case, it shows force.
+
+>>Eugene Yaromik	04:52
+We have this depth.
+
+>>Eugene Yaromik	05:16
+Can you show me the depth list of this? I'm an LPG. Yeah. We already have it in the source, this file that, yeah.
+
+>>Boris Teper	05:36
+You can check if we see them from that somewhere or they were entered manually.
+
+>>Eugene Yaromik	05:47
+They created at the same time. Like, for example, I can show you my screen and you will see.
+
+>>Eugene Yaromik	06:04
+I'm just a second.
+
+>>Eugene Yaromik	06:24
+Do you see my screen?
+
+>>Aniket Tatipamula	06:26
+We can. Yeah? Yeah, we can.
+
+>>Eugene Yaromik	06:33
+Yeah. I took some of folder ID, like this one. Yeah.
+
+>>Aniket Tatipamula	06:39
+Yeah.
+
+>>Eugene Yaromik	06:43
+Opportunity, depth, and yeah, depth. Lpg. And, for example, this opportunity and depth we create at the same time. Like, created by guest user, like 5 p .m. And depth, like this one, also created at the same time. And by the same user. Guest user is like a webhook user. It was created.
+
+>>Boris Teper	07:27
+So, which means we didn't receive them from Docsoma, Liam? No.
+
+>>Eugene Yaromik	07:32
+We received it from Docsoma, yeah. At the same time, because we have the flow like this. For example, first of all, we create an application. And, like, fill in, like, Docsoma folder ID. Something like document statuses. And at this step, we are waiting for the application file. When we receive this application file, we start this process. And all information from this application. We do convert this application into an account, opportunity, and contact. And, for example, when we didn't convert this application. We save all depth from webhook into application object. And we do convert. We just move this depth into opportunity. And it works like this. And I don't know where the issue is about this. Yeah.
+
+>>Aniket Tatipamula	09:08
+So, Eugene, to summarize, if I'm getting this right. The data is coming from DocSoma. Then I have one question. As in, I can see that you only pull this when the status is processed. But in cases if the status is not processed. What I mean is if it is in review state. Will the data still be pulled? Or if it is in review state, it will not be pulled?
+
+>>Eugene Yaromik	09:38
+We didn't. We don't handle it, for example. Because when you send depth from email body. Right? Yeah. We create another attachment. And we didn't. We don't.
+
+>>Eugene Yaromik	09:57
+We don't handle it because we handle only these files. And, for example, when you send a webhook with this email body as an image and a PDF file, and we don't handle it because, like, we don't match, like, attachments with this body. And I think the problem is, like, when you can't recognize that from email body and send the webhook with the status review, we just skip it and don't handle.
+
+>>Aniket Tatipamula	10:45
+Okay, so I'll probably put it into, like, two ways. One is, if we are not able to classify the document as lender details, so we have problem number one. That we will solve, like, no questions asked, as in we have to work on it. We'll work on it and figure out. We've already made one small push for that to be checked. The second problem is, when we extract the data from lender details, we do not mark it as processed. So we can, if we mark it as review, then you are not going to pull the data. Am I getting this right? Can I please share my screen, Eugene? I think that would answer the question.
+
+>>Eugene Yaromik	11:30
+Okay.
+
+>>Aniket Tatipamula	11:32
+Okay, let me just share my screen. So this document, right, this document is marked as approved. Yeah. Sometimes it will not be marked as approved. It will just be review. Would the data still be pulled into Salesforce if it is in review?
+
+>>Eugene Yaromik	11:53
+This webhook will contain that, if it's review or not.
+
+>>Aniket Tatipamula	12:03
+This is right now is in the review, right? It's not yet confirmed. And there's no extraction, we'll look into this. But would in this state, the data be pushed to Salesforce?
+
+>>Eugene Yaromik	12:18
+No, because I know that, recognize that. Oh, no.
+
+>>Aniket Tatipamula	12:24
+Let me just, let me just show one more example. Give me a second. Let me just check.
+
+>>Aniket Tatipamula	12:47
+Yeah. The ones that are in review are all with no extraction. Okay. Then what we will do is we will look into this problem in a little bit of detail. At least one thing is for certain. If the document is marked as approved, and if it is picking up the data, you are seeing it in Salesforce only when there are no extractions, we are actually not seeing it in Salesforce. Can we at least conclude on that?
+
+>>Eugene Yaromik	13:18
+We'll discuss it with Boris, this ticket, in this case, because I don't know exactly what should we do in this case. Boris, maybe you can.
+
+>>Boris Teper	13:34
+Okay.
+
+>>Eugene Yaromik	13:35
+Can I repeat the question? What was the issue? Yeah.
+
+>>Aniket Tatipamula	13:41
+Boris, as in what, like basically there's no issue. What we will do is we will look into these documents and see if the extractions are proper. What I want to just verify is if the document is in this state, approved state, then the data is there in the Salesforce, like it's not that data is not at all there in the Salesforce. Can we conclude that?
+
+>>Boris Teper	14:05
+If it's not, so it's not approved, then you want us to, to push the data to Salesforce anyway?
+
+>>Aniket Tatipamula	14:12
+I'm just verifying. If it is processed, the data exists in Salesforce. I'm just asking that, that, that is confirmed. So data sync is happening. Uh, only if the document is not extracting and it is in review, the data sync is not happening.
+
+>>Boris Teper	14:27
+No, it doesn't. Yeah.
+
+>>Aniket Tatipamula	14:29
+Okay. Then, uh, what we'll do is we will look at our, uh, we'll, we'll work on this. We'll figure out what is happening. We'll, uh, fix this and I think post that it should start working. So, um, so the thing happens, we just have to make sure our extractions and the document goes to processed. So we'll work on that and then we'll, I will, uh, keep you posted. Okay.
+
+>>Boris Teper	14:52
+Yeah. Uh, no, it's one more issue, uh, on our end.
+
+>>Boris Teper	14:56
+We sometimes very rarely get two applications separately for one owner or for the second owner, but your system is processing only one application. Is there a way we can merge them or have your system process both, I mean two applications separately?
+
+>>Eugene Yaromik	15:18
+Yeah, because, for example, I saw that you can like split one document into two documents, for example, but the unite into one I did it five.
+
+>>Boris Teper	15:28
+You can merge two documents into one and just process one application.
+
+>>Aniket Tatipamula	15:36
+I need to understand this problem. So as far as I understand the flow, if there are two different emails, then I think these will be two different cases. If it's going to be on the same email, because everything that is happening here is happening against the case. So this is that case. So if the two applications are for the same case, then I think we will be able to do something. But if they are of a different case, then we do have one option for not for merging, but for making it unique, like, let me just show you. So they'll be from the same email. Okay, if it like it will be from the same email, but there can be two forms.
+
+>>Boris Teper	16:20
+Yeah, two applications in the same folder to separate two different applications, but they belong to the same business, the two owners.
+
+>>Aniket Tatipamula	16:30
+Okay, and you do not want the other application to be processed?
+
+>>Boris Teper	16:34
+No, we do. We do. Okay, we have one application, we have one owner and then part partner. So one would be the first owner, the second one would be the partner.
+
+>>Aniket Tatipamula	16:45
+Understood.
+
+>>Boris Teper	16:47
+Two different files.
+
+>>Aniket Tatipamula	16:50
+Okay, that's very rare.
+
+>>Boris Teper	16:55
+Understood.
+
+>>Aniket Tatipamula	16:56
+And you would want a single output for both the applications?
+
+>>Boris Teper	17:02
+You want to process the one owner from one application and the second one from the second application.
+
+>>Aniket Tatipamula	17:10
+Okay, we will look into this Boris, because we need to check how the extractions look like. Because the way that data is structured, while we are processing that single document, I'm not so sure whether in both the cases, it will take the extraction as a primary owner. So we need to do something post the data is extracted. So we'll check that out once.
+
+>>Boris Teper	17:32
+Yeah, I'll forward you one. If I find one, I'll forward you the example.
+
+>>Aniket Tatipamula	17:38
+Yeah, please do that. And then that would help us. Any other issues, Boris?
+
+>>Boris Teper	17:46
+No, I posted all the issues. I posted them in Slack, the little ones.
+
+>>Aniket Tatipamula	17:53
+Sure. Are there any more? I hope the number of issues have come down. I hope there are no other major issues. This issue regarding Blender details, we will work on it on high priority. But are there any other issues that are of very severe consequence?
+
+>>Boris Teper	18:12
+Yeah, many issues on the bank statements? Other than the Google Sheets?
+
+>>Liam Dionisio	18:21
+None so far. Only the deposits and Nsfs.
+
+>>Boris Teper	18:29
+And what are all the other numbers, like MCAs, the Mca debits and deposits? Sorry? They also pull the Mca transactions, and they calculate the total Mca debits, Mca deposits, and the number of deposits and debits. Are those mentioned in the bank statements?
+
+>>Liam Dionisio	19:02
+I don't have them in the bank statements.
+
+>>Boris Teper	19:09
+I'll have to ask the underwriting department to verify. Okay, yeah. I'll post it. If there are any other issues, I'll post them in Slack.
+
+>>Aniket Tatipamula	19:25
+Sorry, Boris, you were saying something?
+
+>>Boris Teper	19:26
+Yeah, if we discover any new issues, I'll post them in Slack.
+
+>>Liam Dionisio	19:31
+Yeah, perfect.
+
+>>Aniket Tatipamula	19:32
+And we'll be monitoring the Slack, and we'll also be constantly making sure that this issue list is fixed. And we'll be marking it fixed as soon as our part of the work is done. In case we are running into more issues, please do bring us, and we'll be there to help.
+
+>>Boris Teper	19:48
+Okay, great. Thank you very much.
+
+>>Liana Vinokur	19:50
+This is helpful.
+
+>>Eugene Yaromik	19:51
+Thank you, guys.
+
+>>Liana Vinokur	19:52
+Thank you.
+
+>>Boris Teper	19:54
+Thank you, Leana.
+
+>>Liana Vinokur	19:55
+You guys have a nice day, bye.
+
+>>Manoj Racherla	20:06
+Bye
+
+>>Aniket Tatipamula	20:07
+Well, I think it's ok let's see that that's the only issue I will check that out in detail and figure out like what's happening at.
+
+>>Manoj Racherla	20:14
+Like they weren't able to extract the details that the. Okay.
+

@@ -1,0 +1,132 @@
+>>Vishal Arya	00:00
+She will join she only has query about the southern bell yesterday content I have not sent it to her because the same thing we had to discuss and she had already requested for the account so that thing is if you want you can you know bring it up and you can show her the status of the same part of the message and southern bell like you know let's handle it very carefully that what are the reasons. Hi Georgia, hi Laura. How are you? I'm good, how are you?
+
+>>Laura Tavares	01:31
+Good, good, good. We almost missed the meeting again. Right, so
+
+>>Vishal Arya	01:42
+Yeah I think I was also not available there for like you know 10 -12 days so since I've joined yesterday I had a discussion with Utsav on the pending items you know which is there so we did run through a kind of like you know a report to find out a kind of statistic to understand what was uploaded and what all things got processed and what is pending so Utsav will be walking you through And I think there is already a running concern with the southern bell where the extraction is causing issue a part of a small part of the extraction is causing an issue so Utsav will be you know kind of like you know just explaining on the solution like you know what's the plan for that fix and what temporarily we can do to handle that. Okay. Yeah, Utsav over to you.
+
+>>Utsav Darlami	02:36
+Yeah, thank you. So Yeah like I think you guys have been testing like different vendor samples on the dock type But however like we saw that like most of those vendors that we have uploaded and like are like being processed quickly and like Like easily but in the case of southern border I believe like even like making a minor fix to that particular field that is middle reading section that is middle reading start and end you guys have been like facing issue so the reason for that is like on that particular like section of that file I usually like the system is like failing to capture the numbers it's like even it's just only for Oh sorry Yes so it's mostly due to the image quality and nature of the file So if you see on that particular section so I think it would be easier if I share my screen. Is my screen visible? Yeah. Yeah So I was talking about this particular section so due to the certain like like this certain grid B boxes plus like the quality like certain patches here and there like if you see it misses out this dot at the middle like it believes it's some kind of an image or like this kind of a random just a dot of print that's why it fails to capture this dot and even this dot sometimes get picked up as a one if you see here the dot is getting picked up as a one so it's mainly due to our system itself and the image quality at this particular section so we tried few extra things like in trying to improve this image quality plus are like trying to change the like this is the OCR reader that we have with like different like alternative options however like this was not like we couldn't find a robust solution for this one
+
+>>Utsav Darlami	04:55
+And Yeah like
+
+>>Utsav Darlami	04:58
+For now, we would suggest you to just manually type down the values that you see here, which is the correct one. This doesn't mean we will just let you manually fill it for the whole time. We are looking for alternative solutions. But as of now, maybe a month or so, you will have to manually fill this one. And I believe it won't be for most of the files. So even in the last upload, I think out of 31 files, 23 are facing this issue, and 8 are being processed. So for now, 75 % of the salt and water bills, you have to manually annotate these two fields only, like the rest of them.
+
+>>Laura Tavares	05:49
+Ok, that is when we spoke last time, we did suggest that for the time being, while you're still trying to work it out, if the system itself can only pick up the numbers before the decimal point, that will be fine for us for now. Yeah.
+
+>>Utsav Darlami	06:08
+Yeah, we thought for some of the files, it would work. But it seems like even in the numbers before this decimal, it's picking up wrongly. So if you see in this case, also, it's somehow picking up this line between it as a like, it's misreading those values, like 4 to 8. Some extra numbers are getting picked up here. I think it's mainly due to the image quality.
+
+>>Laura Tavares	06:38
+But then that is picking up the decimal point. That's why it's giving error. But then if you shorten up the selection of the field, you will probably fix the issue.
+
+>>Utsav Darlami	06:56
+Yeah, like that part of detecting the dot becomes like...
+
+>>Laura Tavares	07:02
+It still picks up the dot. Is that what you're saying, right?
+
+>>Utsav Darlami	07:05
+Yeah, it still picks up the dot. And we cannot just confine it to not pick up. So basically, it becomes impossible to confine it before the dot, all those things.
+
+>>Laura Tavares	07:18
+So this means that we have an issue. With the decimal point or without the decimal point, the problem still persists. Is that what you're saying?
+
+>>Utsav Darlami	07:29
+Yeah, regardless of taking the decimal or not, it will persist.
+
+>>Laura Tavares	07:34
+I mean, that is going to be... Because we thought that removing the decimal point and just pick up the whole numbers, it would have been fixed. Because going into each individual bill and just adding the numbers, I mean, the system itself, we chose you guys because we thought that this would be fixed.
+
+>>Utsav Darlami	08:04
+Yeah, like if you... It's only for like... Yeah, for like Southern Water, it's like...
+
+>>Laura Tavares	08:12
+I know, The Southern Water, it was the main issue for us, even with the other business like yourselves. They were having the same issue. But then we chose your company because we were told, well, at least we were told that it could be fixed. And now all of a sudden, everything is fine. But those readings that we initially had an issue with, do you understand where I'm coming from? Because that means that we have to go into the bills and manually, not process, but manually update each individual bill. With the other companies, just a quick overlook and see what needs fixing. And most of the bills were fine and just click and get on with it. But Southern having this issue, which means that I don't know how useful it would be for us.
+
+>>Vishal Arya	09:11
+So Laura, I totally understand that. So the problem is happening only with the two bills and Southern bills. And just, I want to have an insight on what is the percentage of the Southern bill out of all the utilities that you would be uploading? Like, is it a composite of like a major contributor in terms of the utility?
+
+>>Laura Tavares	09:34
+Southern bills, the major ones that we work with is Southern, Seven Trends and Bristol. But Southern was our main issue.
+
+>>Vishal Arya	09:45
+Okay. So the thing is that with the Southern bills, like, you know, the other fields, I mean, inside that Southern bills, the problem is not with all the samples. A few samples, it is creating some issues and rest all of the fields.
+
+>>Vishal Arya	09:57
+Are working fine only the problem is with the two thing in which the OCR is failing I mean the application is not failing we as a solution as is like you know it's doing its work but then the OCR component which is running at the back end like we also use you know a lot of three third party vendors just to try out like you know if the things works or or things can be handled so we used Amazon extract we use Google we used Micr to test it and every time you know this is the problem that was coming up so just a few cases you know you would notice something in case of certain bills just with the two fields apart from that the whole extraction is working fine we had not I mean it wasn't I'm sorry to interrupt
+
+>>Laura Tavares	10:42
+But it wasn't because we were having issues with the meter readings we were having issues with the it was the what else the payment reference number It was not picking up at all on the other on every single bill it was not picking up those numbers it was also the the difference in between the meter reading there was also adding another number on it as well like for example a hundred let's say that the the difference in between two readings is a hundred and twenty three units but it was adding one thousand one hundred and twenty three units if you know what I mean that was an issue as well
+
+>>Vishal Arya	11:29
+Okay So also is that problem fixed for the meter reading
+
+>>Utsav Darlami	11:33
+So yeah meter reading is actually like calculated from the meter start and end reading so if meter end and start fails it fails automatically Okay
+
+>>Vishal Arya	11:44
+So basically these also with any custom code or something can this solution be optimized like so Laura like you know we are actually not saying that you know this can't be at all done we are still looking for a robust solution to you know have for some southern bills for these two fields so that we can optimize a solution and give a concrete resolution to fix this problem But that's where you know time was a concern for us that we wanted to inform this to you that you know it might take some time for us to you know fix this what's up do you think like you know any custom code or anything can this be handled Oh yeah
+
+>>Utsav Darlami	12:25
+Like for the two fields that we discussed earlier like apart from the these two fields like meter start and reading we can like look for the like alternate like alternative custom code solution like the the fields like payment reference number and the meter reading like meter consumption basically we could look into the alternative solution Okay And yeah patch it up for the team Okay
+
+>>Vishal Arya	12:48
+So Laura just give us some more time 24 to 48 hours at least just give us that time let me come up with some alternate solution and try out a few options to fix this and let's because we always wanted to have an Ml based approach let's just try and get some role based approach using some custom code to fix this problem if that works then I'll update you within 24 to 48 hours or if it is taking more time then still likely like you know I'll keep you posted on the same does that fine with you
+
+>>Laura Tavares	13:21
+Yes yes there's nothing we can do at the moment Yeah
+
+>>Vishal Arya	13:27
+No I totally understand that Laura I mean I can totally understand your pain as well on this part But But trust me like you know even few alternate solutions on the market we tried on on the sample even other tools were like you know doing worse there so we were at least on a good spot of that just the two fields are messing up and that is also an off that OCR issue which actually apparently is not you know in our hand only thing we can do is like you know finding out some other way of solution to handle those cases So so so Yeah just just a few more time I would just ask this give us 24 to 48 hours and let me get back to you with an alternate let us first try the alternate option with some custom tools and get back to you with the result you know what we are getting and discuss it again Okay
+
+>>Laura Tavares	14:19
+Yeah That's fine all right any other thing of that you have sorry you know for we initially when we first initially requested your services we also requested a field to be added to the the main work you know the meter readings sometimes we do have calculated reads or we have calculated which is estimated reads and we also have actual reads and then
+
+>>Laura Tavares	14:56
+We would want a field to show us exactly what type of reading it is. Do you think you can add that to the system? It's just another field that would show us what type of reading it is, if it's an estimate or an actual read for both previous and most up -to -date read.
+
+>>Utsav Darlami	15:24
+Yeah, I think we have been adding the additional fields to your doc type. It will be a similar process as past. You provide us a few examples regarding what sort of values needs to be pulled into that field and we will be able to handle that.
+
+>>Laura Tavares	15:45
+Okay, I'm adding a few data on an email and then I'll send you out that particular email with the examples.
+
+>>Utsav Darlami	15:59
+Yeah, it works for me.
+
+>>Utsav Darlami	16:08
+I don't have much to add. Yeah, from here.
+
+>>Laura Tavares	16:14
+Okay, yeah, that's all from us as well. Yeah, Vishal, so you will get back to us within 48 hours with an update, is that right?
+
+>>Utsav Darlami	16:36
+Yeah, I think we will get back to you in 48 hours regarding this southern water issue and we will also give you an estimated timeline for the new requirements that you have asked.
+
+>>Laura Tavares	16:56
+Okay, all right, perfect. So we'll be waiting on you then. Thank you so much for that.
+
+>>Vishal Arya	17:01
+Hi, so sorry, I think something messed up with my mic. It's fine now. Yeah, Laura, so we'll get back to you with the updates and I'll collaborate with Utsav on the solutions and we'll let you know.
+
+>>Laura Tavares	17:11
+All right, perfect. Thank you so much.
+
+>>Vishal Arya	17:13
+All right, thank you so much. Thanks, Georgia. Thanks, Laura.
+
+>>Laura Tavares	17:15
+All right, bye -bye.
+
+>>Vishal Arya	17:17
+Bye. Utsav, can you hold that?
+
+>>Utsav Darlami	17:20
+Yeah.
+

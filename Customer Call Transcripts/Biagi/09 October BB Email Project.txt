@@ -1,0 +1,420 @@
+>>Bikram Dahal	00:00
+Okay. Yeah, Neil, we can move to the email project. Is there anything else we need to discuss before that? No, I think we're good. Just so we can get into it. Yeah. Sure. So I don't know. I did. I saw your reply and they only got five. Did they give you any more? Our team's been kind of busy, so I'm not sure. Yeah, they sent us, I think, 10 more. So I've not gone into that, but after this call, I'll go through that. Okay. So I had a few questions. Currently, are you in office or are you out?
+
+>>Neil	00:31
+Yeah, I am. I can share my screen now.
+
+>>Bikram Dahal	00:34
+Let's go through that. Because I want to understand, just to make sure that we are on the same page, I'll just give you a summary of what we have understood and what is the infrastructure that is required for this project to be successful. So there are mainly three different kinds of APIs or services that you guys have. One is order, one is inventory, and one is appointment. So people can ask you guys to make some changes into order, change a career, something like that. People can ask you guys to change the inventory, and people can ask to make a change into appointment. Right. So, and on the case of appointment, register of the very basic, because the appointment is the basic one.
+
+>>Neil	01:21
+Yeah, the inventory is really just a, they can't make changes. They can request data from inventory.
+
+>>Bikram Dahal	01:27
+Oh, okay. And in case of appointment, the thing is simple. Like, you, someone is saying that, okay, I want to do this shipping, and I'm going to drop those, implement this, like, this wine with you guys on this time. And then if it gets successful, if that appointment is successful, then that is converted into order, right? So then you make a new order out of that appointment. Right. And does every order have to have an appointment? No, right? Yes.
+
+>>Neil	01:58
+Well, yes, from, by the time it needs to ship, it needs to have an appointment, yes.
+
+>>Bikram Dahal	02:03
+Okay, so, um, um, so, example, do you guys also store some of this inventory for these people, so that they don't have to make an appointment, they can directly make an order, or, like, um, you guys, they always have to drop something to your, like, warehouse to make an order?
+
+>>Neil	02:21
+Yeah, anytime they want to bring us anything, or pick up anything, so delivery and shipment, they have to have an appointment, yes.
+
+>>Bikram Dahal	02:30
+Okay, um, so, so all the order will always have an appointment? Yes. Okay, then sounds good.
+
+>>Neil	02:36
+Then the, the, the, and what is inventory, then, like, uh, um, It's, it's the, so, how the, kind of, uh, flow works is, a customer brings in inventory, it brings in product on an inbound, on receipt, once, once we, once we receive it, it's then in inventory, in our system, in inventory, like, we have it in our, in our building. Yeah. And then there's orders that get placed to then ship the inventory out to their customers.
+
+>>Bikram Dahal	03:13
+So, if I'm understanding this part correctly, now, our, uh, wine company, they can give you guys 100 wine, but at that point, they don't know which all, why all it will be saved to. Right. They will just give you guys the 100 wine, and during the week, on Monday, they will say that, please see 10 of this wine for this address.
+
+>>Neil	03:35
+Right.
+
+>>Bikram Dahal	03:35
+In that case, where does the appointment come, then, because in that case, you don't have to make an appointment, right? The order.
+
+>>Neil	03:40
+No, we do. So, the, the, the, the winery doesn't own the freight, so their customer owns the freight. So, when we get the order from the winery, it's just a new order, and currently, the customer, their customer, hires a carrier, and the carrier goes into our portal to schedule an appointment.
+
+>>Bikram Dahal	04:03
+Okay, so, like, um, okay, then, this is a bit interesting, um, because I thought you guys, uh, have your own logistic, right? So, example, if someone gives you 100 wine, and they are, it is on your warehouse, and someone says that I want to sip 100 of this, um, 100 of this, um, um, product, then, like, it will not be shipped with you guys? Not always.
+
+>>Neil	04:27
+Well, sometimes, yes, but they, we have to be, the customer has to tell, has to hire us to, to ship it, but it's not always the case.
+
+>>Bikram Dahal	04:35
+So, these are two different business, so if you think about it, like, the company can just hire you guys as a place to store those into, uh, like, inventory, or they can also use it both for storage, and also for, um, like, uh, your own system to, like, do the delivery. So, it's going to be both. Yeah. Okay. Makes sense. Um, then, then that makes sense. Yeah. Then, let's go through the system once, and then I might have some few. And to drink 180 observations, that if you have aç for it, register, but. Make it of course, we need this coffee. So,
+
+>>Bikram Dahal	04:58
+Follow -up questions after that Okay
+
+>>Neil	05:00
+So let's start with So this is this is it says corporate one this is i know You I mentioned high jump to you in the past Yeah This is my job this is our this is our warehouse management system so anytime we get emails to requesting information Yeah This is our main system that will uh update an order or um you know ship out of order now we do have our Biagi Portal that also uh that right now our customers are using to schedule orders right And and um this is their interface right now where they can schedule orders which is fine but how we're gonna how we're building the api technically So okay before that right now the portal talks to high jump yes right back from two -way communication Yeah So as the customer or carrier does stuff in this this website it will feed this website right um Well how we want to build the api actually is as you get requests via email Yes it's actually going to call processes in the in the portal technically we already have the portal to to high jump we don't want to we don't we don't want to reinvent the wheel makes sense
+
+>>Bikram Dahal	06:25
+Okay And one quick thing this portal because i know on Andrew like you guys have separate team building it or this is our source because Yeah
+
+>>Neil	06:32
+Yeah We we built this from from house
+
+>>Bikram Dahal	06:35
+Oh you have a separate uh like take team that does uh this uh it's andrew and Venetia So both of the the two people can build this whole uh like uh platform because guys don't have any other people they said yeah pretty much
+
+>>Neil	06:48
+Yeah over the years Yeah Okay
+
+>>Bikram Dahal	06:50
+Okay Yeah
+
+>>Neil	06:51
+So On this page this portal you can customers and carriers can can schedule appointments can view appointments they can also the customer can make orders they can make inbounds receipts to biag they can view historical transactions Yeah they can look at inventory and a bunch of other things But Yeah This we've had this for numerous years and we've kind of expanded on it and it's mainly built on power bi
+
+>>Bikram Dahal	07:21
+Oh it's the whole thing is built on power Bi
+
+>>Neil	07:24
+Okay not well the the the framework isn't But the reports are so when i run this it's running reports Okay
+
+>>Bikram Dahal	07:30
+And um anyway i think i'll have something called regarding um like this too with the andrew and the team later on but currently can you show me how customer login so example uh like how to call um um Yeah Yeah
+
+>>Neil	07:44
+Yeah So okay Before i log in though um there is a user admin page that we have you know per uh user they have to have an email address Right yes and um based off of their email address like this person right here they have access to certain carrier names yes or customers so depending on the on the access so like let's see um so like this person she's a customer And she has certain roles Yeah And she can see certain customer codes so this this these customer codes live on our lives on our our orders and our inventory so we can filter so like you will actually call let's let's let's give this example let's say this person emails us And it sends it to doxsumo Yes And she says i want to order i'm sorry i want to i want to make a change to an order And she puts the one order number one two three four Yes well what we need to do is you have the email address obviously from her Yeah and base you're going to pass that via the api So we so so you know what access she has Yes
+
+>>Bikram Dahal	09:00
+Right
+
+>>Neil	09:01
+So she has certain role at these roles and these she can see these customers within this role Yeah
+
+>>Bikram Dahal	09:07
+Right
+
+>>Neil	09:07
+And so when you say um this user wants to update order one two three four Yeah we will vow that we need to validate that she has the ability to even do so based off of her off of her uh settings right off of her customer list Yeah Right now that's a that's a customer now another example would be a carrier so we'll take this one this user right here now this user is not active anymore but let's just say she was um And she emails us saying i want to schedule an appointment or i want to reschedule something order one two three four Yeah well that order has to be assigned to any one of these carriers to be able to to have her update to be able to have that request complete yes if it's if it's on some other carrier then you
+
+>>Neil	09:57
+We would say this is not assigned to you
+
+>>Bikram Dahal	10:00
+Yes right
+
+>>Neil	10:01
+So that's how we handle security Yeah um And then uh so pretty much on this portal though on this portal they have a login page Right And and it's based off of just regular login And they have like a two -way factor Yeah So that's that's the login to this portal Yeah um
+
+>>Bikram Dahal	10:24
+And right now because you have a super admin access you're able to see everything Right
+
+>>Neil	10:28
+Right Right Okay Um so i gotta wait for the code but anyways going back to high jump so they can do on the portal they can do a lot of different things But it's manual Right it's it's there's no Um they have to do a data entry for the most part which a lot of times our customers don't like they want to just email it and and have us do now we try to push back as much as possible because they have a website that they can do everything themselves But we still get requests um so anyways if we get a request to update a carrier um via email Yeah We don't update it on the portal because for us it's faster to use high jump because we're in there we're in there always Yeah But when we update high jump it updates the portal automatically
+
+>>Bikram Dahal	11:13
+Yes right so like let's say again do if you want to have ss because you cannot give all of this ss to all the customer success agent Right so you secretary x so they directly update from high jump or they use super admin ss and update it from the um from the portal Yeah
+
+>>Neil	11:33
+Well the the high jump access is for internal only it's only for our warehouse users and office users Yeah um And yeah They they this this is not a public website pretty much um uh anyways uh if we are talking about orders if they had if they had to update a carrier they will go to a page like this and they'll they'll um search for their order this is just a search page and let's say again that one user uh wanted to update one order one two three four she has access to this customer code I I obviously i don't have order number one two three four But if i were just to put in anything i have a now a list of all the orders for this client this customer this is the winery right this this equals a winery for US node Yeah And then depending on the status of the order that's something different like you can only update orders if it's in certain statuses meaning if it's already staged or loaded in a truck we don't want any updates right because it's gonna inefficient but if it's not and they want to update the order we would go manually into the order and pretty much go into there this is like the header of the order like where it's shipping to the carrier we would we would find the needed field and update it so carrier for instance Yeah we would we would pick the right carrier right And then we would hit update and that would up that would update um the portal or ship to address uh right here they can update stuff like this right um now that's on the header of the order so that's like where it's going to right um if i want to update the the what's on the order this is only one item
+
+>>Neil	13:18
+But there's usually a lot of a lot of items right And you can modify the order and you can you can update an item or you can add a new line uh Okay Some here too
+
+>>Bikram Dahal	13:31
+So these are just examples of what we would do when we got an email request right now manually we would update it in hijab but over here like how do they make a decision because for you to because hijab will allow you to change to anything because right master database you can go and you can put a name and it will do it but that user where does the checking happens that Okay This user has this is for pu 169 and now i can change it right So do that Yeah
+
+>>Neil	14:01
+So we we have like So these are customer service reps that are doing this work Yeah And they are they pretty much know like they see the emails And they know the person And they know who has access to what so if they it's the same type of validation But it's just human You know that knows oh Marin has access to this to this customer
+
+>>Bikram Dahal	14:20
+Oh okay So that that like then they are taking those information but they are taking it on the back of their head they are it's not Oh they're right right
+
+>>Neil	14:28
+And it's we're not dealing with like this is not like e -commerce where we have like thousands of customer contacts Yeah our customer contacts are probably in a couple hundred only Yeah
+
+>>Bikram Dahal	14:37
+Yeah make sense and then in that case then they already have information Okay um that that makes sense and currently people make change um here uh on the like on this high jump only it's not that they have master it says because you can make this Right
+
+>>Neil	14:51
+Right right they only have access to their the the site that they the customer service only has access to to the site you
+
+>>Neil	14:56
+That they manage Oh okay
+
+>>Bikram Dahal	14:59
+And that is handled on not jump jump on the jumper only like I jump on it because we are you have always assessing that look at this agent can only make a change to this than this
+
+>>Neil	15:09
+Right Yeah we have so like myself and my team will manage who has access to what and so like each one of these warehouse IDs is a location for us right So certain users will only have one or two on this drop -down And it all starts every page and high jump starts on the search page So that's how it filters you can't get to the report page until you do your search page so they won't have this any button only like admins have any So they have to select a warehouse or or a customer code Okay
+
+>>Bikram Dahal	15:39
+So that makes sense then this is an interesting part um the portal that you guys have because I'm more interested on the portal because it will be more likely be using the portal money
+
+>>Neil	15:49
+Right right right let me get the notes I can log back in one second
+
+>>Bikram Dahal	15:52
+Yeah I'm on the portal what I'm trying to understand is that like I'm that again your code expired
+
+>>Neil	16:02
+Yeah
+
+>>Bikram Dahal	16:03
+Okay go ahead go ahead
+
+>>Neil	16:06
+Yeah
+
+>>Bikram Dahal	16:06
+So what I'm trying to understand is that currently how is because for you guys to have that Ss you guys already have that Api for sure right because you cannot have your own portal without having an Api so it's
+
+>>Neil	16:20
+Well We we we don't have an Api in between the portal and and high jump it's just uh through sequel
+
+>>Bikram Dahal	16:29
+Oh it's completely through sequels uh that you guys are making a change so what what is happening is example if you go to Ui Right So let's go into the same order from the Ui and like can we do that source here from the portal
+
+>>Neil	16:42
+Yeah Yeah let me let me let me get to an order of Festa Yeah So like take this order right here yes So if I want whoops uh if I wanted to see the order um on the customer standpoint I would go to this page again they have I have access to everything But they would only have access to their account Yeah let me just make it wider So I think you guys have have dealt with Venetia before and not just Andrew on our team she she is the one that manages this portal from a development standpoint right now Okay Andrew me and Andrew I I designed it and Andrew built it Okay Um so I'm putting in this order number Yeah And uh it's this this now this is power Bi it's filtering the data for and I since I have a lot of data it takes a little bit of time But so this is like at the at just a very high level you know want the orders there for 72 cases this is the header information so like um carrier is the same if I were to go to see the carrier here carrier g3 intermodal svt Okay it's the same as this right here Right um we have we have statuses that we pass the quantity um and then just different information uh on the order and this is what's on the order the items on the order so if I have to change then how do I change here if you change here you would go to you would click on the order
+
+>>Neil	18:26
+Okay And you would go maintain and this opens up like a view where you can you can't change you can only change certain things like you can't change the order number because that's unique um
+
+>>Bikram Dahal	18:37
+But you can change reference numbers you can change uh the carrier you can change the ship to name you can change the items and this is also like this is also like uh this is also like once you do it or Sql query will do and change that information into the um high jump
+
+>>Neil	18:55
+Right so what happens is through sql uh procedures it will it will um hit the high jump has host tables so we don't want to hit the tables directly Yeah So uh high jump has like kind of a validation tables that it you have in order to import or export data you have to you have to hit one of these tables Yeah And so that's what we do Okay And then high jump after a couple minutes high jump
+
+>>Bikram Dahal	19:25
+But then we'll update the table after it validates okay this is going so even the whole thing right even the whole thing is managed through Sql only example if the user user is like
+
+>>Neil	19:36
+And well no no no the the roles on the portal live on the portal because um the those users like i have i have two different user accounts like i have a user account for high jump Yeah that's independent that's independent to the user account and the portal totally separate you
+
+>>Bikram Dahal	19:56
+Now, example, because you have given a login and password to a user, that he logs into like, so, and it might be a bit technical, maybe we can skip it, like if it is going too deep, but currently, the user authentication, right? So figuring out, okay, this is a user and he says his password, and okay, you put an email and password, and then you have to make a token to say that, okay, this user has, like, this is a quiet user, and this user only has a permission for these two or three vendors. Now, that has to be passed to Highjump, Highjump, between Highjump and your portal? No, no, no.
+
+>>Neil	20:31
+So, so what happens is, okay, all this data, we replicate from Highjump to our data warehouse, right? And in Azure, so all data, just every 10 minutes, it replicates. Now, Power Bi, based off of the user, filters the data on what they can and can't see from our data warehouse.
+
+>>Bikram Dahal	20:55
+But on the case of Power Bi, also, like, because the filtering is different. For some user, the filtering is just based on the, the wine. Some of this is based on the carrier.
+
+>>Neil	21:07
+Right.
+
+>>Bikram Dahal	21:08
+So that filtering, so let's take one example, right? So what happens on the back end, back end side of things? Because this is quite interesting, because I have used Power Bi, and I also have built something on Microsoft SS, for our, like, for our e -commerce company, long time ago. So I'm just trying to understand this one, because I have never even thought about it.
+
+>>Neil	21:28
+Yeah, it's through, I forget how we did it. So we're using embedded Power Bi on this portal, but it's, it's through, we're passing, so pretty much we're passing the different parameters. So, like, okay, and this, this, this, this example, this page, up here is not Power Bi, right? These, these parameters.
+
+>>Bikram Dahal	21:49
+Yeah.
+
+>>Neil	21:50
+We're controlling what, so when you go into a page, any page, Power Bi doesn't run. We control what they can filter for, so, like, their user account will only give the dropdowns that they have access to, right? And then they hit run report. So if it's, if it's a user that can only see this account, they would only have one option on this dropdown. Now, that's Not Power Bi. That's just through the security of.
+
+>>Bikram Dahal	22:14
+It will be from Apa.
+
+>>Neil	22:16
+Yeah. So, so, so, um, then, you know, based off of what we're passing through Power Bi as parameters, it shows the, the data. Okay.
+
+>>Bikram Dahal	22:26
+That makes sense. So then the author, like, what do you call the, like, um, the thing over here is the security. There are two kinds of security. The first security is on the top level, like, getting what drop down that they can do. Now, theoretically, I'm just talking about theoretically, I'm not, like, I know, like, the people are not tech savvy and everything on this part, um, is that, uh, if, let me say this dropdown, um, like I know what is required for the dropdown, I might not have shown the dropdown, the user has access to only three vendors, the winery, but I know the, I know the URL or parameter for that fourth vendor. Then technically, if those information is passed to your system, then like, they'll be able to see those, uh, data also. Right. Because that authentication on second level, on this level is not happening, uh, one more time because that authentication is happening only for, uh, this one, okay. Then it makes sense. Uh, then it makes sense. Um, um, do you guys have different extending environment and production environment or like, you guys have, yeah, we have, we have a test, uh, and in production on this portal. Is it possible to add the author or user on our tester environment and you can kind of move it after this one? I just want to understand a few things.
+
+>>Neil	23:34
+There's, uh, typically there are, yeah, they're, they're in there, but we typically we test with just dummy, like we, I have, you know, some Gmail accounts online, online.
+
+>>Bikram Dahal	23:43
+Okay. So let me know, like, if it is, uh, possible, you can even add, uh, like, uh, even cover the password and everything, if it is, that is fine. Um, and you guys can send the password later on. I just want to understand a few things, um, um, so that just for guidance, like it's not for anything else and everything, because, uh, like, uh, I just want to see like how all of these things are done. And just to see if I can help anything with Andrew or Vanessa, if there's anything, but if you can have already figure everything out and this one, then that is also not required. Just like whatever is comfortable for you guys more than that.
+
+>>Neil	24:10
+Yeah. I can, I can make you a dummy account that has just, you know, so you can see a couple of orders assigned, let's say assigned to you.
+
+>>Bikram Dahal	24:16
+Yes.
+
+>>Neil	24:16
+That, that's really great.
+
+>>Bikram Dahal	24:17
+Like if you can do it, that would be great. And on the case of, um, because for this project to be successful, like, this is really good. Like, um, like, uh, um, really like, um, unique also, like, I never thought like the power BI could be used in this way. Uh, like very interesting. Like you'd never think that way because like I said, I have used both of these tools. I have also do something on Ss. Uh, but my data data was on Ss only. So I had a lot of this forms, a lot of reporting, a lot of call customization on Microsoft SS. I'm not sure if you guys know about it or not. No, we haven't used.
+
+>>Neil	24:49
+No. Um, yeah, we, we, we have, we've had this portal in. We've been through power BI now for.
+
+>>Neil	24:55
+five six years only five years before we had um a different portal similar idea but just on on like a .net framework makes sense because what did i can understand because like i know
+
+>>Bikram Dahal	25:08
+But like power bi is something like is it's still like i'm not able to wrap few things But i have the technology
+
+>>Neil	25:13
+Yeah It It definitely uh was a lot of trial and error on our side yeah
+
+>>Bikram Dahal	25:17
+Well makes sense like i can say because this can be really complicated like uh like very fast because the kind of permission that you guys have right even we cannot have that kind of formation i'm really dying to have that kind of formation the commission said that you should write away like you can choose which guy you are which features and everything it's called like rbc like role -based ss control and mastering it is a different kind of best like we have a lot of things like have things on our side that i really want to have that kind of thing in one day one day like in doximo so that if you know separate conversation but if you want to take a deeper dive on how we manage our power
+
+>>Neil	25:53
+Bi You know uh that's totally fine i can get with uh vinicia is the best person with it
+
+>>Bikram Dahal	25:58
+Sure sure i'll go into that like please add us to one of the account um so that like uh so that i can just quickly look into that and then uh do it coming back to go what will be required for uh like uh before i go into that Okay Do you have any questions or any more information you need on this part
+
+>>Aniket Tatipamula	26:16
+No i didn't know
+
+>>Bikram Dahal	26:19
+Okay sounds good but then like um uh then like um are you getting the team right so for doximo side right uh doximo side The um like the project is divided into like three parts first part is the authentication side authentication right authentication I'm not too much worried because you guys already have a way to because this space right that admin page that you have Yeah it's uh like um that page where you have that rva controls and everything Yeah
+
+>>Neil	26:47
+Yeah Yeah
+
+>>Bikram Dahal	26:49
+This one because at the end of the day this do not have any customer data like uh like customer data in a sense that it just says Okay This is a user active on active uh care and everything so those information like we'll be able to make our api Because right
+
+>>Neil	27:04
+Yeah we need an api for a user um So you can you can pass the email address and we can give you you know what roles and carriers they have Yeah
+
+>>Bikram Dahal	27:12
+So that is the easier one right so that can also have one level authentication so that not everyone can call it so there can be some master token and if you call using that token then if there's a user you guys give a user if there is no user then you just return it up blank um right So like um so like that is that part is easier right so the authenticator part like to figure out if this user uh like it has what permission that is going to be a simple api and this this skin is also uh just to get an idea is this skin also powered by power bi No right no this one's not this one's not if you have it has to be okay
+
+>>Neil	27:44
+Okay
+
+>>Bikram Dahal	27:45
+Then this makes sense so that part is easier um because you guys already have this api as long as there's a token i think because this also not everyone can see it right so you guys already have authentication to say that only admin can see this user this time so that one part i'm not too much concerned so that part i think is figure out the second part that is going to be more important is because it's going to go through api um in your case and when i do through the api then we need to make sure that we have an extra layer of security also because on your case after the first layer of security is done for further orders there is no extra layer of security what i mean to say by that is the user only has access to like this uh like what do you call abs uh every logistic like abs listing and everything they only have access to that So whatever query that i'm making now like um like uh quality or whatever api that i'm making as long as like i have those parameters then those users will not be able to see other people um for people data like right right always send on um this case um in our case i'll have to see like how do we make sure that like because right now just on my head i might be wrong on this one that's reason why i want to uh see your implementation and everything is that technically your authentication on second level is just based on um like just based on uh the drop down there's no token that is exchanged and that will if i try to make a change like because in our system it's a token based system Right so like even if you do whatever you want to do but if that or it's any request that token is validated every time so if you try to do something else and that token do not have that permission then like you will not be able to do no matter what you
+
+>>Bikram Dahal	29:36
+Yeah
+
+>>Neil	29:37
+That's what we want um yeah
+
+>>Bikram Dahal	29:39
+Every call we want to be one validated validated right because that way then things we can so like a tricky so on this case uh has the team uh figure out uh what what is the uh like method they are going to use the validate it's in every request or like that is
+
+>>Bikram Dahal	29:53
+Work in focus because
+
+>>Neil	29:54
+Yeah I mean it's going to be the same type of every call is going to have um pretty much if if you're calling a order you know where you're going to pass your you know your who's calling who's making the change and and based off of that um their access we're going to validate what on the call what they are able to do every single time Okay
+
+>>Bikram Dahal	30:22
+So um then like then for this to work i think the api that we need are going to be like the api documentation that we need are going to be simple we need three paid documentation um like um like um one is for order and order has uh three things it can do i think for now for safety reason we'll not have delete as option there's no right there's only there will only be one to get the status one to update right here also you can think about it if we want to allow people to create or not um but like easily for three email i don't think people create appointment i don't know like you guys have
+
+>>Neil	30:53
+Yeah for now we keep it simple just just status Right
+
+>>Bikram Dahal	30:56
+So we just need a way for like way uh for uh our api where and we also need to know what are the parameters this api is yeah
+
+>>Neil	31:06
+That's what Venice is working on right now So she's she's um She's building it from scratch because we haven't done this before
+
+>>Bikram Dahal	31:11
+So she said she told me it's gonna take a couple weeks um sounds good um and if you guys have some written documentation then we can also work because you could right Right
+
+>>Neil	31:20
+Yeah Yeah We're we're gonna um have a structure So so we have other I mean i can't show you now But i've seen other api documentation that you you'll you'll have access to it Right And what's all
+
+>>Bikram Dahal	31:33
+Yeah sure um Yeah so similar to our api documentation if you guys also have a simple api documentation for this three uh api order uh of what it's for status and what is for update um and what are the parameter that is Supports same thing for inventory and same thing for this one so if we have that Then i think we are sorted um on on our side we'll just complete uh like we'll look into the rest of the things um and then like i will start uh like uh right now like you have already seen it what we have done on last call let me just show you one more time because we are taking each and every order of that you guys have you see and we are trying to say that which api should i hit what should i hit with with what action should i do and we also put parameter what parameter to be used for what because uh this action will be done based on some parameter and because it's an every uh email that comes through first has to be divided into what is up like right equipment and everything what is the intent that you are trying to do and then what is the parameter to you do that intent So i'm parameter means carrier i need to change carrier from this to this right
+
+>>Neil	32:38
+So that's what you need to figure out what you need to pass into this Yeah Yeah
+
+>>Bikram Dahal	32:43
+And then like um so like for each and every of this email for now like uh like i'll work with the team and next week we'll provide you like because if you're able to provide this on excel like this something like this and you get the agreement saying that okay this is two action thing this is one action thing and this is correct this api is correct the intent is correct your parameter is correct they might do right listen because after parameter you can also have one more validation that you might need to run validation is example uh people sometimes will just say that uh like i will just say that like um um all all the uh like all the information related to this carrier then you also i'll give i think one example if you just give example it will be easier um
+
+>>Bikram Dahal	33:32
+Yeah So sometimes what happens is that if you look something through pure number now the pure number can have some kind of duplicates right because pure number is coming from third party from their own party also so sometimes what happens is that uh like let me just give one example so example if i look from this pure number before i make any change i also want to validate that the customer is the same and maybe the supplier or like quantity is the same Right right
+
+>>Neil	33:58
+Yeah because the bill number can repeat from different right So like so one more layer that we have over here is to make sure that we have a validation in place and that's part of the the when you guys so for like the order api call we're going to require certain fields that will help validate yeah
+
+>>Bikram Dahal	34:13
+And over there there are two parts right So uh like one uh the thing over there we'll see about uh like sometime it's okay to ask for uh and it might just be like like you said that you also have like Yeah not do exact math But like right If those are uh supported and that might be fine so when you make a uh with when you make a call what you say is this because there will be multiple things example for Po like the parameter you'll always have to pass Po and customer name suppose customer name or quantity let's say three things now if this three thing matches then you don't have to do any kind of validation
+
+>>Bikram Dahal	34:52
+Right and because everything is matching and there's only one like and also the second thing also might can happen is that uh like this might you might get two now you're confused who is to do because this parameter that you are trying to search can give you two outputs right in that case you might have to use it is something like this supply information Right
+
+>>Neil	35:11
+Right Yeah Yeah to narrow it down Yeah Yeah
+
+>>Bikram Dahal	35:14
+In that case then and supply information might be like uh the quick it's not like uh like protocol because you only have that data and everything you can use like your own logic to validate that okay out of these three this one is like uh like looks like is the correct one because uh all the other information that i have not done is also matching so if you get a multiple um uh information from this then you also say that Oh like also match the supplier or any other information that you might have both from email and this one if all of this matches then do that action and then like do this Right So these are the three things so let me do this i think if we have this on the excel sheet uh like um populator saying that okay um uh like these are the things that needs to be done then we can take this and code it into our uh system And then we can also look into making a simple dummy api to make sure that those changes add on and those dummy api by then uh your api will also be ready like we can that just sweep that api uh to like your side the only requirement that i have from you guys is that's the reason why i need to have access to that portal because from that portal then i'll be able to figure out what would be allowed to search example for you i'll be allowed to search only the Po but i cannot source based on um you know like i i cannot edit certain information Right so right right right have a information about what are the property or order can have what are the property the equipment can have what are the property the this have and what property can be changed Right
+
+>>Neil	36:47
+Yeah I'll send me an email and make you a portal user for our test environment And i'll get you a customer um i'll probably actually get you two i want to get you two different user accounts one for customer one for carrier okay makes sense
+
+>>Bikram Dahal	37:02
+So i'll send you the email Id um and then like and then we can look into uh look it needs to be two different emails though you cannot have one rule sure that that's really fine like uh like i'll just send one for me and one for nikit And then we can now
+
+>>Neil	37:17
+Yeah um
+
+>>Bikram Dahal	37:18
+Yeah And one other question that i had was regarding the volume right what is the volume that you guys have for this kind of because here i see that Tim has sent me eight new Um So what do what is the volume
+
+>>Neil	37:30
+Yeah uh it's yeah It's probably it's hard to say But it it's so i had to say it would probably get around maybe 100 to 200 emails a day on this and on how many people i know they might also be doing over the job
+
+>>Bikram Dahal	37:48
+Right So right
+
+>>Neil	37:49
+Yeah Yeah There's there's a team of six people that are our customer service rep And Yeah They they are doing other things okay to kind of get the warehouse ready for shipments bless you bless you um Yeah About i would say more about 200 uh you know there's we probably get more emails But you know if you filter out the ones that are just garbage about 200 action like so basically where you don't need action then right that's the one right
+
+>>Bikram Dahal	38:18
+Uh then i make sense i mean uh like i'm looking forward to getting uh like some more uh like email from you guys or some uh so that we can make that excel sheet i showed you because right if you're able to map it on that excel sheet then we'll be able to do like whatever automation and everything can be done and based on that also Anyway you guys are building the apis because you guys have already built the uh using power bi So you guys already have a knowledge like what api should do right Yeah
+
+>>Neil	38:44
+And that's that's pretty much what we're we're basing what your user is able to see get data uh from api from our portal so like the same fields pretty much Okay
+
+>>Bikram Dahal	38:55
+So it sounds good then and then looking forward to getting that ss looking forward to getting the email and on our side also the like the product will be ready in next two weeks so it might be a very good time to like for you guys also to be ready ourselves to be ready so that we can change Yeah And once we get once once the our api is a little closer we'll get venisha onto this call as well and we can we can move through it once like uh the one or two api are ready then like it will be good to get hard also so that like uh once it's on radio and xlc then we can quickly run from a quick experiment
+
+>>Neil	39:24
+Yeah
+
+>>Bikram Dahal	39:24
+Yeah And then we can test one email completely Okay Right this kind of email let's do it simple one without any right we can
+
+>>Neil	39:31
+Yeah And then we can use your guys's accounts right like you can you can we'll put some orders in this in our test system and you guys will mess around with the different requests Yeah
+
+>>Bikram Dahal	39:41
+And we can just Yeah Totally uh exactly that that is what so we just send one email and then see like what will change in the testing environment and then once everything is good then we like you
+
+>>Bikram Dahal	39:51
+Even copy the email that the user has sent and make some changes and then see if it really figures those out or not right so we'll learn from xment and then if once everything is good then we'll move it into production
+
+>>Neil	40:01
+Okay Okay
+
+>>Bikram Dahal	40:02
+Okay then sounds good on our side also uh like uh please are looking forward to getting that email and the ss And then we'll get back to you regarding the timelines Yep
+
+>>Neil	40:11
+Yep So just because i have meetings today email me to email the account Okay But i'll definitely do it I'll make sure that i i send you a follow
+
+>>Bikram Dahal	40:18
+-up Okay
+
+>>Neil	40:18
+Okay All right sounds good
+
+>>Bikram Dahal	40:19
+Okay take care fine my name
+
+>>Aniket Tatipamula	40:23
+Yeah
+
+>>Bikram Dahal	40:23
+So on the case uh what
+

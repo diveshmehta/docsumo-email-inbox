@@ -1,0 +1,678 @@
+>>Bikram Dahal	00:00
+So anyway, Manoj will, and also we needed some confirmation regarding the structure of the panel structure that you guys want on Docs and everything, so that it's very easy for you guys to, you guys to like do one -to -one mapping, right? So there are a few things, a few questions that we had, so we just wanted to like clear those questions so that we can do this project on full -fledged, right? So yeah, before that, do we have to wait for anyone else on the team?
+
+>>Stefan Z	00:28
+No, we're ready.
+
+>>Bikram Dahal	00:30
+Awesome, then Manoj, you can quickly show what we have set up, then we'll go through some document, we'll review those together, and we'll also provide a clear action item for the team so that we can start processing the rest of the documents.
+
+>>Manoj Racherla	00:44
+Sure, sure. Let me know once my screen is visible, guys.
+
+>>Stefan Z	00:56
+Yep, good. So out of the sample files that you have there - I'm sorry, Manoj, you might remove in the Google Meet window. Yeah, sure.
+
+>>Manoj Racherla	01:12
+Okay. So the sample files that you guys shared over the Sharepoint, we accessed those files and we uploaded it on our Datsun platform and set up the fields that you want to extract from those files, and we need your help, like in terms of what are the extraction that we have extracted from the docs, is it correct or not? So these are the fields that you wanted? Yeah.
+
+>>Bikram Dahal	01:44
+One thing before that, I think the thing that will be easier is to go to data table. I think we can look into this once and then we can go back to data table. I think that really makes things very easy to look into, like, Manoj, can you go to data table? Yeah. So for each of the file that your team has sent out, so we have put the field that is on the top, which we'll also see on the side, and then we have done the very basic extraction. It might have some mistakes and everything. We'll come to that in a minute. There are a few confusion that we had, so the extraction might not be perfect. So we wanted to give you together around 10 files together on the call, and then if required, we'll ask you for more help and everything. Otherwise, we'll also send you some questions on Teams and everything, so that things can be async. The first question, let's go through first questions over here, is on the field that your team has sent, is there any additional field that you guys want to add, or this is the final list of the field that you guys have to be extracted from the documents?
+
+>>Stefan Z	02:58
+All of the ones that we have - Go ahead, Stefan, sorry. No, I was just going to say, so without having the list in front, can you just confirm that the columns include all of the sort of - You can go to the field setting.
+
+>>Bikram Dahal	03:15
+Manoj, you can go to the field setting once, and then we'll make sure that everything is -
+
+>>Manoj Racherla	03:24
+So these are the - Yes.
+
+>>Vishal Arya	03:26
+Yeah, company name, Sec, number of shares, class, sector size, additional notification information, quote, right. Yep, that looks good from the list of it we gave you, and the company contacts with a copy. Yes.
+
+>>Bikram Dahal	03:41
+Okay, so over here, we had a few questions. I had no issue on this one. Are you getting a few of these fields? It's like self -explanatory, but there was some field that was a bit confusing to us. Example, what is the difference between number of shares and initial shares and additional shares? I know on the document, we can see, but is the number of shares a sum of initial share plus additional share? So just wanted to have more understanding about number of shares.
+
+>>Vishal Arya	04:11
+Yeah, I think the clarification here is that some warrant documents will only have number of shares, and that's it. Other warrant documents will be set up a little differently where they will have an initial share, and if they have an initial share, then they will most likely have an additional share comment somewhere in the document that says initial additional. So not all documents will have one or the other. If one document has, what do you call it? A number of shares, then it won't have, unless you have examples you want to show me.
+
+>>Bikram Dahal	04:48
+Yeah, that would be great. So can you close this one? Yeah, can you go to data table once? Okay, just a minute. Sorry, this one, we'll come to that in a minute. Let me just answer.
+
+>>Bikram Dahal	04:58
+A few questions regarding the field, then I'll come back. Because one of the questions was regarding, can you go to field setting for now? We'll come back to these questions. We'll come back to these questions with one example so that we can have a very clear picture. Right.
+
+>>Vishal Arya	05:12
+Ok.
+
+>>Bikram Dahal	05:13
+All of this thing is good. One thing we wanted to understand is, what is the difference between copy with copy 2? Because I know from the comment, we'll have a section called with copy 2. But we see that with copy 2 is not Svb. So just wanted to understand, it can also be the case that with copy 2 might not be Svb. And some of this is Svb. Some of this is not Svb. So we wanted to understand, what does this 2 means?
+
+>>Vishal Arya	05:44
+Yes, that with copy 2 is just an additional contact for the company or the company's legal counsel. So that's what we're trying to extract from here. Because again, we're trying to reach out to the company. And we want to get all the contact information from these documents and other sources. So on these warrant files, most of them or some of them will have a section with a copy 2. And it will most likely be their legal contacts. So we will extract that information so that we have that contact.
+
+>>Bikram Dahal	06:12
+Sure. And sometimes, like, OK, we'll look into some examples. Because on some of this case, there's Svb. So we want to know if you guys want to ignore the Svb and extract something else from some other places. And we'll come to that in a minute. That was the second thing. Yeah, I think these are the majority of the questions that I had. Any questions that you had, Manoj, based on you looking into these files?
+
+>>Manoj Racherla	06:39
+Also, I wanted to understand these three pieces. Put rights, right to invest, and right to co -invest. Because majority of the file samples that we have shared, we weren't able to extract. We weren't able to extract these values with blanks. So we wanted to understand, how do we identify that? What are the extractions that we have identified for this piece is correct or not?
+
+>>Vishal Arya	07:04
+Ok, yeah, most of our documents will not have this. But there's a very small subset that will have it. So if you're coming up with blanks, and maybe, let's say, 75%, 80 % of your documents, that is correct. So do you have examples you want to pull up that we can see from the results that you did find that had a few of these? There should be a handful, though.
+
+>>Bikram Dahal	07:28
+Ok, so we'll go to that. We'll go to each of those. That isn't like the next step is for you guys to analyze at least 20 of these extractions. We'll add you to the account and let us know where it missed or where did it pick up wrong value, so that we can make sure that next batch, those issues are solved. Ok, let's go back to the data table, I think. And from there, we'll start from the number of shares, because that was the first question. Then we'll come to copy. And then we'll come to the right put those order, right? So let's look into number of shares. Yeah, so this one, can you get one? Ok, let's go to number three, row number three. Can you please go to row number three? Yes. And can you open it on if you want? So over here, the system has done both, right? It has put the number of shares of 1 ,000 in initial share and also on the number of shares. Is it correct? But I think this had additional pricing. I have seen some other way to have additional pricing and everything. So if we get this kind of cases, then like this, is it true to consider this is also initial share and it is also like the total number of shares?
+
+>>Vishal Arya	08:49
+You know, it's a good question.
+
+>>Stefan Z	08:51
+I mean, this is a European. Yeah, I think the difference is, to answer your question, yes. In this particular warrant, it's correct to say that the number of shares and the initial shares are both 100 ,000. And the reason, the high level reason is because there is no distinction between initial and additional shares because there are no additional shares. The reason for that is because this is a different style of document because this is a European -based document. And the European -based documents are slightly different, though there will be some additional shares in the European ones. So in this particular case, yes. If there is just a number, it's OK to call that the initial. Ok.
+
+>>Bikram Dahal	09:50
+Makes sense. We'll show other examples also. One thing that was interesting on this is this also has expiry date. But I don't think we're extracting the expiry date on the license.
+
+>>Bikram Dahal	09:57
+Is that required or not a lot of this will not have that information? So that's implied because looking at this this looks like this clause this clause is expired already Because it was from october 2022 10 years anniversary, which means that it has been expired So do you guys want that expired if it has to be extracted or that is not required? Uh, you uh, you have some other mechanism over there This Michelle this would be a good point to uh,
+
+>>Vishal Arya	10:24
+Yeah
+
+>>Stefan Z	10:24
+If they're going to our we wanted to double check against our per portfolio. See if we've done that Okay Did did we give that information to them?
+
+>>Vishal Arya	10:35
+Um talked about it, but Let me check here on the data that I gave them warrant listing One second So has this been cross -referenced with um, the excel file with the listing of all warrants has that already happened?
+
+>>Bikram Dahal	10:54
+No, we have not Okay with the excel we have not done it like we have just done the setup and just look at what we have extracted Okay, so
+
+>>Vishal Arya	11:01
+So yeah Stefan I think they'd be pulling everything that's obviously warrants in the uh, sharepoint. So Yeah, everything we have. Yeah, I gave him a warrant listing of active warrants.
+
+>>Stefan Z	11:13
+Um, if they haven't run through that to kind of Match it up or and filter off then this would be this would show up So so to answer your question, I think we had discussed this our our sharepoint database has everything going back to the beginning of history Yeah, so there's a lot that happened in the very beginning that that has since expired This is this is one example because it happened so long ago most of the current Active warrants, you know started less than 10 years ago. Yeah Um, so if obviously if you're pulling from the entire data set then you are going to pull something like this Some other ones that that are expired Okay, what I think we had discussed last time is to say We have an excel file that has all of our current companies. Yeah, so it would not include whatever this company name is So if there's a way to do the double check you you if you had done that you would have not seen This is not on the list. So you say okay I can ignore this because it's not on the correct No, that's totally fine.
+
+>>Bikram Dahal	12:15
+I like up like but like we'll do that one one more
+
+>>Stefan Z	12:19
+But if you haven't done it, then yes The answer is you will find some that have an expiration date in the past and it's no longer legally active.
+
+>>Bikram Dahal	12:27
+Okay, right And like uh, like you guys do not have to verify it So basically the purpose also might be that says in ix about xyz So you guys that is a ground truth like you don't have to bother verify it with the documents documents and everything Then it's totally fine. Like we can like anyway those file once you use that filter will never come to our system So my that might not be issue, but it also might be the case that you guys want to verify that data So if that is the case then just wanted to know if xyz Makes sense to have it as a field because for us it's not that difficult to have one more Uh line item called xyz if needed but just wanted to like if you guys are already sure about that Excel sheet as long as we filter from that excel sheet or um, like this is good enough good enough for us There's no issue on our side, right?
+
+>>Stefan Z	13:13
+Okay, maybe i'm sorry. Maybe I missed something So so expiration date is not currently a data field that you are grabbing Yeah on this one on the list that you guys have sent.
+
+>>Bikram Dahal	13:22
+We are not edited, right?
+
+>>Vishal Arya	13:23
+Like so if you see Um, let me check That's interesting.
+
+>>Stefan Z	13:27
+We didn't include.
+
+>>Vishal Arya	13:28
+Yeah Oh, you know what? I don't see it on our extraction I don't know how that was missed. Sure.
+
+>>Bikram Dahal	13:38
+We'll just say that like And then uh, like we can have well,
+
+>>Vishal Arya	13:43
+Yeah Nothing related to date Um, so we want to put both an issue date and an expiration date. Sure Okay, fine Yes, if we can add two more fields search fields issue And expiration date
+
+>>Manoj Racherla	13:58
+So we can do that
+
+>>Vishal Arya	14:00
+And i'll add that to our uh to our file shared file online as well
+
+>>Stefan Z	14:04
+So so So obviously I mean that was an oversight on our part But yeah, so So now I understand the question you're asking. Yes, we did that's information. We definitely want Uh, I thought that was part of the request but uh, if we could add that back in
+
+>>Vishal Arya	14:18
+Yeah, then yeah, you would have seen that do we also want historical like five years prior Expirations though. He's I think that was the other subset right if the question was do you want to show? Things that are already expired or do you want to that that one?
+
+>>Bikram Dahal	14:34
+I think will not be an issue after we do the extraction We can add one more filter on your system that says like expired 10 years ago like more than 10 years and everything So the only thing that we are a bit more careful about is the extraction once you do the extraction How you want you can filter? Yeah, like very simple. It's not an issue
+
+>>Vishal Arya	14:51
+Yeah, that should be fine. We should see everything and we can just filter perfectly.
+
+>>Bikram Dahal	14:55
+Okay. Awesome
+
+>>Bikram Dahal	14:56
+That looks good. One thing, Manoj, one thing, can you go back and can you go to the data table? Vishal and Vishal, I wanted to understand about additional share, right? I do not really understand it clearly, but sometimes the additional share has a clause. It's not that all the additional share was given to you. There's a clause for additional share, so you can open any of this additional share. Can you open one of this, please? Yeah, can you open this? It's a clause, right, but might not have been executed. So I wanted to understand if, like, yeah. So here on the additional share, like this is what it talks about, that you can buy this additional share, but only after a certain condition. So should that condition be captured? Or, like, what I'm talking about, is it already executed?
+
+>>Vishal Arya	15:52
+You know, most of the additional shares, it'll be a calculation. And there will be a maximum amount, is what we've seen. Stephan, I don't know how important it is, because it's a calculation.
+
+>>Stefan Z	16:07
+I think the important piece of information to grab is the number of additional shares. So in this case, you pulled it correctly. So it's not to exceed, or whatever, a number of 23 ,000. The calculation, I don't think, is as important, because it's different on every one.
+
+>>Bikram Dahal	16:26
+Yes.
+
+>>Stefan Z	16:27
+And it's a bit difficult to capture the essence of it in a data table, because it really is a narrative. There's a lot that goes into the calculation.
+
+>>Bikram Dahal	16:38
+Yeah. On this one, what I'm trying to understand is from my personal understanding more than on the system. And I'll also show you some example. Additional share usually means the vendor has a right to get that additional share for a certain cost, if certain condition are met.
+
+>>Stefan Z	16:57
+I'll explain it to you. If you think about from how these were initially issued, they were issued to Silica Valley Bank, which was a bank in conjunction with the loan. So the bank loans the company, whatever this company is, Halem Euro, $5 million. So this warrant agreement is issued at the same time. And it says, you will give me, based on this loan, you will give me 20 ,000 initial shares. And then if you draw on that credit line, we can earn an additional 23 ,000, depending on how much you draw from this credit line. Ok. So in a simple sense, if the company draws 50 % of the $1 .75 million credit line, if they draw 50%, we get 50 % of the additional shares. If they draw 75 % of the credit line, we get 75%. So in a very simple sense, that's how the additional shares work. So sometimes we get zero additional. Sometimes we get a quarter, half, three quarters, or all. Ok.
+
+>>Bikram Dahal	18:12
+So this document is in a point in time. It does not say. It's just giving you a right. That example, I have a company. I took a loan out of Svb. Initially, I got a loan for like $5 million. Let's say I got a loan for $5 million. $5 million, I issue you the share. But I'm also giving you an additional credit line that if I want to withdraw one more million, let's say, one more million, then I have to give you that extra share. Am I understanding that part correctly? Or this is just the additional share? Ok, let me not make it complicated. Is that my understanding correct? Like, I get $5 million, and additionally, I get a credit line of, let me say, $5 million. But it is only executed if I withdraw that credit line.
+
+>>Stefan Z	19:00
+I will tell you, I was not working at the bank. So I don't know the exact answer to that. But I believe the only loans we did were not loans of cash. They were all credit lines. So from day one, it's a $5 million credit line. And just to get the credit line, whether you take money or not, is the initial shares. And then if you actually do take the money, it's a percentage of that.
+
+>>Bikram Dahal	19:26
+Oh, OK. That's interesting. Ok, that's new. Ok, Manoj, can you close this up? Can you close this one? And let's go to one. Can you close this one? Can you go to the other table once, please? Because there was one credit line, like one number. So yeah, So yeah, that number, number eight. Can you open this one, please?
+
+>>Bikram Dahal	19:55
+This was one or it was something else. We'll have to see it once.
+
+>>Manoj Racherla	20:01
+Yeah, I can go there once.
+
+>>Bikram Dahal	20:03
+Yeah, so the initials here over here is like this. I say initials here is correct. 80235, that is correct. Additional here is also correct, because you have 40117. That is also correct. In this case, because I think it talks about, yeah, can you click on that? Number of shares, because it talks about paragraph and everything, so it's just picking up that value. It's not picking up this one, which will fix on this one. But in this case, is it OK to put it empty? Because you already have initial And it's like share? Or this one, like we put like 80235 on the number of shares or addition of these two numbers on that number of shares?
+
+>>Stefan Z	20:42
+I think it's probably better to keep it blank, because otherwise you're making a decision to say, it doesn't say shares, so I'm going to decide which one to put in there. And I think that's fine. Especially if for each one where shares is blank, there is a number for initial and additional.
+
+>>Vishal Arya	21:02
+Ok.
+
+>>Bikram Dahal	21:04
+Sounds good. Can you go back, Manoj, once? There was one document where on additional here was a bit more difficult to calculate. So if you go to additional here, yeah, go to additional here. Can you go down? Can you go down? I'm not sure what was the exact document. Otherwise, I'll send you on the, this one. Can you go to second document once? I'll just quickly look into that. Can you go to second document once? Yes. Was this a, oh, no, it was 21 number. Can you click the 21 number? Yeah, 21 number was the right one. So on that document, it do not say the share number. It only says number 21, yes. No, that is incorrect. It only says this value. So it's a pool multiplied by x number or something. I can go to, yes. Our system picked up that 1 ,000, which is wrong. We'll fix that. But on this case, do we put it empty? Or do you do the calculation on what should be the total number of additional share on this case?
+
+>>Stefan Z	22:09
+Yeah, so this one's trickier because you have to go one layer deeper. So the additional shares is the additional shares pool, which is defined someplace else. So really, that's the number we're looking for, the additional shares pool. And the rest of it is just the calculation. But the number of additional shares is in here defined as additional pool.
+
+>>Bikram Dahal	22:35
+Ok, one thing, can you search models once? Can you search for, like, yeah.
+
+>>Stefan Z	22:40
+So it's 1 .3a Is where you need to get the information from.
+
+>>Manoj Racherla	22:45
+1 .3a, OK.
+
+>>Bikram Dahal	22:46
+You can go to 1 .3a. Let's go to 1 .3a and then. Oh, but it's there on you. This is the additional share pool. So that is the amount. That's the additional share.
+
+>>Stefan Z	22:55
+That's the additional shares. So again, this is a different format. So this particular format says additional shares is defined as the pool. And then it gives a calculation. And then below that, it just separates out the actual number of shares.
+
+>>Bikram Dahal	23:13
+Ok, then that makes sense. I think we'll just change a few things. And the below value should be extracted. So if we get this kind of cases, we'll make sure that we send you the message on Teams and everything so that you guys can do that examination over here. And then I'll make sure that the extraction and everything happens perfectly. Let's go to copy with. Any questions on this, Manoj, regarding? This was the mainly question that I had regarding the additional share and everything, because other things were a bit easier to understand. Only this was a bit confusing. I will come to put rights and everything in some time, Manoj. But before that, let's go to database table. And let's go to copy to.
+
+>>Manoj Racherla	23:50
+Yeah, so can you open that one?
+
+>>Bikram Dahal	24:05
+Can you figure out why it says Svp Financial Group? Oh, no, you can close it. I'll tell you to look for something. Can you close it once? I think on this document, the value. Can I look for those documents that do not have that yellow icon? Yeah, look for one document that do not have a yellow icon on this one, yeah. So and open. Yeah, we can do that. Open that up.
+
+>>Bikram Dahal	24:50
+So over here, just wanted to have it like a.
+
+>>Bikram Dahal	24:54
+So this company is, can you go, yeah. So is this the correct copy two that we're capturing or like there's some other copy two we should be capturing and not care about Svb because you already have contact for Svb, right? So there's no point of getting that contact one more time from the document.
+
+>>Vishal Arya	25:11
+Yeah, this one wouldn't be needed because it is just the generic Svb contact. We were looking for an additional different contact in this instance.
+
+>>Bikram Dahal	25:21
+Yeah, so it is there like, like if there's additional like example of attorney and everything, we'll send that example also.
+
+>>Stefan Z	25:27
+So - But hold on, let's clarify. So can you go back down?
+
+>>Bikram Dahal	25:31
+Yeah, I'm cutting a bit down to the same one. You can just click on that. Yeah.
+
+>>Stefan Z	25:36
+So what this is, so what your data field is called with the copy two.
+
+>>Bikram Dahal	25:42
+Yeah.
+
+>>Stefan Z	25:43
+That's not what that information is. So that information is for notices to Silicon Valley Bank.
+
+>>Bikram Dahal	25:50
+Yes.
+
+>>Stefan Z	25:50
+Sent to here. Yeah. In this warrant, the notice to the company goes to whatever, Geica Inc, 65 Enterprise. There is no copy two on this warrant. So you're pulling information. You're pulling information forward. So with copy two should be blank because there is not.
+
+>>Bikram Dahal	26:15
+Okay, sure.
+
+>>Stefan Z	26:16
+You're pulling something that is a different data type. So the data that you're pulling is the Svp contact information.
+
+>>Bikram Dahal	26:23
+Yeah, it is contact information. Okay, understood that part. Can you go once, like Manoj, can you go back once? Can you go? No, no, can you close this one once, please? And let's go to the one example where, and it should, it's basically say copy two or like, is there any word that we're missing? So we'll send some example if we are confused or anything. But in this case, can you go and, okay, can you open like that one here? Can you open that line number eight?
+
+>>Manoj Racherla	26:53
+This one?
+
+>>Bikram Dahal	26:54
+Yeah, even in detail.
+
+>>Stefan Z	27:05
+Yeah, so this is right. This is perfect.
+
+>>Vishal Arya	27:08
+Yeah. Okay, sure.
+
+>>Stefan Z	27:10
+So go up a little bit, one page higher on this. So you see, and it should almost always be the same format. So you have the section that says notice.
+
+>>Bikram Dahal	27:22
+Yeah.
+
+>>Stefan Z	27:22
+The first name is usually Svp Financial Group and then our address. The information we care about is the second section. So the last one we saw was only the company. This one is company contact with the copy two straddling Yocha. So this is a perfect example, but you see how with copy two pulled correctly, your algorithm must be saying, okay, if it's not the company, you can take whatever you have.
+
+>>Bikram Dahal	27:53
+Yes, just to give that to like this one, so but understood, right? So basically we're only looking for those contacts that can be used from the company side. So like, it can be something else.
+
+>>Stefan Z	28:06
+And almost always, I would say 100 % of the time, it's gonna be below the company. So in this exact format, because it's always gonna be the company first with a copy or very similar wording, this information.
+
+>>Bikram Dahal	28:20
+Okay, sounds good. I think this also has a good example of pull rate. So like, Manoj, can you go to pull rate once? I'm not sure if it will exactly pull it from, yeah, Okay, it's pulled over there. So this is the kind of, on the case of pull rate, this is the line or like, we'll see if all the information is extracted or not. But this is what we're trying to pull or there's also information that we're trying to pull on this case.
+
+>>Stefan Z	28:48
+Yeah, this is gonna be hard. I mean, this is not the information that's related. Okay, it's not related. I mean, I understand the term is the same.
+
+>>Bikram Dahal	28:56
+Yeah.
+
+>>Stefan Z	28:57
+But it's from a different context.
+
+>>Bikram Dahal	29:00
+Can you get some example of like, because usually this is a legal language, right? Put, invest, co -invest and everything usually have a very specific language. Might not be fixed, but it might really help us after like 10 -hour model. So if you can, like how many, we'll ask you to like try a few of this document and see it. But if you guys have some examples that you can put it over here, then the model will do a lot better.
+
+>>Stefan Z	29:24
+So like - I think that, so last week we had talked about the fact that we gave your sales guys about 30 or so. They ran it through the algorithm. We worked through kind of the data, the table output. And in that set of 30 or so, whatever, I think we gave you examples of all of these. And I'm pretty sure it pulled it out well. I mean, I know the foot rights were in there.
+
+>>Stefan Z	29:54
+I can't remember the other one, but I'm pretty sure the other one. So if you go back to those, and you've already pulled into your own data table, you can see how they pulled it out of there and where they pulled it out. Because this is not the right place. And I understand from your perspective, not having the full background, how you pull that. But if you look at the other ones, it may, I forget if it's in a specific section or in a certain specific language. But I think the other stuff you said should help.
+
+>>Bikram Dahal	30:28
+Ok, sure. Then we'll do two things. We'll do on our side, like we will go back to the sales team and see what are the things that they had set up, and make sure that those information is added to our system also. And the second thing we'll also do is we'll do a little bit of research on our side. And make sure that those things are properly accepted. Because if you have a few of these examples, because usually all of this put right, prorate, and everything usually have not the exact same format. But it has a similar structure. So it should not be that difficult to extract. So we'll go through that.
+
+>>Stefan Z	31:03
+But I will tell you one thing, though. The only one that's going to give confusion is the prorata term. Because there are different, depending on the context, that could mean different things. But if the term put right shows in the document, there's only one context. And that's the one we're looking for. If right to invest shows up in the document, there's only one context. And that's what we're looking for, and the same right to co -invest.
+
+>>Bikram Dahal	31:34
+So if I'm understanding this, because I have a little bit of understanding about the prorate and also put right, put right a little bit. On our own contract, we had a few of these clauses and everything added. So on your case, on put right, are you guys more vertical? Are you guys focusing on certain kind of prorate that you are looking for, or right to refusal and everything? So there is right to, we didn't have Rof, I think. Rof is Ro, right to first refusal, or something. I don't know. I forgot the exact term. But on put right, can you help me understand a little bit of what kind of information you guys are looking for, prorate?
+
+>>Stefan Z	32:17
+Well, I think we're mostly looking, does it exist? So if it exists, there should be a dollar amount in there. So typically, there's a dollar amount associated with it, $100 ,000 or $200 ,000 or $300 ,000. So I guess the information, so what we're looking for is, does it exist? And the way to identify it exists is through the dollar amount that's included in that paragraph.
+
+>>Bikram Dahal	32:45
+Sure. So can you help me understand, on the term side only, just to make sure that we're on the same page on the prorate, what does prorate usually means on this loan application? Is it right for me to get a certain amount of money, like in case of liquidity? Or what does the prorate really mean? Then that will help me understand.
+
+>>Stefan Z	33:03
+Basically, what happens is there, as with all the other warrants that we have, there are certain events that happen that allow us to, something happens. So if the company is sold, we have certain cash that comes our way. If it expires, there's certain things that happen based on the terms of the warrant document. This put right basically says, overriding all that other stuff, we have a right to say we want to be paid $100 ,000, or whatever it is. Now, from our perspective, if the other clauses give us $200 ,000, then we're not going to exercise that right. Obviously, we prefer $200 ,000. But if all those other provisions only give us $10 ,000, and we have this put right that we are able to exercise for $100 ,000, we'll exercise that right. So it's not that common. It is a dollar amount. And it's usually associated with the expiration of the warrant or an acquisition. So depending on the terms. But for this purpose, it doesn't really matter when or why. It's just, does it exist? And what's the amount?
+
+>>Bikram Dahal	34:28
+So we also need to put amount in for put right. It doesn't exist, but also of what amount?
+
+>>Stefan Z	34:34
+They will all have a dollar amount, yes.
+
+>>Bikram Dahal	34:37
+Ok. Ok. So on that put right, then if it exists, and so the value to be extracted over here is that do we convert this into two fields? One that just says, put exists or not. Then put amount, if it exists.
+
+>>Bikram Dahal	34:52
+It exists, or do you convert it into that?
+
+>>Stefan Z	34:55
+I mean, I think you could have one line item, and there's either a dollar amount that shows up, or if no dollar amount shows up, I think we could make the assumption.
+
+>>Bikram Dahal	35:04
+Ok, then it makes it easier. And the second part is on the right to invest, I think it's only yes or no, right? So do you have a right to, in the next round, do you have a right to invest a certain amount? Is that correct, my understanding? So it can only be true or false. Like, it exists or does not exist? Is there also an amount saying that, OK, I can only invest x amount of money, because there will be a cap, right? So I just wanted to understand on the right to invest, what are we looking for?
+
+>>Stefan Z	35:30
+Amount or just? Do you know that, Vishal? I actually don't know.
+
+>>Vishal Arya	35:35
+No, again, I haven't seen too many of those. Let me.
+
+>>Bikram Dahal	35:39
+One thing I'm wondering is, can you see a different one?
+
+>>Stefan Z	35:42
+You know what? I mean, to be honest, if you put does it exist, yes, no, I think that would be good, because there's a dozen of them. So, I mean, we can always go back and look at the details.
+
+>>Bikram Dahal	35:54
+Yeah, OK, makes sense. And on the pull rate, it's the same thing as, how do you say it, based on? It's also amount only, right? Like, what, like, it all normally, what proportion, like, what is the definition of pull rate?
+
+>>Stefan Z	36:09
+For which one? The put rate? The put rate, yeah. I mean, that one, there is a dollar. There is a dollar associated with every single one of them.
+
+>>Bikram Dahal	36:18
+Ok, so both on put rate and on pull rate, like, we need to figure out what is that dollar amount.
+
+>>Stefan Z	36:26
+I'm sorry. I'm sorry. We're back to Prorata. So for the Prorata, I don't think, I think it exists or doesn't exist.
+
+>>Bikram Dahal	36:40
+Ok, sure. Ok, we'll take, I will send you an example. If we see something that is odd, or we see a pull rate on three places and we're not able to figure out, we'll send you an example. So it might be better to, like, look at.
+
+>>Stefan Z	36:49
+Yeah, I would go to your sales team and get those.
+
+>>Bikram Dahal	36:53
+I'll do that, right?
+
+>>Stefan Z	36:54
+We'll make sure I get those things.
+
+>>Vishal Arya	36:55
+And on put rate, there will be, there can be a couple of different values there too. I pulled one up here and it can be a calculation, you know, methodology, but there will be an amount, you know, it might not be the exact amount that we're looking for, but it will be one of the various numbers that, if there's a number there, I think that's at least an indication that we need to investigate that one further. Because I pulled one up here, definitely on, what is this? Curology, collective health.
+
+>>Bikram Dahal	37:28
+Yeah.
+
+>>Vishal Arya	37:29
+And the section has, you know, it's got a lot of different numbers. It's calculations.
+
+>>Bikram Dahal	37:36
+Can you show the screen if possible?
+
+>>Vishal Arya	37:38
+Oh, yeah, let me show you. All right, let me, one second. Share, yeah. Yeah. All right, let me know when you're able to see it.
+
+>>Stefan Z	38:05
+Yep.
+
+>>Vishal Arya	38:07
+So here's the section of the put rate. And again, the whole section is just labeled put rate. So once you get in here, you can see there's a base put rate amount, right? And then there's a one, you know, there's a separate number here. It's all time -based too. If it's prior to September, 2018, it's this amount. If it's after, it can be a different amount, you know? So it's a percentage and dividing. So this one's a little bit of a calculation.
+
+>>Stefan Z	38:38
+But - I think if you were to pull in just the first number, the 875, that would be sort of - Exactly.
+
+>>Vishal Arya	38:45
+Putting a value there will at least bring it to our attention for us to look at it further. At least there was a value there. So that's what we need. But it exists and there's a value.
+
+>>Bikram Dahal	38:54
+Okay. So we'll do that. We'll make sure that for this case, we'll make sure that on the documentation, we'll go through the cells, whatever was sent to cells also. On top of that, we'll also make sure that we get the best amount because that's a minimum amount that you listed and then you have a monthly and everything. So we'll make sure that those are done. And usually those will have section like that. Like usually, like, I mean, like this -
+
+>>Stefan Z	39:14
+For the put rate, yes. The put rate is definitely its own section. I think the other ones are their own sections, labels. Yeah.
+
+>>Vishal Arya	39:20
+Right. And here's one with the right to invest. Oh, yes.
+
+>>Stefan Z	39:25
+Here we go.
+
+>>Vishal Arya	39:26
+Yeah. So again, at the very top of the warrant, first page, it will say this. And then if you search the terms, you'll see a few different places, but there is a section, you know, Section Five specifically right to invest. And it will say grant of right. And then this one specifically hereby grants to holder to invest up to $1 million. So there'll be a value like that. Sure.
+
+>>Bikram Dahal	39:51
+And do you want to put a value, like pick up the value, or it might be better to just say yes or no?
+
+>>Vishal Arya	39:58
+I haven't seen all of them. I don't know if they all say a value. But if there is a section, then there is a right to invest. I just haven't seen too many words, a blank or if it's a calculation. But hopefully, it's just a value. So if there's a value, put one. If there's not one, but the section exists, I think you still, if it's an indicator with a check or a flag that says, yes, it exists, then something like that. What do you think, Stephan?
+
+>>Stefan Z	40:26
+Yeah, I mean, I don't know if that makes it too complicated. Because I don't know that all of them will have a dollar amount.
+
+>>Vishal Arya	40:34
+Right.
+
+>>Stefan Z	40:35
+With the put right, all of them do have a dollar amount. With this one, maybe some of them don't. But at the bare minimum, we need to be identified, yes, it exists.
+
+>>Vishal Arya	40:45
+Right.
+
+>>Stefan Z	40:45
+So if there's a way to, yes, you know.
+
+>>Bikram Dahal	40:48
+Okay.
+
+>>Stefan Z	40:48
+If it has a dollar amount and you can put it in. And if it doesn't have a dollar amount, you say, yes, it exists. If you can't do that, then just say, yes, it exists, and we can go back and look for the dollar amount.
+
+>>Vishal Arya	41:01
+Yeah.
+
+>>Bikram Dahal	41:02
+I think that will be easier on our side, so it won't be that complicated. So like, also it will make things very easy for on our side. If there's a dollar amount, then you can at least put the dollar amount. And if there's multiple dollar amount on multiple places, we'll always go with the best amount. Or do you guys want to go with the maximum, whatever is there? In this case, maximum and base is the same. But for now, we'll just make sure that we go with the best amount. And then we can look into some examples and then if required, we can make some changes and you can say that, okay, a lot of this document, I really care about max amount more than the minimum, best amount, then let's go with maximum amount. So it won't be that difficult to change later down the path.
+
+>>Stefan Z	41:40
+Yeah. Okay.
+
+>>Bikram Dahal	41:42
+Okay. Sounds good then. Let's come back to the structure, right? Manoj, can you go back? Can you share the screen? The team has shared the Sharepoint And then we'll just make sure that we have, and also the Excel sheet, if you have it, can you show those two things?
+
+>>Manoj Racherla	42:01
+Yeah, sure.
+
+>>Bikram Dahal	42:24
+I didn't think, so give me a second. It's not visual for me. No.
+
+>>Manoj Racherla	42:30
+Huh?
+
+>>Bikram Dahal	42:31
+It's not visual for, now it's visual, yeah, now it's visible.
+
+>>Manoj Racherla	42:36
+Okay. So this is the, like, architecture, their folder architecture that they share.
+
+>>Bikram Dahal	42:44
+Okay. So let's go through this one. So this is just a sample or this is the final, like, final data, the, like, what do you call it, a final, just wanted to understand, is this all the wine that you guys have or this is just the sample that you guys have shared?
+
+>>Vishal Arya	42:57
+No, this is final. This has everything.
+
+>>Bikram Dahal	43:01
+So wine one, two, three, four are the final, like, final one. What is the restore ink? Like, does team know it? If they know it, we can skip it. Otherwise, it is safe to assume that wine one, two, three, four has everything. Or we also have it inside here.
+
+>>Vishal Arya	43:16
+I think restore was a backup. And Stefan, last week we talked, do we still want to go through the backup as well in case there was something missed, right?
+
+>>Stefan Z	43:25
+I think when we had discussed last week, we had sort of identified that even though the restore is sort of a copy, there are some documents in there that are not in the four folders.
+
+>>Vishal Arya	43:43
+So, yeah, so pull everything in the four files plus the restore.
+
+>>Stefan Z	43:48
+And then obviously - And relevant documents. So one of them that we looked at, the one, two, three, four folder did not contain any warrant documents for a company, but those warrant documents were in the company folder up in restore. So why that is, I don't know, because I don't know exactly who restored these and at what point in time or why it worked out that way.
+
+>>Bikram Dahal	44:12
+But if I'm like, we'll also look into that and we'll run some -
+
+>>Stefan Z	44:15
+But I will tell you this. If there are duplicates, they have the exact same file name.
+
+>>Bikram Dahal	44:22
+Okay.
+
+>>Stefan Z	44:23
+So if you go through restore And then you go through warrants three and you pull the same document for the same company and it has the same file name, you can disregard the duplicate files.
+
+>>Bikram Dahal	44:34
+Sure. We'll look into that. So can you go back once, like Manoj, can you go to one of the warrants, inside one of these warrants? Go to one of these companies? All right. So over here, we have got the structure that you guys have.
+
+>>Bikram Dahal	44:50
+Had for Oint. So what file name should we look for Oint, right? So I think we have that instruction model, right? So that is finalized, or there can be some Sks where, like, what do you call, where can I expect? Ok, let me make it easier. Can I always expect? Because I'm just doing it double -check later on. Because once this project is done, I don't want to have, oh, the 100 files got missed or something, because we want to make sure that everything is completely over there. Can I always assume that each and every of these companies would have Oint? Is that a good assumption? Then, like, if something got missed, then I can come back to you guys and say that, oh, this pattern is not matching. And for this mini folder, we're not able to find the Oint. So just wanted to understand, is it safe to assume that each and every company will always have a Oint, or that is not the assumption that we can go with?
+
+>>Stefan Z	45:45
+Yeah, I mean, you should be able to make that assumption. But I'll go back to the conversation we just had. There will be some folders in here that do not have the warrant agreement. But the warrant agreement does exist in Restore. So it would be very rare, and I think it would be good to point out, if there's two folders in Restore and then down in Warrants 3 or whatever, and there is no warrant agreement in there. Although I will tell you this, that the chances of that happening are zero.
+
+>>Bikram Dahal	46:22
+Ok, OK.
+
+>>Stefan Z	46:23
+Totally makes sense. I wouldn't worry about that.
+
+>>Bikram Dahal	46:26
+Then as long as, so what we'll do on the outside is that, and we might send you an Excel file saying that, if there's some, like, with this item on, if there's something that is not missing, then you share. Manoj, you can continue saying that. Like, continue saying that. So like, this one, so can you go back? Can you show me the Excel file that Tim has shared, Manoj, those ones, just one from that.
+
+>>Bikram Dahal	46:57
+And not this one. The one where we need to use for filtering purpose, right? You guys have an Excel list, yeah.
+
+>>Vishal Arya	47:04
+Yeah, this one.
+
+>>Bikram Dahal	47:05
+So like, OK. So over here, like, if you go back on the file name, right? So on this Excel, is there any fill that is exactly a replica of your folder name? Is it the client name, or is it something else? Is there any information on this Excel that's exactly a replica of your folder name?
+
+>>Vishal Arya	47:31
+I think it should be client name. But again, the names, if they're missing a period or a hyphen, that will throw it off.
+
+>>Stefan Z	47:41
+So I'll point out, look at point pickup technologies.
+
+>>Bikram Dahal	47:45
+Yeah, you have to.
+
+>>Stefan Z	47:46
+So there's an extra comma at the end. And I can guarantee you, the PDF file does not have that comma at the end. But point pickup, it could be, I should say this, in the company folders could be named point pickup technologies, pick up Technologies, Inc. Or it could even be point pickup tech.
+
+>>Vishal Arya	48:12
+That's really short.
+
+>>Bikram Dahal	48:14
+Can I do it with one assumption, then? One assumption that I want to make is that, let me say, I make a simple user Python code. And I make a simple list of all the folders in the system. And the comparison with, so can I consider this to be a master? Is Excel a master database, or is the folder the master database? So whatever is on Excel, at least it should have one -to -one on your folder. Or can there be a case, especially for those cases that are expired. I know there are cases where it has expired. So there might be a case that where you have a name on the client, like client name. So this client is only the one that you guys have, right? So you guys have removed the older client from this list? Or is that the assumption you make? Or this also has last expired variant, and also the current variant?
+
+>>Vishal Arya	49:05
+Let me take a look at the file as well. I pulled everything down. I don't know if I took out blanks. Let me see.
+
+>>Bikram Dahal	49:14
+The only thing I'm trying to figure out on this case is that if the folder are the ground truth, and we have to consider that, then we can make a separate folder, like Excel of that, and send it to you guys, and do a comparison, and say that, OK, you have 40 different folders that do not have one -to -one matching with client name. And there are this many client names from this file that are not matching with folder. So we'll just do that.
+
+>>Stefan Z	49:38
+I would use this file as the master file. So what Vishal is saying is there are some expired warrants in this.
+
+>>Stefan Z	49:49
+File, but it's a subset of the total expired because this has all companies from March 2023. So between March 23 and July 25, there are some expirations on this Excel file. In the folders, it's those same expired, but going back to 2002 or whatever.
+
+>>Vishal Arya	50:12
+This file is, it actually, I took out all the zeros. So this is cleaned up. So this is even better. There should be, again, give or take a few weeks on this onboarding, you might come across some expired, but let's use this as a master file. If these companies exist, let's pull everything for these companies because they all have share accounts, but there is no zeros here.
+
+>>Bikram Dahal	50:35
+Totally makes sense. Then that makes a lot easier. If something is missing, we'll be able to figure it out. The only one other question that I had is why are name repeated? Because they have different warrants or because warrants can go up, up or minus once. Can you also remove the Google Meet ones? No, no. You go on Excel only. Can you go on to that Excel only? Okay. So I see a duplicate, right? So what's the reason for the duplicate over here? They have two different warrants or what?
+
+>>Vishal Arya	51:04
+Two different warrants. Yeah. And you'll see the SIF IDs, or sorry, the Sec IDs column, it's column C. Oh, okay. And you'll see that for Tebra Technologies, there's four different line numbers. So that just indicates four different warrants for that one issuer, client name.
+
+>>Stefan Z	51:20
+Six. Six?
+
+>>Vishal Arya	51:21
+Or six in this case. Yeah. Sorry.
+
+>>Bikram Dahal	51:24
+Okay. Now this is interesting. Manoj, can you go to our platform? We are not able to extract a lot of Sec ID because if it was an ID, then we just wanted to understand if it's missing on document or sometimes it will not be on document.
+
+>>Vishal Arya	51:35
+Sometimes it won't be. Yeah.
+
+>>Bikram Dahal	51:38
+But the case was a bit higher. So can you go back? So I just wanted to show the logic is right. So in our Case, yeah. So we didn't have a lot of this document and I have Sec ID. So go to number three. Because that will be used for one -to -one comparison, right? So I just wanted to understand if we're not missing something.
+
+>>Vishal Arya	51:57
+Yeah. The original documents weren't set up and executed with a Sec or SIF. That was a bank proprietary numbers that were assigned after the fact and transposed onto the document for record keeping and tracking. So it wasn't part of the original document. It was a noted on to it after the fact.
+
+>>Bikram Dahal	52:14
+Oh, it's a Sec.
+
+>>Vishal Arya	52:15
+That's why some. Yeah. They had it. You know, they were all tracked on this Excel file and whatever other method. But as far as the documents, most of them, I think, don't have them. Some of them do. So it's not uncommon for them to not be there.
+
+>>Bikram Dahal	52:29
+Is Sec ID on the file name? No, right?
+
+>>Vishal Arya	52:32
+Yes.
+
+>>Bikram Dahal	52:34
+No, no.
+
+>>Vishal Arya	52:34
+Sorry. Sorry. Not the. Are you talking about the file or the file name?
+
+>>Bikram Dahal	52:39
+On the here.
+
+>>Vishal Arya	52:41
+No, no. So, no.
+
+>>Bikram Dahal	52:46
+So how are you going to compare? Just wanted to understand.
+
+>>Stefan Z	52:49
+It's the unique identity. So there are two unique identifiers. One is The Sec Id, which is just a number.
+
+>>Bikram Dahal	52:55
+Yeah.
+
+>>Stefan Z	52:56
+The other unique identifier is the company name and date. Company name and issue date. So, yeah. So company name and issue date is a unique set that is unique to each of the warrants. And you imagine, because it's a unique set. Yeah. Because there are no two warrants that are issued on the same date.
+
+>>Bikram Dahal	53:13
+Yeah. For the same company.
+
+>>Stefan Z	53:15
+For the same company, exactly. So for accounting purposes and everything else, we shortened that into a Sec ID, which is just a six digit number. But and that's in our system, that's on the Excel file you have there. But if it's not on the warrant document, it's OK, because we have the company and issue date.
+
+>>Bikram Dahal	53:35
+Ok. Sounds good. I think this answer a major question. And I know we have it over the time, but now everything is properly understood and everything. We might have a few questions still for some document type, which is a bit unique and everything. But you can expect, like, I'll work with my team and everything. Over here, I'm over promising. But like, I will try to make sure that at least by next Tuesday, you guys have that complete Excel set of all of this. So this is going to be a bit tight for like our team. Like we'll make sure that on the team and everything, we send any question that needs to be done. So if you guys have already provided all the warrants and everything, we'll run one analysis on our side just to make sure that we have all the files and everything in place. So once we have all these files, we'll run one test, make sure that everything is good. We'll send you to your team for one review so that you guys can go through like, let me say, 10 or 20 of these and make sure that everything is good, like we're extracting everything in time. Everything looks perfect. Once we have that confidence, then we might do one random round of 1000. Then we'll ask you to do one more check. And then after that, we'll do the whole thing. So that is how we'll be running this next seven and eight days. So like, do you guys have.
+
+>>Bikram Dahal	54:48
+Have enough resources to do review of at least 60 or 70 extracts in this way only. You don't have to do anything complicated. We just have to come over here, just make sure that everything is executed properly. If there's some mistake, then make a small exercise saying that, though this field, it was making a mistake on this one, and send it to us. So do you guys have the resources that can review around 75? Might not need more than that. Might need even less, depending upon all this put and the complexity on this. So do you guys have that resources block for this week?
+
+>>Vishal Arya	55:21
+Yeah, that should be fine.
+
+>>Bikram Dahal	55:23
+Ok, so then, looking forward, best case scenario, by Tuesday, worst case scenario, by end of the week, I will make sure that you guys get all this data back up, and then you guys can start using the platform.
+
+>>Vishal Arya	55:34
+Ok, sounds good.
+
+>>Bikram Dahal	55:36
+Timeline looks good to you guys. Any comments on that?
+
+>>Stefan Z	55:41
+No, so far, so good.
+
+>>Bikram Dahal	55:42
+Ok, awesome. Awesome, then. Thanks a lot for your time. I know we went over the time, but thanks a lot for having that passion to even tell us the basic things and everything. I'm looking forward to making sure that those knowledge can really make this data really clear so that you don't have to go to that document time and again.
+
+>>Vishal Arya	56:01
+Yeah, sounds great. Thank you so much.
+
+>>Bikram Dahal	56:04
+Awesome, guys. Have a nice day.
+
+>>Vishal Arya	56:06
+Bye.
+
+>>Manoj Racherla	56:06
+Bye -bye, guys.
+
+>>Bikram Dahal	56:09
+Ok, Manoj, get the requirement from these guys.
+

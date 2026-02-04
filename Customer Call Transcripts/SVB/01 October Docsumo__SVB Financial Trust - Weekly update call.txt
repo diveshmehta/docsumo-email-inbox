@@ -1,0 +1,270 @@
+>>Vishal Arya	00:00
+I'm doing great how are you good I'm sorry my camera says can't connect for some reason Okay no issues no issues Okay Uh yeah uh you had some queries visual Right
+
+>>Manoj Racherla	00:15
+Yes and i was seeing if min was going to join he also wanted to look over some of the data
+
+>>Vishal Arya	00:23
+But i sent you a file just earlier today um not too long ago sorry for the delay in that file um i don't know if you've had a chance to look at it have you received that email
+
+>>Manoj Racherla	00:36
+No i didn't look at it have you sent it over mail uh i did yes it was over email to you
+
+>>Vishal Arya	00:43
+Oh okay What's the subject line it was just uh doc sumo data review extract review i'm not sure stephan i'll forward this to you Too sorry i don't think i received it Okay let's see i think it's going to your customer success at doc sumo email i don't know if that's a generic inbox for everyone or that's just to you Yeah
+
+>>Manoj Racherla	01:39
+I guess i got it you send it an hour Back Right Yeah
+
+>>Vishal Arya	01:43
+Yes Yeah
+
+>>Manoj Racherla	01:44
+Okay uh filtered uh i had a work called as he attached the document extract in excel format i filter over once bacteria i can made comments in column a on the results Yeah
+
+>>Vishal Arya	02:02
+So i think at the moment again there's just a lot of data for us to verify like all the blanks around the holes the initial field that we were looking at was just the right to invest the column K okay
+
+>>Manoj Racherla	02:18
+Uh we shall it will be better if you are like Yeah let me share the screen screen screen
+
+>>Vishal Arya	02:23
+And yes okay let me know if you're able to see that screen
+
+>>Manoj Racherla	02:35
+Yes okay Okay
+
+>>Vishal Arya	02:36
+So i highlighted the column in question it was just uh the right to invest So i i was looking for everything with either zero or this true filter here um Well i guess i don't even need zero because if it's zero there's there's a lot of blanks um these true filter tags we we found that these were only coming across as true because uh the warrant document had um it was basically a newer format in which there was a right to invest section but if there was no checkboxed in that section then that confirms that there is no right to invest so basically it's it gave you that section saying if this is checked off then it does have a right to invest So i think the the filter obviously the extract wasn't made for that So i wanted to just see what how we could actually undo this or maybe let me go find you this what should be the value right to invest should be blank or it should say something like false or something let me show you uh And then i can kind of show you what how you guys want to go about it okay Cast iron one second
+
+>>Vishal Arya	04:11
+So here's the warrant in question And you can see this is a newer format for us um one of the newer ones and here's the section So i think the filter in doc sumo worked correctly in identifying the language but you can see there was no checkbox checked off here it says if this box is checked then there is a right to invest all right good good So i don't know how you can on your end then look for specifically this or if you can even look for a checkbox because that's i don't know you you let me know how uh that can be done can you open the Doxmo platform
+
+>>Manoj Racherla	04:54
+Once yeah
+
+>>Vishal Arya	04:55
+Yeah Yeah Yeah Yeah
+
+>>Manoj Racherla	04:57
+Yeah Yeah Yeah
+
+>>Manoj Racherla	05:00
+Okay is this the doc No it's not i was looking for something else um let me go find it let's just take a minute
+
+>>Vishal Arya	05:24
+Okay
+
+>>Vishal Arya	06:00
+So here we go so is the correct thing so we've got a true here ideally it should be you are saying sorry cut out here the value should be false right instead of true for right to invest correct either false or just blank because i think your format here in the existing is let's just take this off if there's not one then it's just blank Right it's showing up blank
+
+>>Manoj Racherla	06:35
+So we shall can you copy that file name and paste it over chat uh this folder name this file name or the file name of the pdf pdf Yes i can just click over click on that it will just click
+
+>>Vishal Arya	06:52
+Okay copy Yeah
+
+>>Manoj Racherla	06:57
+Okay No problem then again as i'm going through you know double checking various aspects of the data here there were a couple of others that were either incorrect documents there weren't the loan documents or they were duplicates and so i wanted to just see what what the best way to kind of go through this and and clean up some of these items that are duplicates and and maybe examples would be the best thing you know for these uh which was this document um let me pull it up apply apply All right.
+
+>>Vishal Arya	10:09
+Okay So you can see there's uh 10 results here But we know there should only be 1 1 2 3 6. So there are a couple of document duplicates but let me go through and check on uh 0 .36 So we've got two here and i'll show you the document so this this isn't the i guess this doesn't fall into our naming convention right of the of the pdf that we were looking to digest in the first place so this shouldn't have been because this is just a loan loan agreement and it doesn't have any uh the warrant Right And so this one's not in the right format so this isn't a file that we just didn't need
+
+>>Manoj Racherla	10:58
+Okay you can you tell me the full name of this file
+
+>>Vishal Arya	11:03
+Yeah let me copy it and uh copy this one like click just double click on that name
+
+>>Manoj Racherla	11:14
+Okay
+
+>>Vishal Arya	11:16
+Yeah
+
+>>Manoj Racherla	11:17
+It's copied Yeah
+
+>>Vishal Arya	11:19
+So there it is um put this on here Well you know what it did follow that naming convention then no it did follow the name
+
+>>Manoj Racherla	11:31
+Yeah
+
+>>Vishal Arya	11:32
+Yeah I think it just at the end had loan and security agreement so it was tied to the id of that Okay So maybe this is okay So this is just one of those that just we'll have to ignore because it wasn't correctly you can delete the file Okay you got it so that's what i was looking to understand so when we delete the file um let me see here so what do we do stephan what's your thought do we do we just go ahead and delete yeah you can click on the checkbox Okay let me make sure this is also one of those yeah Troutman sanders Okay So click on the checkbox and just delete Yeah
+
+>>Manoj Racherla	12:26
+I can't you're muted stephan if you're saying anything
+
+>>Stefan Z	12:34
+So so the story is that that we we named it the similar to the way that we name warrant documents or whatever And it turns out that
+
+>>Vishal Arya	12:41
+Yeah Yeah Okay
+
+>>Stefan Z	12:43
+Yeah
+
+>>Vishal Arya	12:43
+I see it down here now Yeah um i couldn't expand this row But i see the name convention does show 2020 you know 2012. Yeah
+
+>>Stefan Z	12:52
+I think i think the issue is that we didn't we didn't specify further because obviously this one then appends to the end of it loan and security exactly or something like that
+
+>>Manoj Racherla	13:02
+Yeah
+
+>>Vishal Arya	13:02
+I don't think there's too many of these Yeah
+
+>>Stefan Z	13:04
+So maybe we just we say okay We'll just if we see one
+
+>>Vishal Arya	13:07
+We'll we'll get rid of it okay got it um all right And then i'll let me go through one more then see if we can get a way to clear up some duplicates maybe letrodine uh so these two top ones here they look to be identical and they are with a number of shares and all the other details let me let me make sure that's what we have on our end Yeah there should only be one of these And i wanted to just check Yeah see all the details across the top for the top two are pretty consistent for all the details issue date expiration date shares um only thing i guess at this point would be name and let's see if that's the difference And i'm looking at the bottom Right Yeah They're named a little bit different 79 Yeah Okay So uh i guess this is just the nuances of naming a file as you can see
+
+>>Manoj Racherla	14:39
+Yeah um
+
+>>Vishal Arya	14:41
+Okay well is there a way you guys can match up No i guess that would also so what if there are actually warrants that are issued the same date i mean have we
+
+>>Vishal Arya	14:56
+Across anything like that stephan where you possibly could have two warrants for company around the same date because i don't want to unnecessarily remove it okay
+
+>>Stefan Z	15:06
+No the the only the only issue And i think we've seen this before remember we had the one that was dated And then they had to fix it so that yes you know the the real one was dated a couple days later Yes but nothing the same day so we wouldn't have two different warrants that were issued on the same day
+
+>>Vishal Arya	15:25
+Okay then manaj is there a way after it's consumed knowing it's two different document file names if we come across and do a filter for okay for this specific name if there are two that match up identical across all criteria we can remove one or that would that have to just be a manual thing uh currently since the files are already like uh files are already consumed like present within the doc simo what you have to manually
+
+>>Manoj Racherla	16:00
+Yeah You have to do it When you but within the csv so let's say you go to the document type um no no go to the document types on top left Um
+
+>>Vishal Arya	16:15
+Oh i'm sorry okay document types Yeah go to the warrant
+
+>>Manoj Racherla	16:20
+Yeah view documents so suppose let's say you click on the warrants folder Yeah you selected multiple files within it let's say click click on the name on top Yeah click on the name right here or just this name click on the check box click on the check box besides the name Okay I have here one no on top of that on top of that
+
+>>Vishal Arya	16:49
+Oh i'm sorry Okay just click on that
+
+>>Manoj Racherla	16:55
+Yeah it selected all the files within this page and let's say here it uh there are multiple files with the same name or the same values and if you download data click on the download data on top right let's say download csv Okay the data gets downloaded here what we can do is within the csv we can exclude those uh data if there are multiple or same there are multiple files with same names Okay
+
+>>Vishal Arya	17:31
+Uh yeah that wouldn't work because there are multiple in the post processing case
+
+>>Manoj Racherla	17:36
+So if you click on the configure Okay uh there's a configure on no No
+
+>>Vishal Arya	17:42
+Yep Yeah
+
+>>Manoj Racherla	17:43
+And uh go to the post processing Oh here we have to write a sort of a uh custom uh filter Yeah So that within this case found any like
+
+>>Vishal Arya	17:59
+Yeah yeah
+
+>>Manoj Racherla	17:59
+I know what you mean same name and that also contains and also its values are same right delete one of them got it got it
+
+>>Vishal Arya	18:10
+Okay So it has to be kind of in this process here Okay um all right let me try to see i'm not sure how many we're going to come across with that uh that's the only thing um i just happen to if it's less than like we don't we can do it manually
+
+>>Manoj Racherla	18:27
+Okay
+
+>>Vishal Arya	18:28
+Yeah That's fine I think we can run through that um Okay well again there's a lot more checking on my end uh you know And i'm just highlighting a few of these easy ones just to see what can be done But i think you know we'll have to discuss internally how much of a manual checking needs to be done across all these you know because that's time consuming in itself so um high level was just a few of the you know the rti one was an easy one we could look at and you know from your end is this something that we need to re -extract again to kind of remove Or um should we wait till we have additional changes before re -extracting the whole thing again right
+
+>>Manoj Racherla	19:13
+Okay uh can you give me two minutes Yeah
+
+>>Vishal Arya	19:17
+You sure
+
+>>Manoj Racherla	19:55
+Or just one question within the right to invest you either want true or false if it's present if it should be true or if it's not then false right well at the moment if you look at the current setup there's there's actually no false flags either the the filters are just a value it's either a zero a value that's what i'm asking you want the value or you want to just like uh get an identification of if it's present or not like a boolean value of true or false correct you don't want values Right No
+
+>>Vishal Arya	20:35
+No we do we do want a value
+
+>>Manoj Racherla	20:37
+Okay fine
+
+>>Vishal Arya	20:39
+So let's say let me take off this blank So this is currently what it looks like you know there's a value here that's great And some might not have an explicit value But they'll have this statement this is pretty much confirmation that there is one right there's a in the statement there's a million dollars listed as the right to invest so we do want these It's the ones that were coming up um well look right here the true the true is that we are that's a that's a negative You know that's a i guess a false positive
+
+>>Manoj Racherla	21:16
+Okay uh give me two minutes Yeah
+
+>>Vishal Arya	21:49
+And everything else is fine there's you know zeros are fine and blanks are not true blanks Yeah Everything else should be everything else that's blank is an indication there is not one So that's that's fine Okay this was just the initial pass of just checking all these and everything that here that's here is good it's accurate except for just the true which should just be blanks Yeah All right so that's the only update i have for now and again there's gonna be a there's gonna have to be a bigger or a deeper dive on my part to check through every other kind of field that we have like extract like um the easiest one i could find initially right here was um let me clear this uh which have can you retry the that file that the one which you said that it should be false uh which were what was the name of the cast iron cast iron cast iron Yes so let me go back to all data
+
+>>Manoj Racherla	23:15
+Oh no you can go to the directly dog type right here
+
+>>Vishal Arya	23:22
+Okay
+
+>>Manoj Racherla	23:22
+Yeah go to the dog type okay
+
+>>Vishal Arya	23:28
+Read documents
+
+>>Manoj Racherla	23:29
+Yeah We documents go to the folder of warrants Okay uh in the warrants uh can you on the top Yeah click on the warrants Yeah can you search on top cast iron cast iron
+
+>>Vishal Arya	23:52
+Okay
+
+>>Manoj Racherla	23:52
+Yeah enter all right
+
+>>Vishal Arya	23:58
+I'll hit enter can you review right can you retry once
+
+>>Manoj Racherla	24:08
+Okay i see the false here Yeah can you retry just once again uh you mean what do you mean by retry
+
+>>Vishal Arya	24:21
+Oh clicking on here and retry Yeah
+
+>>Manoj Racherla	24:25
+Okay just wait
+
+>>Vishal Arya	24:34
+Okay No problem and then just to give you a heads up i have to run out to pick up my son from school unexpectedly here in the next few minutes so sorry about that i'll have to step out in like two minutes what we have done is what we have done is i will give you give you a chance go to the field setup click on the field setup click on the field setup first
+
+>>Manoj Racherla	24:53
+You
+
+>>Manoj Racherla	24:54
+Mm -hmm uh go to the right to wait a moment yeah go to the right to invest uh right to invest okay click on the gear icon Yeah Right No no click on the gear Oh the gear
+
+>>Vishal Arya	25:10
+I'm sorry
+
+>>Manoj Racherla	25:10
+Okay can you click on any other field within that you mean in here
+
+>>Vishal Arya	25:31
+No no it's in the fields
+
+>>Manoj Racherla	25:33
+Oh here we go here we go we have added another step of cleaning as well so the first step is extraction after that whatever we extract that's fine So if that value if that oh i see Yeah like what will tick or is it blank then return false
+
+>>Vishal Arya	25:52
+Okay keep the value as it is okay got it you've added another layer okay perfect that looks good because you've got the false And i do see that here Okay perfect thanks for confirming that process on here
+
+>>Manoj Racherla	26:07
+Yeah okay
+
+>>Vishal Arya	26:10
+Um well i'll have to step out but thanks for the time to review this one it looks like we got cleaned up i'll come back to you as i go through more of these And i'll document other types of inconsistencies or if there's any other questions that don't look right i'll come back to you and then on next week's call we can go over the few items that i've come across again Sure no problem that works okay All right thanks for your time sorry to cut it short um But hopefully we can talk next week about a little bit more thank you Okay thanks Everyone Okay Bye
+

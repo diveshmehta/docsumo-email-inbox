@@ -1,0 +1,159 @@
+>>Jasneet Singh Malhi	00:00
+Proprietary information for better link. So I'm not sure if you're at liberty to share that. But we've seen a couple of things actually. I was speaking to like my engineering team after our call last week. And like using like Ml Vision, the picking of the maker line is possible, right? We would just need to configure your account because I think right now your account is was set up in March And I don't think it has been migrated to the new Llm that we use. Okay. Picking all this up, right? And that's why I think on the email also I requested if you could add, you know, a email ID of like our email ID to your user list so that we can make those changes into your account. Okay. Migrate your account to like a new Llm from the backend and then also basically run tests to see if we can pick up that maker line also. But other than that, we are pretty confident because we already do check processing for a bunch of different use cases, right? Right. I don't know if I can share what scanners that they're using because that's proprietary business information and I don't know if you're -
+
+>>Jason Cohen	01:04
+And so, you know, there is, and I'm probably telling you stuff you already know, so forgive me, right? So we use Ibm L scanners, right? Are you familiar with those?
+
+>>Jasneet Singh Malhi	01:19
+On the hardware front, I'm not very familiar, but -
+
+>>Jason Cohen	01:24
+So these are our large, so it's Ibm L, if you want to Google it. So these are large production scale scanners, right? Our scanners cost about $125 ,000, $150 ,000 each, okay? And there is a module that you can get with that scanner and others that read the maker line. It's reading the magnetic ink of that. And so we don't have that module because we don't have enough checks. Like it doesn't, that module is, I forget the number for it, but it's like really expensive. And so we're like, well, like we don't have enough checks to do that, so it doesn't make sense. And so if we had that module, we would read 100 % of that maker line because maker technology is different than Ocr technology. And so then, so that's sort of why I asked that question of, you're saying they're getting a 90 % pass -through rate, but is that, are they only looking at one out of every 10 checks, or is it one out of every 10 fields that they have to look at, right? Like it just doesn't, we don't understand what the 90 % means in terms of that pass -through rate. So that was sort of a question that we had, and then it came up of like, well - Jason, it's, sorry to interrupt, it's one out of 10 checks. Okay, so I would, and are they picking up all of the check information to do a deposit, or are they just picking up like an account number or the name or the amount?
+
+>>Jason Cohen	03:16
+Like, are they lifting everything off the check to actually do an Icl deposit?
+
+>>Akash Nawal	03:27
+Jason, we can get back on that to you with the exact information. At the same time, Jasneet, like this account was set up in March, right? So we should have a new sandbox, right?
+
+>>Jasneet Singh Malhi	03:42
+I've asked, so I was speaking to Sameep Akash. Sameep mentioned that if he can just add him as a user to Jason's account, that would be helpful. Jason, if you can quickly do that right now, that would be really helpful. If you can share your screen, maybe take us to the account, I can quickly walk you through how to add a user, and then - Yeah, sure. Sameep was joined in, Jason Sameep is our lead Ml engineer. Sameep, this is the same check processing use case I think I was discussing with you earlier, wherein you requested that we can add you as a user onto Jason's account for Ilm collaboration. So basically, one of the requirements that Jason has is that it's a check processing use case, and his account was set up back in March. So I'm not sure if that's been migrated to the new LM that we use. Also, second, primarily requirement is to read the maker line, which is the magnetic incline on the bottom of the check. So I want to quickly check with you if that is something that we can do, and how would we typically deal with something like that?
+
+>>Samip Timalsena	04:46
+Sure, can you show me some samples?
+
+>>Jasneet Singh Malhi	04:49
+Jason, if you can walk us through some samples on the maker line, which was - For your credits, I can quickly have some add - No, it should allow me to -
+
+>>Jason Cohen	04:58
+To review. I'm sorry, review, right? So, here is, you know, a deck. And so, this is the micker line down here. Okay? This is check number, I don't know, routing number, account number, but they're not always in the same sequence. Okay? And then these diacritical marks, like, have meaning to them. They're not just, you know, and so, now, we don't have, because we're getting 6 ,000 checks, every check is different. Right? So, here's, you know, a different check, and, you know, so, they may be to the same person, but, again, right? Like, we can't control the, you know, the, you know, who the bank that they're drafting it from. So, the issue, so, the trouble that we have is, is the micker line is often very difficult to pick up with traditional scanners and Ocr. So, we use an Ocr engine, it's called prime recognition, the multivote Ocr engine, and we spoke with the developers of that, and they were like, yeah, they're two very different technologies, and the Ocr of these fonts is difficult. You know, and they process, I mean, they process billions of pages of stuff.
+
+>>Jason Cohen	06:42
+So, so, yeah. So, this is sort of like the questions that we would have is based on the case study that you have, you know, trying to understand a little bit more, because if they're doing a pass -through, if they're getting 90%, right? Then that would be incredible. We just don't understand how they're doing that. And so, I mean, one thing that you missed is the question I asked is what kind of scanner is in use? So, they do sell scanners, right? Like check scanners that are designed to pick up the magnetic ink in this, and they do sell production scale scanners, OPEX, and Ivml, and such that sell that technology to pick up the Microlign as well. So, then that would read at almost 100 % based on the hardware technology, not the software technology.
+
+>>Samip Timalsena	07:38
+Yeah, I completely got your problem. I mean, this was the same problem that we were facing a couple of months ago. So, we heavily invested our resource on, you know, like, how can we solve this? We call this Micr, micro region that you are mentioning. Currently, based on our initial experiment that we have done, we are getting almost more than 95 % accuracy on extracting this micro region. So, there are a few setups that I needed to do on your particular document type. That can, you know, like, after configuring those settings, we can like, I'm pretty sure we'll be getting more than 90 % or 95, almost around 95 % accuracy on extracting, as you mentioned, the routing number, the check number, the extra symbol has a different meaning, a special meaning on different checks. So, yeah. And how are we solving it? Answering that, we have our own Llm based system that parses the documents. And on top of it, a different Llm is there to extract the information out of it. So, this is the high level overview that I'm sharing with you. But anyway, I mean, the solution is very simple. I highly think that this document type, as Justin mentioned, it was set up on Mars. But the new system that we have, you know, like the thing that I mentioned on Llm thing, to solve the check extraction, that is a recent development that we have done. And I need to say a few things. So, I'd really appreciate if you can add me to the account. And like, welcome to Moritz, that you can do the massive test that you can, on your documents.
+
+>>Jason Cohen	09:16
+Okay, so if right now, based on the testing that we've done here, and so we're doing, we're capturing at about 50 to 55 checks per hour, right, which is a very manual, very, very slow process. But that's capturing all of the data fields that we need, right, check numbers, amounts, you know, we would capture this payoff thing, whatever. And then testing in the March software, we were only getting well only we were getting about 100 to 120 checks per hour. So it was still double the speed, right of what we were doing. However,
+
+>>Jason Cohen	09:57
+When you when you added in the cost of labor and then the software It it was like 30 percent more than what we were doing So that's why there's a volume issue doesn't need that. I don't know that we can overcome as yet Unless we can have the oh gosh, i'm frozen there unless we can have um Like triple the speed You know in terms of Verifying the checks that are going through I stopped sharing Jason How much time is it taking your team right now to manually like go through?
+
+>>Jasneet Singh Malhi	10:35
+Let's say one check if I have to like Benchmark some numbers because our system probably takes 30 or even less than 30 seconds to kind of extract all the information Give give that review screen back to you, right?
+
+>>Jason Cohen	10:46
+Well, we would we would do that. We would do a pre -process to that before it went to the operator Okay So that that way they were not waiting for the check, you know that they shouldn't be waiting for it to happen That would be run at night And then they would come in in the morning and then the work would be there So we so we are achieving as a benchmark about 50 to 55 checks per hour Got it.
+
+>>Jasneet Singh Malhi	11:16
+Uh, so Jason two two ways to look at it look at this problem Um, basically so just to give you some more flavor We actually work with one of the biggest logistics carriers on The West Coast, right? And every hour we are connected directly to their high -speed scanners using an api and Like as and when the delivery or the warehouse staff scans the delivery slip uh, it automatically makes an api call and goes to the doxmo platform and these are upwards of like thousands if not you know tens of thousands of Delivery invoices in in in less than an hour, right? So From a scaling perspective. It is doable, right? Either we we have a you know interface or uh, If you can directly connect with your scanner, then that would be the best case scenario wherein once you scan the check it flows into the doxmo platform That's one if there's an open api ecosystem, which i'm not sure if it is there or not, right? Or if there's a centralized repository, uh, when and as in when a check enters that repository We can again make an api connection like a google drive or an Amazon S3 or an azure blob Or a dropbox what have you? And you know instantaneously the check can you know as and when it enters that repository It can flow into the doxmo platform and this process can start to work So we can make it very synchronous for you But it just depends on what your workflow today is right because once the check hits the doxmo platform It would hardly take around 30 seconds extract all the fields Based on the new improvements that we have even less than 30 seconds and give that review back to you
+
+>>Jason Cohen	12:45
+Yeah, I mean it's just again I don't have a a question or a doubt about the technology, right? I mean it's already Twice as fast as what we're doing now that there's no right like that's great The issue is I only I don't have enough volume So Right, like so time. I mean, I think time will solve this as well unless You know, we um, you know, like you move us up to the next to the latest um Version and then we test it again. And then if we're able to do You know, what we'll do is we'll go we'll upload everything have doxmo read it And then we'll go to review it I mean, we're not waiting for this to render and then counting that as time. I mean, that's We wouldn't do that in a production setting Oh,
+
+>>Jasneet Singh Malhi	13:34
+Absolutely and moreover Jason like the data table which kind of gives you the entire view of all the all the you know, fields that were Uh extracted in so that you don't have to go on a check to check level that would also save you a lot of time And you basically click a field it opens up a pop -up screen showing that which information is extracted from there So I think that will speed up and batch process a lot of these checks simultaneously. That's one Uh, second thing is uh, Jason if we are able to solve this maker line You know use case for you and obviously after you testing and after you're, you know satisfied with the results What are the other blockers that will You know stop you from moving ahead with doxmo because i'll i'll level with you for a minute Uh, this is probably this is I think the second time that we're like having this conversation within you know Yeah, and you're honestly I don't want to you know Let you go this time.
+
+>>Jason Cohen	14:27
+I want to solve this use case so there's a couple things that need to happen just one is We need more volume. We just may not fit for you right now, and that's okay Right because as we're continuing to grow and add more clients We you and I may talk in six more months from now, right? What what I can't afford for you to do is cut the price so much that you don't make any money That doesn't make any sense Like let me
+
+>>Jasneet Singh Malhi	14:56
+Mean, let so I want to understand this, right? Let's say we are able to solve all techno functional issues from the from the platform is price the only limiting factor that will probably and volume, obviously volume is correlated to price, right?
+
+>>Jason Cohen	15:12
+So price, the factor that will stop you from so it's not price, Jesse, it's this return on investment. Right? I mean, so, so I don't want you to write like it's not it's not just the price. It's our return on investment. Right now. So meet says, Look, we could probably with the new version get it to about 95%. Right? That's great. However, I have to get it to the last 4 .999%. Right? Because I mean, the work we do is 99 .99 odd percent accurate. And so, however, that's a big jump from if we're at 80%, and you're at 95, right, like then that's less work that we have to do. I just don't. We would just have to test it, you know, in order to ensure that it was kind of work. So it's not price, it's just return on investment. And that comes down to two things. One is we need more volume, right? And then secondly, that if you have a better Llm, that's pushing this forward, then we will, right, then we will be faster productivity wise. So I'll just share with you what our rate is like 5055 an hour. That's, that's our benchmark that we're using. Now, I mean, I'll share with you with this, right, like you're in a race against time with us as well, because we're using other software and other right, everyone is sort of challenged with the same thing of, you know, not just us as a small client, but we can solve this, or you can solve this, right, it really opens up, you know, greater volume for everybody.
+
+>>Jason Cohen	17:03
+And then of course, you know, with us for this, it was just sort of starting, can we solve this problem, it needs to pay for itself. And then we would then start looking at other indexing things that we're doing, does the platform make sense for that as well. So, but it's got to work. It's the return on investment has to work for this one application that we have, I can't just say everything that we're doing, because we don't have the the bandwidth to move over our systems for training of that.
+
+>>Jasneet Singh Malhi	17:40
+Sanyam Bhutani So Jason, the ROI has basically a direct correlation with cost, right? So your return will come on your investment, which is basically your cost, right? So if I have a way to mitigate that cost, right, then I have basically, you know, in short that, based on what you are doing today, I can give you a better return and basically make you more productive based on the actual actuals that we have, right. So let's do one thing. Let, if you could share your screen, and maybe we can add me to that would be the first step within we can, you know, firstly, understand what's what. And then I will go back to the team, you know, rework on the pricing to see, you know, what is the best, the absolute best we can do. And then maybe we can regroup again next week. And, and see, you know, if it makes sense.
+
+>>Jason Cohen	18:32
+Jason Cosper Yeah. So and I'll share with you as well, right, like, we're engaged, like, Stas is not on the call right now, he is working with a client doing something else. So as you know, I mean, we're all in sales. And so we just have fires burning in other areas as well. So I'm not the one that then has to go and, you know, do this to whatever you're doing. So I can tell you, we'll probably need more than than a week or two, to be able to sort of run this again, because I'm pulling people from right from their work to then test this with me for that. But, but what do you need for me to do here in terms of Sanyam Bhutani Yeah, could you go to settings, please? Jason Cosper This? Sanyam Bhutani On the bottom left. Jason Cosper Okay.
+
+>>Jasneet Singh Malhi	19:19
+Sanyam Bhutani Users, please. Add a user on the top right. Jason Cosper Okay. Sanyam Bhutani Tell me what ID do you want? Do you want to use your own ID or hello? I Sanyam Bhutani List to the hello thing. Yeah, plus, Jason Cosper You can just add hello, plus, ilm. At the rate docsumo .com Sanyam Bhutani Even here too?
+
+>>Jason Cohen	19:50
+Jason Cosper
+
+>>Jasneet Singh Malhi	19:50
+Oh, you Oh, that's the name. So you can just enter any name like admin or test or whatever.
+
+>>Jasneet Singh Malhi	19:55
+Whatever, and you can actually build on the ID. I'm so sorry, I didn't realize that that was the ID.
+
+>>Jason Cohen	20:00
+All right. So I'll do this, right? And so then it's hello plus ilm at Docsumo .com?
+
+>>Jasneet Singh Malhi	20:10
+Correct. You can just click on generate.
+
+>>Samip Timalsena	20:18
+There's the typo, I guess, for Docsumo.
+
+>>Jasneet Singh Malhi	20:20
+D -O -c -S -u -M -O. Yeah. And you can just select the role as admin.
+
+>>Jason Cohen	20:29
+Okay.
+
+>>Jasneet Singh Malhi	20:30
+This is fine. You can just select the role as admin, yeah. Okay.
+
+>>Jason Cohen	20:34
+And then just click on save.
+
+>>Jasneet Singh Malhi	20:35
+Correct. Sameer, can you quickly confirm if you've got the invite and if you can actually log in into the platform once to see if you have access?
+
+>>Samip Timalsena	20:45
+Oh, this is a Cs email, Justin. We'll be getting this email.
+
+>>Jasneet Singh Malhi	20:50
+Oh, okay.
+
+>>Samip Timalsena	20:50
+I need to check with the system. Yep. Cool.
+
+>>Jasneet Singh Malhi	20:53
+Got it. All right, Jason, we have some numbers. When would be possible for us to catch up again and discuss this and feedback on the platform?
+
+>>Jason Cohen	21:05
+Yeah, let me, I'm looking at my calendar. Today's the 6th, 12th, 19th, I don't know. I would say the 25th. So I've got some travel coming up as well. So the 25th, sort of like two weeks.
+
+>>Jasneet Singh Malhi	21:20
+Same time as right now?
+
+>>Jason Cohen	21:23
+Yeah, that works. Okay.
+
+>>Jasneet Singh Malhi	21:26
+I have sent you the invite for 25th.
+
+>>Jason Cohen	21:30
+All right, great.
+
+>>Jasneet Singh Malhi	21:32
+I will be sharing as and when we make the improvements to your specific sandbox account. And then you can start testing it at once, right? But Jason, I really hope we can kind of work this out this time. I obviously, I can't solve the problem for you because that is like what your business is. But otherwise, I will make sure that whatever your volume is today, you have a positive ROI And then you can scale further from there. And it basically empowers you to do more. So, and I really get this in this time around.
+
+>>Jason Cohen	22:06
+That sounds good. All right, Jason. Thanks so much for your time this morning. Good seeing y 'all. Thanks, Jason.
+
+>>Jasneet Singh Malhi	22:12
+All right.
+
+>>Jason Cohen	22:13
+Take care. Bye.
+
+>>Akash Nawal	22:21
+Thanks.
+
+>>Jasneet Singh Malhi	22:21
+Thanks, Amit. Thanks for joining on the call.
+
+>>Samip Timalsena	22:23
+Thanks, Asneet. Bye -bye. Anything you want to discuss more?
+

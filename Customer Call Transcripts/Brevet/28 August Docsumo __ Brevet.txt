@@ -1,0 +1,369 @@
+>>Aniket Tatipamula	00:16
+Okay, so let's let's start. I have requested Aaron as in we made the changes that you wanted us to make. Let me start by sharing the screen and quickly going through all the changes that we have done and then post that we can discuss.
+
+>>Aniket Tatipamula	00:41
+Is my screen visible?
+
+>>Aaron	00:43
+Yes.
+
+>>Aniket Tatipamula	00:45
+Okay, so we had a few issues with, let me go there.
+
+>>Aniket Tatipamula	01:00
+Yeah, I think high risk, so high risk is not sorted. So if it's a high risk sector, then you would mark it as yes or no. I think that that was one of the issues that we had. We had also pointed out one more issue advisor, if I'm not wrong. Yeah, the eligibility. So we also do that eligible eligibility check properly. Like if the company is not there in the list, you would mark it, you will get a fail kind of a thing. So that's also fixed. Then you had one more request that this this specific one Tpsr, I think we have to yet yet to confirm like, how do you want to see this? But based on that, I'll make quick change today itself, that should not take much time. And then you also wanted us to collapse. So we have also done that like if, if the document itself is missing, we just collapse like this. These are the changes and I every other thing is already fixed right now. Like, I don't see anything missing based on the last checklist that you are sharing. Okay.
+
+>>Michael Bottazzi	02:19
+So Aaron, you can jump in here to one, one thing I'm wondering is if, and you can let me know if this isn't feasible. But can we specify that if a document is missing, but it's required, it throws a flag, hey, required document missing, something like that.
+
+>>Aniket Tatipamula	02:44
+Yeah, we can, we can do that, Michael, if you let us know where to throw that and how to throw that. Okay.
+
+>>Michael Bottazzi	02:55
+Aaron, let's send them an email after this sort of with maybe how we want that to look like, hey, missing document required, must upload. I don't know, whatever we wanted to say the verbiage or where it needs to sit on the table, we can, we can do that. I think the collapsing looked good though. I think the thing is that we just might want some of those, if they are collapsed to say, you know, hold up missing document, you need to upload something here as opposed to only just missing. Yeah. Is that on par with what you were thinking?
+
+>>Aaron	03:29
+Yeah, I was thinking that I saw that currently you have it collapsing, but documents. So we'll find a way to communicate to you guys, like a visual of how we expect it in the sense that like, for example, if an Equifax report is missing, we just don't want it to simply collapse, but say very explicitly that the Equifax report is missing compared to something like the advanced finding certificate. I don't want it because they're all red right now. They're kind of like on the same level of priority in terms of when they're, they're very unequal. But let's get that to you guys. Sure.
+
+>>Aniket Tatipamula	04:12
+I think that should not be a problem. You let us know what you want And then we can have, we do have that yellow and red kind of a thing. So if something is missing and it's okay, we can put it here saying that it's missing and okay. And then we'll put it in something like orange, but if it's actually missing and required, then we'll put missing and then required here in red.
+
+>>Michael Bottazzi	04:32
+Something like that. Maybe. Yeah.
+
+>>Aaron	04:36
+That's good. Yeah, we'll send a follow -up for that.
+
+>>Michael Bottazzi	04:41
+Can we also talk through, so we had just uploaded a few cases to kind of look through on our side. And I think we had a few questions or maybe some, I agree with you that all the validations we requested are here. I think this covers all of the documents and everything. But there are a few small changes, I think, that might need to be made. So can we look through, in the cases, like Natura or Graba, for example? Sure. Sorry, also, I don't mean to get in the middle of what you were. Feel free to. We can come back to it as well, but at some point.
+
+>>Aniket Tatipamula	05:24
+Nothing else, Michael. I think we've just set up everything at our end. It's more going to be like, let us know what you want us to change, and we'll keep on changing them.
+
+>>Michael Bottazzi	05:33
+Ok, sweet. Yeah. So yeah, the case, yeah, what do you think, Natura? Let's start with Natura.
+
+>>Aaron	05:39
+Sure, let's start with Natura.
+
+>>Michael Bottazzi	05:43
+And this one was only uploaded this morning, so there should be, Yeah, there it is. Ok, a few things here. So let me just scroll down to the packets. Yeah, OK, so that's there. All right, number three, tax agent firm. It's a situation where we kind of just need the criteria to be a bit more loose. It's the same company. It's just a matter of the end advice at the end, which is causing it to fail. Is there something there that we can implement to make it a bit more lenient?
+
+>>Aniket Tatipamula	06:39
+Sure, Michael, we'll look into this. I think we'll look into these edge cases and then take a note. Manan, can you please note it down while you are?
+
+>>Manann Agarwal	06:47
+Yeah, I'll do that. Michael, Arun, I think we had a discussion on this where in the case there might be a scenario where these two might be two different entities all together, where you have, let's say, Abc limited and then you have, let's say, Abc advice limited. So I think we saw the same scenario in one of the documents where one was the parent company of the other. Right. So now then that might be a little, you know, we might have some false positives as well in that case. If we kind of, you know, make that change.
+
+>>Aaron	07:27
+I think personally, I think it's fine. If it was a real cause of concern, I think we would also find other things that would kind of reflect that. But even though there might be some false positives in that sense, there should be more false like negatives than anything with this current existing set up, I think. Yeah, so I think losing the criteria for this would be a good call. Same for the if you could kind of like take this and look at a few more of the existing criteria, I think some of them. Like innovation structure right here is general versus general account things of that sort. Yeah, because this is a this is an edge case specifically for the tax agent letter, but I can't imagine that similar things like this if if we're looking for exact matches in certain places could be occurring. But we we won't know until we find a case that like we put in like that. But yeah, the logic, the same logic applies.
+
+>>Aniket Tatipamula	08:34
+Sure. We'll work that out.
+
+>>Aaron	08:38
+Thank you.
+
+>>Aniket Tatipamula	08:39
+Ok.
+
+>>Michael Bottazzi	08:41
+And then as we scroll down. What else? This all looks good. This is fine. This is good. This is a similar situation where. The person's name is Jeffrey. Their short name is being pulled from the reference. I think this is sort of different than the tax agent name, but I don't know if in the criteria we can do something like. Abbreviated first name, something of that sort, just to again, like this is something that should be passing, it's just. A shortened first name.
+
+>>Aniket Tatipamula	09:20
+This is this, I think is a I don't think like even if you write a rule for this, it can be it can get a little tricky because the name itself is a substring. And yeah.
+
+>>Michael Bottazzi	09:31
+Ok. I mean, if it can't be changed.
+
+>>Michael Bottazzi	09:35
+That's fine. I just wanted to note it.
+
+>>Aaron	09:43
+For the company beneficial ownership report, I think I did note it in the past, but as long as one of the Abr or A6 is registered, the entire check should be fine. Yeah. So if you could loosen the criteria or do, I believe you did something like this for one of the other documents. Forgot the specific one, but it's doable. So the Abr and A6, it should be one or the other. Understood. Thanks for that.
+
+>>Aniket Tatipamula	10:21
+You're welcome.
+
+>>Aaron	10:22
+Let's keep looking.
+
+>>Michael Bottazzi	10:23
+This number eight is failing because of the way it was uploaded. There's nothing wrong with the checks here. That's fine.
+
+>>Aaron	10:36
+For the Ato prior year refund, I guess that's still being worked on for the reference fields.
+
+>>Aniket Tatipamula	10:50
+Manan, did you work on this?
+
+>>Manann Agarwal	10:54
+Yes, I did. I think I did get the output. If we can just scroll in this.
+
+>>Aniket Tatipamula	11:06
+You're looking for true, right? Yeah. Yeah, none of them is marked as true.
+
+>>Manann Agarwal	11:15
+Okay, then they wouldn't have received. Yeah, I'm just seeing the document as well. I don't think they have received any refund. Yeah, they have not received any refund. So, yeah.
+
+>>Michael Bottazzi	11:34
+Okay, we can take that one back. Then maybe we need to clarify what constitutes.
+
+>>Manann Agarwal	11:45
+I think we have to check for refund. I think we have to check for something else. I'll have to just cross -check what has to be checked.
+
+>>Manann Agarwal	12:01
+Just search for return instead of refund. Return. Yeah. Okay. Okay.
+
+>>Michael Bottazzi	12:14
+All right, we can take that one back then and clarify, I guess, what, if anything, we need to be looking at there, if different. Let me note that down. All right. That was number eight. What else we got? Number nine. Is number nine good? Number nine's good. Number 10, same situation, but just because number eight isn't pulling anything. So, fine. All right, number 11, the Ppsr report. Reference of strikes of items. Can we jump into this one real quick? I just want to see if there's anything specific to that.
+
+>>Aniket Tatipamula	13:18
+So, when a pull date is, I can see that it doesn't get pulled in most cases. Is it because it's not there on the document? Is this the document? Is this the date?
+
+>>Manann Agarwal	13:28
+Yeah, I think this is the date. Okay, this is weird.
+
+>>Aaron	13:36
+We can probably change the form.
+
+>>Aniket Tatipamula	13:41
+And even the date. There was supposed to be table, right?
+
+>>Manann Agarwal	13:45
+Yes, but there's no data here. I don't think there's any data here mentioned. There are zero registrations under result summary. So, what kind of collateral?
+
+>>Michael Bottazzi	14:08
+Can you scroll up a little bit? All collateral classes. All right, Aaron, maybe we need to talk about this one then as to what we want on this one. All right, so we'll look to get the date sorted just using the updated criteria or validation. And then Aaron and I will take a look at what we need to actually pull from here.
+
+>>Michael Bottazzi	14:34
+In here if there's not going to be a table created. Ok, we can come back to that.
+
+>>Aaron	14:42
+Sure. Ok.
+
+>>Michael Bottazzi	14:53
+Number 12, period verification. Can we click into that real quick? Just want to see if.
+
+>>Aniket Tatipamula	15:08
+Yeah. Manan, are you doing something? Because I think this went missing, right?
+
+>>Manann Agarwal	15:15
+Yeah, the BBSI report, I was just working on it.
+
+>>Aniket Tatipamula	15:18
+They're updating it next month. Do you want me to open this, Michael?
+
+>>Michael Bottazzi	15:25
+Yeah, I just want to see that one. That's why it's showing.
+
+>>Aniket Tatipamula	15:42
+Something is going wrong here. Give me a second.
+
+>>Michael Bottazzi	15:48
+No worries.
+
+>>Aaron	15:49
+I think it just wasn't pulling the date from what I could tell when I clicked into it.
+
+>>Aniket Tatipamula	16:08
+Oh, sorry, I was supposed to not this one, right?
+
+>>Aaron	16:12
+It is that one.
+
+>>Aniket Tatipamula	16:17
+Let me confirm. This is the dog that you want us to open, right?
+
+>>Michael Bottazzi	16:23
+Number 12, yeah.
+
+>>Michael Bottazzi	16:32
+Ok, so it just needs to pull the incoming period, I believe.
+
+>>Aaron	16:37
+Looks like it is being pulled.
+
+>>Michael Bottazzi	16:38
+It is being pulled, yeah. Hmm, so where's the criteria? Sorry not to ask you to keep jumping back and forth, but what is it saying on the summary screen that we're?
+
+>>Manann Agarwal	16:54
+So essentially, this check was that if it's 2025 right now, then it should be 2023 to 2024. If it's 2026, then it should be 2024 to 2025. I think that's the check.
+
+>>Aaron	17:08
+True, yeah,
+
+>>Michael Bottazzi	17:08
+I agree.
+
+>>Aniket Tatipamula	17:10
+We would have missed up on the validation, and then we will correct this, Michael. I think this will be an issue at our end. So I just have to pick up the yes here, and then it's already verified by Manan. I'll just make sure that it is set up properly. I think we missed the issue at our end.
+
+>>Michael Bottazzi	17:25
+Cool, thanks. Also got a loan model. I don't think that was uploaded. Fine. Some of this stuff is going to fail, I guess, because it can't check against number 13. That's OK.
+
+>>Aaron	17:43
+That's fine.
+
+>>Michael Bottazzi	17:45
+All good. Keep going.
+
+>>Aaron	17:48
+I think the next one is a, OK, it's pulling the Acn along with it. Sure.
+
+>>Aniket Tatipamula	17:59
+Manan, can you please take a note of this?
+
+>>Manann Agarwal	18:01
+Yeah.
+
+>>Aniket Tatipamula	18:02
+For document number 17.
+
+>>Aaron	18:06
+Great. Ok, so what is this one?
+
+>>Michael Bottazzi	18:15
+True, fail.
+
+>>Aaron	18:18
+I think this should be a pass, theoretically, if it's returning a true.
+
+>>Aniket Tatipamula	18:24
+We will take a note of it. I think this, I failed to update. I'll get it updated.
+
+>>Aaron	18:30
+Sure. Yeah, OK.
+
+>>Aaron	18:54
+This guy. All right. All right.
+
+>>Aniket Tatipamula	19:00
+That works.
+
+>>Michael Bottazzi	19:01
+And there's one we're looking at with the bank account. Was it this one, or was it for Grabba that was causing it?
+
+>>Aaron	19:07
+It was for Grabba. Quick note on this one for Manan. Basically, what's happening with the Ppsr for this one is the lien is actually put on the account after the pre -approval packet is approved. So that's something I just realized. But basically, he has a completely like.
+
+>>Aaron	19:33
+Clean he has a completely clean account right now and he has absolutely nothing on it which is why no table is being formed but then on the ppsr receipt we placed a lien on it so now there's a one there's a one um there's a one receipt which is ours Um so i guess on that it's actually working But we may have to create a separate criteria for um or case for the scenario that there is absolutely nothing on a clean slate um it's just not that common of a case so let's get that to you then you can get that over to you
+
+>>Manann Agarwal	20:06
+So so essentially it's currently extracting it correctly but what now would be that in the case where it's zero and you know the lien is put after approval is done right post approval
+
+>>Aaron	20:17
+So then what i am assuming is then we would have to put some pull something from the receipt uh and not from the report is that what would be happening something like that um well in this case it would i think to me it would mean that um the report is essentially checking if like the past lanes are present and with other regarding other liens but um in this sense because the receipt would be fine um it should be fine too because he has absolutely nothing on the report in the first place Um But we let's you know let's let's check in with that And i'll include it in the email reply back Okay
+
+>>Manann Agarwal	21:02
+Sure cool um
+
+>>Michael Bottazzi	21:09
+Oh yeah In the can you go into the grabba case i think it was uploaded maybe yesterday two days ago
+
+>>Michael Bottazzi	21:29
+All right And then all the way down at the bottom where was it um number 20 number 20 Ah okay here it is or sorry
+
+>>Aaron	21:44
+Not
+
+>>Michael Bottazzi	21:44
+Yeah 21 Okay Um so can you click into the extracted Yeah Yep So this is where we are wiring the loan out to the client this is correct the fields that it's pulling right now are great that's what we want it to be pulling this is all the client's info however um if you go back it's failing because it's checking it against our bank account info which isn't what we want um because we're not wiring it to ourselves so it's the number 15
+
+>>Aaron	22:31
+I believe yeah
+
+>>Michael Bottazzi	22:32
+So if you go into it's using doc 15 as the reference um and again it's pulling all the right fields it's just that Yeah if you go into 15 um you want to
+
+>>Aaron	22:48
+Yeah can you click into that
+
+>>Michael Bottazzi	22:53
+And i think it's towards the bottom Okay So you see directly to the right that's the client's account National Australia Bank Grabba Technologies i .e Like that's what we need to be checking against document 21 because the closing statement wire details should match the wire details presented for the client on the right side of this page nab 084004 does that make sense Yeah
+
+>>Aaron	23:31
+I don't know
+
+>>Manann Agarwal	23:35
+Yeah Okay
+
+>>Michael Bottazzi	23:38
+Okay
+
+>>Aaron	23:39
+Great Okay
+
+>>Michael Bottazzi	23:45
+Um um i think those were the main things that Aaron and i've been looking at I know it's like a flurry of smaller things um And i know we owe you a few things as well But i think that's what we were thinking about high level uh am i missing anything here or is that the big stuff um that's the big stuff i think ideally
+
+>>Aaron	24:12
+I mean we have to get some of the visual stuff to you but if we can start like just uploading a document and seeing some of the majority of it green um i think at that point we can consider it um But for next steps we're already
+
+>>Aaron	24:32
+Considering talking to our Salesforce integration person. Um, so on the next call, you may also be present.
+
+>>Aniket Tatipamula	24:42
+Sure. And I think that would be really helpful. So, uh, yeah, I think we will be whatever you just pointed out. And then probably be iron. Manan will sit for half an hour more and then try to fix them as many as right now itself or maybe by tomorrow. Um, and then keep everything ready for Monday. And we can have one more call on Monday at your convenience.
+
+>>Michael Bottazzi	25:06
+Yeah, that would be good, I think. Um, any updates we can get from your end about these would be super helpful. At the same time, we'll email you answers to the questions that we just spoke about to hopefully move that along. Um, and then, yeah, I mean, like Aaron mentioned, ideally, we can just start uploading more packets and we fix edge cases. And ideally, everything starts, you know, flowing through a bit more green and we work on the integration. So, um, yeah, we will. Get, uh, get that info over to you, W. Um, and of course, just reach out if anything comes up. Yeah, but I think Monday should actually can we do Tuesday? It's a national holiday here on Monday, so we'll be out of the office. Oh, yeah.
+
+>>Aaron	25:56
+Thank you.
+
+>>Aniket Tatipamula	26:00
+Okay. I think all in all, this is looking good, right? I mean, just to get just to get a general estimate from you. Like, this is not a far off from what you were expecting. And we are on the right course and to complete this in a proper way.
+
+>>Michael Bottazzi	26:15
+Yeah, I think we're definitely on the right course. Um, I don't, like we were saying, there's not, you know, new checks that are really need to be implemented. There's no new documents that will be coming across. This is everything. I think now at this point, it's, Hey, we're uploading this and we realizing, oh, this is throwing an error. All right, we got to fix that. Like we went through today. Like there's seven or eight things in here that should be small things, but hopefully just to get us in the right direction of, you know, the straight through processing. Um, but yeah, I think we're on the right track for sure. Yeah, I totally agree.
+
+>>Aniket Tatipamula	26:51
+And just one last follow up question, Michael. I didn't, while you were looking at, because I, we understand we can fix the checks as much as possible. That should not be a problem. But are you facing any major issue on the extraction or are the extractions in general looking good?
+
+>>Michael Bottazzi	27:07
+Um, on the extractions, I think, I think we're looking good. I haven't seen a scenario where documents are present and for whatever reason, just simply not being, you know, it feels just simply aren't not, aren't being pulled. Um, it seems like everything we're uploading is getting extracted the way it's currently set up. Now, if we need to make tweaks to that, that's one thing like we're talking about and there's certain changes that need to happen, but I don't see any issues with the extractions happening in general. I don't know if Aaron, you had any other scenarios, but I think that's probably fine.
+
+>>Aaron	27:45
+Um, there, there was kind of a weird one with, you know, grab our material, um, for the tax agent comfort letter. Let me, let me go to that. It looks like it's grab.
+
+>>Aaron	28:14
+Yeah. Besides, uh, I think still some stuff to, to work on for document eight, the tax return. Um, but.
+
+>>Manann Agarwal	28:32
+Which one is it?
+
+>>Aaron	28:35
+Doc three. So if you can click into the single red here, it was, uh, oh,
+
+>>Michael Bottazzi	28:45
+Yeah, that's a good one.
+
+>>Aaron	28:51
+I think, uh, I don't think it's actually extracting the literal. No, I don't know. You can clarify. I think it's, I think it's referencing the, the fourth bullet point, which is saying, like, it's saying that the Ato kind of. It, it had an error, and then it was resolved. I think the formatting of the sentence is throwing the extraction off a little bit. So it's returning a no. But at the same time, I understand this is a not common scenario. It's not common that the tax agency makes a mistake And it's resolved. But a no had to be necessary and had to be made in this scenario.
+
+>>Aaron	29:31
+So you guys can maybe take a note of this in some way or form, but I don't one question
+
+>>Manann Agarwal	29:40
+So Okay, if we forget the mapping for now, right if we just keep the mapping aside for now This should have been a no, right?
+
+>>Aaron	29:54
+It should have been a yes because It was saying that Okay, so so here in the fourth bullet point it's essentially saying that the Ato thought that something was wrong and then they conducted an audit of it and then upon doing the audit they realized the Ato themselves actually messed up in the calculations and therefore the come the feedback was amended and then the company is The company is not in the wrong essentially the tax agency made a mistake in this scenario so it should technically be a yes, but once again, it is a It's a weirdly formatted sentence to be very straightforward
+
+>>Manann Agarwal	30:36
+Okay, so so so essentially, you know These were the kind of cases that I because I think this is the third Unique case that we are coming against so to speak for tax agent. There was one more where There was an issue found out and then they corrected it and this is a different one where the agency itself the tax agency itself It was incorrect. So like we mentioned earlier, right if we can have such more unique Out such more unique documents, you know, that would be better where either you know whatever scenarios might come up or you know, even if we can get like five different scenarios for each of The line items five line items, right? Because currently it was set up in such a way to set up in such a way that it just looks whether But whether you know, there was some investigation of sorts or not It didn't go through the whole thing where it said that you know There was an issue from the organization itself and not the company was wrong, right? So again, it just looked for whether it was subject to any Review or not. That's about it, right? So again, you know, we can set this up not an issue But again, if if you if you yourself personally come across or you know If you know some cases where you know other not just point number four But if some other point is also, you know Presented in a different way, you know, that would be great to share that across that would you know Kind of help us cover more edge cases initially itself
+
+>>Aaron	32:00
+Yeah, if we I think we'll we'll look into the things more But if we have the ability we'll we'll start just pumping documents few of the more complete packets and then Funnel some of them in because we're the more we put in the more we will see that You know, there's weird cases present Got it.
+
+>>Manann Agarwal	32:22
+Okay
+
+>>Aniket Tatipamula	32:26
+Great
+
+>>Michael Bottazzi	32:29
+Yeah, no worries, I think we have a list of items we need to get over to you and as you make any updates or Need any additional info just reach out to us but if not, we'll We'll chat Tuesday, I think Thank you, thank you
+

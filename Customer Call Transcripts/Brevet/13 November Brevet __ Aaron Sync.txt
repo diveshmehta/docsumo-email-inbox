@@ -1,0 +1,360 @@
+>>Aniket Tatipamula	00:00
+The only item from our side that is pending from the last call is the one that you asked me to stop, which I did not implement, which is removing no outstanding, uh, Kto liabilities, right? That I've kept it and creating a proxy Api, which is work in progress. Like I'll wrap it up by the end of the day and then maybe share it with the team or maybe Max tomorrow morning. Yeah. Yeah.
+
+>>Aaron	00:25
+Let's just go through it. Um, I've been putting in some documents. We still have an issue with the package being dropped. Um, so some documents aren't making it through, but, um, that's a task for Eric. So it's not on my end.
+
+>>Aniket Tatipamula	00:39
+Yeah. I'll check with Eric. I think they are still uploading it badly. I think if you upload it sequentially, it should not happen for sure. Sure.
+
+>>Aaron	00:46
+Sure. I have no clue.
+
+>>Aniket Tatipamula	00:49
+Do you want me to share this scenario or do you? Yeah. Can you just, uh, I mean, let's go over what you changed and then I have some comments too.
+
+>>Aaron	00:57
+So we can continue to go through them. Sure.
+
+>>Aniket Tatipamula	01:01
+Uh, okay. Let me, let me start with the very basic one, right? That we always discussed. Okay. This one, where you only wanted to see pre -approval. So what I did, let me first show what I did. I deleted all the documents, uh, in the post approval packet. And then if I now go to validation view, you would only see pre -approval, like pre -approval, then references, then radium application, and then yeah, 34, except keep 34 as is, that is what we had discussed. So that's about it on the pre -approval packet side. Um, let me, that was the one strike out. The other thing that we, the DDMM, Mmdd, I think we made that patch And I hopefully like it, it works as is. And there's one better way to check all of that, like, uh, it's happening on R &D Comfort, right? And, uh, we have something called as data tables And I know it may not be the best of the best, but can you see, we can just quickly scan through all the dates. And if you see anything weird, then it's, it's quite easy to spot. And if you click on it, right, it opens a document on the left side, uh, not the best of the best features, but it's sometimes else like this is 27th August, it got that. And in the latest, I see everything being extracted properly. Let's verify this. Oh, now this is very interesting. This is correct. Right?
+
+>>Aaron	02:31
+Um, that's a great question. I think that is correct. Can you may to June 25, um, can you scroll down, let me just get some context for this one. Yeah, it has to be. No, yeah. You know, this is correct. It should be September. Oh, that's terrible. I would get confused by that. This is correct.
+
+>>Aniket Tatipamula	03:04
+Excuse this. I guess.
+
+>>Aaron	03:06
+Can you check on the one nine one, the, the BDL services, party limited, which is a very top.
+
+>>Aniket Tatipamula	03:17
+Yeah.
+
+>>Aaron	03:18
+Yeah. Click on that. So it's registering as a one nine. No. This will be September. This should be September 1st.
+
+>>Aniket Tatipamula	03:27
+This is the third document. Let me just open this document. Give me a second.
+
+>>Aniket Tatipamula	03:45
+Extract basic information documentation. The date can be verbose or a number format. Try to get context of the date from the date in the document. Always output MMTD. Why? Why? I think for some reason, but this, I'll just verify.
+
+>>Aniket Tatipamula	04:24
+We wanted zero, right? Or we wanted eight. Um, yeah.
+
+>>Aaron	04:32
+Month, day, year. Yeah.
+
+>>Aniket Tatipamula	05:12
+So let this happen in the meantime, let me go to the next time. Go to other documents, because one issue will come back to this change documented in this I changed it to be pretty basic, but let's verify that it's so fast, it's still not getting through. This was the one, right?
+
+>>Aaron	06:03
+Yes.
+
+>>Aniket Tatipamula	07:33
+So just to just to update and then what we did is we have those three models in our playbook. So the one that was used here was the basic one. So sometimes it does happen that the basic one doesn't deal the best of the results. So I like bumped it to the advanced one. So advanced ones is like especially with these kind of problems, the advanced one works well. So just to like, I'm just sharing this for your information. Good.
+
+>>Aaron	07:58
+Thank you. I appreciate it.
+
+>>Aniket Tatipamula	08:00
+Then let's go to the next issue, which is 365. Let's quickly check that out. Management. This was on Equifax, right?
+
+>>Aaron	08:21
+Yep.
+
+>>Aniket Tatipamula	08:24
+Yeah. Great.
+
+>>Aaron	08:28
+Yeah.
+
+>>Aniket Tatipamula	08:29
+This is done. Change. Add a new validation check for document nine. Yeah, that was the one. This one. Total outstanding over deep. So this is what it is added.
+
+>>Aaron	08:43
+Okay, great. Oh, so I have a question about this one. Can you go out?
+
+>>Aniket Tatipamula	08:52
+Sorry.
+
+>>Aaron	08:53
+Can you go to the case management? Yeah. Can you click on A03478, 20 expected?
+
+>>Aniket Tatipamula	09:06
+Yeah.
+
+>>Aaron	09:09
+So for the tax agent comfort letter, this is fine. It's just that, so I ran into this case earlier in the morning. If you want to click into it, you see how it says it has outstanding tax liabilities, Ato tax liabilities. It says no. So the Docs .AI Here is correct. They do have liabilities. But you see how this isn't showing up in the other one, like in document nine.
+
+>>Aniket Tatipamula	09:47
+Oh, document nine. Let me open that then.
+
+>>Aaron	09:59
+Yeah, document nine is correct But See, I want to From a business perspective. I want to know that they have a liability And because it's a subsidiary company. It doesn't show up here, right? Because this is just like that tax payment, but it shows up in the tax agent comfort letter So are you able to do the same exact check the 60 % check before that number in taxation comfort letter?
+
+>>Aniket Tatipamula	10:27
+Yeah You want I can do that. So basically you want that to be passed or failed Based on the 60 if it is greater than 60 % you want it to fail if it is less than 60 % you want it to pass Is that it?
+
+>>Aaron	10:39
+Yes
+
+>>Aniket Tatipamula	10:39
+Okay Thank you, I Didn't run into that
+
+>>Aaron	10:47
+And then this morning I tested two and two of them had this So I said We need to have that I'll talk to credit about it
+
+>>Aniket Tatipamula	10:59
+Oh It's Sorry, I forgot the doc type where it is. Oh, there is the idea liability check. It's on it's in document three Nine
+
+>>Aaron	11:39
+What do you mean by use document nine?
+
+>>Aniket Tatipamula	11:41
+No, I mean, I mean, I mean, I'm just using that check document 960 percent check Right.
+
+>>Aaron	11:46
+Oh, yeah Thanks, Okay That's that
+
+>>Aaron	12:08
+Okay, great Equifax report was mentioned Okay
+
+>>Aniket Tatipamula	12:25
+Okay Equifax report I tested as in it was an issue on our prompt actually like what we had done is I hope it's working Fine now so on our prompt we had written some hard logic that was causing it to Fail, I mean it was not actually feeling or anything. We were not extracting data because of the prompt itself So I updated the prompt and I think now it's extracting fine So if it happens again, please do let me know I read write the documents where it failed at least few of them and it Extracted so it seems good now
+
+>>Aaron	12:55
+Yeah Funny story, it's still not working. But if you want to go to case management, sorry, it's just a screen. I'm familiar with Yeah, I think if you want to click micro X And then validation, so I should be an easy fix actually But Oh Actually, this one's fine for some of them. I put them in and it was extracting. No instead of zero Maybe it's in the director summary. Let's scroll down a little bit.
+
+>>Aniket Tatipamula	13:40
+Oh this one, right?
+
+>>Aaron	13:41
+Yeah Okay.
+
+>>Aniket Tatipamula	13:43
+Okay. I think we'll get that wrong. Don't give me one second.
+
+>>Aaron	13:47
+I think that's a small fix.
+
+>>Aniket Tatipamula	13:48
+I Wait a minute That's very weird it should not have any note. Oh, yeah, right. Okay.
+
+>>Aaron	13:55
+It should just be opening zero Yeah
+
+>>Aniket Tatipamula	14:07
+Oh, it's yes Or no, it was not zero I think maybe with the update that I made it caused an issue So I'll get that updated because it was always yes or no here, right? It's only three right grade score Edwards. I Think you know for Edwards and defaults and rates I'll review the prompt once It's my bad. I'll review this prompt and then we get it fixed
+
+>>Aaron	14:29
+Okay, I think the only one of them is yes or no. The others are all zero one, two, three four numerical values Yeah
+
+>>Aniket Tatipamula	14:49
+Which where were we what was this Okay
+
+>>Aniket Tatipamula	15:02
+You did not put it, right? Oh, I think you put it. This is it, right?
+
+>>Aaron	15:05
+It's the tax agent comfort letter, yeah.
+
+>>Aniket Tatipamula	15:09
+That was the one, right? Okay.
+
+>>Aaron	15:11
+Unless you mean the yes or no's.
+
+>>Aniket Tatipamula	15:13
+Yes or no was not in tax agent, right? It was in...
+
+>>Aaron	15:16
+Yes or no was in Ecofax. So Ecofax, that one, it would be Micro X.
+
+>>Aniket Tatipamula	15:26
+Oh, this is not the one. Sorry. Yes, this is the one for tax agent. Let me go back. Micro X, okay.
+
+>>Aniket Tatipamula	15:54
+Okay, I'll get this fixed, okay?
+
+>>Aaron	15:57
+Great. Moving on, can you go back to Micro X? I have another comment about it.
+
+>>Aniket Tatipamula	16:04
+But yes or no should be feel, right? Just to be sure, I think we would have written that. If it is no, it should still feel, right? Did it do anything wrong?
+
+>>Aaron	16:15
+What do you mean?
+
+>>Aniket Tatipamula	16:17
+I mean, if it is yes, it would pass. Let me show you one thing. I think the entire check was written in that way. Give me one second.
+
+>>Aaron	16:25
+No, it shouldn't pass because it's not a yes or no. It's a numerical value. It's like a... It's... It's a literal value.
+
+>>Aniket Tatipamula	16:38
+You want that proper check in yes, numerical value only, right?
+
+>>Aaron	16:43
+So...
+
+>>Aniket Tatipamula	16:45
+Yeah, okay, I'll get it fixed. I understood what you're saying.
+
+>>Aaron	16:48
+The reference value is what the expected output. If it's anything other than that, it would throw a flag. And you see it's one -to -one. It's copy -paste from the Ecofax format itself. Sure.
+
+>>Aniket Tatipamula	17:03
+Sure, we'll get it fixed. Oh, no, I think I understood the issue. Give me one second. Sorry. It's my bad. We know what the issue was, and I changed the model here. I'm really sorry. Give me one second.
+
+>>Aniket Tatipamula	17:36
+Let me retry that document. Micro X. So basically while I was trying to fix that other issue, I changed a few things. And I think this should fix it. I'll wait for a minute, and then I think it should probably fix this issue.
+
+>>Aniket Tatipamula	18:01
+In the meantime, we can go further, Aaron.
+
+>>Aaron	18:05
+Yeah, so same thing with Micro X. There's actually another one.
+
+>>Aniket Tatipamula	18:10
+Want me to go back to Micro X?
+
+>>Aaron	18:12
+Yes. So I saw you updated... Oh, validation, please. I saw you updated the advanced findings. It's document four.
+
+>>Aniket Tatipamula	18:29
+Yeah.
+
+>>Aaron	18:30
+So here's what I think we should do. I think we should have multiple findings available. So if you want to click into document one first. Document one only has one finding, which is right. But there's no second one, and it's extracting a no. So it should just be returning like an empty, like a blank, you know.
+
+>>Aniket Tatipamula	18:59
+So let me do one thing. I think I did not update this. Let me do one thing. Let me update this entire thing. And let's make it a table. Confirmed. And then it will be... I would say finding number. Yeah, can you make it dynamic? Sorry?
+
+>>Aaron	19:29
+Can you make it dynamic? Yeah, I'm making it.
+
+>>Aniket Tatipamula	19:32
+What would you call it? Like finding one, finding two, what would be the right term to call?
+
+>>Aaron	19:38
+It's like finding one, finding two.
+
+>>Aniket Tatipamula	19:40
+Finding number, I'll just call it finding number. And then the second would be, yeah, check, right? And the check can be, as you mentioned last time, let me just copy that.
+
+>>Aniket Tatipamula	20:16
+Check if it's core R &D or it's supporting R &D or it meets the R &D requirement.
+
+>>Aaron	20:22
+Okay, are we staying on this call or are we moving to the other one for Kirk?
+
+>>Aniket Tatipamula	20:28
+It's there in half an hour, right? It's there in 10 more minutes. It's not yet.
+
+>>Aaron	20:34
+Okay.
+
+>>Aniket Tatipamula	20:35
+Oh yeah, I think it will be there in 10 more minutes. It's not yet.
+
+>>Aaron	20:38
+Okay, we're going to hop on another call, correct?
+
+>>Aniket Tatipamula	20:42
+Yeah, this would be right, right? Check result in core R &D, okay. Return, yes. If any of it.
+
+>>Aniket Tatipamula	21:36
+I believe that was a check, let's see. Mention is return, yes, else no. Okay. So let me apply. Let's try this here. If this works, then I'll retry it on few documents.
+
+>>Aniket Tatipamula	22:21
+It just returned one finding, right? But it returned core R &d. What was that? It should have returned yes or no, but it returned core R &d. I'm just checking why.
+
+>>Aniket Tatipamula	22:43
+Return yes if any of it is met, else return no. I think it's quite clear here. Let me go back.
+
+>>Aniket Tatipamula	23:10
+Good morning.
+
+>>Aaron	24:13
+So for the advanced findings, I just had to tab out a bit to respond to Eric. But there was also the 4 .2, where there was three findings and it only registered two.
+
+>>Aniket Tatipamula	24:32
+No, that's because I did not add it, right?
+
+>>Aaron	24:35
+Yes. Yeah. Okay. I'm just alerting you a bit. I wish all.
+
+>>Aniket Tatipamula	24:46
+This worked, right? I think this is what we wanted, correct? Yes.
+
+>>Aniket Tatipamula	24:55
+I'll monitor it though. Manoj, can you please note it down for Equifax that we'll have to monitor? Can you please note that thing down?
+
+>>Manoj Racherla	25:01
+Sure.
+
+>>Aaron	25:09
+Still processing.
+
+>>Aniket Tatipamula	25:18
+Yeah, so now it extracted three. Sorry, it's an Iphone things. Yeah, I'll just make sure this ROMs are proper, but I think now it is working dynamically. Let me go through a few documents, just check.
+
+>>Aaron	25:36
+Yeah, let's just go through and, I mean, you can get the prompt to work. I just want to communicate what we expect effectively.
+
+>>Aniket Tatipamula	25:43
+Sure. Yeah, I just, let's just to check a couple of them And then this is exactly what we want, right? Like this one has three findings, so we'll see three findings on finding two, finding three.
+
+>>Aaron	25:55
+Yeah, you should have, we should have three findings.
+
+>>Aniket Tatipamula	26:00
+Right, finding two, finding three, yes. And it also mentioned the right one, right, activity. You do the core activity, core supporting, core supporting, okay.
+
+>>Aaron	26:10
+Yeah, so we should have
+
+>>Aniket Tatipamula	26:10
+A - Yes, I'll add that. Sure, and I'll get this fixed properly, yeah.
+
+>>Aaron	26:16
+Okay, great. There's another thing I tried to, this last thing actually, before we have to hop off of Eric, but for, if you want to go to A03496, 19 expected.
+
+>>Aniket Tatipamula	26:41
+396, right? Yes. 396.
+
+>>Aaron	26:47
+If you scroll all the way to the bottom, I think the signature check is failing.
+
+>>Aniket Tatipamula	26:59
+Yeah, I was actually going to find this one because I saw the validation is failing. We did extract the signature or maybe the signature check itself is failing. It's a validation that is failing and I'll get it fixed because it's, it just has to check something here. That's okay, I'll get it fixed.
+
+>>Aaron	27:23
+Yeah, okay, great. Um, that's all for me on the validation end. I'll be, if you want to do the same time tomorrow or something, I can also do that. Um, and I'll actually be in office tomorrow so I can, I can have a little bit more flexibility.
+
+>>Aniket Tatipamula	27:42
+Sure, and I think that would be very helpful. Like, I think we'll, we'll close these issues as well. And then I hope, like, if you can upload those lot of packets, right? I think we can probably do a lot of checks at our end because all of this we can fix, we know we can fix it. But it's just that we need to know, because we've been up so many times. We just want to make sure that we go through 20, 30 or maybe 50 more packets and then fix all of them.
+
+>>Aaron	28:06
+Yeah, let me just get, let me just get Eric to fix the packets dropping. And then by the time I'm in office tomorrow, I have a lot of time on my hands to just put lots of packets through.
+
+>>Aniket Tatipamula	28:19
+Sure, sure, and nothing random is happening, right? Apart from this, anything else that seems off?
+
+>>Aaron	28:26
+This is all I was seeing. I'm not aware of anything else at this time. Just a heads up, like, when I do put packets through tomorrow, the Excel documents are still gonna be, they're not gonna be there. So, yeah, the Api is not gonna receive it.
+
+>>Aniket Tatipamula	28:46
+Yeah, so what I'll do is I'll see if I can get this implemented today itself so that I can share the Api with Eric, but I'm not so sure whether they can implement it quickly. So I'll give it a try.
+
+>>Aaron	28:56
+Okay, great. Sounds perfect. Let's hop off to go to Eric's.
+
+>>Aniket Tatipamula	29:00
+Sure, thanks, bye.
+
+>>Aaron	29:02
+Great, see you in a moment.
+

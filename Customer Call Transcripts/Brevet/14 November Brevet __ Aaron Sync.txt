@@ -1,0 +1,585 @@
+>>Aniket Tatipamula	00:00
+You have listed a few more. Yeah. Yeah, there's a few recurring ones, and there's a few one -off. I hope they're clear. I wasn't too clear, so I'm happy to just walk through them with you. Sure, let's walk through. In the meantime, I want to just share one update. We made that Api ready for Excel Sheet. So I'll drop an email, but basically what would happen is if you just hit that endpoint instead of the normal endpoint, your Excel Sheet would be converted to Pdf, and then it would be done. So that's ready. So I'll drop the team an email.
+
+>>Aaron Yu	00:37
+Yeah, if you could put all the, instead of just dropping it, just put all the details of the implementation and stuff. Just make it easy, because Eric and Roman are out of office, I believe. So it's not going to be implemented until Monday, most likely. And in that sense, as long as they are able to wake up and see it and see all the details necessary, I think they'll be happy to implement it as soon as possible.
+
+>>Aniket Tatipamula	01:05
+Sure, I will get that thing done.
+
+>>Aaron Yu	01:08
+Great, thank you. It's very good.
+
+>>Aniket Tatipamula	01:14
+Then, yeah, then should I share my screen?
+
+>>Aaron Yu	01:17
+Yeah, if you don't mind sharing.
+
+>>Aniket Tatipamula	01:23
+I did not fix the issues that we discussed yesterday, and then I was mainly focused on the Api. Yeah, that's fine. Because I was a blocker. And I will get this fixed on Monday then. Ok. And just an update, Aaron, as in we made a big release a couple of days ago, your account would not be active with it. But we now have something like a workflow where we can create our own workflows. Now, I don't know how it would be handy for Brevit right away. But basically, you can add, you can create your own workflow. And it can do anything. Like, it can do stuff that we want, right? Fetch data from all the PDFs, convert it into something else, and then maybe hit a separate Api, or get something else done. And then finally, the viewer that you would see would be a different viewer. It's not enabled here on this account. But you will see a much enriched view of a case and not of a document. Well, that's kind of like what you guys have been doing, no?
+
+>>Aaron Yu	02:33
+You guys have kind of been doing that on our behalf?
+
+>>Aniket Tatipamula	02:36
+Yeah, so we did it on your behalf as, what do we say, a separate fix only for you. But then we made a release now. And I think we'll move you there soon, so on the primary one. Ok. It is more advantaged. Yeah. That's helpful.
+
+>>Aaron Yu	02:54
+Thank you.
+
+>>Aniket Tatipamula	03:10
+Should I start with this? Yeah, let's just go down the list. A3533, A3533, copy. Show each document link. It's missing, right? Oh, you said it did not get classified, right?
+
+>>Aaron Yu	03:38
+Yeah, so it's actually in the documents, second page, I believe.
+
+>>Aniket Tatipamula	03:47
+That's interesting. Ok, 08. Let me try it again. Actually, we made an upgrade update on our auto -classification model. We just made that update yesterday. Maybe that will be one of the reasons. I'll verify this. If this is persisting, then I will just roll that back. I mean, it is an update for everyone, not just for private.
+
+>>Aaron Yu	04:14
+No, I understand.
+
+>>Aniket Tatipamula	04:31
+Yeah, it did classify it, right? I think there was some glitch. No, no, sorry, it didn't get classified. Yeah, there would be some small glitch. I'll note it down.
+
+>>Aaron Yu	04:51
+Ok, thank you.
+
+>>Aniket Tatipamula	04:58
+Report to tech.
+
+>>Aaron Yu	05:00
+Good. Let's look at document 10 for the same one. I think the refund wasn't being extracted properly. So it's like Abn is not there, right? I think Abn is not here. Well, I still need a I'll come back to you. Sometimes for some documents, it's not your fault. The Abn is literally not present. And that's going to throw a failure. But I'll try to resolve that.
+
+>>Aniket Tatipamula	05:41
+Sure, and what did we not pick up? Where is that value?
+
+>>Aaron Yu	05:49
+Let me just find it. It might be easier. It's a refundable. If you just want to search refund, you should be able to find it.
+
+>>Aniket Tatipamula	06:00
+There's no refund.
+
+>>Aaron Yu	06:01
+Oh, there's quite a bit. Ok, refundable, maybe? Ok. Oh, refundable. But that's not where we usually find it. So ignore that one.
+
+>>Aaron Yu	06:19
+I think you just skip past it. Should be on one page lower. Or refundable tax offsets. This one?
+
+>>Aniket Tatipamula	06:31
+Refundable R &D tax offset. That's what it reads.
+
+>>Aaron Yu	06:34
+Yes, it should be U. This one.
+
+>>Aniket Tatipamula	06:38
+This one. Yes.
+
+>>Aaron Yu	06:40
+I'm not sure if the format of this is a little different from the other ones, maybe.
+
+>>Aniket Tatipamula	06:50
+The amount is what we need to capture, right? Extract the value total amount refundable under the calculation statement S. Is there some refundable tax left? I think we were trying to capture S, right? And not U. I think the code here is, once again, a little too rigid when it was coded.
+
+>>Aaron Yu	07:13
+Like, a lot of the documents were formatted in a certain way, where I think line item I was refundable. Refundable. But to always look for that, I think, is a mistake.
+
+>>Aniket Tatipamula	07:26
+So what would be the right prompt?
+
+>>Aaron Yu	07:33
+I'm not too sure. I mean, I think refundable tax offsets in some shape or form.
+
+>>Aniket Tatipamula	07:42
+There are a lot of tax table after refundable less. A refundable R &D tax offset, is that it? This is also not the case, right? It's tax offset.
+
+>>Aaron Yu	07:56
+Hold on. Give me a moment.
+
+>>Aaron Yu	08:06
+So if you want to open another one, you can kind of have another one as a reference point. Just the format of this is different from some of the other ones. You can just open any other one.
+
+>>Aniket Tatipamula	08:29
+Yes, right? Right, yeah, that's it.
+
+>>Aniket Tatipamula	08:44
+Yeah.
+
+>>Aaron Yu	08:44
+Like, this is right. This is good. But for this format, I do agree this format is very common. Most of these documents look exactly like this. But sometimes they don't. So this is simply just a, I think that one is the online portal, probably. And this might be a paper scan, from what it seems like.
+
+>>Aniket Tatipamula	09:11
+So just from the plain English perspective, as in, Aaron, what should I change here? I'll just take a note of it. What should I change here?
+
+>>Aaron Yu	09:26
+Or extract it? Give me a moment. Let me take a look at it.
+
+>>Aaron Yu	10:04
+Oh, maybe the term refundable tax offsets, how about you try explaining sometimes it might say that the positive sign means what they load and negative sign means what has to be refunded so in this case the sign will get inverted and negative will become positive but that's okay this will be just before tax agents declaration consider the text around it as well should I just remove total amount refundable under the calculation statement section that should be there right it should always be this correct Well it's a for this one I see tax offset can you just broaden the term can you just broaden it so that sometimes it may also be right next to tax offset refunds
+
+>>Aniket Tatipamula	11:35
+And then you want me to add one more line is it
+
+>>Aaron Yu	11:38
+Yeah try something like tax offset refunds see how it runs it's just a this list some of this seems a little inflexible the way it was implemented But I'm not a software engineer no this is not this is actually just plain English right like if I were to change like if you were to make it generic what would be an extract the value against total amount refundable under the calculation statement section that is this correct or will it ever be under a different section under the calculation because that's what I think it is I think it is under a calculation statement I agree with that so
+
+>>Aniket Tatipamula	12:27
+Let's see if it is under this statement here as well it is it's a statement Right so that's always the case so that's good Okay So the second part is as total amount refundable is the sum of refundable tax offset left after covering tax payable plus any credit this is right this line is correct the s is not needed correct
+
+>>Aaron Yu	12:45
+I don't think the s is needed frankly so tax amount refundable is the sum of refundable tax offset left after covering this is correct what else can I add can I look for the value next to quote refundable tax offsets
+
+>>Aniket Tatipamula	13:03
+Okay then is it to look at one look for amount next to refundable tax offset
+
+>>Aaron Yu	13:17
+Right yes now put another one to um to look at tax offset uh think tax offset refunds try that too Okay give me a moment before you implement this let me validate tax offset refunds
+
+>>Aaron Yu	14:15
+Yeah can you try it now um next I consider that it was positive this makes sense Yes that looks good to me here let's let's rerun this
+
+>>Aniket Tatipamula	15:35
+This will not be the one, right? Was this the one? No, right? Yeah, this was the one, isn't it? You just pressed it.
+
+>>Aaron Yu	15:46
+Can you scroll?
+
+>>Aniket Tatipamula	15:49
+Yeah, I think date modified layer, this is the one.
+
+>>Aaron Yu	15:52
+I think that is on.
+
+>>Aniket Tatipamula	15:55
+It also picked up AB, and that's weird. Ok.
+
+>>Aaron Yu	16:02
+So I was picking it up from there. Can you scroll up what fiscal year is that for? It's for this year. I mean, it's fine. I think that is the correct value. Usually, I'd expect you to pick it up from the bottom section. It's picking it up from the top section, which is it's the correct result. I'm just not too sure what that means.
+
+>>Aniket Tatipamula	16:29
+Yeah. Do you want me to retry a bunch of these and then just to verify if the prompt is correct? I can do that.
+
+>>Aaron Yu	16:36
+Yeah, if you're able to do that.
+
+>>Aniket Tatipamula	16:45
+Ok.
+
+>>Aaron Yu	16:46
+You want to move on to the next issue? Yeah. How we look at this? So it's still 03523.
+
+>>Aniket Tatipamula	16:56
+Ok.
+
+>>Aniket Tatipamula	17:05
+This is name, and we're not extracting matching as expected. I will document this too. So borrow a name. I correct something. Is the name present in the document?
+
+>>Aaron Yu	17:27
+I think it should just be the same. It should be Acrux limited.
+
+>>Aniket Tatipamula	17:33
+Ok, the borrower legal name only. It's not matching because there are two names in it. I'll do the same thing here because I implemented this R &D advisor. What we did is now we have that partial match and everything done. So I'll do that here too. Is that what happens is here, the percentage match is not that much. So we have to first split Acrux limited into two parts and then match it. So I'll just update this to whatever I did for R &D advisors. I'll do the same update here. Ok.
+
+>>Aaron Yu	18:19
+So name.
+
+>>Aaron Yu	18:35
+So for the name, just a.
+
+>>Aniket Tatipamula	18:44
+So what we are doing, Aaron, right now, what we do is we just Tty limited. We remove those and then try to match. For example, if this was Acrux limited, it would not have matched. Let me just try this. Or maybe it would not because the commercial part is we don't know whether it's the right one.
+
+>>Aniket Tatipamula	19:12
+Yeah, it has to be commercial because Acrux in itself will not cover the entirety. Hmm. And we are not sure how strict do you want it to be. And we can loosen it if you want. We can loosen it. Just a partial match would do it. If the entire string is there, then we'll match it. So we'll probably get that.
+
+>>Aaron Yu	19:36
+I think you can loosen it a bit. I think you can remove the first one, the name. I think it's a bit redundant, frankly.
+
+>>Aniket Tatipamula	19:44
+I think we can implement it that way, right, Aaron? You asked us. So it's not failing, if you see. Basically, if either of them match, we allow it to match.
+
+>>Aniket Tatipamula	19:55
+We're not failing.
+
+>>Aaron Yu	19:58
+Ok. That's interesting.
+
+>>Aniket Tatipamula	20:01
+You had asked me to do that. So if either of that matches, we are good.
+
+>>Aaron Yu	20:08
+Ok, we can think about it more.
+
+>>Aniket Tatipamula	20:15
+Anything else on this?
+
+>>Aaron Yu	20:17
+No, let's move on to the next one. The R &D comfort letter has a bit of an annoying recurring issue. It is this one. It's 3, 4. Yeah.
+
+>>Aniket Tatipamula	20:32
+Ok.
+
+>>Aaron Yu	20:33
+I think this is what we just went over. So you can ignore this one.
+
+>>Aniket Tatipamula	20:38
+This is 34, right?
+
+>>Aaron Yu	20:40
+Yes, but it's the same issue.
+
+>>Aniket Tatipamula	20:43
+Yeah, the same issue. I'll loosen it very much, and then I'll make this match. That's OK.
+
+>>Aaron Yu	20:49
+Ok. Can you look at 03505?
+
+>>Aniket Tatipamula	21:12
+Ok.
+
+>>Aaron Yu	21:15
+So here for the overseas findings, actually, for the advanced finding certificate, I actually edited the prompt a little bit. But there's just one thing I need you to do. If you want to click into it for advanced finding certificate, it's fine if you could scroll down. I don't know how your findings table is working, but I basically copy pasted whatever you had for the prompt. If you can just add a finding 3 and just make it dynamic. So the prompt is good right now.
+
+>>Aniket Tatipamula	21:59
+This is working, right? Finding 3?
+
+>>Aaron Yu	22:02
+No, there is no finding 3 being shown.
+
+>>Aniket Tatipamula	22:06
+It's not there in the document. Is that what you're saying?
+
+>>Aaron Yu	22:08
+It is.
+
+>>Aniket Tatipamula	22:09
+Oh, no, no, no. I mean, I did not implement this one, the grid one yet. I'll get this implemented. But it could find finding 3. Let me do one thing. Let me just update. Give me one second. I'm not finding anything.
+
+>>Aniket Tatipamula	22:42
+I gave it score R &d. I think this prompt is good.
+
+>>Aaron Yu	22:51
+I tweaked this a bit, too. And it was working fine. I implemented it for finding 1 and 2.
+
+>>Aniket Tatipamula	22:58
+Ok. So for finding 1 and 2, it's a different prompt.
+
+>>Aaron Yu	23:02
+It is a different prompt, but it wasn't working properly because it was specifically looking for a very specific term.
+
+>>Aniket Tatipamula	23:12
+Ok, understood.
+
+>>Aaron Yu	23:16
+Yeah, same with 4 .2. 4 .2 also has three findings. There's really not much here. It's just making sure that it says is, meets, is a supporting, those three terminologies. And then making sure it's dynamic. So if there is one finding, just have it show one finding. Yes. If it's three findings, have it show three findings. Yes, next to all of them. That's all we really need.
+
+>>Aniket Tatipamula	23:42
+Yeah, I did not implement that yet. I'll just get that implemented. Because I had written it yesterday. But it's not yet this one.
+
+>>Aaron Yu	23:50
+I understand. I'll make a note of it. As long as you're aware, I won't harp on it.
+
+>>Aniket Tatipamula	24:01
+I'm just noting it here anyway. Digital findings. Ok. Great. I think there's the same Docto. I'll get that fixed. That's OK. Name is much needed, right, Docto?
+
+>>Aaron Yu	24:22
+So Yeah, It's a bit different. There's one where it's kind of finicky.
+
+>>Aniket Tatipamula	24:31
+Yeah, let me open that. Give me a second. Let me just check if this is ready. And this is ready.
+
+>>Aniket Tatipamula	24:48
+Yeah, yes, yes, and yes. Correct?
+
+>>Aaron Yu	24:52
+Yep.
+
+>>Aniket Tatipamula	24:55
+So I'll get this, I'll just use that. You want me to go back to case management?
+
+>>Aaron Yu	25:01
+Yeah, just make sure if that there's only one, that it only shows one, and it doesn't always show a minimum of two.
+
+>>Aniket Tatipamula	25:08
+Oh, for that, right? No, no, no, that I'll do, and I'll get it up.
+
+>>Aaron Yu	25:11
+I understood. I'm assuming you haven't implemented the 60 % thing for the tax comfort letter. You haven't had the time to get to that?
+
+>>Aniket Tatipamula	25:20
+Wait.
+
+>>Aniket Tatipamula	25:29
+If I don't have any documents, what does?
+
+>>Aaron Yu	25:33
+Yeah, I've been putting in quite a few. I hope...
+
+>>Aniket Tatipamula	25:38
+If I don't have any documents, what does?
+
+>>Aaron Yu	25:42
+It should be the... Well, yes.
+
+>>Aniket Tatipamula	25:47
+Oh, Como Technologies and Como Technology. I think this would not match, right? I'm not so sure. Technologies and technology, these could be two different companies, right?
+
+>>Aaron Yu	26:00
+No, it's the same company.
+
+>>Aniket Tatipamula	26:02
+Yeah, okay, because I don't know, because it is a different word, right? Technologies and technology. I think at least here in India, as in if you can't name something like this, but as you wish, we'll do a partial match, and then we should be good.
+
+>>Aaron Yu	26:16
+Okay, yeah, yeah, yeah, just partial match it. These are, it's really just a plural, plural versus non -plural. So it's fine.
+
+>>Aniket Tatipamula	26:25
+Yeah, nevermind. I think that's business logic. I'll get it done. The only thing that we were doing is we were removing this PTY limited, right? And then trying to match, because those are generic words. Those are extensions. But while these are proper nouns, so they have to, like, our thought was they have to match.
+
+>>Aaron Yu	26:41
+Okay, just check. I have faith in it.
+
+>>Aniket Tatipamula	26:47
+Then let me, there are other issues. Should we look at it?
+
+>>Aaron Yu	26:50
+Or these are - Could you scroll down a little bit more? A little too much. Go to document three. All right. You know how I, it's the same, it's the issue about the outstanding liability. I'm assuming you just haven't gotten to implementing it yet.
+
+>>Aniket Tatipamula	27:14
+The 60 % match?
+
+>>Aaron Yu	27:16
+Yes.
+
+>>Aniket Tatipamula	27:18
+It was implemented on some different document, right?
+
+>>Aaron Yu	27:20
+Yes, it was implemented on document nine, but I also requested it be - No, no, no.
+
+>>Aniket Tatipamula	27:25
+I did not do that yet. You are saying that has to match there And then it has to pass. Oh, sorry. That has not yet been done. Okay. So that, let me just, where did I note? Yeah, add a new validation check for document nine. This is done, sorry. Oh, I did not write it.
+
+>>Aaron Yu	27:45
+So you didn't, maybe it was in the call, the call tab that you wrote down. So yeah, doc three, Ato liability. Okay. Just add it to the list. We're gonna, well, let's get that done. So right now, if there's any liability, if there's like, let's say $10 ,000, it's just returning a no, which was right when we first implemented it. But now we're gonna be looking for whether or not it's 60 % of the loan value. So let's just, let's just get that. Let's just get that sorted. Great. As long as you're aware of it. That's the same issue. Oh yes. If you could actually go to that one. So it's a bit of an updated thing.
+
+>>Aniket Tatipamula	28:44
+$31 ,3526.
+
+>>Aniket Tatipamula	29:00
+This is fine.
+
+>>Aaron Yu	29:02
+It's, you know, it's the same problem. If you could go down to document nine. Yeah. You see how, now that we're doing like the, that total outstanding check, overdue and not yet due, don't have to be pass fails. I mean, like, so you can just change that there.
+
+>>Aniket Tatipamula	29:22
+You want me to remove them? Do you want me to put it as a reference?
+
+>>Aaron Yu	29:32
+I think you can just, I think you should just put them there as references. Okay. Because as long as it's, as long as the total is still less than 60 % and we're implementing that in multiple documents. So, cause it'll be a thorough check.
+
+>>Aniket Tatipamula	30:05
+Okay. Okay.
+
+>>Aaron Yu	30:08
+Great. So this is the same issue for all three of these. If you just want to open any of them, yeah,
+
+>>Aaron Yu	30:44
+You see how, um, the name of the advisor is being taken here. Honestly, you can remove the name of the advisor altogether. Like the contact. I know we had it at the start, but at this moment, I don't really, I don't really care for it to be quite honest. Um, I just need to know that this, that the name of the company matches, I no longer care about the name of the individuals.
+
+>>Aniket Tatipamula	31:15
+So R &D advisor will always be a company, right?
+
+>>Aaron Yu	31:19
+Yes, it should be. It should be RDIP.
+
+>>Aniket Tatipamula	31:25
+Oh, you know, I think that's because, yeah, and honestly, you can remove the R &D advisor contact if it's, if it's cluttering things. Sure. I'll just note it down, and that'll work. The prompt was quite basic, that's the reason I did it.
+
+>>Aaron Yu	31:49
+Yeah. That plus, um, probably a fuzzy check on the, on the matching names and such. Um, yeah, let's, let's look at that again. Once it, once it processes.
+
+>>Aniket Tatipamula	32:09
+This was it, right? Partners, Rdi partners.
+
+>>Aaron Yu	32:20
+Yeah. Yeah. That's fine. Um, R &D manual review recommended. Uh, can you just, uh, do a fuzzy check and pass those Rdi, Rdi warning, but the actual eligibility check is happening here, right?
+
+>>Aniket Tatipamula	32:36
+It's fast.
+
+>>Aaron Yu	32:38
+Yeah. Um, partners party limited, right. Then for a partner's party limited.
+
+>>Aniket Tatipamula	32:45
+So we have done two things as, as far as I know. I think this is just the name match between what we get from the advisor. And this is the actual check approved advisor. So the approved advisor is what we extract as a legal name and then try to check. At the end of the day, it's the same prompt. Like if you look at it.
+
+>>Aaron Yu	33:05
+No, I understand. Um, yeah.
+
+>>Aniket Tatipamula	33:15
+Consultants company name, basically. That's okay. Yep. I think we just made quite a few things. If you want me to, I think it works. If you let us know if it is fading anywhere else.
+
+>>Aaron Yu	33:27
+Okay. Um, the other documents have the same issue. They were extracting the name of the person. Um, like the partner. So you can just run those again if you want.
+
+>>Aniket Tatipamula	33:37
+And then they are all back to back 30, 80 to 30. Let me just stop. Okay.
+
+>>Aniket Tatipamula	33:53
+Data tables.
+
+>>Aniket Tatipamula	34:04
+Oh, those are names actually outside. Can I consider them to be like, can I just retry this last 10? I think. Or what do you want me to do?
+
+>>Aaron Yu	34:16
+The contact. I don't, I don't care about the names. You see that.
+
+>>Aniket Tatipamula	34:22
+Yeah. I'll just retry these. One, two. Yes. Try those three.
+
+>>Aaron Yu	34:26
+Okay. Um.
+
+>>Aaron Yu	35:17
+Yeah.
+
+>>Aniket Tatipamula	35:19
+They are all changed, right? Are you done? Yes.
+
+>>Aaron Yu	35:26
+That looks good. Very good. Ok. That's all I really had. Actually, no, one last comment. I apologize. Could you pull up the two at the bottom? So if you want to go to Brevet Issues, there's two. Can you pull up these two specifically? Like, put them side by side. So we requested you make a change on this, but I was alerted today by credit that it was a little wrong. So let's go amend that.
+
+>>Aniket Tatipamula	36:16
+3531 and 3565.
+
+>>Aaron Yu	36:21
+Yes. Yeah.
+
+>>Aniket Tatipamula	36:29
+Any specific place?
+
+>>Aaron Yu	36:32
+Document 8 for both of them.
+
+>>Aniket Tatipamula	36:47
+Yes. Ok.
+
+>>Aaron Yu	36:49
+So if you could just click into both of them. Ok. Good. This one.
+
+>>Aniket Tatipamula	37:04
+Want me to look at the table?
+
+>>Aaron Yu	37:08
+Yeah. So you see how this one has amended? The $87 ,000 is amended, right?
+
+>>Aniket Tatipamula	37:21
+This one? Yeah.
+
+>>Aaron Yu	37:22
+Yeah. So we actually don't want amended because it appears after the refund.
+
+>>Aniket Tatipamula	37:31
+But it's not added.
+
+>>Aaron Yu	37:33
+But it's not added. So this is right. But if you go to the other one, this was actually a loan that just passed through today. Because it appears after the refund, or like, this should actually be $762 ,000.
+
+>>Aniket Tatipamula	37:56
+Oh, OK.
+
+>>Aaron Yu	37:59
+So when I described this to you, I said that you could just skip amended. However, the true requirement here is that if amended is more recent than the last refund, you see how the last refund is $688 ,000, it should be added to it. If it's older than the last refund, nullify. We don't want that.
+
+>>Aniket Tatipamula	38:29
+So I'll have to remove this amended so that we first consider it in true. And then I'll have to see.
+
+>>Aaron Yu	38:39
+Yeah, if you could test out some prompting. Frankly, I'm not sure what's the exact correct solution here. But that's the general gist of it. If it appears, yeah, if it's a more recent one compared to the most recent tax refund, it should also be returning. So for that one, the example, we would basically expect for the amended amount to be added on top of the tax refund to result in around $762 ,000.
+
+>>Aniket Tatipamula	39:09
+Yeah, understood.
+
+>>Aaron Yu	39:11
+Great.
+
+>>Aniket Tatipamula	39:12
+If it's before, we don't want it.
+
+>>Aaron Yu	39:17
+Yeah, and for the one where we use the initial example, that was basically the amendment is older than the most recent one. So we don't want it. It's not applicable.
+
+>>Aniket Tatipamula	39:30
+Ok, let's quickly try it out. I think it should not take much. I'll give you a second if you have time.
+
+>>Aaron Yu	39:36
+I have time. I have all the time in the world.
+
+>>Aniket Tatipamula	39:41
+Thanks, Aaron. Check the table transition description. And if the description starts with tax, return company is in the description but should not have Eft in the description, then return H2. Yeah, that's OK. That's understood.
+
+>>Aniket Tatipamula	39:54
+So it returned the amended as well right in this case where did the amended go? This one does not have level make now this is done apply But what we have to do is here in the tax refund amount check the transaction record for the rows that have value as true check the transaction record for the state column and pick up the latest entry So the column for rows that have value as true check the relevant date column and identify um I think we have to identify the refund and the amended refund right?
+
+>>Aaron Yu	40:45
+Yes But once again to my point the amended has to be more recent than the most recent refund and you cannot be picking up the 2024 refund which is no longer relevant so it's a little bit tricky on this end
+
+>>Aniket Tatipamula	41:05
+Ok let's do Oh that can be tricky because the recent one was easy right? Yes because we are picking up the first one I can just do like and pick up the pick up the pick up the latest refund check for table transaction description for amended amended refund if it has pick up the latest refund check for the check but if table transaction description has amended word in it then keep on going to pick up one more which is not amended and will there be multiple amended or can it? I think for this we can just assume there will be at most one amendment it's not the most common thing in the world ok get non -amended one then sum the values yeah
+
+>>Aaron Yu	43:04
+This even works you probably have to test this but make sure you can use the two examples I provided I think those are good examples because you want them both to be running correctly concurrently so as long as those two are both running this one is the one that I had issue right?
+
+>>Aniket Tatipamula	43:32
+This one is where we have to no this one should be 401 ,000 so it's correct right now if you run it and it's not correct anymore well we'll have to tweak it a bit more I would say ok let's do that this was document 8 document 8 document number 8 353 this one was sorry I'm forgetting which one 3531 3531 right? 3531 document 8 let me retry again just for our sake ok Let's see it's 8 so messed up wanted to save and then execute in the custom code I think this one also would run into error because that code is a little complicated I don't know but this worked this is actually good this is good
+
+>>Aaron Yu	44:51
+However, the other one needs to also run with the same code.
+
+>>Aniket Tatipamula	44:56
+I'll look into this. I'll look into it.
+
+>>Aaron Yu	44:57
+Maybe because there's no, it's not seeing it amended, so it's just returning an error. Or you want to try rerunning this? You think it's a one -time thing? Just generate and run here.
+
+>>Aniket Tatipamula	45:08
+I think this, because the table generated, right? The rest is just the code. It's a well -defined code. If it breaks, this means there's some logical issue that we have written. Check for table columns for the rows that have values as true. Check the table transition for this to pick up the latest refund. But if table description has amended word in it, then keep going, keep on going to pick up more till we get non -amended one. That's correct, right? It has to be a non -amended one, right?
+
+>>Aaron Yu	45:37
+Yes.
+
+>>Aniket Tatipamula	45:37
+Then sum the values for all such rows. Yeah, it looks correct, actually. So basically, for date description, correct lower description. We have not found amended. It was some append. Yeah, I think it's doing the same thing. There's nothing worse. Basically, sort by process. So basically, what it does is it gets all the transactions with true. It then sorts them by date, which is correct. That's exactly what we want. It goes, it loops into the transactions. And it's checked for amended, is amended in description, right? Else false. It's not found. It should not run into error. I'll check this once.
+
+>>Aaron Yu	46:22
+Ok, if you want, just let me just reiterate. I mean, I can only explain it in plain English. I can code. I'm not the most technical person in the world, though. Just here, look. So here, we just want the 401 ,000 here, right? Because the amendment appears after the refund. But for the other one, the amendment appears before the true refund, which means it's more recent, which means it should be adding two values, which it is currently doing. I just want to make that. That's all I can really give to you from plain English. But yeah, you're the engineer here.
+
+>>Aniket Tatipamula	47:06
+Sure, and I think it's just that it should break the formula, which it is not breaking. The moment it finds an amended one, that is, if not found, else if is amended. If not found, non -amended. I think this code is a little complicated. I'll get it fixed. I'll figure out if you can write it in an easier way.
+
+>>Aaron Yu	47:28
+Great, thank you. For the rest of the day, I have more hours. I'm going to sit here, and I'm going to put more things through. And if I feel that there's not enough, I'll directly email you something, or I'll figure out something to get you more files. And yeah, we're still working on getting the pipelining through. At a certain level of pushing things, we're getting packets dropped. But that's a known issue, and you can get these done. I think I put in, this looks like a lot, but I put in like 15, 20 packets this morning. So this is only really a small minority, and a lot of them are recurring things. So I think we'll be in a good spot. And you can place a meeting on my calendar for something like Monday. I can make Monday work.
+
+>>Aniket Tatipamula	48:19
+Sure, that works.
+
+>>Aaron Yu	48:21
+Great, and if you want to, let's see what Eric, if you want to send an email to Eric about the Excel, we'll be getting that. Let's get that sorted. It's not in my table. That's on him. So if you guys need a call, feel free to just reach out to him, and you can just place a call on his calendar, and he can accommodate.
+
+>>Aniket Tatipamula	48:46
+Sure, we'll do that. I'll drop you one email.
+
+>>Aaron Yu	48:49
+Great, I might not be available for that. But no, I appreciate it. Thank you, Aniket. It's a little bit late, so please enjoy your night.
+
+>>Aniket Tatipamula	48:57
+Thanks, Eric. Have a great day.
+
+>>Aaron Yu	48:59
+Have a good one.
+
+>>Aniket Tatipamula	49:01
+Bye -bye.
+

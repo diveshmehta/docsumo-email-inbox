@@ -1,0 +1,393 @@
+>>Bjørnar (Semine)	00:00
+three weeks. So overall, it's good, like good to be back home. So it's a fun time, I would say. Sorry, it might be a bit of an issue. I have some mouth, something like, I just had a teeth implantment, so I'm having difficulty speaking clearly. So let me know, like, if I have to repeat something. Yeah, OK, we'll see, I think Alexandra will be joining us, we'll send them a message.
+
+>>Bikram Dahal	01:12
+Ok, in the meantime, I think we can discuss about the email that you guys had sent, right? So I just wanted to get some clarification regarding the doc flow. I think I understood, but I just wanted to make sure that I'm understanding it very clearly. And on top of that, I'll also show you one prototype, because on last call, you guys had asked about the confidence scores and everything. So we also have some prototype that we'll be implementing within the next two weeks so that, like, you guys will be able to figure out why something was high confidence, why something was low confidence and other things, right? So that is also coming into the product. So I'll show that prototype to us once that first discussion is over.
+
+>>Bjørnar (Semine)	01:54
+That's great news.
+
+>>Bikram Dahal	01:57
+So, OK, hi, Alexandra. Hey. Ok, so let's start with the email that you guys had sent regarding doc flow that your team has. And on top of that, like, how you guys currently operate with Abi. So let's do that first And then we'll take it from there.
+
+>>Aleksander Larsen	02:23
+Let me get Martin into this meeting as well, Bjorn. Yeah.
+
+>>Bikram Dahal	02:36
+Let me just do many things on my screens. Ok, I have the email that like that you had sent. So, like, can you guys quickly go through this workbook? Like, like, I understood this, but like I have I can ask the question or if you guys have like anything that you guys want to it. We can start from there. However, you guys want to start from.
+
+>>Aleksander Larsen	03:07
+Yeah, just ask the questions and we'll try to answer. Yeah.
+
+>>Bikram Dahal	03:11
+So let's first let me understand. Currently, you guys have a different service center and like a difference of service centers receive email from different client. If I'm understanding it correctly, we have 18 service center. That is what I think we discussed at the very beginning. So if I'm not remembering it correctly, like, let me know. So you guys have like 18 different service center and each service center receives invoice from different vendors. Is that part correct or like I'm making a wrong assumption over there?
+
+>>Aleksander Larsen	03:57
+I don't know where. Did you say 18 or eight or something? 18, 18.
+
+>>Bikram Dahal	04:02
+I thought it was 18.
+
+>>Aleksander Larsen	04:06
+Well, no, that's not completely right. What I would say is that we're. Yeah, it doesn't it doesn't that doesn't matter. We have we have one way of receiving invoices, and I guess you can back me up on this one. Pretty much. It's just it's always determined by, like we say in document. Ok, so it's happening in different access points. But what's the same with everyone is that there is an organization ID linked with the way it's being sent in. And in most cases, there's also a client ID linked with the object being sent in. And I think.
+
+>>Aleksander Larsen	04:58
+In the case with the organization ID and client ID, when it's sent in that way, when that's available, we can solve the distribution ourselves via DocFlow. What we probably need, though, is to send the names, the organization IDs and client IDs with the file that goes to Docsumo, so we are able to pick up the right file on the other side.
+
+>>Bikram Dahal	05:32
+Okay, one question. If I remember it correctly, you guys have different projects on Abi, right?
+
+>>Aleksander Larsen	05:37
+Yeah, yeah. Okay, so you're right about that. Yes, but that's, again, Docflow doing the distribution to the correct projects in Abi.
+
+>>Bikram Dahal	05:52
+Okay, so is there a particular reason for having a different Abi and not having everything in one ABI?
+
+>>Aleksander Larsen	05:59
+Yeah, that's Abi. That's the limitation.
+
+>>Bikram Dahal	06:04
+Abi, not your side. It was a limitation from Abi. Okay.
+
+>>Aleksander Larsen	06:08
+Yeah, because you can divide ABI up in several different ways. You can use projects, which are the largest scale of thing you can do, and then that will be completely separated from other projects and other clients and organizations. And you can do by organization within the projects. You can separate the different organizations with their own templates in that project. So that's really what's happening there. And the reasons you divide the projects in Abi is usually because Abi is rather unstable. So if a project grows too large, it will become unstable. So that's primary reason why it's been split up.
+
+>>Bikram Dahal	07:10
+Okay, so then understood on that part. Anything to add on that? Okay, then help me understand on this part, right? So you guys, do you guys always receive this document? Okay, what is the center collection point of all of this document currently? Because if I'm understanding it correctly, you guys will be sending that information to DocsRemo through Api only. You guys will not be doing an email forward into Docsremo. Is that assumption correct?
+
+>>Aleksander Larsen	07:41
+Yeah, that's correct. Wait a second Vikram, is Martin not here? Sorry. I will just get our technical expert on this as well, because I can answer it pretty well, but he can give the definite answer on how it works.
+
+>>Bjørnar (Semine)	07:59
+I tried to text him And I can't see him. He was in the office earlier.
+
+>>Aleksander Larsen	08:05
+Yeah, okay. So he's not here even. Okay, I will do my best to explain it. But from how I know it is that everything is received in Docflow and it's distributed from Docflow. So that means that every file that is received Docflow and deemed to be an invoice based on the file, typical Pdf, and that has a valid recipient that's available in Docflow, we'll forward that file to Abby via Api. And in that file, there will be included information about the organization ID and client ID. So that's like a number string in that file. And then on the way out, Docflow will straight away know based on those IDs that are created where that should go on the way out.
+
+>>Bikram Dahal	09:08
+Okay. So if I'm understanding it correctly, Docflow is your own internal platform where all the documents get collected. It might be through email. One might manually upload it. That is not something that we need to care about. By some means, you guys will be receiving all the documents into Docflow. Now, Docflow will make an Api call into Docsumo. And when you make that Api call, you have two kind of Api calls. One kind of Api call is you already have an organization ID and client ID. So when you make an Api call, you guys can send that information to Docsumo. And you want us to make sure that those information is captured on our side and also send it back to you guys. When we send the JSON back, we might also have to do something.
+
+>>Bikram Dahal	09:57
+With that information. I'll not go into that right now, but just to make it very simple. When you guys make an Api call, you guys will send organization ID and client ID, and Docsumo should be able to get that information, get that information, do the processing, and send that information back to you guys on Docpro, so that Docpro can reroute it to the system. Is that understanding correct?
+
+>>Aleksander Larsen	10:22
+That's correct. I have to also say not only organization ID and client ID is sent, there is also a unique ID created by Docflow that's also sent, so you can identify this particular file. It's something we call document ID. I think it's as dumb and simple right now that the document ID is in the name of the file that's being sent from Api.
+
+>>Bikram Dahal	10:56
+That totally makes sense. Because we talked about a few things on the down, so that is one, where you only have organization ID and client ID, then you don't have to worry about anything. You just send that information back. It's fine, but there is a second case where I think... What does this second thing mean? Some customer can have multiple possible client pool. What does that mean? Yes.
+
+>>Aleksander Larsen	11:27
+That means that instead of DocFlow sending both the information of the client ID and the organization ID, that's also predetermined by the email URL they use. Each URL is unique to a client that's being sent to Docflow, but we have an option where we have an organizational URL that's created for the entire organization. At the time when Docflow receives a mail of that type, it doesn't get the information about which client we're talking about. Then it's up to Abby to distribute which client it is. What's happening then is that we have a list of all the available client IDs stored with the clients in Abby for this organization. Once it hits Abby and the Ocr is done, it finds the client. It has then picked out the client which has a client ID connected with it. When it's distributed out from Abby again, it then comes with the information back to Docflow of which client ID.
+
+>>Bikram Dahal	12:55
+Example in this case, first case is very clear. The document already has the client ID and the document already has the organization ID. If there's a client name, we can match that client name and send it to you, or you guys can do it on your side also because it's a match. The job over here is that both are present. Just send those information, take those information, send those information back to the system. You guys are sorted because you guys can do an easy match. Second case, you have an organization ID, but you don't have a client ID. For this, what will happen in Docsumo is that Docsumo will have a list of organization Id, client IDs, and then it will have name. Right now, I'll put it like database name because this is your database name. You have a name from invoice that Docsumo will extract. This is an extracted name. In this case, this organization has 10 different customers. Let's say it has customer ID 1, 2, 3, 4, and then the database name can be whatever. The job over here is that because this is not present, our job is to get the extracted name from invoice, match it with equal to, or we'll have fuzzy matching that will decide how that match and works.
+
+>>Bikram Dahal	14:37
+You do a fuzzy matching with this one. I'll name it organization IDs, client IDs. So, I'll go to the organization ID, client ID, and then
+
+>>Bikram Dahal	14:59
+Client ID, And then I'll go to a field name called database name. And then if I find a match, like I will just for now, I'll just do it. If I find it, I'll do this check. And if I find a match, then the output that you guys will get is going to be organization ID and client ID. So when I get it back, then both of them should be present. So I'll just put output from, sorry, like I'm just putting it so that everything is clear. Output from Docsimo should be for this, you just do equal to, because you don't have to do anything. You just need two values. Two values are already present. So you just do this. In this case, this is equal to this, and this is equal to whatever value that you are able to extract from this.
+
+>>Aleksander Larsen	15:55
+Exactly.
+
+>>Bikram Dahal	15:56
+Okay. Give me a second.
+
+>>Aleksander Larsen	15:59
+And of course, I want to add that we, well, I won't disturb you too much, but of course we know there's only a few select customer who has this feature. So we know who they are. And of course, in a perfect world, these customers are quite large customers. So they add new clients or remove clients all the time. So in a perfect world, you know, you'd have an automatic sync going of this.
+
+>>Bikram Dahal	16:33
+Okay. Understood. Solutioning, I'll come back to this on each of these cases, I'll come back to solutioning in a minute. First, I'll finish up the problem money, and then I'll present you the solution that we have. And if we don't even have a solution, then I'll tell you like, okay, we can build this. And then that will be ready in three weeks, four weeks, or it will be ready in next part or whatever. We'll come to that part in some time. Okay. Are there any case where you don't have over the side and also you don't have client ID?
+
+>>Aleksander Larsen	17:00
+No.
+
+>>Bikram Dahal	17:01
+Okay. So this case do not exist. So this case do not exist. Okay.
+
+>>Aleksander Larsen	17:11
+Well, we, we have them, but it's like, then it's purely handled in Docflow. It's never going to be forwarded to Docsumo.
+
+>>Bikram Dahal	17:21
+Then in this case, if both of them are empty, our job is just a pass back. So just pass back. Because I don't have a table to look after. I cannot do anything. So like, like there's no like, organization ID that I can look into anything. So I'll just send you back the same information and not do anything. Okay. Are there any other cases that I missed over here?
+
+>>Aleksander Larsen	17:43
+Well, there's a tiny add on to the, to the case where we don't get the client and that is that it is valid to send no value to Docflow as well. No client value. That's a, that's an okay outcome.
+
+>>Bikram Dahal	17:59
+So let me do the case, case two. This is called case two. I'll just put it here. One on the left. Cases one, two, three. The case two can have like two output. One is there's a match.
+
+>>Aleksander Larsen	18:16
+Yep.
+
+>>Bikram Dahal	18:17
+Then you send it as a match. You send it as a match.
+
+>>Jarl Arntzen	18:20
+Right.
+
+>>Aleksander Larsen	18:20
+So there's a match.
+
+>>Bikram Dahal	18:21
+Then you send both. There is like a partial match. Then we can also force people to, I'll come to that solution over there, is we can ask people to choose one of these saying that, okay, these are the possible values, but I'm not able to, even your casual and everything, you have five options from path option, choose one. So you force people to choose one or choose none. Right. So like to choose not like, so you force people to either choose, like give them an option of like matches into how much you get or none. And they can choose this one. The last one is that you did not find any option. So no match at all, even after threshold. Then you say that I just send it none because there's no point of me asking, because this can be made into a dropdown list in our doc symbol and they can choose so that we can decide later on. But for now, like we'll figure something out over there. And do you guys want to do this in Docsumo or not? It's a different story if you guys use your EBSkin. But basically over there is that if there's a match, you send both. If there is no match, then you have a woman in the loop to choose one. They can choose one or they can choose none. And then if there's no match, then they don't get an option. So it will by default be chosen as a none. And then they just go and approve the documents.
+
+>>Aleksander Larsen	19:38
+Yeah. And in the case of none, we also, we handle this in Docflow again, then the customer gets it back. They sort of get the message that we can't find any client, please choose one.
+
+>>Aleksander Larsen	19:55
+Then they do that themselves in Docflow.
+
+>>Bikram Dahal	19:58
+Okay, sounds good. So, let's fix it automatically select the correct client. This one is done.
+
+>>Aleksander Larsen	20:04
+Cannot determine the correct.
+
+>>Bikram Dahal	20:05
+This is done. So, Docsumo should have SS2 predefined list of clients ID for each organization. Understood. I'll come to that in a time. So, this is also done. If it cannot determine, then soon it to DocFlow. That is also done. Now, is there anything else on this that we need to discuss? Otherwise, I'll then I'll go now we'll go to solution inside other things regarding how we do it in Docsumo and like for each and each cases we'll go through like these systems. Okay, for the first case, it's very clear like a user. So, you already have both of this present. So, like, there is no thing to do. Like, you send this information on. And you can also send additional information over here. I'll also send the detailed documentation later on. When you upload a file, you can send the like metadata and document data. So, you can send this information as an organization ID and everything. If you have a unique ID, you can do it. When you get your data back, you'll get this exactly same without any modification, which will be good enough for your team. Okay, the first case is served. The second case, you'll do exactly the same. You'll send this information only. But when you send this information, because our system figure out that you don't have client ID, and you have to do a matching and everything. So, what we'll do is in Docsumo, we have something called internal database table, right on the product today on the product. Let me just quickly.
+
+>>Aleksander Larsen	21:42
+Yeah, I should have had this for Martin, but I'll try to explain it to him.
+
+>>Bikram Dahal	21:47
+So, I have seen the documentation. So, there's a proper documentation on all of this. I've already one email. I'll also make sure that this recording is sent to you. So, this is a place where you can come and you can upload your list of like your client list, like organization ID, client ID, and then you can also upload the client name. So, this can be uploaded from here manually, right? Or you can and if because like you said, you have to update it. So, you can like, you can also like you can also upload like you can also do this using this Api. Now, there's only one case over here, because I want to make sure that like, we like the system is better tested for that. How many organizations that do you guys have? And how many client ID that do you guys have? And do they need to be completely separated? What I mean by that is, example, and I think more likely you guys will need that completely separated. So, would there be a table for call organization 1, 2, 3, 4, and then there's one table. And there's a separate table for next, there's a separate table for this, or we can combine all of this and put them into something like this. Now, you go and put.
+
+>>Aleksander Larsen	23:05
+No, you would have to separate them.
+
+>>Bikram Dahal	23:09
+Okay. So, in that case, what is the total number of organization that you guys have?
+
+>>Aleksander Larsen	23:15
+The number of organizations in Semin right now is, correct me if I'm wrong, guys, but I think it's somewhere in the 250s to 60s, maybe active organizations in prod, there are test organizations and stuff, but to add to that, there is maybe not more than five who has this distributed thing.
+
+>>Bikram Dahal	23:47
+Okay. That's totally fine. And how many client ID can our organization have? Like Max, on Max, how many, like some organization might only have two or three, right? So, what is the Max client ID one organization can have?
+
+>>Aleksander Larsen	24:05
+Well, I mean, this is only pertinent for the ones who has the distributed one, right? So, but I can actually, give me a second, because I can sort of figure that out on the fly here. So, one of our bigger ones who has this has around, let me see, I'm doing a like fast check here, but it's somewhere in the ballpark of, yeah, I would guess that it's closer to 500.
+
+>>Bikram Dahal	24:47
+Okay. Then that's not an issue, because we are upper limit of 5 ,000 right now. So, I was just thinking if I could engine mainly change something. Okay.
+
+>>Aleksander Larsen	24:54
+So, that's fine.
+
+>>Bikram Dahal	24:54
+Good. So that is the limit. Sorry about that. I have too many phones on my side. Give me a second. Let me just close this. Sorry about that, guys.
+
+>>Jarl Arntzen	25:23
+Ok.
+
+>>Bikram Dahal	25:24
+Understood. So these are the things. And just to, because we'll have all the organization, and we'll have client ID, and we'll also have database, like whatever name that they have in database. One other follow -up question that I had for your team, on this first case, when you have organization ID and client ID, I know you can already get the client name on your side also. But in those case also, would you like Docsumo to send you the client ID, so that you don't have to do that sort on your side, or you don't have a strong preference on that?
+
+>>Aleksander Larsen	26:01
+I don't have a specific preference on that, to be honest, because I think, like, Abby right now is not doing any match on client ID in that case.
+
+>>Bikram Dahal	26:17
+Sure. In our case, then, we might, just to make it uniformity and everything, even in that case, we might send you that information.
+
+>>Aleksander Larsen	26:25
+You guys can either ignore it or use it.
+
+>>Bikram Dahal	26:27
+Because the thing I was telling to you guys is that we have something called database mapping. And using this, you can choose your tables and everything. And then we'll make a new field called client ID from database. So that will be a drop -down list, and it will match, and everything based on whatever information is extracted. So just for uniformity and everything, like even in all of these cases, even if these two are not present, we'll send it empty. So we'll make sure that those information are sent based on that.
+
+>>Aleksander Larsen	27:00
+Yep. Also would like to add that if both of those are empty, we will, of course, I would say 99 % of the times, not send you any file or information, Vikram. So it's not, I guess, you agree with that, Alfredo?
+
+>>Bikram Dahal	27:20
+Yeah, totally fine with us. That even makes things easier for us. So what do you call it? So I've sent some documentation. This needs a little bit of update, because this is an old design. So if you see, the APIs are fine, but this is a little bit of an old design. It will give you a concept regarding how it is done, but this is a bit of an old design, because we have made some new systems and everything. So just to give you guys that confidence, we have those which are already used by other customers for case like yours, and also case a bit more complicated. I won't go into that, but we use database table to handle all of those scenarios. And we already have all the APIs for you guys to automatically add new tables, add new sales, or remember all the client ID and organization ID and add new client ID and organization ID. So those can be done directly through Api.
+
+>>Aleksander Larsen	28:16
+Perfect. This is maybe a question for later, but I was wondering logically how it's solved within Docsumo, like how we segregate the different, how we make Docsumo understand that in those cases, it should not see or be able to pick any other client at least than belonging to this org ID.
+
+>>Bikram Dahal	28:40
+Yeah. So on that case, we have a workflow. So on that case, so right now I still have to go back and discuss a few things on this one, because usually what we usually prefer is that we have organization ID over here also, and we have those ID over here, and then we use a filtering system. So based on that filtering system, the dropdown option that you have is only if this organization ID matches, then you get a dropdown option of this. It will not go and look and do match on other. So that logic is based on that. But on your case, those organization ID are not here. They are outside because you have one file for each client. So because of that, how, I know we have done it for some client, but I have to figure out like how the team has done it for those client to get more idea. But if we could put all of those into one file, I already know how it is done, but because it's a separate file, I know it can be done because we have workflows and everything already in build now, but I'll get back to you. But basic idea is simple. Once document is processed, we decide which database table it can have SS2. And then after that, it does the fuzzy matching and all the other matching that you guys can decide. And that is how we do it.
+
+>>Bikram Dahal	29:53
+Usually that's that part is done because when the processing is done because you have to send the organization ID, those tables are assigned to the documents. Okay, any questions on on this thing that you guys had? I'll send you more documentation and everything like down the like road once I have some confirmation regarding that team and then like we can discuss more and right now you guys can quickly give you this to link just to get an idea about how it is done.
+
+>>Aleksander Larsen	30:25
+By the way, happy with the answers so I'll relay that to our guy as well, Martin. So that's that's good.
+
+>>Bikram Dahal	30:36
+Gerald, anything else?
+
+>>Jarl Arntzen	30:38
+No, no.
+
+>>Bikram Dahal	30:40
+There was one other thing that team had had asked last time regarding the validation because currently on our system it just says something is high and something is low But we do not have a way to give you the confidence score and we also don't have other way to tell you like why it was high confidence so what we have done is we have made a small change on our design this is currently design ready it will go into the system in next two weeks so give me a second Yeah So so what we are doing is that let me just And you Yeah So like when you for each and every field that has a green tick mark will give you a confidence will also let you know what is the threshold because you can set up a threshold on our Docsimo for 80 % 90 % and everything So we'll also give you that threshold saying that okay this is green because this is threshold and on top of that we'll also give you additional information saying that we have seen this document in your system previously that is what we call continuous learning that I showed it last time So if we have already seen this template and on that template this format was similar so we combined two things we just don't combine only one confidence because confidence sometime can be a little bit of tricky like no matter the what system you use so we usually have two system to tell if something is exactly properly or not right one is confidence second thing is have we seen this kind of document previously if I have seen it previously and the format of that the information on that document was similar to this format and the information on present on last document then we say okay
+
+>>Bikram Dahal	32:21
+This is high confidence so so this is example of high confidence right on low confidence we there's a confident number but this will not have a confidence number and everything So we'll give you like what vertical will also give you like if there is a in this case also there should be a value so let me say there is a value but we are not able to there are multiple of those value on the system or there is some confusion then we'll also say that of the confidence and my confidence is this and we're not able to there's a multiple value on the document or any other things that might be there so we'll also give you those agents let me show one other example and upper people manually like because you can use the CVS can on your system like if they manually come and look into this field and draw a box or do something then the confidence now will be changed to 100 % and now it will say that the value is 100 % confidence because it was manually viewed so like if something is manually viewed then the confidence everything else is removed we directly say that is 100 % confidence because it was manually viewed and the last part over there is like example this value is extracted but like the confidence score is low and also we have not been seen this template then you will you will get that information on the Ui saying that Okay and even if the confidence is 95 % I might like put this into like this one because I have not seen it in past so those all those information will be like showing it on the showing on the Ui so that you can decide like why it was low confidence can I go and change something example can I change for certain field you might see that or the confidence score is always always low then can I just go to setting and send that confidence threshold to like 70 % because it's not that very mandatory field or anything in this case you can go and play with that confidence score and thresholds and if there's a you know
+
+>>Bikram Dahal	34:13
+Yeah And if you have you know then you already have the errors.
+
+>>Bjørnar (Semine)	34:19
+Sorry Vikram could I just ask one question we might have asked this before but for example address field here which is not captured and the confidence was low and it says that it couldn't detect it in the document please review it Will we will we be able to train up so that for certain documents say we have 20 invoices where we can't find the by reference because there is no by reference at some stage will the confidence be high on that there is no by reference
+
+>>Bikram Dahal	34:53
+Yeah, 100%. So the whole purpose of this, right, the whole purpose of saying that document layout recognize or not, is that if in last three documents, I have seen that value to be empty, always. And, like, and then on the foot document also is empty, then we'll pass it through, we'll make it green, because we will say that, okay, we are confident because we did not see this value in the past, but on the fourth document, all of a sudden, I see a bio reference, then more likely that document will be highlighted. So even if the value is extracted, that document might get highlight will get highlighted, saying that, yeah, the value is extracted, I am highly confident. But in past three documents, I have not seen this value. So please go and manually view it. Right. Now, if you approve it, next document, like it will see the pattern now like a next document also has buyer buyer value, then it will like it will, like, do high confidence. But if it's do not see a buyer value, then like that, we need to do a little bit of experimentation, everything, then it might throw you into this one. So we see what fixes have you done on the last document, last three documents, and does it match with the pattern. And if you see any changes, the list is a bit long, I'm not showing it over here. This is just some examples. There are about seven different checks that happens. And now we and that also can be changed. So initially, we expect one of our customer currently is getting a Stp of 50%. 50 % of documents are going through without even a single check. And we're trying to get that into like 70 or 80%. And these are the things that will help us decide which of these can we make a bit more relaxed. Right. So those things will run to maximum and then decide once you guys have purchased, like enough, like invoice.
+
+>>Bjørnar (Semine)	36:38
+That's great.
+
+>>Jarl Arntzen	36:42
+Yeah. I would say, I may have some general feedback here. Yeah, I think, first of all, this is great. This is very, very good. So basically, you're doing the two things you need to do is you're saying, what's wrong? And secondly, what to do about it? Yeah. Then it's just down to details, like if you confirm something, like in this field, for example, if I confirm it, and then I decide that, oh, yeah, sorry, that was a mistake, actually. Yeah, it's not confirmed. Right. So I need some way to go back.
+
+>>Bikram Dahal	37:25
+Yeah. So on that case, example, if you do a confirm. So one thing I wanted to understand, are you guys looking into embedding this, like Docsumo into your Docflow or any of this system, or the people will come to Docsumo and fix this issue? Like where are people going to fix the issue?
+
+>>Aleksander Larsen	37:44
+Initially, we are thinking, it might have been overstated or understated earlier, but initially, we're thinking running with the flow that we have had previously. That means that the operator, in our case, our team in India, in Kerala, will review each of these invoices until, of course, the total confidence is good enough that they pass straight through. And then later on, we will look into the possibilities of self -service for the customers and or the possibility for them to go back with something and correct themselves.
+
+>>Bikram Dahal	38:31
+In that case, to answer the general question, so if someone has the SS2 DocSumo platform, then even if after they confirm, the document will move to the next site. So if you confirm, it will move from one to two, but you can always come back. So let me just show it to you and then change it back to. Give me a second. I only have one document, so I cannot go to next. It will just finish it up. But when I do confirmation, then it will go to the next document. In this case, it will just come to this page. You can always go back and then review this again. And then if you do review again, then you can come back and then fix the issue because it will be editable. And whatever people do is always recorded over here. So we have a log. So everything that people do, if they approve a document, bring it back, do any changes, you can always track it back and say that, OK, like why did people do? Why did they delete? Why did they approve? Why did they like brought it back to you? Right. So those audit can be done from here. So for people using Docsumo, this is doable. But let me say if you don't use Docsumo, then it's not doable. So this like let me say you just use this link because
+
+>>Bikram Dahal	39:51
+Link is valid only for this one particular document, right? In this case, if you approve it, then we don't have a way for people to, let me say, if you do confirm, then there's no way for people to go and do the, like, change it to, like, this will be on view only mode. So you cannot change it back. So if you are using either the URL, then we have to make a provision to have a separate, like, Api. You can use the Api to make it back to review. If you are using this URL, if they are in the platform, they can do it easily, no issues. But if they are using that link, then we have to do a little bit of work and maybe on the way to put a button, and that will call our Api, that will send that document into review, and then they can go and start doing the review.
+
+>>Jarl Arntzen	40:41
+Yeah, I mean, this is something we can return to. So just, I'm just really overstating very basic UIs and stuff, right? But so if, like, if you're doing some action, right, it's in general, it should be possible to undo that action or return to the previous state somehow, right?
+
+>>Bikram Dahal	41:03
+Yeah.
+
+>>Jarl Arntzen	41:04
+We might not need it very often, but of course mistakes are gonna be made both on field level and also on document level. So it should be, like, for most actions, it should be as quick to go back as it is to go forward, right? Yeah, so that's - I have Davis on my call.
+
+>>Bikram Dahal	41:30
+Davis is not on the call, but make sure that I'll pass that information. I totally agree with you. And that's the reason I got Davis, because you always have very good feedback. So I had my product manager, lead product manager to this call so that he hears that directly from you and he puts things on the pipeline. So yeah, sure. Totally understood, like, as well. And like, we'll get that feedback to the team and see, like, we'll look into what are the cases. Example, one of the cases you talked about is, like, people approving a field. Those are very easy to do because you can, like, do back. And one is approving a document. So we'll look into both of the scenario and see, like, where, like, we can make it further improve over there.
+
+>>Jarl Arntzen	42:16
+Okay.
+
+>>Bikram Dahal	42:17
+Jero, any other feedback for us?
+
+>>Jarl Arntzen	42:28
+No, it's, I think, just in general, I think we appreciate the work you're doing. And yeah, we really see that you're adapting and to our needs. So that's really great. Yeah, and when it comes to, I think we need to get to a point where we start, you know, hooking up our Api and start to, like, simulate actual use of this. And then we will get more experience by doing that. And of course, like we've done before, and this probably applies especially to B &r, we need, you know, the different categories of invoices, right? So invoices where we know both the organization and client already, and then the case where we have only the organization and we're missing the client and so on, right? So just to be sure that we can test all the features, right, the organization identification. Yeah.
+
+>>Bikram Dahal	43:57
+Okay, sounds good. There's one thing, Bhojneer, like, sorry, I know I might be butchering the name. I'm really bad with that. So I know there's one thing that is still not fixed and we are working to make sure that you don't have absolutely zero issue on that. I know few of the large invoices currently had gone to error. Majority of those issues are fixed, but I know still there are one or two documents that are large invoices that had gone to error and that are not fixed. It's already on our pipeline. Everything is done. A battle testing is remaining. So like, anytime in Docsumo, a file goes into an error, a direct message is sent to me on Slack. So I, seriously, because no file should go into like error. Like, so I know there are still two files. It's on my plate. I have been following up with my team because I'm not making excuses and everything, but you guys have from different countries and there's a major lesson in everything.
+
+>>Bikram Dahal	44:50
+Issue. So because of that, we handle more than 500 pages Pdf. But those Pdf are a bit particular, so there were a few changes to be done. So that are already in place. By end of the week, you should not face any issue on larger document. Either you already have uploaded, or even if you upload new, then we'll try to make sure that you have absolutely very less issue. Even if you have one or two, those are already on high priority. Like I said, I get a direct message on any error that happens in Docsremo on file processing, because I understand, for me, it's just one of the million files. But for a customer, it's one of the files that they need to process. Otherwise, the Sla and everything gets hampered. As you understand that, so we are working on that, and make sure that those things get solved by end of this week.
+
+>>Aleksander Larsen	45:33
+Ok.
+
+>>Bjørnar (Semine)	45:34
+Great stuff.
+
+>>Aleksander Larsen	45:37
+We have also discussed, I think, a lot around these big invoices. So we will also, in conjunction with implementing Docsremo, we will also implement new processes on our side to avoid useless huge invoices that makes no sense.
+
+>>Bjørnar (Semine)	45:57
+We want to limit it as well. We want to limit the customers receiving these 350 pages with a lot of.
+
+>>Aleksander Larsen	46:07
+Yeah, so we don't want to hit you guys as well with these ridiculous huge invoices. Ok.
+
+>>Bikram Dahal	46:17
+That makes sense. Thanks a lot for that also. Hopefully, I'll get a bit less of those issues. So those notifications even come at night, because currently I'm on Nepal. And then I have not fixed everything. So my team is really scared when that happens, because they know that this will disturb my sleep. And then I'm not that great if I don't get a good sleep. The team is also extremely careful. So we'll make sure that you guys don't have those issues over there.
+
+>>Jarl Arntzen	46:45
+Yeah. I think we should actually take care of our biological needs, Vikram. I don't know. Two seasons in the US. Sleep, stuff like that.
+
+>>Bikram Dahal	46:59
+I need to fix that notification. I've not been able to. I only came one week back. So I'm still figuring things out. I have not fixed that notification. So the team is a bit more careful now. But I'll make sure that notification gets fixed. And then we'll look into that next day. Because when I'm in the US, the team is here working during the night. So everything is properly monitored. So when I'm not in the US, then little things are there. So anyway, that's a joke. I was just trying to let you guys know about how seriously we take it. So yeah, awesome. I think I got one email from, I forgot the name, from the chief product officer. I think regarding the proposal and proposal.
+
+>>Bjørnar (Semine)	47:46
+Yeah, I think it's in the center email.
+
+>>Bikram Dahal	47:48
+Sure. I think there were two items to conclude. One was regarding the confidence code. Second thing was regarding that scenario that we talked about. Is there anything? I'll reply to that email with the detail and everything. Is there anything else we need to clarify, you guys? More on the tech side. Other side, I think the team will take care of it. Financial side and other things, they will take care of it. But on the tech side, let's say for these two things, are there anything else that we need to clarify to you guys?
+
+>>Bjørnar (Semine)	48:16
+I think mainly, Alexander and Alfredo, we have reached a state where we have covered most of it. Now it looks like the confidence score part will be really nice as well, more for our operators as well to understand the needs of each document. And probably there will pop up a few small things here and there when we actually start to use Oxymo, but that's when we will just keep you in the loop and discuss what we did. But currently, I don't know if there's any critical, technical issues or concerns we have. I don't know if you have some of those.
+
+>>Bikram Dahal	48:52
+The only concern that was the same thing we discussed, regarding that client organization Id and client ID. So I think that was the thing that was left, which I'll send it across. But seeing that those have been discussed and closed. Yeah.
+
+>>Jarl Arntzen	49:05
+Yeah, I think the client identifier, just to call it that, that will be key to many of our customers. Not that many right now, but more and more. And then we have talked a lot about the matrix invoices, and I think we've got a very good start there. But I think we need to explore it a bit more. I haven't been able to do that myself, really. But maybe we will send you another matrix invoice, including the desired mapping, just so you can have a look.
+
+>>Jarl Arntzen	49:49
+Have a look and see if you can get it to work. Maybe a couple of different ones. So then you can just figure it out on your side and see if the method you've chosen can still be used for those or if that has to be updated a little bit. I guess, I mean, my experience with stuff like this is that, you know, you have to run, you know, you have to do 10 of anything, right, before you can decide. So after you've done two or three, you see that you're going in the right direction and then you do three or four more and then you see that, yeah, it still works. And then you do the 10th one and you can kind of know that, yeah, that this actually works now. So it's, I mean, that's usually been my experience.
+
+>>Bikram Dahal	50:49
+I totally agree on your side because I remember my first client in Docsumo, like we were just doing the simple inverse processing and we didn't have a very robust system, the one like right now, like, and even the second Pdf used to fail and everything. And like you said, right, so it's, when we build that system and everything, it will work for, let me say, like for simple cases, 80 % of the cases, it will work, but that 20 % of the cases will have to work together and everything and make sure that we put a little bit of more effort so that those cases are really solved. And metric inverse is going to be the similar case only, right? So looking forward to getting more samples over there. We'll also run some experiments and also we'll try to see like which of those that we have learned can be passed down to you guys, because you guys are a bit more technical. It's not like other customers, because there are some customers in our Docsumo who don't care about what happens on the product. They just want the product, send the document, get the document back. They don't want to even know what happens in Docsumo. But you guys are different. You guys want to like, if there's something new, things and everything, you guys want to edit because your business is also a bit more technical, right? So we'll also make sure that the, if whatever we learned from like that exercise and everything, are transferred to you guys so that you guys can use those on the future invoices.
+
+>>Aleksander Larsen	52:07
+Perfect.
+
+>>Bikram Dahal	52:08
+Okay, sounds good. Sounds good. Yeah. So yeah, that sounds good. Like a really nice thing to you guys. One question that I had, did you guys get a chance to compare our equity number with the Yocoin system? Did you look into that or?
+
+>>Bjørnar (Semine)	52:25
+So the development has been a little bit delayed due to some sick leave last few weeks, but we are reaching that stage. We have tried the tool just to check it, but again, we will mainly use that tool as part of the project monitoring. So it will be a part of the prod to prod test and all these things. So as soon as we start comparing, it's more for us to just make sure that the capture done in DocsUMO is better than what we have for a client or organization before we kind of transfer them so that the customers doesn't experience any changes in the capture part. But I can keep you updated on that part later on, but we hope by the end of next week that the development part of implementing our needs in Docflow will be done so we can start some actual Api transfers in production.
+
+>>Bikram Dahal	53:26
+Okay, sounds good. Looking forward to getting those reports because like I said, only two things can happen from it.
+
+>>Jarl Arntzen	53:34
+We have already a good system and we are happy. Everyone celebrates. We need to improve and we improve and then the product becomes better. So I'm looking forward to getting those reports because that really is good. I cannot lose on that. So I'm looking forward to saying that either we improve the products even better. I give something for my engineering team to improve better. Hopefully that will not be a case or we already know that we have a better system. So that also gives us a little bit of confidence on us to make some like a claim with not on outside but with other customers saying that, oh, like people have moved out from Abi because we're 5 % better than Abi, right? So things like that because I like talking with a fact number, not randomly. So I would love to get those reports once your system is ready. Sure. Okay. Yeah. Manoj, I think you had a question. Yeah. So Bhojan, as Martin confirmed on his live channel, he had sent an organization and a client ID via Api, right? I just wanted to confirm that we received the payload, that data.
+
+>>Bikram Dahal	54:42
+And your team also can verify if we have received that information or not.
+
+>>Bikram Dahal	54:48
+When you pull that data to the waybook, when you get the data from Docsumo, if you look into doc metadata, you should be able to see whatever was in the website. So you can also verify from your side.
+
+>>Manoj Racherla	55:00
+Yeah, let me share my screen. Is my screen visible?
+
+>>Bjørnar (Semine)	55:03
+Yeah.
+
+>>Manoj Racherla	55:04
+Yeah, so he uploaded this file. So for this file, in the doc metadata, we received the organization and client ID.
+
+>>Bikram Dahal	55:12
+And was that also sent back like when the team got the waybook or the Api back and also confirm that either when you do a pull or when you do a waybook, can you make sure that this information also sent for this document ID?
+
+>>Manoj Racherla	55:30
+Sure, sure.
+
+>>Bikram Dahal	55:31
+Okay. Okay, sounds good. Okay, really excited after like a lot of things, like a lot of things and a lot of passions from you guys on the mistake that we made during the onboarding and everything. I'm looking forward to seeing things getting like on the final gear and looking, I know it's just the start, not the end, but Looking forward to like getting, because now that it's on the final stage on the Poc, it's more exciting, right? For both the team, right? So looking forward to that.
+
+>>Bjørnar (Semine)	56:04
+Yeah, we do the same. It's gonna be exciting. So we're looking forward to get going as well now. So obviously, Vikram, I don't know if there's anything you can just contact us on Slack or email.
+
+>>Bikram Dahal	56:17
+Okay, sounds good. Sounds good. Then I'll also send the same information to the finance, the sales team, so that everything is closed. They can close on their side. We'll close on our side.
+
+>>Bjørnar (Semine)	56:28
+Okay.
+
+>>Bikram Dahal	56:30
+Sounds good. Anything else, guys?
+
+>>Bjørnar (Semine)	56:33
+Nothing special for me, I guess.
+
+>>Bikram Dahal	56:35
+Okay. Okay, guys, then talk to you like in the coming week. Have a nice day.
+
+>>Bjørnar (Semine)	56:40
+Same to you guys. Enjoy Nepal, Vikram.
+
+>>Bikram Dahal	56:44
+Thank you.
+
+>>Manoj Racherla	56:45
+Bye -bye. Thank you. Thank you, Arun. Bye -bye.
+

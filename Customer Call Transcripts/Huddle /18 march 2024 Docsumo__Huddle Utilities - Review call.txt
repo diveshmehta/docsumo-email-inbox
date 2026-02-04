@@ -1,0 +1,129 @@
+>>Vishal Arya	00:06
+We're waiting for Laura to join.
+
+>>Vishal Arya	00:31
+She posted another email just now. Did you see that?
+
+>>Utsav Darlami	00:38
+No, let me check. I I don't see it in my. In my inbox.
+
+>>Utsav Darlami	00:57
+Sending you on your slack.
+
+>>Laura Tavares	04:12
+Good morning.
+
+>>Utsav Darlami	04:13
+Good morning Laura.
+
+>>Vishal Arya	04:15
+Hi good morning Laura. Alright, So yeah, we can get started. We just got your email Laura and me and Utsav we were just discussing the same thing so.
+
+>>Vishal Arya	04:26
+Yeah Utsav, would you like to give that a few updates and then we can hear from Laura like you know if there is any other issues that is there in in the queue.
+
+>>Laura Tavares	04:37
+Okay yeah
+
+>>Utsav Darlami	04:38
+So Yeah I will start. So regarding the last feedback that you had said on the Angelina bills, on the Southern Water and the Bristol bills. So I think on the Southern Water like the issue was on mostly on that meter reading extraction issue right. So I think we previously also had discussed about this issue. So our OCR engine is not able to like pick that decimal values due to the nature of that file particularly. So it's only seen mostly in the in those samples of Southern Water and Yeah And the recent email that you had sent also suggests some like is suggesting one solution. So like can you elaborate on that solution? I didn't properly get that what is the solution that you were like proposing for us.
+
+>>Laura Tavares	05:37
+Yes so as I mentioned on the email that I sent today, I believe that you guys are having issues with the meter reading especially the numbers after the decimal point. Me and Oli we were discussing and I believe it would be best to just add the numbers before the decimal point and forget about the the ones after. It's just to get this process just up and running as soon as we can.
+
+>>Utsav Darlami	06:08
+So basically we use this one that first part of the decimal point right like ignoring rest of the remaining part. Yeah. Okay got it. Yeah And yeah regarding the engineering builds like the issue with some of the files where it was failing to extract the charges value properly. Yeah so that has been like fixed. You can retry those two files that were on the reviewing and you should now see the proper extraction. Like it should show you the sum of all the Rv charges and the service charges. It should show you that on the engineering builds. And regarding the another issue was on the splitting for I think Bristol builds.
+
+>>Laura Tavares	06:52
+Yes.
+
+>>Utsav Darlami	06:52
+Yeah we are currently looking into that. So if you could if you have that original file it would like be great like we could see on what pages it is failing to like split. So the most splitting issues occur when there is the OCR issue. So some of the text being misread. So yeah The original file helps in that case for us to debug it and fix it.
+
+>>Laura Tavares	07:14
+Okay as I mentioned before to Vishal the ones that I've sent the ones that I initially said that we were having issues with the system not being able to separate the bills properly. I fixed them myself while I was working on it. So I don't have at the moment. But Georgiana she was working with 7Trent. No not 7Trent. I think it was Southern Water and I believe the same thing happened. Just yeah Georgiana just go ahead.
+
+>>Georgiana Olescu	07:46
+Yes while I was working with Southern Water. I sent the example it's in a picture. It clearly shows that the bills haven't been split properly for some of them. One meted bill was combined with one assessed bill. The readings they're not pulled out correctly. So for example it wouldn't read some of the digits. Let's forget about the decimal point because as Laura mentioned we're not interested in decimal points. But even the digits before the decimal point it's the system is not reading those. I think that they have the system has a problem with the number eight. It's very hard for it to read it and in some cases it adds a digit for some reason. So it adds digits or is not reading digits. But the readings from Southern Water are completely wrong.
+
+>>Utsav Darlami	08:57
+Yeah got it. Yeah we'll look into it and try to patch that up.
+
+>>Laura Tavares	09:07
+And I think Georgiana mentioned that the payment reference number. Was it picking up Georgie?
+
+>>Georgiana Olescu	09:16
+No the payment reference number is fine. Everything from Southern Water apart from readings is fine. The customer number is being pulled out correctly.
+
+>>Georgiana Olescu	09:25
+Correctly, payment reference, the meter number, everything apart from the readings, probably because the readings are in boxes, but it seems fine, everything apart from the readings and I think that splitting of the bills needs to be a little bit improved or looked into it.
+
+>>Utsav Darlami	09:48
+Yes, sure, currently we are looking into that only.
+
+>>Laura Tavares	09:52
+Okay and with Anglian water where it was, you mentioned that it's been fixed where for example in water charges they've got the two sets of charges that now is being added together, is that right?
+
+>>Utsav Darlami	10:11
+Yeah, it should work, so it was fixed previously also but for a few files the model was failing to pick it up. Now the models will pick it up properly, you should see a proper extraction.
+
+>>Laura Tavares	10:27
+Okay I've got another thing that came up, so I believe I was working with Bournemouth, it's either Bournemouth or Anglian water where we had two sets of meter readings, it was giving me the same issue again where it was picking up the first reading And then it was picking up the last reading from the first set, then it was not picking up the last meter reading from the last set and obviously if that is an issue the usage or the consumption in itself is going to be wrong as well. I can send you an example for that one, I believe I've sent it before But I'll double check And if I haven't sent it I'll send it again.
+
+>>Utsav Darlami	11:23
+Yeah, so when was the last time that you checked for that file, was it today only or like?
+
+>>Laura Tavares	11:29
+It was before we've raised the issues with this time.
+
+>>Utsav Darlami	11:34
+Oh okay, Yeah I think that had been fixed, anyways like if it's still persistent do like save the file, I will look into it and try to fix that.
+
+>>Laura Tavares	11:46
+Okay and when you actually ask for the examples, should we send the file to you and then you look at it or do you go into Docsnoah and check on the files that we have it on there?
+
+>>Utsav Darlami	12:02
+Yeah, I usually like check on the system only, so no need to like manually send the file, you can just upload it in the system.
+
+>>Vishal Arya	12:11
+Yeah, so Laura what you can do is you just upload the file and send us the file name that this is the name of the file, we'll search for it in Docsnoah platform and we will use it from there for fixing the problems.
+
+>>Laura Tavares	12:25
+Alright, perfect, Yeah that's fine.
+
+>>Vishal Arya	12:28
+Alright, so I think that is it like you know as Utsav mentioned about the fixes, now there is one release that we are doing on 20th of March, that is day after tomorrow, after that you know a few problems will be definitely solved, basically for the Angelin builds as he mentioned and the other split issues and the other issues where the data were not getting extracted. As soon as like you know Utsav work on it and we have an update on that, I'll share that with you.
+
+>>Laura Tavares	12:58
+Alright.
+
+>>Vishal Arya	13:00
+Alright, I think that is all, any other question Laura, Georgina, you have?
+
+>>Georgiana Olescu	13:07
+No not for the time being, no.
+
+>>Vishal Arya	13:09
+Alright, alright then thank you so much, thanks for your time, this was really helpful, I'll get back to you with an update.
+
+>>Laura Tavares	13:18
+Okay, perfect, thank you so much for that.
+
+>>Vishal Arya	13:20
+Thank you.
+
+>>Georgiana Olescu	13:21
+Thank you, bye. Have a good one.
+
+>>Vishal Arya	13:22
+Bye.
+
+>>Utsav Darlami	13:23
+You too.
+
+>>Vishal Arya	13:24
+Thanks Utsav. Yeah Utsav.
+
+>>Utsav Darlami	13:30
+Yeah. Oh.
+

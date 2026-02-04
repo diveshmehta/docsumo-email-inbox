@@ -1,0 +1,126 @@
+>>Bjørnar (Semine)	00:00
+You can explain me what exactly because I I check read the invoice line is getting generated do you want me to share screen Or Yeah if possible you can also share this Yeah I can so you can see my screen now Yes okay
+
+>>Manoj Racherla	00:32
+Yeah
+
+>>Bjørnar (Semine)	00:33
+So to do we have this that we have been testing out I think it was pure phishing Yes what happened when we uploaded this one is basically that the net total and VAT and total amount it's all fine it's capturing that one correctly from the bottom edge but when I go into the actual invoice line somehow it's struggling to get the net amount and total amount correctly and for this one value format should be number for the net amount and for the total amount it says error record on reference cell which I guess is the net amount and we haven't had any problems with this field and other uploads with the same basically formatting in the document and even when I try to remove the dots and replace the comma with the dots it's still not valid somehow so it's only for this document because if I go to a different one let's say we can try tech and energy services for Amstaden you can see here is a big big and for example here the formatting is this exactly same on the total amount But it's it's formatting it correctly
+
+>>Manoj Racherla	01:59
+In there can you open the invoice line of this can you just open it Yeah can you go to the net amount Yeah
+
+>>Bjørnar (Semine)	02:10
+It's so here it's all formatted correctly and even here as well the capture is able to format it correctly And it's the same for the pure fishing one that I showed you these fields are basically captured correctly they are formatted correctly but only on the invoice line level four these invoices
+
+>>Manoj Racherla	02:35
+Okay So I got it got it So I understood this so based on the second issue that you mentioned invoice line is not generated at all I thought that there was there is no records within the invoice line that is getting generated
+
+>>Bjørnar (Semine)	02:51
+Yeah So here is no invoice line
+
+>>Manoj Racherla	02:54
+No can you go to a team's chat once Yeah
+
+>>Bjørnar (Semine)	03:04
+No it's not this
+
+>>Manoj Racherla	03:07
+Yes this screen is only visible
+
+>>Bjørnar (Semine)	03:10
+Oh you can only see there sorry let me Uh
+
+>>Manoj Racherla	03:17
+Yeah you can stop and present it again can you see it now No no you have to stop the presentation Oh okay
+
+>>Bjørnar (Semine)	03:27
+Sorry I haven't used google meets in a while uh so if I go select the screen
+
+>>Manoj Racherla	03:35
+Yeah Now So you mentioned two issues right why we can't get correct formatting on amount plus total amount that you explained just me Right now invoice line the second one is invoice line is not getting generated I thought within the table there is no like rows that are getting extracted but it is getting extracted right the one row that is there
+
+>>Bjørnar (Semine)	04:03
+Yeah I see that one now I don't know maybe there were some issues yesterday that I couldn't get it up and here you actually have the same formatting problems got it got
+
+>>Manoj Racherla	04:15
+So I guess it it's happening like uh for some number of files it's not happening for majority of files but some minor files correct Yeah
+
+>>Bjørnar (Semine)	04:26
+That's true got it got it
+
+>>Manoj Racherla	04:28
+Okay I will check this at my end and one more thing So uh so we don't I wanted to like it within the microsoft teams our teams Yeah let's for for better understanding uh I was trying to upload like screenshots and images But I'm not able to attach it saying that uh when I sorry you need one drive to share files you see your admin about getting a license you You
+
+>>Manoj Racherla	04:59
+Okay can I share my screen once Yeah
+
+>>Bjørnar (Semine)	05:02
+For sure Yeah you can just you know
+
+>>Manoj Racherla	05:14
+Yeah It's visible now let's say if I'm trying to like send a screenshot for better understanding of a document if I clicking on it see it's attached Well
+
+>>Bjørnar (Semine)	05:28
+Oh okay I see what you can do because I guess it's because you're a guest in our Simeen teams channel things you can probably only write but what you can do you can just email me the files or attachments that you want And I can post them in the team's channel
+
+>>Manoj Racherla	05:46
+No we can for guest as well there is a provision of based on my understanding for guest as well guest can also share any images or any files if we provide permission you need to check with your admin once I don't know because I could add you
+
+>>Bjørnar (Semine)	06:13
+But I don't know if I can edit permissions if I have the access and administration role let me check here Yeah
+
+>>Bjørnar (Semine)	06:45
+I don't think I have permission to give older people more access
+
+>>Manoj Racherla	06:51
+Okay you can check with your IT team if once if it's possible Yeah
+
+>>Bjørnar (Semine)	06:58
+I can and as I mentioned if there's something you just want to show or anything you can also email me if that's Yeah
+
+>>Manoj Racherla	07:07
+Yeah That's right But it would be better if we like it could be faster as well if we like on teams as well if you post an issue you send the screenshot for highlighting that scenario like that
+
+>>Bjørnar (Semine)	07:21
+Yeah for sure I understand it's much easier Yeah I can show you one more thing quickly if you have time Yeah Sure just another document you can probably see a little bit of the difference But that's something we have discussed before that might be related or somehow maybe can be fixed in the same way But if you see this if I can find it now where is it Nordic Nest here Oh yeah Because we had for this example we have sent you before as well where the actual capture is quite good for like the first period let me check here on the total amount you see the formatting ends up correctly Yeah
+
+>>Manoj Racherla	08:29
+Yeah Yeah Yeah
+
+>>Bjørnar (Semine)	08:30
+So I'm so and suddenly here it just broke when did you upload it
+
+>>Manoj Racherla	08:38
+So so the table settings for your extraction for your type of extraction has been implemented on the auto learning doctor not on this doctor So that Yeah
+
+>>Bjørnar (Semine)	08:48
+This is just because we have the formatting part from previously so that all numbers should be formatted like this And it's on the first hundred and fifty lines and suddenly the formatting wasn't working So Yeah
+
+>>Manoj Racherla	09:04
+Okay I can see it was uploaded on third September Yeah
+
+>>Bjørnar (Semine)	09:10
+This one was Yeah
+
+>>Manoj Racherla	09:12
+And we had moved the fix around like after that So okay So that's the reason that
+
+>>Bjørnar (Semine)	09:21
+Okay Yeah I can try to retry the uploads Okay
+
+>>Manoj Racherla	09:26
+So whatever you want to upload in terms of suppliers docs and everything you upload it in this on the auto learning
+
+>>Bjørnar (Semine)	09:34
+Yeah sounds good Yeah This is the one we're working on now so that's perfect got it
+
+>>Manoj Racherla	09:41
+Okay I will quickly check with my team on that the thing that you mentioned regarding the invoice line of total amount and the net amount right Yeah that would be perfect great thanks thanks well done for your time
+
+>>Manoj Racherla	09:57
+Yeah, thank you. Okay, we'll chat.
+
+>>Bjørnar (Semine)	10:06
+Bye.
+

@@ -1,0 +1,690 @@
+>>Bikram Dahal	00:00
+Can you guys please bring Gerald on the team, please?
+
+>>Manoj Racherla	00:06
+Yeah, just bring him.
+
+>>Bikram Dahal	01:22
+I think the problem that he had was solved, right? I think I saw a message saying that he was able to write validation.
+
+>>Manoj Racherla	01:29
+Yeah, I had implemented it for one field, and it just replicated into the other fields as well. Ok. And it's working. And it's confirmed it on the mail as well.
+
+>>Bikram Dahal	01:42
+Ok. I think he wanted to go. Oh, OK, we have Gerald. Hello. Hi, Gerald, how are you? You are on mute.
+
+>>Jarl Arntzen	01:57
+Yes, hello.
+
+>>Jarl Arntzen	02:05
+Is it Husky? Ok, so I'm asking for a walk.
+
+>>Bikram Dahal	02:09
+Is it Husky or some other breed?
+
+>>Jarl Arntzen	02:13
+It's a bigger version, I would say.
+
+>>Bikram Dahal	02:16
+Oh, OK.
+
+>>Jarl Arntzen	02:17
+So it's a Malamute.
+
+>>Bikram Dahal	02:22
+Oh, OK.
+
+>>Jarl Arntzen	02:23
+So it's a traditional Eskimo dog used for transport.
+
+>>Bikram Dahal	02:29
+Oh, OK.
+
+>>Jarl Arntzen	02:31
+He's not as fast, but he's bigger and stronger.
+
+>>Bikram Dahal	02:36
+Oh, OK, makes sense.
+
+>>Jarl Arntzen	02:38
+So not for sled racing as much. Or he can be used for that as well, but he will not win. Oh, OK.
+
+>>Bikram Dahal	02:49
+I mostly like German Shepherd and Golden Retriever, that are my go -to dogs. I don't think too much, only two dogs for that. I like dogs, but overall these are the two that I like.
+
+>>Jarl Arntzen	03:00
+Yeah, absolutely. So yeah, it's not a very common dog, but it's very happy to be around people. So that's a very good thing.
+
+>>Bikram Dahal	03:13
+So in Nepal, I think you might know it, the Tibetan dog, what was the name of that? In Nepal, we call it Bote Kukur. It's like a very big dog, the Tibetan one. Like we used to have it when I was in a village, like the big one, which are like guard dogs, like very big. Give me a second. So his name is, and I really love those.
+
+>>Bikram Dahal	03:37
+Dogs But they are very dangerous like like Yeah Tibetan Yeah Most of most of right so this one like Tibetan mistake these are like really like um one that I really liked but very difficult to maintain and everything on like the weather when we we were back in Nepal on the Himalayan region then we used to have those hmm
+
+>>Jarl Arntzen	03:58
+All right Yeah Okay
+
+>>Bikram Dahal	04:02
+Yeah awesome Uh yeah let's go through the question that you had And then we'll take it from there uh
+
+>>Jarl Arntzen	04:09
+Yeah I should probably share my screen Yeah uh I don't and also on the call we have Sivam
+
+>>Bikram Dahal	04:20
+And I like the ways I have got a PM directly into the call so that they can like look into anything that you have and then make sure that they put that into their timeline so Yeah like if there's any or any feature to be able to like the team will take it Yeah
+
+>>Jarl Arntzen	04:33
+I think uh maybe I should start with um what we have been done doing lately Okay um so uh let's see
+
+>>Bikram Dahal	04:51
+Were you guys able to make that data set ready for comparison or that is still work in progress comparison um between our system and Abby or any other thought parties Oh yeah Yeah
+
+>>Jarl Arntzen	05:02
+Yeah um Yeah we are um we've come a reasonable way with the benchmarking comparison tool Okay um it is um I don't know if I could show you actually But uh Yeah anyways it is uh it is uh on that on its way So um we have um so when it comes to the comparison uh I think when the document type is ready um at least when it extracts everything that it should extract then we are ready for comparison But uh we of course we also would like to clean some of the values a little bit just to get them as similar as possible Yeah So that applies to the dates I would say also um Yeah So uh just a little bit about what I've been doing lately um uh so we have been trying out the training Okay
+
+>>Bikram Dahal	06:19
+Oh this training like Yeah okay The thing about this one is this is going to get sorry about that I think I should have like um this is going to get replaced like with the because with a extractor the continuous learning really works well so this training is just as a backup backup the old way of doing it uh like our only way of doing it you can actually use it I know there are few customers where this works really well But for your case where you have multiple language and everything this will only start working really well after you have thousand or two thousand samples So I will not expect a very good results out of this training um it depend on case by case basis if it's the same format it will do a very good job but if you are doing it between different format and everything this might not be best and it might cause more issues so I'll just let you know what is the best practice and everything in some time But we're just giving you a heads up on this right
+
+>>Jarl Arntzen	07:12
+Um okay So the new training uh how do we access it you don't have to do that
+
+>>Bikram Dahal	07:18
+So you don't have to do anything can you go to configuration can you if you go to configuration uh can you go to extraction And Yeah so the continuous learning is enabled so that will automatically do it you don't have to do anything Uh you can disable the baseline like baseline model so can you disable the baseline Right Yeah So now like now like it will work without any issue so you can like like this will first one it will just use the a like what you call ai to do the extraction and if you have approve a file for this the important part is you have to approve a file um the document has to be approved once you approve it if I see a similar template and if you have done some fixes on that template will automatically make sure that those issue do not happen on the second template so all this needs to be done um like like um we are also making one more dashboard that I can show it where it will show what is the improvement every week so those and everything feature is coming on and we are going to replace this training with that a matrix where you can see uh like those and on top of that you can also uh choose the model what I mean to say that is that apply compound to the model and change the prompt also and see what is the accuracy on those new prompts and everything so that's a new feature that is coming up but that will take at least four weeks so I'll not over promise you currently just to do a standard check between us and any platform you can do this
+
+>>Bikram Dahal	08:36
+And then check the accuracy. That should be good enough. For the context learning part, once you guys provide us the sample set, we'll make sure that we approve one or two documents of some of this template and make sure that the next documents are retried so that we can see if the context learning is working or not. So that one, we'll do it separately because it's a bit more time -consuming. So I'm not sure if you have a team, because you guys are directly competing. So for now, you guys can do on this setting. See the accuracy. After that is done, you guys can let us know the data set is uploaded. We'll just approve one or two samples of each and all of this document that you have, and then retry those files so that context learning will start picking up the mistake that was made on that one or two files. Right.
+
+>>Jarl Arntzen	09:24
+So I would just like to show you that we are kind of trying to be very structured here. So these folders here are structured by our customer, and then their supplier. So here's 20 invoices, which are all very simple. And they are all very similar.
+
+>>Bikram Dahal	09:54
+Yes.
+
+>>Jarl Arntzen	09:56
+They're all from the same supplier. So we have loads of these. So this is the way we will be testing, because this mimics how we expect the training to go. We expect that any new supplier will need some kind of initial setup or initial training, I guess. And then after a few attempts, three or four attempts, then all the fields will be captured. So that's one of the things I would just like to show you, is that we're structuring this by supplier and also by language. So here are a bunch of German invoices, if that was going to load. But OK, I guess not. Anyways, yeah, and also just to avoid too many disturbances, I have just disabled all the validation here, right? So I've taken all the validation steps and just deleted them. So this is just a copy of the original API invoice document type. It has the same fields, but here we only focus on the extraction part. So just to avoid stumbling in the validation part.
+
+>>Jarl Arntzen	11:37
+So all the validation has been removed here, right? So also, I'm just informing you just so you're aware. Yeah. So here we have the API invoice. Here we have the API invoice training. So the API invoice training is a copy of this one. And this one has the field validation intact. So yeah. And also, I tried to use the tips from Manoj, was it? Yeah. And that seems to work quite well.
+
+>>Bikram Dahal	12:33
+Yeah.
+
+>>Jarl Arntzen	12:33
+Although I'm a bit surprised.
+
+>>Bikram Dahal	12:36
+One thing, it works really well on the extraction. There's only one case, I'll just let you know. But you guys do not have to worry during the testing because you are just looking at the extractor, not looking at the document. So there's only one case where it will not work. And it's a feature. It's not a bug. But we are looking at the workaround. I'll tell you why it will not work. If the extraction, let me say, fails and you are not able to extract the correct field, you manually go to the UI. And if you do a selection, then sometimes converting that into normal fails. It only fails on one condition. If not failed, if it is a comma -separated, it will convert to dot -separated. If it is a space -separated, also it will convert to dot -separated. But if the amount has both comma and dot, and comma is used for decimal separation, then it will fail. It's just a case of it. So we are looking into how to handle it.
+
+>>Bikram Dahal	13:35
+So this case, if you manually annotate it, it will fail. And the way to handle it is you just remove the dot, then it will work. So there's one S case. It's a feature, it's not a bug, but we're just trying to figure out if there's a bug on this one. So just letting you know that is the desired expectation that we have, and we're looking into adding additional parameters so that it will also be fixed.
+
+>>Jarl Arntzen	13:58
+Yeah. Yeah, so when it comes to this type of formatting, I think I gave you some links, maybe, but it is very common, actually. It's more common than I thought. So here's examples of various different styles of formatting. And as you can see, we have a bunch of countries on this formatting, and then we have a bunch of countries on this formatting here. So quite a bit. So it has to be, especially within Europe, this one. Yeah, I mean, both of these, really, have to be. But hopefully, that will be possible to solve.
+
+>>Bikram Dahal	14:50
+Yeah, it's possible to solve, so not an issue with it, but we will anyway already figure something out on our side. Anyway, on extraction, because you guys are just testing the extraction, there's no issue. It will extract the way you want it. We have tested it. It works really well. Just like it's on the, because sometimes I expect for a certain field, the extraction to either pick up a wrong value or pick up the wrong value or be empty. Now, if it picks up the wrong value, it's empty, and you manually go to the UI screen, and if you select this value, then you will see an error. So anyway, like I said, it's something we already know about it because that's how we expect the doc separated to work because sometimes, otherwise, it has the S case anyway. Anyway, so that one, there's that S case. We'll send you some documentation on that one, but we're looking into, for this document type, can we, because we always know that this has to be converted into doc separated, and the logic I've told, the one logic that you have, and there are other logic that we have, we can use to convert that into that. So we'll add that into the system so that this particular document, we cannot change it across doc sumo because it will cause issue to other customers, but we'll try to figure out how can it be only done for your use case because just to give you a heads up, there is some, because we're engineers, so I'm talking from engineering lens. If this, the first prompt fails to convert it into number, then the cleaning box will not run. That was the issue because otherwise, there's no issue. For a string, it runs. For a string, because it's a string, you don't care about the format. So it runs whatever code is down, but for number and this one, if for whatever reason, the extraction is not giving the format that it's needed, and we're also not able to convert into the standard format, then the validation and the next step will not run because you cannot run, because all the validation, everything will be on number, right?
+
+>>Bikram Dahal	16:40
+And you cannot run that. So because of that, that's a case over there. Anyway, could not affect your training and everything, but if your team is manually trying to fix this issue, then it will have that issue, but like we'll, looking into that, we'll figure out a workaround and let you guys know. Yeah.
+
+>>Jarl Arntzen	16:58
+Okay. Yeah, happy about that.
+
+>>Bikram Dahal	17:01
+So on this case, one, Jill, I had one question for you, is that like, So I said that you guys are making a folder of different invoice and everything and making those, and you'll be making a folder, you'll be uploading, and then like, then you'll be doing the analysis, and then you guys will be making that final report. For that, have you guys finalized how many vendors, that kind of like, how many vendors that you guys will be starting to do that comparison report, or that number is not finalized? And is it an issue?
+
+>>Jarl Arntzen	17:30
+Actually, I do have some numbers for you. So I can just go back to looking at you instead. Yeah. Yeah, so currently we did some counting And we have around, 150 ,000 suppliers on PDF.
+
+>>Bikram Dahal	18:00
+150 ,000 suppliers?
+
+>>Jarl Arntzen	18:04
+150K. That variety of suppliers?
+
+>>Bikram Dahal	18:09
+Yeah. Okay. That's a lot. It's across the whole organization, okay. Because you guys told that you guys have a million dollar invoice coming through, and then like on the million dollar invoice, you have 150 ,000, means on average, one supplier have 10 invoice.
+
+>>Jarl Arntzen	18:29
+That's usually like - Sorry, maybe I didn't catch your question. So did you ask me?
+
+>>Jarl Arntzen	18:34
+About the number of?
+
+>>Bikram Dahal	18:36
+No, no, what I'm trying to figure out is that for this test purpose, are you guys going to take a top 10, top 100, or top 50 vendors? Or like how are you guys going to test this system? So you have two folders, right? So there will be like 10 of this folder, 20 of this folder, 100 of this folder. Just wanted to understand that.
+
+>>Jarl Arntzen	18:58
+Yeah, I mean, the plan is to, you know.
+
+>>Bikram Dahal	19:02
+But testing only, I'm not talking about testing.
+
+>>Jarl Arntzen	19:03
+So we have soon three customers who have signed and agreed to share their invoices, right?
+
+>>Bikram Dahal	19:13
+Ok.
+
+>>Jarl Arntzen	19:15
+So from those three customers, we will take the top 10, maybe, suppliers.
+
+>>Bikram Dahal	19:23
+So it will be top 10 of each, so it will be top 10, 30 customers, 30 suppliers.
+
+>>Jarl Arntzen	19:28
+Yeah, 30. And maybe like 20 invoices each, right? 600 invoices, right? Just to make sure that the training works across that many invoices, right?
+
+>>Bikram Dahal	19:46
+Ok.
+
+>>Jarl Arntzen	19:48
+So just to try out, how does the training work? Does it work across that many suppliers? And I suppose it will. And it's going to be suppliers from many different countries, from all the Nordic countries, Norway, Sweden, Denmark, Finland, and also from Germany and Poland. Yeah, Poland. Yeah, Poland, it's going to be Poland. So that's what we're going to do manually, right? While we explore the extraction quite a bit.
+
+>>Bikram Dahal	20:25
+Yeah. Ok.
+
+>>Jarl Arntzen	20:28
+So that's what we're going to do. But when it comes to the real volume, right? Real volume is 150K different suppliers this year, right?
+
+>>Bikram Dahal	20:42
+Yeah.
+
+>>Jarl Arntzen	20:44
+So it increases about by roughly 5 ,000 5K suppliers every month.
+
+>>Bikram Dahal	20:53
+Ok, makes sense.
+
+>>Jarl Arntzen	20:56
+But in reality, what happens is that we get a new big customer and suddenly we have 20K additional suppliers, right? That's what really happens. So it's going to be very intermittent, I would say. It's going to be like, nothing happens, nothing happens, nothing happens. And then boom, we're going to get a new customer and it's going to be 20, 30K new suppliers. And it's going to be a couple of hundred thousand extra invoices, right? Going through.
+
+>>Bikram Dahal	21:32
+Oh, sure.
+
+>>Jarl Arntzen	21:33
+On the first day, it's going to be like typically 20K invoices maybe, right? From unknown suppliers or from suppliers that Toksui Motors hasn't seen before.
+
+>>Bikram Dahal	21:50
+Yeah. I totally agree. That's the thing. When you did that foldering, I was just trying to figure out the end of this over there. So what I mean, sorry if I'm confusing on this part, because on your one folder, you had an invoice of the same supplier, like 50 of this were similar template. So I was trying to figure out that is how you guys would be testing. Or that folder itself can have three or four different layouts of different vendors. So I was just trying to like think from that.
+
+>>Jarl Arntzen	22:24
+No, it's going to be one supplier per folder.
+
+>>Bikram Dahal	22:27
+Ok. That even makes our life easier and everything. But in real life, when you go into production, you guys will not be making a folder because you will not know the supplier by default. And you will also do the same thing like when you do the folder. Because if that is the case, then one thing becomes really easy for us. It's on technical side, more to like figure out that, OK, if this folder, if the document is approved, then I can use that to do the continuous learning. I don't have to. Because in our case, what happens is people send a lot of document to us. And they'll not make a folder for each and every supplier. And then they'll just send the file. And our job is to figure out the supplier. And based on that supplier, figure out what was lastly, what was improved, and then make sure that those improvements comes to that file. So on production, for this, understood? Like our idea, so I'll also talk with the team and make sure that everything is set up so that we can have a better accuracy on this part with this logic. But in real life, when it goes into production, you guys are not making a folder for a supplier, right? You just will be uploading invoice that comes for that day. And then, like, that's it.
+
+>>Bikram Dahal	23:33
+And then we have to make sure that whatever improvements that was done is automatically applied. So I just wanted to understand that is a case or not.
+
+>>Jarl Arntzen	23:42
+Yeah, that's mostly going to be the case because, yeah. And personally for some suppliers, we're already going to know it at the time of, or.
+
+>>Bikram Dahal	23:52
+You can always, so for those supplier, where you already know it, you guys can always send it at a limited amount of data and we can use it. And if there is no customer, then we can go back to our system. So that also might be a good way, because like I said, right, people ask me this question. Should I use auto classification or not? My question is very simple. If you already know document type, then don't try to use auto classify, because there will always be that little bit of places where it will make mistakes and everything. If I have a 99 % equity, which is very good, but 1 % might not be accurate. So if you already know the type, then don't, like, if it will help us, then don't try to use auto classify. If you don't know the type, then use the auto classify. Same thing is with this supplier. So if, and this is for future, not for today. For today, you guys are going to use folder only, but future also just to give a heads up over there. Maybe if you guys already know the supplier, then it might be better to send that information to the metadata, so that on our system, when I do the continuous learning, or we do some things over there, then those are like, we don't have to do one more step to figure out the supplier and everything. And those supplier anyway, is going to be a bit more robust. So anyway, we'll come to that in a minute. Just give you a heads up for future design, so that if you can get that information on our system through metadata, that will really help us on a few things. Yeah.
+
+>>Jarl Arntzen	25:03
+Yeah, I mean, I can basically describe these scenarios in text. I think I've done this verbally before, but I think, you know, we have the ideal scenario, right? Where we have a rich or very detailed invoices with precise information. And we have the bank account number and we have the VAT number, right? That's essentially all we need to identify the supplier. And as soon as you, as long as Docsumo can extract that, then everything is fine, right? And then we will have some invoices where the quality, the invoice quality is very low, extremely low. And we will not be able to extract maybe, you know, maybe the bank account number, maybe the bank name, maybe just the supplier name, stuff like that, right? And also in our system, we will also have low grade supplier information, right? If these might be, I don't have any really good examples, but in China, typically in China, that's really the type of invoices we get from China contains very sparse information and typically only the supplier name or and street address and stuff like that. So for those cases, then again, it's kind of the same job for you. You just extract whatever you can and then give it to us. And then we try to figure out which one, which supplier it is.
+
+>>Jarl Arntzen	26:53
+But eventually it will be, it will be useful if you have some kind of mechanism where we can, so at the time of invoice reception, we know one thing more or less for sure is the invoice customer, right? Because our customer, sorry, I'm just a little bit tired. So our customer uploads the invoice or they submit the invoice to a particular email address. So that email address is unique for every customer. So that means we know the customer And we also know the, and each customer has maybe only 5 ,000 suppliers, 200 or maybe like a thousand suppliers, right? So the scope is reduced quite a bit when it comes to the number of possible suppliers. So maybe that's a mechanism we can collaborate on, right? If we know the customer, we can have some way of syncing that customer's list of suppliers to use and maybe that can help you in extracting the correct supplier.
+
+>>Bikram Dahal	28:24
+Yeah, no, that doesn't make sense because we do that with a few set of customers, not on the, like not like we have like,
+
+>>Bikram Dahal	28:32
+Like what you call 20 ,000 or 30 ,000 supplier, because the supplier list can be very long, like it can be 100K. And doing a source on 100K is a lot of complicated steps and everything, like this one. I think we're able to reduce that and say that, okay, this supplier, a possible list is just this, because you will have a flag. So on the database that comes to us, it will have a one column that says supplier 1234. And if we just have two slots between 1234, then like it reduces a lot of things on our side. And for you also, it gives you a high quality data, because some supplier might have like the same thing and everything. So it's always better to reduce that scope. I totally agree about that. And that is, I think, the way we'll go about it once we go into the production cycles.
+
+>>Jarl Arntzen	29:18
+Yeah, yeah. So that's gonna be interesting from the next week onward, I guess. I guess we can give you some data. You can tell us how to, you have already told me that I can include some references in the metadata. Maybe I can refer to some sync values already, whatever, right?
+
+>>Bikram Dahal	29:45
+So - I have an idea or something like, something that will be useful.
+
+>>Jarl Arntzen	29:48
+So this is an area where you have to guide me a little bit. I, you know, it seems like, you know, you have some kind of support for this, but it has to be the supplier list has to be synced via API, I would say, right?
+
+>>Bikram Dahal	30:09
+It's through API.
+
+>>Jarl Arntzen	30:10
+Yeah. So if that's doable, then of course we have the data and we are very happy to share that list. Okay.
+
+>>Bikram Dahal	30:20
+Totally makes sense.
+
+>>Jarl Arntzen	30:22
+So, but again, it's just a question of who does the matching, right?
+
+>>Bikram Dahal	30:28
+Yeah.
+
+>>Jarl Arntzen	30:28
+So either you can just extract everything and we can do the matching or we can give you the matching data And then you can try to pick the best one. So it's both ways will work.
+
+>>Bikram Dahal	30:43
+Yeah, we might even do both, just to make sure that, because our matching might be a bit different than your matching. So like, maybe like we can do both and then take a final call, whichever is easier to maintain or longer.
+
+>>Jarl Arntzen	30:54
+So even if you do the matching, then we do our own matching anyway. And if we agree, then yeah, thumbs up. We have double checked now. And if we disagree, then, you know, that's a good reason for the customer to double check, right?
+
+>>Bikram Dahal	31:07
+Yeah. Totally makes sense.
+
+>>Jarl Arntzen	31:10
+So those are possible mechanisms, right?
+
+>>Bikram Dahal	31:14
+Yeah.
+
+>>Jarl Arntzen	31:15
+Okay.
+
+>>Bikram Dahal	31:15
+Coming back to this one. So on this one, so, okay. So like, how do you guys have to test it and everything? Because I think the training kit, a little bit confusing. Simple, the way you are doing it is good. Like you guys make a folder, you guys upload a file and then like, and the only difference that I would say, Gerald, is once you guys have uploaded all the files, like all the files, one thing I would ask you guys to, before you guys run your evaluation and everything, let us know once, we'll just go through, like we're not reviewing everything, we just want to make sure that, because some of this thing, like some of these things, like if the format and everything is wrong and everything, let us know, we'll just see if we can change a few things over there so that you get the good extraction. So we just want to go through one round of checks once you guys like upload the files. Then there's one more check that we'll do. I'll just give you an idea of what we're going to do, is that once you guys have done that, then to see how the continuous learning and everything works is that, finally, if you go to a folder, can you please go to the folder once? Like, can you close this and go to a folder? That you have, yeah. Can you go to, yeah, so on the folder that you had shown me for the training purpose that you had, right, so on that.
+
+>>Jarl Arntzen	32:28
+Yeah, let's go to this one.
+
+>>Bikram Dahal	32:30
+Yeah, usually, yeah, So you can go to one of these, yeah. Over here, usually what happens is that, like in real life, what happens in real life is that you'll receive one bunch of invoice and you'll receive the next invoice next time, next time, next time. And the most important training is that once I pick the issue on one file, the issue should not happen. Next time on, when I receive this invoice next time, next month or sometime, the issue should not happen. Right, so the continuous learning part only works because when the continuous learning is running, it will check for the document that is processed. It will not check for the document that is on review. Now, if all the files are uploaded at once, let me say you go and approve, because you have processed one document or two documents, then the continuous learning has not kicked in. So the best way to kick in the continuous learning is first you upload a few files. If you have 20, then you upload two or three of these files, approve those documents.
+
+>>Bikram Dahal	33:31
+Only you upload 17 of those. Because then, when you upload that 17, the three documents are already processed. So the system will understand that, OK, I have already seen the template like this. Here, this was the kind of mistake it was happening. And the picture that Tim has done. And therefore, for this 17, it will make that up. Make sure that those mistakes are not made one more time. So that is how the continuous learning or the training part works on. So I want to see both the systems. First, you just upload it, see the accuracy. After that, what we'll do is that we'll come and we'll process one or two of this file. And retry each of the files. Because if we retry, then before doing the extraction, it will see that continuous learning. And it will try to figure out if there are already approved documents of this type. And then try to learn from this and do it. So one thing we might do after this, like I also told you last time, is like you can do this on the same account or you can do it on a different account. But what we'll do is that we'll be uploading this in batches. Upload a certain set, approve the document, and then only upload the rest of the sets. So that we can know what is the accuracy just on pure extraction? What is the accuracy after I do some fixes? So that in real life, if I've already, the manual annotator have already fixed the issue, the next time the accuracy should improve. I should not be making the same mistake. So that is one test that we'll be running. And so that we can get both the accuracies.
+
+>>Jarl Arntzen	35:07
+Yeah. So this is the method that we've been using anyway. So we have uploaded one invoice. We have corrected it. And then we have uploaded the next one. I see that some of the invoices here were uploaded at the same time. So at least we did that in a different folder. I'm not sure about this one, why that didn't happen on this one. But we tried uploading one invoice at a time. And at least that's the method we've been using. And if we have sometimes uploaded all the invoices at once, we have used this retry mechanism.
+
+>>Bikram Dahal	35:50
+Okay, you post this one And then you retry. Then that also works, right? As long as like there are some posted document for that and you try it, then it'll work.
+
+>>Jarl Arntzen	35:57
+Yeah, so we have assumed that retry is kind of the same as the invoice on the first time. So I'm aware that once we make corrections, then we will have to let the model be trained and then we'll have to upload the next one. So we're aware of that. So I was thinking like, you know, maybe it takes one minute to train the model or something. So.
+
+>>Bikram Dahal	36:26
+No, no, as soon as you approve, that model will go back to the system and next time the document is uploaded, it goes through the system. So initially we had this training where you had to upload 20, 40, 40, 50, then it will train like automatically on some instance, but that now we are duplicating it because the models that we have built and everything are really good on the first try itself. And then like we use QSAP learning and everything to make sure that the continuous learning happens automatically. So yeah, looking for like, so you guys don't have to wait or anything, you just approve it and then you can retry the document or you upload that and then the system should work.
+
+>>Jarl Arntzen	37:02
+Yeah. So, you know, since we just only, sorry, here we are, right? So since I only switched off this at this time, I will retry some of the, I will run retry on some of the documents and just see what happens.
+
+>>Bikram Dahal	37:18
+Sure.
+
+>>Jarl Arntzen	37:18
+Should I just start from scratch or?
+
+>>Bikram Dahal	37:21
+No, no, this one, like if we have, if this document are properly processed, like then you can just like choose, like just keep a few of these documents like that are processed and yes, you can retry. Also you can select all at once. So can you do one thing? Can you go to the name and select all at once? Name, you can, yeah. So you can select that. You can also go to the next. So example, you have 43 over here. So, and all of these documents are properly viewed, right? What I mean to say that you guys have gone through, it's an every.
+
+>>Jarl Arntzen	37:54
+I think we'll have to do it a little bit step by step because we have some particular errors that we would like to observe, you know. So, but we understand the point.
+
+>>Bikram Dahal	38:07
+Sure.
+
+>>Jarl Arntzen	38:08
+Okay. So very good. I think, so, I mean, this is very good information. It confirms what we have initially assumed. It's very good to know about this one, of course. And then as you can see, we are quite, we're trying at least to be quite structured.
+
+>>Jarl Arntzen	38:32
+I have some questions when it comes to the field setup. So, let me just try to be quite structured here as well. I might not be able to reproduce this now, but, or hang on, I'm just a little bit, yeah, here we go. So, here's the thing that confuses us quite a bit, right? So, in DocsUMO, there are many ways of testing the fields.
+
+>>Bikram Dahal	39:33
+Okay.
+
+>>Jarl Arntzen	39:33
+They're all nice to use. They're all, all the test mechanisms are really cool.
+
+>>Bikram Dahal	39:40
+Yeah.
+
+>>Jarl Arntzen	39:41
+I will just go through them one by one, but just to, so you know, we have downloaded the JSON from here.
+
+>>Bikram Dahal	39:49
+Yeah.
+
+>>Jarl Arntzen	39:51
+We have, yeah. So, inside the field editor, we can, we can click here. I mean, I'm explaining it to you as if you don't know, but so we can, we can run tests here.
+
+>>Bikram Dahal	40:17
+Yeah.
+
+>>Jarl Arntzen	40:18
+This is really nice. You know, I just have to emphasize, you know, this is, this is very, very comfortable when we develop the template, right, or the field settings.
+
+>>Bikram Dahal	40:31
+Yeah.
+
+>>Jarl Arntzen	40:32
+Really comfortable. I can see the result here.
+
+>>Bikram Dahal	40:34
+Yeah.
+
+>>Jarl Arntzen	40:36
+And at this point, everything seems fine because here it's extracted with the correct punctuation, right?
+
+>>Bikram Dahal	40:44
+Yeah.
+
+>>Jarl Arntzen	40:46
+Or the correct, as a float, right? It's extracted as a float, even though it started not, Oh yeah.
+
+>>Bikram Dahal	40:56
+Yeah.
+
+>>Jarl Arntzen	40:56
+Yeah. It started out as one dot two, three, four, comma five, six, right? Or it's rather, Yeah, it's this one, right?
+
+>>Bikram Dahal	41:06
+Yeah.
+
+>>Jarl Arntzen	41:07
+Now it's extracted perfectly, right? And then I go here and I run my custom code or it's not in mine in this case, and it's true and everything is fine.
+
+>>Bikram Dahal	41:20
+I think.
+
+>>Jarl Arntzen	41:20
+And I go here. Yeah, this will probably not work at this point. And I can do the same for this one. And then I can also run, so this is field by field test, right? Yeah. So all that, you know, the field by field test seems to do the extraction perfectly without any corrections. Okay.
+
+>>Bikram Dahal	41:46
+Yeah.
+
+>>Jarl Arntzen	41:46
+I don't have to clean anything, right?
+
+>>Bikram Dahal	41:48
+Yeah.
+
+>>Jarl Arntzen	41:48
+No cleaning necessary.
+
+>>Bikram Dahal	41:52
+Yeah.
+
+>>Jarl Arntzen	41:52
+And then I do this one. That takes a bit longer, of course.
+
+>>Bikram Dahal	41:57
+Yeah.
+
+>>Jarl Arntzen	42:04
+Sorry about that.
+
+>>Bikram Dahal	42:06
+It took a bit longer, yeah. Okay.
+
+>>Jarl Arntzen	42:14
+So, and now I can still see that, yeah, cool. It's, you know, perfect.
+
+>>Bikram Dahal	42:20
+Yeah.
+
+>>Jarl Arntzen	42:21
+Perfect, perfect, right? Everything is fine. Yeah. I go to the JSON tab and now I see you know, some type of JSON, right? It's not the extracted one really, or it's not the one, I can see these values here, right? Yeah. That's not the right ones. Here we are.
+
+>>Bikram Dahal	42:41
+Yeah.
+
+>>Jarl Arntzen	42:42
+So these values here, still perfect, right?
+
+>>Bikram Dahal	42:45
+Yeah.
+
+>>Jarl Arntzen	42:47
+But the problem now is that this is not the JSON that we're getting through the API at all.
+
+>>Bikram Dahal	42:54
+Yes, yeah.
+
+>>Jarl Arntzen	42:56
+Yeah. So this confuses quite a bit. Right? And to me, you know, I assume you're using some kind of more like faster model here or something like that, or some faster type of extraction that is not the same extraction as we get when we, you know, when we go out from this phase, right?
+
+>>Jarl Arntzen	43:29
+Then if I do an extraction here. Now that's a different extraction.
+
+>>Bikram Dahal	43:42
+Yeah. I'll take that one. I know like this issue has been raised by the PM team also. Let's take it once, but after you take the document, that should not be the case, but I'll check. Like, I know like when you say it, I -
+
+>>Jarl Arntzen	43:57
+Yeah, just to quickly show you, right? Yeah. So if I now open the invoice, which has been processed.
+
+>>Bikram Dahal	44:05
+Yeah. Yeah, I kind of forget what other - No, no, no, I know what was happening and what is the issue that you're facing. I'll explain you two things. The first thing over there is if you go to the extraction, the JSON that you see over there, it's the same JSON only. The only difference is that we have removed the position information and everything from there. But I think I understand your point. It can be a bit confusing because on this JSON, you have position, you have confidence requirement and all of these things. On the testing phase, you have removed it because usually people don't care about, that was just a visual thing only, but it can be confusing because people think that, oh, this is a JSON that I'll be receiving, but in reality, when they receive a JSON, they receive a JSON with position information, maybe required and all of this information, but on that UI, that was not the same. So that is the part of one confusion, I agree. Second part of the confusion might also happen is, example, in this case, it's working fine, but sometimes it will not work. It will work on when, if you go inside, it will work, but when I do all the document, it might not work. All right, so that one, I'll just check with the team and see if there's any difference that is happening because the only reason it might have a difference is because usually when you do a testing, usually we give user a standard model. We don't give advanced model. So everything is being, so if you go back to our configuration, can you please go back to configuration? If you go to extraction, you have three models, right? Basic, standard and advanced. So what happens is that usually the testing and everything happens on a standard model and because you have an advanced model enabled, so maybe there is a little bit of like, and also maybe because of base model.
+
+>>Bikram Dahal	45:52
+So can you disable base model on this? Because base model sometime will do that. Now you should have this of this issue. I'm not saying that you not have a issue, but now you should not have a issue because it will always run this model. There actually might be a small bug where whenever you are doing all of these things, it's using a standard model because you need to be fast, like you said. And when I do the extraction, I use advanced because it's a bit big, it's a bit more complicated and it has all the things. So there might be a little bit of difference, but should not be that much of a big difference. I'll check with the team, I'll get back to you and make sure that those difference are not there.
+
+>>Jarl Arntzen	46:24
+I, you know, I think I can say pretty quickly that I really need the model to be the same.
+
+>>Bikram Dahal	46:34
+Yes.
+
+>>Jarl Arntzen	46:35
+Both in the editor. I mean, I'm happy to have a setting for it, right? I'm happy to have a setting that says extraction And then it says field editor extractor And then you can choose something there. And then it says Ai or, you know, the normal extraction And then you can use another model, right? I'm happy to do that. But so far what we've been doing, we've spent quite a long time before we sort of understood that, oh, okay. You know, it's like when we edit the fields, we get one result. When we do the actual processing, we get another result, right? That took us quite a long time, right? Now we know. But I would definitely say that when I'm editing fields, right? You know, even if the advanced model takes 30 seconds longer or one minute longer, right? Yeah. That's a lot shorter time than what I've been doing or using when I'm switched back and forth and compared and, you know, try to figure out why does it, you know, why does it clean the fields here and not here? And, you know, so, you know, that type of confusion has cost us, I would say, hours. So, yeah.
+
+>>Bikram Dahal	48:01
+I mean, that's been my feedback.
+
+>>Jarl Arntzen	48:03
+I have to know that it's the same in the field setup. It has to be exactly the same as in the real processing.
+
+>>Bikram Dahal	48:13
+100 % I agree, Gerald. I'll just quickly check on that. That's also my assumption that I have made just because the issue has been faced. I'll make sure that, like, that is a pass to the system. And whatever you choose on the extraction will be same, will be used both for testing purpose and also for the...
+
+>>Bikram Dahal	48:28
+The extraction purpose and also for all training purpose, I will make sure that that part is like, that part is like solved on our side. And one other reason might be because of the base model also now that base model also like you have disabled it, I think you should have a same, same extraction on all the places, no matter you do it here or even if you do on the training.
+
+>>Jarl Arntzen	48:49
+Good. Yeah. Cause that, as you, as you probably understand, you know, for us - For you, the most important thing is predictability, like systems are not predictable. Yeah. It's, yeah, exactly. So predictability, you know, and just to take one example, you know, we have this field called net amount. We have this field called total amount, right?
+
+>>Bikram Dahal	49:16
+Yeah.
+
+>>Jarl Arntzen	49:18
+Through those fields, all invoice total amounts are going to pass through that one single field, right?
+
+>>Bikram Dahal	49:25
+Yeah.
+
+>>Jarl Arntzen	49:27
+You know, and they all have to be correct.
+
+>>Bikram Dahal	49:29
+Yeah.
+
+>>Jarl Arntzen	49:32
+So it's like, even, even though we might spend, you know, some hours getting it right, some hours trying to get like getting all the comma and dot separated values correctly read and interpreted by that field, it's so worth it because we don't want to run a million invoices through here and then have additional work on say 10 % of them, right? Or even 5 % or even 1%, right? So, so, so those three fields, right? These three fields here.
+
+>>Bikram Dahal	50:11
+Yeah.
+
+>>Jarl Arntzen	50:13
+They always have to work, right?
+
+>>Bikram Dahal	50:15
+I understand.
+
+>>Jarl Arntzen	50:17
+I saw, I saw there was a setting up here and that setting said something about the dot or comma separated.
+
+>>Bikram Dahal	50:23
+Yeah.
+
+>>Jarl Arntzen	50:24
+You know, it's a nice idea, but it has to be completely automatic.
+
+>>Bikram Dahal	50:29
+No, no, I totally agree. So the dot and comma separated, I'll tell you, right? The thing is that usually we force people to, if it's a dot separated and comma separated, we force them to have two different document types, usually. But if you have a higher volume, that says in like, and also I understand that, like, I understand that, like, if you're able to solve this problem, like, then like, it'll be very easy on long term.
+
+>>Jarl Arntzen	50:51
+Yeah.
+
+>>Bikram Dahal	50:52
+Well, these things are going building with you. Sorry about that. But like, like I would have come to you and told that, okay, forget about it. You should always have dot and comma separated. I'm not going, and we do it. It's not that we don't do it. Like we have people who tell them that, like use auto -classifier or use something else. It has to be two different document type because comma separated and dot separated cannot be on the same thing. It will cause more issues than solve. But in any case, I understand that, like, it's, if we're able to, because we already have a lot of system, we just have to combine a few things over there. So that's just walking a bit ahead of you just to make sure that you can have those features in place and everything. So like, so like on your case, I totally agree. There will be a few places, I think, because we are trying to combine these things and we are doing it like just for you guys and everything. There'll be a little bit of hiccups. We'll make sure that those things get ironed out. Like, and then make sure that you guys have good experience once this Poc is over. Yeah.
+
+>>Jarl Arntzen	51:43
+Yeah. So, so just to give you some, you know, a little bit of additional motivation for this, you know, it's, it's very easy. I mean, we've had discussion over the years about this, right? It's, it's very easy to think that there's a correlation between the common, common dot separation and country, for example, or invoice language, or some other indicator that will help, you know, that could, you know, indicate whether a value has come out or dot separated by, but what we have found is that, you know, you have a bunch of vendors, vendors from, from Norway, and, you know, five of them use some, you know, American ERP system, and they get, they, they only create invoices with dot separated, separations. And so there is no real correlation between the, the invoice language and the dot separation or the common separation. There, there's no real correlation between the supplier country and the language that might use, right? So you may, you may have a supplier from Poland and the invoice is English and they use dot separation, or you might have a supplier from Finland and they still use English as the invoice language, but they have common separation, just for fun, right? Common separation is false, right? So our conclusion is that, you know, to me, it seems like
+
+>>Jarl Arntzen	53:27
+Like, yeah, it is something that with the right approach, you can just ingest those values and then, you know, convert them to a standard float. And the safeguard here is always the calculation at the end, right? Or the validation, right?
+
+>>Bikram Dahal	53:50
+I totally agree. Like, I totally agree on that point. Because like, even in, when we said the invoice, because it depends on EIP system. And because you don't have, like some of this have multinational company and they use the EIP of US. So like, you'll get the invoice over there. I totally agree about that part. Okay, that makes sense. Okay, on outside, we'll do this. Like, we'll just go through the things. I think Manoj, you have already gone through all the fields and everything, right? So like, everything is properly set up, right? Are you getting this one, Gerald? The only thing I told you where it might make that mistake is that one part. So one thing, can you quickly do it? Can you go to the, on this invoice, can you open this invoice? Can you go back? Can you go back? And can you go to this invoice on your, like, Eview, for Eview? Can you go to this invoice?
+
+>>Jarl Arntzen	54:42
+Here?
+
+>>Bikram Dahal	54:43
+Yeah.
+
+>>Jarl Arntzen	54:46
+Think that might be the one?
+
+>>Bikram Dahal	54:47
+Yeah. Can you open this on the Eview skin that we have?
+
+>>Jarl Arntzen	54:51
+Mm -hmm.
+
+>>Bikram Dahal	54:53
+And can you please go to net amount once?
+
+>>Jarl Arntzen	54:58
+I'll just click in the field, or?
+
+>>Bikram Dahal	55:00
+On the field, yeah. Okay, now, can you do X? Can you remove it? Like, can you do X on the? Yeah, so, yeah, can you go to net amount now? And can you select that? Yeah, can you select this?
+
+>>Jarl Arntzen	55:16
+Oh, sorry, yeah. Yeah.
+
+>>Bikram Dahal	55:18
+When you do that, right? So here is the thing. When you manually select it, like, what happens is you can remove that dot for now. When you do manually, if you have to fix it, you can remove dot, and then it will work. If you do tab, then, like, yeah, it will work. So for now, this is temporary. Like I said, this is in the only place where it's not able to take dot and find the person. So, like, you guys can fix it that way. We'll also make sure that it is not parameter on your system, so that if it happens, then those are separated. So we'll make sure that, like, that are done.
+
+>>Jarl Arntzen	55:50
+Yeah.
+
+>>Bikram Dahal	55:51
+Okay.
+
+>>Jarl Arntzen	55:51
+I have to rush.
+
+>>Bikram Dahal	55:53
+Sure. Okay, so there are, then I think you guys, like, have, like, already figured out major of these things. I'll quickly look into that feedback that you had regarding the making sure that it's always, it's always, like, the advanced model. So I'll just check with the team and see if that is always the case or not. Usually, it might be because of that base model and everything. Now the base model is disabled. I'll look into if there's an additional setting that might be causing those issues, and then we'll make sure that those things are, you know, like, solved, and you guys can start using this document type, and then let's see the extraction accuracy, and also let's see that accuracy after the continuous running, after you have approved some document, so that we can get the final accuracy number and take it from there.
+
+>>Jarl Arntzen	56:32
+Yeah, nice. Thanks.
+
+>>Bikram Dahal	56:35
+Yeah, I had one quick thing. Like, it's not able to do this. I know we have to jump onto the call. Can you just close this screen once? I'll just let you, you might not use this feature, but we wanted your feedback. Can you just do X on this one? And can you go to data table, please, once? Data table, you can just go to data table.
+
+>>Jarl Arntzen	56:51
+Oh, yeah. Sorry.
+
+>>Bikram Dahal	56:53
+So over here, we have introduced a new feature on the transformation. I'm not sure if I am.
+
+>>Jarl Arntzen	56:58
+Yeah, so the thing is, I'm gonna be available in, you know, this evening, But right now, I just have to go and pick up. So I'll send you an email.
+
+>>Bikram Dahal	57:08
+Like, don't think much. I'll just send you. I would love to get your feedback. So I'll send you some videos. I'd love to get your feedback. I'll send you a Dm. Call is not required. I would love to see, like, I'll send you a message.
+
+>>Jarl Arntzen	57:18
+Nice. Very good, very good. So thanks for all your help for now. I just have to rush before four o 'clock.
+
+>>Bikram Dahal	57:24
+Okay, sure, sure, sure.
+
+>>Jarl Arntzen	57:24
+And to pick up a car, and then we'll speak again. Sure. Later on, right?
+
+>>Bikram Dahal	57:30
+Okay, bye, Zainal.
+
+>>Jarl Arntzen	57:31
+Yeah, bye.
+
+>>Bikram Dahal	57:32
+Bye. Bye. Manoj, two things. Can you look into his account and make sure that, like, make sure that on all of his document type that he has enabled, please disable the base model.
+
+>>Manoj Racherla	57:47
+Sure.
+
+>>Bikram Dahal	57:47
+Please disable the base model and look into his validation of, like, that extraction of that date. And also on the date, please make sure that it's converted into the right format. So talk with the team and make sure that whatever text should be put, let's make sure that for date and for number, that it's properly put. Right? Do that once. Second thing, one more thing to do on his account is download, like, what do you call it? He tried some of this file that he has done over there. He tried that file. And then see where all the extraction is making a mistake. Pick that mistake. And then, like,
+
+>>Bikram Dahal	58:26
+Like, and then you try that document one more time so the context learning works. So for that, I think it's better to download a file also. So just make a one, download a few files from that folder that he talked about. Make a new folder, DocsModTest. Upload two files on that folder. See where the mistake happens. Approve that document and upload five of these files. And see if those mistakes are not happening on that next five files.
+
+>>Manoj Racherla	58:50
+So can you do that?
+
+>>Bikram Dahal	58:51
+And then, can you put back also on the, like, how it's working or not? I want to make sure that, like, I don't have any hiccups with them on this. Okay, Sivam, regarding your thing, do you have a video, do we have a video for transformation?
+
+>>Shivam Kumar	59:10
+Jugal is creating one, yeah.
+
+>>Bikram Dahal	59:11
+Jugal is creating one. Okay, let's just create that. Let's send it to them. More likely, he'll not use it because his use case is a bit different because he's not looking at all the things and everything, but he'll be more than happy to provide the feedback. So we'll do it on the next call also. In addition to that, we'll also send him on the Dm on the team channel. Manoj, maybe you can add Sivam and Divesh to that team channel, and then we can get the feedback from him directly. Okay, anything else?
+
+>>Manoj Racherla	59:40
+No.
+
+>>Bikram Dahal	59:42
+Okay, then, Divesh, I think you wanted to have one call with me, right?
+
+>>Divesh Mehta	59:48
+Yeah, I wanted to show you some wireframes because they only have two days to get the blocks ready.
+
+>>Bikram Dahal	59:56
+Sure, Sivam, can you do this? Can I ping you after 15 minutes, please?
+
+>>Shivam Kumar	01:00:02
+Yeah, sure, that works.
+
+>>Bikram Dahal	01:00:03
+Okay, Divesh, then let's do that call, we'll finish those items.
+
+>>Divesh Mehta	01:00:07
+All right, I'll ask Kuljan to join also.
+
+>>Bikram Dahal	01:00:09
+Sure, Manoj, one more thing. Manoj and Nidhi, one more thing. Is Skylight Funding, have they said everything? Like, are we ready for the POCs, giving them Uat, or what is left?
+
+>>Manoj Racherla	01:00:21
+Sorry, which?
+
+>>Bikram Dahal	01:00:23
+Skylight Funding.
+
+>>Manoj Racherla	01:00:25
+Yeah, we have set up the utility, whatever the sample that they share.
+
+>>Bikram Dahal	01:00:29
+Yeah. How is the expectation on everything? Because the client API team told me that they have not received what are the line item, what are the line item that we have to ignore. So that, we have still not received.
+
+>>Manoj Racherla	01:00:44
+Not sure, Vishal was checking it, I will just confirm with him.
+
+>>Bikram Dahal	01:00:47
+Confirm with your team, I'm not doing the call, so please make sure that everything is ready for Uat.
+
+>>Manoj Racherla	01:00:52
+Okay, got it.
+
+>>Bikram Dahal	01:00:53
+Okay, anything else?
+
+>>Manoj Racherla	01:00:55
+No.
+
+>>Bikram Dahal	01:00:56
+Okay, then talk to you later. Bye guys.
+

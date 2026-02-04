@@ -1,0 +1,540 @@
+>>Liam Dionisio	00:00
+Now? Are you still facing more issues? So far I think I'm getting less issues. I found a couple that's kind of a different issue with the date format. So I guess this one's going to be easy. Okay. But the others so far I'm not seeing a lot of problems like we did before. No, that's good to know.
+
+>>Aniket Tatipamula	00:27
+Thanks.
+
+>>Liam Dionisio	00:28
+No problem.
+
+>>Aniket Tatipamula	00:32
+Hi, Liana. Hi, Boris.
+
+>>Boris Teper	00:35
+Hi, everyone. Good afternoon.
+
+>>Liana Vinokur	00:38
+I'm doing great.
+
+>>Aniket Tatipamula	00:47
+Hi, guys.
+
+>>Liana Vinokur	00:56
+I just have one question. Liam, are you recording the issues in the log just for yourself or for the other underwriters as well?
+
+>>Liam Dionisio	01:11
+So far I'm not getting any tags from other underwriters. So I'm just logging the ones I encounter and ones reported by the team here.
+
+>>Liana Vinokur	01:19
+Okay, good. Thank you. Thanks, Liana.
+
+>>Aniket Tatipamula	01:28
+And I'll just have a quick round of introduction because there are more people from my team on the call. So we have Divesh and Shivam. Both are product managers from our team. We just wanted to be on this call, check what's happening and get a little bit of updates. So I'm just letting people know. And we'll straight away jump into the issues. I'll quickly update what all changes we've made in the last few days. So one of the changes was with the extractor, the new model. And I guess Liam just mentioned that he faced a couple of instances of date format getting wrong. So we'll note that thing down. But overall, as in this newer model works much better than what we already had. So a lot of documents going through like perfect extraction. I did observe a few documents going to error. And the team is looking into it, like what is the root cause of it. But apart from that, the documents that got extracted, they are perfect. There were a few changes that we made on the analytics API, as suggested by Lazaro and the team as in, he wanted us to make sure that we don't divide the statements, if not required. So we made sure that we've written a logic in a way that we check a few things before we choose to merge them or not merge them. In this case, in a lot of cases, it doesn't get merged. So you have that bank statement -wise summary given to you. There were a few issues on multiple accounts. So what used to happen is if a document had a multiple account, we would also have multiple starting and ending balances. The previous logic did not account for those properly.
+
+>>Aniket Tatipamula	03:09
+And that's why you saw a lot of ALBs being way off and negative days being way off. Because if you start with the wrong balance, you end up with all of the wrong numbers. And that is what was leading to all of these issues. The recent fixes make sure that that doesn't happen. So we do look at the account, very specific account, and then we pick up the balances for that account only. And that's what you would observe that the Alb and negative days are much accurate right now. We made one more small update on the classification logic. We could see a lot of cases of lender details not getting classified. There were two issues. And one, there was a little bit of prompt classification model issue. We fixed that. And there was an issue with how we were classifying certain emails. So we never used to classify emails below a certain length of words. So if the words were less than 15, we were not classifying it. So we made a small fix on the product. And now that also gets classified. So these are a bunch of issues that the team made in the last, I guess, two to three weeks, to be precise. And yeah, I mean, I just want to hear from you what kind of issues are still pending and what next should the team pick up and fix?
+
+>>Lazaro Pages	04:35
+So I've actually been noticing some of the average ledger balances on the negative days a lot more accurate, as well as the revenue. I would say majority of the files I've seen today, I would say it had a lot of the accurate information. I was able to point out two files that had some incorrect information. So
+
+>>Lazaro Pages	04:58
+So I'm not sure if you just want to go through these two and see what the problem was specifically regarding the banks. Yeah.
+
+>>Aniket Tatipamula	05:08
+Sure, Latharu. Do you want to share them right now?
+
+>>Lazaro Pages	05:10
+Because I can go through. Yes, let's do it right now. I'll share my screen. Let me share the screen. Ok, hold on here. Ok. Share. Ok, so the first one, it's called Driftwood Custom Carpentry. This is the file name here. Ok, so I'm seeing here in the documents that they're labeled as processed. Yeah. When I first opened this up, I believe there was only two months here, June and April, and May was missing. So I hit the Reload button. And as soon as I did that, May popped up. Yeah. So that was good. But OK, let's see here. Ok. I think this was saying 57 before, but then I got it right. So May says 97 ,000. However, it is 92 ,000. So it's not off by a lot, but it's still off. Let me open the banks. See here, deposits 92 ,500. And the AI was reading 97. And then for April, the bank statement says 52 ,000. That one is a little bit more off. Here, let's open it here. 52 ,000 .2. And the Ai is saying 71 ,000.
+
+>>Lazaro Pages	06:54
+So that's the first one.
+
+>>Aniket Tatipamula	06:56
+Lazaro, can you please share the folder ID if it's possible? And then maybe Liam or because I can just I'll open the document at Rnn and see what happened here.
+
+>>Lazaro Pages	07:06
+Yes. Where can I find the folder ID?
+
+>>Liana Vinokur	07:14
+Maybe I'll just copy. Can you help me with that, please?
+
+>>Boris Teper	07:19
+Yeah, if you go to Submissions, go to Submission link.
+
+>>Lazaro Pages	07:24
+Go to the Submission.
+
+>>Boris Teper	07:25
+Go up, go up. Yeah, the related list. Here, the first one, Submissions 1.
+
+>>Lazaro Pages	07:31
+Right here.
+
+>>Boris Teper	07:33
+Yeah, click on the number S290102. And then go a little down, down and open applications. A, you see that A202?
+
+>>Lazaro Pages	07:46
+Sorry, yes, right here. Right there.
+
+>>Boris Teper	07:48
+And that's the scroll down. And you see the index of my folder ID, the 2 ,000. That's the number.
+
+>>Lazaro Pages	07:57
+Ok, let me copy and paste it onto the chat here. All right, how do I do that? Right here.
+
+>>Aniket Tatipamula	08:11
+Yes, thanks, Natharo. I just got it. Let me just open up and check.
+
+>>Aniket Tatipamula	08:24
+Bank statement. Three bank statements. And the one that was very off was May, right?
+
+>>Lazaro Pages	08:30
+April was the one that was most off. May was off by about $5 ,000.
+
+>>Aniket Tatipamula	08:36
+Understood. Let me just open up April. Oh, OK. So there were two accounts in that statement. I mean, the first account is, oh, there were two accounts. Let me just check what happened here. Oh, there's one business checking, and the other one is business savings.
+
+>>Lazaro Pages	09:01
+The savings account, yes.
+
+>>Aniket Tatipamula	09:05
+Oh, because the account name and account number are both same. No, they are not same. Natharo, can you please open up the, yeah, sorry. Can you please go back to the summary view? I just wanted to check if we have two summaries out there with two account numbers.
+
+>>Lazaro Pages	09:30
+On this page here, on the summary, or?
+
+>>Aniket Tatipamula	09:33
+I mean the one that you generally refer to. Yeah. So do we have two April? Yeah, I think we'll have two April, right? One was $71 ,000. Was this the document? Ok. One was $71 ,000, and the other one is $0. Deposits.
+
+>>Lazaro Pages	09:57
+Yes.
+
+>>Lazaro Pages	09:57
+As for April, for April, it was 52 ,000 in the banks, but the AI read 71 ,000.
+
+>>Aniket Tatipamula	10:14
+Yeah, I'm just checking because we do plot that information on our summary. Let me just quickly check that out. Some credit was 71K. Checking account, credit sum 71, credit count 18, debit sum 93. Confliction balance, debit sum and credit sum 71 ,000. There seems to be something off because if we are able to match this, then this ideally would mean we did not do any mistake. So I'll just check this out with the team, like what went, what went here and why is this off? 153, 13. Yeah, sure, Lazaro, I'll check this out with the team. Okay.
+
+>>Lazaro Pages	11:23
+Yeah.
+
+>>Aniket Tatipamula	11:23
+Okay.
+
+>>Lazaro Pages	11:24
+No worries. Let's look at the other file in question. Let's see here. Quick question.
+
+>>Boris Teper	11:32
+Any reason why bank name wasn't picked up by the AI? It's a bank name.
+
+>>Aniket Tatipamula	11:41
+It was picked up. Let me quickly share the link of that. Lazaro, can you please open this document? I just shared it on the channel. Bank name?
+
+>>Lazaro Pages	11:54
+The bank document?
+
+>>Boris Teper	11:58
+No, he posted the link in the chat.
+
+>>Lazaro Pages	12:01
+Oh, the link in the chat, let's see here. Okay.
+
+>>Aniket Tatipamula	12:11
+Yes.
+
+>>Lazaro Pages	12:11
+Let me share that screen, give you a document here. Share this document here.
+
+>>Aniket Tatipamula	12:27
+Yeah, this is a document. Can you please go to the left side, left hand side?
+
+>>Lazaro Pages	12:31
+Yes.
+
+>>Aniket Tatipamula	12:31
+Left side. Scroll down, please. Yeah. Can you please click on the line items? These are all the line items that we would have picked up. And the way it works is, like, this is where all the line items are, like everything that is debit and credit. And then if you please click on multiple accounts, there's a section called multiple accounts.
+
+>>Lazaro Pages	12:56
+Multiple accounts, right here.
+
+>>Aniket Tatipamula	12:59
+And you'll see that there are two accounts here. That's the first account with opening and closing balance of this are from table one to three. And the other one is at the end, which is like, which is only one table at the end. So this is how it works. We'll check as in what's happening here. And if the bank name, I think Boris, I'll check with the team as well, because I think we picked up on the summary analytics. We are not having that bank name. So I'll check what's happening there.
+
+>>Lazaro Pages	13:32
+Got it. Yeah. See that it highlights it here. The bank name. However, in the actual account here, it just puts bank name 001. But OK, I'll move on to the next one here. The next one is called Jake Johnston. So this one only got one month wrong and the rest were accurate. So let's see maybe if we can find the issue. Let me just open up here. Jake Johnston. Ok. So, yeah, this one it's showing. Let me see. Yes. So you see June here showing seven hundred and forty five thousand. Yeah. And the bank statement is showing. Six hundred and ninety one thousand.
+
+>>Aniket Tatipamula	14:29
+Ok.
+
+>>Lazaro Pages	14:30
+Do you need the link?
+
+>>Aniket Tatipamula	14:33
+Yeah.
+
+>>Lazaro Pages	14:34
+Ok, let me go here.
+
+>>Liana Vinokur	14:37
+So, Aniket, I have a question. In those instances, is Daxoma AI doing a calculation of all the deposits and summarizing it? Or is it picking up from the header of the bank statement?
+
+>>Aniket Tatipamula	14:53
+We are calculating it, Liliana.
+
+>>Liana Vinokur	14:56
+We are not.
+
+>>Aniket Tatipamula	14:56
+Picking it up from the summary. We pick up all the transactions, we match it to opening and closing balance and then recompute it again. Recompute all these variables again.
+
+>>Liana Vinokur	15:07
+Okay. But are you also then, I mean, that is the way to do it. Are you also then checking to the balance on top?
+
+>>Aniket Tatipamula	15:17
+No, we do not because we assume that if opening and closing balances match, we assume that everything got picked up properly. So that's what the team will go ahead and check what happened in these cases. Like, did we mess up with the calculation? Because only alternative that I can think of, the only problem that I can think of, we messed up on the calculations somewhere and it had nothing to do with the document.
+
+>>Liana Vinokur	15:43
+But if you're matching it, then you should have an error message because like Lazarus just showed that total deposits is wrong. Yeah.
+
+>>Aniket Tatipamula	15:57
+So the thing is, our error messages work around opening and closing balance and not around these checks. So I'll have to first figure out what went wrong and then maybe we can, because not every bank statement would have this mentioned, like there are some bank statements who mentioned average balance in the document, but there are quite a lot of bank statements where this is not mentioned. So we would have to compute it. And our logic majorly relies on opening and closing balance, where if we pick opening and closing balance from the statement, we look at all the transactions and make sure that that gets reconciled properly so that we are sure that what we picked up is right. So I'll go back and check what went wrong, like whether it's a statement or whether it's the calculation that we've done. It could be the calculation that we have done. That's very high likelihood that it will be a calculation that we have done. So I'll check that out. Lazarus, can you please let me know which month was the error in?
+
+>>Lazaro Pages	17:02
+Yes, it was June.
+
+>>Aniket Tatipamula	17:04
+It was June. Okay. Oh, June. Yeah. The June statement did not go through process. So I think, and it did not go Tallypass. So there's a high likelihood that this one would have, this one could have had the issue. There's a discrepancy of, I'll just, if I could please share my screen, I'll quickly show you.
+
+>>Lazaro Pages	17:24
+Yes, let me remove the, there we go.
+
+>>Aniket Tatipamula	17:32
+Is my screen visible?
+
+>>Lazaro Pages	17:34
+Yes.
+
+>>Aniket Tatipamula	17:35
+So this specific statement right as Aliana just asked for, this did not go through process. This was marked as reviewed. Like let me go back and showcase. Every other statement here is marked as processed except for the June one, because in June, the check did not pass. And what we do is we check this opening and closing balance. So opening balance was picked up as 561246, 561246 .89, this got picked up properly, 4799761. And we do a sum And then we mention it here.
+
+>>Liana Vinokur	18:12
+If you look at it, then this was a single error.
+
+>>Aniket Tatipamula	18:15
+When it sum came out to 745, it's off.
+
+>>Liana Vinokur	18:20
+And it's off as well.
+
+>>Aniket Tatipamula	18:24
+And the difference is 8 ,000, 81 ,000 actually. So we'll look into it like what went wrong. We'll have to look through the extractors and figure out what went wrong here. It doesn't look off though. It's pretty weird. Deposits, deposits.
+
+>>Aniket Tatipamula	19:05
+78 .21.
+
+>>Liana Vinokur	19:07
+Oh, yeah, I mean, we messed up here, right?
+
+>>Aniket Tatipamula	19:09
+Can you see this 1052 ,000 and these two got messed up. And that's why we ran into this issue. So we'll look into it like what happened here. And what, what we generally do is, I'll just show you how we correct as well. I'll put this 1000 here.
+
+>>Liana Vinokur	19:31
+And we have these highlights, which lets us know like, this got misclassified if you look at it.
+
+>>Liana Vinokur	20:09
+Did you just show which one was not picked up?
+
+>>Aniket Tatipamula	20:14
+It picked up. It picked up everything. It's just that it messed up on Reddit and debits. So I just corrected it
+
+>>Liana Vinokur	20:22
+And I just fixed everything.
+
+>>Aniket Tatipamula	20:27
+If I just rerun this tally check again, it should now pass and
+
+>>Liana Vinokur	20:35
+Yeah, it passed.
+
+>>Aniket Tatipamula	20:40
+So Lazaro, can you please refresh your summary?
+
+>>Liana Vinokur	20:43
+Yes.
+
+>>Lazaro Pages	20:43
+Let me do it right now.
+
+>>Liana Vinokur	20:45
+And while he's doing that, Anika, is that something that you guys can build to add off the deposits and withdrawals and test it with the opening balance and ending balance? I mean, it's a math calculation.
+
+>>Aniket Tatipamula	21:00
+We do that. We do that and that's exactly what we do And then that's exactly how we mark this document as not processed. So if you see, right, if a document has everything picked up properly, it's generally marked as this processed and if it is not, then we mark it as review. And that's how our customers use the product, like they come here and then make sure that the ones that are in review, they look at it, they check if something went wrong, correct it and then confirm it. So because now this is passed, I can confirm it. The moment I confirm it, it becomes processed. So And yeah, I mean, this is the general flow of how people use the product.
+
+>>Liana Vinokur	21:45
+So if I'm understanding correctly, you want us to check what what is in review before using it?
+
+>>Aniket Tatipamula	21:53
+I mean, that's what we discussed that right now we have one person at our end who is looking into these documents. I'll check out like so whatever ones are failing, right, we are asking him to check and figure out where exactly it is failing. So these issues are monitored and we'll try to fix them as much as possible. But then always a case, there could always be a case where a document or two would not be valid or they will not be marked as processed and that could be a genuine issue in the document just like this one. So that has to be corrected. So but the number of those documents have significantly reduced after our last release.
+
+>>Liana Vinokur	22:34
+Yeah, but you must understand, we don't have time to review what the AI is doing wrong. We need to have all bank statements processed and processed accurately, almost like you're asking us to do your job. We need to have data of quality finalized when it's sent to the underwriter. Otherwise, he's going to spend a lot of time looking for it. Yeah.
+
+>>Aniket Tatipamula	23:02
+Yeah, I agree, Liana. And that's why we have like one person in our team who is looking into these. And over the course of next one week, we'll try to fix this as well as many as possible. And then we have one person in our team who is actually correcting them. For example, if you look at the documents, 90 % of them, 85 to 90 % of them would go through processed. There could be 10 % of those and out of those 10, only few have issues. The rest would be not marked as processed because they may not have opening and closing balances. They may have something to do with the document itself and nothing to do with the extraction. So we have someone in our team who is looking at these documents and correcting them. So ideally, we would want this to be negligible. But because these are parsers, every once in a while, there could be an issue. So like the team member at our office is the one who is actually correcting them. The other alternative that we have is let's say for some reason, if a document is we are not sure about the document, maybe we can, you don't have to come here and correct. But maybe we can inform you on the somewhere in the salesforce, this as this document is not this document may have some issues. So I mean, it could be an alerting mechanism as well. So that the underwriter knows that the extractor may not pick up June correctly, or maybe may correctly. And that may also help. Because in that case, you would not have to look at our data blindly and then just open up a doc once and then see it.
+
+>>Liana Vinokur	24:42
+Would that help Lazaro? William? Would you want to know which documents have error messages in it?
+
+>>Lazaro Pages	24:49
+Yeah, yeah, it would be helpful if we know which ones and what the errors are.
+
+>>Liana Vinokur	25:08
+And especially if month -to -month It's the same bank, why did June not pick up the credits and May did?
+
+>>Aniket Tatipamula	25:24
+No, I mean it has nothing to do with that, because these are machine learning models, these are AI models, sometimes they tend to make mistakes, and the way we corrected it, like we look at the issues and then we make these corrections, and more often than not once those corrections are made it works out fine. So our job for the next few days and maybe a sprint or a couple of weeks or so would be to look at these issues and then make those corrections on the model, so that the model learns to fix these without even getting involved, so that would be our job. But you're right, it could be that there could be same template, same document, but the model sometimes makes mistakes on one and it doesn't make mistakes on the other, it does happen. But it's quite less, like if you look at the grander scheme of things, maybe in 100 or 200 docs it will be like Max once every 100 docs, or maybe Max once every 200 docs.
+
+>>Liana Vinokur	26:33
+Okay let's hope this is fixed. Any other Zahra?
+
+>>Lazaro Pages	26:40
+Would there be less mistakes if the AI could just read it straight off of the summary portion, and then maybe as a backup it can do line by line adding and subtracting the deposits and the withdrawals, and then maybe you say this matches the summary portion or it doesn't match, so then at least it read the summary portion right. I feel like that might be the most accurate way. I know not all bank statements have that summary portion where it tells you the total amount of deposits or withdrawals, but I would say a majority of the banks that get submitted to us do have it.
+
+>>Liana Vinokur	27:16
+Yeah, that's what I thought you guys were reading was the summary.
+
+>>Lazaro Pages	27:20
+Right.
+
+>>Aniket Tatipamula	27:23
+So that's the plan, Zahra, I mean for the initial few days we were planning, we were more focused on fixing these issues, so as you rightly mentioned this is also in plan. In the next upcoming few days and weeks, what we want to do is we want to fix this. So if a document has these details, then we would want to populate it from the data itself, from the document data itself rather than computing. If we don't have it, then we'll end up computing it. So that's the plan. So we'll work on it and we'll try to put it on, put it in the product.
+
+>>Lazaro Pages	27:55
+Okay.
+
+>>Liana Vinokur	28:04
+Yeah, I guess, are there more issues?
+
+>>Liam Dionisio	28:14
+I'm sorry, are you talking to me?
+
+>>Liana Vinokur	28:19
+Yeah, are there more issues?
+
+>>Liam Dionisio	28:22
+Yeah, earlier I mentioned about the dates. So for the dates, for the time in business and for the date of birth of the merchant, we need it to be in the month, day and year format because there are cases that they get mixed up.
+
+>>Liana Vinokur	28:43
+Is it on bank statement or is it on application form? It's from the application form. Okay. I can give you the, so this is the document ID for one of the cases.
+
+>>Liam Dionisio	29:24
+So in this one, the date of, or I'm sorry, the business start date should be, should have been September 1st, 2024, but instead the AI picked it up as January 9th, 2024. So the issue about this is we would usually not approve files that are less than a year old.
+
+>>Liam Dionisio	29:54
+So, if I saw that it was actually September 1st, 2024, then I would know that it's not yet a year old, but instead I thought it's already passed a year since it says January.
+
+>>Aniket Tatipamula	30:13
+So, okay, if you look at this, so I'm not able to understand, this is supposed to be Mmddyy, right?
+
+>>Liam Dionisio	30:21
+Month, day, year, yes.
+
+>>Aniket Tatipamula	30:23
+Yeah, it picked it up as month, day, year, right, 0901, 2024.
+
+>>Liam Dionisio	30:28
+And when I got this file, it said January 9th, 2024, that's the date that was picked up.
+
+>>Aniket Tatipamula	30:38
+Okay, that's a little bit interesting, let me just check, because we picked it up properly, if you look at this, it is 0901, 2024, let me just check what's there in the...
+
+>>Liam Dionisio	30:49
+Yeah, I already updated it, but the file had January 9th.
+
+>>Aniket Tatipamula	30:56
+It's in the model itself. Everything would be Mmddyy, right?
+
+>>Liam Dionisio	31:02
+Yes.
+
+>>Aniket Tatipamula	31:03
+So all the dates in Nexe that would come to you would be Mmddyy, correct?
+
+>>Liam Dionisio	31:08
+Mm -hmm.
+
+>>Aniket Tatipamula	31:10
+Okay, let me just get this thing updated.
+
+>>Liana Vinokur	31:14
+Liam, this comes from the application, right?
+
+>>Liam Dionisio	31:17
+Yes.
+
+>>Liana Vinokur	31:17
+And it's in that format, incorrect format.
+
+>>Liam Dionisio	31:24
+It's in an incorrect format when it was input in the Salesforce. And I sent another link, it did the same thing. In Salesforce, it was showing us May 1st, 1974, but in the application form, it's January 5th, 1974.
+
+>>Aniket Tatipamula	31:45
+Yeah, I just made that change, let's see if possible, can we quickly check this out?
+
+>>Liana Vinokur	32:06
+Is there a way for you to load this data again, Liam?
+
+>>Liam Dionisio	32:21
+I don't see any option for that here.
+
+>>Boris Teper	32:24
+No, not the applications. Once the application is processed, you cannot reload it.
+
+>>Aniket Tatipamula	32:29
+Okay. Thanks for this.
+
+>>Boris Teper	32:32
+Yeah, all the dates should be in Mmddyy, that's American Standard Date Format.
+
+>>Aniket Tatipamula	32:42
+Yeah, I made this change. I hope this should not happen again. If it does, Liam, do let me know. Okay. Because I don't see AI picking it up wrong, as in it's more of the configuring it wrong, either on our side or maybe on your side. Most likely it's on our side only because it was Ddmm. We just changed it, it should work.
+
+>>Liam Dionisio	33:01
+All right, thank you.
+
+>>Liana Vinokur	33:03
+Did we have problems with data birth in the past?
+
+>>Liam Dionisio	33:08
+The ones that I encountered are usually for the start of the business start date. But I think it's the same thing with the date of birth.
+
+>>Boris Teper	33:18
+Yes, the start date is more important. For the date of birth, we mainly need the year. We don't care about the dates.
+
+>>Boris Teper	33:34
+Okay.
+
+>>Aniket Tatipamula	33:35
+Well, thanks, Liam, for pointing this out. I think this should be fixed.
+
+>>Liam Dionisio	33:39
+Okay.
+
+>>Aniket Tatipamula	33:40
+It's already fixed. I hope it doesn't happen again. Do let me know if there are any more issues.
+
+>>Liam Dionisio	33:46
+Okay, I have one more link that I'll be sending here.
+
+>>Aniket Tatipamula	33:49
+Okay.
+
+>>Liam Dionisio	33:53
+Did you get it?
+
+>>Aniket Tatipamula	33:56
+Yes, this is it.
+
+>>Liam Dionisio	33:57
+Okay. So for this one, this has a debt sheet attached. And when you look at the document, it says it's processed.
+
+>>Aniket Tatipamula	34:12
+Yes.
+
+>>Liam Dionisio	34:12
+But when I went to debt, there was only one that was in the debt tab. And it did not come from the debt sheet. It came from the email body. So in the email body, it says cash flow 10k. So that's the only one it picked up.
+
+>>Aniket Tatipamula	34:32
+Okay, let's just give me one second. There could be a possibility that. Okay, just give me one second. I get it. I understood what happened.
+
+>>Aniket Tatipamula	34:59
+Yeah, basically there were two dead sheets So this is the one And then there is this one as well So which one should we have picked and like basically we picked both, but I don't know how the processing happens at Boys, maybe you will have to check this out like how it happens at your end if there are two such Statements what should happen?
+
+>>Boris Teper	35:27
+You mean if there is a file attached and there are balances in the body of the email?
+
+>>Aniket Tatipamula	35:33
+Yeah Can you combine? At our end we would not be able to do that because the way we've set it up is whenever we get this data and whenever we Process the document we fire a webhook as soon as this document get processed. So they both get processed independently They are not processed together
+
+>>Boris Teper	35:57
+But you identify both files at that depth
+
+>>Aniket Tatipamula	36:00
+Yeah, we've identified both the files as that because I guess even in this one, right? There's a debt information mentioned cash flow of under 10k. I don't know whether this is that but cash flow of under 10k in Mtd Even this one The devil come by on our end Oh sure then like Me maybe then you'll have to change a little bit on Salesforce. It just happened rather than replace that would that should probably work.
+
+>>Aniket Tatipamula	36:49
+Hello Boris, yes, I was question. No, I was saying that you should be able to fix it at your end, right?
+
+>>Boris Teper	36:57
+Like or yeah, we're gonna combine now and if we get my two or three fast with it with a tab That's where we're gonna enter all them in that section Sure.
+
+>>Aniket Tatipamula	37:08
+Thank you. Thanks Boris
+
+>>Liam Dionisio	37:10
+Okay Thanks, that's it for me, thank you.
+
+>>Lazaro Pages	37:17
+Yeah.
+
+>>Aniket Tatipamula	37:17
+No, that's it for me, too Thanks Sure, I hope I Understand there are still some issues and like the team would like to him and me would try to do our best to fix as much as possible But do let us know keep us posted What more issues are there at our end as Liana pointed out and Lazaro pointed out will do few things one if the document already has Summary already mentioned in the document then we'll try to pick it up over the course of next few weeks And then we'll try to figure out how we can take it up and then use this in our summary so that would be one brief change and For the documents that had some issues I'll ask team to look into it and figure out how we can fix it as well as we have one resource Specifically doing this. So we'll just figure out how I know for sure like There it It will take some time for him because he has to look through all the documents that are marked as review and then manually Correct them. So I'll see how we can speed that exercise up at our end as well So that we try to fix as much as possible last but not the least as I think whether you mentioned we'll see if we can send so so even right now as an if you look at a document and If that document is marked as review on Salesforce, this means there's some issue I'll just show I'll just show you right away. Like can you can you please share the screen again?
+
+>>Lazaro Pages	38:46
+Yes for the Jake Johnston One
+
+>>Aniket Tatipamula	38:49
+Yeah, you can you can open up anyone any any?
+
+>>Lazaro Pages	38:54
+Okay here here we go Okay. So Yeah After you updated it I see that it processed here in the documents however, I reloaded and refreshed here on the Ai Bank part And it's still Showing the incorrect number And it's not reading the bank name Can can you refresh it?
+
+>>Aniket Tatipamula	39:17
+I think it should yes right now. I didn't see any reason why it should not Here, let's try one more time here
+
+>>Lazaro Pages	39:37
+Okay, I just reloaded it. It's still reading the same thing. Let me see if I refresh here No, so it's still the same thing I'll check this out But
+
+>>Lazaro Pages	39:51
+But in the documents, it does show it's processed.
+
+>>Aniket Tatipamula	39:55
+Yeah. It did, for sure, extract the data. I'll just check what happened here. Why is the summary not getting updated? I'll get back to you on that.
+
+>>Lazaro Pages	40:05
+All right, awesome.
+
+>>Aniket Tatipamula	40:08
+Ok, well, thanks, Azhar. I hope just to get a feedback, I hope the amount of effort that you had to put compared to two weeks back is much, much reduced. And you can trust our data much better. And I hope that is where we are going in a positive direction.
+
+>>Lazaro Pages	40:24
+Yeah, yeah, a bit more. A bit more. I'm noticing slightly less errors, more accuracy. But then I'll run into files like that where it's just off.
+
+>>Aniket Tatipamula	40:38
+Yeah.
+
+>>Lazaro Pages	40:40
+Yeah.
+
+>>Liana Vinokur	40:42
+Ok, thank you, guys. Thanks for the talk, son.
+
+>>Lazaro Pages	40:46
+All right, guys.
+
+>>Liana Vinokur	40:47
+Thank you.
+
+>>Aniket Tatipamula	40:49
+Thank you.
+
+>>Lazaro Pages	40:50
+Thank you, thank you.
+
+>>Aniket Tatipamula	40:52
+Thanks. I mean, getting these customers started would be a challenge. Sorry.
+
+>>Shivam Kumar	41:01
+Pretty rude, you know?
+

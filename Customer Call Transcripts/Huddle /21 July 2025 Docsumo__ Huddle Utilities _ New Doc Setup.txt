@@ -1,0 +1,147 @@
+>>Sigita Vaišnoraitė	00:00
+How are you? I think from my side Jack and Zoe will join. Just let's wait for them.
+
+>>Sigita Vaišnoraitė	00:48
+Anyway, I'm not sure where Jack is, but I think we can start anyway. So, thanks for clarifying the charging. So, I did take a look. It doesn't look bad. The only worries that I have is I think you also sent a nice diagram. How do we get you the PDF files basically to scan, right? Because everything is by email, and you said the emails will have to be somehow scanned, downloaded, converted to PDF and sent to you. So, if you could explain a little bit further, and I wasn't sure if... So, I understood that you said, Oh yeah, just contact pdf .co, and also do we need to contact Zapier, right, as well for that?
+
+>>Nidhi Vichare	01:54
+Okay.
+
+>>Sigita Vaišnoraitė	01:56
+Do you know how it would actually work? So, will Zapier just give them, I don't know, like the subject lines or email addresses where it's coming from, and they just filter through our Gmail? Is that what you've seen in the past?
+
+>>Nidhi Vichare	02:17
+So, what we'll ideally do is we'll have to set up the Zap. So, Zap creation, something has to be done from your end. We will definitely help you like how to set up the Zap and how to, you know, set up the integration part. So, we'll help you with that part. So, that should not be a problem. So, all you'll require is just the access to the Zapier account, so that, you know, we can help you set up.
+
+>>Sigita Vaišnoraitė	02:41
+Okay, but we need to set up a Zapier, because as if we will have to pace to Zapier, that's what you're saying, we have to get in touch with them?
+
+>>Nidhi Vichare	02:48
+Yeah, for the access and the plan, yes. Okay.
+
+>>Sigita Vaišnoraitė	02:54
+Okay, fine. So, then, okay, so Zapier, so let's say we got in touch with Zapier, and they said, yes, we can do that. So, what I understand Zapier just would filter those emails and download them somewhere? Is that the correct understanding? How does pdf .co come into this? If you could explain? Yeah, sure.
+
+>>Manoj Racherla	03:20
+Okay, so, Zapier is like a middleware, where it, like, it reads the emails from your Gmail, whatever, let's say, you give an identifier, like, mails coming from this email ID, or this identifier, read those email and convert those whatever the content within the email into a pdf or image, and then send that to the Docsimo. So, I'm not sure, have you gone through the screenshot that was attached towards the to in the email, right? Of a Zapier, there were three steps within that.
+
+>>Sigita Vaišnoraitė	04:01
+I did, I don't think I've seen Zapier itself. Let me just quickly check. Because I definitely did see pdf. But then I did remember in email, you did say about Zapier, one Sec.
+
+>>Manoj Racherla	04:15
+Okay, let me share my screen then.
+
+>>Sigita Vaišnoraitė	04:18
+Okay, let me know once my screen is. We can't see it. Now. Yeah, yeah.
+
+>>Manoj Racherla	04:31
+So, this is okay. So, this is a Zapier that we had created for the just testing purpose. So, for now, let's say I've connected with my email ID. So, this gets triggered whenever a new email received on your email ID. And in the configure, you can configure whatever email that you receive in your inbox. Here you have various, like, options, whether it's important, whether you want to read email.
+
+>>Manoj Racherla	04:58
+Emails from important or whether you can create a separate label as well right within the Gmail for those set of email whether it's a spam draft or any category sort of then you can create that you can select it And then once this is done whatever email that you receive in those category or mailbox it will read those so suppose let's say let's say it read this so as you can see here within the inbox I've got this email and whatever the content it is reading all the content like which from which error it is received and like that body as well as everything data so once this is done so this is the next step that it reads the content that you receive from the email this is a HTML format so as you can see you have to connect with the pdf .co app and you can select the action it can be anything like add image to pdf or text to pdf or anything convert anything to a pdf or so like that you can select that based on your requirement and then you can configure like what exactly you want to create from the attachment so let's say you want to create a source file within the body like all the whatever the body that is present within the email content you want that and in the pdf attachment So I have within the as you can see there is a plus icon here if you click here you will get all the details from the like email that we are extracting zap zap here is extracting like body from name subject date from email so now I have selected the body HTML which which is a sort of a email HTML that gets the entire data within the email that you receive it contains all the data so once I have I've added this let's say file name as I set it file name as a subject then you can set it as anything
+
+>>Manoj Racherla	07:12
+And then then I can test it let's say I test it out here see it's success then I once I continue so as you can see here this URL has been generated with name this So if I copy this see see this is the attachment it's reading entire thing
+
+>>Sigita Vaišnoraitė	07:51
+Okay And then Yeah Yeah
+
+>>Manoj Racherla	07:57
+And then once this is done if we will go to the next step that whatever the PDF that we get generated we send it to Docsimo so who would send us pdf .co
+
+>>Sigita Vaišnoraitė	08:11
+Yeah
+
+>>Manoj Racherla	08:12
+Yeah Within this single wrap only within this three step it will read the gmail it will convert it to the PDF attachment And then it will automatically send it to the Docsimo okay
+
+>>Sigita Vaišnoraitė	08:24
+But we need to get in touch with Zapier and pdf .co
+
+>>Nidhi Vichare	08:27
+To enable that all of this okay and the setup part we can help you with Yeah okay
+
+>>Sigita Vaišnoraitė	08:43
+I think I did take a look to get in touch with Zapier what is exactly because I think we have so many processes do you know which one I have to ask them about
+
+>>Nidhi Vichare	08:57
+So I'll share the pricing that's there on the their plans probably pro plan now Manoj pro plan should be okay right for this single user
+
+>>Sigita Vaišnoraitė	09:10
+Yeah
+
+>>Manoj Racherla	09:12
+That's fine Yeah
+
+>>Nidhi Vichare	09:14
+So Sikita you can go for the pro plan in Zapier for single user we just need one access that's that's unless you have multiple use case where you need multiple users to access the Zapier then you might have to go for the team one
+
+>>Manoj Racherla	09:28
+But if you just need one access that should be more than enough for the Docsimo implementation also Sikita it would be better you connect with the Zapier team too like they will also ask regarding that what's your requirement like like within a month how many emails you need to read and so on And so forth they have their they have their like constraint as well based on the pricing as well that we don't know that you need to check with them directly
+
+>>Nidhi Vichare	10:03
+Sorry, Sigrid, I think we missed, like, there was a...
+
+>>Sigita Vaišnoraitė	10:07
+Sorry, I'm so sorry, just, this computer is not working. Yeah, sorry, I think I'm back. Sorry, I opened your link and it's just not... Sorry, I think I also missed out because I couldn't hear what you were saying. So you're saying just get in touch with Zapier And you were talking about the plan?
+
+>>Manoj Racherla	10:34
+Yeah, correct. So basically, a plan can be anything. They have three plans. One is a free plan, one is a professional and one is a team. So pro would work, but they might have, like, constant, like, reading the... Within a month, how many meals can be read and so on and so forth. What would be the volumes that you want to ingest and convert it to PDF? So you need to discuss with the Zap team as well, and they will suggest you, based on that, the plans.
+
+>>Sigita Vaišnoraitė	11:09
+Ok, and with the PDF? I think it's a little, well, it seemed easier. Also, they have a few products. Do you know which one I have to inquire about?
+
+>>Nidhi Vichare	11:27
+So in the product, so which one, which page are you referring to? Is it the pricing page?
+
+>>Sigita Vaišnoraitė	11:35
+Well, what I understand, I would need to get in touch with them or you're just saying whatever, or which plan, basically, then?
+
+>>Nidhi Vichare	11:43
+So if you see the pro plan, the last option is email and live chat support. So if you click on that, you know, there are certain restrictions or that is also mentioned there. So you need to explain them that around 15 to, you know, 1000 to 1500, you know, emails is something that you want the Zap to read and process. And if pro plan will be appropriate plan for you to, you know, go ahead with. So just discuss this requirement with the Zapier team so that, you know, they can provide you the proper guidance on which plan will be better. Yeah, I mean, they can have someone who, as Manoj said, they may have their own restriction that on limitation of how many, you know, emails it can read in a month or so. So they may have their own restrictions. So you may want to, you know, check with them before going ahead with the plan.
+
+>>Sigita Vaišnoraitė	12:41
+And then the pdf .co is at the basic plan, I think, right? Oh, yeah, It's just going off the credits, right?
+
+>>Manoj Racherla	12:55
+There are many, there are within the Zap, there are many search utility apps that converts like email to PDF or email to images. For now, we have used pdf .co, but there are many search utility apps within the Zapier. So you can select any of them.
+
+>>Sigita Vaišnoraitė	13:16
+So you're saying we don't need pdf .co?
+
+>>Manoj Racherla	13:19
+No, I'm saying that like pdf .co, there are many search apps that converts, that reads email and converts it to PDF document, like Dash we saw. So you can, you can use pdf .co As well as Other apps as well, which might come cheap as well. When compared to pdf .co.
+
+>>Sigita Vaišnoraitė	13:39
+Okay, I got you. Okay, so, okay, So I'll try to get in touch with both of them and see. So if I mentioned you, they would, they would know what we're talking about, right? So they have, you have guys all work together.
+
+>>Nidhi Vichare	13:58
+Zapier team, yes, Zapier team will be aware about us because we do have a direct integration with them. Pdf .co might not have direct, like they would not know about Docsomo as such.
+
+>>Sigita Vaišnoraitė	14:12
+Okay, okay, So I'll get in touch with them and let you know how it's going.
+
+>>Nidhi Vichare	14:20
+And another thing, Sigita, so when we were discussing this new plan, we were looking at your current usage and we're looking at, so let me just share my screen right now.
+
+>>Nidhi Vichare	14:39
+So our plan is expiring in November. Yeah, October 15th is the next plan. So we've already consumed 18 ,000 credits. So your existing use case is about, you know, if you see at the plan that
+
+>>Nidhi Vichare	14:57
+You are consuming around 2500 monthly credit this is as per usage this is what your consumption is and if you consider the new use case these will be the annual credits that you might want to buy or else you can you know obviously you can always go ahead and purchase additional credits so as per your current plan this is your current plan that is 2000 credits and monthly is 1660 with new use case if you are considering 1500 the total should come around 3800 so what we can do is we can propose we can give you a early you know contract renewal in that case we can give you a 5 % discount on the total pricing because anyways you are going to purchase the you know new credit so while you are doing that you might as well get a 5 % discount on that so we rounded off with 40k credits so the annual pricing comes around 16800 and with 5 % discount your per page cost which currently is 42 cent per page that will come down to 40 okay And there is no time limit to use those credits this will be annual credit so you can consume this within 24 within 12 months Yeah But all of the credits credited like right at the payment time so it will be all of them so 40k will be credited right at the end of the payment Okay
+
+>>Sigita Vaišnoraitė	16:29
+All right that's fine So yeah As I said I'll just then get in touch with with Zapier and let's see how what they say Yeah
+
+>>Nidhi Vichare	16:40
+I'll share this pricing also so if you might if you want to you know or else you will have to anyways buy the additional credits for the existing use case as well because you are already you know running out of the credits so in probably next month you will be running out of credits and you'll have to purchase a new credit So instead of doing that it's best to go for the renewal along with the new credits so that you know we can add the 5 % as well okay cool All right then let me know if you have any questions or we can jump on a quick call also Yeah
+
+>>Sigita Vaišnoraitė	17:15
+All right thank you guys I'll get into pricing over with us
+
+>>Jack Halkyard	17:19
+Yeah thank you
+
+>>Nidhi Vichare	17:20
+So yeah thanks everyone thanks a lot thank you bye
+

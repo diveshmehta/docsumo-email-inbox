@@ -1,0 +1,51 @@
+>>Aniket Tatipamula	00:00
+Listed few issues and we will complete those fixes but uh are there any major issues that you're encountering um let me just open up the sheet for today's call we're mainly focused on integration um if there's time at the end we can maybe review it a little bit i don't want it to take away from it um sure that makes sense so aren't while you're on the call as in uh this is a query that i had i could not argue this last time so what would be the process like right now Like initially i remember when we discussed as in this was supposed to be done manually but what's going to happen now after the integration um you mean in an ideal scenario once doc sumo is implemented
+
+>>Aaron	01:29
+Yes so i guess in our minds it would be um our team the the team who's actually doing the sales would um be able to push it through salesforce which is what they currently do um once they push it through salesforce it is no longer in their hands And we want to keep that process the same because we don't want to give additional tasks for them to do once they do that it hopefully runs through doc sumo And then um ends up at our desk hi Michael Hi how are you um for you
+
+>>Michael Bottazzi	02:12
+Well Yeah
+
+>>Aniket Tatipamula	02:14
+Yeah Good
+
+>>Michael Bottazzi	02:16
+Good good I haven't spoken with Eric today let me make sure he can join if he can it may just be more beneficial to read schedule because we're not really the experts um all right he hasn't pinged me back yet but one thing he did reach out to me about which i think what he told me was he was going to email you guys about um an example response output i don't know if you guys got that Um but i just want to make sure that that was on your radar No Michael i think we haven't got any email
+
+>>Aniket Tatipamula	03:20
+Yet Oh really
+
+>>Michael Bottazzi	03:21
+Oh okay He's forwarded me all right let me send this over to you directly then that's strange um all right let me uh here i'll flip this over to you he was i mean you'll understand better than me But he kind of just i think wanted to see um an example response output for failure like a failure in particular um he was coordinating with developer on his side I think that was something they were talking about let me forward this over um But yeah we can give it two minutes if not maybe i'll just put this on for tomorrow um just because i want to make sure he can join apologies for the lack of coordination there let me send this over to you now Though so i don't forget
+
+>>Michael Bottazzi	05:03
+All right i just sent that over um all right let me let me circle up with him internally i won't keep you guys on the line um if there's any specific questions i'll email back out or i can just throw a call on for tomorrow or this week um is there anything specific from our end i guess though while we are here that you need from us right now Michael while we are here i just want to understand
+
+>>Aniket Tatipamula	05:29
+Right like basically uh the entire integration and what would make it a success uh like uh and what's the plan because we also want to make sure that this uh goes through faster and how Yeah But for that i just wanted to get a little bit of idea as to which direction we'll be steering what is expected of the entire integration Okay
+
+>>Michael Bottazzi	05:49
+I think when we talk about the whole integration just think for one second here i want to make sure we'll likely try to not touch the current underwriting workflow as again for this process um that way everything that's done currently and the way that documents are submitted is done the same way i think in a perfect world um the box slash salesforce integration works seamlessly such that there's not a manual touchpoint to kick it off um doc sumo was able to pull and create the folder which we said you know we saw the example of that happening right last week but like creates a folder creates a case pulls in the documents like we've been testing q sees them and then sends a response back out and and that response back out can is kind of twofold right like one goes back to the direct salesforce object i guess to trigger an action which Eric said he'd be able to sort out right like uh change the state or provide a notification or a task or something um and then send an email um to a select group of people we choose internally to you know look at an issue or handle a specific request um i think in a perfect world that happens without manual touch points past the underwriter you know submitting it for qc once the submission for qc happens everything gets kicked off and then um on the follow right for the post approval packet it gets fed back in the same doximo case and the qc happens the same way the response are fed it back out the same way upstream um i think that's the ideal scenario um what we what we want to avoid is a situation where like maybe the the checks are great but if it's causing a lot more manual touching downstream
+
+>>Michael Bottazzi	08:28
+Or um we constantly need to be reviewing because of like the little errors that's why fixing the little errors over the last few weeks has been super helpful right So like easy things aren't flagging causing issues um you know something we want to avoid So i think like you know what i need to do is circle up with Eric because he looped in his developer and i know they had some items that they were looking into regarding security right And like if we have the ability to use a public url or an unlisted url um if that would work for him um the response output was something he wanted to see So um Yeah i need to do that
+
+>>Aniket Tatipamula	09:12
+But i think like holistically that's like in a perfect scenario how this looks on our end and if let me know if that kind of aligns with what you think or if that doesn't make sense sure Michael i think it makes sense so i think if uh maybe i saw that email uh maybe we missed out on like it is trading because i had created a document i'll share the document right away and also add the response structure it should not take more than 15 minutes for us i'll do it right away And uh surely if the developers are on the call like Eric and um i think he mentioned he'll add someone else as well roman as well if they are on the call And then we can figure something out either ways uh like
+
+>>Aniket Tatipamula	09:58
+Syncing if it can't be done on brevet side then we'll figure something out the only problem with we doing it is because it will be async it will not be in sync with what brevet team is doing right it will be like someone putting up a folder and it will be there in doc sumo But still someone in salesforce has to do something to figure out Okay Like where's this packet right and there would be no reference with brevet in that way So it is advisable that brevet team does it uh natively in a way that it is share creates a folder and then uploads a document or then it would become um i'm not so sure like we'll then have to figure out then the brevet team would have to then go through each and every packet like fetch everything or search using a query and then get that data so that is also doable um it is that we'll have to solution something out And then we should be good
+
+>>Michael Bottazzi	10:52
+Okay then let me i'll circle up with Eric I'll see if he's met with kudrin um the developer on his end um if you can come back with the answers to those questions what i'll do is i'll just feed it right to him directly i'll send it back over to him and just say Hey fyi uh you know response is here let us know you know i'll circle up with him let us you know let me know where this shakes out And then i'll get another call on um so you know you and him can chat directly um i think that should be more effective But um But okay let me i'll chase him And then if you don't mind coming back on that we can just go from there sure Michael um give us 15 20 minutes or half an hour
+
+>>Aniket Tatipamula	11:35
+And then we'll also update the document and then share the document with you Right okay Actually Yeah
+
+>>Michael Bottazzi	11:39
+That'd be perfect Yeah send it all over send the doc over And i'll just use that directly then so we're looking at the same thing Okay cool I'll um i'll reach back out um And then i'll check his availability i'd like to get a You know something on later this week so we have a clear path for next week but um let me just follow up with him And i'll use your document And uh we'll go from there sure Michael that works thanks
+
+>>Aniket Tatipamula	12:10
+Okay cool Thank you appreciate it great thanks Michael thanks evan thank you thanks bye
+

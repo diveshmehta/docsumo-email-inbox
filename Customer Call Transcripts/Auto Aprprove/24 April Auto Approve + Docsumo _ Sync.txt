@@ -1,0 +1,342 @@
+>>Mike McCarthy	00:00
+They were able to extract it with good accuracy, able to provide us with if it is a need review or if it's a fail, it provides the reasoning of how it determined that. Then obviously, some of the ones that were needs review may not have been actual need review, but they say that that's machine learning and that we can continue providing them with the examples and it would learn that over time.
+
+>>Jasneet Singh Malhi	00:33
+Awesome. Awesome, Mike. I'll just quickly do one thing. I'll just give you some quick context before we get started with the demo, Mike. Since we did not have a way to access your data on the CRM, and our source of truth for the validation was the actual screenshots that you shared with us. Just to show you the validation, we've done one thing that we've merged the screenshot with the actual file to show you how the validation piece would work. Then in the ideal case, we would get that data from your CRM and then show you the validation on the actual platform itself. On today's call, even though there is a screenshot of the actual document and of that part on the particular system, but in the end, we won't have that. We will just ensure that we just have the data coming in via the metadata through the CRM. Sound good? Sounds good.
+
+>>Mike McCarthy	01:28
+Awesome.
+
+>>Jasneet Singh Malhi	01:28
+I also see someone else has joined the call. I don't want to mispronounce and butcher the pronunciation. If you could just let me know how to say that, I will be more than happy.
+
+>>Soliannis Mejia-Baez	01:41
+Hi, I'm Solianis, Senior Program Manager at Aurapro. I deal with the documents and steps, so that's why I'm here to watch the demo.
+
+>>Jasneet Singh Malhi	01:52
+Welcome, Solianis. I really appreciate you joining the call. Do we have a full quorum or are we waiting for a bunch of other folks to join in as well?
+
+>>Mike McCarthy	02:00
+No, like I said, I don't know if they're going to be able to make it. I sent the invite, so Austin or Joe may be able to join. If they do, great. If not, we'll just send them the recording. Sol, just to catch you up to speed, did you watch the first video I sent to you?
+
+>>Soliannis Mejia-Baez	02:17
+No, I haven't got the chance. I watched some of these videos when I was doing research on Oci before.
+
+>>Jasneet Singh Malhi	02:26
+Mike, we can take it from the very top. I think that would really help us give you a refresher also, and it can help Solianis also.
+
+>>Mike McCarthy	02:35
+Yeah, that'll be good for when we forward the recording to the others as well.
+
+>>Jasneet Singh Malhi	02:38
+Absolutely. Absolutely. Happy to help. So we'll get started? Yes.
+
+>>Mike McCarthy	02:44
+Awesome.
+
+>>Jasneet Singh Malhi	02:44
+So basically, team, what we're doing here is that we've been working with Mike to understand what the use case is and how validations work. So our basic idea is to get to one -touch contracting, wherein we are able to look at the data which is coming in from the CRM and compare it to the documents that a user has uploaded. So first of all, we have something called an AI auto -classifier, which has the ability to look at a deal packet, and then segment and segregate the right set of documents to the right bucket. So let's say if I just upload, if I just go to, let's say, all data, so you will have buckets like this. And in this case, every specific file or this value, if I just click on it, you will have all the specific document types. So for Harris deal packet, we will have the driving license, the book out, the Reg, Nv, Tis. And then basically, the system will automatically break this deal packet into separate different formats or different buckets and send it to the right respective bucket. Now, what that does is that I understand that on the CRM, there is anyway going to be a place where you would individually add these files onto the platform to make that mapping is there. But even if there's a whole deal packet file, we can automatically segment it and classify it on the basis of what exactly is in that deal packet. So basically, what the system is doing is that it is looking at a specific document and then sending it to the right bucket for the very first process to happen, which is going to be the extraction process. Mike Solana has just taken a quick pause to see if there are any questions. Awesome. Now, if I just go back and go to all documents, you'll be able to see that we have kind of created all these deal packets that you shared with us, right?
+
+>>Jasneet Singh Malhi	04:31
+Harris, Garza, Chau, Ahiman, right? And then if I just open up the individual driving license as well, and then if I just, let's say, open up the Harris one, you'll be able to see this is the driving license for Harris, right? And if I open this up, you'll be able to see that this is the extraction bit, wherein the system is looking at all the information and it is able to extract all the data. Now, deliberately, what I've done here is I've made this out -of -state driver as a low confidence score, wherein if, let's say, it's not mentioned somewhere explicitly on the actual document, then rather than giving you wrong or fault information, the system gives you a low confidence score and someone can review it out of the box on the URL it's in, right? Now, the beauty of the platform is, team, that for this specific format, and let's say for the state of Illinois, if I tell the system once that the out -of -state driving license, I need to pick up the value, let's say, from here as an example, right? As an example. So this actually gets recorded as part of the model training, right? Now, the low confidence score has changed into the high confidence score. And basically, what this means is that the system, when the next time onward sees the driving license from the state of Illinois, it will know that this is where I need to pick up the right value in the right field. So any sort of annotation, any sort of correction?
+
+>>Bikram Dahal	05:48
+One more thing on this one, because usually out -of -state also might be based on the rule. Example, whatever people have filled up, if it's not equal to that state, because out -of -state might mean information that comes by looking into what was filled by the people. An example, people have told that I'm from this state and then like this one, so that can also be written as a rule. So I'll show you some examples, because I'm trying to give you information. One part of the system is to extract the information. Second part is if you have to write some kind of rule, saying that if this happens, and if this happens, change this value, fill into this value. So that part also can be added as a workflow. Awesome.
+
+>>Soliannis Mejia-Baez	06:32
+Sorry for interruption. Can you explain more of that? So are you saying that we are able to copy your rules also? In the... So it looks for information. Okay, perfect.
+
+>>Jasneet Singh Malhi	06:43
+So basically, Solanus, what is... I'll just double down on that question in just about a minute, right? So just wanted to give you an overview on how the extraction engine is working. So we are getting the files, and this is the information that we want out of this file, and we're extracting all the information. And this is a continuous learning process. If there's any sort of annotational correction that I'm doing on the specific document type or the specific format, it learns from that and keeps on increasing the accuracy and the speed. Now, in an ideal case, in your specific use case, what is happening is that I've also gone ahead and uploaded a screenshot of the CRM, right? Now, as I was speaking to Mike earlier, we will get this data from your CRM. You don't need to upload a screenshot of the CRM. You will anyway get this data via the API in the metadata, right? And then we will check. We will check if the name on the driving license is matching with the name on the CRM data, right? And how we'll check that is we'll run a validation. Now, what I've done here is, just to kind of show you how interesting that this can get, the name on the driving license is Harris Ennis, right? And the name on the CRM data is Ennis Harris. I've done this, you know, deliberately, mind you. And if I look at the validation, you'll be able to see that it shows me that the name validation, there's a mismatch. And this is not the right way. But however, if I just go ahead and, you know, make this change as Harris Ennis as an example, and I confirm this, you'll be able to see that, and I rerun this validation, you'll be able to see that the name has matched now. So basically, the system will compare these two values and how it is basically doing that is that we've set up a rule here. If I just go to, let's say, you know, the validation bit, and I open up the settings there, and I go to advanced, it is basically looking at this rule if the lower information is equal to the information, basic information is equal to the CRM data, then the name should be a match.
+
+>>Jasneet Singh Malhi	08:36
+If they are not equal, then it should be a mismatch. So similarly, based on each and every logic, we've set up these validation rules in place, right, based on the rule booklet that Mike shared with us. And the beauty of this entire thing is that everything is happening on the UI. So you don't need to go to a separate place. And as I think we mentioned on the last call as well, that we can integrate this whole platform on your CRM itself so you don't even have to leave your CRM, right? Everything can be done on the CRM itself, right from the uploading of the documents to reviewing this, looking at this review screen, right, and looking at all the validations also. And once you confirm this, we can, you know, send the data as a JSON to your CRM to update and populate all the fields. So two things are happening. The first engine that is running is basically the extraction engine, right, wherein we're extracting the data. Then we are comparing it against the data that we're getting by the API to the CRM. Since I don't have the APIs right now, I just uploaded, you know, a screenshot of the CRM just to show you how it would work. And then once, like, we are comparing, then we are validating if this is matching to this. If not, then we tell you that this is a mismatch. If it is matching, then we're telling you that this is a match and it does not require a further review. I will take a quick pause here to see if there are any questions.
+
+>>Soliannis Mejia-Baez	09:58
+No, this looks good. Question here, that this is all documents. What about if we pause and pass you raw data about information about the packet? And would you be able to, just based on that data, it's not a document, create rules for it?
+
+>>Jasneet Singh Malhi	10:17
+So, Solanus, we would need to understand that what... Let me try to explain that.
+
+>>Bikram Dahal	10:22
+So I was talking about, you guys also have some metadata that is with the load package, and you want to use that metadata to do some verification on our platform. Am I understanding that question correctly?
+
+>>Soliannis Mejia-Baez	10:34
+Yes, like, we have different lenders and they have different rules, and we get different decisions from all the lenders. One of our use cases is we get payloads, right, with that information from them. And we like to compare that information against the packet, the actual information on the deal, and make sure that all validations pass the stipulations on that specific lender. And whatever it is that they gave us on that decision.
+
+>>Mike McCarthy	11:02
+Real quick, this goes back to earlier conversation. So, kind of what we're referring to is getting to that point of push -button contracting, but being able to validate more than just stipulations, because stipulations is just one small piece of this puzzle. So we're talking about unstructured data in terms of whether that be rate card, whether that be a document that has all the lender rules, but only semi -structured, not maybe it'll have labels, but they may not be in the same order as it is in other areas. Same thing with state documentation, being able to check state rules, and being able to look at the approval, which you do have approval examples here where there's some information within those approvals that need to be checked as well.
+
+>>Bikram Dahal	11:43
+Yeah, so that can be done. So one of the thing, like as long as, yeah, I think Joseph is here. So like, as long as there are two ways of looking into those problem. The first problem that we are looking into is that you have a document and you have the data in your CRM, and you need to compare. That's a simple use case that you talked about. That's one use case. That is the first step that we showed over here. Let me say the second use case is the, and the data can come through here. In this case, we have taken a screenshot and just extracted that data into, it's a CRM, like on the left -hand side is one of the validation. This can come through API, or this can come like all the way. So that is doable. The second question that you talked about is that, let me say you figure out that this document is from Illinois, and Illinois has its own rule regarding, let me say you can only give a loan if they have a credit of 960 or something. So you guys want to like, make sure that you figure out what is the state rule, and based on that, based on the information that is extracted, take a decision. Is that what we're talking about? Or like, just wanted to get a bit more clarified. So the part where like, to compare it against the document, either through API, or either through some other information that is extracted in Docsimo, that is doable. But the second part where you talked about state rules, if they comply to state rules or not.
+
+>>Bikram Dahal	13:24
+So that part, I really wanted to understand a bit more so that we can advise if it is doable to our platform, or it's better for you guys to do it on their platform.
+
+>>Mike McCarthy	13:34
+Yeah, so I think some examples, if we're talking about lender specific rules, so we have a lender, and they have rules that let's say, as a basic one, they only go up to a certain retail loan to value ratio. And so this is going to tell us that this can't be above that. So I'm assuming you can extract that based on how we're sending it to you. Maybe, but I guess we're looking also at some more of the nuanced ones as well. But we're also just trying to figure out what percentage of all of the data that can be there. But if we're talking about state, it may be that this state only allows gap insurance to be Max sold at $300 in the state of Colorado, that it can map that and be able to identify that and flag that if that were the case as well.
+
+>>Bikram Dahal	14:21
+Yeah, so for that, what we have, so there are two things. Example, if a state have those kind of rule, let me say a state of Illinois, the total loan amount is like, you cannot only give 10K loan amount, and there is one more policy regarding things. So for that, we have something called external database. So like, Jasneet, can you close that? Yeah, so what you can do is you can put a CSV over there. So on this system, let me say you have a state and you have a rule. Like, and those rules later on can be expected if and else later on, but here, like, the simple rule might be instead of Illinois, the, like, what do you call the, like, the gap cannot be, that can be 300. So you put those things over here. You can take this and attach to any of your case. And on the UI itself, say that, oh, this loan amount they have asked for is 10, like, what do you call, like, 500 or something. But because this document is from Illinois, the amount as for this database is, I can only go till 300. So you can do that, and that is how we have seen people do, like, that is what we call two -way matching and three -way matching. So people either compare it against the database that they already have, and that is, can be put over here. And this rule you can change. You can come and say that the new rule of California is this. So those things, like, as long as those are properly set up, like, you guys can use it on the document, or you can also get it on export. So you might not want to see those things on UI, because you don't care about it. On UI, you do the extraction. So example, just, can you go back to document type? Can you go to one, sorry, all document.
+
+>>Bikram Dahal	16:02
+Can you go to one document? Can you go to one, can you select on one folder? Select, no, no, can you go back? Can you select one folder? Just, yeah, tick mark, and can you download the data? Download the JSON, just not Chp. So what we can also do is that once the extraction and everything is done, if you have written some kind of rule based on those logic, then on that extraction, can you show that JSON? We can also give you those rules, saying that, oh, like, yeah, the extraction is out. Here are your rules. And this is match, this is not match, and this is the reason. So this is also the extracted data that you have, like all the details and everything, like where it is coming from, and a lot of things. And here you can add one more section called analysis. And that analysis can have information based on what you talked about, and you can make it simple and complicated, depending upon your workflows. And this you can do through API only, so you don't have to manually set up a lot of things. During the setups, you guys will need our help, but once we train your team, they can do it themselves. They can make new document type themselves. They can make a new data table rules themselves, do the attachment, and then figure it out.
+
+>>Jasneet Singh Malhi	17:20
+So, Mike, the thing is that anyway, all our accounts come with a customer success manager that will help you look at the platform, and if you have any queries, there's a continuous feedback loop there as well. So the idea is that based, so the basic source of truth for us to look at any rulebook is the data that has been extracted. So we have something called as post -processing, wherein if I just go to, let's say, document type, just let me give you a quick example here. So I will go ahead and add a custom post -processing code here on the basis of which logic we will use to post -process the extracted data, put it through that logic, and give you that specific output on your system. So the source of truth is going to be the extracted data. For stipulations, we can just give you what is matching, what is not matching, but if you want to run further analysis on it, like let's say if they're on the platform in the state of Colorado, the gap insurance is not more than $100 as an example, and if it is exceeding $100, then it will, based on the logic that we've set up in the post -processing code, it will tell you that this gap insurance exceeds the threshold value of $100. Does that make sense?
+
+>>Mike McCarthy	18:39
+Yeah, and just so I understand one other thing, when you were looking at that page that we put the, I guess, the CSV file or the data in, so we're still going to have to create that, right? We can't drop in information and have it extracted by AI to -
+
+>>Bikram Dahal	18:59
+Yeah, we can do that also. So the way to do that is, example, you have those nuisance and everything, so what those nuisance are currently on PDF file. You're gonna have those nuisance as a CSV. So what you can do in that case is that you can just go to, Jasnith, can you go to the system? Can you go to a document? No, can you go back to the document type, Karl? And can you add a new document type? Call it policies, like call it policies.
+
+>>Bikram Dahal	19:37
+Yeah, and then here you can upload your policies and you can decide what are the information you need to extract out of those policies. You can upload one document, Jasnith, maybe DL or something. On the left -hand side, you can decide what are the clause or what are the information that you want to extract. And even if you don't have those, then you can make this table. And once this is ready, you can use this as your Dom tools also. So like here, like let me say, here like you say that from all this policy document, extract this, this, this point. Though that also can be done if you guys don't have that by default.
+
+>>Mike McCarthy	20:14
+Can you do a live one of the data extracting from a license or something?
+
+>>Bikram Dahal	20:19
+Yeah, this one, yeah, you can do that. This is also a good one. You can just do, so this is a new document type. We have not done anything. Or you can upload one of the different type. So this is a, if you look into this one, it's a new document type. We have not done anything, anything like over there. And we're just using the new document type build on your offer back to do the extraction. Can you see the extraction please?
+
+>>Jasneet Singh Malhi	20:50
+So basically this is like our custom model in place where it comes with automatic field generation. So system looks at what the document type is and then bases the document type. It is able to kind of extract all these data and all these values. And then suggest you, if you want to add another field, let's say it's very simple. You can just go to settings and then you can just add a field based on, if there's something else you would also want to extract, let's say test, right? And then you can go ahead and add like, what is the value if it is string number, dropdown, checkbox, calculated field. And then basis that we should be able to extract the information as well.
+
+>>Bikram Dahal	21:34
+So all of this, I think is Mike, Yeah Mike. So all of this document type that you see was created by Justin himself. So we have not used the, because the field that you guys needed was a bit different than a standard document type that we have use case, right? So all of this document type will also provide you the sandbox. You guys can try it yourself. Like this was created like in less than like a minute. And once you fix the issue, it will have a little bit of issues. And if you fix the issue, it will start loading. Because if you go to this document type, right? So like Justin, can you go to the driving license or any of this document type? So if you see the list of field that we have, you can pick up any. So if you see left -hand side, it's exactly what you need on your system. And if you go down, CRM data, it's very custom for you guys because we don't have CRM data because we wanted to extract from this place. And validation also, we have just set it up ourselves. So all of this model, so if you think about it, is created for you guys specifically based on your need.
+
+>>Mike McCarthy	22:42
+When you were talking about API integration being within our CRM, that validation section, where it has the checks or the looks, if there's something to look at, is that just, that takes them to this platform to review?
+
+>>Bikram Dahal	22:57
+Yeah. So what will happen is, we have something called like single URL. So on your system, let me say you upload five document. When you receive the document back, you'll also receive the URL. And if you click on that URL, then you'll see this screen embedded into your system. You want to see all the five files at once because you don't want to click, click, click, click, click, for five files and open it on five different system. We have like, there's one video of how we have done it on Salesforce. I think that's what Justin is trying to show because we have a lot of people who do not want to come to Docsumo because they want to do a setup. They want to do everything in Docsumo, but their day -to -day operation, they don't want to use two platform. One platform is Salesforce or CRM, and second platform is Docsumo. They don't want to do it. So they also like integrate into their system so that even those things that has to be reviewed, they can just click a link, get like that iframe, do that review. The system will also learn, and they don't have to leave the platform on you.
+
+>>Jasneet Singh Malhi	24:08
+So I'll just give you a quick example here. This is an example of Salesforce and bank statements. As you can see, like there's an option of uploading file here on Salesforce, right? So the user would ideally upload the files here, right? And then, and obviously, like since you're getting all the files automatically, you don't even have to upload them, right? And then once they get uploaded, all the data is piped and mapped accordingly. And then you get this URL. You open this URL and it opens up the Docsumo review screen platform wherein you can check all the validations and everything. And then once you confirm it, then it gets piped to the right set of fields and right set of values automatically. And it can basically tell you what is matching, what is not matching. And then on top of it, it can also go ahead and tell you state level rules as well because it will be post -process, the data will be post -process. And let's say if there's any exceptions, it can directly be routed to your CRM platform.
+
+>>Soliannis Mejia-Baez	24:59
+I hope this - Yeah. So if we don't want to go into the link, if we just want to get the data back of whatever was extracted validations and whatnot, will we be able to have like an API or JSON response where we just consume that data? Absolutely.
+
+>>Jasneet Singh Malhi	25:18
+So like that kind of cuts that one step of that if you don't want to review the data and you will be relying 100 % on the AI, that you don't want to enter into the review phase and you want all the data to be sent directly to the platform without seeing or without checking. And then we can just pipe it in a way that it populates the right set of fields on your end and then make sure that all the validations and the stipulations and the exceptions are matching or not matching. So that can be done via the JSON.
+
+>>Bikram Dahal	25:46
+One more thing that we have seen with other customer is we do something called straight through processing. Let me say you get a package and package has all the data because you are also sending your data through CRM because you already have that data on CRM, right? So you are sending that data also. So this two data can be used for validation. For example, I say that if everything what is on the document and this matches, then when you get the data back, we'll say that everything is matching. You want to review it, you review it, but you don't have to review it. So let me say one of this field is not matching, then we say that, okay, it's not matching. So if you want to review it, here's a URL. So you can also make a way on your system to only show those values that are not matching to the user. Those that are matching, because you have two layer of validation, people don't even have to look at the document. So we have also seen customer, and that is what we call straight through processing or task -less processing, where on your case, it might be different because we'll have to say what kind of data we get, but 90 % of the document, people don't even review those documents. Only 10%, they review just by going at their skin and fixing the issue. So depending on the quality of the data that you guys have, we even have that way, you can decide you want to review or not review.
+
+>>Mike McCarthy	27:06
+Another example, kind of cross -referencing is, let's say we have title documents that get sent to us. If we have those, either some of them are e -signatures, some of them are sent in to us with wet signatures, but our titles department needs to review them to make sure, one, that we have all the correlating documents that we're not missing anything, usually by a number on the title document, or let's say a lot of times we have either wrong signatures or missing signatures on those title docs that they're manually checking. Will they be able to learn, because they're all different for every state, what those look like, where those should be based on either what we show them as mapped to or...
+
+>>Bikram Dahal	27:47
+So two things. Over there, I'll tell you what is possible and what is not possible, right? What is possible is, example, you can set up a system saying that, oh, this document should be like 13 page, and then like, not it has all the pages or not, right? It's some page missing. Those can be easily set up. You want to figure out if the page has sign or not. You have two parties on the page, and you want to figure out if it's sign or not, that you can do. What you cannot do right now on the system is to figure out if the signature is that of that person or not. Now, until and unless it's like, if it is Docusign, then you can get the signature, because Docusign, usually you can get the name. But if it's a voice signature, then you cannot get the name. So can you match the signature between two documents? No, but can we say that if this document has signature or not? That we can do.
+
+>>Mike McCarthy	28:32
+Can you identify, like, in no situation do we ever want anything scratched out on a title document? Can there be a rule that would be able to identify something being scratched out by a customer?
+
+>>Bikram Dahal	28:44
+Scratched out? You mean to say that, like...
+
+>>Mike McCarthy	28:48
+They put a line through something on any of the documents?
+
+>>Bikram Dahal	28:52
+So, that one, that case I have not seen, so I'm not going to over promise you guys. I know, like, we are able to do a lot of things with signature and field detection. So by default, out of the box, no. But I'll have to look into some examples and give you more detail on, like, it's doable or not doable.
+
+>>Mike McCarthy	29:10
+Yeah, I'm just throwing out random ones just to get an understanding. Yeah.
+
+>>Jasneet Singh Malhi	29:14
+So, Mike, even, like, when it came to the actual driving license and the clarity of driving license that you shared the field with us, so the LLM was automatically able to define that the clarity of this document is clear, right? So, it might be possible, but we'll have to run a test to see what is the level that the LLM can perform, right? Similarly, if I just go to another driving license and look at the clarity, maybe for, if it is not very clear, just give me one quick second. Again, the clarity is clear in this case as well. So, but yeah, we can check. But either way, we can give you a dropdown. Let's say if someone from your team wants to overwrite that and say that this is not possible because the driving license or, let's say, something of this has a marking or cut mark through, then we can give you this in the dropdown as well so that you can populate this in one of the fields and at least record that if the LLM is not able to do it automatically. Okay.
+
+>>Bikram Dahal	30:25
+I think this was the majority of the thing. One other thing I wanted to understand, because I know you guys have a bigger plan for this one because post -contracting on this one, and also you guys are trying to build something that not a lot of people have, right? So, there'll be a lot of future plans and also what can we do immediately to show the ROI so that you can justify to put more resources into the projects and everything from all the parties, right? So, for this one, Mike and the team, what I wanted to understand is what does success look like, right? Like, if we have to say that we have to divide this project into different milestones and everything and the first milestone for everyone is X, then what does it look like, right? So, it's as simple as like, oh, you make a case for everyone, you get all the document, do the extraction, and we are done. Or do you guys also need to make sure that that extra tool that you talked about is there or that more complicated thing you talked about is there, right? So, I just wanted to understand, like, what does version one of this product look like on your timeline and also for our, so that we can plan if even if we have done some, don't have some feature, then we can, because I will look at the product. So, I have influence regarding what should be built for quarter one, not for quarter two, because it's fixed, but at least for quarter three and everything, I have some influence on, like, a feature that we can add. So, I just wanted to understand, like, what is your selection criteria, at least at the beginning, and then what does that first version of, like, a project look like?
+
+>>Mike McCarthy	31:54
+As far as timeline and actually what was needed to define that and the accomplishment of what we're trying to accomplish, maybe Joe or Sol can speak best to that. I mean, I can just say from a high level that obviously we're working on specifically to our fulfillment department, but this can also relate somewhat to our sales department and potentially titles department as well, and automating as much as possible of the manual tasks that are done today. The goal would be to find 100 % validations, but reducing that to whatever percentage we can will make a difference and be able to look into what kind of impact that would have on the time it takes and the manual efforts that we would do to improve our cycle times between statuses and reduce our headcount necessary to do this and reduce our error rates.
+
+>>Bikram Dahal	32:43
+I don't know.
+
+>>Mike McCarthy	32:44
+I know Joe just got brought into this, and so did Sol. I don't know if you have anything to add or anything to say.
+
+>>Joseph Traskos	32:51
+Yeah, I mean, bigger picture, like, no, I don't have specific milestones. We're not this huge giant bank, so we don't have a very formal RFP, Rfi process, right? So we're figuring out a little bit as we go, but for me, what I'm looking for is understanding what capabilities we would get out of a tool versus what we're gonna need to build, and so, like, specifically, right? Like, if I have to build a rules engine for non -document -related rules, so like our deal structure and how someone defines what their first payment is, right?
+
+>>Bikram Dahal	33:31
+I've gotta build a rules engine.
+
+>>Joseph Traskos	33:33
+Using the rules engine that you, using the rules that you guys have in here may or may not make sense, and in that scenario, it might make more sense to just get the information into our CRM via JSON, via an API, and, like, we use our rules. You know, the other approach is, like, if it can do everything, right? If then it might make more sense for us to take screenshots and not build any rules into ours. So it's a little bit of a chicken or an egg right now of, like, what are the capabilities that are available and what are gonna, like, fit into the bigger picture? But no, we don't have a specific, like, we need to see X by Y, and that's how we're gonna decide. Sure.
+
+>>Bikram Dahal	34:12
+Okay, so let's do this. At least on a very high level, I think we understand, like, understand the requirements. At least on the information extraction and validation to figure out when this information should be able or not, we will be the, like, we are the best platform. Now, if we, like you said, right, Joseph, like, if you guys are also looking for a way to make that first payment, right? Example, the first payment should be this. Email has to go out, like, this is Emi and everything, those, like, those things that happens over there, then we are not the, might not be the best platform because I want to be very clear on, like, this space, these things. But anything related to a case and making sure that you can extract the information of the case and also make sure that, like, make sure that you get the validation, whatever can be done, either through that external data source that you guys can provide or based on that information extraction, we have one of the best tools. On top of that, if you also have to figure out if this contact is completely executed or not, if something is missing, those things also, anything that is related to document extraction and around that, we have those features. We'll make sure that we'll send you detailed videos and everything for those features. But like you said, like, all the rule engine and everything, we have something for certain cases and everything using database table and everything, but we might not have very complicated, like, first payment or, like, some other things. So we'll send you that detail and then you guys can take a call regarding, like, do we fit in as one of the vendors? And then you guys, like, yes, either you guys will build it or, like, you guys are really good on data extraction, but these guys are really good on rule building so that you have to use two different tools.
+
+>>Bikram Dahal	35:59
+Or there is a third vendor who can do all of this very nicely, right? So that might be, it might make, like, your life easier just to take a final decision.
+
+>>Joseph Traskos	36:07
+Yeah, no, it's definitely gonna be, it's gonna be some level of buy and build combination. Like, we're not gonna be, we're not gonna have, we're not gonna hire a data scientist to train our OCR, right, like, we're not gonna do that. So it's just kind of understanding, like, how this fits and what's the value proposition of it, like, compared to some of the other things. We're on AWS for a lot of our systems, so Textract is just something we use for other things. You know, how does this compare to that, for instance? One question, and I'm sorry if you guys, I know we're over time, if you guys have to run, like, I can send the questions via email.
+
+>>Bikram Dahal	36:43
+No, no, it's fine. I think we can do it till next seven minutes.
+
+>>Joseph Traskos	36:47
+Okay, yeah, one question is using the driver's license as a use case. So we get a driver's license in, we scan it, we say, okay, the name doesn't match exactly. The CRM says Joe Traskos and his driver's license says Joseph Traskos. So a human needs to go in to update the CRM, potentially, or they need to be alerted, hey, it's different. Update this. How do you rerun rules, right? So if, in that scenario, driver's license doesn't match, somebody goes into the CRM, changes it to say Joseph Traskos. Now we wanna be able to say, you know, it passes, right? Would you send it back through? Is there a way to, like, call an endpoint to re -evaluate the rules? Like, how does that work?
+
+>>Bikram Dahal	37:33
+So on that case, there are two ways of doing it. So the first way is this. Like, when you upload a file, along with that file, you send a metadata, saying that this is the file and this is the metadata it has to check through. That metadata can either be sent during the upload or that metadata can also be updated from your site when those updates happen. So you can use this API to which you can push that data. So let me say on your side, you go and you guys change that information. Then that side, we don't do it on our side. We don't have a listener for those kind of events on our side. As long as from your side, you send the information back to our system, it will automatically calculate. Example here, in this case, if you change the name, right? So like, Joseph, can you just change the name on CRM data? Let me say you made that change. The information is passed through us and make a change. And if you, like, if you do any of the operations on the system, it will say that now it's a mismatch. So if you pull that data one more time, like we can have a listener on our side saying that if this data has changed, do the evaluation and then like show it to the UI or send it back to the system. So we can do that way. Okay.
+
+>>Joseph Traskos	38:48
+And then relatedly, you know, I don't know if you guys have gotten into this yet And it might be premature. So I'm not asking you for like the exact dollars and cents, but from pricing model, right? Like that would, how many times I call your API, I'm going to approach it differently if I have to pay per API call, as opposed to like a - It's not for API call, it is for document uploaded.
+
+>>Bikram Dahal	39:13
+So per page. So example, that document, you can post in the document and then let me say, you send this, like you want to receive this data two times or three times or you want to send this CRM data and then receive that data one more time, we don't charge anymore. The cost is only for page that is posted in Docsremove. Now, let me say you come and if you change the field that you need, example, in this case, can you go up, Jasneet? Let me say here, you say that, okay, I have already posted 100 document, but one field was missing on this document. Let me add one more field. Then the document has to be reposted. In that case, you will be charged, but let me say you are just changing like CRM data or you are just pulling that, combining the data and pulling it, you are not charged on that.
+
+>>Joseph Traskos	40:01
+Yeah, I think that scenario is gonna happen during the setup, right? Like a driver's license is a driver's license. Yes, it's slightly different each state, but like a Michigan driver's license is always, we're always gonna be asking for the same deals out of the Michigan driver's license once we get the setup. So like the asking for additional things isn't gonna happen too much, but I understand what you're saying.
+
+>>Bikram Dahal	40:23
+Yeah, and that's also one of the reason when we do this kind of solutioning, what we have come to realize is that it's always good to bundle our customer success over there because they can provide you with the best advice. They can ask you some questions that you guys might make a mistake because my team is very strict. They will say that, have you like, can you send us some samples and your requirement already? Because we have seen people not knowing what they want to extract or not. So, and that comes free, like it's not like extra money or anything, it's a four week process because what we know is that if we are able to automate this process for you and do things end to end, then the attention is given. We don't have to even think next year, you guys will have a very happy time because the utilization will be more than like 80%, 90 % or even upgrades. So one of the things that we do on our side that is different, you can also check out G2 review and everything because one of the best thing that we do is we provide a very top -notch service, not just for onboarding, but even after that, okay, there are some changes you need to do or you guys are facing some issues, then you have a direct connection with our customer success manager.
+
+>>Joseph Traskos	41:26
+And then the last question before I let you guys go, API docs, are they publicly available? Yes, they are publicly available.
+
+>>Bikram Dahal	41:33
+I will send you a request.
+
+>>Joseph Traskos	41:35
+Great.
+
+>>Jasneet Singh Malhi	41:40
+So thank you for those questions, Joseph. I'm also sharing the API documents that are publicly available. I'll also share the link on the chat as well. So from a next step point of view, Mike, what exactly, you know, and Joseph, what exactly do you think should be a next step? How do you want to proceed forward? Do you want to maybe run a POC? We can design a structure in a way where we can run a maybe a two month POC And then we can build this process together. And then, you know, if you want to get started, we can discuss pricing. So just wanted to see where your head's at and then we can decide on the next steps accordingly.
+
+>>Mike McCarthy	42:16
+Yeah, I mean, as far as, well, one, I didn't realize I was on mute a second ago. I was just curious. I know, obviously you can't give a firm number here and it's all going to be based on volume and all, but like, what are we talking about when you say per document, like an estimate? Are we talking about cents? Are we talking about dollars, tens of dollars? What are we talking about?
+
+>>Jasneet Singh Malhi	42:36
+It really depends, Mike, right? So let's say, so we build all our models for economies to scale, Right? So our pricing is actually publicly available as well on the platform. So let me just share that point as well. So essentially our pricing is dependent on three different factors, right? The first factor is the one -time setup and the implementation and the onboarding cost in which our teams work with your teams to set up that rule book engine, all the logics on our end to ensure that the model is working accurately as per your convenience. So that is a lift that we take up. Then that is the one -time cost. The second level is the cost of the number of pages, right? So 12 ,000 pages, 36 ,000 pages for the whole year, 60 ,000 pages and the associated cost along with that. And then we have the enterprise plan as well. So all these costs are in cents, as you can see, right? And we build all our economies, models to economies to scale. So the more number of pages you have, the lesser would be the per page cost, right? And then finally, the third level is the number of, you know, or the features that you would use ideally in a specific, you know, plan. So let's say even if your volume is lower, but you want to use the API, the API is only available from the growth plan onwards, right? So you would have to sign up for the growth plan. Based on your, based on what we've kind of understood from your use case, you would be using, you know, at least five models based on the driving license, the registration, The Nvt -is and the bunch of other models. So it would either be in the pro plan, or if there's, you know, data, external database validation also, if you want, then it would move into the enterprise plan as well, on top of the one -time setup fee associated with it as well. And then the finally, we would also look at your volume of pages and then basically custom create a pricing for you.
+
+>>Mike McCarthy	44:15
+And by pages, you're referring to documents, right? Or per stipulation or no?
+
+>>Jasneet Singh Malhi	44:21
+It's per page. So let's say for, if there's a driving license on a page, because the system anyway has to like scan and process each and every page to find out where the right information is. So we don't look at it from a document perspective, we look at it from a page perspective, because anyway, the system has to scan all the pages and that kind of requires a compute on our end.
+
+>>Bikram Dahal	44:42
+Mike, I'll make your decision process very easy because I don't like, like I also do a lot of software buying and everything And I don't like a lot of like things. I'll make it very simple. Your setup cost can anyway be between one to 5K, depending upon how the things are complicated. Your per page document cost on this is currently 0 .25, but I have seen per page, but like if you have really good volumes and everything, we can go up to 10 cents, but that is only for very high customers when you have guys have good volumes and everything. Just wanted to make sure that at least on high level, you guys have idea. So like just so that it becomes easier on decision making. So set up cost anywhere between one to 5 ,000 USD, depending upon the complexity and how it is and that we can decide on Poc. And then like on one other thing that we do with you guys is we have very clear cancellation policies. I don't like try to haggle on anything. We provide you a two month, like during the setup fee and minimum fee will provide you two month of Poc. We work together, we make sure that we build that system. If you guys don't like it, then you guys can terminate the contract. You are not obliged to anything. So we also provide that a small set of like, you don't have to sign for whole year. So COC up to month, we decide on the setup, what is required and the cost. And then after that, two month of monthly payment and depending upon like your volume and the cost will go anywhere from 8 to 10 cent to 25 cent per page.
+
+>>Mike McCarthy	46:12
+Okay.
+
+>>Jasneet Singh Malhi	46:16
+So Mike, just wanted to kind of check with you as well, while I have you on the call to understand what is the volume that you are projecting so that I can go back to the deal desk team and try to prepare like a proposal for you and the pricing that we can probably discuss on the next call. So just wanted to see where your head's at and what volumes would you be projecting so that we can - I think I need to understand pages better.
+
+>>Mike McCarthy	46:38
+I mean, I was saying like, so we have, we're gonna need at least, let's say, I don't know what the number is. Let's say five stipulations per application that goes into a certain status that we have. And so is that five pages that I'm sending to you or how does that determined?
+
+>>Jasneet Singh Malhi	46:57
+So I'll keep it like very simple for you, right? So what I'll do is I'll just open up the document type only. Just give me one second. Can you see my Docsimo screen?
+
+>>Mike McCarthy	47:14
+Yes.
+
+>>Jasneet Singh Malhi	47:15
+Awesome. So first of all, the first distinction is these models. Driving license approval, book out, Reg, et cetera, right? Now for Reg, let's say if I open up one of these example, I will go ahead and open up, let's say this example, and I'll click on Review Document. Now, this specific page that you see is one page, right? And since like, we won't consider this because this is like just for the demo purposes that we've merged this with the CRM data, but we would just look at this one page to extract the information out of it. And this will be counted as one page. So in a deal packet, if you send us five different documents with five different pages, we would consider that as five pages.
+
+>>Mike McCarthy	48:00
+Yeah.
+
+>>Jasneet Singh Malhi	48:01
+It makes sense.
+
+>>Mike McCarthy	48:04
+Yeah, I mean, volume is hard to determine. It depends on what we would end up utilizing and sending through this because if we're sending our title docs, we're talking about, you know, there's 20, 30 pages in a title doc package as compared to just sending over a driver's license with every deal, which is one page because a title doc's gonna be a whole set of the documents that drastically.
+
+>>Bikram Dahal	48:25
+Yeah, so I understood that, Mike. So regarding the title documents and everything, I know like the information that you need from those title documents might be just 20 field, but the document is like 30 page. So over there, like we can have a different discussion and make sure that you guys get a cheaper price for that so that those documents can be on the per document basis. But just to give it a simple example, for driving license, like a minimum, for one driving license, the minimum you guys will be charged is 10 cents. Just to give a rough map, right? We can send you all the details and everything. I totally understand for you, like the value that you get from title document might not be like $2 and you just need to extract three fields from it. And then you are not going to pay $2 for title documents. That part, I can understand. That part, like we can have one. We also, that's the reason why on this call, if you guys have a good idea about the field that you guys want to extract and everything, we can also make sure that you guys get a good price for certain document types. If we know that even if it is a 30 page document, I'm only going to extract five field. Then it makes no sense for you two guys to pay $5 for that. So that one, we can have a separate discussion. If you guys have some numbers and everything, then you can like send some details over there.
+
+>>Joseph Traskos	49:37
+Yeah, I mean, Mike, we've got that reporting and document management to be able to say, there's X number of documents a month, Y are driver's license, Z are proof of insurance, whatever, like we can get that. So we can get that pretty easily. And then that would be like the upper bounds of like, this is the maximum documents we can probably send through this thing.
+
+>>Mike McCarthy	49:58
+Yeah, I mean, very high level. I mean, I'm assuming if we don't take into consideration those other kind of outliers, like the title docs and things like that, but just stipulations alone, we're going to be asking for three primary ones on every single deal. And then we're probably going to run our ADD through that and our loan services file through that. So let's say probably on average, just to give you a high guess is five per deal that we're going to be putting through there and in our docs that. So maybe on a very, very, this can go either way, depending on if we choose to do six documents as the average, but 20 ,000 per month.
+
+>>Jasneet Singh Malhi	50:38
+Got it. So Mike, basically we can, in order to mitigate that in another way, what we can do is that, we can structure it in a way that you get all the credits upfront, right? So that, so usually in our monthly plans, the credits don't get carried forwarded to the next month. So you get a set amount of credits, right? And they don't get carried forward. If you're not, you're able to use all your credits, right? So we can create a bulk plan for you in a way that you get all the credits upfront, right? And then it kind of makes sure that you are not, and you can use it in, let's say in the period of one year And you're not losing out on credits, right? And even if, let's say for a specific month, your volume goes up or down, it does not impact your operation and it does not kind of charges you in that way. So we can kind of structure it that we can structurize the annual credits and give it to you in one go And then you can use it in the duration of one year. So that will not worry about the fluctuating volume on either end. Make sense?
+
+>>Mike McCarthy	51:32
+Yeah, I mean, there's, I think a couple of different ways we can flesh that out And it sounds like you guys are set on one way or another so we can have that discussion once we get to that point.
+
+>>Bikram Dahal	51:40
+Yeah. Okay, then let's do this. On our side, based on that 40 ,000 documents, like we'll send you some estimates regarding what is the monthly or what is the annual thing. Like I said, Mike, over there, I understand your concern and over there, trust me, I understand that if there's some document type that are 30 or 40 page, but the information that you need is just like few, like 10 field, then I know like no one is going to pay $5. So we can have a different pricing for those kind of documents and everything based on the field and everything. For now, we'll just consider like for the external document that you guys have sent and everything. Based on that, we'll send you guys the, we'll send you guys the, like the pricing. And then after that, we'll also send you some videos about what we discussed and also the API documentation. And then if everything looks like reasonable, then we can move to the next step regarding the pricing side. Right.
+
+>>Mike McCarthy	52:32
+Mike.
+
+>>Jasneet Singh Malhi	52:33
+Yeah, please go ahead.
+
+>>Mike McCarthy	52:34
+I'm just going to say, and also please include the video from today as well.
+
+>>Jasneet Singh Malhi	52:38
+Okay. Absolutely, I will do that. I just wanted to check, Mike, like since we are at the juncture of where we're discussing pricing and everything, just wanted to see if there's any sort of budget that you have in mind or any ceiling value that you have in mind for this project. And then we can try to, you know, see if I can have the deal desk team stick to it or adhere to it.
+
+>>Mike McCarthy	52:56
+That's a one cent per document was our high ceiling, but I don't know, we'll see. Now we have no idea. We're just exploring this. So we don't know what the costs are. That's why we're not only for the concept itself, looking at multiple companies, but also for pricing as well, so that we can see what that looks like and do our comparisons and our due diligence in determining which, if any, method we're going to go with should to help us, I guess, assist us in determining the best way to get through this project.
+
+>>Jasneet Singh Malhi	53:29
+Gotcha. Mike, what I'll do is I'll send, you know, all the collateral and everything on my end and along with the pricing as well. Would you be available maybe sometime next week to have a quick sync up just to, you know, get the feedback and, you know, design on the next steps. And, you know, I'll send you the pricing on the email itself. And then next week we can, you know, regroup and, you know, decide on the next steps. How about that?
+
+>>Mike McCarthy	53:53
+Yeah.
+
+>>Jasneet Singh Malhi	53:54
+Sounds good. What works for you next week?
+
+>>Mike McCarthy	53:58
+Let's just do same time next week.
+
+>>Jasneet Singh Malhi	54:01
+Same time would be Thursday at 1 p .m. Central.
+
+>>Mike McCarthy	54:06
+Yeah.
+
+>>Jasneet Singh Malhi	54:08
+Awesome. I sent you the invite. I'll just be sharing the pricing and all the collateral that you mentioned by the end of the day today. And then we can take our conversation ahead from there.
+
+>>Mike McCarthy	54:21
+Okay. Sounds good.
+
+>>Jasneet Singh Malhi	54:23
+Awesome.
+
+>>Bikram Dahal	54:24
+Thanks a lot, like Mike and Joseph. It was really great to understand, understand the, like, the portion that you guys are trying to automate and everything. It's not very simple. It's not very straightforward. It's a complicated one. And I really like challenges. So looking forward, like if we, for long -term partnership.
+
+>>Mike McCarthy	54:39
+Okay. Great.
+
+>>Bikram Dahal	54:40
+Okay.
+
+>>Jasneet Singh Malhi	54:41
+Awesome.
+
+>>Joseph Traskos	54:41
+Thanks, Mike.
+
+>>Jasneet Singh Malhi	54:42
+Thanks, Joseph. Have a great one.
+
+>>Joseph Traskos	54:44
+Bye -bye.
+
+>>Mike McCarthy	54:44
+Thanks.
+
+>>Jasneet Singh Malhi	54:45
+Bye -bye.
+

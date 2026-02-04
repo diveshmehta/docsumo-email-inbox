@@ -1,0 +1,186 @@
+>>Aaron	00:00
+So Aaron, did you get a chance to test more on the platform by any chance? No, I haven't. I'm mainly communicating with Eric about what he needs. I'm just really here to check in on how the integration is going. Sure.
+
+>>Aniket Tatipamula	00:21
+Thanks. Aaron, while Eric joined us, we had a few questions. I just wanted to understand how is the flow. I do get a sense of it. I just wanted to understand how would this be reviewed? Would anyone ever come to Docsumo to review the data or would it just be Api in, Api out?
+
+>>Aaron	00:43
+Hopefully we don't ever have to directly go into Docsumo.
+
+>>Aniket Tatipamula	00:50
+Okay. Thanks, Aaron. Hi, Eric.
+
+>>Erik Zboyan	00:52
+How's it going?
+
+>>Aniket Tatipamula	00:54
+It's going good. How about you?
+
+>>Erik Zboyan	00:56
+Doing well, thank you. So what's up?
+
+>>Aniket Tatipamula	01:08
+So Eric, I wanted to have this call mainly because I just wanted to touch base and understand what's happening. Are we all good? Do you need anything else from our side? Because you've been asking us a few things over the email. I just wanted to see if you want any more clarification on any part of our application.
+
+>>Erik Zboyan	01:30
+At this point, no. I mean, I think that the main question that we had was, I mean, again, ideally. So these guys are going to dump 10 files into a folder at any given time. Some of those files may process quickly and some of them may take a minute or two or however long, five minutes. So what we're trying to understand is like when like you telling me a file is done or me finding out a file is done doesn't mean anything unless they're all done. So, you know, for us right now, we're reaching out to you to say, hey, is this thing finished? Right. And we're trying to figure out how often that call should happen. So that's why I was curious, like how long these things take. You know, even if you were able to send back to me and say, hey, this file is done. Then, you know, the file means nothing. I need to know that the folder is done. So. It sounds to me, based on what you said, is that there's going to be. Excuse me. There's going you guys are working on the ability to do the folders finished. So until then, there's really not a whole lot for me to do. I mean, all I'm going to do is I'm going to set up a call like I have Roman doing it now. Is that on some sort of frequency and say, hey, go look, you know, is something done? No. Ok, go go back another five minutes later.
+
+>>Erik Zboyan	03:10
+Is it all done? Yeah. So I think the thing I just need to make sure is that, you know, what what is it I can look at inside of inside of the folder for all the files that tells me everything is done. Sure.
+
+>>Aniket Tatipamula	03:30
+I think let me let me take a couple of minutes and explain. I think we never have we never got an opportunity to explain how Doximo works in the first place. And so the way we've set set it up right now and the way what what the team has been building, maybe within a month, we would have a lot more power to deal with how private use case is handled. But right now, the way we handle it is we create a folder. I think that you're already aware. We upload a bunch of documents into that folder. And each of these documents, when you upload right now, you upload into a document type called auto classify. What happens is on that specific doc type, we first check or classify the document into a respective doc type. For example, if it is a 3dm application or if it is some other doc type, right, like the Ppsr receipt. So we first classify it And then we start extracting. You can always go ahead and upload a document to any of these doc types. And because you are using an Api and the documents are very well structured at brevet send, you actually don't have to auto classify it. Like the reason we wanted to auto classify is because if we were to upload them manually, then we would have to take an extra effort to go ahead and upload them one by one into each respective type. But that doesn't matter. Like in your case.
+
+>>Aniket Tatipamula	04:52
+Case it works, it's working really fine. So now, why am I even discussing this? I'll come to that in a minute. Now, when you upload a document, it gets auto -classified. It then gets extracted. So if, for some reason, the auto -classification fails, the document most likely would be stuck on reviewing. And that's where the statuses come into picture. So we majorly operate on four status messages. One is if it is in progress, so something is happening with the document. Or it could be any of these. It could either be reviewing, it could be processed, or it could be errored. Now, these are the terminating status. What I mean is, if the document is in any of these, this means Docsumo is not working on it. Like, we've either worked on it and came to a conclusion that we cannot mark it as processed. That is, we are not 100 % confident about everything. We mark it as reviewing, which means there could be some fields that are empty, or they are a little low confidence, or it could have landed up in error. So these three statuses happen. And when it gets auto -classified, we always put it in reviewing. It never goes to processed. And that's why I gave you that specific logical expression, saying that if the document is in either of these states, this means the document is ready, right? And you are right. Like, we have that folder endpoint. What that endpoint allows you to do is fetch all the files in the folder, along with the status of each of these files. So you'll have to go inside each of the file and make sure that none of them are actually in progress, or in the state of processing, so that you can take a final call and hit the validation Api.
+
+>>Aniket Tatipamula	06:33
+Even if everything happens perfectly, there are a few things that can go wrong. And I'll take a pause here and then go there. But I hope till this point, it's pretty much clear, right?
+
+>>Erik Zboyan	06:44
+Yeah, so let me restate. Is that the status is, if I look into a folder and find any file that doesn't, that has a status other than reviewing, processed, or aired, that means you're still doing something. Yeah. Okay, but if I go in there and all the files have either reviewing, processed, or aired, in your perspective, it's done.
+
+>>Aniket Tatipamula	07:09
+Yep.
+
+>>Erik Zboyan	07:10
+Okay, all right.
+
+>>Aniket Tatipamula	07:13
+And I'll, yeah, Rick, sorry, I didn't mean to say anything.
+
+>>Erik Zboyan	07:16
+Oh, no, no, I'm sorry. I was just clearing my throat.
+
+>>Aniket Tatipamula	07:19
+So I'll talk about the next step, right? Like, let's say something goes wrong, because, yeah, I mean, we can go wrong in two places. And then the major place where we can go wrong and it would impact you is we end up not classifying the DOCTYPE in the right DOCTYPE, which has not happened yet, after the fixes that we had done. And maybe Aaron can also comment on it, because he did a lot of testing. And Aaron, like, if you ever came across that issue, please do keep us posted. But we assume that our auto -classifier is doing perfectly well, because we are actually looking at the Doctype name. And that's what is giving us that high degree of accuracy. And that's what you would do as well. So if, for some reason, Docsumo fails to classify it into the right DOCTYPE, then on the validation, you would see that DOCTYPE is missing. For example, if we ended up misclassifying Radium application, or we failed to classify it, then in that case, you would see validation for Radium application failing. So, but at your end, you may see that, oh, I did upload Radium application, but I still see that DOCTYPE is missing. So that's one case that you can run into. Now, you can always solve this in a way that you could just go ahead and upload it, that DOCTYPE to Radium application, because we allow that too, because everything is happening via Api. So, Radium application has its own DOCTYPE. There's a type that you attach while you're uploading. You can just attach it as Radium application, and then the document would be processed. We have APIs to classify it again. Because you know the DOCTYPE, you can always go ahead and check what classification it was in, and then reclassify it if required. There's an Api to do that. We don't think it would happen based on our brief testing, and most likely Aaron can comment better.
+
+>>Aniket Tatipamula	09:06
+But based on our testing, that would not happen. So, that's one edge case. I just wanted to keep you posted. Aaron, I just wanted to check with you, if you, like after that initial setup, right, did we ever misclassify our DOCTYPE?
+
+>>Aaron	09:21
+No, I do think we have a high degree of confidence in the AI auto -classifier. We haven't, not to my memory, recent memory, we haven't been running into issues with that specifically.
+
+>>Aniket Tatipamula	09:35
+Perfect, that's good to hear, thanks Aaron. So, that takes care of that problem. And the last item is like validation, as I said. Like you, when you fetch all the details of the files, and see all of them are in either of these three states.
+
+>>Aniket Tatipamula	09:51
+The third state is where things can go wrong, like if the document went to error, what can we do? I think that is a real unknown, because when it goes, then we'll probably see what went wrong, and then we'll try to get a fix done for it. But most likely, in Brevet's case, we doubt it would happen. It most likely will never happen, because the documents are pretty concise. They are only six -page, seven -page documents. It only ever happens if something is going horribly wrong at our infrastructure level. So otherwise, you will not see a document in error. Either we're going wrong on infra, or there's something wrong with your credits, because more often than not, error will happen if you are running out of credits. So that covers the last scenario. And yeah, I mean, if you hit that validation Api, you will get the latest validation, and if you ever were to update it, as I mentioned, you have a delete endpoint. You can delete the document using the doc ID, and then re -upload the document, and use the same process again to re -hit the validation screen. So I'll take a pause again here, Eric, and then I'll move to the next item, which is the time it takes. Please do let me know if you have any questions.
+
+>>Erik Zboyan	10:58
+Yeah, Yeah, I do wanna go back. So processed is, it's done. Does that mean it passed, or does that mean it failed, or does that just mean it's done?
+
+>>Aniket Tatipamula	11:10
+It just means it's done. Right now, processed, so basically, we have two status messages that tell you whether the document is done, that is reviewing and processed. We mark a document as processed if every extraction that we have done, we feel that it is high confidence. The model feels that it is high confidence. And the second one is reviewing, when it would have extracted everything, but it, for some reason, feels that some of the fields are not high confidence. That doesn't mean the extraction is wrong. And there could always be an extraction going wrong in processed as well, but the likelihood is very, very less compared to an extraction going wrong while it is in reviewing state.
+
+>>Erik Zboyan	11:48
+So will the elements that we pull back, because obviously we get the file, whether it passed or failed, or the status of it. So like in that scenario there, is that, let's just say any file, you're looking at five elements inside of a file to validate it, right? And then, um, sorry, I just got hit on Teams. The, if all five pass, when we extract back the data, right, we get the file passed or whatever, we get something on the file, but then we get the detail underneath it, the five elements underneath that file that, I don't remember what the statuses were, but whatever. Let's say whether they pass or fail, or the value. If it is in reviewing, what, like when I get a, when I get one of the folder, when I get one of the files back, what would I, what would I typically see for the status of the file? It just reviewing, or it would be pass or fail, or?
+
+>>Aniket Tatipamula	13:05
+Yeah, I think you are getting confused between two items. I think the status messages for each doc ID, or the document, is independent of what is happening on validation. What's happening on validation is a very custom code, or very custom logic written for Brevit's use case. So that deals with data that we would have extracted from the document, and then some conditions that Aaron, and the team has shared with us. And for all intents and purposes, right now you don't have to worry about document status, whether it is in reviewing or processed, because that's something that we've tested, and Aaron has tested personally, and we are fairly confident that we are doing really well there. So we don't have to worry about it as of now. The only part where you would have to look at is, if a validation, after the validation endpoint gets hit, and when you get the validation, and sections of validation, right? Like if you say radium application, and there are four checks. So if any one of them fail, I think they are there in the validation message itself, along with what was extracted, what did not match, and why exactly it is marked as failed. So I think that's pretty straightforward, and I hope I'm making sense here.
+
+>>Erik Zboyan	14:16
+I guess I'm looking at Aaron, as long as you're comfortable with, I guess for you Aaron, I'm trying to figure out, like when I get the, I'm clear of when I'm gonna pull something back, based on these statuses, and that's fine. Now, getting the data and displaying it for you, and it meaning something to you, and you being able to do something meaningful from it, that's the part I still am not really clear. So just to be honest is that, I'll get a stat, I'll get, I'll be able to look at a folder.
+
+>>Erik Zboyan	14:50
+And say that all 10 things are done and I'll pull it back. And you'll get a pass or fail or whatever the values, again, I don't have them right in front of me, they come back as part of that retrieve. But we also don't just get the folder, I'm sorry, we don't just get that the file failed or passed, we get the detail underneath it, right? The five elements of that file that needed to be reviewed. And so inside of that, we've got whether, I don't know, do you indicate whether it passes or fails on an element or do you, I don't remember. So, go ahead.
+
+>>Aaron	15:33
+So for whether it fails or passes on an element, it's currently set up based on specific criteria, similar to what we were originally doing, but within Excel. So these were kind of criteria that was being done manually and now we basically formatted it in a way such that we're gonna extract the field and then see if it matches across multiple documents and such. They've mostly fixed the small errors, but every so often, there are things that do pop up. Let's say a date was extracted instead of like December 5th, it says May 12th, something of the sort, just like really minor things. So we were thinking if we could, you, once you go into Docs, we will pull that summary page And then we can push it forwards within Salesforce with a little bit of manual oversight and hopefully over time, if it can be automatic, it can be automatic. If it can be generally automatic with some level of very minor manual oversight, that's also fine.
+
+>>Erik Zboyan	16:42
+So again, getting you the Pdf, I think I had an email, I don't remember if I put it on the email with you or with Michael, is it the, let me, I'm gonna show you what kind of what you're getting here. Okay. So let me, give me a second, cause at this point it might just be easier.
+
+>>Erik Zboyan	17:18
+I just, it just might be easier to show you this.
+
+>>Erik Zboyan	18:05
+Here, and I'm not gonna be able to go through it in total detail, but cause it's more of a Roman thing. Let me know when you can see my screen.
+
+>>Manann Agarwal	18:24
+You're good now.
+
+>>Erik Zboyan	18:25
+All right. So what we're getting back is we're, you know, hopefully this doesn't look unfamiliar to you guys in Docs in the world is that, you know, we're getting, the doc ID, which, you know, what document it is. And we're also getting the detail underneath it. So if you take like, see how like the application, you know, this is one of the docs or one of the folders basically. And then underneath the folders, we get the detail, you know, whether it fails and even further, you can look to see whether what element inside, you know, whether the packet, you know, failed or whatever. So me giving you pass or fail, you know, you know, on, you know, on a, on a high level, on the highest level, you know, that's gonna, that's gonna be fine. It's just, you know, we're getting the detail underneath it at the field level as well. So we can see whether, you know, the Swift code was a, you know, what was the result of that one? You know, and which one is it related to? So,
+
+>>Erik Zboyan	19:49
+So at worst case, getting something that tells you whether it passed or failed, sure. Like that little PDF, it's just effectively gonna be a report. Yeah, it's the same thing. Yeah, it's just gonna be in a report format. But we have detail underneath it, saying whether it was success or fail. So I guess I'm just trying to understand what it is somebody's ultimately going to want to consume. Is that I'm getting it at the category level, if you will. These guys right here, right? But I'm also getting it at the field level And then I'm getting it at the doc level as well. So I can tell you whether those things passed or failed. So I just, I guess at this point, again, for the purposes of retrieving this stuff and being on the schedule or not, sure. Yeah, no problem. Pulling it all, all the data back, no problem. Whether you want to, when something fails, an Abn number fails or something like that. So instead of somebody having to go to the doc and try to figure out what passed and failed, they'll be able to go exactly and know exactly what failed inside of that doc. Does that make sense? Master facility agreement, it passed.
+
+>>Erik Zboyan	21:30
+Okay, the tri -party agreement failed. What inside of that failed? And so I've got that data too. So just, I guess it's more for you, Aaron, to think about is how I could tell them the doc failed And then they could go look at the doc and try to figure it out, or I can tell them what in the doc failed. But like I get, again, I get some of these pass fails situationals as well. So I'm not really sure. You getting just a color -coded sheet of green and red with the categories? I mean, sure, I can give you that, but there's a lot more detail here. So I'll stop. I mean, I think we just need to pull more data through, get the results, you know, and then tie it all together. Yeah, and then you can take a look to see whether, you know, how you want to use it, what you want to do.
+
+>>Aaron	22:43
+Yeah.
+
+>>Aniket Tatipamula	22:44
+Yeah. Let me do one thing. Sorry, Aaron, please. I was just planning to show the validation view so that you can probably explain it better. Yeah.
+
+>>Erik Zboyan	22:56
+So that right there, you know, you've got, you guys saw that, you know, you saw the numbers and the name application and tri -party agreements and prior year and all that stuff. Post -approval, same thing. You know, we've got secured loan agreements somewhere in there. Then you get this stuff right here. So we get this, that's related back to the document. So the application's got all these elements. Now, and just for the Docsdemo guys, if I, because maybe I can just follow along here is, if I go to, like inside of one of those right there, like the, let's just say the rating application, borrow a legal name. Do you assign it as pass or fail?
+
+>>Aniket Tatipamula	23:50
+Yeah, I think this is exactly what Aaron has told us to do. So the reason I was just sharing this here is maybe probably Aaron can explain it better, but all of these validations are as per Aaron's requirement and the validation value itself determines if it is pass or fail. So, and the order in which we've set up is exactly the order in which I guess the team would want to look at. I'll leave it up to Aaron because I think it would be better to be able to explain this.
+
+>>Aaron	24:18
+Sure.
+
+>>Erik Zboyan	24:19
+So keep this in your mind right here, what you're looking at right there. Let me share real quick. So you can just, now that I've got something real to look at, you know, or something you can compare. Now you see my screen, see how he had all those radium applications in the fields, you know, and then you had the different numbers. And so if you move beyond, so like we get it at, we'll get it at,
+
+>>Erik Zboyan	24:48
+The highest level right you'll have 1 2 3 4 5 6 7 8 9 10 whatever it'll say pass or fail you know, but we also have The So I guess this is my question for you guys. Is that Are you in this are you indicating it whether if something failed? Are you telling what failed? Yes In a radium application. You're yeah in a radium application. You're looking at you know, however many fields these are right here But yeah, are you indicating that yeah, are you indicating this one failed and for what reason Yep
+
+>>Aniket Tatipamula	25:27
+Okay.
+
+>>Erik Zboyan	25:31
+So like me to you Aaron is that that's where you know sure, you can look at the 1 through 10 and see whether they pass or fail, but You know, you're gonna be able to get the detail underneath it to say well what? You know, what what what what failed You know, what was the element to fail? So Like over here, you see numbers Yeah, this one Yeah success, you know So anyway I think we're you know, I think I got it. So But here here's what you can do for me Aaron get give me give me one of the files that you actually Got one of these So like this flubber or whatever whatever this is flower hub Yeah, send me send me exactly that that way Let me send this exact same thing via Api to them Let it do what it's supposed to do get the results so I can compare it to something that you've you've already validated That make sense
+
+>>Aaron	26:50
+Yep You're looking for the raw documents that went into this, correct?
+
+>>Erik Zboyan	26:56
+I'm looking for which assessment it is. Basically. I'm gonna send it. I'm gonna go I'll go grab all the files Yeah, just tell me you know, this is an assessment not just a mishmash of documents. I'm sure it's a real one So give me give me this one the one you used and then I'll send it through then that way You'll you have visibility into this what you're showing right here, right?
+
+>>Aaron	27:21
+Correct?
+
+>>Erik Zboyan	27:22
+Yeah, so Let me now that I have something You know, I can work on against let me let me use that So cool.
+
+>>Aaron	27:31
+I can do that.
+
+>>Erik Zboyan	27:32
+All right
+
+>>Aniket Tatipamula	27:38
+So and why we are at here because what I'm not able to understand maybe maybe it is not my job to ask But I just wanted to like check with you because what Eric was showing was all the items laid down in a table format but you would want that in a structured Way, right and I'm not so sure like whether Again, this is not my place to ask but I'm just trying to check check on it. Like how would it be taken further?
+
+>>Aaron	28:07
+I think that's that is correct. Ideally we do have it in a structured form for review
+
+>>Aniket Tatipamula	28:15
+But I guess this is the part we're at where we need to figure out how to structure the data now that we've pulled it Sure, and I think for Eric as well Eric I think one of the things that you would also have to take a note of is this is a structured data What I mean is each and every table the way it is laid down the JSON itself is In a way that was requested by Aaron and team so they wanted the one of the conditions at the top You're all good.
+
+>>Erik Zboyan	28:46
+I mean in the validation Sure Okay
+
+>>Aniket Tatipamula	28:53
+Okay, I think Yeah, let us know. Okay. I missed out on the last part Let me just take a little bit of time five more minutes of both of you And then we'll wrap up So just wanted to just wanted to mention the last item which is how do we process the documents So whenever someone uploads a document in Docsimo We queue them so we don't directly pick it up to process because we do have a lot of our back -end infrastructure processing the documents Almost always your documents will be processed right away. It will not take more than a couple of minutes Sometimes maybe maximum five minutes, but maybe in a worst -case situation What could happen is maybe some customer suddenly decided that he wants to Offload all of their documents and it does happen like we have two customers who get like 20 30 ,000 documents And then they just push everything to us within a matter of a minute now when that happens as in you may experience a little bit of Processing time we are not down
+
+>>Aniket Tatipamula	29:47
+Is that you would see a document being stuck in processing for a little longer than what you would normally expect. So I'm just giving you a heads up. It doesn't happen normally. But if it happens, and it would be because of this specific reason, so yeah. And there's nothing much to do on your part, like a lot of people, what they do is they have just one refresh button on Salesforce. So let's say, let's say for some reason, you pulled everything right And it looks a little off. Like let's say Aaron is the one who is reviewing the Salesforce, just put one button there so that you can sync as user wishes, right, like you click the button, and then you pull the latest data and it should like that Api, it would respond back to you right away. So that way, what happens is even if something looks failed, or maybe if you failure, I don't see a problem. But if a document is missing, that's where the problem would be. So you may end up seeing some documents missing, you just refresh, and you'll probably end up seeing all the data. And that's, that's one last request, because I've seen many of our customers doing that. That, that's about it. Thanks, Eric. Thanks, Aaron. Let us know if there's anything else I can help you with.
+
+>>Erik Zboyan	31:00
+Okay. Well, you know, so we're gonna, we're gonna try to test, test the call out, the schedule tonight, or today. And then if you give me that, when you give me that real folder, Aaron, or the real file, we'll test it against that. And then I'll send it over to you and say, take a look. You know, possible. All right. All right. Thanks, guys.
+
+>>Aniket Tatipamula	31:32
+Thanks, Eric. Thanks, Aaron.
+
+>>Erik Zboyan	31:34
+Have a great day. Bye.
+
+>>Aniket Tatipamula	31:40
+Yeah, man. Oh.
+

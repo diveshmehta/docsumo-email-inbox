@@ -1,0 +1,348 @@
+>>Neil Lawrence	00:00
+Create the purchase invoice record in Bc. Yep. Okay.
+
+>>Elmer Dimaiyacan	00:06
+So that's our existing process. And we'll be jumping on to our proposed process. So it's a mix of your existing and proposed one. So our main goal here is to update or to enhance the data from the Doxima perspective first before you extract or your middleware extract those data from Doxima and create a purchase invoice record in Bc. So it's the same, still the same start. So your document will be landed in the document card per manager. Your manager will still have to code it, approve. And then once it's approved, the first middleware that will extract will be us, BT middleware, so we will extract those data. And then we will validate your, based on the Doxima extract record, we will validate the line, the total versus the line total amount. The line total here is your decoding, coding lines that your manager has coded. Yep. Right. And then, and we also have a validation of your supplier. And then, yeah, for example, you have a reference of tax ID or supplier name. We can utilize that. But as you can see, there is a lookup, a supplier lookup reference to our staging table. So we have to pull, of course, your, the source of truth. Yeah. The source of truth still be your Bc, right?
+
+>>Neil Lawrence	01:37
+Right.
+
+>>Elmer Dimaiyacan	01:37
+So we will have to require some data pool from your Bc, it's either via SFTP here, SFTP or via Api. So to have a sync reference data. So once we all, we have that, then we can reference to the next step. Let's say supplier. We will have to check for supplier validation or via ID or tax ID or name. We can do that. So if it's passed, let's say for the first scenario, let's say the coded amount from the total, line total is equal to the header total in Doximo record or Doximo data. We will pass it to the next step of validation, which is the supplier. Yep. And then we will have to check if it's a duplicate invoice. So our main duplicate checker, it's vendor and invoice, but we can add the amount. And how are you, is that, is that checking through the master data from Bc or how are you checking? Okay. Got it. Yeah. You will have to get also the list of your invoice. Right. In Bc. Okay. And then if it's a duplicate check, if it's no, sorry, we go to the happy path first, if yes, this is the one we have an asset is for Gl code account coding. So we don't, we are not sure if the previous, I mean, from the shown data here on the PDF document, we can reference the ledger account by these two data fields here, the purpose and cost center.
+
+>>Elmer Dimaiyacan	03:20
+Right. So if that's the case, we can also populate that ledger account in Doximo.
+
+>>Neil Lawrence	03:26
+So it's, yeah, the, it's kind of, right now that's optional for our managers to code. But typically based off of the invoice, like scroll up a little bit to the invoice. So this is, okay, this is a marigas. So it's, it's, it's a propane or something, some type of, you know, fuel. So based how we know what to code, number one, we would, we would give you our, our ledger account listings, right? For expenses and as master data and pretty much based off what the invoice shows, it, the, whatever the best Gl that hits that. So this would hit fuel most likely because it's, it's for propane or some type of fuel. So there's, I guess there's a couple ways to go to have this validation. Number one, we could look at historical because most of our vendors repeat itself, right? And we have utilized some default logic in Bc. So in case the, in this case, the manager hasn't put it in there. We just recently added some logic that says if the vendor only has one, hits one ledger account, Bc will automatically add it, right? But in a, like, if I were to say in a more streamlined solution, it would be a way for.
+
+>>Balamurugan Doraibabu	04:58
+To recognize what the invoice is by seeing um you know the detail of the invoice of some sort or the vendor and then and then concluding what ledger account to use based off off of our master data of uh chart of accounts indeed i think uh that sounds good uh you can help us with those logics on the gl mapping and also as you rightly said right we can take the historical data and see uh what is the combination it's most frequently applied and try to arrive some logic our business condition of out of that as well right and then right uh we will maintain those those business conditions and rules uh in the middleware to do an auto update of this gl subjected to that is a condition we we have to correlate the business condition with the input from the invoice So illness pointers like if we have any kind of uh say for example the line item description or any uh input data attributes from the invoice which can uh uh coordinate with uh correlates with uh your business condition that would be good so that that that rule can be maintained as a validation condition right right
+
+>>Neil Lawrence	06:11
+And um because i know technically like how you train doc sumo it could do some of that logic too I mean i'm i'm all up for looking into that as well if needed whatever the best fit to identify the the data segment
+
+>>Balamurugan Doraibabu	06:28
+Right Yeah Yeah That's right And uh uh quickly on the supplier record right uh uh are we using a tax registration number uh in us because when i in my past experience right we haven't seen that commonly used across all companies or the suppliers perspective right
+
+>>Neil Lawrence	06:46
+No we we we aren't we Okay we made a new we made it to to know what's what's what vendor is for this invoice Right you want that's what you're asking so that's right So Yeah um we made a new field in these business central called doc sumo xref and pretty much we were able as we built our doc sumo templates um we were able to pick the best data selection in this case it's probably the logo of amerigas or sometimes it could be the remit to uh to whatever doc sumo picks up the easiest we make that value uh in the field on the vendor card and this field is used as master data to to then know what vendor it is okay the logo at the moment or the name for example to address say that sorry say that one time uh is it logo and then now the remit to Address Elma's point is are we uh shall we also use the name uh name of the supplier like amer gas in this case it it depends on it depends on the invoice and the vendor because as you know everyone's invoice is a little bit different and some doc sumo does a better job than others Right um Yeah So it's a mixture honestly of of between remit to and and and logo understood and how about the tax Id so tax id is not commonly used as an identifier unique one because we didn't although if if you feel that it would be a useful validation we do have tax id in vc on the vendor card um what the some of the issues that we see though are we have like this is a good one universe we have vendors that um are like national accounts right
+
+>>Neil Lawrence	08:46
+Uh so they they multiple locations will will um get serviced by them and sometimes we need to make separate vendor codes uh uh vendor numbers in our system uh to say you know this code is for this site and another code for another site um
+
+>>Balamurugan Doraibabu	09:07
+So like this this example um the the logo you know or let's see the the pay to by mail might be you know i would have to look at um what that master data what has for this vendor to know what vendors for pretty much understood we can we can review that in the design workshop but uh uh i think that's a good point we can have the current practice how bc recognize the invoice from the supplier from the doximo extract input either it's a logo or it's a remedy to address we will just keep the same concept because as you said right the same uh supplier will have multiple locations if they are catering across then it should uh we have a separate look a vendor id in Bc with the same anxiety
+
+>>Neil Lawrence	09:57
+I'll be honest with you, that logic, we do find ourselves, because the manager, you know, in Doximo, they code it, but they're not necessarily looking at every single field that is capturing in Ocr. At times, they approve where it says it picks up, let's say, only part of the supplier name or the vendor name, and then it ends up failing, we have an alert that says there's no match between the XRef that we made in Bc to what got put into Doximo. So that's something I think that maybe your validation can help or even retrain. It sounds like you guys have experience with Doximo as well to even retrain the document type to pick up the proper supplier information. Okay.
+
+>>Balamurugan Doraibabu	10:50
+So would you want us to include that in scope in any, say, for example, this scenario, in order to train some Doximo, we can allocate some efforts from our side? Yeah, because part of, if you could, please, because part of our accounts payable team, we spend time on kind of resubmitting because it didn't capture and the manager didn't remap the needed field. Agree. Okay. Excellent. We'll make a note on that one.
+
+>>Jussi Karjalainen	11:21
+Yeah. Bala, just a quick comment. Hey, Neil, good to meet you. It's usually here. Likewise. Yes. So what I've seen, you know, in the past, billing some uniquely identifiable details for supplier recognition on like Ocr processes and so forth is what I've seen working in the US quite well is a combination of the fuzzy match of the, of the, of the, the supplier's name. So in this, in this case, it was, what was that?
+
+>>Neil Lawrence	11:54
+Unifirst, I think.
+
+>>Jussi Karjalainen	11:56
+And then combining that with zip code, which potentially would be the Xref in, in, in Bc. Now, the reason for that is that, you know, first of all, we use Unifirst only, not Unifirst Corporation or not Unifirst Corp or just Unifirst in itself. And, and then if we combine that with the, with the zip code, it is very unlikely you'll have another Unifirst. Right. Right. Inverse that exists in the same zip code. And with the combination of those two, the, the match is pretty accurate. Um, I, I agree with you.
+
+>>Neil Lawrence	12:31
+A perfect example is Fedex, right? We have, we probably have 10, 10 different Fedex accounts, vendor accounts, but zip code is what defines it.
+
+>>Jussi Karjalainen	12:39
+Uh, yes. And, and I'm good thinking with zip code is that it's, it's pretty much always on the, on the invoice. Um, I'm not sure whether you're extracting zip code as of today as part of document card in, in Doximo, but that might be, um, a worthwhile addition because when it gets, then it gets into a middleware, we don't ideally want to use a combination of, of, of different identifiers depending on the supplier. So, you know, in one case we use a logo, another case we use something else and so forth, right? If it's always a combination of the, uh, the fuzzy match of the supplier name and the zip code, then we get biggest amount of hits basically with it.
+
+>>Neil Lawrence	13:14
+Yep. Yeah. I'm up for that. Yeah. Uh, that sounds good.
+
+>>Balamurugan Doraibabu	13:18
+Excellent. Okay. Back to you, Elmer. All right.
+
+>>Elmer Dimaiyacan	13:23
+Uh, all right. Going back to the happy path. So if we have, since we'll be on the Gl account coding, so we'll have to look at the historical data so we can look at that combination. And then once we have passed all of the validation, you can update the Doximo. So we can append now here on the document card, I mean, in the Pdf, let's say for example, this one, you can append now the ledger account And then some validation details like valid or comments like valid, uh, supplier, valid amount, valid, uh, Gl code or account code.
+
+>>Neil Lawrence	14:03
+Question, question on that. Just this idea again, just kind of brainstorming for any, uh, uh, changes or I guess, uh, about, you know, um, yeah, changes from your middleware process. Could we keep it separate from like, cause this, that line Right there is what the managers approve. Right. I would like, like, I would, I would think it makes sense for it to have, if you guys make any changes in your process to, to, so we know who made what changes, right?
+
+>>Elmer Dimaiyacan	14:29
+Yeah, exactly.
+
+>>Balamurugan Doraibabu	14:32
+It can be a audit trail, right? Uh, the previous one would be a manual intervention, the managers reviews and approves, and it will have their, uh, uh, the names. And, uh, when we do the update via Api in our, using our middleware, uh, that will be tracked separately and you can differentiate that.
+
+>>Neil Lawrence	14:49
+Perfect. Yep. I like it.
+
+>>Elmer Dimaiyacan	14:52
+And then, okay. Uh, once all are, uh, passed.
+
+>>Elmer Dimaiyacan	14:56
+To their to our validation or checks so we will have to create a new folder within your doximo this is the change so under the validated folder we will send that document or doximo document to that validated folder under each manager's doc card or document card Right Yeah And then that's the folder now with your existing middleware to look up to pull the press the validated and process to our side document
+
+>>Neil Lawrence	15:30
+Yes
+
+>>Elmer Dimaiyacan	15:31
+And then uh Yeah
+
+>>Jussi Karjalainen	15:34
+Sure elmer quick clarification on that so are we pushing the document uh whether validate it or not not passing the validation are we pushing that into an sftp or are we pushing that directly into the doximo api uh it's doximo so we'll be moving we'll be moving from the root folder of manager to the validated folder Okay and the api can support us pushing it to the exact status in doximo Yes
+
+>>Balamurugan Doraibabu	16:00
+Yes okay this may be a happy pass still but a question on what happens if it doesn't get validated where does it go there
+
+>>Neil Lawrence	16:10
+So
+
+>>Elmer Dimaiyacan	16:11
+Yeah The negative scenario here it's one of the validation fails so we will have to update doximo with the validation remarks And then we will send it back to managers for review this one option so we will update doximo document and send it back and revert back the status from process to review on the same document card landed or we can create a separate folder like uh exception Folder we can move that and then that that's the manager's view to check what are those except uh fold to an exception or failure validation stuff Right Right Right
+
+>>Neil Lawrence	16:51
+Yeah I kind of like the the ladder the exception folder did did you guys see uh my our doc sumo setup that um you know let's say i have 30 sites 30 managers we have actually 30 different document types in doc sumo each one has a separate document type even though it goes through the same process i just want to make sure that you still understood our structure of doc sumo um all the same api of course
+
+>>Elmer Dimaiyacan	17:16
+Yeah So you have your manager one document card Right
+
+>>Neil Lawrence	17:20
+Yeah each manager has their own document type and and also also user obviously you know um um And then when it say it it doesn't validate for whatever reason And we say let's go the exception route is there any type of information that you could provide in maybe a field in document you could pass to say why it what what didn't validate
+
+>>Elmer Dimaiyacan	17:43
+Yeah we can choose one document or create a new one if uh necessary let's say in the i don't have the doc the doxim view here But you can do the comments or in in one of your header we can review your right field
+
+>>Neil Lawrence	18:01
+Yeah Yeah I think header Yeah Maybe we add another potentially add a field on the header you know for for for you guys can throw it maybe the exception error on it
+
+>>Balamurugan Doraibabu	18:10
+Yeah uh Neil uh just a suggestion Right uh i hear you uh we can go with the second option we can have a uh exception handling folder um But uh when when we talk about the happy path right uh and also the negative scenario in doximo we have a capability to update the document the doximo document by our inputs as well as the remarks right or whatever the remarks we want to mention as per the process uh once the invoice is get extracted in doximo it will be in the review status and then it's picked by the middleware it moved to the processing status while in the processing status the vt middleware will perform the validation if the validation fails negative scenario uh we are earlier solution right the option one is we can update the remarks the the validation failure remarks why it has failed and then move the document from the processing status to the review status so that it lined up in the manager's queue which can from my point of view it can eliminate the managers to monitor two folders one is the validated folder which you're right and Also exceptionally we don't need to spend the request managers to move from uh like a review reviewing queue is obvious they are the that's the main uh queue which they are to monitor all the fresh choices including the negative path invoices will be lined up in the review status one way or other it's in control rather than they go and monitor a separate folder uh exception and link on daily basis I just a suggestion like uh would that be okay Yeah
+
+>>Neil Lawrence	19:44
+I like that as long as you guys can put some remarks on why it failed validation Yeah
+
+>>Balamurugan Doraibabu	19:49
+Yeah We'll update that Okay Okay back to you
+
+>>Elmer Dimaiyacan	19:53
+Yeah we can look at the
+
+>>Elmer Dimaiyacan	19:55
+Header fields there And Yeah Yeah correct all right And then once it's validated then you have the same process the existing process to move it to to be central for creation of inverse record same with here it's going to be a loop so if the managers let's say we go to the option one that we will create a validation field in the header and revert back the status to to review to from process to review and then managers would have to code it again and then go on to the same flow of validation above and then to highlight this one this is one important reference to pull to to include to x to pull extract master data from your business central so we have two option it's by sfdp you will dump it to our sfdp or we can pull it to your sfdp and then another option is by api and of course we have to we have uh to require some assistance on your bc Yeah
+
+>>Neil Lawrence	21:00
+I prefer api uh typically that's what we've been doing and we have a whole development team on our end So that's that's not a big deal um what one other um so one type of this is a good point for me to mention one type of um purchase invoice that we have in Bc is uh work So i think i kind of explained on the last call we're a third party logistics company so we do warehouse and transportation Right um our transportation operation sometimes we have to it's called brokering loads out like we give it to another carrier to haul the load um and when we do that we do this uh a decent amount we the the carrier charges us for their you know hauling the load right whatever the rate is um that process has a it uses doc sumo But it's a slightly different process And i want to explain so what what happens is for these types of um our uh well our Tms system our transportation management system actually creates the purchase invoice first in Bc So we have an integration that just anything that we process in our Tms it will make a purchase invoice for these for this particular type of invoice uh right But we don't actually uh use that to approve we use what we do then is we we're using doc sumo because we're we want to wait for the actual invoice from the from the the the carrier from the vendor and they go through the sac same type of um document type uh as any other vendor and it will it will not create a purchase record it'll actually just update the purchase record because the purchase record purchase invoice record is already created so the reason why i'm bringing this up is with your validation part on top they're on a certain type of uh purchase invoice and it'd be based off of uh vendor we have a field to identify what type of vendor we're talking about it
+
+>>Neil Lawrence	23:10
+Well the validation will have to check is we we need to check if the purchase invoice is already created or not because because for these brokered loads we want it to be created before we can submit the update to business central hopefully i made hopefully i made sense indeed indeed it's clear to me now
+
+>>Balamurugan Doraibabu	23:32
+Okay So the the there is a parallel process uh which uh differs from the existing uh workflow what we discussed last time for which is we already talked about it warehouse and Tms for Tms there is an interface currently uh auto create and purchasing invoice in Bc that's the first step and the actual but that invoice will be only in created status it won't be get posted and approved we'll wait for the actual invoice submitted by the supplier the actual invoice follow the same process as the varos invoice it will flow through the doximo as one of the document type And then it passes through the validation and once it goes to Bc after successful validation through middleware the actual process is to update the existing purchase invoice rather than creating a new one so that's a process so we have to differentiate elmer when uh that differentiation will based on the business rule conditions like a supplier for certain suppliers they may treat it as a Tms suppliers so in that case the first check once the middleware the the existing middleware uh picks the data from the validation folder goes to the Bc has to check whether your purchasing invoices exists or not and if it doesn't exist it has to put the invoice in the parking status it should not create because the Tms has to initiate the invoice the invoice first and then this pod you
+
+>>Balamurugan Doraibabu	24:54
+Invoice will re -triggered in order to update that uh created invoice in the Bc by Tms system yeah
+
+>>Neil Lawrence	25:01
+You sure you don't want to join our team you're really good
+
+>>Elmer Dimaiyacan	25:04
+You got it just to clarify the things here we are not creating direct bc invoice Right we have to just check for a specific set of suppliers that we have to confirm if that invoice is now existing in Bc Right so it's not existing it fails and it goes back to review with the reason of it didn't pass whatever validation so this invoice duplicate check has a branch on it that check for the ms type of invoice and the normal invoice
+
+>>Neil Lawrence	25:36
+Right
+
+>>Balamurugan Doraibabu	25:36
+And we have a field on the vendor card if it's for that type of vendor um i think we're using like responsibility center or something like that right now all right all right uh on the duplicate check elmer we have different statuses right or because typically for the various invoices we will check for the duplicate check whether the invoice is posted or approved or already paid wherein for Tms we ought to check for the invoice status which is just created because it's it should not be posted after the actual invoice comes in only it will get updated and posted so we will discuss internally not not a problem I think we got the process Okay Yeah sounds good
+
+>>Rizalina Valencia	26:13
+I have a question uh sorry to interrupt uh Reese here from the uh doc sumo uh team i just want to ask Neil if you you mentioned earlier that per manager you have one document card is that Right Yes so um may maybe know how many managers or how many document cards you have there's about 30 there's about 30 So you have 30 document cards as well per manager for well 30 total but pretty much one per manager Okay so in doc sumo on the interface you have 30 document cards um assigned to each manager uh
+
+>>Neil Lawrence	26:55
+No no no um typically so there's 30 document types and typically we we made um each one's only for one manager uh So uh that was how we were able we did that on purpose so we can um filter out for them to only see what was assigned to their their location pretty much uh this total 30 locations 30 locations yes your screen because um i believe for document card there's one document type
+
+>>Rizalina Valencia	27:34
+So i'm assuming there's 30 document cards in the interface there's so here uh
+
+>>Neil Lawrence	27:41
+Oh well hold on it's loading let me know if you can see my screen too indeed indeed
+
+>>Balamurugan Doraibabu	27:46
+Yes
+
+>>Neil Lawrence	27:46
+Yes okay hold on um second Okay So how what what's how we did this And yeah it's probably 30 documents it may be a little unique but each one of these document types is an operation or a manager right where you can see it has a location and a person right assigned to it for the most part um So what happens is from the very beginning when a vendor uh emails us the invoice we will send it to doximo via email and everything goes to this auto classify document type first and doximo will grab it and say okay based off of historical uh information on the vendor and Ocr it will say go it'll tell you where to point it'll automatically move it to where it should go Fresno or here or wherever right so everything starts here And then the internal process for doximo moves it over to the needed needed site or needed document type um And if i look in this so we have this structure and then in the settings for the users uh the basic user let's say only has can only see pretty much one doc Sometimes two but mostly one document type right And uh typically they're assigned as a default to to be the primary uh uh user for one once one -on -one for the most part
+
+>>Rizalina Valencia	29:24
+Okay does that help Yes now i'm i'm
+
+>>Neil Lawrence	29:29
+I'm not this is how we built it this does this was kind of like our unique way of doing it But if you guys have obviously doximo experience if you guys think of a better way i'm i'm i'm okay for the to to review it at least
+
+>>Rizalina Valencia	29:42
+Yeah i think your your doc someone is designed that way Because uh you have you have a separate You know you have different locations right and separate managers for each
+
+>>Rizalina Valencia	29:53
+Location that need to address the invoices uh to avoid mixing because honestly the way the doc sumo is created it has a shared my document so if you go to all documents um yes on the left side you will be able to see everything right So in order for just a specific manager to just view what is assigned to that manager i think the way your doc Yeah Doc sumo is created is to address that issue in order to avoid you know mixing the files to the other other managers yep that's that's that's exactly why we did it
+
+>>Neil Lawrence	30:25
+And it still all goes to this like so doc simo stages you know um to the for us to pick up via api And so if if we have a new site or a new manager it it's we don't have to do anything on the back end we automatically will pick it up And and um right now submit it to dc uh But in the future hopefully uh um you know run through your guys's validation
+
+>>Rizalina Valencia	30:47
+Yeah um just one more thing nil if it's if it's not really you know uh constraining your privacy can we open that one reviewing invoice assigned to this second one this one i just want to look at the uh yeah at the uh field fields that you have in there because i can see you have address fields uh and on the address field you have the zip code Right Yep probably it's not parsed it's not so one thing
+
+>>Neil Lawrence	31:13
+I mean again we didn't know what we needed really um Yeah Uh so i don't know if that if you you know if you would want to separate fields or not But that's it's all like that right now and then the supplier name is what we're mapping to that xref field in Bc so you can see here we try to use remit too but sometimes we have to use other things
+
+>>Rizalina Valencia	31:34
+But i kind of like your idea with zip code as well yes because if that's the case if we're going to use zip code i would suggest that we have a separate field for the zip code alone because uh doxima is the capability to just identify the zip code especially if uh most of your invoices are local when i say local us -based or
+
+>>Neil Lawrence	31:53
+Yep no they are almost 100 Yeah All right
+
+>>Rizalina Valencia	31:58
+Okay So that's that's great um if it's local then we can do a separate probably uh it depends on you know on the flow Um we might probably suggest just extracting the zip code to avoid um because sometimes there's like other numbers in the address Right Yeah Like the you know the number of the of the building or the or the floor So it would be great if we could have a separate um zip code field that would automatically extract the zip code from the address line
+
+>>Neil Lawrence	32:29
+Yeah I think that's that should be doable uh the the biggest pain is uh to update all the different document types unfortunately But it's doable Okay all right
+
+>>Balamurugan Doraibabu	32:39
+All right thank you we will we will support you on that So uh we will just come up with our recommendation and then uh corresponding changes in the document we will include efforts on our site or we'll fix it for you perfect perfect uh anything i want to stop sharing or go back to your screen or anything else you want to see
+
+>>Elmer Dimaiyacan	32:56
+Yeah uh Just to highlight the integration architecture now so how this will be built so we still segregated your uh network to doc sumo So this is how it will look like so from the doc sumo uh valtech middleware will have uh only connect to doc sumo to your in via api and then on the pooling of the master data references so as we agreed this will be rest api Right you know Right all right so this is a simple overview of how we'll be looking on the architecture side Okay
+
+>>Neil Lawrence	33:35
+And just so i understand Because i So i'm i'm on the it side of my team But you know but on also the executive team And i want to make sure when i meet with with the needed people that they understand the the concept i do but one question they're probably going to have is your guys's validation in in in your middleware structure i'm assuming you're taking advantage of you know like like various conditions that you're going to build And And i don't know ai at all But is there for is there a layer of of any um a set of eyes on it as well as needed or like talk about like how you your validation structure Yeah
+
+>>Elmer Dimaiyacan	34:19
+This mostly logic beast uh in the middleware okay in in this instance Yes so it's purely system systematic Yep Yes Okay
+
+>>Neil Lawrence	34:28
+I like it um go ahead Sorry
+
+>>Jussi Karjalainen	34:31
+Yeah I just wanted to mention that I I think what we need to do is um as the first kind of prototype if you will right or or before uat before we do sort of sit testing with you Neil And you know push through a number of documents and kind of figure out like how much of a success versus failure rates do we get and understand the breakdown of the failure rates and understand what what are
+
+>>Jussi Karjalainen	34:52
+Top four top five that are failing um uh what type of validations and does it require you know extra reference data in Bc or does it require extra logic in the middle way and so forth just just to be safe right because obviously you're you're doing this so that you can you can reduce the rework of the operations team right uh you don't want to be directing those people back into the team um And so um so just a good sort of a logging of the failure reasons and breaking that down and improving the top five uh failures I i'd suggest this uh it's a good way to kind of run this as a project 100
+
+>>Neil Lawrence	35:29
+Yeah I mean ultimately you know like we still are going to have a accounts payable team but really what we want to focus on is just um the last set of eyes before we hit the post button right uh uh we want to trust that the system uh between this all the different systems it it made it through Bc And it is a valid invoice and it's coded uh properly uh and really only check like some you know uh minimal exceptions
+
+>>Jussi Karjalainen	35:59
+Yeah what what what for you is the success rate the rate here uh need like would you say you know We we we would say the project is successful once 80 of the volume is you know automated uh or you know what would do you have a sort of a uh a number or a thought on your mind or maybe maybe your colleagues uh that are sort of signing this off would say well you know we want to do this because it's going to automate uh really we want to today automation you know 10 you know doesn't need to get to 80 for example
+
+>>Neil Lawrence	36:33
+Yeah Yeah So to to be they're they're not necessarily i can put a number to a percentage that you know in my mind But they're more higher up where they're gonna say can we go from five people on the team to three people um So so now if i were to put that percentage yeah 75 or something like that right um where uh 75 would be a good number where there's pretty much nothing to do besides just glance at it for i mean not even go into the go into the purchase invoice but literally glance at it from a header level and mass approve it
+
+>>Jussi Karjalainen	37:15
+Yeah Yeah No I think i think that makes sense I mean i think um um 75 I think is a reasonable reasonable percentage um obviously obviously there is always that 10 15 percent you know these are invoices coming from suppliers there are invoices coming from Tms guys uh you know they make mistakes on their invoicing process So right right right those are real exceptions that we want to route back to you and go hey operations have a look at it uh what what they've charged you is not accurate um whatever that might be so um Yeah I I think i think that should be part of the success criteria of the project is to figure out that we're going to get to that 75 percent Yep
+
+>>Neil Lawrence	37:52
+Yeah Um a good I I majority of our invoices are very basic um I know i'll give you a few uh i think one step as we go through this is we probably would want to sign a uh you know an Nda so we can share some data with you guys But um we can get you probably doc sumo access of our account so you can you can do a deeper dive because most of our invoices is one line of code hitting one set of dimensions um that Tms One that's probably the most simplest coding um and that's that's probably about 40 of all the invoices so a large a large volume very simple the where the exceptions probably come into play the most are the invoices that spread across numerous sites and their monthly invoices and they're probably the volume is probably like five percent of the total the total number got it
+
+>>Balamurugan Doraibabu	39:00
+Okay Good Um
+
+>>Jussi Karjalainen	39:05
+Yeah
+
+>>Elmer Dimaiyacan	39:05
+Yep I think that's all for the architecture and uh process flow
+
+>>Balamurugan Doraibabu	39:12
+Okay Okay uh So as the next step uh Neil would you like to spend some time on our commercial proposal uh we'd like to quickly walk you through on that one Yeah Yeah Do you have time today right now still uh
+
+>>Stephanie Xavier	39:24
+Yeah um we will have to make the the amendments and then uh send it through So i will send it to Neil after i'll call um i have to run through it as well Yeah
+
+>>Balamurugan Doraibabu	39:39
+Okay is that Okay Neil uh sorry i mean based on the current input right uh we'll also include uh the doximo uh efforts because uh as i understand we are to include zip codes and then some new other
+
+>>Balamurugan Doraibabu	39:51
+Alterations on the document types, on the extraction logics. That's fine.
+
+>>Neil Lawrence	39:57
+Knowing it was a high level, is there any way to still talk through what you currently have besides prior to the new updates, I guess?
+
+>>Balamurugan Doraibabu	40:07
+Yep. Steph, can you just run through the current estimates at a high level? Probably we can make some amendments later based on the current discussion. We can share it via email.
+
+>>Jussi Karjalainen	40:19
+Yeah, I would prefer that as well, even if there might be still some fluidity on the final number. I think we need to set the expectation because we're already sort of designing this quite far ahead, which is great. I think it's good that it's a special case Neil, a little bit in your end. Obviously, the team has dived quite deep on this, which is good. But we also want to set the expectation that we are in the right price range. Right, right.
+
+>>Neil Lawrence	40:48
+100%. Give me a second. And we want to make sure it makes sense for both parties, right? So totally understand.
+
+>>Stephanie Xavier	40:55
+Sure, just give me a second. Let me just load the document. Yeah.
+
+>>Neil Lawrence	41:04
+While we're waiting, how long have you guys used Docsumo?
+
+>>Jussi Karjalainen	41:07
+Oh gosh, that's a good question. Look, I, you know, we were one of the first customers of Docsumo when they were just establishing. And at that time, it was only Bikram and the founder working on this. Maybe a couple of developers, Max, I mean, maximum two guys in the business. I think they are now at least 20, 25 people at least. So this would have been, I don't know, six, seven years ago. There was a lot of challenges in the beginning. So we basically were almost like a guinea pig, if you will, to get it going. There was a lot of feedback that initially sort of surfaced and then so forth. Because they needed, you know, these guys know how to build technology, but they didn't have use cases enough to kind of go and properly test the tech. So we were kind of that use case, if you will. We brought in maybe two or three clients in the beginning and started running kind of a, you know, for us, the service is called Invoice Sense. So we do the middleware parts, the Erp integrations, as well as the Docsumo portion as an end -to -end service. So we put through two or three clients, run through a number of iteration cycles with Big Chrome and the deal, you know, the guys were basically developing and building it up as we were covering. So it was challenging, but fun.
+
+>>Neil Lawrence	42:28
+Yeah, similar story, maybe about four years ago, three years ago. And we started with Docsumo actually in the warehouse operation where we needed to have unstructured data put into our Wms system structures, because we would have bill of ladings that drivers would come in with no kind of like blind receipts. And then we kind of built from there. So, you know, we've been with this Ap thing probably about three years now. But great guys. 100 % great guys.
+
+>>Jussi Karjalainen	43:01
+Oh, they're good to work with. Yeah, for sure. For sure.
+
+>>Neil Lawrence	43:03
+Yep. All right, I can see you. Okay.
+
+>>Stephanie Xavier	43:06
+So this is a very high level of a portal. We've not incorporated the additional items, but we are looking at a one -time integration fee, which is $15 ,900. And this would cover, you know, the business rules, the automation layer between Docsumo and Bc, which streamlines the validation coding and invoice posting. We also, we will be having a integration as a service where this is a recurring fee because it is used to manage your integration. It includes support, which, you know, you may require as and when any updates. And we also have the application managed services, which we put in at 15 hours a month, which should be sufficient for you as well. So, so far, this is what we're looking at at this point.
+
+>>Neil Lawrence	44:07
+So just so I can understand the structure And I know these numbers can shift a bit after our conversation. I totally understand. Yep. It's not based off of volume necessarily. It's more based off of process. Number one, is that correct?
+
+>>Stephanie Xavier	44:20
+Yes. Okay. That's correct. Yeah, so we don't have transaction fees involved in this primarily because for us, the endpoints that we built into both Docsumo And Business Central, they're followed by our middleware.
+
+>>Jussi Karjalainen	44:35
+To us, it doesn't matter whether there's two transactions going through or there's two million. It's the same integration flow, if you will, involved. And the application managed services is there. So it's effectively for us to...
+
+>>Jussi Karjalainen	44:50
+Run a support operation behind this in our integration middleware if let's say some run fails or let's say that a certain master data has changed in business central which we didn't know and and uh integration run for whatever reason failed we will automatically get an alert out of that and we would contact you guys to go Hey there's been a supplier that we've tried to integrate but it's got some uh some data against it that we weren't expecting uh you know has something happened sort of thing So that's all the parts of the item number three and four effectively okay got it um
+
+>>Neil Lawrence	45:24
+And is i'm assuming you know if we need to go above that is time material type of hourly rate i'm assuming yes i mean the beyond beyond the 15 hours a month
+
+>>Jussi Karjalainen	45:36
+Right Yeah I mean Yeah That's right that's right So so typically would be um what we what we probably want to include here for reference Stephanie's what's the rate uh above you know going above 15 hours i mean that's just our guesstimate effectively based on what we're looking at because largely what we're looking at is quite automated there shouldn't be too much of a need for us to either dive into doxima or the integration side and have to kind of figure things out but obviously obviously as we as we run the project we'll understand that uh you know can quantify that level of support uh better uh ideally it should be a solution that we don't even need 15 hours for to support
+
+>>Neil Lawrence	46:13
+Right Yeah totally agree and the the the validation from i guess historic validation from Bc probably um to ensure that they're coding correctly hitting the right gl vendors accurate I mean that that's you know gonna change over time so whatever process you guys build it's it's it's being done in an automated way that it's it's it's gonna um uh pull the information and be able to uh uh update your validations automatically or or do you need like you know a person to actually do that part of it that that that's right it would be automated as a as an integration process so we would we would periodically go and refresh the data as you go and change and that new cost centers account codes that sort of thing so that's all part of the part of the logic that we would build as part of the item number one um of course if there are structural changes you know that you'll introduce another coding segment or something like that that's a different story but like the data itself is obviously fluid uh like the suppliers are like the gl accounts uh are and so forth got it Yeah We you know the biggest type besides like obviously a new vendor which is pretty straightforward we could have a new cost center or a new dimension right But it's not a new data element uh it's just different value um that that you would have to be aware of up between the master data Um So Yeah I I mean I i like the structure uh the like first of all i like your the the idea of the process and the you know going back to you know ensuring to move forward with with this approach with the executive team on my end you know obviously revised this is based off of today's conversation
+
+>>Neil Lawrence	48:01
+But um overall I i feel like it uh the structure will work from a pricing standpoint um as well as as a process the big thing is for us again from our our executive team is not very technical but for them is can we get from five to three you know people Right So um now that's the whole ap department so they don't they do other things besides just you know uh reviewing and posting purchase invoices they do check runs they do other things But um really we're just trying to we're trying to reduce um uh labor makes sense
+
+>>Jussi Karjalainen	48:40
+Yep Yep I i think i think i think it'll it'll it'll start the process heading heading towards that uh that that that you know Yeah Right Right
+
+>>Neil Lawrence	48:50
+Yeah I like it
+
+>>Balamurugan Doraibabu	48:53
+Excellent Okay Cool then i think uh from our side we are good Neil uh as a next step uh we will send you the updated proposal with a detailed uh uh solution approach project management and the commercial element um and then uh let us know if you'd like to have another session uh in order to uh clarify any open points after your internal review and your stakeholders uh
+
+>>Neil Lawrence	49:16
+Yeah we're happy to connect so if you let's say you guys get me that this week um give me about a week internally to get everyone you know um together uh and and talk about next steps um you know what we'll probably want uh at least um i know for sure one of the folks will probably want to join a call with me we may want do a reference call too So if you start thinking about about you know um to get that aligned um and we don't have a lot of layers though So if it's something that they that we like and want to try um um
+
+>>Neil Lawrence	49:49
+The one thing i do like is you know we're not talking about a hundred thousand dollars a setup fee here where it's not it's not a very large investment from what has it right now um so that's a good sign uh where you know just we did something very similar with doc sumo we kind of took a chance right and it worked out great And so this is kind of another uh approach similar approach indeed cool all right fantastic so good
+
+>>Jussi Karjalainen	50:17
+Awesome
+
+>>Stephanie Xavier	50:18
+So Yeah we'll be in touch in about a week or so sounds good
+
+>>Jussi Karjalainen	50:23
+Neil thank you so much appreciate it thank you
+
+>>Neil Lawrence	50:26
+Thank you guys have a good day
+

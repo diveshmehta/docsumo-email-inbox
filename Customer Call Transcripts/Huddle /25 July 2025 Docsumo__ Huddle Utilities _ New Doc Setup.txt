@@ -1,0 +1,894 @@
+>>Nidhi Vichare	00:00
+Is we'll help you set up. So ideally, we can definitely set up for you. But we'll help you set up the basic of this document type. So we'll help you set up the Zapier so that you can manage the Zapier also, in case there are any changes. Or if anything, in future, you want to make the changes in Zapier. So we'll help you do that. So Manoj will take you through all the steps for setting up the documents. We'll definitely help you with the field setup, like the extraction setup. We'll help you with that.
+
+>>Sigita Vaišnoraitė	00:27
+Ok. Before we do that, can we just find that email? So PDF, they want to meet us. So let me just see. Let's agree a time. So they said 15 minutes. One second, I'll open their calendar. How about we check my own calendar? So Monday, great. Monday at 2, oh, wait. Why is this AM? That's a holler alarm, I don't know.
+
+>>Nidhi Vichare	01:13
+But just to let you know that we'll not require the call. Ok. For selecting the product, then we can help you actually on the call right from the start.
+
+>>Sigita Vaišnoraitė	01:24
+Ok, fine.
+
+>>Sigita Vaišnoraitė	01:32
+All right.
+
+>>Nidhi Vichare	01:33
+So I think we can get started.
+
+>>Sigita Vaišnoraitė	01:38
+You guys are showing something, right? Ok, cool.
+
+>>Nidhi Vichare	01:42
+If you can share your screen and go to the Docsumo platform, and we'll walk you through the steps.
+
+>>Sigita Vaišnoraitė	01:54
+Is that me?
+
+>>Nidhi Vichare	01:56
+Yes. Yeah.
+
+>>Sigita Vaišnoraitė	01:59
+What is that, like Docsumo what?
+
+>>Nidhi Vichare	02:02
+It's app .docsumo. I'll just place that in the chat box here. So log in with your email ID. Let me just quickly check if you are added as a user.
+
+>>Sigita Vaišnoraitė	02:13
+Yeah, I don't think I have anything.
+
+>>Nidhi Vichare	02:16
+Ok, just a second. Let's add you as a user first of all. Thanks.
+
+>>Sigita Vaišnoraitė	02:23
+Thank you.
+
+>>Nidhi Vichare	03:06
+I've sent you the invite. If you can just create your password and join in. You should have received an email. Ok.
+
+>>Sigita Vaišnoraitė	04:05
+Ok, I think I received an email now. One Sec.
+
+>>Nidhi Vichare	04:25
+Am I the only one who's hearing the audio? Is there a voice disruption at Sigita's end?
+
+>>Manoj Racherla	04:37
+No, it's pretty clear.
+
+>>Nidhi Vichare	04:38
+Ok, OK. I think that should be on my end. Ok.
+
+>>Manoj Racherla	04:50
+Sigita, have you logged into the system?
+
+>>Sigita Vaišnoraitė	04:53
+One second, I just received an email and my system is not happy about it.
+
+>>Sigita Vaišnoraitė	05:50
+Ok, guys, I'm sharing my screen.
+
+>>Sigita Vaišnoraitė	06:01
+Ok. Ok. Can you close this pop -up?
+
+>>Manoj Racherla	06:09
+Ok. So these are the doctors that are already created on your account. Utility bills, hurdles, utility bills, hurdles, new fields. If you open it, click on any of them. So these are all the folders. And within the folders, there might be different files that you guys have already uploaded.
+
+>>Sigita Vaišnoraitė	06:32
+Ok. Yeah, just for you to know, I don't work with this. Yeah. Yeah, so that would be OK.
+
+>>Manoj Racherla	06:41
+Can you go to these things? Do you have a free Zapier account of yours? No. Can you create it just for testing purpose?
+
+>>Sigita Vaišnoraitė	06:58
+No, I think I forgot to mention that. But I don't know if it's me or you guys.
+
+>>Manoj Racherla	07:04
+Just start free with email.
+
+>>Sigita Vaišnoraitė	07:06
+Sorry?
+
+>>Manoj Racherla	07:09
+Just sign up with Google if required. That would be fine.
+
+>>Sigita Vaišnoraitė	07:15
+So it's going to be like a user method. So you save your names, either that, and you scroll down to the file. And then any language, which is a lot of different subjects that we teach in this class. Either Ava or Vixen. I think they have Ava. And then it just returns to you.
+
+>>Manoj Racherla	07:39
+Oh, you can skip question. You can skip question.
+
+>>Sigita Vaišnoraitė	07:41
+Oh, OK. You just have all of it. Ok. Ok.
+
+>>Manoj Racherla	07:46
+Can you click on Create?
+
+>>Sigita Vaišnoraitė	07:48
+Go to Zapier. So the current system runs for two. Oh. Create Zap. The current is one or three. There's one big feature you want.
+
+>>Manoj Racherla	07:59
+I'm just going to do this one. Yeah. So this is the Zapier, like a journey board. It's current up. So the first step would be to set the trigger within the Zap.
+
+>>Sigita Vaišnoraitė	08:14
+Ok, how do I do that?
+
+>>Manoj Racherla	08:16
+Can you see here? There is a trigger below, in the center of your page.
+
+>>Sigita Vaišnoraitė	08:22
+Trigger, trigger. Below that.
+
+>>Manoj Racherla	08:24
+Below that. Trigger there. Can you see the trigger action there?
+
+>>Sigita Vaišnoraitė	08:27
+No, I can't.
+
+>>Manoj Racherla	08:31
+How would I actually do that?
+
+>>Sigita Vaišnoraitė	08:32
+Where is it? Where is it? Oh, here. Yeah.
+
+>>Manoj Racherla	08:36
+Ok. So now what you want to do is you want to read the email that you receive within the Gmail, right? So you have to just search for Gmail here.
+
+>>Sigita Vaišnoraitė	08:46
+So this one, right? Yeah.
+
+>>Manoj Racherla	08:48
+Yeah. You can do it. Select it. Ok. Now, can you, towards your right of your screen, can you see the select the event board?
+
+>>Sigita Vaišnoraitė	09:01
+Yeah.
+
+>>Manoj Racherla	09:02
+Yeah.
+
+>>Sigita Vaišnoraitė	09:02
+Yeah.
+
+>>Manoj Racherla	09:03
+In the setup, can you connect your Gmail to this? Click on the trigger event. No, no.
+
+>>Sigita Vaišnoraitė	09:12
+Ok.
+
+>>Manoj Racherla	09:13
+So let's say whenever you receive a new email. Connect your Gmail.
+
+>>Sigita Vaišnoraitė	09:28
+Ok. Select all. Yes, now. Ok.
+
+>>Manoj Racherla	09:44
+Continue?
+
+>>Sigita Vaišnoraitė	09:46
+Yeah, continue.
+
+>>Manoj Racherla	09:48
+Ok, can you select the label within this? Like, it's easy, the mail within inbox or whatever. Let's say.
+
+>>Manoj Racherla	09:57
+For inbox for now can you dash trigger so these were the like it got it found you three records can you click on the email see one Okay can you scroll down here to the very bottom
+
+>>Sigita Vaišnoraitė	10:28
+Yeah
+
+>>Manoj Racherla	10:29
+Fine that's what could you continue with electrical Okay now once the once we got the Gmail we have to send that we have to first convert it right can you search for PDF go Yeah
+
+>>Sigita Vaišnoraitė	10:53
+Yes second one this one and again this one right Yeah
+
+>>Manoj Racherla	11:02
+Okay Search for like PDF anything to PDF converter scroll down here scroll down okay scroll down Yeah HTML to PDF and it No No there might be option of anything to PDF converter scroll up and this one Yeah okay Connect here now connect with
+
+>>Sigita Vaišnoraitė	11:33
+Oh
+
+>>Manoj Racherla	11:34
+Yeah
+
+>>Sigita Vaišnoraitė	11:35
+Okay Okay
+
+>>Manoj Racherla	11:39
+first create your creator pdf .co Just like you created your freeze at that one you can create the free PDF PDF .com contest
+
+>>Sigita Vaišnoraitė	11:52
+Oh I might have it
+
+>>Manoj Racherla	11:57
+Okay you already have it okay
+
+>>Sigita Vaišnoraitė	12:00
+How do we do that then Okay
+
+>>Manoj Racherla	12:02
+Yeah fine click on the change here create a new account click here Okay wait where can I find it so I need to okay go to your account once go to your this dashboard Yeah
+
+>>Sigita Vaišnoraitė	12:31
+Oh here copy the key copy your API key
+
+>>Manoj Racherla	12:40
+Yeah paste it here
+
+>>Sigita Vaišnoraitė	12:46
+Yes continue okay now continue
+
+>>Manoj Racherla	12:55
+Okay now input format would be let's say this it can be anything like our raw HTML code let's say now source file can you click on the plus icon here Yeah So these are so can you see a new email in Gmail option within that there are multiple like parameters right copy load subject line body HTML and everything from name
+
+>>Sigita Vaišnoraitė	13:22
+Yeah
+
+>>Manoj Racherla	13:25
+So you don't want a not everything stuff you can select what you can do is you can select the raw HTML
+
+>>Manoj Racherla	13:40
+So sorry what would I select I will show you can you find body HTML option this one right Yeah do I click on it
+
+>>Sigita Vaišnoraitė	14:11
+Yeah
+
+>>Manoj Racherla	14:12
+Now you can give the file name as the subject line of that particular meal search for with can you click on the plus icon here within the file Yeah So search for subject line there might be some subject we have this one
+
+>>Sigita Vaišnoraitė	14:29
+Right
+
+>>Manoj Racherla	14:29
+Yeah this one this would be taken as the file name Okay That's fine now click on continue our test step Yeah Okay
+
+>>Sigita Vaišnoraitė	14:45
+So just looking at this email this is not the email we would like to read yeah
+
+>>Manoj Racherla	14:50
+That's when we are just for testing purpose Okay
+
+>>Sigita Vaišnoraitė	14:55
+Yeah
+
+>>Manoj Racherla	14:56
+Can you scroll down here within the this Yeah there you can you click on this you are copy this URL and open it in new tab just copy this URL this
+
+>>Sigita Vaišnoraitė	15:07
+Okay This one
+
+>>Manoj Racherla	15:08
+Yeah open it in new tab we're here
+
+>>Sigita Vaišnoraitė	15:14
+Yeah Okay
+
+>>Manoj Racherla	15:19
+So this is the email that you just for testing purpose that you want
+
+>>Sigita Vaišnoraitė	15:24
+Okay
+
+>>Manoj Racherla	15:25
+So now what you can do is go to the app once choose here click on the plus icon here Yeah now select Docsimo search for Docsimo Yeah Then yeah action event upload document mm -hmm action connect with yours right so click on settings go to settings go to web book and API Yeah you can keep now click on the place item click on the anything to PDF Yeah second one here so URL URL mm -hmm now select the doc type once so these are the doctors that already existing within your account as you saw your in your Docsimo account so the file this this means it we the file that you receive from the email in which doc type you want to push you can select any one of them for now later on you can change let's say utility be harder okay
+
+>>Sigita Vaišnoraitė	17:15
+So I'm going back here So But these have you created these ones for me
+
+>>Manoj Racherla	17:23
+No we didn't create it Yes
+
+>>Sigita Vaišnoraitė	17:25
+So do I have to create it
+
+>>Manoj Racherla	17:28
+Yeah you can create it you can create a new doc type as well if you want So
+
+>>Sigita Vaišnoraitė	17:36
+Okay So how does that work so what is this
+
+>>Manoj Racherla	17:38
+Yeah So it so my question is you would be like all this the mail documents that you want to upload it would be would it be the utility bills
+
+>>Sigita Vaišnoraitė	17:47
+No sorry no not utility bill so I said so that's the thing so what I want is I'll show you the email type
+
+>>Sigita Vaišnoraitė	18:13
+Yeah
+
+>>Sigita Vaišnoraitė	18:33
+So I want this this type of email So I want you to read the address I want to read the tenancy date the sir well name surname email address So you guys have asked which fields have to be populated from the emails so I sent you this document we were with these fields basically to be populated okay Over here
+
+>>Manoj Racherla	19:04
+So you can create create the document with a with these fields on the new doctor that you created just for demo purpose for now we can use the existing one as well that we have so if you want we can create a new one new doctor as well
+
+>>Sigita Vaišnoraitė	19:26
+Okay I can't see the connection Yeah
+
+>>Manoj Racherla	19:34
+That's fine so what we can do is can you go to the doximo platform go to the utility bill hurdle Refresh it just refresh the page
+
+>>Manoj Racherla	19:59
+Yeah, scroll down a bit. Go to the first folder here.
+
+>>Sigita Vaišnoraitė	20:08
+First folder? That's what you mean?
+
+>>Manoj Racherla	20:11
+No, go to top, yeah. The first folder, open the first folder.
+
+>>Sigita Vaišnoraitė	20:16
+Can you go to the Zap ones?
+
+>>Manoj Racherla	20:23
+Zap, okay. Can you check the... Scroll down once. Here, yeah, yeah, in this, in this. Scroll up once in this. Doctype, Doctitle. Can you, can you copy this Doctitle? Yeah, just search for it within the, within the Docs, you know. Where do I search? Go to all documents, go to all documents here. Towards your right, yeah, document title, yeah. Search in here, yeah. So it got automatically populated within this. Okay, later on if you want you can delete it. Because this is not a correct document.
+
+>>Sigita Vaišnoraitė	21:21
+No.
+
+>>Manoj Racherla	21:22
+Yeah, okay. So what you want is, now you want is, you want to bifurcate those particular bills and also populate the fields as well, extract fields from them.
+
+>>Sigita Vaišnoraitė	21:36
+Is it that I mark over here something? Yeah.
+
+>>Manoj Racherla	21:40
+You can highlight it.
+
+>>Sigita Vaišnoraitė	21:43
+Oh, it's a customer name. No, I mean, there's no customer name, but okay.
+
+>>Manoj Racherla	21:50
+Do you have search documents with you, search emails with you that you want to actually populate?
+
+>>Sigita Vaišnoraitė	21:57
+Do I have what?
+
+>>Manoj Racherla	21:59
+Do you have an email of the one that you just showed me, right? Within the email that you want to populate?
+
+>>Sigita Vaišnoraitė	22:06
+This one?
+
+>>Manoj Racherla	22:07
+Yeah, can you just re -send this email again to the info?
+
+>>Sigita Vaišnoraitė	22:13
+Okay, I see what you're doing, okay. Well, would it, okay. So let me just message the team.
+
+>>Manoj Racherla	22:50
+No, as a new email I'm saying. Send it as a new email.
+
+>>Sigita Vaišnoraitė	22:53
+Well, I can't send it as, I mean.
+
+>>Manoj Racherla	22:56
+Oh, okay.
+
+>>Sigita Vaišnoraitė	22:58
+Because I'm not sending that email, so how can I send, I mean, I can try copying it.
+
+>>Manoj Racherla	23:03
+Got it, got it. Okay, wait. Can you copy this entire thing here from the existing mail? Just copy it.
+
+>>Sigita Vaišnoraitė	23:14
+Can I copy what?
+
+>>Manoj Racherla	23:15
+From the existing mail, just copy it.
+
+>>Sigita Vaišnoraitė	23:20
+Copy what?
+
+>>Manoj Racherla	23:22
+The content from here.
+
+>>Sigita Vaišnoraitė	23:24
+Okay. Yeah. So you, okay.
+
+>>Manoj Racherla	23:32
+Okay, now send.
+
+>>Sigita Vaišnoraitė	23:34
+And you want me to just copy that?
+
+>>Manoj Racherla	23:37
+I can copy that now. Subject line. Add test as a subject line within the subject line so that it can be identified. Test and besides that, whatever you want to add.
+
+>>Sigita Vaišnoraitė	23:59
+And what?
+
+>>Manoj Racherla	24:01
+Whatever you want to add within the subject line after test.
+
+>>Sigita Vaišnoraitė	24:06
+I mean, I don't know what I want to add. Okay, I'll just send it.
+
+>>Sigita Vaišnoraitė	24:20
+So.
+
+>>Manoj Racherla	24:22
+Go to first step here.
+
+>>Sigita Vaišnoraitė	24:25
+Have you received the email?
+
+>>Manoj Racherla	24:27
+Can you check once your inbox?
+
+>>Sigita Vaišnoraitė	24:31
+Yeah.
+
+>>Manoj Racherla	24:32
+Okay, fine. Go to, go to Zap. Zap. Go to test.
+
+>>Sigita Vaišnoraitė	24:42
+Configure.
+
+>>Manoj Racherla	24:43
+Configure test. Towards your right. Towards your right. Below. Below. There is a configure. Yeah.
+
+>>Manoj Racherla	24:58
+Search or click on find new records. Ok, click on email it. Can you check if this is the mail that you send? Test, yeah, Yeah, yeah, continue with selected report. Now do the again test it for this one as well. Go to test again. Retest it. There is an option called retest it below. Below, below, below. Besides continue.
+
+>>Sigita Vaišnoraitė	25:33
+This one?
+
+>>Manoj Racherla	25:34
+Yeah.
+
+>>Manoj Racherla	25:44
+Ok, can you copy the URL that you get from here and open it in new window? Yeah. New tab, sorry. This is the correct. Go to that. Continue, continue, click on continue. Yeah, click on the test. Go to test of this. Yeah, retest it. Ok, now go to Docsimo. Search for test.
+
+>>Sigita Vaišnoraitė	26:27
+Do I go all documents?
+
+>>Manoj Racherla	26:29
+Just search for test here. Remove this. It's processing. Can you open it?
+
+>>Sigita Vaišnoraitė	26:47
+Ok, so now I can select.
+
+>>Manoj Racherla	26:49
+Yeah.
+
+>>Sigita Vaišnoraitė	26:50
+Ok.
+
+>>Manoj Racherla	26:53
+So you can configure the field whatever if you want address line. All the things.
+
+>>Sigita Vaišnoraitė	26:59
+Can I change these ones?
+
+>>Manoj Racherla	27:02
+Yeah, you can change. You can change. So what I would suggest is create a new document type and then upload. So currently, whatever the email that you are uploading are getting uploaded in the already existing document type called Hurdle Utilities, right? So what I would suggest is create a new doc type for this. Search for Hurdle. Create a custom doc type. There is option. It got cancelled. Can you again create it? Create a custom doc type.
+
+>>Sigita Vaišnoraitė	27:45
+Oh.
+
+>>Manoj Racherla	27:48
+Just do it slowly. Just select it. Yeah. You can name it anything.
+
+>>Sigita Vaišnoraitė	28:04
+Ok, so then I would.
+
+>>Manoj Racherla	28:08
+Yeah, upload a document, anything.
+
+>>Sigita Vaišnoraitė	28:10
+So as if an email, right? So download that email.
+
+>>Manoj Racherla	28:14
+No, no. Go to the URL that you had opened it in your window.
+
+>>Sigita Vaišnoraitė	28:20
+Ok.
+
+>>Manoj Racherla	28:21
+Download this. Download this. There is a download option. Now upload this document.
+
+>>Manoj Racherla	28:54
+Can you click on Click Here to Upload?
+
+>>Sigita Vaišnoraitė	28:58
+Yeah, I'm trying.
+
+>>Manoj Racherla	29:01
+Ok, just drag it on.
+
+>>Sigita Vaišnoraitė	29:09
+So I can't just go and download the email from here, right?
+
+>>Manoj Racherla	29:14
+Because the one you will download, it will be in email format, not the PDF or image format. So for that, we needed the pdf .co That converts the email to PDF or image or anything, right? Ok.
+
+>>Sigita Vaišnoraitė	29:36
+So and if they, OK, so I think that's what Laura was saying. So if I receive slightly different types of, so let's say this doesn't have something that I would like. So I would then upload a different document.
+
+>>Sigita Vaišnoraitė	29:54
+Okay, I'll just do this. I'm just trying to see what she was doing. So she has many documents in her one thing. So that means I can add loads of documents for it to learn. Yeah. Which fields, yeah? Because one email might have like 80 % of the data. Another email might have 60%. And as if once I add them, you know, there's more fields to some emails might have that data value. Some, some of them not. So that's why I have to add as many different examples. Right?
+
+>>Manoj Racherla	30:37
+Correct.
+
+>>Sigita Vaišnoraitė	30:37
+Over here. Okay. Okay. I see. Okay. That's so.
+
+>>Manoj Racherla	30:45
+So what you can do for filtering out based on the subject line or like that, what you can do is you can add up in between filtering out step as well. So after the first step, new email, can you go to the new email? Can you go to the zap?
+
+>>Sigita Vaišnoraitė	31:01
+Zap. Okay.
+
+>>Manoj Racherla	31:03
+Yeah. After the first step, there is a plus icon. Can you see? New, first block.
+
+>>Sigita Vaišnoraitė	31:09
+No more.
+
+>>Manoj Racherla	31:10
+Yeah. In between. Add step. Yeah. Search for filter. Yeah. The first one. Okay. Now. So only continue if choose field.
+
+>>Sigita Vaišnoraitė	31:28
+Sorry? Choose.
+
+>>Manoj Racherla	31:30
+Yeah. So here you can say, what you can say is filter out the emails based on the subject line.
+
+>>Sigita Vaišnoraitė	31:37
+Let's say. Right. Okay. That's good. Okay. Well, although they will be different. Yeah. But I understand. Search for.
+
+>>Manoj Racherla	31:45
+Yeah. Search for subject. Yeah. Just. Select it. So choose condition. Let's say text contains or whatever you want to add based on your requirement. If it.
+
+>>Sigita Vaišnoraitė	32:07
+And you can write it.
+
+>>Manoj Racherla	32:10
+Okay. So it will filter out only those emails that you receive. So if the subject line contains moving out, then it will proceed with this only those emails, which whose subject line contains moving out. And it will erase out all the rest of the emails.
+
+>>Sigita Vaišnoraitė	32:29
+Within the. Okay. Is it that? So how many words do I add? You can add anything because.
+
+>>Manoj Racherla	32:36
+Yeah. You can add anything. You can, you can play, play it around with this conditions.
+
+>>Sigita Vaišnoraitė	32:44
+Okay. So what, what, okay. So what I'm asking, is it that. Oh, it's just a plus add.
+
+>>Manoj Racherla	32:52
+Yeah. You can, you can like write for multiple condition as well.
+
+>>Sigita Vaišnoraitė	33:03
+Okay. So it just, is it that if I, because look, it could be anything tenants. Do I just write any, any word that it's in the subject?
+
+>>Manoj Racherla	33:15
+Correct.
+
+>>Sigita Vaišnoraitė	33:16
+But it can be in different emails because one email might have moved in. The other email will have move, just move out. Like how, or do I need to keep adding? Yeah.
+
+>>Manoj Racherla	33:28
+Keep adding like that. So yeah. And, or, or. So there are two conditions. And it means whatever the. Or, or yeah.
+
+>>Sigita Vaišnoraitė	33:37
+Yeah.
+
+>>Manoj Racherla	33:37
+You should use or in that case. Like tenancy or move like that.
+
+>>Sigita Vaišnoraitė	33:48
+Okay. So this is converting. This is converting to PDA. Okay.
+
+>>Nidhi Vichare	33:57
+So there's just one more thing here. You can just copy paste the subject line that you're getting. So the, as is from the. Yeah. To be much more.
+
+>>Sigita Vaišnoraitė	34:09
+Okay. Okay. So, how would I see that, that this email that we have received has been scanned and the data values are extracted? How would I know?
+
+>>Manoj Racherla	34:35
+So once you set up the documents and the doc fields, once the email gets processed from the Gmail to pdf .co And it gets converted to PDF and then it's up, gets uploaded to the Doximo, then it will process and extract the, whatever the fields you want.
+
+>>Manoj Racherla	34:53
+To extract from that particular PDF that gets generated. So you can go to the Docsmo platform and then you can review it.
+
+>>Nidhi Vichare	35:01
+You'll also be able to see in Zapier if it has been processed. So if you go to Zapier, and OK, this is not published.
+
+>>Manoj Racherla	35:17
+Yeah. Also, you have to publish it once the entire setup is done to run it automatically.
+
+>>Nidhi Vichare	35:22
+Yeah.
+
+>>Sigita Vaišnoraitė	35:23
+Can you confirm this?
+
+>>Nidhi Vichare	35:27
+I think that's fine. Just below help icon on top right corner, you'll see published.
+
+>>Sigita Vaišnoraitė	35:34
+And also, if I just do this, so you see the email subject has all of this. So information from here to here will never be the same. It's unique.
+
+>>Nidhi Vichare	35:44
+Right, correct.
+
+>>Sigita Vaišnoraitė	35:46
+So if I put just that, would it work?
+
+>>Manoj Racherla	35:49
+Yeah, it would.
+
+>>Nidhi Vichare	35:50
+Yeah, and also new occupant moving is also fine. In and out is also not required, because anything with moving is required, right? So you might not have to use.
+
+>>Sigita Vaišnoraitė	36:02
+Ok, I see what you're saying. Ok. Yeah.
+
+>>Manoj Racherla	36:33
+So now what you can do is you can do one thing. Again, resend a new email with subject line like moving in. Just upload the same email.
+
+>>Sigita Vaišnoraitė	37:01
+So I do test too.
+
+>>Manoj Racherla	37:04
+Yeah, add test in between. And add that as well, moving in.
+
+>>Sigita Vaišnoraitė	37:12
+What did we say? New occupant.
+
+>>Manoj Racherla	37:15
+Yeah, new occupant moving in or something like that.
+
+>>Sigita Vaišnoraitė	37:31
+So what's, OK, so before you demonstrate to me, so this was, where is the test one? So this was a test. So let's assume this is a real email. How would I know? Because how we do it, so we use Help Scout, OK? So we mark every single email as if we looked at it, OK? So how would I know that this has been done, as if that's the Docsumo one? Because I have to tell the team now, I have to tell them something like to ignore the email. So I feel like something can be missed. So how can I ensure that they're not lost?
+
+>>Manoj Racherla	38:23
+That you need to figure it out, to be honest, simply within that email. Because all these emails, you are getting within the Gmail.
+
+>>Sigita Vaišnoraitė	38:32
+Ok.
+
+>>Manoj Racherla	38:38
+Can you go to the Zap one and see it? Click on the Zap one. There is an icon in here, right? Fourth icon. Fourth icon.
+
+>>Sigita Vaišnoraitė	38:50
+Below that.
+
+>>Manoj Racherla	38:51
+Below that.
+
+>>Sigita Vaišnoraitė	38:52
+Below that. Yeah. Click on that.
+
+>>Manoj Racherla	38:58
+Refresh this page once.
+
+>>Sigita Vaišnoraitė	39:05
+Yeah.
+
+>>Manoj Racherla	39:06
+Ok. See, it's got success, you can see.
+
+>>Sigita Vaišnoraitė	39:12
+Sorry?
+
+>>Manoj Racherla	39:14
+You can see success that you got in logs.
+
+>>Sigita Vaišnoraitė	39:18
+Ok.
+
+>>Manoj Racherla	39:19
+Can you go to Docsumo? Search for the subject line that you had added. Like, search for test. Just test.
+
+>>Sigita Vaišnoraitė	39:34
+What, here? I mean, it's here. Or do I have to refresh the page? Just search for new test occupant missing like that.
+
+>>Manoj Racherla	39:45
+The one you had added. Just search it as test. Yeah.
+
+>>Manoj Racherla	40:01
+Can you copy the subject line from there?
+
+>>Sigita Vaišnoraitė	40:05
+From here?
+
+>>Manoj Racherla	40:07
+Yeah. Yeah.
+
+>>Manoj Racherla	40:20
+Okay. Test your new applicant. Go to Zap once. Click on the second step, success step. Can you click on it over there? Yeah. Click test. Scroll down. Go to fourth step, fourth, yeah. Scroll down here. Okay. Copy this title here.
+
+>>Sigita Vaišnoraitė	40:57
+I'll go in here.
+
+>>Manoj Racherla	40:59
+Yeah.
+
+>>Sigita Vaišnoraitė	41:00
+Do I have to search somewhere else? This seems...
+
+>>Manoj Racherla	41:04
+Okay.
+
+>>Sigita Vaišnoraitė	41:06
+No, no.
+
+>>Manoj Racherla	41:07
+Go to all documents. Go to all documents. Yeah. Search in here.
+
+>>Sigita Vaišnoraitė	41:12
+Yeah. There we go.
+
+>>Manoj Racherla	41:19
+See, it picked up from the filter out criteria that you have set it up. New occupant.
+
+>>Sigita Vaišnoraitė	41:31
+Okay.
+
+>>Manoj Racherla	41:33
+So like this, you can set it up the fields as well, whatever you want to extract.
+
+>>Sigita Vaišnoraitė	41:39
+Yeah. How do I change the name here? Go to the gear icon.
+
+>>Manoj Racherla	41:45
+Go to the gear icon. There is on top. On top, there is a gear icon. Extraction gear icon. Extraction.
+
+>>Sigita Vaišnoraitė	41:51
+Where is that? I don't know how to...
+
+>>Manoj Racherla	41:55
+Beside the chat here, on top. On top. On top. Yeah.
+
+>>Sigita Vaišnoraitė	42:01
+It's all mixed up.
+
+>>Manoj Racherla	42:04
+Besides, can you see test underscore two, the name of the document on top?
+
+>>Sigita Vaišnoraitė	42:10
+Oops. No, I can't see anything.
+
+>>Manoj Racherla	42:13
+Top right. Top left. Sorry.
+
+>>Sigita Vaišnoraitė	42:16
+Top left. Okay.
+
+>>Manoj Racherla	42:17
+Yeah. Yeah. Yeah. Yeah. There is an extraction below that. Yeah. Click on that. Now here, click on anything. Yeah.
+
+>>Sigita Vaišnoraitė	42:27
+Right. Okay. I see.
+
+>>Manoj Racherla	42:28
+If you want, you can hide also the fields. Click on the eye icons. If you click on eye icon, besides any of the fields, it will hide that field.
+
+>>Sigita Vaišnoraitė	42:38
+If I click on the eye... Okay. I don't want... Okay.
+
+>>Manoj Racherla	42:43
+Okay.
+
+>>Sigita Vaišnoraitė	42:46
+Okay. Okay. Okay.
+
+>>Manoj Racherla	42:49
+Okay. So I hope everything is clear. You have any questions, Silica?
+
+>>Sigita Vaišnoraitė	42:54
+Well, yeah. Well, I had that question because it does not... I would need to tell the team which subject lines they can avoid, which... That you check... Oh, this is so cool.
+
+>>Manoj Racherla	43:10
+That you check internally once with your team, like which one to avoid and which one to create a criteria for conditions.
+
+>>Sigita Vaišnoraitė	43:17
+Oh, yeah. So how can I... How... Okay. So where is this data? So let's say I confirm. I like this. Even though it's incorrect. Where do I see this data? Where is it?
+
+>>Manoj Racherla	43:32
+What data you need? Sorry?
+
+>>Sigita Vaišnoraitė	43:36
+Well, you are extracting the data, right?
+
+>>Manoj Racherla	43:39
+Yeah. Okay. Can you click on this? Can you go to download data? There is an option called download data on top right. Yeah. Okay. Okay. Okay. So select this. Select the file once. Select the file. Click on download data. Download CSV or JSON. It will provide you a CSV report. Whatever the extraction you get from this particular file.
+
+>>Sigita Vaišnoraitė	44:42
+So where is the second one? So we did two things.
+
+>>Manoj Racherla	44:47
+It will be in... But it will be in... Because it go to the...
+
+>>Manoj Racherla	44:54
+Go back, go back, go back, yeah, good, it will be.
+
+>>Sigita Vaišnoraitė	44:58
+Oh, we did it down here, right?
+
+>>Manoj Racherla	44:59
+Yeah, you have to change the dock type. So if you go to zap.
+
+>>Sigita Vaišnoraitė	45:05
+If I drag off?
+
+>>Manoj Racherla	45:06
+Zap, zap here, go to zap here. Click on the first step. Close this. Close the zap runs here. Yeah, close this. Yeah, click on the first one. Close this as well. Yeah, there's a close icon here. Go backwards once.
+
+>>Sigita Vaišnoraitė	45:33
+Back, back, back.
+
+>>Manoj Racherla	45:35
+Go back, go back. Go to zaps. Yeah, click on the zap. There is an icon, right? Yeah. Okay, open the untitled zaps. Okay, now go to four steps of this upload document. Yeah, in the configure, you have selected utility builder. You have to edit the zap and then you can change it. There is the option of edit app on top right.
+
+>>Sigita Vaišnoraitė	46:18
+Okay. Okay. Now you can change. Okay. Yeah, you can test it. Okay, now go to this one. Docsimo platform.
+
+>>Manoj Racherla	46:44
+Go to the doctor that you are creating.
+
+>>Sigita Vaišnoraitė	46:51
+Okay.
+
+>>Manoj Racherla	46:58
+Okay.
+
+>>Sigita Vaišnoraitė	47:02
+Any questions? Okay, I will try this. A lot of things going on here. Okay, I'll try. I'll message you guys. Actually, I'll ask internally. I think the girls would know what they have done. Oh, yeah. So what do you, okay, so do I need, so. Okay, so you said, can you help me out? Which product do I choose then? Because let me open the email from Pdf. Because I need to know the costs of all of this thing. One second. One second.
+
+>>Sigita Vaišnoraitė	47:54
+Yeah, so they said it's either this. Or this.
+
+>>Manoj Racherla	47:59
+Okay, wait. Let me read the entire mail. You can set any of your converting image. If we give that to an options, you can explore. We do email endpoint. Open what files for me to PDF format. Pdf from HTML endpoint. This is ideal when you want to pass specific content from image to maintain a particular layer. It converts HTML. Yeah, we would, we would need HTML. Endpoint.
+
+>>Sigita Vaišnoraitė	48:27
+This one. Okay.
+
+>>Manoj Racherla	48:28
+Or you can also show them this. For their better understanding, they will get to know. And they will guide you as. Does that. Which we created.
+
+>>Sigita Vaišnoraitė	48:39
+Well, show them this.
+
+>>Manoj Racherla	48:43
+Yeah, the configuration that we have set up. They will guide you. Which plan would be better.
+
+>>Sigita Vaišnoraitė	48:51
+Okay. Okay, cool. All right. Okay, let me let me test it out. Let me see. Let me see how it goes.
+
+>>Nidhi Vichare	49:02
+Sure. Let's do that. And how about we connect on Tuesday. So that, you know, Tuesday or Wednesday. So that, you know, by the time you will probably have some time for the testing. And we can have some feedback also.
+
+>>Sigita Vaišnoraitė	49:17
+Yeah. Yeah. Same time on Wednesday. One second. No, can we do one or 130.
+
+>>Nidhi Vichare	49:33
+130.
+
+>>Sigita Vaišnoraitė	49:36
+Or one.
+
+>>Nidhi Vichare	49:39
+Or one. I have a clear conflict at one.
+
+>>Nidhi Vichare	49:51
+Or 130 you mentioned, right? Yeah, I think yeah, 130 should work,
+
+>>Manoj Racherla	50:02
+Okay Alright see what you can do is you can test it out and then whenever you You feel comfortable you can email us when to connect Yeah, yeah,
+
+>>Sigita Vaišnoraitė	50:16
+So yeah, my biggest problem is the Knowing that these emails are processed. I have no idea How can we do that Right, okay. Thank you guys. I'm sorry.
+
+>>Nidhi Vichare	50:35
+It was painful Thanks for your patience They also like if you face any issues or if extraction is not as per requirement or anything Or in case like any issues with the new document, I just you know, we're just an email away So drop us an email and we can you know, look into it Perfect.
+
+>>Sigita Vaišnoraitė	51:01
+Thank you.
+
+>>Nidhi Vichare	51:01
+All right
+

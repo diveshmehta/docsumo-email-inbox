@@ -1,0 +1,612 @@
+>>Bikram Dahal	00:00
+Things to complete Oh okay I know i see uh thanks for being able to move the meeting so we all should also could join i know we had a customer meeting earlier Okay So um i guess both him and Alexandra will join i don't think Robert will be joining today makes sense and the agenda are simple we just wanted to uh like i I like i have sent you a message regarding your function i have also sent one follow -up message we just wanted to discuss about a few things on that side um i know you guys might have uh not taken that decision to stop you see that likely because you have also spent a lot of time energy and everything So we just wanted to have one call just to make sure that you guys have all the information if there's anything that we can do apparently because i know this is a big project for you guys right so even if it's stuff right now but if the product is better uh and those concerns are handled then you guys can visit it after a certain time so it's mainly for that purpose my job here is not to like uh try to do more things on this one just trying to understand um a bit more uh regarding the issue that you guys faced and a few other things so that we can see if like uh this issue can like we can handle or like maybe we can work and make a product better so that you guys can maybe evaluate without too much of a hassle on your side after three months right so just wanted to be on the same page uh like uh on this project Yeah
+
+>>Bjørnar (Semine)	01:25
+No that's perfect I see Alexander just joined So i guess we can i can text you through there and check queries
+
+>>Bikram Dahal	01:36
+Yeah
+
+>>Bikram Dahal	01:50
+Okay um are we waiting for uh Jerry or we can start Yeah
+
+>>Bjørnar (Semine)	01:54
+I think he uh should be wrapping up his meeting now or sent him a message But uh you can just uh go ahead if you want i guess it will show in a minute
+
+>>Bikram Dahal	02:03
+Okay sure uh so uh there were many three concerns that your team had so i'll go through each of these concerns And then we'll also present some uh information and there might be some discrepancy the way you guys view that problem and the way we view that problem Right so we just wanted to make sure that we are on the same page um so that we can see if there's anything that uh like we can provide um to make sure that the issues are solved so let's go one by one And then we'll go through the uh i'll also share some screenshot uh some things and some other information so that it uh becomes easier um i just don't know by the way he will be here in two minutes Sure Okay um the first thing um the first concern that you guys have had was regarding the format of like um the number not getting formatted into uh decimal right um that was the main concept that your team had And i was trying to use um llm to do that formatting so that one I'm like um like just to give you an idea like where it went wrong and everything i've already put an email just but just to make it on let me just give a little bit of background so that everyone is clear um like on uh this issue so in doc sumo uh at least six months ago every time a customer came in and if they have two like comma separated and dot separated or they have different language we usually ask customer to make a one document type so like something like this just for that language and that uh like a format if it's not separated or comma separated but because of introduction of technology and everything what we were able to do is we're able to pass multiple kind of documents and everything from the innocent document type so in your case you don't have to make we have done experimentation and everything that's reason why you have different document types but in elt you don't have to make uh different document type for one for different language and different format type now when that was introduced there was and that is a new feature like where we allow people to handle like multiple document types and everything um
+
+>>Bikram Dahal	04:18
+So if you look into the numbered side and this was over set and outside like and it was only happening on total amount and i would love to know if there were other places you guys had seen at that point because it took me some time to figure it out why it was happening because it was not happening on net amount but it was happening over here so in the number field field if you see uh there was this feature that was edit for your team uh that says like if the formatting um like just use this code that we have introduced um and then bypass bypass the other check that happens with this documented type but for this one particular field let me just admit
+
+>>Bikram Dahal	04:59
+Okay for this one particular field this was not enabled and this is very custom built uh because it was a new feature uh like where like we wanted to do both dot and comma separated so after this was done i personally checked it myself And we even tried any format that your team has talked about and uh you did not have we didn't have any format issue on any of these uh like like numbers either on the table or on the amount Right I just wanted to clarify uh does us like solve your problem or there was some other places you guys were facing this issue i can quickly test also because i even uploaded a few screenshots so i just took this as a screenshot and even uploaded and tested So i tested it multiple times and team tested all 300 files and they have sent me the reports and everything and they have told me that they don't have that issue number formatting issue on any of the file uh right now so and just to be clear we didn't use lnms for this one like you know this is done just based on this code and our internal logic that comes over here same thing is with date also just for your like because the request has came from you guys what we did is we added this format so now you can choose what for display you want to do like So this is just to figure out this in date and month and this is just the format you want you want it on date month or some other format like we just added uh some format so like on date and number um like uh i just have to like uh you should not face any issue like um like because i double checked it my team also going through everything um so like both no matter the format the system um like the invoice is in the format that you see is always going to be um in this case like the year month date and on the case of number it's just always going to be dot format so that you guys do not face any issue uh could you please just big room if you can if you can go into the auto learning big room that one
+
+>>Bjørnar (Semine)	06:51
+Yeah Yeah And if you can go to the if you go all the way to the bottom now yes And just into the Fort from the bottom so the birkenstock one Yeah the fourth one from the bottom will two up from that one this one that one if you can go into that one and just open the invoice line yes And then scroll to the amount the total amount line could you just please check if that custom code is applied there as well okay
+
+>>Bikram Dahal	07:27
+Just give me a second let me just quickly check Oh sorry like this was not enabled my bad Like i think um let me just retie it now one more time this should not be this because if you look into any other field uh this is enabled say sorry about that Yeah in all the places it is enabled it was like missed on um Like i i checked it And i double checked it it was disabled on this And i think it was just around this one so let me just retie the file And we shouldn't have that issue let me just quickly check one more time just to make sure that we don't have this issue on all the places And then i'll just hit the file Okay this looks good now let me just apply and let me just save And i'll just read on Yeah this file is running now let's see the output um after this one that's perfect
+
+>>Bjørnar (Semine)	09:02
+Thank you
+
+>>Bikram Dahal	09:04
+Okay Okay uh now let's come back to the uh second part regarding how does the system works right So and now you're concerned about the lm before i move to that part let's let this be processed because it will take 30 or 45 minutes uh 30 seconds um so doing that do you guys have any questions um or like uh on this point and otherwise you can move to the next points i think i'm good from my side Okay sounds good uh So like i let that uh be uh processed and uh like uh what you call um let's come back to the second thing how does the docs system works all right and what was it before and what is right now and why we think that is a better way of uh extracting the information so before or like uh like i said um um like docksumo we used to ask customer to make a different document type for each and every format and everything and there was a training like there was a process
+
+>>Bikram Dahal	09:57
+To manually do a training in doximo which use uh the uh this one way out i mean uh i've sent you the link also on this one so the one of the version of this not exactly this but this is the latest like a latest paper on the information extraction using uh like ml uh on the pretend document ai and everything and this is why Microsoft and major of the competitor that we have and everything um they use this because it's one of the best that is out on the market uh which uh uses complete ml systems uh like it do not use llms or anything the complete ml systems and everything and we had viewed those modules but the issue with those models and everything is they work really well on English templates and for the template that it had seen previously but for the new templates and everything the accuracy that we're getting like if we just enable that model because we have those model if we just enable those model then the accuracy that you are getting was around 70 percent and for last two years we have been experimenting with a lot of things and we have decided to use or like um like um a modified version of llm for the extraction of the site because and this will be proven by agent also is that So if you see uh forget about these three lines for now like forget about these three lines this is just the best line so this you can use to even compare it against the current your avi system and everything just putting our field and then putting on name and this one has no prompt like like i said that there's only one prompt on the currency um like Monos can you send me that link where you had put what was the prompt what are the cleaning code and everything i'll just show it we didn't put any kind of prompt
+
+>>Manoj Racherla	11:45
+Yeah sure um
+
+>>Bikram Dahal	11:47
+So based on that the accuracy that we're at cb we're looking to weighted accuracy was seven 87 percent which is better than like better than um like uh better than any other system that we had previously built and it's better than a lot of the system that is currently on the market we're not using the mislearning so we have decided to move to the Llm part and the thing about moving to llm is that the helices in the problem that you talked about right So i'll come to all of those things one by one uh regarding which of these uh like what we do to make sure that there's no hallucination and second thing is what do we mix uh like some of the Ocr issues that might be mistaken as a hallucination right because doctrine has two steps uh maybe your current system also has that issue because sometimes uh i know like where the system fails or every first where google fails and everything on our like so over here um So this is just based on our current system and without doing anything um like so when you upload the document for the first time on the average accuracy uh line item accuracy and everything are here um like what is the accuracy and everything are here pieces and equals and everything are here uh this is just for key value here because it's easier to understand because for tables things can get a bit tricky um on the accuracy side so the accuracy was 87 percent so 87 percent of the field were properly extracted and um like those fields that have low accuracy are also here what are those possible number this and that and which have very high accuracy like uh best number like account type and everything else here so this is a if you just upload in docs in docs just uploading it without doing any uh like uh any engineering and everything um just the engineering that we do on our site uh we are able to achieve 87 percent accuracy um on your sample that you guys have shared second thing these are these three numbers these three numbers do not have like i'll just give you what they mean and why they are important for us uh http zero means what portion of the file let me just convert this into person so that it's easier to read what portion of the file did not have any error right out of the field that you had extracted what portion of the file did not have any error so like like all the fields on that file were completely because accuracy 78 87 percent means that like what you call um means that like um some of the fields had mistake and everything so but for the customer the most important matrix is always going to be like how many of this file it's okay to have a lower accuracy but on those files where you have done the extraction you want all the field to be correct because if and if one field is incorrect then that's the wrong right so http zero means out of this many files how many files has zero issue like there was no issue at all and then how many file had one issue one how many file two issue and how many file had three issues on the extraction side like on the mismatch between the original value and final value so these are the numbers without like any learning that happens and these are the numbers after you approve one documents and if you upload the document of same vendor like what what is the improvement accuracy and what is analysis of analysis analysis the number that you are able to achieve the analysis the accuracy that number that you are able to achieve the
+
+>>Bikram Dahal	14:56
+Accuracy if you see is not like that Drastic right So you move from 87 to 93 percent uh after like you have put the document but what is interesting is this it moved from 0 .714 to 42 percent so number of the files that did not had any issue that increased drastically this combined with i'll also give you some other example because they are like how do you say which of this file do not need a manual review at all right like how do you say because that's a more important thing right accuracy is a different uh like factor you'll not have never have 100 accuracy what you want to have is what portion of document can you send to the system tasteless now the document to be a tasteless processing is not just about information exception there are a few other techniques that we have which you guys might already be using with different vendor but i'll just give you some examples that we do um like uh And then we'll get back to like we'll come back to this one so the uh numbers that you see are here um like um um on the accuracy side so just talking about accuracy i'll come back to http and everything what the customer do and everything And we'll come about other issues that you guys were facing um regarding the uh not much But um is this report making sense it's not making sense or i just wanted to get a context about this report Okay and currently one question that i had uh do you guys uh make all you believe you guys get a input from Abby or any other thought vendor regarding what is the uh accuracy on the field level and what is the number of document that we trustless process in the system
+
+>>Bikram Dahal	16:36
+So how does that system kind of work on your uh your kind organization just to get a context if you can do like one -to -one competition on this part so with every what happens like uh you upload every document goes through e -view or present documents are directly processed and only certain documents go to the review manual review Yeah
+
+>>Aleksander Larsen	16:58
+So the flow right now is that every document it goes through initial scanning right and it ends up in a queue we have nothing that goes automatically directly into to our end system from Abby so there's a queue a queue uh the operators or The yeah the operators will get the tasks from this queue and review the invoices sometimes uh they will be without any errors and they will just forward them straight away and other times there will be problems um the way it's indicated it's not very well done in Abby to be honest so we have very little knowledge about how well the capture has been done before we open the batch or the task so that's part of the reason why we can't trust Abby and we can't just forward an invoice straight to our system and we receive it even though it might be 100 percent uh capture Yeah So and uh the other thing is when you open uh the task and you open open the invoice and you look at the fields it also doesn't really give any good indication on how it ended up with the results it did and why how sure it is of that there's no indication of this you just have to verify as a human that Okay
+
+>>Bikram Dahal	18:33
+This is this is satisfactory does it link to the values so one other thing that i know because even when we did not have a very good system at the very beginning one thing that uh people because a lot of people do the inverse processing with us so let's quickly see if it solves the problem that uh like the team has um So Yeah
+
+>>Aleksander Larsen	18:53
+So if you see online item uh if you go here uh on the it it does highlight the values when you when you click on that direct value Yeah that is uh captured uh But also this is um Yeah it It's it's better done by you like it's no colors and stuff like that it's just
+
+>>Bikram Dahal	19:14
+Uh you know everything is yellow whatever your highlights and uh okay makes sense the main purpose of this is exactly same uh like even if i don't look into this left hand side if i just look into this one you sometimes people are able to make a judgment Oh there's a mistake on this value because this value should never be expected right So those kind of things And then you can click on that and then go back to that value So anyway like that's a different history i'll come to that in a minute because this is skin has gone through a lot of reviews and a lot of process just to make sure that just even without looking into left hand side people can make a judgment regarding if everything was expected or not example one other thing about total is You know you know that Okay there is a grand total there is tax and this and if you are able you
+
+>>Bikram Dahal	19:55
+To we have not added validation here but we also added validation over here and then if it is error then you will see a big head highlight saying that okay something is error without even looking to the different side so we'll come to that in a minute but um just to this one like um so here you don't have an issue on the you don't have any issue on the uh item so all of these items are vertical are written um with dot and everything but it's accepted properly okay Uh so coming back to uh coming back to the uh this one coming back to uh the report give me a second one more you put i wanted to put a pull out was just keep it was here not this one Yes Okay So i just wanted to show you this because like i said after the call and everything we went through like uh because look to part of it i just let me conclude this first before i went to this one So what does this report means is that um like and this can be further improved right this if out of after you guys have processed on 40 percent or 42 percent of documents even if people manually check it i'm not talking about sending the system into this one if people manually check it on 40 percent of the document they have to make uh like no changes and like and on like uh and like on 88 personal document they have to make maximum two changes right So and on the like three changes on the 98 percent of document you do not do an item and everything but that it will be around 30 percent um and the changes and everything are very easy to make there is that part the second part and this is a bit more important and like um like interesting part of it is the history through processing on this document also comes because of internal validation between the documents and our external validation that you guys can do what i mean by that is is in this invoice and this is what i'm talking about all the customer i'm not talking about you guys and everything all the customer usually from here if you're able to extract a bat number because that number is because if and if you look into this report this low error on few of this field might have happened uh because email by email
+
+>>Bikram Dahal	22:14
+Id Right you guys don't care too much about by email id because as well as you have bat number and if you have uh address or something you'll be able to put full you'll be able to pull buyer information if it's missing here if you have it have it if you don't have it then also you'll be able to pull that information from your database also right so from here you can do two things and this is what we have seen other uh customer also to do and then also one i think zero was talking about having an internal validation between uh making sure that being a number ibn numbers and everything is good um good over there so let me just quickly go over here so one thing that we have seen that has worked like a charm Right so there are two validation the invoice can always do and that works like a charm and it really helps you like it really helps you increase this number of the documents that can go through like it's through processing they have two validation one validation is usually this validation net amount bad amount and total i mean if the document clearly says net amount bad amount and total then you can put those amount and do the validation over here um that is one second thing is total amount can be validated against this total amount also Right So like you have three validation over here like if they do not that that's one and last is the bat number So if you do a bat number um or something like that and based on this you can pull the information from your own saffler database and then like which you guys already do and everything so those things because can be done on our system only we can increase this number because for us the most important matrix is not all of this weighted accuracy and everything for us the most important matrix is this like how much person of a document can we make trustless processing once we add those things right so uh like uh using this three three method one is getting certain information that have low accuracy and that are not very critical from the supply database having an internal validation between the documents between uh amount and everything uh like um each year but like then like this can easily increase this accuracy to like what it 60 percent
+
+>>Bikram Dahal	24:19
+I'll not put more for now at the beginning like we can easily increase that this one so that even if people go through all the system in doctor like and because this review screen you guys already know can be embedded into any system uh like any cues and everything uh like um we think that there will be a major improvement on the accuracy side on the long run and last part why this is important and everything because you guys saw some issues on some files and few few things right So what we did is we figure it out like uh like what we call we figure it out regarding what are the fixes
+
+>>Bikram Dahal	24:54
+That was done right and when i upload the document next time did it fix that issue or not right example for this document and like on geosort it was calling uh scaling it it's a cross invoice but uh like uh the year answer is it's the pure invoice and on three invoices it was changed so on this document that we uploaded this was correct so you can see like which of this issue are fixed on which files and which of this issue are not fixed right on geosort it was saying this is a bad difference number but it was not by this number they removed the field and next time this template was uploaded these are not extracting so that was the same thing that i was talking about um like um making sure that once you guys approve we use those information to make sure that make sure that like example initially it was picking up this value we added more thing and now it's picking the full name right those kind of things like we have one one by one um like and there is also like there is some time like it did not work there's only one issue where like even after doing a three sort it did not work and it says no um like but on majority of the case like the improvement that you guys have done is not coming on the next like next invoice that is uploaded uh that is one and there's few issues which might have got you guys confused uh regarding hallucination and everything there are few Ocr issues on the system so usually if you just have a single digit on the amount and or on the this one then like uh sometimes they get combined so like uh some sometimes they get combined nine and ten get combined because even if you if you select nine then it will ten will also come um and then sometime the pdf has a hidden text um like if you see there's no laven on here but you are getting Laven it's not because of and this is exactly not because of hallucination because we don't use on this layer the layer that you see over here where you can see this this has no llm it's a pure computer vision using google vision so if you just do this there's no llm that is giving you the result of this is a pure Ocr there is no rp ocr or pure digital document so sometimes if you have a hidden text on this one and we have seen a lot of those like it might feel that when i click on that i get something extra and like some Laven or zero is added at the end that are the pdf it's embedded into pdf only it's not the like it's not because of elements and everything like i said we don't use llm for uh extracting getting the Ocr layer so how the system works is first you have a file the file gets sent to either digital pdf pdf line or Ocr line the information is extracted then only the missionary system works so on the few places uh like um and this some of these are solvable some of these are not solvable um like we'll look into like few of these things and we'll send your data lipper on this one because sometimes i know that there is an issue you have one one one one one in quantity one sometimes gets missed and to be frank there's no very good fix um to that because the Ocr was not able to pick up now you can ask llm to calculate that quantity based on unit price and everything but that is strictly forbidden in doximo we don't want to do that because using llm for calculation and everything is is a nightmare it will cause more issues than it will solve it so like this there are a few issues um like um that are not fixable because we use thought party vendor like and this will be on you ab also sometimes the value will not be extracted um or like don't excite this but this is just to be clear and this is not because of uh uh lms um like lms are not used for just getting the text um either there is a hidden text over there on pdf itself you select it you will find it or it's because of some um like uh a structure uh like what you call um like a structure thing over here like that is causing it to be misplaced uh something is coming up front uh like so because of that
+
+>>Bikram Dahal	28:44
+So it's more on the pdf side and then on the Llm side Okay So that is on the that that is on the side of the uh side of the uh like on the extraction accuracy and regarding um like how the system works right and where it is able to fix it and where it is not able to fix it Right So i'll send you this report also on the end detail um Yeah Um so i think this one made to measure to concern i would like to answer any question that you guys have regarding the accuracy regarding the systems And then we can take it from there well thank you for a good explanation uh bikram i don't know i don't have any immediate questions i don't know with you sure one quick thing that i had um on this system because it's a thing Right so other things can be for the building like i said right um on our side uh we have added a few features because you guys just doing another very interesting point so for us you guys coming really help us make our product better because whatever we did for product was not just done for you guys it was done that was done that was done
+
+>>Bikram Dahal	29:53
+Because we know that this the feedback that you guys gave is going to be useful for all the customer that comes in the future and we're on the infection point and i understand few places there were a little bit of hiccups because like the system was going through some of it major things um and we also thought that we didn't want to put you into old system because i know that there's no point of you guys Oh there's one more thing i'll come to that regarding the complicated table and everything how do we should handle it and everything But we just wanted to make sure that you use the latest uh systems um without having having to carry out that all legacy so that you guys are able to get very high accuracy from the ground because i'll be really interested if you guys are able to do the comparison but if Abby is able to do a baseline accuracy of this uh then i'll be really surprised on on this one i'm not saying they cannot do it uh like i have not in the time when i had tested it few like one year ago it was not now things might have changed and everything but just to give you a heads up if you guys are able to compare then that will be a really good just to get idea because in our case at least we see that we can take this portion to like 60 percent and do further automation over here um um But like i'm not like i said like Alex said right like uh you guys don't have concrete data on this one But i would love to like see if there is anything that you guys can use to compare it uh coming back to this one thing where i think you guys had a concern And i think this is a way i think we made a mistake i'll say that like when you get when you get when we give you for testing i think we made a mistake over there we should not have done it uh the part was you guys wanted to flatten out our table or document of certain kind right certain kind this one
+
+>>Bikram Dahal	31:34
+I think not this one uh let me just look into auto learning and flexi outdoor Yeah Yeah This was just me testing So i just uploaded one one with all the things and just make sure that like there's no any issue because i didn't want to do so that Oh you guys everything is working and they're not working so this was my just testing file over here Okay So one of the things or mistake that happened outside and outside are you guys we're trying to process this document because this has to be converted into or if i'm not wrong this has become but this is converted into two four line items i think let me go to the next Yeah this has to be converted into four line items right um like this uh you have four and Then like this in the Lg is only exactly is two line items but you have to convert that into four because you wanted to take this small and concatenate over here and make this into one and then put this amount and everything now what happened is that the team put those information like information over here so right now like what you call like right now it's a very simple like uh simple this one i don't know why oh bikram do not have it sorry So you had it because i didn't want to make a change and everything all the equation number and everything is calculated on um this setting because i had told the team to use this setting not this one because i had removed all this other like i think like i don't have any prompt i don't i don't want to use any prompt like um like uh even i removed everything so on your system What happened is that the team had put some discussion over here regarding how to extract this excel and everything and that confused the model sometimes on the invoice we do not have those it also tried and going and extracting those information so for that kind of case or for long long document or which so on my email i tell about two things we usually don't want people making different document type for different templates for example if you have this like vertical auto learning then i want this to be used for all the extraction because the final json that you guys need is always going to do the same so the document type should only change when the distance and this two things change like when the schema changes uh but for the case like the next one what we come to realize and this also might be better for like long term uh just to make a sustainable system and make sure that the make sure that the like um you have a reliable system um over there for those kind of five the better approach would be to make a duplicate of this right um you make a duplicate of this and over here you put instruction but the instruction is very general so on this you just rename it to something and you just put the instruction like over here the whatever instruction the team has put i'll put i'll like i'll look into that
+
+>>Bikram Dahal	34:24
+And i'll let you know let me see if i have that instruction And then this also will later on use this learning only so this will at the end of the day use this learning only like it will use this on learning only like of one set but just to get started and just to make sure that uh like um you give them some examples so that it has a starting point and everything And you don't spend a lot of time uh like writing those example and sometimes for those computer documents this extra prompt helps like this
+
+>>Bikram Dahal	34:52
+Extra prompt that you put over here uh always helps so for those cases which are not simple table extraction like this when i say simple and uh means it's a simple grid structure then you use this document type without any kind of formatting and everything any kind of like rules any kind of things if you have a custom where you have to like pattern the tables out and everything our advice is to make sure that we make a new document type so in um like we make a new document type on there we just like give them some examples which will send the format and then usually that works really well for documents that are less than like um five pages if you have more than five pages then in this case we have some more experimentation and everything that is running where uh like we have something called uh Yeah if you see here like we have a lot of the parameter over here um that uh like gets uh added and just to use some experimental features and everything just to make sure that everything is like everything is like properly formatted so what we can do is that we can estimate with few of this and for like out of because those are just five percent of your documents like let me say out of this five percent three percent of those get solved just based on uh some bar like um because we have seen it work really well and eligible Also right I'm not talking about hallucination and everything because like most of those cases if the form and everything is populated um and because we already have a check in place like uh check in place like you can do total amount is equal to uh this one this also helps you catch it I'm not going to say that um that that's the thing the llm is not supposed to do calculation and here in this case it's doing a little bit of calculation so in that case yes there's a there can be a problem of hallucination and everything but using the validation between the number maybe that using the relation between total amount and this one i think those can be uh like minimized to very large extent as long as we keep those invoice like we have expected that only invoice that are less than uh like certain pages will go through and if it is more than that then anyway people have to manually check all these invoices so that might be a better way to handle it um and we have also said uh decent like better accuracy with that approach than trying to combine all different kind of invoice into one uh one club and last time i think that is a mistake that we did uh like we tried to combine all of these things and this document itself had that extra prompt also which caused more issue than it would have solved that is on some invoice i could see that it was only extracting something on the bottom also and giving it as a line item so that's reason why you might guys have a lot of sense of all this it is how it's missing and everything
+
+>>Bikram Dahal	37:37
+Okay So Yeah Yeah Those are the main things um on our side uh like um So
+
+>>Bjørnar (Semine)	37:42
+Yeah perfect thank you so much i don't know do you have any questions or comments to what you have seen now
+
+>>Jarl Arntzen	37:57
+Yeah what should i say um um I i'm like I i think i'm getting flu or something So um i I i have trouble keeping up you know I i just have to say it directly Right so you speak really quickly Yes and you jump from topic to topic back and forth Right Yeah It makes it very hard to pay attention Right
+
+>>Bikram Dahal	38:33
+Okay Yeah
+
+>>Jarl Arntzen	38:34
+So you know first up that's my first feedback Sorry Yeah No I agree i think like the the the you you have so much good information Right Yes so you can deliver it really slowly and like very sectioned and it will be really good information Right Yes But it seems like you're doubting your information kind of or something So you jump back and forth right just as i engaged and i think you know Yeah it's it's just probably me now Okay because i can like feel like i have a headache And i have like so sorry about right Just i'm you know i just believe in direct feedback so uh you know this is my view Okay
+
+>>Bikram Dahal	39:29
+Yeah I totally agree uh because uh i also might be a bit and um like orbit uh because uh it's a big project i mean
+
+>>Jarl Arntzen	39:38
+You you have you have such good information Yeah But you can deliver it really slowly and it will make even uh more of an impact i would say right You know
+
+>>Jarl Arntzen	39:51
+Youtube videos stuff like that right for example they they have a certain delivery they have really good information they get it across Right Yeah It's very like it's very typical that we if we deliver some information too quickly then you know one minute later we have kind of forgotten about that And then Yeah So that's the back and forth thing But Yeah Okay fine So secondly right capture of Nordic amount formatting Yeah That's right seems like you have solved it And that's good that's really good Yeah But that's very much appreciated you have this setting where like if you open your Docsumo you have this setting where you are supposed to choose between dots separator or comma separator And yeah Exactly so here the decimal separator should be dot or comma But But I assume that setting is disregarded right
+
+>>Bikram Dahal	41:14
+Yeah
+
+>>Jarl Arntzen	41:14
+Yes so um at least the decimal separator is something we don't have to care about right Yes And and this is the way I I think it should be and like you know pretty soon you can probably maybe just hide that decimal separator collector completely and that this is the way it should be And I think that's really good um um um secondly um you um I don't know if I want to go to Yeah let's go to you showed us um cases where um uh multiple quantities or quantities across multiple lines were concatenated into one quantity yes This one Yeah um And you have listed it as an unfixable issue um so um does that mean that the Google view that you're using will not be able to solve this is that what it means no uh not that
+
+>>Bikram Dahal	42:22
+So I'll try to be a bit slow like I know like Yeah you have it fast and everything and thanks a lot for Jero for that feedback uh like um um um I'll be more like careful from next time onwards um so coming back to the Ocr part of it there are certain things that is fixable and certain things that are not fixable So I'll give you some examples and um
+
+>>Jarl Arntzen	42:44
+And maybe this will be one can I can I just ask you right away What does unfixable Mean Example
+
+>>Bikram Dahal	42:52
+Okay I'll give you the example so usually what happens is Google will give me this character this character as a value on my uh when I send it for Ocr sometime and after it's an every character it will give me a position permission on each and every characters Right And then we combine those character character information and make that into word or segment what I mean by that is here you go back the reason when I go over here you see you It's highlighting everything yeah when I go over here it's only highlighting this from here to here Yeah it's not highlighting this because like it's not And here it's highlighting everything because it's a single character so what we is after you get the character information we use some logic to combine it into a word right when we combine it into the word sometime Google will mystically give this nine information the box b box is a higher so it'll give nine b box is a bit here So nine usually the b box b box means the rectangle the down the Inbox
+
+>>Jarl Arntzen	44:16
+Right
+
+>>Bikram Dahal	44:16
+Sometimes it gives up it And then this happens very infrequently it not happen too frequently that's why it makes it very difficult to fix and everything now So if it gives the b box still here saying that the nine character is also here when we combine it to recommend nine and ten is one
+
+>>Jarl Arntzen	44:34
+So yeah what you're saying is that this is something you get back from The Google Api
+
+>>Bikram Dahal	44:41
+Yes right
+
+>>Jarl Arntzen	44:42
+And you know and you you list it as unfixable because it's Google's um You know Ocr
+
+>>Jarl Arntzen	44:50
+Really right Yeah
+
+>>Bikram Dahal	44:52
+Then google Osha But there is so on that on a fixable also i'll get you back the thing the team is saying unfixable on this example is also one example you are getting Lavin more likely this Lavin is coming because there is something on this document this is hidden text Yeah So Osha sometimes like google this is there are two parts of it one is through google and one is through um like just digitally looking at the files so you will put the method so if it's a digital file and it has enough text and everything we don't send it to google we just pass it because digital text is a lot better than passing it to google this example i'm just talking about this particular example this is a digital document because google in no way i have not seen this example till now where it will not give you a it will give this nine is a zero this is probably that this nine can be greater than zero but it will not give me Lavin because Lavin is not anywhere on this system they use machine learning not elements like um system and that is what we have been using for last five years So i'm not saying it in this case this Lavin is coming because there is some hidden text and on pdf finding out those hidden texts are very extremely difficult so like if there is some hidden text then when you do the selection you will get that that Lavin So that's reason why the team is saying it's not fixable because for us it's not very easy because on our system we prefer to get our text from digital pdf because they are more accurate than google ocr and for each cases very few files we we don't know
+
+>>Bikram Dahal	46:35
+Oh i have it has all the result text and everything But there's a hidden text that's reason i have to go and send it to google for Ocr so that decision is very tricky to make so that's reason why the team is saying that this issue will not be fixed um like on this particular files Right
+
+>>Jarl Arntzen	46:54
+But So Yeah
+
+>>Bikram Dahal	46:55
+Yeah
+
+>>Jarl Arntzen	46:56
+So Yeah
+
+>>Bikram Dahal	46:59
+So you're saying you have some alternative Ocr instead of google not alternative Ocr but pdf files right pdf file you can use any open source library called pdf plumber or pdf miner which will extract information from digital pdfs Yeah
+
+>>Jarl Arntzen	47:19
+So Yeah
+
+>>Bikram Dahal	47:20
+Yeah
+
+>>Jarl Arntzen	47:21
+So like i could just share my experience so my experience is that um um and this is something flexi capture has chosen to do as well Yeah um so in in flexi capture also you can uh set it to only do Ocr based on a bitmap version of the pdf
+
+>>Bikram Dahal	47:46
+Okay
+
+>>Jarl Arntzen	47:46
+So the first thing they do is they create a 200 dpi Yes it's not version of the pdf yes And then they do do the ocr Yes And that's precisely to avoid the problem of hidden information Right yes Um so i noticed that in your uh in doxismo you have uh it seems like you have the same option
+
+>>Bikram Dahal	48:10
+Right yes we have a complete Ocr also we have digital ocr we have block Ocr also look Ocr Yeah but given your volume So i'll tell you what is the problem of maybe you guys will have patients every also Yeah
+
+>>Jarl Arntzen	48:24
+But can i just stop you a little bit so as soon as i say when i say ocr Yes I mean optical character character recognition Right Yeah I don't mean parsing of hidden text or json or xml or anything like anything like that Ocr is Ocr Yes it's as if you would take a photograph using your mobile right so Ocr is only based on pixels right not on anything else Yes uh so so when you say Ocr do you mean the same or do you mean a mix of it's a mixed mix of modes Right So you you mix um you know text parsing from a text file or json or something right Yes
+
+>>Bikram Dahal	49:21
+Yeah
+
+>>Jarl Arntzen	49:22
+So so that's like that that's that sounds like a solution to many people but we have found that it's actually a more of a problem than a solution actually sure and this is it sounds like this is the reason why we get these um mysterious um quantities Right Yes
+
+>>Bikram Dahal	49:43
+Yeah
+
+>>Jarl Arntzen	49:45
+Yeah Yeah Okay
+
+>>Bikram Dahal	49:46
+So then i'll get the team to check it one more time um But on one more time um one more time um
+
+>>Bikram Dahal	49:49
+This unfixable issue it's just the performance if you guys are okay because there are certain cases where you want those uh like i'll give you an example i mean because i don't know how often you guys face issue with Abby on that But sometimes what happens is that Abby will if you have pure number and it starts with a pure number has a b c And then it has a number and after a b c there is o Or there is a zero Yeah now if you if you just have a number then usually none of the system make any mistake but it's a alpha numerical you have digit and also number Then i zero and everything usually can be mistaken because Ocr when you look visually o and zero are kind of similar a lot of the system so because of that issues and like few other issues sometimes people prefer digital pass uh information from pdf then Ocr so because there's always a case on both the side so if you guys are have already done the estimate and for your use case complete Ocr forget about the digital information that is on the thing convert that into 300 dpi because in our case you can choose what is the dpi you want and use that image um and it will still have some s case but those s cases are less than S case of getting a hidden text and then that should be totally fine with us
+
+>>Jarl Arntzen	51:12
+Um good Yeah So i would just like to re -emphasize something we said in the beginning uh that um i'm not worried if the processing takes three minutes instead of two minutes Right Yeah because during those three minutes no operator is actually doing anything right there's no operator minutes
+
+>>Bikram Dahal	51:39
+Yeah Yeah
+
+>>Jarl Arntzen	51:40
+Right there's only the machine is doing the work the operator is not doing anything right Um uh what we are um um i mean the big issue now is like i'm not again I'm not worried about one extra processing minutes But i'm very very worried about one extra operator minutes right if some person has to like open the invoice scroll through it and look for random lines where the quantity might be concatenated from other lines right that is um Yeah I don't you know i don't like to use the word worried or unacceptable or stuff like that But it's it Will the netto net effect of that is that we will end up with um maybe even more operator minutes per invoice than we have now because what we have now it works perfectly on that level Right And even i could also mention that you know i don't know if you know tesseract Right Yes
+
+>>Bikram Dahal	52:49
+Yeah
+
+>>Jarl Arntzen	52:50
+It's something i've used you know seven or eight years ago Yeah um you know that was at least capturing individual lines was something tesseract did without blinking right there was no issues Right But you're right if we have a mix of um um um uh letters and numbers we have certain combinations we have certain we have three pairs of letters and numbers which are interchangeable right or they are easy to mix up Right
+
+>>Bikram Dahal	53:28
+Yeah
+
+>>Jarl Arntzen	53:28
+It's zero and all Right Yeah It's five And Yes Yes right it is i uppercase i or l Maybe and i against l
+
+>>Bikram Dahal	53:42
+Yeah
+
+>>Jarl Arntzen	53:43
+And one yes they are in certain fonts and certain resolutions right low resolutions they are too similar right
+
+>>Bikram Dahal	53:53
+But i i would rather like to have that edge case to deal with rather than having this um quantity jumping around sure on random invoices sure makes sense on these three or more because the team will keep those they have gone through all three files and these are the places where they found the issue i'll get the team to manually look into all of these things and put back saying that if we convert this into a complete image and maybe increase the dpa because in our system we do a default dpa of certain amount so if i go to computer yeah
+
+>>Jarl Arntzen	54:32
+Because and and just one more tidbit of information Right
+
+>>Bikram Dahal	54:37
+Yeah
+
+>>Jarl Arntzen	54:37
+The pdf format right sounds like a nice standard Right yes uh so pdf portable document format what was it made for really
+
+>>Jarl Arntzen	54:48
+It was not for net -for -passing.
+
+>>Bikram Dahal	54:51
+It was just for viewing.
+
+>>Jarl Arntzen	54:51
+It's not for data storage. What is it really made for?
+
+>>Bikram Dahal	54:56
+Viewing the information.
+
+>>Jarl Arntzen	54:58
+Huh?
+
+>>Bikram Dahal	54:59
+It is just for viewing the information?
+
+>>Jarl Arntzen	55:01
+Yeah, it's actually for... So in the old days, you know, 100 years ago, you know, when we still printed stuff, right? It was for safely storing something on your computer and then printed and then knowing that the printed version would look exactly like the version you had on your computer. That's the original purpose of PDF.
+
+>>Bikram Dahal	55:31
+Yeah.
+
+>>Jarl Arntzen	55:31
+And then somehow along the way, people started using it for actual data storage, right?
+
+>>Bikram Dahal	55:37
+True.
+
+>>Jarl Arntzen	55:38
+Yeah. So, yeah. So, and it's never made for that.
+
+>>Bikram Dahal	55:43
+Yeah.
+
+>>Jarl Arntzen	55:43
+It was never made for that. It's a container format.
+
+>>Bikram Dahal	55:47
+Yeah.
+
+>>Jarl Arntzen	55:47
+And if you open it in a text editor, you see it's binary, you know, and then, I mean, long story, but it's like, you know, one Pdf generator might generate really nice, you know, consecutive text and you can select it and copy it and stuff like that. Other PDF generators just generate individual characters and puts them next to each other on the page. So it looks correct.
+
+>>Bikram Dahal	56:19
+Yeah.
+
+>>Jarl Arntzen	56:19
+But when you select it, it's impossible to select, right?
+
+>>Bikram Dahal	56:23
+Yeah.
+
+>>Jarl Arntzen	56:23
+So, so, so, so that means it sounds attractive to, you know, capture the text, the raw text.
+
+>>Bikram Dahal	56:33
+Yeah.
+
+>>Jarl Arntzen	56:33
+But in reality, it will very quickly fail.
+
+>>Bikram Dahal	56:36
+Yeah.
+
+>>Jarl Arntzen	56:38
+Because, yeah, I mean, we, we've seen it now.
+
+>>Bikram Dahal	56:41
+Yeah.
+
+>>Jarl Arntzen	56:42
+This is the actual results, right?
+
+>>Bikram Dahal	56:44
+Yeah. So, and that, and when we started Docsolo, I used to wake up every day with three of four issue on one particular PDF file, um, like, which was very unique. I have never seen those kind of issue on any other files, right? So like, it was an insane time, like, um, and we still see those cases. I still get an email from customers saying that this Pdf file is not passed. Um, and then on those accounts, we cannot even convert them back to complete Osha because they have all those things running, um, like, uh, this one. But if you guys are okay with this one, I'll look into that unfixable issue and I'll get back to you.
+
+>>Jarl Arntzen	57:18
+There's only one thing. I think, I think it's a hundred percent fixable issue.
+
+>>Bikram Dahal	57:22
+Yeah.
+
+>>Jarl Arntzen	57:23
+Sure. If you just forget about the text parsing, right? But the other thing is, the other thing is that you will not have a problem with mixing up, uh, alphabetical characters with numbers here because it's all numbers always, right?
+
+>>Bikram Dahal	57:41
+Yeah. Sure. Makes sense. There's only one thing. I know Google has this because we have tested Google, Aws, Av and all of these systems, uh, because in our system, you can go and change the Osha to Aws. Uh, you know, like it's a very simple setting, uh, like you can change it to Azure, Aws and Google. Of all these systems, usually, uh, Google provides better stability on the Api and better accuracy for majority of the file format that we receive or the format that we receive. That's why we use Google. Now Google has one problem and it will occur once in a while, right? So I'll see how often it will occur. But if you have a long table and the quantity is just one, then out of the blue, one quantity will be missing on somewhere in the middle. It will extract all the values, but in the middle that one, and it's not happened for other quantity because one in lines are sometimes similar. So just wanted to give you a heads up on this one. We have not found this one. It has been there for like quite some time and maybe Av also does it, but with one.
+
+>>Jarl Arntzen	58:39
+Never done it. No, never.
+
+>>Bikram Dahal	58:41
+That's quite interesting then. I have seen it happening like, uh, not that frequently out of like, out of 1000, like there might be on one or something like even less than that, but I'll just check with the team and see if they have faced this issue, but just wanted to give you a heads up on this one. Otherwise we'll change it to Aws and see if that also works because we don't use Aws because they're, uh, like what they're, uh, compared to Google, because we process very long documents and everything, uh, like their processing time is really fast. But like you said, in your case, you don't care about processing time. Sometimes Aws is far better for certain things on our system. So we'll also try to switch it and see if like Aws will give you less of those issues, um, or even Azure. So we'll just do some tests and we'll get back to you on those. If we see those issues too frequently.
+
+>>Jarl Arntzen	59:29
+Yeah.
+
+>>Bikram Dahal	59:30
+And, um, that is one that is not fixable, like, because we have tried, it's really hard. So I just wanted to make sure that I, I will do some experimentation and it's very easy. Just to give you an idea, how is it, it is to change this one. We just have to put Aws provider over here, uh, Aws.
+
+>>Jarl Arntzen	59:45
+So I think it's really, uh, all we need to know.
+
+>>Jarl Arntzen	59:47
+Is that you can confirm, right? I mean, I don't have the 100 % solution here, but what I'm saying is that this quantity issue per line is something that we have, I would say we have never seen it, flexi capture on regular tables like that. We have never seen it. It's never been a problem.
+
+>>Bikram Dahal	01:00:13
+Okay, sure. Then I will take that into consideration and make sure that you do some tests.
+
+>>Jarl Arntzen	01:00:19
+And on the flip side though, right? So for example, the Phoenix or the matrix invoices that Manoush was able to extract and defragment, if you will, right? Yeah. That was really well done, right? It's like, you know, on one side, that's something we have never seen in any other product, right? Or we have seen it, but it's, you know, we have to set it up in a different way and it's much more, very much more tedious. So it's something that was, that is, you know, it's like, you know, if nothing else, then maybe we will consider using Docsumo for those matrix invoices only, right? But, but it's, of course we would like to use it for all the invoices. So, so then it's a bit weird again that, you know, we have this very simple issue. Sometimes it mixes up the quantities and it's something like, you know, it's something like we've only heard about this within the space of LLMs and Ai, right? It's like, anyways, so, I mean, you just do your experiments in a rational way. You try with high DPI, bitmap only, right? See what happens. You try with Aws, high bitmap DPI, see what happens. You try with text only maybe, what happens, right?
+
+>>Jarl Arntzen	01:02:01
+And then you just collect your results in a rational and scientific way like you've done already. And you will probably get to a very nice solution, right? Yeah. So, yeah. So it's, it's, it's, yeah, it's, it's like, Yeah, it's, I mean, this is just our attitude really, because it's, we would rather like to have high quality than to have something mediocre, but fast, right? Sure. Yeah. We would rather like that zero operator minutes on a simple invoice, two page invoice, one page invoice, guaranteed, zero, uh, operating minutes for quantity issue. Yeah. We would rather like to have operating minutes, uh, when like for more advanced invoices, right? Where, you know, so, um, yeah, So the, the, like the one or two pages that that's, um, invoices, which where we currently in effect, we could have zero operator minutes for that right now, but, uh, there are some fields that, you know, we're, uh, flex capture is still messing about with that. On that part, like, do you guys have any, because there are two parts, right? Because you guys also have put, uh, like you guys will also have to make some decision and everything on this part. Uh, anyway, uh, uh, we'll discuss about that. I know we were towards the end of the time. I think Bojan, you had some questions before I move toward the action item. I just wanted to, um, hear what you had to say. Then we'll discuss about the next steps. Yeah, for sure. Um, it was just, yeah,
+
+>>Jarl Arntzen	01:03:42
+I think it looks like the formatting is fixed. Uh, so the only question I had, but I can also send you a few examples maybe, uh, but it's basically, we have discussed it before, but the confidence level that we have where it's yellow or green.
+
+>>Bikram Dahal	01:03:57
+Yes.
+
+>>Bjørnar (Semine)	01:03:58
+If it would be somehow any possibility to have a note on the reasoning to why the confidence is low. It's basically, uh, if it's because we found the same number of three places in invoice and we don't know where you want it extracted from, or if it's because it's slower than the minimum set or basically to have that little note knowing the reasoning behind it. It's, uh, it's something we can discuss, uh, in a different time slot as well, uh, Vikram, that's no problem. Uh, just want to highlight it. I can send you some examples, uh, on it.
+
+>>Jarl Arntzen	01:04:35
+Yeah. On it person.
+
+>>Bikram Dahal	01:04:37
+So that is also something we have made a large progress in last, uh, two months because using Llm for confidence was tricky and we have to combine a lot of matrixes, a lot of
+
+>>Bikram Dahal	01:04:46
+Of things so we have a very we can give you a particular reason why it is low all right say that Okay on the three operated document you didn't have that value or this value was wrong on last three document and because of that I didn't know I cannot know if this value is correct or not Or I cannot find the position here right So those information are there and we also combine that to give a number on here and that are more reliable because today also you have a number but these are not that reliable so this one I'll make one documentation you can talk with the product team and see like what we can do with this so that we know like why both the agent and agent will be fixed like Oh is this like what are the reason why low confidence will give you that agent on top of that will also give you the combination why the number that was calculated so if it is more than 90 % or if you guys say that if it is a present in document and it is correct on last three documents then even if it's the system is giving a low accuracy give a high accuracy because it was always correct so it was always correct in like three document then there's no reason to make it and the value also looks similar then on the fourth document don't give it a low confidence right so you can do those kind of things that was a part which I was talking about Stp making sure that we have high Stp and everything so now like we'll I'll talk to the team and we'll make sure that something gets delivered to you guys by end of next week or that is usable right now so you have it But I want to make sure that it's usable and everything we'll make sure that by end of next week um it's like it's pretty on our side
+
+>>Bjørnar (Semine)	01:06:16
+Yeah fantastic
+
+>>Jarl Arntzen	01:06:18
+Yeah So Yeah So Yeah what you have to do is you have to imagine that this that we do some kind of self -service validation Right Yes so we are showing this document to you as someone who's never used Docsumo before yes Or they only use it a few times yes So in the tooltip Yeah we just tell that person what that person has to do Right
+
+>>Bikram Dahal	01:06:55
+Yeah
+
+>>Jarl Arntzen	01:06:56
+So the tooltip should say I mean if it says the confidence score is low
+
+>>Bikram Dahal	01:07:03
+Yeah it's not issue that's no instruction
+
+>>Jarl Arntzen	01:07:06
+Really
+
+>>Bikram Dahal	01:07:06
+Yeah
+
+>>Jarl Arntzen	01:07:06
+It's just you know it's yellow Now Yeah um it's or orange Right
+
+>>Bikram Dahal	01:07:12
+Yeah
+
+>>Jarl Arntzen	01:07:12
+So like a good message to any user is first of all um it's really two two messages But you only need one of them right it's what's wrong yes But you don't really need to say that Yeah you only need the second part which is what to do about it Yeah So this message here just has to say one thing Yeah What should I do about this
+
+>>Bikram Dahal	01:07:44
+Okay that's it
+
+>>Jarl Arntzen	01:07:47
+Okay
+
+>>Bikram Dahal	01:07:48
+No it totally makes sense um like um we'll like we'll work with the team and um like what I have seen in a few designs where people have done a very good job So I definitely like to take inspiration from those right like it's our inspiration it's not copying it's inspiration So we'll make sure that I have some ideas on the thing you talked about we'll make sure that that's implemented um so that it's also useful like because those information can also be later on used for automation you can say that I get it
+
+>>Jarl Arntzen	01:08:15
+But so we we this also applies to our operators Right yes it applies to me as well right I like if you bring up this um page again Right So I see the supplier reference is yellow now
+
+>>Bikram Dahal	01:08:29
+Yeah
+
+>>Jarl Arntzen	01:08:29
+So please tell me what should I do about that
+
+>>Bikram Dahal	01:08:33
+Yes I mean just verbally what what would you tell me you do the document and see if this information is present second please sorry you do the document and see if the information is present Sorry Okay you do the document and see if this information is present on the invoice Okay
+
+>>Jarl Arntzen	01:08:54
+Yeah that that's exactly what that message should say
+
+>>Bikram Dahal	01:08:58
+Yeah one more thing also this message can say just a example the supplier because this document will never have a supplier reference listed because not all the fields can be here so you can the one message the better message might be that we have not this document usually do not have a supplier ID um so like because one we can have a circle on this one But I just wanted to get a better message what would be a best message because otherwise the all the masses that you have on this system are going to be if it is empty then it's going to be please review this field on the document because there's nothing extra to do over here right because and that's one second thing if there is a value then you might say please go and check the position or I found it on two places please go and fix the position up up
+
+>>Bikram Dahal	01:09:46
+I'm like and then like our third part is if I feel this has a low confidence and it's not the pattern is not matching then use of the values and the example if I put Here if we get here, then it says that the format should be numbered, right?
+
+>>Jarl Arntzen	01:10:02
+So yeah, Like that's really good. Yeah, right?
+
+>>Bikram Dahal	01:10:05
+That's the thing over there. And if you update then you also have that read So one thing I wanted to understand and the thing that is tricky and that's the thing that is tricky is that To figure out if this information is not on this document at all Because in this case I can put this into tick mark. It can be empty, but it's still tick Because you are already confident that this document will never have supply difference Yeah, because you have already approved three documents and on three document you don't have to apply it So in this document you don't have supply empty. So this all let me say This is already blue. So only thing that you have to do on this invoice is this fix these two issues Because other issues like this is also always going to be empty, let's say So that is also one other thing that I was talking with the team and that is why that one -shot learning This is so important to us is to also make sure that right now what we do is we if it is empty it's always I icon Because you cannot figure out it is empty because the information is not on the document Or we made a mistake on the extraction. It's a very difficult part to figure out because That judgment Because if you could make that judgment, then I could patch All of this document as a stp. I could easily say that Oh in the document I don't extract invoice number or invoice number was wrong So just look and I'm going to invoice number It's a tricky part So anyway understood your point or like zero. I will talk with the team and we'll present you the better Better idea both to handle What they should do when it is empty and second part over there is also to see If we can remove that eye icon even on empty field because that is also absolutely required if we want it or it's a robot system
+
+>>Jarl Arntzen	01:11:51
+Yeah, I mean there are multiple options of course, you know Yeah, I guess I mean we we could also try to Specify the cases Because we have I guess we could say we have maybe four cases Well, we have empty fields which are usually empty. We don't expect anything right. We have empty fields where Like But it's it's kind of like weird to Or it like it would say like the field message would say It's weird that they don't have
+
+>>Bikram Dahal	01:12:29
+Yeah It's usually there, but why do why don't you have it?
+
+>>Jarl Arntzen	01:12:33
+Yeah, exactly right. So it like it You know, maybe Yeah, so maybe that's something we have to think about right Uh, and I I can think about that as well. So there's no problem And and the final thing now, uh, and we are well over time now, but anyways, um, the final thing now is That you uh, what you have suggested now is that when we do the matrix invoices, that's yeah, We'll call them, right? You have just suggested that we create another doc I think duplicate it Yeah, for each For each supplier, right?
+
+>>Bikram Dahal	01:13:14
+Yeah, those kind of complexity for each supplier is better to duplicate for now Let me not try to make your likelihood here. It's making things more complicated For now you guys duplicate it Give it a name and put I'll give you the example prompt.
+
+>>Jarl Arntzen	01:13:28
+I think the team has sent it And that will work. Yes, and the only thing is Um, that we will also duplicate all the fields, right?
+
+>>Bikram Dahal	01:13:40
+Yes
+
+>>Jarl Arntzen	01:13:41
+Um So Yeah, It will work Um, and we will likely not change the api anyway, so that's probably fine But uh, it like it would be nice if it was possible to use Um, a common set of fields or something like that
+
+>>Bikram Dahal	01:14:02
+There is I will thank you, Gerald There is I'll give you an idea, but I advise not to use it at the beginning. Let's do it separate I don't want your life to be more difficult now I'm just going to present you there is because we know that people will face that issue that season We have implemented something called Um, and I I am really bad. I should not uh give more advice on this
+
+>>Jarl Arntzen	01:14:24
+Well, at least it's it's very promising that you are thinking about it.
+
+>>Bikram Dahal	01:14:29
+Yeah, so The thing about this is at the end of the day, right that logic that we have for plotting is only for this table It's not for other fields. Other fields are always the same like there's no difference on this. The thing is over here And usually it's just about
+
+>>Bikram Dahal	01:14:44
+This is for certain particular vendor so let me say you know that okay the bat number of this vendor is going to be something right so like let's put that number And then you put bat number is one two three four five you can go and put your that description that you have over here and this will work for this particular and you can give a name also i think you can give a how to check name and everything if you get a new vendor this will just collapse so this is for vendor number x Right you have it for vendor number x for vendor low y you can add a new prompt
+
+>>Jarl Arntzen	01:15:19
+So if you see that's got it so that's reasonable that's yeah Pretty good
+
+>>Bikram Dahal	01:15:28
+So you could technically do this but right now at least for your testing i don't want you guys using this once let me because this is also a very new features and everything there are some engineering complexity and everything with this we are just mastering it out and everything So you can even name it and say that this is uh like this vendor this is this vendor so that i don't this is very strict you'll have to document it for sure or like don't say um like one is for simple invoice There i don't want you guys to be doing and messing up with uh this thing one you have complicated on that complex then you'll have this checking um so that way like at least there's a little bit of differentiation and then um like i want like you said right You want predictable system So i want to make sure that i have a bit more predictable system or give you a bit extra work because you guys are a bit technical and you guys will be able to handle this then try to make it like a symbol Yeah
+
+>>Jarl Arntzen	01:16:20
+So um i think yeah In in our experience you know duplicate the information or is instantly outdated information yes
+
+>>Bikram Dahal	01:16:33
+And we have a lot of duplicates in the in the current flex capture system so we are very you know that's exactly why i made things a bit more difficult for ourselves by not asking you to make a duplicate because when i started this call um like even i don't know if you heard it or not in elt we would have asked you to make a duplicate for it's in every date format it's in every uh like language that is how we used to do in past we have removed that and try to combine all of this into one and here i would still tell two you will have two duplicates i don't want to combine the simple invoice which is 90 with that 10 this one but the second invoice that you have i don't want to be creating 10 different of those you can just have one and inside you can just make off that block Yeah that is a goal over here
+
+>>Jarl Arntzen	01:17:19
+Yeah So that's you know that's very promising because we have one constant part and that's the api fields right And we see no reason to duplicate those right and also when we do uh you know improvements or you know slight changes to how one uh say one say a date field for example how that's formatted
+
+>>Bikram Dahal	01:17:43
+Yeah then we don't want to do that 25 times or you know 200 times i agree that's very there's one account this customer has more than 50 different duplicate of it And i have to make one chance onto the account And i have been like not doing it like they have on board old system so i trust me when i say i can understand that then what you have to go through when you have Yeah
+
+>>Jarl Arntzen	01:18:05
+Yeah So it's it's like We like it's this is something i i try to shy away from um from miles Right Yeah I i walk big circles around stuff like that if we see like the indication that we will end up with lots of duplicates of stuff Right Yeah
+
+>>Bikram Dahal	01:18:25
+Okay coming back to this one because i know like you guys are already over the time and everything we can have one separate call separately and next time they'll trust me I'll be more slow and everything hopefully the email already has the major travel information i discussed about um i'll just talk about two things right now i know on outside the action item are clear i'll just go into line item because the only place where i see because these numbers that we have okay let me just share this screen um because i would would have really logged if we could do one -to -one comparison with uh heavy accuracy and everything because that would really make put things in perspective Right so are you guys getting better accuracy than this or like is avi learning from kind of improvement that we did which you guys are seeing over here So yeah would have been easier for you guys to make a decision
+
+>>Jarl Arntzen	01:19:14
+But i don't want to i'm just not sure if we can in our current system we don't have any way to automatically compare how large volumes of invoices at all we just have to do it one by one really but one thing we can do uh
+
+>>Bikram Dahal	01:19:30
+But in your case i don't think avi keeps both the information about the original value and the final value i think you guys will only have final value you guys will not have because in our case we put both original and final value so if you go into docs remote and if you go
+
+>>Bikram Dahal	01:19:43
+Into any of this analytics report. And then if you download the report, then you'll get a complete report of each and every field. What was the original value and what is the final value that was approved. So because of that, all this metrics are calculated. So I don't think you guys have that. If you guys have that from Abby, then we could, you guys can just send us those for this files and then we can just give you a complete report of what you guys doing that extra.
+
+>>Jarl Arntzen	01:20:07
+No, I mean, Abby has proven very difficult to get any type of reporting or we get stuff like operator minutes on average, but All that is just completely skewed and we can't use it for anything.
+
+>>Bikram Dahal	01:20:24
+You can say this one, like we have that, but I know like this is good because people can just open it and just keep it or things like that.
+
+>>Jarl Arntzen	01:20:30
+Yeah, exactly. So an operator will typically have four or five different invoices open at once and the timer starts as soon as the invoice has been loaded, not when the operator starts working on it, but as soon as the invoice is loaded, so then the timer starts, right? So it's like the invoice is open for like 25 minutes, but you only have three minutes of actual work. So it's like these, we haven't really used, I've tried, I mean, and I was easily, I was very quickly tricked to think that, oh yeah, of course I can analyze and yeah, But no, it's, and we, what we went with in the end was just, you know, total number of minutes per year, total number of invoices per year, Minutes divided by invoices. Good. What is the number that you guys have?
+
+>>Bikram Dahal	01:21:22
+If you guys can say like what, a log estimate, because I have those numbers from all the customer, not from you guys. Then I can also do the comparison just on high level.
+
+>>Jarl Arntzen	01:21:30
+I'll not go into detail, but if you guys have them, good luck to you. So, so average, average number of pages is, is 2 .5.
+
+>>Bikram Dahal	01:21:41
+Okay.
+
+>>Jarl Arntzen	01:21:42
+Right.
+
+>>Bikram Dahal	01:21:43
+Yeah.
+
+>>Jarl Arntzen	01:21:44
+And then minutes. Yeah. If you give me five minutes after this minute, anything I'll talk to you. Please do send it across.
+
+>>Bikram Dahal	01:21:51
+I just want to, because we have people, the exact same thing that you guys do, we do it for a lot of other companies and their reports are like with us regarding, because they do that tracking on our system. And also like we do that main thing we do is this equity report. We do this equity report for everyone because this is very clear. And second number that we track is how many document this person poses in one day. We don't do minute.
+
+>>Jarl Arntzen	01:22:17
+We do like very, very roughly three minutes per year.
+
+>>Bikram Dahal	01:22:21
+Okay. That's a lot. Okay. But you guys have line item and everything. So anyway, understood that part, but I think we can easily, like I said, looking at this number and everything, I think we can easily do a lot better with automatic learning and everything also. So, okay, let's look into excellent items, right?
+
+>>Jarl Arntzen	01:22:35
+Because the comparison will be for long average three minutes.
+
+>>Bikram Dahal	01:22:39
+Yeah.
+
+>>Jarl Arntzen	01:22:40
+But it's a very large spread, right? There are most invoices are just like, like we've measured manually, right? So when we measure manually, most invoices are like just 20 seconds, 10 seconds, right? But then there are giant invoices, 40 minutes, right?
+
+>>Bikram Dahal	01:22:58
+Yeah.
+
+>>Jarl Arntzen	01:22:59
+Stuff like that.
+
+>>Bikram Dahal	01:23:00
+Sure. Okay. Makes sense. So on the excellent item on outside, two things up like, anyways, I have already sent you guys the summary of on the last email. I'll also send you additional, this report and then other report that I might have for you guys to look into. Regarding the quantity thing, I'll talk with my team, look into all these three documents and see what are on fixable thing. And can we fix it using, um, the approach just doing the Ocr and see like, what's like or changing the Aws provider, right? We just send the provider that will solve the major issue. So we'll look into these two things. Uh, we'll send you back, uh, you guys, uh, back the, like, uh, back the reports and everything on your side, right? And for the next thing, uh, for long documents and everything, like I said, for now you guys can make a duplicate. I'll send you some examples. And later on, once, uh, like, um, once you guys have done it for one or two document type, then we'll make sure that we transfer it to the, so you'll have two document type for sure. I'll, I'll, at least for near possible future, I don't want to combine simple with complicated, but in complicated, you don't have to have multiple invoice and everything. You can just come over here and then add, uh, add the, uh, vendors here only, like you can just add the vendors here only, so that you can just, uh, like just have multiple, like you can just have one for one next one, you can have it over here so that like, uh, so that like you can just maintain this, this can be 50 and then it still doesn't work because only this logic will be used for that vendor based on back number or based on the seller name, whatever is expected. So we'll work on that and we'll define it and make sure that you guys will be able to use this by end of this, like, um, like right now you can use it by duplicating, but we'll make sure that by next two weeks, you'll be able to use it on all same document types.
+
+>>Bikram Dahal	01:24:42
+Okay and the final one so because you guys don't have a number to compare like how are you guys going to take a decision regarding doc sumo and adby right one thing is for sure i know that because people use avi and everything on equity side because equity would have been the easier one because you can easily figure out okay what kind of improvements happens and everything and this one but in lack of that uh like what would the best approach for you guys to make a decision and like once we have fixed these two issues so we're gonna have a meeting uh later on um and have a discussion uh as well in the team
+
+>>Bjørnar (Semine)	01:25:16
+So me also Alexander uh robert uh But uh Yeah uh we'll see uh we uh we need to have a discussion after this meeting as well obviously But uh very glad to see that the formatting has been fixed and obviously the few things we have mentioned now would be great with some feedback there uh But i will also get in touch with you early next week on email uh But if you want in terms of the confidence part i can send you like a brief email so you have it in writing as well
+
+>>Bikram Dahal	01:25:50
+Yeah please do send it across like i have it I'll just make action item and send it to you you guys can just apply to that only regarding the confidence and on this one hopefully we have been able to i know there's still a walk to do But uh like hopefully we have been able to get a little bit of your confidence And then hopefully we'll be able to solve a few things And like i said the like because all of this are just no more something like like all of this looks normal suddenly and people will say this and that um on numbers But if you guys can do because our product the thing about our product i know you guys have products and database and everything but because now this is skin right this is skin that you guys have can be embedded into any system you can even embed this into avi if you want to embed it into avi because it's a link when you upload it you get this just a minute Um so uh because if the information extraction is exactly same um then you can just take this link when you upload and you can open it anyway people click on this it can be upon as iframe um and people see this review is skin in place of avi review skin and then you can easily measure okay if the aqueous is good if you are liking it the way it is or not so that it might be very easy for you guys to take decision also just wanted to give that one heads up if you guys can think about because zero is here if you can think about quickly because the behind the two things one is comparing the accuracy which i don't think we'll be able to do uh because of the thing that we have and the other thing is to get our direct feedback or see this what the system is in parallel without investing too much on your side right because like i also don't want to a lot of input on your side so just wanted to see if there's anything we can do that that's the that's the thing um um become
+
+>>Bikram Dahal	01:27:35
+Yeah
+
+>>Jarl Arntzen	01:27:36
+Uh so we we may be a bit weird But uh right we are investing yes in this
+
+>>Bikram Dahal	01:27:46
+Okay
+
+>>Jarl Arntzen	01:27:46
+It's like you know we would like with the volumes we have and the volumes we are planning it's like it's We don't we don't need a quick decision we need the right decision okay that makes sense then Um okay we have yet to name it But we have a comparison tool uh it would be wrong to call it a tool uh it's more like an orchestrator um So the point is that uh we are setting we're rigging this to be able to switch data capture providers understood on offline on the fly right And you know for individual organizations say for example for good reasons Right it's it's not like just being like you know it's it's uh say for example we we notice that okay German invoices are captured better with some other provider then we'll route all the German invoices in that direction right makes sense Yeah So uh so it's like um Yeah I mean we we're rigging this to um be able to each year do a new evaluation of um the current marketplace right and to be able to actually offer the best service to uh all our various customers whether they are you know German Polish you know us customers whatever right um and that may mean a different thing for different customers uh we have noticed that German invoices they seem to be able to like they many German invoices they are uh pretty industrial they have been made uh to say you
+
+>>Jarl Arntzen	01:29:41
+Ink or something where they have all the text in one page for example And you know it's just special stuff like that So it's just like we we have we have seven years of having one major weakness right that is we have only had one invoice system which has been like nice in the beginning but it is it's shown its weaknesses over the years more and more and more and more but now it's you know unbearable So we are rigging this to not end up in that situation again ever right 100
+
+>>Bikram Dahal	01:30:16
+I i agree that's also one of the reason why i like working with tech people is that like like you have i myself have to get better because
+
+>>Jarl Arntzen	01:30:24
+Yeah So it's so so the case is like this it's it Maybe we send the same invoice right the same same 10 000 invoices to do two different systems Yeah And then we just compare the results Yeah line by line invoice by invoice and next the better system will win right it's A simple right
+
+>>Bikram Dahal	01:30:48
+Okay then that sounds good that sounds exciting also it's challenging but also exciting right that's what uh will really improve so then let's do this uh like so um um do you guys have any like i said right the there are two parts improvement on our site i'll send your email and everything you got improvements and those things because that will also give an edge on the long run Right So i understand because when you do the comparison you're not just comparing the numbers but you are also comparing the ev skin because if you find the ev skin very easy to use then even if the equity is one person down then that beats it because the operator meaning like you said is reduced uh because you don't have to do a lot of change and everything okay understood that part um coming back to uh this one and then the action item on our side is we'll look into that quantity issues and make sure that those are uh you don't have that issues by changing provider or sending something that is number one second thing is on the confidence we'll send it across and we'll get you get uh your feedback and the last part is regarding um the next vendor uh using that for flattening that small size and everything we'll just set up a document and send you a video you're getting how it was done and how you guys can do it um right now and on future um And then um like on your side you guys can have your internal meeting and then you guys can let us know what will be the criteria to make a decision right so like maybe it will take some time for you guys to build that platform or it's already ready Then i would love to like pass all the theory documents into both the systems and get that number then like it becomes very clear like what system is going to be perfect thank you so much victim
+
+>>Bjørnar (Semine)	01:32:20
+Yeah I will have to go now how to create a presentation for tomorrow
+
+>>Bikram Dahal	01:32:25
+So
+
+>>Bjørnar (Semine)	01:32:25
+But uh thank you so much and i will keep in touch i will email you with just this confidence uh thoughts we have uh so you can look at that with the product team uh sorry for tomorrow presentation do you guys need anything from outside i've seen you some reports i have sent you some uh information do you need any help on outside uh for the tomorrow presentation any reports or anything that would help Oh no No there's nothing i need to make a completely different presentation so uh have some uh some work uh left to do today But i will come back to you before the weekend um Yeah We'll keep in touch but thank you so much for going through everything uh
+
+>>Bikram Dahal	01:33:09
+So i'll just send you a follow -up email just in case like there's anything missing and then like And then you guys can let us know what is the next step uh like on this uh project and on the side i'll also give you a update regarding the two features that we need to add into the product
+
+>>Bjørnar (Semine)	01:33:25
+Perfect thank you so much i appreciate it okay have a nice day guys thanks thanks for your time bye
+

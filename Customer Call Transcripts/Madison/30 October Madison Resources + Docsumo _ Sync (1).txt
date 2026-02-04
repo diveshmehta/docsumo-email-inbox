@@ -1,0 +1,135 @@
+>>Jasneet Singh Malhi	00:00
+Absolutely. Awesome. Good to put the face to the name. Can you hear me? Yep. Awesome. Alden, good to see you. Good to see you too. Awesome. So, hey Mike, hey Alden, thank you for joining the call today. We've shared the updated pricing with you based on the last conversation that we had on the updated number of pages. Just wanted to see if you had the chance to review it, any feedback, and how can we kind of move forward in the next steps on that?
+
+>>Alden Pelletier	00:36
+I have. I had a chance to review. I'm having a hard time justifying an ROI for our company. I just, we'd have to cut eight heads probably in order to start seeing a dollar worth of ROI. And I just, with this being a point solution and us still needing a team large enough to handle distribution of the invoicing, I don't see us getting, being able to cut eight people to justify before we can get a dollar back of cost. I don't know that we'd be able to do that.
+
+>>Jasneet Singh Malhi	01:24
+Right.
+
+>>Alden Pelletier	01:26
+Certainly it would take a while before we'd be able to cut anybody. So it's a significant cost. I see the value. So on - Is it like, I guess, is it, the charges seem like they would be upfront based upon what we estimated for cases. Is that the case or are we charged by the usage? Correct.
+
+>>Rushabh Sheth	02:01
+So I'll take that essentially like you can pay monthly. So since your volume is 150K, you can sort of like, but we are okay. Like if you want to start lower, then we can start lower as well. I understand where you're coming from that. You're directly looking at it as a operational cost that you currently incur and how much of it would you be able to recoup. Just my two cents on this, we have been like doing this for almost seven years now. And practically like, it will change your game. What we have seen is that most people in your position, they want to like, essentially like you start with saying that, hey, my team is doing this manually. I want to see like if Ai has become a come of age where it can actually do this, but it will change how you sort of like run ops because once you have this in production and it is like at automation rate where you're mostly looking at it as sort of data And you don't really have to have people looking at each and each, like what we measure our performance in terms of like touchless processing rate or the automation rate. Essentially like if month two, month three, we can get you to hit that 50, 60, 70 % touchless rate. That's where like it becomes really powerful by itself. That being said, like if you want to start with a lower volume, so right now we have sort of put like 150K, this thing. So you say that, hey, like I will do half and half, half to my team, half through this and then go higher. We are okay to like the line number, three number of cases per year, 150.
+
+>>Rushabh Sheth	03:42
+We'll sort of like reduce that. And again, like we understand that you don't want to like bear the cost upfront. We'll essentially like make it like annual contract paid monthly. So. Right.
+
+>>Alden Pelletier	03:56
+So let's just say 150 ,000 cases. Let's say that number spot on, but we're divide that by 12. So 12 ,500 cases a month. Let's say, you know, month one, we only run 6 ,000 cases through, but we've already incurred a fixed cost of $30 ,000, but we only used half of what the allotment is for. Do you offer a tiered pricing plan based upon usage?
+
+>>Rushabh Sheth	04:30
+So all of you don't lose the credit, essentially like for the duration of this thing, we can even sign like a longer duration, this thing, a term, you don't lose the credits, we understand. But if that is the concern, you can even start with like, don't start with like 12K, this thing, start with like 5K and then ramp up. Like if you in the future say that, hey, like now my volume has gone from like 5K to 12K, we are absolutely okay with that.
+
+>>Rushabh Sheth	04:58
+With that, you can start lower. So that's why we have included the three -month POC if you want to test it out. Because the way we have structured it is that the first three months, you will just process half of it. And then only, it goes into monthly. So essentially, in three months, that's our sort of risk capital. If you say that, hey, this is working amazing, now in that three months, we will do everything from our side to make sure that you go into production. So that month three, you pump through more than that volume. So basically, we just engage for that first three months. We sort of do everything on our side. There's no onboarding. We sort of absorb the cost of development, helping your team with testing, helping Mike with integrations and all of that. Essentially, what you pay for is running 20 cases with us.
+
+>>Alden Pelletier	05:56
+Ok, I guess I didn't understand that top section there.
+
+>>Rushabh Sheth	06:04
+And then basically, you can say that.
+
+>>Alden Pelletier	06:06
+It's a wrap -up three -month commitment with up to 20 cases during those three months. Correct.
+
+>>Rushabh Sheth	06:14
+And if there are things left over from that 20K, let's say that you only are able to, month two, you go live. And you're only able to push through 15k or 12K, you won't lose that remaining 8K. It will just roll it over to the annual subscription after that point.
+
+>>mike williams	06:36
+What happens if, so in that case where you're saying where we're using less than the allotted amount per month, if we are using less than the allotted amount per month, we're not going to hit that number at the end of a year, at the end of the contract. I understand rolling over from month to month, but what happens at the end of the year with those remaining cases?
+
+>>Rushabh Sheth	06:59
+So Mike, if you're going for the next year contract without a gap, we'll roll it over. But what I would suggest is if that is your concern, start with a lower volume. Why start with 150K? Start with 50K. Absolutely OK with that.
+
+>>Alden Pelletier	07:14
+Right, I guess that's why I was asking on what the tiered pricing is. Because obviously, a volume, you're giving us a discount at $2 per case.
+
+>>Rushabh Sheth	07:21
+Arden, we'll sort of like keep it flat. Like we don't, because we don't want to go back on our side then haggle go from like 2 .5 to 2, like essentially like very less risk on your side. You test it for three months, it works. You come into a very smaller volume, 50K at $2. If it scales, it remains. Like we are giving you that full reduced price for that 150K, but at the reduced volume. Again, like we are fairly confident that we'll solve for you. And that's why that three month risk period is included before that only. Basically, that's where we prove out our value to you. So we can sort of like, if you want, we can put this at 50k, $2, that would bring down like substantially on the monthly billing as well. And in between, like it would be on our side to make sure that you go well beyond 50K so that like we get your full business. So like, again, if you don't want to run into that, hey, what happens to my credits? Do I lose all of this? We'll still give you that $2 per case. By the way, we won't be able to go down that puts it at 2 cents per page. Like, and again, you have like a lot of timesheets attached to those three page invoices. So beyond that, it just doesn't make economic sense for us. But basically at that flat price, you can start at whatever volume you want. So not whatever, but like 50K would be bare minimum.
+
+>>Alden Pelletier	08:55
+I understand the proposal a lot more now. I'm glad we were able to chat through it. I will need to present this to the powers to be at Madison. And then we can connect back with you guys. We have been evaluating other softwares and products. So I appreciate this. That makes it feel a little better. I originally just saw the 360K And I'm like, we're not gonna be able to cut eight people. So this isn't gonna work.
+
+>>Rushabh Sheth	09:35
+I'm glad you brought that up. And just to give you some idea about like our reviews, like have a look at our G2 reviews, because again, like my next question to you Alden is going to be very simple. Like if we make this a success, can you refer us to like three people? That's what we are building for. Not a coincidence like that we have.
+
+>>Rushabh Sheth	09:57
+Very high rating And I will come to you for reference because like that's how our business works like because like what we have realized is like look at your own business right like accounts receivables for staffing companies like now that's a niche like we will not be able to like we will need your help to understand who are your peers who where we can actually go like there's it's a very different sort of a niche in itself So But we'd love to like work towards that goal and this is this is like proof of it that we have been on that path for like last five years excellent
+
+>>Alden Pelletier	10:38
+No I it's a lot more it's a lot more appealing understanding how you guys are pricing and allowing for that three -month proof proof proof of concept you know to see and show that that that it's worth working along with the the flexibility on the number of of use cases for you know monthly billing after we get through that period So I've got something tangible now to to present and we'll we'll talk with who we need to talk to and we can I don't know if we want to I just I don't have I know we've been we've been getting these touch points But I don't we don't have all of our all of our information gathered you know yet to be able to you know give give a flat decision But you know I'm intrigued I'm intrigued now that I understand that the pricing a little better now so and Alden who do you need to present that ROI calculate we've got we've got two managing partners and then a controller you know that kind of oversees the overall budget for Madison So you know Mike's Mike's a Ba business analyst who has been doing a lot of the initial leg front getting us getting me connected with you guys I've been working with our operational teams to see where you know where we can get the best bang for our buck introducing some some Ai and now we're just trying to align with you know the the you know the guys who write the checks at Madison you know to show them where where you know where and how we can you know introduce this And you know get a good return on our our investment what the you what the partners look like how they're going to help us implement it you know what what the initial phase will will will look like you know that that that three -month POC is huge just you know get get in the door without making a huge commitment I know as you know once we get it in it'll be huge you know it'll it'll work it'll save us time
+
+>>Alden Pelletier	12:42
+But you know committing out of the gate at 30 grand a month without you know seeing is going to be a hard pill for me to to sell But I can I could could sell a three -month investment a lot easier And I didn't I didn't understand that going into this call So I'm glad I didn't do we have to get Lenny's confidence for us to start working together Lenny unfortunately as has passed his two sons or his two sons are now managing Madison resources Oh okay So Jonathan and Tyler Tierney got it
+
+>>Rushabh Sheth	13:18
+Yeah
+
+>>Alden Pelletier	13:19
+I like it though you did the research this day was recent so it's not something you would you would be aware of or has been advertised so No
+
+>>Rushabh Sheth	13:27
+I like I'm on the other side because my team also comes to me saying that okay we want to buy this and that And I have been on both the sides you're selling to you and on the other side like trying to justify ROI of like our purchases
+
+>>Alden Pelletier	13:39
+Yeah I can tell you they're excited they're they're they're they're all in on wanting to uh you know make make some some Yeah do something additional technology changes and get you know get some some some LLMs involved And And they see the value um we're just you know we're we're kind of putting together all of the all the the players pieces in their proposals based upon all of our conversations and um then we'll be able to you know give give you guys some feedback and an answer hopefully hopefully a good one awesome and Alden like where do you guys uh um market yourself because I could not find on Trustpilot or any of the uh regular like uh service rating this thing so essentially it's like trying to figure out like where do you guys like say okay like market yourself or uh um you Mike Mike was in sales for a while probably I'll speak to it a little bit but it's it's all staffing So you know Asa And we go we do all the staffing conferences so where you know our niche is we work 100 % exclusively with staffing companies across the uh US So it's you know staffing staffing companies that don't want to hire you know an internal
+
+>>Alden Pelletier	14:56
+Or need money, A, right? They can't support growth of their staffing firm because they're having to wait 30, 60, 90 days for their customers to pay the invoices. They need to be able to cover that payroll weekly, right? Up to 90 days. So it takes capital in order for them to place big accounts. So we're heavy hitting the staffing conferences and I'll let Mike add to that. Yeah.
+
+>>mike williams	15:25
+Like Alden said, it's a very specific niche there. So, I mean, we've found over the years, the most success with like staffing industry analysts, the Sia and American Staffing Association. They do between like webinars and publications that they put out and stuff like that, that pretty much everybody that would be, that we're trying to reach. It is such a small population that that's the best way. They're pretty much all encompassed by those organizations. Additionally, tools like Zoominfo and outreach platforms and stuff like that for independent outreach, but yeah, primarily marketing through organizations.
+
+>>Rushabh Sheth	16:19
+Got it. Awesome. Yeah. That was very curious to me because typically whenever we sort of go into a niche, we try to see similar to how we shared the G2 because you can look up companies in that G2 list who sort of sell similar services. So we always are curious to figure out like, okay, how does this company sort of market itself on the public web to say that, okay, we do X and Y, this is our sort of rating, things like that. Yeah.
+
+>>mike williams	16:49
+It's definitely very different for us than it would be for you guys because there's a smaller, it is a very niche market.
+
+>>Rushabh Sheth	16:56
+Yeah. Awesome. Perfect.
+
+>>Jasneet Singh Malhi	17:00
+Team, so can we maybe schedule a sync up maybe a week from now, two weeks from now, by how much time you need to kind of run through your evaluation team and then what would be the best time for us to kind of set up a 15, 20 minutes sync up?
+
+>>mike williams	17:20
+Two weeks, Mike.
+
+>>Alden Pelletier	17:21
+Yeah. Let's shoot for maybe two weeks, the 13th. Awesome. Right now I'm open so we could schedule around the same time as now.
+
+>>mike williams	17:35
+Same.
+
+>>Alden Pelletier	17:35
+Would work for me.
+
+>>Jasneet Singh Malhi	17:38
+I'm sending the invite for same time on 13th of November.
+
+>>Alden Pelletier	17:42
+Perfect.
+
+>>Jasneet Singh Malhi	17:43
+And you should be getting your invite in just about a minute. Awesome. Sent it.
+
+>>Alden Pelletier	17:49
+Great.
+
+>>Jasneet Singh Malhi	17:50
+All right, team. Thank you so much for joining the call. I appreciate it. I'll send you a summary of today's meeting and a meeting recap of whatever we've discussed so that you have it on the email and it's properly documented. And then if you have any questions, queries, concerns in this two week period, feel free to reach out. We'll be more than happy to kind of get on another call. And if there's an ROI that we need to kind of show it to maybe some executive team, we can also be happy to have another demo as well. So yeah, let us know. I appreciate it.
+
+>>Alden Pelletier	18:19
+We look forward to future conversations. Thank you guys.
+
+>>Jasneet Singh Malhi	18:22
+Thanks, Arlan.
+
+>>Rushabh Sheth	18:23
+Thanks, Mike. Appreciate it. Yeah.
+
+>>mike williams	18:24
+Thank you very much.
+

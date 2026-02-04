@@ -1,0 +1,312 @@
+>>Jasneet Singh Malhi	00:00
+So, Alden, thank you so much for joining the call today. I'm really sorry for the, you know, snafu yesterday. I might call down a little bit later and, you know, I was trying to join in, but I think by then you had already necklifed and we had to reschedule it for today. But nevertheless, I have the demo locked and loaded today and we are ready to kind of give you a rundown of what I've been discussing with my call this, you know, across all these weeks. Just to quickly introduce the team on our end, just so that you have some context about what we're trying to do and who we are on today's call. So, we have Donna with us. Donna is part of the Bizdev team here at Dobsamo. She initially spoke to Mike and we kind of get this whole meeting set up. Oh, actually, by the way, are you drinking Diet Pepsi or is it Diet Coke? Diet Coke. Diet Coke All the way. I'm a huge Diet Coke fan and Diet Coke all the way. Awesome.
+
+>>Alden Pelletier	00:46
+Absolutely. No comparison.
+
+>>Jasneet Singh Malhi	00:50
+No comparison. That is great. Like, I'm at a point where my family is concerned with the kind of Diet Coke that I consume on, let's say, monthly or on a daily basis.
+
+>>Alden Pelletier	01:01
+It's copious.
+
+>>Jasneet Singh Malhi	01:03
+It's absolutely copious. Anyway, so Alden, we also have Manan with us. Manan is part of our solutions engineering team. He's a senior solutions engineer. All things technical go roll up to Manan and he's on today's call because he's helped us set a very important piece of the whole validation process for your time card, timesheet validation. And then you have myself. My name is Jisneet. I work at Dobsamo as an automation consultant, and I've been working with Mike to understand what your use case is, what your challenges are, and how essentially we can solve this use case and challenges. On today's call, I'll be demoing you the workflow and how we can... So we'll be looking at four things primarily in terms of how can we get the automation of this ingestion of these timesheets and time card reports and invoices onto the system. That's the first part. The second part is how do we extract all the data out of this, right? The second part is actually the classification that the invoice is going to the invoice bucket, the timesheet goes into the timesheet bucket. The third part is the extraction, all the key fields that we're looking to extract out of these invoices and these timesheets. And the fourth part would be the validation, which is typically to ensure that the number on, let's say, the timesheet matches the number on the invoice, and it gives you a yes or no validation. So all in all, complete end -to -end automation. And what you, like, however you, like, look at the demo today, I want you to keep this in mind that we want to kind of not achieve, you know, just, like, automation in one step. We want to kind of give you the complete solution which you can put in production and basically save costs from day zero. So that's, like, where we're coming from. And obviously, to get to that place, we would need, obviously, help from your team as well.
+
+>>Jasneet Singh Malhi	02:46
+But on today's demo, we've tried to kind of get a very cohesive structure of the whole process. And I'll quickly start to share my screen before I bore you any further with any more specifics. So let me know when you can see my screen. Sound good?
+
+>>Alden Pelletier	02:59
+Sounds great.
+
+>>mike williams	03:00
+Sounds good.
+
+>>Jasneet Singh Malhi	03:02
+So Alden, Mike, just so that we have some context, I'll give you a very brief overview of what Docsamo is, what we do, right? And then we can actually come on to the demos that we've set up for. So Alden, Mike, what you see in front of you right now is basically your Ai models up. Now, what exactly is Docsamo? Docsamo is a document AI platform that not only helps you in the automation of extraction of data, but it does all things data and documents, right? So right from classification, extraction, validation, analytics, we basically ensure and automate all of these processes and create agentic AI -first document workflows that help you in automation of your entire journey, right? So what you see in front of you right now is the Ai models up, which is basically our Ai library of 50 % used models that we have, wherein we've done most of the heavy lifting and we've created a baseline model in place, which you can just plug and play. We have invoices, bank statements, W -2 form utility bills, right? So these are some of our pre -trained models. We also have something called as an AI auto -classifier. Now, what an AI auto -classifier is basically is that whenever you're getting multiple different document types onto the system, the system has the ability to understand this is a time card and move it into the time card bucket. This is an invoice and move it to the invoice bucket absolutely automatically. So the very first step, the pre -processing step, where your team may have to manually segregate these two different document types, it's completely automated. And that is wherein we precisely use our AI auto -classifier to kind of ensure that that manual segregation is not required. And the system learns from everything that it kind of ingests and get it done automatically, right?
+
+>>Jasneet Singh Malhi	04:46
+I'll take a quick pause here, Alden, Mike, to see if you have any questions. Do you have any questions? And Alden, Mike, let's say your use case, if it is not present in one of these pre -trained models, we also give you the ability...
+
+>>Jasneet Singh Malhi	04:58
+Of custom curating your own document type as well which comes with automatic field extraction now what this basically means is that if the system has never ever seen a document type before you can just upload a document on the onto the custom model it will understand the context it will understand what the document type is and it will automatically suggest you that these are the fields that you ideally would want to be extracting from this particular document type you all obviously have the option of adding or removing fields as per your convenience but it gives it a good job in terms of giving you the basic bare bones skeletal structure of all the things that you would want to extract out of this file now this is a very baseline understanding of what we do i'll quickly come to the actual you know document types that we've created for you so we will be looking at three things primarily the ai auto classifier the invoice and the time card report so the first question is that how do we actually get all these you know uh documents onto the system in the first space Right So there are a bunch of ways either you manually drag and drop this right right and which is a manual way and we would not want you to you know do it manually but that option is still available if one of cases let's say if there's a physical you know time card that came into your office that you need to scan and put in that is also doable but mostly we have auto import via api wherein if you have a front -end system we can just quickly connect it to it and whenever a new time card comes in or whenever a new invoice comes in we can just fetch in all the data and it goes into the ai auto classifier further we also have an auto import files via email wherein any attachment that comes on this specific email can be uploaded onto the doxmo platform automatically so let's say you are getting a client or a customer is sending you an uh an email with an attachment of let's say these are all the time cards for the month of january and these are all the months or the invoices for the month of january
+
+>>Jasneet Singh Malhi	06:51
+So all these files can automatically be uh you know the system can understand all these files moving into the ai auto classifier and then it can be classified and moving moved into the invoice and the time card uh you know report bucket automatically and then we have auto import by integrations as well So if let's say there's a centralized sharepoint google drive Amazon S3 repository where you keep all these time cards you can just connect it and as in when you keep on uploading new files they keep on traveling onto a document platform absolutely automatically so you don't have to go ahead and take each and every file uploaded manually even though you have that option but auto import by Api email or you know using an integration as you covered in ensuring that we automate the ingestion of these files into the system in the first place i'll take a quick pause it all in to see if you have any questions Mike any questions can you set up multiple multiple emails i'm sorry can you set up multiple emails so the idea is all done that you know this is the uh base email we can have like other emails that can automatically forward the you know uh attachments to this specific email address and they can automatically be you know uploaded to the platform we actually also have ability to parse the actual email also and upload it as a separate file because i'll give you one use case example for this that we were working with one of the biggest Mca lenders in the US and their their customers or their uh actually their their lenders were sending them emails with respect to what was their current debt portfolio what was their current holding so all that information was in an email body so we have the ability to actually parse the email body and upload it as a separate file on system as well so that is also something that we can do
+
+>>Jasneet Singh Malhi	08:38
+Okay
+
+>>Alden Pelletier	08:39
+So our current currently we've got let's just say 140 clients they're all working you know we've probably got you know 10 or 12 payroll specialists 10 or 12 billing specialists and on a weekly basis they're sending their time card back up either to their payroll or their biller so there's not really a central repository that collects the time card information they're individually sent from our clients team to our payroll and billing team uh which is fine like uh basically as long as like uh it it need not be a repository as long as the files can come on this specific email it will automatically be uploaded to the platform and manan please correct me if i'm wrong here So yes so we'd have to notify our clients to add a email address whenever sending time card information so that it gets picked up or forward them it should be able it could be tedious
+
+>>Jasneet Singh Malhi	09:47
+But we could forward that we just don't really like Mike we can like basically set up an auto forwarding route that as and when you know you we receive an email on any of the email address you
+
+>>Jasneet Singh Malhi	09:57
+That you have it can be automatically forwarded to this email address which is like one centralized email address for all things you know invoices and invoices invoices and sorry time cards And it can automatically be uploaded so you don't need to manually do anything everything we can set up a rule on your email address that whenever a new whenever a client sends a time card or an invoice it can automatically forward that email to this specific email address so that your client also does not need to go to the hassle of adding another email address on their end and you don't have to do it manually as well correct me if i'm wrong here how how would we how would it how would that rule
+
+>>Alden Pelletier	10:41
+I guess for just those emails so there's you know payroll biller you know might get 50 emails a day from a client one of those emails might be the actual time card backup so are we forwarding all all you know there's other documents that come in you know updates direct direct deposit other stuff that we wouldn't want to be auto classified as a time card or An invoice So i i guess part of the solution is is is in what we're trying to avoid is is a huge change to our current process um when you the the the auto import file via integrations can that be linked to net you know their current process they do save the time cards into a network drive are you able to pick up on a network a network drive i'm trying to think what the best you know because we do have central locations where they're they are getting parsed and saved to um trying to pick which email you know the client sends that has the actual time cards could prove challenging right
+
+>>Jasneet Singh Malhi	11:49
+So uh we basically open api in golden like as long as the system uh you know allows us to fetch the data using an api or webhook we should be able to fetch the data automatically so that should not be a problem right because uh no matter what system you use tomorrow you may no matter you use your awesome or uipath there needs to be like a way for them to actually fetch in the data right and there needs to be like a centralized repository for that or like we need to like figure out a way in terms of how do we get automate the files because the the quality of automation for you is not in terms of you know if one part of the of the whole system is just to manually upload the file then we are not achieving automation at all Right then
+
+>>Alden Pelletier	12:32
+Yeah
+
+>>Jasneet Singh Malhi	12:32
+Basically just half the work that has been done which would not make any sense So my idea is that uh it's an operational level issue we should be able to figure it out uh and it should not be like a problem excellent
+
+>>Alden Pelletier	12:45
+Yeah I got a few ideas there too awesome all right
+
+>>Jasneet Singh Malhi	12:50
+So basically team what happens is now uh i'll quickly give you some rundown of the ai auto classifier as well before i you know upload a file here so there are two things there uh in which you can basically write a description within the classifier and explain to it that what exactly they're classifying right you can so the idea that you can and this is you know what we do in our onboarding process wherein our team kind of works with your team to understand what are you know the different parameters or edge cases that can come come across across all their files and we basically train the classifier to you know have minimal you know uh problems and it can give you a good accuracy on the classification results right if for example your time cards and invoices are part of the same file like one let's say 30 page pdf as an example right we also have something called as an ai auto split function built in onto the platform now what this does is that this basically uses a logic right now it is split with ai it uses a logic and takes that one 40 page parent document and automatically split them into invoices and time cards for a specific case right you can also go ahead and use multiple logics you can have a fixed number of pages that the system needs to split the envoy the document after a fixed number text pattern qr code or custom api But right now we've basically used this you know prompt with split with ai wherein in a splitting instruction you've told the platform that the document contains two types of records invoices and time cards you have to split them invoices and time card the invoice needs to go into the invoice bucket and the time card needs to go into the time card button so basically what is happening in the background is seen that the system is using a large language model which is exactly like a human brain only which is understanding the context behind what you want it to do and it is doing that job in a very high efficiency level and on a very high accuracy level so uh just some example of you know what what the ai auto classifier is i'll quickly upload a file manually right now for the sake of today's demo but bear in mind we can definitely get it done
+
+>>Jasneet Singh Malhi	14:56
+As well so i'll just upload this file now this file is in the classifying stage as you can see this is you know getting processed it's in the processing phase right um where in the ai and the Ocr they are working together and they're understanding what what needs to go Where right um and it does a pretty good job in automatically understanding what is the time card what is an invoice but in case it is not entirely sure that what this document uh you know pages so rather than assuming it assuming the document type it basically gives you uh you know that this is what it was not able to classify right and this looks like an advisory letter right and so in this case if i you know show you the the document that i uploaded this was you know split successfully and if i review it this is how it was split the you know first was an invoice and the second went into a time card so right now it is processing within that time right uh and this is how you can review the splitting as well now once it has been split i can move into the invoice bucket and you'll be able to see that uh this is in the review phase so this is uh you know when when i quickly click on this uh i think just give me one Okay So this was the one that i think we uploaded uh which is like uploaded right now 15th october at 1046 so this is 15th october 1047 right now So i'll quickly open this up it is in the review phase right now and you will be able to see that this is what we were able to extract out of you know this invoice wherein this review screen is a very clean and a very minimal you know review screen which comes with two -way mapping wherein if you click on this file this this number it will tell you where exactly was this extracted from by telling you by giving your two -way mapping similarly if i hover on top of one of these fields it will tell me what this and it will give me a tooltip in terms of what this value is and if i click on it it will show me where exactly what this extracted from right similarly if i look at the table line items as well you can see that we are able to capture all the specific fields the let's say the week ending date the employee name the you know description build hours uh we can also add more fields in in this as well and capture all the relevant details that we would want to capture and then similarly like if i go back and open up the time card report as well corresponding to this file
+
+>>Jasneet Singh Malhi	17:20
+So this is the one that we uploaded right now and if i Oh this is still in processing i'll just quickly refresh this it hardly takes around 30 seconds i'm not sure since this is like a demo account it might take a little bit more time but the idea is that this gets processed instantaneously and that is what we would want you know to do in an ideal case while this gets processed Let me actually open up another example within the same thing that we did for you last time around as well so in this case this was the corresponding time card report right uh and we were able to kind of see that this was from the week starting 25th of august Right this is you know the time card source and these are all the line items within the time card that this person started the shift at this time ended the shift at this time and the total odds worked with This right Um so we were able to kind of extract all the data across all the files and give you like the table so this is like 194 fields across all the you know eight pages And we were able to kind of get that entire data you know in a tabular format uh i'll take a quick pause here uh Mike to see if you have any questions i don't right now i'm interested to see the va the validation that is exactly where the magic happens so i was just waiting for you know uh for us to come to that now basically uh Alden Mike every time card and invoice that we get would be a an individual case right now what we would do is we have this case management screen in which you can go ahead and every you look at you can look at all cases right if i click on start reviewing you will be able to see uh that this is let's say you know the time card report um and if i go back and i go to the analytics here let me just quickly open this case and let me go to validation now in this case i can look like this is the total number of hours worked right uh and this is the you know the time card are the 40 .8 the invoice are the 40 .8
+
+>>Jasneet Singh Malhi	19:24
+So the hours match the employee id matches the order id matches the rate is 26 .09 and the status is needs review because the order id was missing on you know on one of these files and if i click on this it will also take me on that specific field and it will show me that document as well so we can basically set up these validation rules for you right And once you and basically it matches the value from the time card from the invoice and gives you a pass fail validation validation and if it is failed you can click on that fail
+
+>>Jasneet Singh Malhi	19:55
+And it will take you on the document all together so that you can look at it where exactly is it failing and what is the actual document altogether right let me actually open up another example for you let's say if i open let's say this up and if i go to validation here again Okay So this is an this is not a good example let me see if i can open up a new example for you Okay So now in this case a Walsh Lawrence was the employee name in this basic validation the time card hours are 47 So if i click on this it will show me where exactly it is is it extracting the time card out so this is 47 here total hours if i go back here um And i look at the invoice hours uh i click on it And it shows me where you know this is the invoice that we got the total hours are also 47 right And basically this is a pass validation the employee Id the system was not able to find the order Id it was not able to find so that is why it needs review and the issue is that the employee id is missing and the order id is missing so we can basically custom curate this this case management screen for your team to give you the specific fields which are important for you to quickly review the whole whole thing without you you know getting into you know or opening up that specific file because the entire thing is completely configurable and you know the the access is in your hands and this is like we can work with your team and design the case management screen according to So if you want let's say Tick Marks or you know cross marks if you want color coding let's say green yellow red let's say green if it if it passes the validation red if it fails the validation yellow if it needs review so we can use all that you know inputs from your team and custom curate this case management screen for you and give you a very clean structure where you can just quickly click on previous case new case and look at all the validation without even you know getting out of it so like now in this case if i open this up so on this case it says that the time card are the 51 like if i open up 51 here it will i will go ahead and see that the time card are let me quickly see where it is extracting the data from do we know where exactly is this picking up the data from uh this is this is the time card right
+
+>>Manann Agarwal	22:33
+So essentially it's an email uh if you scroll down here it's written right eight hours six days so that's 48 hours totally Yeah
+
+>>Jasneet Singh Malhi	22:41
+But we picked up 51 it's picked up eight and a half hours
+
+>>Manann Agarwal	22:48
+Here Yeah Actually it's 7 a .m to 3 30 p .m So that's eight and a half hours all right
+
+>>Jasneet Singh Malhi	22:55
+So that is why i like the delta of 48 to 51 right So in this case we are looking at the shift starts at 7 a .m and ends at 3 30 p .m for all these days and the total number of hours worked at 8 8 .5 so 8 .5 into one two three four five into five would be 51 that is why we are calculating 51 here right which is the the value that we got from the actual time from the actual email and if i look at the value from the invoice it is coming as 48 so right now the hours mismatch by three yards so that is why this was a fail validation and the issues are that they are mismatched the employees Id is missing and the order id is missing Okay
+
+>>Alden Pelletier	23:35
+Yeah I can see why that one would need manual review i'm pretty sure that there's a half an hour break that's considered on those five days and that's why it's actually 48 hours and not 51. Right so that's not that's those are the those are the more difficult right when we're getting an email we're getting handwritten and we're having to have a human basically review it to to pass that validation
+
+>>Jasneet Singh Malhi	24:05
+The idea is that your team will have the full control right uh and basically they can you know quickly go ahead and look at the all their cases which need a review right and this will kind of ensure that you you are basically you know getting the best value out of the you know system and with complete automation
+
+>>Alden Pelletier	24:26
+So so if we don't want to like validate so employee Id That's like our invoice have our internal payroll Id our time cards will never have it so we could simply turn that off as a validation totally so same with order id right our invoice comes after the time cards are submitted so they'll never they'll never have i think you're calling invoice number order id so that the time card will never have an order id on it so
+
+>>Alden Pelletier	24:54
+So again but that's all customizable we wouldn't need those additional validations what about other business rules surrounding so a couple of things that our team looks for is to make sure that the customer name is listed somewhere somewhere on the time card and that there's an actual uh approval either either an signature or an accompanied email from the client so we've got a couple business rules Right we need a time card time card needs to list the customer name time card needs to have a customer approval on it And um and then it's more the validation weekend dates hours names you know all the all the easy stuff for you know any Ocr software to pick up it's it's some of those other custom business rules that are you know find more challenging so that's a great question
+
+>>Jasneet Singh Malhi	25:48
+So right now you will be able to see that the system has this green tick muck which denotes that the confidence score of this field is good and the system was able to find a value on this right and you see this yellow eye icon which denotes that the confidence score is low which warrants a further human review Right so the system was not able to find the time card source or in this case we can add another field here if i just go to field settings i can go ahead and add another field here of let's say uh customer name Right Yeah So if the system finds a customer name it can you know automatically pick it up But if it does not find the customer name then it will you know flag it for a human review that this time card does not have a customer name similarly with can i can i stop you for a question so if you were to add customer name and then link it to down at the bottom of that time card it's gnf precision molding let's say if i so we will just do one thing i'll just put customer name and you can basically enter a prompt here as well write a prompt to give it more added context if i quickly run a test here to let to see what it picks up uh So right now if i just go ahead and save it let me quickly see that what it what it brings back so the idea is that this is a continuous learning model so in this case if i go to configure and go to extraction we have something called as continuous learning enabled right so any sort of annotation correction that you do on the platform gets recorded as part of the model training so if you tell the platform once that the customer name needs to be picked up from here in this invoice or in this time card you won't have to make that same correction twice or again because system is automatically learning from any sort of inputs that you're giving it because that is exactly where our machine learning algorithm fix it
+
+>>Jasneet Singh Malhi	27:29
+Okay So if this is in review right now and so right now it automatically picks up the customer name because uh it understood the context that the customer name needs to be here the beauty of the platform is that we also have something called a signature detection So if i open up this field and put it as sig sign as an example and if i tell the platform that you need to you know have a signature identification here and i confirm this it will give me a true false value to see that if it was able to find a signature or not i mean what is the prompt that i should write here for signature
+
+>>Manann Agarwal	28:12
+Yeah Yeah check if a signature is present return true if it is present or as a return false
+
+>>mike williams	28:23
+So basically i'll just quickly go ahead and save this it will rerun that validation uh would we be able to use logic such as like uh for signature validation maybe that signature is on the the time card but in some cases that's going to be on the accompanying email or a separate email or something like that i didn't i didn't get your question Mike could you repeat so in in some cases like that looking for the signature there sometimes what would be being verified by that signature instead of a signature it would be um a different email verification or something similar um would it be able to take that account as long as we can we can explain it to the you know llm using a prompt that either a signature needs to be there or it needs to be accompanied with an email it should be able to pick up without a problem when we can create that business rule for you
+
+>>Alden Pelletier	29:42
+So i know it was not i'm sorry to interrupt is this the one that you just you just uploaded where there was a couple of documents that it wasn't it wasn't able that it wasn't able to classify were those the You
+
+>>Jasneet Singh Malhi	29:53
+Email accompanying emails possibly i can quickly check it it was not able to classify two pages and it is basically the suggested document type is an advisory letter and if i open this up this is basically Oh Oh okay
+
+>>Alden Pelletier	30:13
+That's yeah That's just our letter that goes out with the first invoice Okay Yeah That's yeah Nothing
+
+>>Jasneet Singh Malhi	30:19
+So the system was not sure that what this document type is rather than assuming wrong or faulty like information it basically said that Okay uh this is something that i was not able to classify and you also have the option of manually moving it to like one of these buckets if it was not able to classify it properly and similarly if i just open the last validation that i've set up on the time card i think we were doing time card opening the system was not able to find a signature so it came up with the false validations and it was because it was not able to find a signature if there's a uh you know document that we have which has a signature we can try uploading it And i can show you that the signature uh needs so we can basically set those business rules for you and it is completely customizable on our end So uh paulden Mike is this something that you're looking for do you think this will help you you know uh save time is this will bring the value to your to your business just want to get some quick feedback Yeah
+
+>>Alden Pelletier	31:23
+Absolutely uh it's it is um When when you apply some of those rules to a specific time card it's learning so the next time you know like you and you added customer name that customer name it's going to try to pick that up across any time card now and then but also the one that we were able to validate that it picked it up from the right spot it'll always recognize it moving forward because typically the format right we we have you know 140 customers and i don't even 140 clients and then those clients i don't even know the amount of hundreds of different customers they have so we have all these different types of time cards but once they submit the time card the first time like we're going to get that same format for the next you know however many times they remain a customer of our client so as long as we train it once we've got a little bit of setup work it'll it'll pick it up it won't be a reoccurring weekly validation you don't even need to train it uh basically the the the that is why like we we rely on an llm to do the extraction right because it is already smart enough to pick it up automatically in case it does not pick it up which is basically like i think one or two percent of the times or let's say average let's uh conservatively five percent of the times 95 it will automatically pick up all the information but five percent cases if it is not able to pick up then you have the option of manually like having a human in the loop which can tell the platform that okay the customer name or the signature identification needs to pick up from here and then it learns from it one very interesting feature actually a team is basically if i go to invoice and i go to data table here you'll be able to see your data across all your files in one consolidated view
+
+>>Jasneet Singh Malhi	33:22
+Right And then you can also ask it a question right let's show me all invoices from dates let's say x to y let's show me all invoices from august 2025 of all invoices are from august 2025 let's say so kind of going along with where with the the the where you're at right now in this data table i see there's a status and review what how do you work through
+
+>>Alden Pelletier	34:03
+I guess how do you work through you know once you've checked errors or reviewed it how do you clear that clear that invoice so that it's not showing up you know as being in in review how do we how do we you know we have hundreds of you know we're gonna have thousands of invoices thousands of time cards how does it how does an employee and operations work through this once the validation is to kind of clear any any errors so that you know those aren't showing up And they know they've they've completed their job for the day of getting getting through uh any any items that needed action basically Alden the place where you will derive the most automation is the case
+
+>>Jasneet Singh Malhi	34:52
+Management screen right because everything your entire you know validation engine will be where your team needs to work at right the what powers the validation engine is the ai and the Ocr that feed into the data into the validation engine because if there is no data on the ai and the Ocr Bit then you you know we won't have any data on the validation right So a typical employee would just go log on to their case management screen the invoices and the time cards can automatically keep on coming into the respective buckets they can extract all the information and all cases will keep on getting you know created so every case will have an individual or all the information right And we would basically set up a rule for you or a structure for you wherein the you know in the time card we'll understand what are the validations that you would want us to to create right and typically an operations guy would only look at okay this passes this passes Okay And if it does not pass it passes what exactly is the problem and if you can also click on it and find out what the issue is and then if everything is sorted and it can be moved on to the next case Right so basically you can have like a a pipeline kind of a structure wherein you know a person or an operations guy can come and review all these cases one by one and if everything is fine you can just click on you know So right now this is a need review Right if i go ahead And you know match everything that these and resolve all the issues out of this then it can be in the completed stage and the data can either we can give you the data into a csv or it can you know flow through salesforce or any of your erp system or a time card uh you know uh bullhorn or something of that sort so we can send that data to the third party platform or whatever your use case might be after after the review so typically what an employee does is that they log on to the you know doxima platform they open up the case management screen they look at all the cases if something is not matching they look at why is it not matching and you know if it is probably a potentially a problem then you know they flag it for a review right if everything is matching they can just you know clear everything
+
+>>Jasneet Singh Malhi	37:12
+And then the data can either flow into their bullhorn or your ats or your invoice management system or what have you if that makes sense it does i'm just
+
+>>Alden Pelletier	37:22
+So i'm i guess maybe for some context So we've got you know say 10 10 10 billers right now each biller has 14 clients each biller is responsible for validating all 14 of their clients invoices before physically sending those invoices on to the end customer So if we have all time cards and invoices coming into one doc sumo how do we parse that information for each billing representative to be able to work So so can you set up separate users that have only have access to their their clients time cards and invoices uh we can uh but manan
+
+>>Jasneet Singh Malhi	38:05
+Please correct me if i'm wrong here that so in that case would we have one centralized model for the invoices and the time cards or would you want to keep different models for your uh customers so different models for different customers so in this case uh i I i'll rephrase Aldan actually because that that feature is available wherein you can add like multiple users and define what they do on the platform and you can define their role and their access but right now if you look at it like all invoices and time cards are processed through one engine gotcha irrespective of the customer right So would you want to have individual engines for individual customers or would you want to have one centralized engine uh because we also have the option of creating a folder here right you can create a folder here and you can also individually upload files And then you can just go to configure and basically assign you know a team assign a user onto this specific you know data set Or you can assign a user here sorry So that is like the question that i wanted to check with you that would you want to have individual engines for individual customers or just one centralized engine for all your customers yeah
+
+>>Alden Pelletier	39:23
+Our current workflow you know has separate you know separate billing specialists who only have a certain subset of clients that they work with so if we just had everything running into one engine but all of those users had access Plus i'm i'm just wondering how hard it would be for them to go in and
+
+>>Alden Pelletier	39:53
+Only and maybe you know with the change we we wouldn't we wouldn't have so many things to validate so there wouldn't be that ultimate you know need to parse it the way we do So i i'm not sure i guess i could go i could go either way assuming that it that it that it's you know drastically reducing the actual need for for valid for for validation then then one's probably fine But i'm not sure
+
+>>Manann Agarwal	40:20
+But India go ahead so uh Alton i just wanted to understand one thing because there is something that you know we can do or at your end that you know you can set up so uh let's say we process everything um either you know all the checks pass ours pass employee you know the company name pass everything passes in that case what would you do with the data where would you pull it in uh is it like a system that you have is it like an erp that you have or how is it like uh or is it a system kind of our current process
+
+>>Alden Pelletier	40:52
+Right so we we work where we work exclusively with staffing agencies and we provide both back office so they're there they've got to get us their data so they get all of their employees and customer information to us And then they give us their hours those hours come in via uploaders they come in via our online uh opp payroll processing system they come in through our our Madison online time sheets so once we've got all of their employee information and they've submitted hours to us we process the paychecks then we then we physically process the invoices we then take those invoices our billing team takes those invoices and then has to get the backup so that backup from the clients which is the time cards comes in via email mostly um sometimes we're going and extracting data from portals so if they use a bms uh like beeline or field glass we're actually having to go in and grab reports we take either those emailed time cards or those reports from those portals match them up to our invoices And you know manually do the validation once all the validation passes it gets saved invoice with the time card and we physically email those out to the customers so the validation is just to ensure their invoices are going out right out the door And they have the appropriate backup that the customers require in order for them to pay to pay the invoice But right now all that validations manual that's kind of the piece we're trying to trying to solve But we also still need to attach the invoice with the backup in preparation to distribute those invoices
+
+>>Alden Pelletier	42:39
+Okay
+
+>>Manann Agarwal	42:40
+So what basically what i understand is uh that you have at your end you don't have a uh application per se where you know uh you get all of these invoices you do the matching and then through that uh through that application like doc sumo is one application Right so my question again is that do you have an application where you know your back office team manually checks it or is it just they do it on their local machine they're doing it on their local machine like literally two screens with adobe extracting pages printing checking off
+
+>>Alden Pelletier	43:15
+I mean it's manual old school Okay
+
+>>Manann Agarwal	43:18
+Okay Okay Then then i think uh the solution i was coming up with essentially wouldn't uh suit your need So Yeah Then i think we can drop this Yeah
+
+>>Alden Pelletier	43:30
+So it's you know it's kind of trying to think through that workflow Right so after after every payroll person processes their payroll and invoices the invoices go to the biller the biller then takes those invoices and has to find you know the time cards which have come in via mostly let's just say they all come in via email they then have to go find all that email back up with the time cards find which time cards go with which invoices they put those together and do their validation So i'm thinking we could still do all that up front we need to we're looking for it we're putting it together And then we're saving it to a folder in which doc sumo picks up and does the actual validation part but each person is responsible for you know only their clients so having them all work in the scent in one central repository is going to get a little messy for them Maybe maybe not i that's what i'm trying to visually think think through without it being like hey user John has these 17 customers user Alice has these 10 customers so they're only like seeing their own work and it's not co -mingling with their their their other you know The
+
+>>Alden Pelletier	44:51
+Other ones that they're not you know accountable for per se So i guess in that case maybe separate applications but is separate applications more money more money i imagine or because though you want it's set if it's a separate application it probably can't share the same learning language or can it so again
+
+>>Manann Agarwal	45:13
+Uh so i picked up one thing that uh one thing important that you said where uh you know uh let's let's say you just for the sake of the conversation you have two clients and then you have two uh folks in your back office there's one person who one person manages one client right we'll keep this for this conversation for the sake of the conversation so essentially what one of your guys would do is they would get the invoices they would fetch the payroll data they would manually segregate that Okay This invoice should be for this payroll data and then upload it in let's say a google drive or a box folder and then doc sumo would pull that is that set of invoice and uh payroll data to to the extraction run the validations and then give uh the output the validation output to your guy Right
+
+>>Alden Pelletier	46:00
+Yep okay
+
+>>Manann Agarwal	46:02
+I'm with you and is it compulsory for the for your guy to uh you know upload it in a box and then have it sent to doc sumo or is there a possibility where you know they can upload that particular set for that employee or you know for that invoice on the portal itself directly i think either i mean right now today they're already you know saving it to a network drive once they've you know attached it so that's already being done um for them to take an extra step to be able to use you know a powerful software to help with that validation it's that's we're still getting significant you know we actually have an access system already built in where we know uh Justin can you go back uh to the main uh all in the document type space Yeah So essentially as so so we have an access called member where the individual can only see the files they have uploaded Okay
+
+>>Alden Pelletier	47:03
+Right So if the process can be changed a bit at least at your end where rather than uploading it to the box they can upload it to the doc sumo application itself then rest assured they can only see the files that they've uploaded then you don't need to worry about that you know we need to have a different application or you know we need to have different document types or stuff like that that's then already taken care of that makes sense that that could potentially potentially work because in some cases we have an invoice with one employee and one time card and it really doesn't need validation as they're putting it together they see it matches and it really doesn't need to be run through you know uh this this is for you know the other 70 of the customers that do have you know more complicated more you know multiple time cards you know maybe you know because in some cases we're getting one time card batch that might have a hundred employees on it but the way the customer wants the invoices there's like six different invoices that they're having to go Oh hey i gotta pull these six employees to match to this invoice these tend to match to this other invoice So um you know they're already having to to do that you know thing to put them together um running you know running it through to see if they could like i said
+
+>>Manann Agarwal	48:24
+Yeah it would be helpful for sure so again like i said right uh they can if they upload it directly into the application here then uh you know And again you know we we have a middleware setup called zapier so uh what that could do essentially is once a file is processed it can push that document into the box folder so that way you also have the documents at your end and at the same time you know So essentially they are uploading it just that they're not uploading it on box they're uploading it here And you the output will still remain the same where uh you know you have data in the box the validation would also have run but the only thing here would be that since that i access is already set up so then we wouldn't have to you know worry much about who can see what data so that solves all the issues essentially Yeah
+
+>>Alden Pelletier	49:18
+No that would be a solution for sure awesome
+
+>>Manann Agarwal	49:21
+Okay perfect
+
+>>Jasneet Singh Malhi	49:24
+So dean like basically it's uh you know onboarding in a setup issue we can definitely like work uh with your team and create a structure which is most favorable for your use case and we can kind of ensure that we help you with the complete automation you know uh and work with your your workflow uh awesome so basically all didn't uh
+
+>>Jasneet Singh Malhi	49:50
+Mike any other you know question that you have on the product any other feedback we are like we're very excited to kind of work with you um to kind of automate this process what will be the you know next steps on your end so just want to get take a minute and spend some time on that Mike Mike
+
+>>mike williams	50:22
+Yep what are you looking for on that i'm sorry i might have lost you for a second
+
+>>Jasneet Singh Malhi	50:27
+I'm just like uh saying that since now like you have a bit better idea of the platform about the workflow just wanted to take a minute and understand what should be your next steps how do you want to proceed forward you know what's the feedback and how can you kind of move the needle on this
+
+>>mike williams	50:42
+Yeah um I i guess one of we are considering some other options as we had discussed before um something we would i mean something we will be needing as we are discussing those options we need to uh an understanding of what some of the the pricing would look like um or you guys for a solution like this Um and at the scales we were discussing before um And yeah I guess then some some discussion on how much um lift we could actually gain from this and any anything else come to mind Alden
+
+>>Alden Pelletier	51:20
+No i'm on the same page I'm i'm I'm interested I i think it's it's it's Or it's a really nice application you you guys got a I've got a pretty good idea of how we could fit it into uh our billing validation process and and some other ideas on some other places where we might be able to use some some of the extraction But um i'm interested Yeah And how how pricing works is it per per document per page per user per you know trying to ballpark because we you know we're Mike And i will then be taking these solutions to you know upper management um making a case for each of them and comparing some costs in our in our roi on them as well So um you know i think follow up on on what that looks like
+
+>>Jasneet Singh Malhi	52:07
+But uh let me you know quickly uh because initially on today's call we also wanted to discuss the pricing But i see that we're already like over time so uh if i can get a updated number on the number both on the number of documents across invoices time cards and other document types that you would want to extract and also the number of pages that would be super helpful and i can run some numbers with a deal less team and then we can have another call maybe sometime next week or this week or whenever you're available to walk you through the pricing as well Yeah
+
+>>mike williams	52:38
+As as far as pages i mean We kind of it's it's extremely difficult to get a number there But uh for pages that we ballpark created a ballpark for um annually across the invoices and time cards had an estimate around a million pages um And then um roughly in terms of i can get better in terms of document number especially with them together like that be like 187
+
+>>Jasneet Singh Malhi	53:12
+So say 200 000 um documents documents per year gotcha all right so 200 000 documents um and spread across like one million pages across 200 000 got it all right team let me you know run some numbers with with my team when would you be available for a follow -up call so that we can quickly you know once i have the the pricing i can email it to you But we can also have like another call
+
+>>mike williams	53:40
+Just so you know to see you know how exactly can we take the pricing and move forward um i mean i can i can make what would be a time turnaround that you'd be able to get that information over to us uh today end of the day most likely Okay um i mean Alden do you think it would make sense to do end of week next week
+
+>>Alden Pelletier	54:16
+Yeah
+
+>>Jasneet Singh Malhi	54:17
+I think that would be perfect 24th of august which is a friday how does that sound same time um that same time might be a little bit difficult for me
+
+>>mike williams	54:33
+Um yeah
+
+>>Alden Pelletier	54:36
+We've got a one one thirty to three o 'clock um
+
+>>mike williams	54:39
+And i have a i also have a 10 30 to noon I mean i could do noon
+
+>>Jasneet Singh Malhi	54:49
+So, 10 p .m. Eastern on 24th?
+
+>>Alden Pelletier	54:54
+That works for me.
+
+>>mike williams	54:57
+That works for me as well.
+
+>>Jasneet Singh Malhi	55:03
+I'm just sending you the invite as we speak.
+
+>>Jasneet Singh Malhi	55:13
+That would ideally be the same time as now, correct?
+
+>>mike williams	55:18
+No, this was 1 o 'clock, so we'd be looking for one hour prior to this call now. So, we'd be looking for 12 p .m. Eastern.
+
+>>Jasneet Singh Malhi	55:32
+One second. I'm just sending you the invite. Just confirm once you've received it. I think I just got it confused with a little bit of the time zone.
+
+>>mike williams	55:47
+Yeah, it can be tricky with the Eastern Daylight Time versus Eastern Standard.
+
+>>Jasneet Singh Malhi	55:54
+I've sent you the invite. Please confirm if you received the invite. I'll also add The Google Meet link as well. But, team, I just wanted to check one thing. I'm sure that you all, since you're evaluating other platforms as well, you're evaluating, I think, an awesome Ui path. Do you have any frontrunner based on the functionality that you see? Any, you know, thing that you're leaning more towards from a competitive standpoint? Just so that we can try to see if there's anything more that we can show you that we may have missed out on today's call. Is there from a functional standpoint specifically? Because pricing, I'll anyway need to kind of check with the team and get back to you. But from a techno -functional standpoint, is there anything else that basically, you know, is causing us to be a little bit behind on the competitors?
+
+>>mike williams	56:45
+It's the scale of solutioning is a little bit different for what the conversation we're having with you guys versus... Would you say that's accurate, Alden, with this? Yeah.
+
+>>Alden Pelletier	57:07
+I mean, I think we're so early, it's hard to, you know, we're not really at a point to make a decision this week. You know, we're early in some of our conversations and our discovery, you know, and really haven't gotten pricing from anybody. So, you know, we're, we're, you know, we're trying to do our due diligence and make sure we get, you know, the, the proper partner. And we're think, you know, longer, you know, longer, long term to like doing, trying, you know, where do we, a lot of our conversations are centering around, do we need to change some of our process first in order to better fit with the technology need? Or can we just get by with a big bang for our buck to, you know, insert a, you know, just a validation, you know, point, you know, for, for our billing? Or, you know, should we be requiring our clients to send us time cards a different way to a different box so that they're automatically picked up and they flow a little better? So we're trying to like really feel it out. So, but we obviously, obviously we can't change our process too much all at once. Cause there's a, you know, there's a, there's a big impact to both clients and our team. So, you know, we're, we're open, we're open to, to advice and ideas as well. And what you've seen work, you know, work with other clients you've, you've partnered with.
+
+>>Jasneet Singh Malhi	58:30
+Okay. We would love that all then, Mike. Mike, just for our own feedback, when you say that the level of solutioning, maybe could you just double down on that one, like to understand? What exactly do you mean by that?
+
+>>mike williams	58:45
+Um, I, I guess just in terms of like, like agentized, like we've seen some agentized, um, steps and, and just had that sort of conversation. But again, it, like Alden said, it is all in the very beginning stages of, of discovery. Okay.
+
+>>Jasneet Singh Malhi	59:05
+Awesome. No problem team. I'm happy to, you know, be a part of the whole process and, you know, solution interaction. I'm happy to talk with you folks. Right. And my job as a consultant is to kind of get you the best solution. Even if it is not toxic. And maybe if it is like some other solution, I would be the first one to recommend it. Uh, but nevertheless, let me check with the team. We are, I've already sent you the, the invite for 26, sorry, 24th.
+
+>>Alden Pelletier	59:31
+Let me see. Yep.
+
+>>mike williams	59:32
+I got it. Yep. I've got it as well. Yeah.
+
+>>Alden Pelletier	59:35
+That's perfect. 12, 24. Right.
+
+>>Jasneet Singh Malhi	59:38
+If you could just accept it, we can have it on the calendar and then we'll make sure that it does not fit to the cracks. In the meantime, have any questions, queries, concerns on the pricing? Feel free to reach out to us.
+
+>>Jasneet Singh Malhi	59:48
+And we'll make sure to get back to you in a flash
+
+>>mike williams	59:49
+No i appreciate it
+
+>>Alden Pelletier	59:51
+I look forward to chat chatting some more you guys got a nice nice little product i appreciate your time and uh um hopefully we can make something happen awesome
+
+>>Jasneet Singh Malhi	01:00:00
+Awesome thank you all thank you Mike and Alden Diet Coke gang Always
+
+>>mike williams	01:00:03
+Yeah thank you guys
+

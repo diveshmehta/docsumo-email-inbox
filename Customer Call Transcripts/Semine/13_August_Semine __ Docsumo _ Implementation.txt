@@ -1,0 +1,207 @@
+>>Bikram Dahal	00:00
+Yes, hello. Hey, Akhilesh. Yeah, hi, everyone. Hi.
+
+>>Bikram Dahal	00:25
+Hi, everyone.
+
+>>Bjørnar (Semine)	00:31
+Hi.
+
+>>Nidhi Vichare	00:32
+Awesome.
+
+>>Bikram Dahal	00:33
+Yeah, so we'll make the call short. We just wanted to catch up with Gerald and the team just to see how is the testing going on. And if the data set is ready, then we would also like to do a little bit of testing outside. So I just wanted to do a quick catch up. And then if there's nothing much, then we can call the call short. And then we can go back to our day -to -day operations. Yeah, Gerald, any questions that you have? Any suggestions? Because you guys have good suggestions. So a little update on your side. Regarding the template matching thing that we talked about, using the IDs, like supplier IDs.
+
+>>Jarl Arntzen	01:19
+Yeah. Yeah, should I answer this? No, no.
+
+>>Bikram Dahal	01:22
+This one, I'm just telling you, those has already been working for a bit. So more likely, that will be live in next three weeks, three to four weeks.
+
+>>Jarl Arntzen	01:31
+Oh, I see. Because that was already a priority.
+
+>>Bikram Dahal	01:34
+I just needed a customer to give me that feedback so that I can push it forward. So I always wanted that feature on the product. The engineering team had a little bit of concern because of complexity and everything. But now that there's a feedback from the customer saying that this is a good idea, I was able to push through it. So we'll have that live in three to four weeks. And with old method also, it will be waterfall method. So first, it will try to figure out this method. If it fails, then it goes back to our old method, right? So on high level, that's a thing on our side. Other things are going normally. We are looking forward to getting that comparison report that once you guys have tested the system, like looking forward to getting that report.
+
+>>Jarl Arntzen	02:18
+Yeah. I think overall what we have done on our side is really to get to know more features, more of the Docsumo features.
+
+>>Bikram Dahal	02:34
+Yeah.
+
+>>Jarl Arntzen	02:35
+We have also started collecting yesterday, or for a couple of days at least, sample invoices, multiple invoices per topic, I would say. Okay. So just as one example, the matrix type invoices that Manoj, you made a proposal for that. Yeah. So the thing is, what we discussed was, I think we need kind of a high volume or high volume. At least samples from two or three or four different suppliers for each type of challenge, right? Because the thing is, although we can call them edge cases, it's more like edge topics, I would say, or edge themes, right? Because they're quite common. And one very common theme is, page one is the full invoice really, and then pages two through 25 is just attachments, right?
+
+>>Bikram Dahal	03:55
+Yes. Yeah.
+
+>>Jarl Arntzen	03:56
+So it's more like, one thing is if we can create specific mechanism to solve this for one supplier, right? That's nice. But what is even better is to think in very general terms, right? And try to figure out, can we make a very general mechanism that will apply to most suppliers, right? Where it's possible to detect somehow that, yeah, the entire invoice is actually on page one. All the pages, that's just attachments, for example, right? So I think just up front, and this is what we discussed yesterday, just up front for you, it's more like, Yeah, we can absolutely find edge cases and we are doing now for each case or supplier, right?
+
+>>Jarl Arntzen	04:58
+You know, topic, we would like to present multiple invoices, right? So not just one invoice, but multiple invoices. So, and that allows you, that will allow you to think in more broad terms as well, right?
+
+>>Bikram Dahal	05:18
+A hundred percent. Yeah.
+
+>>Jarl Arntzen	05:20
+And again, you know, I keep repeating this, but this is because of our volume. Again, we have seen this throughout the years that very typically we have been able to solve one edge case and then, you know, the next supplier comes along and it's like, okay, now we have to have to start over. And sometimes it's the opposite, right? We have been able to solve many, many edge cases for all suppliers at once, right? Yeah. So we're hoping for the latter. Yeah. So that's one, I think that job is on us and we are now actively collecting good examples, numerous, I would say numerous examples for each case. Yeah. Which would give you a very good understanding. I think, we hope.
+
+>>Bikram Dahal	06:20
+Yeah. Totally makes sense. So there are two, like, I know you had more point to say just to show that I don't know two edge cases that you have talked about. The first edge case is that you have invoice and then you have an attachment and you don't want to extract any information on those attachments, either table or it might be other information also, like, because the first invoice is where like you have all the information and the rest are just the supporting documents. It can be, it can be all the document over there. It can be a term of services or something like, because sometimes like you get a very big invoice and from second page, it's just a term of services. There's nothing like extend purpose. But sometimes the second page can be a supplier, like a list or shipping list. In that case, the things can get a bit tricky because like the first invoice and second page also has table. So the system can get a little bit of confused, like you said, like, should I extract the table on the second page should be determined by doing the smartness, not extracting all the table, but like if the amount already matches on the first table, then don't extract the table from the next one, right? So those kind of things. So yeah, we'll look at some of these samples, like, and then like, we'll make sure that the system is more generic than like trying to, you also know it, we also know it, you can just make a new document, I put those things and it will work. But we're trying to figure out if that can work, like for major cases on the one document template only, so that we don't have to maintain so many templates, so many things, right? So understood on this new use case that you guys are facing, looking forward to getting more samples so that we can figure out like, what is the best way to like handle those kind of scenarios?
+
+>>Jarl Arntzen	07:54
+Yeah. Yeah. Yeah. Really good. Yeah.
+
+>>Bikram Dahal	07:59
+Yeah.
+
+>>Bjørnar (Semine)	08:00
+I just thought it was worth mentioning as well. So we are doing a sample and finding some invoices now, but me and Alexander will have a meeting tomorrow to kind of wrap things up. And we will also give you a Word document where you will kind of have comments related to the sample based on outcome and things you are looking for. So you will get like explanations and kind of needs related to each of them as well.
+
+>>Bikram Dahal	08:26
+Sounds good. I like that. That'll really help us to make sure that all of those things are, because if it's on one document with some samples and everything, then it really helps us on our side also. So one other thing, Tim, what I wanted to understand is that like, because you guys also have to test the accuracy of the model on the normal invoice also, right? So like normal invoice without this complication and everything. So is that dataset ready where you can compare our accuracy against the next vendor accuracy on the normal invoices? Or will we be comparing this accuracy with normal plus these S cases? Like I just wanted to understand because I just wanted to have a clear picture regarding, because I know there are two places we have to win. The first place that we have to win is easiness to add new template, handle this S case and everything. That's one place that we need to head, like win. So you guys that, oh, like we can do it. Second thing is also to make sure that we are on good accuracy, at least in par or even better than your last vendor. So for that exercise, like you guys will be using this S case or do you guys also plan to have some set that are like what you call PT generic invoice, but you want to make sure that the accuracy of Docsumo is better than the next vendor. So just wanted to understand if that is also on the timeline, because I'm just trying to figure out what will make this Poc successful so that you guys can take our next call on this one. Just wanted to understand, is that dataset also being prepared or that dataset we're skipping because you guys have confidence on our accuracy. Just wanted to understand that.
+
+>>Jarl Arntzen	09:58
+Yeah, I think what we can say is that when it comes to individual field capture, right, like bank account, total amount, etc. The accuracy is pretty good, I would say, right? So I don't think we will go too much into, you know, specific tests when it comes to capturing those fields, right? That's fine. But we will, we have tested and we will continue to test number formatting and also especially date formatting or date capture. So the capture part seems very good since it's based on the LLMs, right? But then after the capture part, we would like to do all these delta measurements, right? Delta between dates, current year, versus capture dates, etc. All these double checks, right? So we will have both artificial and real invoices for that.
+
+>>Bikram Dahal	11:10
+And Apple already on our app, because I just want to make sure that you guys don't have a double lock. So is that sample set ready and already on our account or we should wait for you guys to make that ready so that we can look into all the cases, S cases and everything?
+
+>>Jarl Arntzen	11:27
+I think when it comes to the number formatting, date formatting, I think that we can have that ready earlier, actually.
+
+>>Bikram Dahal	11:35
+Okay, sure. Sure. Any timelines that you guys have? Because then I'll also make my team ready just to make sure that when you guys are testing, my team also tests. And before you guys come up with any problems or anything, I have a solution in place if there is. Hopefully, those are very minimal, but I just want to make sure that like those ones. So like, do you guys have any timeline by when those data sets will be ready?
+
+>>Bjørnar (Semine)	11:57
+I guess in general, Vikram, so obviously, Martin, I built this tool from our end. So when we are starting kind of the more full scale testing and bigger sample testing, what we'll do is basically just run through samples or bunches of invoices through the API. But how would you guys prefer to have them? Is it fine that we push them through the Docsumo through the API and we notify when we have pushed to, let's say, 400 invoices, we notify where they are and everything? Or do you want them on the side as well?
+
+>>Bikram Dahal	12:33
+You can just make a new folder and say that, like, you can make a folder and you can say that data in like this test on the other one and just upload those into that API only. And then we can just, you can get your number also and also I'll get my team to just quickly do a test and see if there's any edge cases. Hopefully, there are not because we have already tested a few things over there, but I expect a little bit of edge cases to be there. At least on one particular format, I'm still not confident. So I've already told the team to solve those formats. So like, so you guys can upload that into that folder, like, and you guys can make your input once it's uploaded. You can let us know on our side also. We'll just do one more double check and let you guys know that, like, if there's anything that you can improve on top of that, and then we can have two reports. One, you guys did bare raw without also doing too much of nitty gritty on those. You guys get the accuracy report. After that, like, we can figure out where the issue is And then we solve it and we can get that. And from our side, we can send you the new reports saying that after the improvements, these are the new accuracy. And then you guys can see it on the protocols, right? So that way, like, it's better tested both the side. And I can actually do a lot of issues. Like I said, there are one or two edge cases which we know and we are currently working on to, like, solve it and everything. More predictably. Like, I know it should be solved, but I want to solve it 100 % of the time. I don't want to solve it 98 % of the time. So like, there are a few things going on our side. So we'll work with that. And then we'll make sure that, like, we send you the report after you guys let us know, okay, it's uploaded over here. We are making our own report. You guys can go and make your report. And then we can do the comparison. And hopefully that number is not too high because we didn't want to do too much to info. Yeah.
+
+>>Bjørnar (Semine)	14:06
+No, thank you. Then I think, Elfilda, what we could do is probably we finalize the sample we have for these edge cases and edge themes topics tomorrow. We hand you over the document and a sample and a folder so you can have a look and run through. And then probably next week, Elfilda, I think we can see how Martin is doing with the comparison tool. We can probably, beginning of next week, start to run over some smaller samples of general invoices if you guys want to have a look and make your reports. Yeah.
+
+>>Bikram Dahal	14:37
+Sounds good. Sounds like I've learned with everyone. And then, Gerald, thanks a lot for all of the feedback that you have provided on the feedback. Please do keep it coming. So it really helps me. And I'll tell you, it really helps me because it really helps me push the thing. And a lot of time I learn a lot of things that we have not even thought about and everything, right? Because this is how the product is going to be.
+
+>>Bikram Dahal	14:56
+A bit more sophisticated and everything because anyone can make a decent product, but taking from that 80 to like 100%, it takes two X, the energy to from getting zero to 80. And of course, you have to develop, right? So I'm trying to get into all of these calls and everything on that, so that those can be solved, so that we have a better product on normal.
+
+>>Jarl Arntzen	15:18
+Yeah, I think, yep, that's correct. I think when it comes to the volume testing, Yeah. Like Yabiona says, we're gonna pick some suppliers and some particular invoices which are simple, really, just to make sure the volume testing actually works and so on.
+
+>>Bikram Dahal	15:40
+Yeah, let us know on this one before volume testing because like you guys are currently on Poc, so I just have to make sure that it's getting everything. I know it's not very easy when you upload like 100K document, it will just go to the queue. So the processing time might be a bit longer, but like the system will handle it because we have customer handling like about 4 million pages like per month. So that is not going to be that much of a challenge. That can automatically scale because just for your information there, everything is on Kubernetes and Cloud Run. So like all of these things are independently scalable. The only thing is database. Database is also like automatically scalable on Atlas. So like there's not too much of an issue on scaling side of things. Just give us a bit a heads up. Once you guys go live, we'll make sure that everything is already available for now.
+
+>>Jarl Arntzen	16:28
+By the way, like when we say volume testing, it doesn't mean everything at once, right? So if we want to test a thousand invoices, it's not for testing your performance or anything like that, right?
+
+>>Bikram Dahal	16:42
+Not that.
+
+>>Jarl Arntzen	16:45
+It's more like to test stability, right? Oh. In extraction, right?
+
+>>Bikram Dahal	16:50
+Oh.
+
+>>Jarl Arntzen	16:50
+It doesn't mean that we're going to send a thousand invoices in one minute, right? We would probably use an hour, one and a half hours, for example. And the point about doing the volume testing is not really to test performance, like I said. It's more to test accuracy and to reveal any issues or difficulties with certain invoices in order to arrive at some reliable averages, right? Because every testing that we do, when we do this testing, right? And we see that there is X on average for these thousand invoices, there is X minutes of operator time, right? We have to like, no matter what we, no matter the number of invoices we test, you have to multiply those results until we get to one million, because that's going to tell us how Docsumo will perform or cost for us in real production.
+
+>>Bikram Dahal	18:03
+Okay.
+
+>>Jarl Arntzen	18:04
+That's the purpose of the volume testing. And there is no point in doing volume testing on, for example, attachment detection, right? If the attachment detection doesn't work at all, right?
+
+>>Bikram Dahal	18:20
+Yeah.
+
+>>Jarl Arntzen	18:21
+So we, like for each topic or each feature that we may need, we will wait until it is actually working And then we'll do volume testing. Okay.
+
+>>Bikram Dahal	18:39
+Sounds good. Like, sounds good. When you say volume testing, because some of the customer during Uat phase also want to make sure that they can upload at least like 10 document per second, things like that on the high peak volume side, or on that side. Like, so right now we have, we allow up to eight second, eight output per second. So that is operating in that area. I think that's sort of good enough for you guys for testing and everything, just giving you that number, just for - Okay.
+
+>>Jarl Arntzen	19:04
+We can do with one per 10 seconds, really. No, no, no, no issue. We are, it's more like that. We're like currently, even if we, like in our current system, we can upload a thousand invoices at once, but it will take about at least one hour before we get the results, right? For all of them.
+
+>>Bjørnar (Semine)	19:28
+I guess Ecx has become more interested in the accuracy quality of the capture more than the processing time of the documents.
+
+>>Jarl Arntzen	19:37
+Like two minutes of processing time with perfect results is so much better than one and a half minute of processing time, and then having one operator minute, right?
+
+>>Bikram Dahal	19:50
+Yeah.
+
+>>Jarl Arntzen	19:50
+One operator having annually correct the invoice for one minute, right? That's a lot.
+
+>>Bikram Dahal	19:57
+Yeah, totally understood. And like on that part, we'll make sure that those infrastructure are ready and like hopefully like those time that is required for operator decreases drastically because measurable fields are already expected and even if there is some issue then it's very easy to fix those issues because we have seen it because we have many services using our platform And we have seen the productivity increment and everything like drastic, right?
+
+>>Jarl Arntzen	20:22
+Because the UI I think that actually... So whenever we may, you know, mention performance we don't actually mean you know in terms of minutes or in terms of delay or anything like that. We may, when we mention performance we should actually say accuracy instead really because that's really what we mean. Higher accuracy is actually higher performance for us, right?
+
+>>Bikram Dahal	20:48
+Yeah, that makes sense. I'll tell you one thing on our side. So one of the goals that I had for the first quarter over there is like, so the client wanted straight -through processing. So we have a straight -through processing for different customers but straight -through processing means that people do not even have to touch any like any keys because you are able to do internal validation. Example, you're able to get a line item is equal to grand total. Grand total is equal to net amount and sum amount and you're able to able to find a vendor that was extracted on your database. The database that is for supplier. Now if all of this thing matches and the accuracy like the field acquisition all of this field are like 0 .9 Then we say that this is Stp, right? People do not even have to see at this document, right? So like one of the goals that was there was initially like they used to make so And we also calculate what is the number of correction done per document. So like correction done per document and everything so that they can see like Okay because usually it's not a very best matrix but one of the good matrix because if you know that Okay I only make two correction on the invoice and it means that that okay Like this should be like good and everything. So one of the main target the team has done was on the first part of this one is to take that number from initially we only had I'm talking about Stp only number correction was already very low it was I think like a below like one correction per invoice on overall because they also had line item and everything But we're able to But Stp was very difficult for multiple things so we're able to take that Stp number where people don't even have to look at any of this number from like zero which was at the beginning of the year.
+
+>>Bikram Dahal	22:37
+Three months we worked made a lot of things and everything And we were able to take it to 70 % for those invoice and everything So I don't know like a like or even more like depending upon like depending on the document types and everything for some we have 90 % also But I just want to be realistic and everything So we'll also have internal goal for your document type and everything to say that Okay for this kind of invoice and everything we want Stp to be like 80 % 90 % so people do not even have to touch it Right So that was a goal in our side because we know that that is how I'm going to get you guys to renew without having any discussion so usually my goal is doing the renewal So I'll plan my renewal only the only way I can get people to renew our product is that I show them that Stp number saying that 80 % of your document was not passed by anyone fully accurate and for this 20 % the number of number of changes for field was less than like last year it was two this is one right So that really then I don't have to even talk about you know I just saw those numbers and then you hold up happens automatically so our goal will be that on this case also
+
+>>Jarl Arntzen	23:38
+Nice thanks um I could also mention one thing and that's uh we have we haven't really tried yet But we are looking forward to try out the table extraction or the irregular tables Right so in order to do that we are looking for some really good sample invoices that those invoices are still from a customer who hasn't signed the release form yet so we have to redact some information first you know before you can have them But at least those so what we will give you right what we're going to try to give you is the sample invoice Right okay then the desired end result right So there's no doubt Right see where every um you can see every value in the desired format right
+
+>>Bikram Dahal	24:38
+Yeah
+
+>>Jarl Arntzen	24:39
+So that's that's what we discussed yesterday And it's it's something we're going to save Or we will have to spend a little bit of time before we gather enough of those invoices totally makes sense and also like there's no
+
+>>Bikram Dahal	24:54
+Point just doing for one because usually this happens with a lot of customers when they do testing they just look into two or three And then they say everything is working good And I have a very clear thing on our side is until you guys depending upon the complexity until you guys have tested like at least like 50 or 100 of these packages or use case I don't say that the system is working really good so really good like you guys already doing this um because that will two things it will first thing it will help us figure out what are the edge cases between this also because one invoice it might look very simple but when you collect 10 different words then you figure it out right so which you guys are doing So I appreciate that looking forward to getting that like a sample set so that you can make sure that those systems are really robust and you guys can test and don't have to do too much to info nice
+
+>>Jarl Arntzen	25:40
+Yeah And again I mean I've said this before And you have to understand that if this if we didn't have any tool you know already Yeah Yeah I think we you know in we would have been 95 on board already Right So you have to understand that we think this you know Docsumo is you know really good Right
+
+>>Bikram Dahal	26:03
+Yeah
+
+>>Jarl Arntzen	26:04
+You know from our impression so far is that this is actually really good and again only problem is we have to scale this up to 1 million and does it really better than the current system I totally understand that part
+
+>>Bikram Dahal	26:21
+Yeah But that's also more fun like more fun to like because once it up like we have done it for the customer also But once you guys do for this one then I can take this case study and then make more money out of it Right So it's worth the hassle on our side also it's what we have for your side Also so we can totally understand like the thing um but that the exercise that we are doing like it will help both the parties like for you guys also you have to make a case because you already have a system in place for us also it will help us iron out those things so that the next like we And then every day we can make more monies right So we're more than happy to invest a bit more invested on this one But I'll just And everything so make sure that your life is easier and if I make your life easier my life is going to be easier in long run so
+
+>>Jarl Arntzen	27:01
+Yeah um I mean I hope you see this as a nice collaboration and um a way to learn really on both sides Yeah
+
+>>Bikram Dahal	27:10
+That's the reason I'm on this call usually I don't go to the onboarding call and everything But there I really value your feedback and everything and it really helps me on the product side uh that's one of the reason like I love having being in this call usually I skip one who's alone he's supposed to solve all the problem But I'm talking both of you guys and getting that feedback so that I can take it back because like I said I see a value on long run not just for this one so looking forward to like um getting more sample that you guys have so that we can have that comparison you put and hopefully be your next vendor Yeah
+
+>>Jarl Arntzen	27:41
+Yeah Absolutely And I really appreciate it
+
+>>Bikram Dahal	27:43
+And we will try to be as structured as possible sure awesome awesome then like um then um anything else from like you guys or like anything else from Manoj and Divya's? No I think we're good for now okay sounds good sounds good then like uh and The team like uh thanks a lot for your time today uh we'll if you have anything you can always set up a call during this time or earlier or make any time is fine with us and then like um and they're looking forward to you guys getting more samples on the S case other cases the normal formatting and everything um and then hopefully next two to like two to three weeks we have a clear picture about on all of these cases And then we can make some decisions nice
+
+>>Jarl Arntzen	28:29
+Okay perfect
+
+>>Bjørnar (Semine)	28:30
+Thank you guys okay have a nice day
+
+>>Bikram Dahal	28:32
+Bye guys Okay Manoj I think everything looks good um
+
+>>Manoj Racherla	28:42
+Yeah
+
+>>Bikram Dahal	28:42
+So like let's wait I'm just looking forward because what is your POC three minutes
+

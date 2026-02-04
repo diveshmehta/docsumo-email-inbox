@@ -1,0 +1,54 @@
+>>Mike McCarthy	00:00
+Not much to go over today. I don't have an Eta yet. I got to, they're looking to talk with our CEO and president on I guess, just what we're going to do for the full project, not just this portion of it, but our whole automation project that we have going on, to see if we're going to reallocate internal development people, if we're going to hire externally for a project manager, because it's a very large project in terms of the scope of it, of everything else we're doing along in conjunction with this possibility. Yeah, I'll probably don't know. I don't know when they're speaking with him. I think they're going to be talking to him either at the end of this week or early next week, to just get an understanding of what that looks like. So we'll just have to connect after that. I know that once we have that, they'll probably want to get on whoever's going to be the project manager to ask more specific questions, so we can get a better understanding. Because I think a lot of it's just, we know what the OCR capabilities are. We don't know, from what I understood from our CTO, his concerns are just us. He says, no matter what, we have to build a giant checklist that's universal and then also lender -specific And State -specific, And then we have to create rules around that, and he doesn't know how that would fit in that portion of it with Docsumo, and how that would work.
+
+>>Mike McCarthy	01:45
+A lot of little questions that are outstanding, like if the payoff changes, or let's say, date to first payment changes. If they type in, because there's constantly updates in the CRM. How often is it going to check back? Are we going to build a button that checks it back, or are we going to have it automate to when the status changes, that's when it's doing a final check?
+
+>>Jasneet Singh Malhi	02:13
+So Mike, just to specifically answer that question. So we can set up a automated Chrome job, which can keep on, and we can basically set up a frequency of interval, wherein it can go and automatically check and update whatever changes that have been made. So you won't have to do it manually, that's fine. The only thing, Mike, here is that the part that what we play in the whole process is not just your OCR provider. We basically go ahead and solution it for you in a way, and that's basically done in the onboarding period, wherein we go ahead and understand your logic, your workflow, and then customize the solution accordingly. Because every vendor out there can provide you with a plain OCR platform which can extract the data. But where we essentially differ is that we want to provide that consulting service as well, and it is cooked in the whole budget only, or in the whole pricing only, wherein we don't just go ahead and just give you a platform, rather help you utilize it to your capabilities, and what you exactly want. So that's like the angle where Doxomo comes in, and that's why you've seen like Roshabh and Vikram, Roshabh who's our CEO, Vikram who's our CTO, been joining these calls. And then these kind of like information helps us when we eventually end up onboarding you as a customer, and then help us build that workflow with you. So that's like my two cents on it. Like if, and the way we've structured the whole contract is also that there's a two month Poc, and then there's an exit clause. So if you don't like what you're seeing, and if it is not making sense to you, then there is no obligation for you to continue.
+
+>>Jasneet Singh Malhi	03:55
+But in those two months, we work with you, and we build the whole product according to your use case, and then that kind of ends up as a success metric and being successful. Yeah.
+
+>>Mike McCarthy	04:08
+Yeah, that makes sense. And yeah, I mean, I think that there's, I mean, yeah. So I guess I understood that part. I think they understand that part. You know, the other questions they're like, well, we have to build this giant rules engine, and great, if Doxomo, if we build it in their platform, maybe that works, maybe it doesn't, but what happens if we decide we don't want to go with Doxomo? Do we have to start over again? Can we, how do we keep that same rules engine? So do we want that to be live with inside the Doxomo platform? So I know that that was one.
+
+>>Jasneet Singh Malhi	04:59
+Yeah, to answer that question, two things, Mike. The first thing being that if you don't want to invest those resources within you, because it's not your core business, right? You're like building this rule engine isn't your core business. Your core business is financing and approving these deal packets, right? So basically, if you want us to build it and you want us to lift it on our end, that's where in our team comes in, understands it and builds the ruling. So you don't have to build anything. You just have to tell in terms of what needs to be built. And our team like takes that lift on our end, right? That's one. Tomorrow, let's say, why is this like important? Because even if you end up hiring an engineering team, a product management team to, and or even if you have an engineering and a product management team, you will need to like divert like considerable resources to the project, which kind of doesn't make sense because this is like what we do day in and day out, right? And tomorrow, if you decide to not move forward Doxomo, since the rule engine like is built on the product and it is so well integrated into the platform, there would not be a scenario where you would want to like move out of the platform because it would potentially work for you. And that's where like our, you know, expertise comes in. So, and it's a continuous process, right? So if let's say today we are talking or we are looking at maybe, you know, implementing a validation rule engine for three specific states, right? And tomorrow you want to onboard maybe three more states, right? So the customer success is tied up in such a way that either, you know, you can do it yourself, right? The team, it's a no code platform, you can do it yourself.
+
+>>Jasneet Singh Malhi	06:41
+Or if it is something very technical, then the team brings it back to us and then we step in. So it's a continuous partnership basically. And that's like how we've structured it. So you won't need to make any like lift on your end. You just have to tell us like, what is the logic, right? Because I think the business logic is something that you will only have to tell us. We can't know that what is the validation or what is the rule engine for a specific deal packet. You just have to tell us, we will build it for you.
+
+>>Mike McCarthy	07:09
+Yeah, I understood that too. I mean, like I said, that's just the, I'm not the one making that decision. So we'll see what they say when they have that conversation and see what they're willing to, or what they, I mean, they're just planning it on their side in terms of the personnel they have, what they want to do with this, the greater scope of this project that they're doing and how this could potentially fit in there. And obviously there is discussions about the value add in terms of just not having to allocate resources to do that portion of the product. They're still gonna have the concern of, having someone else build it, but then all of a sudden for whatever reason, we're not happy six months And we have to start over building the rules engine ourselves because we don't like it. So that's still gonna be a concern for them. And they're also, what was the other? And oh yeah, the question also, I mean, cause we see this with all providers of any service we have, but there are times where things go down. What happens when Docsumo goes down or there's a problem and we can't access it or get the connection for the API, whatever it might be.
+
+>>Jasneet Singh Malhi	08:20
+Mike, like we have over 99 % uptime. Let me actually share my screen and then walk you through a status page as well. Just give me one second. So we can like basically have that cooked in into the, just give me one quick second. Can you see my screen? Yeah. Yeah, so this is basically Docsumo app status. This is a public webpage that you can visit. This is audited by a third party called Pulsatic. It's basically the application and the last 90 days, the efficiency of the application, it's up 100 % of the time. And we can have SLAs like built in place. Like if you can't access the platform for X amount of time and how will we kind of give you credits for it? And if there's an issue on the platform, depending on the severity of the issue, like this is the timeframe, the turnaround time in which it will get solved. So we can like build that Sla with you. So tomorrow, even if maybe, it's highly unlikely that Docsumo will be down because we have a lot of like fail -safes in place. We have load balancers in place. So very rare possibility that it might go down. But even in case of if it does, we can have that service level agreement on the, in the contract itself, which helps you to compensate if Docsumo goes down and the resolution timeline by when it will go back up again. Yep.
+
+>>Mike McCarthy	09:56
+All right, all good to know. Yeah, so let's, we can try to meet next week or I'll let you know when I hear something back from them just to get their, what their kind of thoughts are on there. And then you're welcome to send any email on anything we discussed today or anything else you think might help the cause. I can always forward it over to them.
+
+>>Jasneet Singh Malhi	10:14
+Absolutely, sounds awesome. Would it make sense for me to just duplicate this invite for next week or same time?
+
+>>Mike McCarthy	10:21
+Yeah, that's fine for now.
+
+>>Jasneet Singh Malhi	10:21
+Yes.
+
+>>Mike McCarthy	10:23
+Awesome.
+
+>>Jasneet Singh Malhi	10:24
+All right, Mike, I will go ahead and, you know, send you this email, you know, send a conversation with an email as a recap as well, which you can probably, you know, forward your team moving forward as well. Let me know if anything comes up or if you have any questions, queries, concerns, I'll be more than happy to kind of jump on a call and help you out. But we are more than happy to build it out for you and be your partners on this. And let's see how it goes and take it from there.
+
+>>Mike McCarthy	10:50
+Sounds good. Appreciate it.
+
+>>Jasneet Singh Malhi	10:52
+Thanks, Mike. Thank you so much. Thank you for your time. I really appreciate it. Have a great one.
+
+>>Mike McCarthy	10:55
+You too.
+

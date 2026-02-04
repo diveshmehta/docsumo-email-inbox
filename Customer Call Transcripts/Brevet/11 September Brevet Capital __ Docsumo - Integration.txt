@@ -1,0 +1,246 @@
+>>Aniket Tatipamula	00:00
+Hi Vishal. Hi Arun. Hi Mark. Hi Michael. Hi Mark. Hi Michael. Hey you guys. How are you? How are you doing guys? Hey. We have one more person joining on our side then we should be good to go. Bear with us a second here.
+
+>>Michael Bottazzi	00:59
+I was going to say, I think from our standpoint, just for the purpose of this call, we kind of want to walk through the automation capabilities with regard to the integration, sort of what the limitations are, and then maybe we can take it back on both sides and figure out what the route is that we need to go and, you know, possible rough timeline or something of that sort. So we got Eric on our side. He's the wizard when it comes to a lot of this stuff on our end, but primarily we're going to need the box and Salesforce configurations. And again, I know we talked about it on our last call, but just to make sure we're all on the same page, what needs to happen here is that each case that is created by Docsumo has a corresponding box folder that our underwriters can put their respective documents into. And again, I'm just speaking like in a perfect world seamless flow. That box folder gets pulled into Docsumo for the first 13 documents. It gets QC'd and then some sort of trigger or message is sent back up to Salesforce if it passes. If it fails, we get an email notification telling us to check it out. Then the way this works is the underwriters use that same box folder to input the remaining 20 documents. Docsumo pulls it back in via some sort of regular sweep and Qc's the back half, the back hits in the case, and then follows the same logic as far as the messaging is concerned.
+
+>>Michael Bottazzi	02:45
+So I understand that's not super simple. I made a flow chart. I sent it around or Aaron sent it around, but we could talk about it in more depth as well. I think maybe high level, can you just walk us through typically how your box API works and how you'd expect it to pull data in? Yeah.
+
+>>Aniket Tatipamula	03:11
+So like Michael, as in, I just went through that flow chart today when you shared and there are some things that we have right now. There are some things that we are actually building. What I mean is you remember, right? Like I didn't, Shivam had come on a call and then showcased us that we are actually going to build an entire workflow. So a large part of what you are expecting, maybe like will be done in that for sure. But some of the parts like pulling in data, pulling in data back from the box again, I think that should be doable. I don't see any reason why we can't. So I went through the flow chart and box already has APIs to get access to all the files in the folder or all the files in your account. And then we do that cross -matching from our side, which we can surely do. So let me actually share my screen And then we can go through that flow once again, if you're okay. Yep.
+
+>>Michael Bottazzi	04:09
+Thank you. That'd be great.
+
+>>Aniket Tatipamula	04:20
+Is my screen visible? Yep.
+
+>>Manann Agarwal	04:23
+Yeah.
+
+>>Aniket Tatipamula	04:24
+So let's go through, you get the packet, the packet would first come into your system. And then I think this is, these are all internal processes. So just wanted to check, like only after this specific case, Salesforce would put the data into the box, right? Like it doesn't start with data being in the box and then going to Salesforce, but rather sales, it goes into Salesforce and then into box.
+
+>>Michael Bottazzi	04:52
+That's correct. Yeah. Data is input into Salesforce and then moves to box. Yeah.
+
+>>Aniket Tatipamula	04:59
+Okay, then that that that makes sense. So what we will do is on our side in our integration Our default integration would not support that as I already discussed because in this in this integration what happens is you? Very specifically connect to Your box account and then you have to target your box Let me just check if I can create one.
+
+>>Aniket Tatipamula	05:37
+I Probably would not have a box account.
+
+>>Aniket Tatipamula	05:51
+Oh, I have that's that's good So what happens under the hood is like this. This is the one that we support directly. So in this case, what happened is we exchange? Tokens on behalf of your account in this case my account And then Doc Sumo would have access to the box account completely, but the thing that we do here post this is we then have to create our own trigger And This is how it looks like Yeah, I have my box right now I'll have to select And I'm supposed to import the data from the box. I can decide where I want to dump the documents into Assign trigger to this top type trigger name. Let's say And then this is where it becomes a little bit of a problem Import only new files into the source folder after this trigger is activated import all files present in the source folder so we do have to For some reason I didn't I don't think my account has any folder. So I have to select the folder So I can't just sweep throughout the box for data. So that's one limitation here And That's why we would not be able to do it if there were folders in my account, then what I would have done is I would have selected a specific folder and then We would keep on listening to that folder as and when things change So the right way to go about doing this is the custom integration and As I briefed earlier, I'll brief it again what happens is this is this is more like a cron job Program running at our end so we will run this piece of program after every five minutes or one hour
+
+>>Aniket Tatipamula	07:33
+And then we will write whatever is required for Brevits integration in this case what we would require from you would be your box API key so that we can use the API to fetch all the documents from your account into Docsumo and the way we will do it as we will Run this program every five minute or an hour And then we will try to check What new files have been uploaded into the box account And then we'll only pull those files and then put it in the right folders So we'll also keep the folder naming same so we don't have to change that The folder name is Abc Then we will make sure that the same folder is stated in Docsumo and then uploaded in the same folder So that will keep consistent. So I think that should that should do the deal here I hope is there any confusion here. I hope that this part is clear, right?
+
+>>Michael Bottazzi	08:26
+I think that makes sense that this and just So the first limitation with the actual Box integration is that it won't be able to go into further subfolders, right? So it's just pulling the one that's does that what I'm that's what my understanding is, Right? Okay, and then we can bypass that and Through using the the manual or custom integration, right? Okay. All right. I'm with you so far. Yep
+
+>>Aniket Tatipamula	08:57
+Any confusion from anyone else and an Eric and mark I guess
+
+>>Erik Zboyan	09:05
+No, I mean, it's pretty normal. Okay.
+
+>>Aniket Tatipamula	09:08
+Thank you.
+
+>>Mark Kemmerer	09:09
+Does that make sense to you? Thank you.
+
+>>Erik Zboyan	09:12
+Um, yeah, I mean, it's I mean Ideally the other the other plug -in would have been a better better direction than code So anytime we may obviously anytime we need to make an adjustment to Process that would involve where you're pulling from or looking to you would need to engage with you and you would adjust it Is that correct?
+
+>>Aniket Tatipamula	09:35
+Yeah, we will adjust it. That should not take a lot of time And and because we are getting into this use case it makes sense from our end to also makes make our box integration better So I think we will pick this up as a ticket for our actual box integration And if that that gets done sooner or later, we'll just transition your account from custom to the the actual one
+
+>>Erik Zboyan	09:57
+In the code, I know I don't want to go too deep, but just out of curiosity, is that if you're looking for particular documents, are you writing in the code to look for a particular document, or are you just going to a folder to grab all the documents in a folder?
+
+>>Aniket Tatipamula	10:12
+We'll just grab all the documents in the folder. We can surely write because what I observed is, in your case, you do number them and structure them in the right way, 010203. But it's up to you. You let us know what you want and we will get it done. Either all of them or very specific with the numbered ones. I think this part looks good. I'll straightaway go to the last part And then I'll probably discuss this conditional part a little in detail at the end. Because this part, we may not have everything right now with us, but we will surely build it soon. I do have something in my mind on how we can do it, but we'll discuss it. Going to the second part, let's say after the pre -approval packet is done, and when you will be dumping the post -approval packet again in the same folder, I assume it's going to be the same folder, right?
+
+>>Michael Bottazzi	11:10
+That's correct. Yeah, same folder.
+
+>>Aniket Tatipamula	11:13
+We will probably use one of the same boxes API, and ideally, like any other API, it would give us all new files that are added to the platform. We will just check the folder name, and then make sure that it maps to the same folder name in Docsimo and then upload the data there. Most likely, we'll just keep it one is to one mapping. We do have an option to search a folder in Docsimo, so we will use that functionality to identify the folder ID and then upload those documents in that folder ID. So pre -approval or post -approval would both work.
+
+>>Michael Bottazzi	11:45
+That's good news. That's critical, I think, that the pre -approval and post -approval end up in the same case than just for future audit trails and compliance checks, everything's sitting where it needs to be and doesn't dupe efforts. Yeah.
+
+>>Aniket Tatipamula	12:01
+So then coming to the part, this specific part where, Michael, you mentioned something needs to be automated. So I'll check what we can do at Rn, but for now, the way this works is the validations run when you land on our platform. So what I mean is the validations would run when you are opening the case. And so what I'm trying to understand is, in this case, you would want this validation to run as soon as the documents are uploaded and not when someone comes here, right?
+
+>>Michael Bottazzi	12:41
+I don't think needing to load the site once a day in the morning is a crazy, strenuous lift. I guess just, like, from my standpoint, what I don't want is that there's like a crazy long interim period where something's sitting in Salesforce but not entering the QC process. So on my side, I just need to go in and load the folder or the site once in the morning to grab everything that maybe showed up there overnight and needs to be QC or has gotten approved since the last day. That's fine. But I just think we need like some sort of periodic pull to get it at least in Docsumo. If everything runs on the QC, when I load the site, I think that's okay. Mark, I don't know if you have any differing opinions, but.
+
+>>Aniket Tatipamula	13:36
+I think you got it wrong, Michael. What I meant was, loading the data into Docsumo would not be a problem. I think we'll get it done. So we'll run the Cron job every one hour And then if there's new data in Salesforce that's put into box, we will make sure that that gets sent. That's gonna happen. But the part, this part, right? Like where you mentioned that once Docsumo, once the file are inside the Docsumo, we have to QC it. And then if the outcome is pass or fail, you need to fire either of them, right? And either of these items. So this right now cannot like, at least the system is right now not set in a way where you can run this without you coming to the screen.
+
+>>Erik Zboyan	14:20
+So if you come to the screen. What if we pass through the ID of the record that this is related to in Salesforce? At that point, you should in theory be able to push a response. We should be able to grab a response back, correct?
+
+>>Aniket Tatipamula	14:36
+Yeah, maybe we can create an API for this that should be doable. What I mean is that if you have access to this folder ID and you make an API call, we will probably provide you an API for this specific folder ID. And then you just hit that folder ID And then we run all of these checks and let you know if all of the checks are passed.
+
+>>Aniket Tatipamula	14:56
+Or fail, that could be one way of doing it.
+
+>>Erik Zboyan	14:59
+So go back to the spreadsheet, or the, I'm sorry, the flowchart. Yeah. So go back up. So the part where you're retrieving it, I don't know where, right there, yeah. Is that, you know, if there's, so we're gonna tell you to go get it, right?
+
+>>Aniket Tatipamula	15:17
+And - No, you don't have to tell us to go get it, because this part - You're just gonna run a job and look for it.
+
+>>Erik Zboyan	15:24
+Is that right?
+
+>>Aniket Tatipamula	15:24
+Yeah, yeah.
+
+>>Erik Zboyan	15:25
+Okay. So you're going to be hitting, Salesforce is gonna be telling you that the job needs to, that you need to go get something, or boxes?
+
+>>Aniket Tatipamula	15:38
+No, we will be running it every five minutes or every 30 minutes. So it will be a Cron job. So we will run it continuously, every few hours.
+
+>>Erik Zboyan	15:46
+But you're hitting, you're hitting Salesforce to let you know to go grab something, correct? Not box?
+
+>>Aniket Tatipamula	15:52
+No, we will just go to box and see if there are new files in the box. If there are new files in the box, then we will pick them up and then put them in the right folder in Docs and Docs.
+
+>>Erik Zboyan	16:03
+So if you're able to pass through that folder ID, like you just said, you know, in the validation piece, back into Salesforce, or we're able to retrieve that, then we should be able to pull all this stuff through and do that QC process. Meaning like, because, correct me if I'm wrong, Michael, you want to know whether it passed or failed. Otherwise, you got to go into Docs and go and look. Is that right?
+
+>>Michael Bottazzi	16:30
+Yeah, and in a perfect world, right? If it passes, maybe we change the state. Yeah, and if it fails, I don't know, kicks an email or sends some whatever we can, you know, but yes, yep, I agree.
+
+>>Erik Zboyan	16:40
+So, yeah, So I think the thing for us is that that QC outcome is that some way for us to get the response back into Salesforce, meaning the pass or fail. So, however you want to go about doing that, I think that would be.
+
+>>Aniket Tatipamula	17:00
+So my suggestion there, Eric and Michael, right now is, like, let's say we get the data as soon as we, as soon as you put something in box, I think there's one hour delay should not be a problem. But the fact that you want that API to be fired to let Salesforce know, or to someone in your team know that things are not good, I think for that, you would have to come on the screen. And I think that can make the entire call redundant. Because what happens is when you come on the screen, we run this validation check. And when we run this validation check, we can at the end check that, okay, if everything passed or failed, and based on that, we can make a call. We can hit an API that you provide, or we can do something that you want us to do. Would that work? For now, until we have that workflow thing going for us, like as soon as that workflow goes through, we can move all of these checks on our workflow, and then we can run whatever you want on that workflow.
+
+>>Michael Bottazzi	18:02
+So tentatively load the site, open up the four new cases, let's say that it pulled in, click through each one, and then let it run, whatever it's gonna run and go from there. Yeah, I mean, like, if that's what it takes to get the rest of the process. Kicked off, then that just needs to be what happens until it's, I think in an ideal scenario, though, we skip that, but for the short term, I think that probably makes sense. Again, Mark or Aaron or anybody, let me know if there's any issue there, but I think that that's what we need to do for the short time being, I don't mind loading the site and clicking into them.
+
+>>Erik Zboyan	18:52
+Just so, I'm sorry, because I don't know.
+
+>>Mark Kemmerer	18:54
+Go ahead, Eric. Sorry.
+
+>>Erik Zboyan	18:55
+Go ahead, Mark. No, no, go for it.
+
+>>Mark Kemmerer	18:57
+No, I was gonna say, Michael, if you're comfortable doing that, that's fine. You go ahead and say what you're gonna say.
+
+>>Erik Zboyan	19:08
+All I was gonna, again, I haven't been on all the calls, so just wanna make sure I fully understand. So you're, we're gonna, you're gonna go grab box files, go do your thing, pull them through, do your thing in DocsUMO. And then right now you're proposing somebody needs to go into DocsUMO to find the result of what you do. Is that right?
+
+>>Aniket Tatipamula	19:31
+Yep.
+
+>>Erik Zboyan	19:31
+Okay.
+
+>>Michael Bottazzi	19:32
+Is it to find the result or just to start the process?
+
+>>Aniket Tatipamula	19:36
+Yeah, there's nothing much to do. I mean, you just have to come here and then let this load, right? And let's go to the next case. If you go to the next case, then we would have already run the check and then at the end of the check, we can fire an API as you wish. Okay. That's it.
+
+>>Michael Bottazzi	19:51
+Sorry, Eric, I may interrupt you.
+
+>>Erik Zboyan	19:53
+No, no, no. So that
+
+>>Erik Zboyan	19:55
+So they need one way or the other right now, they have to go log into this to see the result. Yeah. And then, I'm sorry, what was the plan to automate it to to fire back to Salesforce or where is that?
+
+>>Aniket Tatipamula	20:13
+Yeah, so I think this is what Michael has put here, saying that once the QC outcome is done, we would have to send a trigger back to Salesforce to change the state.
+
+>>Erik Zboyan	20:25
+And I'm sorry, what I was asking is that like, so initially for him to see the results of all this, he's going to go in there and look at stuff. But where like on your roadmap is this trigger piece? Are you guys working on that right now? Or is that not yet? Or you just found this request?
+
+>>Michael Bottazzi	20:45
+I was under the assumption that the trigger works. It's just to fire the QC and trigger someone needs to be in the site. Is that correct?
+
+>>Aniket Tatipamula	20:59
+Okay, maybe there's some confusion here. What would happen is basically we can rewrite custom programs at our end. So this is one of the custom programs that runs at our end. So at the end of the program, as in if, let's say Eric or Michael, you tell us that, okay, this is the API. And then you send pass or fail at the end, whenever this custom program runs, and then we will do that. So you can let us know which API to run with the credentials or without credentials, we'll just make sure that we send the data.
+
+>>Michael Bottazzi	21:33
+Okay, so the only manual part of this process so far is the fact that somebody needs to be logged into the site for that to happen. Is that correct?
+
+>>Aniket Tatipamula	21:44
+Yep. Yep, that's it. So you would have to like, just let it load like once the loading is done, and then you can move to the next one. And if the check is pass or fail, we will fire the API based on the outcome.
+
+>>Michael Bottazzi	21:59
+Okay, okay.
+
+>>Erik Zboyan	22:00
+So, so, again, I guess the part I want to make sure it's on the, you know, on the plate here is that what are you going to write back to? Meaning like I hear we're going to write back to Salesforce, that makes sense, but we need to write back to the record. So like, is somewhere in that, in your process, are you storing a value that you know, you know, via the, you know, Salesforce API, go to pending Ai proprietary, limit it, go to that record and put this stuff on that record.
+
+>>Aniket Tatipamula	22:32
+No, I think that's where I think you would have to help us. So maybe you'll have to let us know if there's an API that we can use and then update it. Because like for that part, we would actually have to talk to Salesforce, or maybe we'll have to talk to a proxy API that you would create that talks to Salesforce to keep your credentials of Salesforce with you. So you'll have to let us know what to do then.
+
+>>Erik Zboyan	22:54
+Yeah. Cause that's why I was going back to the start when you're actually pulling this stuff from box because even there, you don't know what Salesforce record to write the result back to. So yeah. All right. I just want to make sure that wasn't already in here And I just missed it. So clearly it's not, it's okay.
+
+>>Aniket Tatipamula	23:16
+Yeah. That part is not with us. It has been just introduced by Michael. I think with this flowchart we like, we, we, we did not know how, what is the system and how do we communicate with it? So that's still unknown, Eric, this is the first.
+
+>>Erik Zboyan	23:30
+That's fair. All right. I didn't realize that. All good. Thanks. Yeah.
+
+>>Aniket Tatipamula	23:35
+Thanks Eric. So yeah, I think once this check, I think in both these cases, right after the pre -approval packet and post -approval packet, I think the code would remain the same. It's just that like when we, when we respond back to Salesforce or the API that Eric would put up, we would, we would send the info saying that this is just pre -approval. And then in the, in the second case, it is like the entire packet and then it would either be a pass or a fail. And then that should be it, I guess.
+
+>>Michael Bottazzi	24:12
+Yeah. Yeah. In both those scenarios, we'd need different Salesforce state changes actioned. And I guess an email for fail.
+
+>>Erik Zboyan	24:30
+I have some ideas on that, but we can, that's out of their hands. That's really on our side.
+
+>>Michael Bottazzi	24:35
+Yep. Okay. Yeah. I think those are the big things. I think for this to work, we need to get it in automatically. We need the QC done automatically and we need the state changed. I mean, if, if we need to load the site to kick off, we need to load the site to kick off.
+
+>>Michael Bottazzi	24:54
+Off a portion of that process, that's relatively minimal, especially if it can be, you know, sort of amended as time goes on to maybe cut that out as well. Eric, is there anything top of mind do you think that is completely missing from this that needs to be addressed or at least thought about?
+
+>>Erik Zboyan	25:21
+Well, clearly the - Yeah, yeah, besides the - First piece, yeah, that we've been talking about, you know, and then, like I said, is us receiving back the call, you know, that's on us. You know, it's just a matter of us telling them what to tell us, right, you know, what we need to see back. But, you know, let's, we can talk after this a little bit. Yeah, we can, we can huddle up internally. I haven't, yeah, having not seen it, now I understand a little more of what you're trying to do. So, yeah, cool.
+
+>>Michael Bottazzi	25:53
+Okay, yeah, maybe, yeah, we'll huddle up internally on our side if you guys want to do the same. And then maybe what I'll try and do is get a call like this on again for Tuesday, if that works with people, just to sort of continue chatting and maybe have some more fleshed out ideas. But, yeah, if that works with people, we can go about it that way.
+
+>>Aniket Tatipamula	26:21
+That works for us, Michael. Yeah.
+
+>>Manann Agarwal	26:24
+Cool.
+
+>>Michael Bottazzi	26:25
+All right, great, appreciate the time, everyone.
+
+>>Erik Zboyan	26:29
+Thanks, guys. Bye, guys. Thanks, guys.
+
+>>Aniket Tatipamula	26:30
+Thank you, guys.
+
+>>Vishal Arya	26:36
+Yeah. Yeah.
+
+>>Aniket Tatipamula	26:42
+Yeah, I think we'll make something work. Let's see.
+

@@ -1,0 +1,354 @@
+>>Manann Agarwal	00:00
+So essentially we will go over all the issues one by one, and whenever there's an explanation required or we need some clarification, we'll just stop there then. Sure, does that work? Great. Awesome. Okay, so this one is in the validation summary, change missing to green, and so, okay. So I think this is something that we have made that change. So I will quickly, okay, so, right, this is done. The next one is, okay, so this is also something that's done, so just for an example, if I show you here, so essentially out of these three, two should match. So in this case, since it's a no, it's failing because of this, but if we go and change it to yes, this should work. So should we try that? Do I go and change this to yes for now and check it out?
+
+>>Aaron	01:10
+Sure, sure, sure, let's test it out.
+
+>>Manann Agarwal	01:14
+Okay, okay, so now you can see, though this is failing, this has passed.
+
+>>Aaron	01:31
+Great, looks good to me.
+
+>>Manann Agarwal	01:34
+I'll just change this to no for now, yeah. Okay, change climate added. So again, this is added. Okay, this is a code change that we have done. So this is verified by me and Ankit. Yeah, fail for large, okay. Taxes and change climate. It says extraction failure for large tax returns. Yeah, it was document number three. Yeah, so we have made that change. I think here it was coming as no. So we have improved the prompt and made sure that we get the output right.
+
+>>Aaron	02:31
+Great.
+
+>>Manann Agarwal	02:38
+Change climate, there are two directions. If there are two directors, Docsumo should have two present. There is only one director for climate. Okay, so this is, again, something that is fixed. Second one is change climate here, yeah. So here, if we go down to document number five, earlier there were five or six boxes, five or six coming up for director summary. So now we narrow it down to just one where we have full data. We are only gonna show those rows in the table because it's extracting data from the start of the document and the end as well. So to ignore the end ones, we have put that logic in. Great. Business activity stadium statement, classification is failing on auto -classifier. Yes, so at the classifier itself, we have made a slight change because this issue was happening because earlier these documents were named as business activity income account and business activity integrated client account. But we changed the name to income account business activity. We just changed the first name to last name and last name to first name, sort of that. So that change was not added in the classifier as well because we are classifying based on the name. So that is the reason why that issue, classification issue was happening. But now, at least on a classification front, I am 100 % sure that should not be an issue when you're talking about the classification part.
+
+>>Manann Agarwal	04:29
+Change climate closing statement. Again, this is something that we have done. We have, again, made the prompt a little better where it kind of checks for users and then picks the data under it. And similarly for sources.
+
+>>Aaron	04:50
+Great, see that.
+
+>>Manann Agarwal	04:56
+Extraction failure, yeah. So I wanted to...
+
+>>Manann Agarwal	04:58
+Understand what is exactly failing in this. So I'll just open this document up.
+
+>>Aaron	05:05
+I think it was something that's failing. Initially you guys might have like inadvertently just change something that fixed it. Uhm? Cause I I actually looked and I saw that this one is completely working now. Ok.
+
+>>Manann Agarwal	05:24
+Ok, OK. Ok then I think then that's that's done. I'll just mark this as done. Great.
+
+>>Aaron	05:36
+It's nice.
+
+>>Manann Agarwal	05:37
+Ok, so this check has been removed. So if you go to. Document number two. Yeah. So I think the R &D that check is gone, I think. Great, yeah. The contact name, sorry, the contact name is not checked now. Only the company name is checked. Ok. Yeah, OK. Again, this is a classification problem which is solved. Uh, this was a sources and users failing. I think this is also solved. I will just go over this. So we confirm. What? What document was this 21? Yeah,
+
+>>Aaron	06:34
+Yeah,
+
+>>Manann Agarwal	06:35
+I think this is also done.
+
+>>Aaron	06:37
+Great, great, great. I see that next we have again.
+
+>>Manann Agarwal	06:45
+This change has been made. So what what we're doing here is now that rather than using today's date, what we would be doing is we would be using the upload date of the document.
+
+>>Aaron	06:55
+Great.
+
+>>Manann Agarwal	06:56
+So if let's say it's uploaded on 16 September, so every time you open the screen up. All the dates will be checked against that particular documents uploaded. So that way when you have a post approval packet coming in, so post approval packet might have a day, let's say seven days later or a week later or you know a couple of weeks later or two days later. So specific to that document, whatever is the upload date, we are using that to kind of. You know, compare for the difference in days, correct? Ok. Uh, OK, this this is a classification issue. This is also resolved.
+
+>>Aaron	07:41
+Mm hmm.
+
+>>Manann Agarwal	07:42
+Ok, here I wanted to understand. It says a signature check returning positive within document, but in validation screen says negative.
+
+>>Aaron	07:50
+Oh yeah, let's go to that one.
+
+>>Manann Agarwal	07:51
+Yeah, so it's OK. So we'll check the validation first. Ok, and here it has the one name. It says excellent. Ok, now on this, actually there was one question I wanted to ask again. Aniket, we were discussing this quite thoroughly, so we wanted to check that you know that there is another document where signatures are there. I think it's a document number 21. Yeah. Right, is it document? No, it's not document number 21. Is it document number 21? Let me just confirm. No, it's not document number 21. I think it's document number 15.
+
+>>Aaron	08:52
+Secure loan agreement. Yeah.
+
+>>Manann Agarwal	08:55
+Yeah, here so here you have signature check. Now just wanted to confirm here. Also, you have one director, right? So is it always going to be the case where if you have one because? 15 is a is a important as in a mandatory document and so is 34 right? So the question is. Can we set a logic like this which states that if there is one signature here because what we are doing here is here we are kind of. You know, validating this based on this particular field here so. So here if you see directors of borrower, so we are counting if there are. If there's only one borrower, one director or if there are two and based on that we are checking for signatures. If there are two directors mentioned about then there should be two signatures here. If there's one mentioned about then only one should be. I think you can.
+
+>>Aaron	09:52
+I think you can copy the logic.
+
+>>Manann Agarwal	09:55
+It's also there. There actually director details is not.
+
+>>Manann Agarwal	09:57
+Not there. So tracing back, if we can do this, where, you know, if we have one director signature in document number 15, then there should be one in 34 as well, and only one, not more. Does that make sense?
+
+>>Aaron	10:13
+That does make sense. I think that should be fine. The people who will be signing this one will be the same people who are signing the Mfa most likely, whether it's the directors or whether it's one director and a secretary, since they're signing it all at once. Yeah, so you can copy that logic over. Just making sure document 34 is not required. It's situational, but 15, sorry, 15 is mandatory.
+
+>>Manann Agarwal	10:41
+Yeah, I think 34 is Yeah. So for 34, I don't think it's 34 situational.
+
+>>Aaron	10:47
+I don't think 34 is situational.
+
+>>Manann Agarwal	10:51
+Okay, then we'll have to make this change as well.
+
+>>Aaron	10:54
+I think this one is failing because it thinks the signatures aren't present.
+
+>>Manann Agarwal	10:58
+Okay. Yeah. Okay. Yeah. Yeah.
+
+>>Aaron	11:00
+Okay. I think you guys are working on that part. But yeah, you can, you can do that over. Okay.
+
+>>Manann Agarwal	11:10
+This, this has been changed. Biosignals. I'll quickly show this to you. Biosignals. Document number seven. Yeah. So we have made that change. Both instances of, okay. Yeah. So here, so essentially, if I think you're just dealing with Australian companies, right? So their financial calendar is from 1st July to 30th June, right? So, so the logic that, you know, I've set up, let me know if that's correct, if that works is, so we'll, we'll go to this specific example, which is biosignals, Right? So in this, Yeah. So, so the logic that we implemented now is that it will check. So if let's say today is what today is 16 September, right? So the previous financial year would be 1st July, 2024 to 31st June, sorry, 30th June, 2025. So it will take data only between that, that duration, consider that as previous year and only give the return, the tax return for that financial year. If not present in that, then we'll go one step back and go one step back. Is it, does that logic work or do you want it like a calendar specific year or does the fiscal year of the Australian companies work?
+
+>>Aaron	12:53
+So it's not working properly right now. If you could go out and go into mesh assist, I just tested a thing this morning and it didn't work properly.
+
+>>Manann Agarwal	13:02
+Okay.
+
+>>Aaron	13:04
+So you can just click into document eight here. So for this one, the true value is actually it's a 6, 6, 4, 6, 6, 4, 2, 4, this one, right? Yes. This is a good value. And then the value that's being extracted is 6, 3, 7. So it's, it's on the second page. Yes. The, so this is, this was actually a 2026 one. So now the prior year returns is, you know, 25. This one is 23 to 24. And the one, the correct one above is 24 to 25, as you might see, July 24 to 30, June 25.
+
+>>Manann Agarwal	13:52
+Oh, it's, it's, it's going by these dates. It's not going by this. Does that make sense? By the description, it's going by the date when it was credited. So based on that, if you look based on that, so based on that, you get second August to be the date in the previous financial year. That's the reason why it picked this one.
+
+>>Aaron	14:21
+Oh, okay. I see. I see. Because it thinks that right now it's 2025. So the previous year is obviously 2024. Okay.
+
+>>Manann Agarwal	14:28
+Yeah. But so, so second August, 2024 falls between first July, 2024 and 30, 30th, June, 2025, which is the previous financial year. So based on that, it picked up 6, 3, 7, 0, 8, 4, 0, 8, 5. Sorry.
+
+>>Aaron	14:44
+Yeah. Obviously I'm not the coder here. If you can kind of use this as a reference and think about it. I don't know what the best solution here is, but
+
+>>Aaron	14:56
+You know, there's going to be more where in this month and next month there's going to because, you know, this was uploaded actually today. All the ones I'm uploading are very recent. Right. I'm taking the most latest ones. So they're going to have the latest tax return on it, which if someone filed really early, they would have received by now. So.
+
+>>Manann Agarwal	15:20
+Got it. Ok. Yeah.
+
+>>Aaron	15:21
+Ok.
+
+>>Manann Agarwal	15:21
+I think I think we can we can do something on this. We can. Yeah.
+
+>>Aaron	15:26
+To me, what I've noticed is that obviously the most recent one will be the first instance. So if you open up the table a bit. At the at the bottom, you want to just like drag it up full table. Like you see how it has is returning to true true values.
+
+>>Manann Agarwal	15:46
+Yes.
+
+>>Aaron	15:47
+What I've noticed is that simply the most recent one is the right one. If there's two of them, you know, whatever is on top will be the first one. And that's going to be the most recent one, because the more the further you go down, the further away it is. And as you can see, it does apply for this example. The first one is for twenty five. The second one is for twenty four. And if this extended further, it would be the third one would be twenty three.
+
+>>Manann Agarwal	16:16
+Is there a scenario where, you know, in the same year you have two credits?
+
+>>Aaron	16:21
+No, it shouldn't be. It should be one credit per year, because the way it just to give you some context so you can understand it, the way it works is that companies will accrue refund. They'll spend money and they'll accrue refund. So like over time, they'll have, you know, the start of the year, they'll have one hundred thousand. Right. But the only time that they actually receive it is after they file their taxes and they file their taxes once a year. So after they file the taxes, it gets credited altogether and it goes, bam, I guess, dropped into their account after they file everything and Ato processes it.
+
+>>Manann Agarwal	17:02
+Ok, so just to confirm, I we can just use the logic of the first occurrence of true should where there is a credit amount is actually the value that you're I think we can try that.
+
+>>Aaron	17:18
+Let's try that. And then if there's further issues, we can I can upload more packets and I'll obviously find out. But what I've noticed for the other one, too, when it was like returning two true values and you were taking both of them, is it's like it's the same thing. Right. The first one would have been the right one.
+
+>>Manann Agarwal	17:35
+Ok, yeah.
+
+>>Aaron	17:36
+And it seems like your your code is properly classifying them.
+
+>>Manann Agarwal	17:43
+Ok, I will just make a note of this.
+
+>>Aaron	17:46
+Great.
+
+>>Aaron	17:59
+Yeah. After this one, there's just some pretty minor comments about this packet and another packet. And then over time, I'll continue to upload some stuff and I'll log it in the sheet as per usual. But but, you know, a lot of the there's not that many mistakes at this point. You know what I mean?
+
+>>Manann Agarwal	18:18
+Awesome. Ok.
+
+>>Aaron	18:21
+Small issues now. Some of the more annoying checks we've taken out, some of the checks you guys have fixed, some recurring such as like income statement. But you know, they're tricky documents, the income tax account statement, right?
+
+>>Manann Agarwal	18:37
+That's causing that. I think that's the only major issue that I'm seeing here, whether tax return. Ok, yeah.
+
+>>Aaron	18:46
+You can just honestly, I can just walk you through this right now for what I'm saying for document 10, the prior one year tax return. Basically, it extracted like a value that's slightly down. Yeah. So you can click into it.
+
+>>Manann Agarwal	19:13
+Ok. And your field is sort of I. So it's like
+
+>>Aaron	19:23
+I. Yes, I think tax offset refunds is a good field. You know, this is one thing down and because it's being factored in as like a credit now, it's returning a negative value. But I think field I is consistently. From my experience, seems to be the good field to extract since this tax offset refunds.
+
+>>Manann Agarwal	19:52
+Ok, I.
+
+>>Aaron	19:58
+Okay, yeah, um also The the Austin district report, so that's document number 12 Basically the period verification check isn't working properly
+
+>>Manann Agarwal	20:14
+Okay, so what's what's wrong here? It should be 23 24, right?
+
+>>Aaron	20:22
+Oh Okay, so what's happening here? Is that right now? Right now like doc sumo thinks the fiscal year like we're still in 2025 And as a result, it's expecting 23 to 24 Which would be right, but I don't know if you're able to frame it this way you have to frame it in like Australian tax years Australian tax years. So right now it's not actually 2025. It's actually fiscal year 26 for them So as a result, the income period has to be 24 to 25. Does that make sense?
+
+>>Manann Agarwal	21:00
+Yeah, that makes sense
+
+>>Aaron	21:01
+Yeah So if you could kind of shift the framework to instead of like regular years shifted to like the Australian year right now It's actually 2026 It's a little finicky.
+
+>>Manann Agarwal	21:11
+I know Is is this part standard This is standard. So you we are always going to get the income your income period registration number, right?
+
+>>Aaron	21:23
+This document is bread and butter cookie cutter
+
+>>Manann Agarwal	21:27
+Okay Okay, I think okay And Okay, we'll make this change we'll make this change, Okay Yep
+
+>>Aaron	21:53
+Yeah, so Australian fiscal years Let's measure this our signature report Let's go to Illumina One second.
+
+>>Manann Agarwal	22:05
+Sure.
+
+>>Aaron	22:06
+Take your time
+
+>>Manann Agarwal	22:07
+Yeah, okay Illumina, Okay Sorry
+
+>>Aaron	22:20
+So saying taxes and comfort letter I know this is passing because We're doing the two out of three now Yeah, I just I guess one of them wasn't being attracted. I you can ignore this. It's passing now regardless, right?
+
+>>Manann Agarwal	22:39
+Yeah
+
+>>Aaron	22:41
+So if we just On this So, why are they willing Atl liability, okay, they do have ATL liabilities Right.
+
+>>Manann Agarwal	22:55
+So this is correct, right?
+
+>>Aaron	22:56
+This is correct. They do have liabilities awesome, perfect Illumina eight income tax. I think the income tax account Document Eight I think it was failing to extract the value altogether if you want to go into the table and take a look at it
+
+>>Aaron	23:23
+Okay There's a true there
+
+>>Manann Agarwal	23:32
+But this is okay
+
+>>Aaron	23:34
+This this should have been picked up I think it's picking up the There's also a true on top It seems Yeah, there's a true on top
+
+>>Manann Agarwal	23:43
+But that's It picks up this Income tax for the period income tax. No, no, sorry in tax return companies. It's checking for this Particular field this particular string I'm just checking for that particular tax return companies.
+
+>>Aaron	24:02
+Let's scroll down. What's the true one? Okay, can you read the string income tax account
+
+>>Manann Agarwal	24:10
+It says tax return companies income tax for the period from July 23 to June 24
+
+>>Aaron	24:20
+Hmm is this the value that should have been extracted? Yeah, I do think so That's a bit if you're doing it based on string it's a little bit tricky Let's just count this as a one -off I But it's a bit difficult isn't it if you're taking the first value And then you're you're saying There's like a there's like an amendment because the amendment is $0
+
+>>Aaron	25:04
+Sure, let's just make a note of that, but it shouldn't be too common that something like this happens, realistically. But if it is common, then it's a little problematic.
+
+>>Manann Agarwal	25:16
+No, I think 764 is the right value. Okay. 764, 280.
+
+>>Aaron	25:28
+So it's the second one that showed up, correct?
+
+>>Manann Agarwal	25:37
+Okay. I'll make that change. I think we're almost there. I'll just make this change.
+
+>>Aaron	25:42
+Great. And then there's the last thing. If you can scroll to the loan summary, just scroll down the validation screen, it's fine. Okay. So you see the, what's it called? Minimum interest amount. So that says 9 .77, right? Scroll down a little bit more. Okay.
+
+>>Manann Agarwal	26:11
+Sorry.
+
+>>Aaron	26:12
+Oh, you're good.
+
+>>Manann Agarwal	26:18
+Okay. 9 .77. Okay.
+
+>>Aaron	26:20
+So it's actually 9 ,765. If you can click into a minimum interest amount in document 13 now, and it's in the minimum interest. So it's under summary of key loan terms, four from the bottom. So it is 9 ,765, but for some reason it's just like extracting it as a single value, if you will. It's making it like a decimal value, right? Like 9 .765.
+
+>>Manann Agarwal	26:59
+Okay.
+
+>>Aaron	27:00
+Yeah.
+
+>>Manann Agarwal	27:00
+So if you could... It's extracting, actually, it's looking for percentage. That's the reason. Oh yeah.
+
+>>Aaron	27:06
+Just make it a dollar amount.
+
+>>Manann Agarwal	27:13
+Because some places percentages are also written.
+
+>>Aaron	27:18
+Oh, really? Sure. Let's try that. It's honestly, it's a little bit on our end. We implemented minimum interest very recently. So sometimes when you upload an old document, it's a little finicky, but this is a very new one. So which is why it actually has it properly set.
+
+>>Manann Agarwal	27:44
+Okay.
+
+>>Manann Agarwal	28:01
+I think some work has to be done on this. Okay. Got the point.
+
+>>Aaron	28:05
+Yeah. That's all I have right now. You know, I saw you guys did a lot of this stuff. That's really good. Cause I put them in on Friday and we obviously didn't have a call. They were just like spreadsheet. There were just words on a spreadsheet. But you guys had the idea. Yeah. For, you know, we'll probably have to schedule on Thursday and Friday. I'll continue to input new documents as new ones flow in, obviously somewhat limited by the actual pipeline. And then I think we'll have to schedule a call with the integration people on Tuesday at the earliest.
+
+>>Manann Agarwal	28:42
+Tuesday or Thursday.
+
+>>Aaron	28:44
+What was that?
+
+>>Manann Agarwal	28:45
+Is it, is it, I think based on Michael's email, would Thursday work for your team, 12 PM or 12 AM, 12 PM EST.
+
+>>Aaron	28:57
+We actually found out that, that Eric, like our integration lead, he's out of office on Thursday, Friday. He has some, I guess, some personal things to attend to. So I just keep an eye out and I'm sure Michael will follow up.
+
+>>Manann Agarwal	29:13
+Okay. Perfect. So I'll just drop in an email with the minutes for this meeting. And I'll also confirm for the time when everyone's available accordingly, you know, we can schedule a call.
+
+>>Aaron	29:26
+Great. That sounds great. Thank you very much.
+
+>>Manann Agarwal	29:29
+Thanks a lot, Aaron. Have a great day.
+
+>>Aaron	29:31
+Have a good night.
+

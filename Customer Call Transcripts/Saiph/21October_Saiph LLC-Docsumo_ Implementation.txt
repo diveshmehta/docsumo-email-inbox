@@ -1,0 +1,315 @@
+>>Vishal Arya	00:00
+Hello hi everyone hi
+
+>>Abby	00:22
+Hi
+
+>>Nidhi Vichare	00:23
+Hi
+
+>>Manoj Racherla	00:26
+Hi everyone Hi Hi hi All right
+
+>>Vishal Arya	00:31
+So i think we have a full house so we can get started uh anyone from the staff team uh left to join okay thanks Abby All right sorry no worries Abby nobody So uh Yeah I think then we can get started Abby
+
+>>Abby	00:55
+Okay perfect
+
+>>Vishal Arya	00:57
+So Abby i think uh based on the previous feedback that you had shared uh we did uh you know paid attention to that And uh we had a little investigation on our site uh based on that as well as a few uh things that were previously shared uh we have a few issues that we encountered and we wanted to have a discussion on that So uh i just asked my team to like you know uh get started and uh we can uh you know go through all the clarifications And then we can pick it up Okay um
+
+>>Aniket Tatipamula	01:35
+So uh Abby as in based on the data that you should first thanks a lot for sharing the data with other than that was really helpful because then it's making our life a little easy Um so we went through those packets we went through both the binders as well as the ones that are already split and work has been started on both the fronts so front number one is making sure that we are able to split and classify it that's where uh summit uh like e summit is there on the call Right Yes Yes so that's where summit uh like he is actually heading our ml side is the one on the call as in he is expert at it And then we also have manoj like Manoj is the one who is actually setting up the extractions and crossed cross document validations so uh and each of them will update their side of the problem and they may have like they'll probably ask a lot of questions because uh surely we would run into some of them so over to summit
+
+>>Abby	02:30
+I know i know i knew you guys were going to run into things because i know what our binders look like So okay start off i'm ready let's go
+
+>>Aniket Tatipamula	02:39
+Yeah
+
+>>Samip Timalsena	02:40
+Okay That's fair my screen first then uh Okay So Yeah I'll just start with the report that we have on the split and the accuracy report on the classification so we are somewhere around 90 percent um like on the split accuracy so this is going to increase in just a preliminary report that we have created we're going to fix a few things here and there And we'll have a good score on the uh on the next version that we'll be presenting on a few question on uh on Like we just you know too many doctors i would say like there are somewhere around 50 doctors that we have to support And we'll definitely be supporting it just to make the things easier i wanted to know like how many dog types are like p0 thing and like can we prioritize Okay these are the dog types that are highly priority high priority Okay these are medium priority and these are not low priority if you can you like sort these doctors in that way like that will help us in building the system more like more easy and more robust Too okay
+
+>>Abby	03:44
+And this do you want me to go through this this uh this list you have here and tell you what's priority over not Yeah
+
+>>Samip Timalsena	03:55
+Abhi
+
+>>Aniket Tatipamula	03:57
+I'll probably break it down for you so that you get the context please do stop us so what we observed is when you share the binders or documents with us right like we we've tried to figure out the major categories for example if you have petitions petitions of two or three different types we initially wanted to make sure that are we even able to identify petitions properly right similarly we could see in a lot of the documents that you attack for example uh with the ground truth and then you create you gave us that dog file Right But you you may have uh what do we say gave details about the document But you would not want it like you just gave it because otherwise we would be confused right so the point that samip is making is that can you maybe initially just point out the documents that are relevant to the cross -doc validation or the the documents that are relevant to you when you're reviewing and then we can focus that first and then for the rest of the doc
+
+>>Aniket Tatipamula	04:53
+They can focus in the next stage am i making sense Yes
+
+>>Abby	04:56
+Okay So you want to go piece by piece So whatever is most important first and then we'll work on targeting that and beating that down And then we'll go to the next piece that's you know of medium important But we still need them in the docs and then the least important Okay i got it I got it that's fine Yeah
+
+>>Samip Timalsena	05:14
+So the next thing uh i'd like to say that different screens right from there uh Okay So what we have also observed is uh some of the documents that we see let's say for the piece of 45 of this binder uh Okay this this clearly means it means this as a disclosure statement Right but on the ground too that we see on the docs that we have shared in the same folder it's just an empty doc type so want to do a confirmation on that too So we can see the list of such cases like where we are also confused on whether the doctor doctor belongs to disclosure or some other doctors are not and you can have can confirm it from your end Okay
+
+>>Abby	05:56
+This i can tell you right now is from the petition it's supposed to be in the petition So the reason i know this is because one it is redacted we cannot take disclosures that are redacted when we're listing just the disclosures and number two all of the filing information for the court is listed up on top for this one so this one is actually easy to tell but if you see a disclosure that's redacted usually it is part of the petition because we cannot accept redacted disclosures except in the petition because that is how certain courts have us filing Okay
+
+>>Samip Timalsena	06:27
+So ideally this would go with the petition doctypes then the petition detected what was that so this this piece should belong to petition detective doctype
+
+>>Abby	06:38
+Yes it belongs to petition Okay
+
+>>Samip Timalsena	06:42
+Yeah I'll say we have such cases in like couple of such cases i can see we can see you the list of such cases and you can confirm you know like whether we have Yeah Yeah
+
+>>Aniket Tatipamula	06:53
+That's that's the two issues that and the reports that we have prepared that's all from my end and again samif just one thing here can you uh and Abhi Please to let us know if we are on the right track can you please go back like So can you scroll up please so which doctype this ideally work corresponding to samif this was corresponding to petition right this belongs to petition as well
+
+>>Abby	07:16
+Yes
+
+>>Aniket Tatipamula	07:17
+So Abhi can we can we make can we um for example if you consider that a petition can have disclosures attached to it or maybe uh like in this case it will be petition attached to disclosures right this is this is part of the exhibits of the petition
+
+>>Abby	07:37
+So it's of the right if you go uh scroll up some more because the petition should be on top of this Yeah see this is the petition and then hold off right here stop right there you see where it says the disclosure statement is attached as exhibit b these are the exhibits that are attached to the petition so they all belong together and can we like if we say this out aloud that if you if you get a dog type like this a petition with all the disclosures attached to it they'll always be in a bunch they'll never be like spread out right like if we find the primary dog type at the very top the subsequent dog types would always be one after the other it should it should be one after the other correct which is why the confusion came in with the one file because they didn't send the full petitions included in the exhibit so we had to take them separately so that's why i say like the petition is a little bit it can be a little bit weird But yes they should all be together And then any other documents should be listed separately like the disclosure will come in separately later on in the binder so will the contract so will the Ipa waiver but in the petition you'll see these because all these documents have to get filed with the court sometimes they are redacted and sometimes they are not so i understand where the confusion is coming in But we need both copies depending on the court or the state that we're dealing with does that make sense Yeah
+
+>>Samip Timalsena	09:05
+Just one confirmation like let's say if our system classifies this as a you know like a disclosure statement in our as a contract and will that be an issue let's see we don't bundle this document this basis at the petition and and separate it out you know like for some reason let's say will that be an issue it will be an issue because the petition is supposed to be together when we send this to the investors they want to see what documents were filed with the court because if they amended the petition and the documents have changed they need to see what has changed and what has not okay got it thanks you're welcome
+
+>>Abby	09:41
+Yeah
+
+>>Aniket Tatipamula	09:44
+That's all for mine so samip like will you be sending the rest of the queries over the email like or these
+
+>>Aniket Tatipamula	09:52
+Are it for now
+
+>>Samip Timalsena	09:53
+Yeah these are all like we can encounter a few other on the extra like on the other documents set of documents that it's try on but until now this code that is generated is somewhere around 90 percent that we have on the weighted accuracy side and these are the common issues that as as i discussed some of the confusion sorry it will take us some time
+
+>>Aniket Tatipamula	10:16
+Abby as in bear with us because i think this is too very technical like it's very domain heavy
+
+>>Abby	10:22
+Right right it is and we deal with different states and they don't all require the same things And so i understand where the confusion is coming from i get it I knew this was going But that's why i said you guys are probably going to be talking to me more like with the emails if you guys send me any emails i will do my best to get back to you asap that same day i do right now we're in our busy time So i've gotten like four binders in this morning to underwrite So i'm like Okay So you have to give me time But i will always get back to you and if it's something that's very very important of course just send it through with like a high importance And i will get to it first that that would be very helpful thanks happy we don't want to disturb you a lot
+
+>>Aniket Tatipamula	11:04
+But um i mean all your help will be really it is fine when we get to training it is the same thing
+
+>>Abby	11:10
+So i have to get you know i have to stop what i'm doing to help someone else that i'm training it is the same the same thing here same thing
+
+>>Aniket Tatipamula	11:16
+Yeah thank you so much happy then let me um then let me i have one more question and one more observation maybe you can confirm if it is correct so we observed that a dog type would always be like for example a petition can always be one in the binder It It does not like nothing duplicates right or repeats in the binder is it true No that's not true
+
+>>Abby	11:41
+Okay I mean documents can repeat and i'll tell you i say it this way like it may not be exactly that what you're looking for and if it's not then i've misunderstood but like a petition we can have three different sets of petitions so we'll have the petition which is unredacted or unfiled so it won't have any of the time stamps on the document we can have the petition redacted which is the exact same document except there is information that is missing or taken out because the court doesn't want to file it with this information in it we can have an amended petition which i the question you guys sent me on i think it was Daniel Spencer it was an amended petition But they never sent us the original petition so i only named it as petition because it was the latest and pos and everything else went with it so in though in that sense we would have multiples of the same document but they are technically different does that make sense so like the disclosures would be state disclosures and they should all be the same i should not have duplicates of those most other documents in the system in the binders i should have but the petitions the notice of hearings and the proof of service or pos all of those can we can have multiple of those in the file depending on how many times we had to go back to court or if we had to amend something or if we got numbers wrong we have to disclose everything to the court every single time understood Abhi that makes sense thanks you're welcome you're welcome
+
+>>Aniket Tatipamula	13:22
+Then i'll i'll move over to manoj then manoj Yeah
+
+>>Manoj Racherla	13:26
+Yeah Thanks okay Uh so every like uh i was reading your slice binders as well that you shared with us So i have some few questions regarding that of course um let me share this must be visible no not yet
+
+>>Abby	13:43
+No
+
+>>Manoj Racherla	14:04
+Yes i see a big purple m there you are so uh let's say this is one of the slice binders here i can see that uh let's say this is ur So this is a proof of residence right correct but in your uh this job let's say seller here we have mentioned as you know we can like the license id can be considered seller id
+
+>>Abby	14:37
+As well yes we can it's Por is literally proof of residence so we use the driver's license or the state id as proof of residence because we need to make sure that they have a driver's license or an
+
+>>Abby	14:51
+Id to the state that we are bringing the deal in if they do not then we require additional Por which would be either a lease a bank statement a mortgage statement something showing that they have resided or do reside in the state that we're bringing the deal in Okay So in that case so if there is only one uh license document within a binder so should we consider that to classify within the seller id or the proof of residence doctor both you can put that in both that is the same document in both yes because that's what we use for Por it has to be a state issued id or a passport for Por purposes so proof of residence is just that state Id We're just making sure the seller lives where they said they're living they're in the state that they're living for at least six months understood okay that manage will have to think through because maybe we then have to pick it up as a document type and then add it on validation
+
+>>Aniket Tatipamula	15:53
+But abhi we will probably discuss this
+
+>>Manoj Racherla	15:55
+Internally okay that's fine uh also in terms of cross validation across let's say here in this case Co is uh seller name and the seller Id is seller name ideally this should be a legal name right correct
+
+>>Abby	16:14
+Okay
+
+>>Manoj Racherla	16:14
+And so what if if within the seller Id it's like a full name like first name middle name and last name and here in the seller name it's only first name and last name So should we do a sort of a fuzzy match or it should like exact match we need to do you can do a partial match on that one because we don't normally use the middle names or the middle initials
+
+>>Abby	16:36
+Okay all right So just first and last name would be fine and also in this like what what are these doctor we we found new doctor as well in this in terms of request to concert what does this mean conceal this is the seller giving permission to the court to conceal their information from other eyes that is all that is it's not anything that is ridiculously important to have we just have it in the file So this would be one of those that we can lump into like a miscellaneous folder where it's not anything that needs to be checked against anything else it is just the seller giving permission for us to conceal their identity from anyone else that would go into a court system looking for deals to purchase or poach understood and there was another one called admin fee as well
+
+>>Manoj Racherla	17:28
+Yeah this one um Lauren for this one the admin fee
+
+>>Abby	17:35
+We're not going to have this in the files because we're going to be the ones sending out the admin fees is that correct Yeah
+
+>>Lauren	17:42
+That's correct but we have portfolios it might be there so if we have portfolios it is going to be there um
+
+>>Abby	17:49
+So where would you want to classify this because this is not something that obviously i would use i just make sure that you know y 'all sent it out
+
+>>Lauren	18:02
+I i mean we could classify it as admin fee or we could just ignore it because like i don't think we use it for anything either right because if you have the acknowledgement or the sign stipulation then technically this is moot we don't need to see that an admin fee went out
+
+>>Abby	18:26
+Yeah
+
+>>Lauren	18:28
+Okay
+
+>>Abby	18:30
+So this one as well if it's in the binder you could just lump it in with the other the request to conceal and put it in as miscellaneous documents this is not something that's detrimental to our process for our flow deals or for my purposes i make sure that it's sent out because that's how we get the acknowledgement from the insurance company but that is all that i use it for i don't use it for anything else understood and in terms of there are like in terms of petition you said like there are redact petition redact that within the single uh binder we can have different sort of petitions right correct so in this case
+
+>>Manoj Racherla	19:05
+So in terms of cross -validation do we have to like uh in terms of redacted petition so what sort of validation do you know is the same thing well if it's a redacted petition all the information that you're going to have is going to be redacted so you cannot cross check
+
+>>Abby	19:20
+Yeah So so we can ignore that you can ignore the redacted petition i mean still take it out like if you can if you see it like take it out so it's redacted petition so i have it But you don't have to cross check with anything on that because again it's redacted which means the information is going to be blacked out um and no one can see it So you can't verify anything except the case number and the court where it's being brought uh all right
+
+>>Manoj Racherla	19:50
+Correct. Got it. So also the issue within the sheet that you had raised regarding the legal name as within the license. Correct. That has been resolved. I have fixed that by writing a prompt to it. So it will always take the license holder's name within the license document.
+
+>>Manoj Racherla	20:30
+Okay.
+
+>>Manoj Racherla	20:49
+Yep.
+
+>>Abby	20:50
+Perfect.
+
+>>Manoj Racherla	20:55
+Yeah. That's it.
+
+>>Aniket Tatipamula	21:00
+Thanks, Manoj. So thanks, Abby. Thanks, Lauren. Just to add, Abby -lauren, one request from our side is, you can test that if you want, but we would recommend not to test right now because we are still building, we don't want you to end up testing and then realizing that it is not working while we are setting up things. Rather, it would be much more better that you use your time a little wisely by doing the test after we hand over. So give us a week or two so that we clarify all of this, set it up properly. Manoj will take his time. Samek will take his time. I'll take my time to make sure everything is set up properly. And then only we want to give it to you so that you, we don't want to waste your time or we don't want you to get stuck in issues that we would any which ways we're fixing. So, I mean, that's from our side. But if you want, you can always come and test the platform.
+
+>>Manoj Racherla	21:57
+We won't stop you.
+
+>>Abby	21:58
+No, I thank you for that. I don't right now since like I said, we're at our busy time kind of because we're getting towards Christmas. Everybody wants money for Christmas. I'm going to go ahead and avoid that until you guys tell me, okay, I think we got it. And then we'll go from there. Just that's for me because I'm going to go ahead and wind up slicing up the binders that I have right now anyway and just doing everything that I have to do. But Lauren, I don't know if you're going to check for the checks or if we're just working on.
+
+>>Lauren	22:31
+We found a couple of things with the checks that weren't working in the model and it wasn't picking up. And then there was some data cleansing from the extraction as well. That we saw. All right.
+
+>>Abby	22:46
+Well, yeah, I'm going to get my nose. Everybody. I can wait until you guys tell me, hey, I think we got it. Let's start testing. And then I will be happy to jump right back on and start again.
+
+>>Aniket Tatipamula	22:58
+Thanks Abby and Lauren regarding. Thank you so much Abby. Lauren regarding your issues. Maybe we can check once as a because check model is quite well set. So can you please like share the screen or can you can manage please share the screen And then we go through those issues once.
+
+>>Manoj Racherla	23:16
+Oh, yeah, sure.
+
+>>Manoj Racherla	23:23
+Yeah. Lauren, which in which doctor that you.
+
+>>Lauren	23:33
+It's been a bunch of them. We can click on any of the ones with review because we're seeing it like we go with the farmers one. Okay. So the check number and the check amount. So the thing with the check number, I mean this one I guess is one where the check number is only occurring one time. Maybe we go to the next document because we can see. I'm just looking at the one with the thank the pause information. Yeah. So this one for the check amount like the one thousand five hundred with the asterisk and the check amount.
+
+>>Manoj Racherla	24:11
+Yeah.
+
+>>Lauren	24:11
+So it's picking up from the second page, but it's also it's also on the check And it's not seeming to pick up the check value or recognizing the check value is the value because of the asterisk around the check value. So if you go to the first page where the check is because the check amounts here on the check it also. Yeah. Check them out, but it's not recognizing that.
+
+>>Aniket Tatipamula	24:32
+It's not because of that law. And I think it picked it up from the same location. It is that when we try to search for the field, we search for the value. In this case, the value is one zero five zero, which for some reason is also the same value at the top in the second page. Right. And that's what would have caused it. Is for a mere Gracity. They are the same value.
+
+>>Aniket Tatipamula	24:49
+But I'll leave it to Sumip. Sumip, let's have this check once because across the page numbers, it should not have happened. So we will check this, Lauren, at our end.
+
+>>Lauren	24:58
+Okay.
+
+>>Manoj Racherla	24:58
+Yeah. And then on the validations, that was one of the things.
+
+>>Lauren	25:03
+But if the validation is only saying true or false, if the field doesn't exist twice, could we have a different result for the validation? Because we don't want to have people needing to review a check, like, if the field doesn't exist twice. And then the same thing is with the, I guess, like the annuitant name. What was the other one? The due date? Right. Yeah. The those two, if it's not visible, then it sends it for review. But some some payors, like because we get the payments for the same payors, they'll never have the due date. Like I'll say it's one of them that does have the due date. But other ones, like Metlife, never has the due date on any of their checks. So we don't want that to be queued for review every single time. That was the other thing we saw.
+
+>>Aniket Tatipamula	25:54
+Sure. And that can that we can fix because I think we can not make it. We can set up a default value or not make it required.
+
+>>Manoj Racherla	26:03
+That option is available.
+
+>>Aniket Tatipamula	26:05
+But again, Manoj, did you understand the validation? Yeah.
+
+>>Manoj Racherla	26:08
+Sorry.
+
+>>Aniket Tatipamula	26:09
+You were saying something.
+
+>>Lauren	26:10
+Oh, no, I was just saying that that'd be great. Yeah.
+
+>>Aniket Tatipamula	26:14
+Thanks. Manoj, regarding the validations, as in, did you understand what Lauren was mentioning?
+
+>>Manoj Racherla	26:19
+Yeah. So basically, what Lauren wants to check if, let's say if this value is present in in the first page, and if the same value is present in the second page as well, then we have to check if the same value is present in both the pages or not. If, if it's present, then true. If it's not, then false like that. Oh.
+
+>>Aniket Tatipamula	26:41
+Correct me, Lauren.
+
+>>Manoj Racherla	26:44
+Lauren, correct me if I'm wrong here.
+
+>>Lauren	26:47
+Yeah, no, we wanted it to validate. So if it's, if it's not present twice, then we don't want it to show up as false. We want it to show up if it's present twice and it's not matching. But if it's, if the value is not present, then we don't want it to show up as false. Like if there's no value there.
+
+>>Manoj Racherla	27:03
+Yeah. So should it, should it keep it as blank?
+
+>>Lauren	27:07
+Yeah. Um, yeah. That's like, yeah.
+
+>>Manoj Racherla	27:10
+Good. Understood. So Lauren, like, uh, what you can do is you can also mention the same issues within the sheet. We have our issue sheets as well, right? Okay. You can mention.
+
+>>Aniket Tatipamula	27:21
+Let's keep it separate, Manoj. Let's keep it separate because this, there are two flow. So let's treat flow separately and let's treat checks separately so that we can have separate teams working on it. We don't want to combine it.
+
+>>Manoj Racherla	27:33
+Uh, all right. So what I can do is, uh, I can create a new tab here for the checks and you can post the, whatever the checks issue we have within that. That works, Lauren?
+
+>>Lauren	27:46
+Yep, that works. All right.
+
+>>Aniket Tatipamula	27:52
+Yeah. And that's, that's about it.
+
+>>Manoj Racherla	27:54
+I guess.
+
+>>Aniket Tatipamula	27:55
+Thanks Abby. Thanks Lauren. Thanks Mila. Is there anything else that we can help you with?
+
+>>Abby	27:59
+No, just let me know when you guys are ready for me to start testing again. And I'm happy. Like I said, please reach out to me if you have any questions. I know our binders are confusing. I know it's a lot of information. So just reach out whenever you need. So that way we can get it straight. Okay. Yeah.
+
+>>Aniket Tatipamula	28:17
+Thanks Abby. That's really helpful.
+
+>>Abby	28:19
+Thank you. Thank you.
+
+>>Vishal Arya	28:22
+Thank you. Thank you.
+
+>>Nidhi Vichare	28:23
+Bye.
+
+>>Lauren	28:24
+Thank you.
+
+>>Vishal Arya	28:25
+Bye.
+

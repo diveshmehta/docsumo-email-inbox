@@ -1,0 +1,387 @@
+>>Aniket Tatipamula	00:00
+I will start. I mean, I've already put up the agenda for today. As in, we also have Manoj with us. Hi, Manoj. Yeah, hi, Manoj. Okay, we also have Manan. So, Manan and Manoj both are in our Cht. So, maybe one of them would continue to be on these calls and help the team out when in need. So, yeah. So, I'll start. I'll straight away go to the agenda, Boris. As in, we've been looking at a few issues. I'll probably give a little bit of context on those issues first and how we are trying to fix them and then move on to what can be done and how we can actually speed up the solution or solve them for you. So, the way I look at it, let me share my screen first and then that will make. And do let me know if things are not clear, if you want to slow down, or if there's anything that you want to understand in detail, I'll be happy to help you out.
+
+>>Eugene Yaromik	01:02
+Okay.
+
+>>Aniket Tatipamula	01:04
+Is my screen visible?
+
+>>Eugene Yaromik	01:06
+Yeah.
+
+>>Aniket Tatipamula	01:09
+So, most of the issues, I'll start as in, have been around incorrect classification. I mean, a lot of times what happens is we get a document and that document gets classified into application or debt while it is not of that type. And what we've realized is it's majorly happening because there's some like, the document looks very similar and the best way to solve it would be if Nexi team lets us know what kind of documents we should actually ignore from debt and application and we'll probably make sure that those documents don't go through. It's not about which document should go through the documents that are of debt or application majorly are going through the edge cases are mainly because some wrong classification happens in case of they are not of that type. So, let me just open up one and see. Yeah, for example, this terms and conditions, right? I mean, this is very clear that it should not have gone through application. So, we'll make sure that this doesn't go. Similarly, I think for debt, it's been a little too tricky for debt. What happens is a lot of these documents do have some or the other form of debt information in it. And that makes like the classifier get confused, like where to put them. So, yes. So, so primarily, as in this is one problem on the classification side, what I want to, I'll go, I'll probably discuss this in a little bit of a detail and then go to the next one. So, what I wanted to understand is there some set of documents that you would normally receive and you would not want it in debt or you would not want it in the application, if you can name them or sent that, like it could be just a piece of text that you can share, think that, OK, these are the doc types that we would generally receive reports from experience.
+
+>>Aniket Tatipamula	03:05
+Or in this case, I think credit agreement supplement or there could be some other doc type if you could just share those lists. It could be 10, 15, 20. I mean, that would speed up the classification issue. That's my only ask on the classification side. The second question that I had was when it comes to debt positions, I could see there were certain cases where it was an attachment, but 90 percent of the time or 95 percent of the time it's email. So, is that true? Like, is it that maybe in 100 cases, only one or two would be an application or a debt PDF, but every other case it would just be an email?
+
+>>Liam Dionisio	03:52
+Yes. For the second question, it's usually just in the email. So, the attachments are just very seldom.
+
+>>Aniket Tatipamula	04:03
+Ok, then maybe we can write, we'll make sure that whatever is the logic, the logic will be more strengthened around email and we'll be very specific on what to pick on the application forms. So, just a cross question on application. Do these applications form have more details apart from debt positions or can we just say that it will only have debt positions?
+
+>>Liam Dionisio	04:29
+Sorry, what do you mean about the application?
+
+>>Aniket Tatipamula	04:32
+So, when it comes to debt lender details doc type. So, can I assume if it's in a PDF format, that document would only have debt positions or would there be some supporting data that always comes with it? I mean, I'm just trying to zero down on what to look for and what not to look for.
+
+>>Liam Dionisio	04:52
+So, literally for the debt sheet, what you will see there is the company or the lender name, the payment and the frequency and the balance. And sometimes there's also a fourth column that says how many days or weeks are left. So, those are just usually the information that you will find. Nothing else.
+
+>>Aniket Tatipamula	05:17
+Nothing else in it, right? And then this would be the prime set of information. If it doesn't have this, then we can discard it as a debt. I mean, we will 100 % discard, but we will add more edge cases there in terms of some other doc type getting classified because it looks very similar to debt positions. So, any advice on that? Anything to not consider or anything to ignore specifically that looks like a debt lender details doc type, but would not be a lender details doc type?
+
+>>Liam Dionisio	05:50
+I'm not sure if I heard it correctly, but may have said it in reverse. Those are the information that we will only find in the one that we will classify as debt, not application. Okay.
+
+>>Aniket Tatipamula	06:04
+I think that is also very clear. Thanks, Liam.
+
+>>Liam Dionisio	06:08
+Also, you mentioned earlier what other documents could be confused aside from contracts. If you check the sheet that you had earlier, the second to the last, there's a payment history there that was also classified as debt. It's the one that created 75 deaths yesterday.
+
+>>Aniket Tatipamula	06:27
+Yeah. Yeah. So, I'll go to the next problem at hand. And this is where I think I will require Eugene's help. So, what Docsumo, I mean, how do most customers use Docsumo? They use Docsumo with this as one of the screens to correct mistakes that Docsumo would do. And it does happen like in, there will always be a case that you would run into an edge case and you would have to make those corrections. Ideally, if you were to correct this, the best way would have been, I just come here, like there's a shareable link that we generate. I think Eugene is aware about it. If you come to that shareable link, you should be able to just come here and then make those edits. Like in this case, it's a table. So, I can just go ahead and remove all these rows. This is a shareable link and I guess it's already in process state. Yeah. I think that is also going to be a little bit of it. Okay. Yeah.
+
+>>Eugene Yaromik	07:36
+In this case, we should remove, move to the review state. Yeah.
+
+>>Aniket Tatipamula	07:42
+Yeah. Yeah. Without the review state, you would not, because we've done it from the security perspective. I mean, having it like while in this state, if someone comes and then makes a change, it can be a little bit of a problem. So, the way to do that would be if somehow, if someone wants to make an edit from Salesforce, you first convert the document from process to a review. We have an API for that and you can then just open it up to review the document. But for now, if I were to do it, I'll just do it here. So, we have a search for doc ID. I can just click on this doc ID and paste it here. It would take me to that specific document. So, this is document. I'll review it again. And I mean, it's quite easy. I can just delete all the rules. I can apply the changes. And then I assume that once I confirm again, this data would be re -entered in Salesforce. And the task that would have taken you, maybe, I don't know, five minutes is like right now, just one click or a couple of clicks. I don't know. Is it making sense as an Eugene and William? Yes.
+
+>>Eugene Yaromik	09:06
+For example, if it makes sense, in our case, we should add logic, for example, when that's recognized incorrectly and we use the Docsama URL link to make some changes. And like in this case, we should delete all previous debts on Salesforce site and like it will create new ones records like it will work. Okay.
+
+>>Aniket Tatipamula	09:50
+So, you are saying if you were to do this, you would also have to delete it on the Salesforce, which is not going to be easy.
+
+>>Eugene Yaromik	10:00
+Yeah. Because sometimes just we have just several debts, for example, like five or three. And I think it's like easy to maybe create manually. I don't know.
+
+>>Aniket Tatipamula	10:23
+Yeah. Not just that, Eugene.
+
+>>Eugene Yaromik	10:26
+And for example, we didn't implement logic, for example, when that's received from email body. We just create when we receive a webhook for debts from email body, we just create these debts and we not handle like a review URL because Docsama creates other files for email body and after that recognize it. But we don't have this file and don't handle it. Only files like attachments we matched with Salesforce. In this case, maybe if we will use this, we should create some like a link or like file with this email body also. Yeah.
+
+>>Aniket Tatipamula	11:40
+I think you can do that. I mean, you already have that as a file here. It's I'll just let me go to the mother document. Give me a second.
+
+>>Aniket Tatipamula	12:19
+Yeah. So whenever the document data, whenever we are getting an email, we convert it to an image. So I feel if I'm not sure whether this can be done on Salesforce and how easy would it be. But if you even we also have one more way, like right now, these shareable links are generated for files, but we also can generate it for a folder for a case. So if somewhere in the somewhere on the Salesforce for a specific case, if we give you a folder shareable link that opens like this, that opens like this, I'll just open up a folder. Yes. I mean, like this. So basically for that case, something like this, where you have five files and you can easily navigate between those five files. And the way I look at it is the web books are fired every time you move document from review to approve. And you just use that web book to refresh the data that you have on Salesforce. So just ignore the older data and then push the new data. I think that would be much faster for anyone who is reviewing to edit this. Otherwise, editing on Salesforce may probably take a lot of time. Sometimes the issues could be on bank statement as well. While editing bank statements here is very easy. Like you just come here, you maybe delete a couple of tables that would have been wrongly classified or picked up and then save it, approve it.
+
+>>Aniket Tatipamula	14:00
+You would now have the cleaner readings back again.
+
+>>Eugene Yaromik	14:04
+Okay. How can we generate this link to like scroll all the files by folder ID? Yeah.
+
+>>Aniket Tatipamula	14:15
+We will share that API with you, Eugene. I'll share that specific API and that API will give you a shareable link that you can use to traverse across the folder.
+
+>>Eugene Yaromik	14:26
+Okay. Just posting Slack for them. Yeah.
+
+>>Aniket Tatipamula	14:31
+I'll post it on Slack and I'll update that sheet as well. So this will give you much more control on what, like you can see the data right in front of you on Docsumo and the screen, the review screen is very like easy to interact. I'll just show you a few tricks for the team to understand that we just open up one case. It's okay if I edit the case, right? I can edit this case.
+
+>>Aniket Tatipamula	15:07
+William, would it be okay if I just open up a case and make some changes?
+
+>>Liam Dionisio	15:12
+Which one is it?
+
+>>Aniket Tatipamula	15:15
+This is the number I would not know. Or do you want me to do it on a separate account? I can show it on a separate account as well.
+
+>>Liam Dionisio	15:25
+Yeah, it's probably better because I don't know if this is something that we're still working on.
+
+>>Aniket Tatipamula	15:31
+Sure. So Eugene, just to understand this, every time someone makes a change here, that is not when anything gets synced, right? You only sync it once, the first time you get it. Or do you also re -sync it when you get WebApp again?
+
+>>Eugene Yaromik	15:46
+No. For bank statements, we delete previous parsed, all recognized bank statements. For example, now, if this bank statement is processed, we created the bank statement in Salesforce, but now when we click change status to review, and after that change back to process, it will delete all records in Salesforce and create new records.
+
+>>Aniket Tatipamula	16:25
+And what about analytics?
+
+>>Eugene Yaromik	16:29
+It's also.
+
+>>Aniket Tatipamula	16:32
+Okay, so every time you mark it as processed, you run the analytics API again and then update the value. Am I getting this right?
+
+>>Eugene Yaromik	16:44
+No, when we just, for example, now bank statements like the last one, bank statements, status process, when we change status to review, in Salesforce, we also change status to review. And when we change status back to processed, it will not upload new summary in Salesforce, but in this case, we have a button to reload. When we use this button in Salesforce, it will upload all bank statements, like all statuses, or like all new information, like summary about bank statements.
+
+>>Aniket Tatipamula	17:46
+Okay, understood. Okay, understood. I'll just repeat it once again, so that like we are not confused. And maybe all of this can be used to create a better flow for you. I mean, how we can review it. So if I'm getting this right, for basic doc types, the moment you send an email from Salesforce to Docsumo, we get it, we automatically process it, the moment we get, we mark it as approved, the webhook that gets called on approved is something that we use to populate the data for application forms and lender details. That I think we've understood. The second part of the story is you see a few documents marked as bank statement, but they are still in review state, you mark like they are not there, you mark, you decide, you make an API call with some UI changes that starts documents to get processed. And at the end of it, you use a button to fetch the data back. Summary data back. Can we see it in action, Eugene, on one, because that puts, that would make our life very easy to understand what's happening.
+
+>>Eugene Yaromik	18:58
+First of all, for example, when we send you an email to Docsumo, we're waiting for a webhook. First webhook is like event email created. I don't remember. And the next webhook, it's about application depths, like statuses, document statuses. And we are waiting, we also updated this statuses for each document in Salesforce. But when we receive a file type application and it's file processed, we updated our application object. And if all required data is, we convert this application into an account, opportunity, something like this, and contact. And it works automatically. And also system checks like previous bank statement for this account. If we don't have a bank statement like for previous month, we send API request to start processing bank statements. And also when we send this request, we're waiting for a webhook for all statuses, bank statements.
+
+>>Eugene Yaromik	20:41
+When we receive all statuses, like all bank statements processed or review status, we automatically send API request to receive account summary for all bank statements. It works automatically in this case. But if something's wrong, we do manually something.
+
+>>Aniket Tatipamula	21:15
+But none of the manual corrections are done on Docsumo right now. They are done directly on Salesforce, right?
+
+>>Eugene Yaromik	21:24
+Yeah. Manually, when we don't receive anything, like there are no debts, or some problems with bank statements, now it works automatically.
+
+>>Aniket Tatipamula	21:43
+Yeah. Okay. Okay. I understood. So I understand the flow. What I can do is I can suggest some flow from our end as well. That can speed up because these kind of applications, I mean, out of 197, 98 of them would be through right away. But there could always be a couple of those cases where you would run into issues. And the goal for Docsumo team here is to fix all of them. For sure, we would continuously support and fix all the edge cases that we're getting. But at the same time, we also want to make sure that Nixie team can do this very fast. Like it should not be frustrating for either William or William's colleagues to actually correct them. And we've seen this happening. We have quite a few customers who are able to review hundreds and thousands of these applications very easily on Docsumo screen. And we've made all the provisions for you to do that. It's just that we are not using it in Nixie. So I may present, not probably on this call, because it will be too early. And if I make a bad plan that may not work out, I would take some time, go back, create a plan, maybe have a call tomorrow or on Monday and present what we can do and how we can do it in a better way. Would that work? Would that work for you, Eugene, Boris and Liam?
+
+>>Boris Teper	23:13
+Yes, sure.
+
+>>Eugene Yaromik	23:17
+And I also have another question. I noticed that sometimes when we send email attachments, like file attachments into email, sometimes these file names contain some characters that the system can't recognize, for example. And Salesforce recognizes it's different than your system, for example. And when we receive a webhook, we match this webhook with file names. And sometimes it's not the same file name, I mean. And I don't know. Maybe later when I save this webhook, I'll send you some examples.
+
+>>Aniket Tatipamula	24:25
+Yeah, I actually understand what you're saying, because we do pre -process The file name and remove some characters out of it.
+
+>>Eugene Yaromik	24:35
+And this could be the case. I mean, like slash you remove also, yeah?
+
+>>Aniket Tatipamula	24:39
+Yeah, we remove the slash.
+
+>>Eugene Yaromik	24:41
+Because, yeah, previously we also added some fix to also remove this on our side and send to you like changed email names, like not original. But it is like it works better now. But sometimes also we receive like several files and just can match in Salesforce.
+
+>>Aniket Tatipamula	25:14
+Noted, Eugene. What we'll do is we will share the logic on how we are actually processing those file names for email. And if it works out, do let us know. If it doesn't, then we will check what we can do at our end. Because we do pre -process The file name mainly because we have to store the files in a bucket. And if we have the slash and other items, then it becomes, it runs into some random errors.
+
+>>Eugene Yaromik	25:42
+Ok, if I receive this somewhere or, for example, this file names, I'll send you examples and we will check how to fix it or how we can fix it.
+
+>>Aniket Tatipamula	25:55
+Sure, Eugene.
+
+>>Eugene Yaromik	25:56
+And then thanks for bringing that up.
+
+>>Aniket Tatipamula	25:59
+I'll share this info with you.
+
+>>Eugene Yaromik	26:01
+And the other question we asked on previous call. I don't know if you provided the feedback. For example, when we have two files, for example, PDFs, can we merge these files into one PDF file? Because I saw that your system can split one document into two documents, for example. But what about merge?
+
+>>Aniket Tatipamula	26:44
+We do not have merge, Eugene. But can you please let us know in what circumstance you would want to merge them?
+
+>>Eugene Yaromik	26:54
+For example, two bank statements merge into one.
+
+>>Aniket Tatipamula	27:00
+Ok, but why would you want to merge them?
+
+>>Eugene Yaromik	27:03
+No, not a bank statement. For example, sometimes we receive two application forms. One application contains owner one and the second PDF file application contains the second owner. And we need to merge these two files into one. Is it possible or not?
+
+>>Aniket Tatipamula	27:36
+Not right now, Eugene. Not in this easy way of uploading and viewing the data.
+
+>>Eugene Yaromik	27:44
+Ok, because it's like very rarely.
+
+>>Aniket Tatipamula	27:52
+We can look into this after we fix the primary issues and the way to do that would not be this easy. What we can do is because we have those two documents in this folder, we may want to, we would probably want to create a separate API to fetch those loan application form details. And those APIs can look if there were two forms. But I think that's a two. I mean, it will take a little bit of time. And if it's a very, very edge case, I think the solution that I'm suggesting, if you somehow can see the entire case on Doximo, I think most of your problems will be solved pretty easily because you will get to see all the data at once. And all of this will be much easier to interact with.
+
+>>Eugene Yaromik	28:39
+Mm hmm. Ok. And the other one, I saw. Issues about like a male body, are you getting the correct male body from Salesforce or maybe we can send it on another way? I don't know. In some cases.
+
+>>Aniket Tatipamula	29:04
+I'll quickly check that out for a second. So we had we were facing a little bit of issues on Salesforce on how it formats certain males. But we made those corrections. And now I think it's it's pretty good. Like I have not seen any weird. What do we say?
+
+>>Eugene Yaromik	29:23
+I was told that previously it was like one line. Yeah. Now we made that fix. Ok. Ok.
+
+>>Aniket Tatipamula	29:35
+We thought that we'll reach out to you, but then we looked into it a bit and we realized that sometimes Salesforce just sends us a HTML tag and it actually does not have HTML items in it, but rather just a plain text with new line characters. So we made a small fix for it and it is working fine now.
+
+>>Eugene Yaromik	29:52
+What type do you need? Html items?
+
+>>Aniket Tatipamula	29:56
+Yeah, we need HTML always.
+
+>>Eugene Yaromik	29:59
+Ok, I'll check. Maybe we send HTML.
+
+>>Aniket Tatipamula	30:08
+Yeah, you send HTML, but I think there is some issue on how Salesforce parses certain email. But right now, if you look at it, right, like they look good. They look in the right way.
+
+>>Eugene Yaromik	30:18
+Yeah, now it looks good. Yeah.
+
+>>Aniket Tatipamula	30:21
+This is a fix that we made, I think, a couple of days back and post that everything is coming out with it.
+
+>>Eugene Yaromik	30:29
+Ok. Hmm. I don't have any questions. Yeah.
+
+>>Aniket Tatipamula	30:37
+So let me take this opportunity and if you're OK, I'll probably show a few tips and tricks on how we can identify the document easily, how we can make edits to the document easily. Is it OK? Can we take 5 -10 more minutes and then go through it?
+
+>>Eugene Yaromik	30:57
+Sorry.
+
+>>Liam Dionisio	30:58
+Yeah, sure, sure.
+
+>>Aniket Tatipamula	31:00
+Ok, let me.
+
+>>Eugene Yaromik	31:03
+One question about the average balance like I posted today. Like, what about decimal places? Change some value to decimal place?
+
+>>Aniket Tatipamula	31:18
+Yeah, that issue was not because of. Because of the actually not truncating it to two places, but it was because of the file itself. Let me quickly open that and show you what was the issue. It's the issue with the template.
+
+>>Eugene Yaromik	31:34
+Just give me one second because we can't insert this account summary in Salesforce. Like, we can't parse this.
+
+>>Aniket Tatipamula	31:47
+Yeah, it was the extraction issue. It was not the issue with the logic because what happened was that bank statement had a very weird table and we were picking up a very big number for one of the debits and that caused that entire number to go big. The trailing digits were not because it was a decimal. The trailing digit was because it was a very big number. Let me quickly open that up.
+
+>>Eugene Yaromik	32:23
+Yeah, we need to add some fix because we can't create this account summary into Salesforce. Like we receive just an error.
+
+>>Aniket Tatipamula	32:38
+Yeah, so that's what I'll do, Eugene, on the next call. I'll probably come up with a way where all of these issues, even if they occur, how to solve them and how to pull again back into Salesforce. I'll just present my architecture. I mean, if it works out good, if it doesn't work out, then we will discuss further and figure out what best we can do.
+
+>>Eugene Yaromik	33:02
+Mm hmm. Okay. Yeah, it's not possible from our side. We, for example, can create something, some fix on our side. I don't know. Just send feedback about this. Yeah.
+
+>>Aniket Tatipamula	33:25
+Okay. Let me do one thing. Okay. Let me quickly show how, what exactly, how do I navigate? So what happens is every time a case is created, like we have these four dog types, but the primary place where all of them go is auto classify. And this is where the documents are stuck. Normally, if they are not classified, if they are classified, they are here. And I don't think we have to come here. Like I'm just letting you know, the only thing to do in most cases would be, you would have a case ID with you. You can just copy it here and then paste it here. Yeah.
+
+>>Aniket Tatipamula	34:26
+You can just copy it here and you will be able to navigate to this case and all the documents in this case, right? Or the easier way would be, you already have a folder ID. So this string kind of remains the same. So if I go, if I have this folder ID, which is what you're sharing in most cases, if you have this folder ID, I can just copy it here and paste it here. And I'll open up that folder ID. Yeah. So, but in all likelihood, what would normally happen is we will give you the shareable link. So you can just navigate those documents on the shareable link. Yeah.
+
+>>Eugene Yaromik	35:11
+Sorry about that. This link will, will this link work with like credentials? Like you need to log in or just like from webhook, we can use this link.
+
+>>Aniket Tatipamula	35:30
+From webhook, you can use it or we will give you an API. So the way it works is if you go here and if I create a shareable link and if I share this link with you, you will be able to open it on your laptop. I'll just share it with you. I mean, this does not require any credential. This has the token in it. So, I mean, anyone who has access to that link and now open it and edit it.
+
+>>Aniket Tatipamula	36:03
+Okay. If in case any of these documents got misclassified, I can always change the status here. There's an option for change document type. If I go and select the doc type it is supposed to go to right now, it's the entry detail. And like, I can just keep it at it. And this document would be transferred from like, if it gets misclassified, you can come here and reclassify it and it will start processing again. So that's, that's one part of the story. When you come to edits on tables, you can just come here. I mean, in most cases, the editing is pretty straightforward. You just, if something is empty, you can just come here and click, it will start, it will pick up the data. There's nothing much to do, but the bigger item is tables. So in case, if you see some table getting wrongly populated or wrongly picked, like there are a few tips and tricks that we've implemented, like everything that is blue is credit. And everything that is, everything that is blue is debit and everything that is purple is credit. So, or debit, sorry, debit and credit reverse. But then, no, no, I think the one that will just allow that a little bit confusing here, but the purple one is a debit for sure. And the blue one, if there's a credit, it will be in blue like this. And while you are editing something, even that turns out to be blue. So that's what is confusing, but you can see that it's debit. So this way, if, if ever a document, if ever an amount got misclassified, you can just, you don't have to even open this.
+
+>>Aniket Tatipamula	37:45
+You can just come and scroll through this and see, okay, something got misclassified on one of the tables and make a correction. If you want to, if you want to remove a table, you just come here. You can just remove a column here by clicking X. You can just come here and then remove a grid. It will remove the grid. If you want to apply, it will be applied. If you want to cancel, it will be canceled. If once you make edits to these tables, and you really want to be sure that the tally happened. So there's a tally check field here. I'll have to check white field in this case, but you can just rerun and the tally would happen. It will show you that the tally happened. So that's opening balance, closing balance check over the entire document. Probably in this case, there are multiple accounts and that may be the reason. Yeah. But these are all few things that you can do here. I'll probably take, take William or the team required in detail after I set up that flow workflow and all of this can be used and made those corrections. Sometimes what happens is this amount could be wrongly picked and that's what would change the Alb, right? Average ledger balance. So you can just come here, make those changes and then you can just confirm and then it will start working. Does it make sense? Eugene, William, Boris, I think.
+
+>>Eugene Yaromik	39:16
+William, please try it because I'm not working with this.
+
+>>Liam Dionisio	39:21
+Yeah, sure. I'll wait for the call for that so that we can get into more details about it.
+
+>>Aniket Tatipamula	39:30
+Okay. Okay. Yeah. Perfect. Just one last question from my end. I just wanted to understand with the last provider, as in if you were running into any of these issues, how were you making sure that you are correcting them? What was the logic or what was the process?
+
+>>Boris Teper	39:53
+William, how do you correct the errors on the bank statements?
+
+>>Aniket Tatipamula	40:10
+William, I think the question was for you.
+
+>>Liam Dionisio	40:15
+Sorry, what was it again?
+
+>>Aniket Tatipamula	40:16
+Yeah. So during the last provider, like when we, when Doximo was not in the picture, if there were wrong information getting created into Salesforce, how are you correcting it back before Doximo?
+
+>>Liam Dionisio	40:32
+We don't have this type of correction before. We don't have like a document sheet that we use. So I'm not sure how that can be corrected.
+
+>>Boris Teper	40:50
+I believe they were making corrections directly in Salesforce.
+
+>>Liam Dionisio	40:53
+Yeah, we just do it manually.
+
+>>Boris Teper	40:55
+Yeah, manually updating.
+
+>>Liam Dionisio	40:56
+Understood.
+
+>>Aniket Tatipamula	41:00
+And were there used to be issues like these or like, are they more on our side or less on our side? Like, how is that turning out to be?
+
+>>Liam Dionisio	41:15
+So far, I think we're encountering more issues right now, prior to the changes.
+
+>>Aniket Tatipamula	41:24
+Okay. Sorry, William, can you please repeat it? Is it being better right now?
+
+>>Liam Dionisio	41:31
+Before we had the change to documents, it looks like we're encountering more errors now.
+
+>>Aniket Tatipamula	41:38
+Okay. This is mainly around the classification part or the bank statement summary?
+
+>>Liam Dionisio	41:49
+Both. I don't think we really had much issue before with the classification. Usually it was with the bank statements, but now we're having both. So that's why I think there's more errors right now.
+
+>>Aniket Tatipamula	42:05
+Okay. Okay. Surely. So we will surely try to fix as much as possible on the issue sheet that you are providing. So yeah, I mean, just to conclude the call, I am to go back and then figure out a better flow on how this can be merged so that Nexi can get most benefit out of our review system. From William's side, Eugene's side, or Boris's side, if you can give us some idea about the kind of statements that come in Nexi so that we can easily reorganize our documents so that the classification issues come down as much as possible. That's the only expectation from Nexi's side, from this call.
+
+>>Boris Teper	42:52
+One suggestion I can give you for the applications, if you don't see the words like Ssn number, text ID number, text ID, or Ein on the documents, so it's definitely not an application.
+
+>>Aniket Tatipamula	43:07
+Sorry, Boris, can you please repeat it? It's definitely not an application.
+
+>>Boris Teper	43:11
+Yeah, it must have the keywords like Ein, text ID number, Ssn number, social security. Maybe if you just implement those keywords, if the document doesn't have those keywords, that's definitely not an application.
+
+>>Aniket Tatipamula	43:26
+Understood. Okay, that's noted.
+
+>>Boris Teper	43:29
+One of the suggestions.
+
+>>Aniket Tatipamula	43:31
+Sure. Thanks, Boris. Point noted. Okay, I think, is there anything else that we can help you with? Or if there are any other concerns that we should discuss?
+
+>>Eugene Yaromik	43:45
+I don't have any questions.
+
+>>Boris Teper	43:46
+No, that's all I think we're done for today.
+
+>>Aniket Tatipamula	43:51
+Okay. Okay, then. Thanks, Boris. Thanks, Eugene. Thanks, William, for your time. And, yeah, I mean, the team is consistently working on issues and trying to provide as much smooth experience as we can. And please do let me know if there are more issues and we'll continuously monitor the Excel sheet and keep on fixing them.
+
+>>Eugene Yaromik	44:11
+Okay.
+
+>>Boris Teper	44:11
+Thank you. Have a great day.
+
+>>Eugene Yaromik	44:14
+Thank you.
+
+>>Aniket Tatipamula	44:15
+Have a nice day.
+
+>>Eugene Yaromik	44:15
+Bye.
+
+>>Boris Teper	44:15
+Goodbye.
+
+>>Aniket Tatipamula	44:20
+Okay. I'll just remove the note.
+
+>>Manoj Racherla	44:24
+Aniket, I have a question. Uh, we can't.
+

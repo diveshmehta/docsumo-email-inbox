@@ -1,0 +1,309 @@
+>>Min	00:00
+Hello, how are you doing? Oh good. How are you? I've been great. Thank you So, where are you daddy in from today? I'm sorry. Where are you diving it from today? I'm in In The Bay Area. Oh, okay. It's quite early for you then like it's I think 10 a .m. I really am not a fan of Google me
+
+>>Bikram Dahal	00:30
+You prefer to zoom I'm sorry.
+
+>>Min	00:33
+Yeah Okay, I do it And I got it to work And Yeah, that's all good my colleagues should be joining shortly I See my master own, Okay So, let me touch with quick introduction, I think and then we'll take it from there and To wait for my colleagues Vishal is going to be running this whole show. So Just just give give them a Sec. Let me let me ping them.
+
+>>Bikram Dahal	01:32
+See if they're joining Okay, even in our case we have Bishan will be running the show Like support the missiles on the team. Yeah.
+
+>>Min	01:40
+Yeah.
+
+>>Min	02:01
+Yeah Sorry about that. I don't know where they are Where where's where's your teammate Bishal Bishal
+
+>>Bikram Dahal	02:16
+I like I You'll be joining you just finishing on next call Yeah So I just jump up just to make sure that everything is on order Sure.
+
+>>Min	02:29
+Sure. And where are you guys based?
+
+>>Bikram Dahal	02:32
+Sure, so I'm become just for quick. I know like we'll have a longer introduction. I'm Bikram I'm the CTO for Doxomo. You have been talking with yourself one of my co -founders So like I'm the next person who overlooks the delivery and also looks into anything team so I just wanted to join on the call because like You guys are very important to us Like on the problem that we are solving and also like you guys have signed the three years contract with us So just wanted to make sure that I Have a full graphs of the problem a statement so that we can do a best positioning of the solutioning and also make sure That you guys have a pleasant experience. So that's it. And I likely jump into this card So yeah, I'm the sort of East Coast or Long Island in Newark Yeah, you can quickly give you a long island.
+
+>>Min	03:21
+Did you say?
+
+>>Bikram Dahal	03:22
+Yeah Not Bellmore, I'm sorry, not Bellmore
+
+>>Min	03:31
+I'm not familiar with that. Oh, I used to live in the city And my friends used to live out And I had a lot in the university. I had a lot of friends who lived in In Nassau and Suffolk County.
+
+>>Bikram Dahal	03:42
+Yeah, I'm on Nassau County. So like the county is Nassau the city could occur like a car Like it's like it's called not Bellmore. Okay.
+
+>>Min	03:52
+Well We have a Besal on the team Yeah How are you I apologize I don't know where my Colleagues are right now This yeah Huh let me They are on just a few minutes ago. I wonder if they got called off on some emergency or something, but It's on the shells calendar. So No worries, I am also Michelle I can fill in for your Michelle If only Let me hold on one second, I'll be right back let me call them directly
+
+>>Min	05:39
+Okay, one responder is coming in late, but the main man is not replying. I don't know, I think something might have gone amiss because his kids are at home, so something might have happened. Give me a second. Sure.
+
+>>Bikram Dahal	06:02
+We can also push the call, if required, we can push the same time tomorrow.
+
+>>Min	06:09
+No, I really apologize for flexibility on that, but let's see.
+
+>>Bikram Dahal	06:14
+Totally fine, we'll wait for the next 15 minutes.
+
+>>Min	06:18
+Yeah, no, I apologize for this completely. Oh, here's Stephan.
+
+>>Bikram Dahal	06:22
+Hi Stephan.
+
+>>Min	06:28
+Your mic's not on, Stephan.
+
+>>Bikram Dahal	06:30
+Yeah, Stephan, your mic isn't on.
+
+>>Min	06:33
+I know, it's Google Meet. It always throws off all my peripherals.
+
+>>Stefan Z	06:37
+Yeah, no, this one is totally on me. I was deep in an email and I was just, whatever, so here I am. Yeah. Do you know where Vishal is?
+
+>>Min	06:50
+He's...
+
+>>Stefan Z	06:51
+You know, Vishal might have the issue of it not showing up on his calendar. I did send him the link.
+
+>>Min	07:01
+Yeah, I see it. I thought I saw it on his calendar earlier. I made a mistake.
+
+>>Stefan Z	07:09
+Okay, so he looks like he's away from the desk, so should we get started or don't...
+
+>>Min	07:18
+I think since Vishal's going to be... I mean, we can do intros and stuff, but since he's going to be running the show with Vishal on the Docsinfo side, and he's going to do all the asset transfer, I mean the document transfers and manage all the flows, I don't want to waste anyone's time to do this twice.
+
+>>Bikram Dahal	07:37
+I mean, one quick thing, because I also want to understand, Ushabh has given me a download of what you guys are trying to accomplish. So I would also... I have a few questions regarding a few things, and also I love to know the problem from firsthand, right? Because usually that's something it is always good to know. So until Vishal joins, we can also quickly go through those just to make sure that both the teams are on the same page, and then we can resume back once Vishal is back on the call.
+
+>>Min	08:07
+Right, that's a good use of time. So just to give you a little bit of context, background, Vishal, Stephan, and I, and a couple of others, helped manage the venture assets on behalf of Svb Financial Trust. Now, I don't know how familiar you are with Svb, but Silicon Valley Bank was one of the premier venture lending institutions in the Valley and around the globe. Two years ago, it had some financial issues, and the bank was in receivership and sold to a company called First Citizens. The bank holding company, which is Svb Financial Group, then went into bankruptcy and emerged as our entity, Svb Financial Trust. We are no longer associated with the bank itself. While we were the holding company, I was the head of corporate development on behalf of the entire organization. Stephan joined us, and Vishal joined us as well. The life of Vishal, of Stephan, has a long history as a public accountant. He was also in the fund admin side, running big portfolios for other PE and venture funds. Vishal joins us from Highland Capital, where he ran part of the hedge fund practice, as well as part of their own financial restructuring as well. So that's the context of what the organization is. Now, The Svb Financial Trust has a number of different assets that we're helping to manage. The principal assets that are on our book are basically the venture assets.
+
+>>Min	09:50
+Those are the ones that I helped manage when I was at the bank, but those include a large portfolio.
+
+>>Min	09:56
+Portfolio of direct investments that we've made on balance sheet, a lot of venture and private equity funds where we're both LP or GPs, as well as what we're talking about today, which is a large portfolio of warrants. And typically in venture lending, when a bank or other lending institution provides a loan, they usually do that at a sub -market rate, and there's also a equity kicker associated with those loans, and that's the warrants. The warrants were transferred up to the whole co and hence it's part of the trust at this point. We run a portfolio of roughly 4 ,500 warrants spread across 3 ,000 unique issuers. Now those warrants have, some are, have low, no value, some of them have high value. But what we need to do is get our hands around, to get a better understanding of the underlying assets. So hence we want to, and just let you know, most of these warrants are in PDF form. We do have an Excel, Excel, basically a database, a spreadsheet, whatever you'd like to call it, that has a lot of the details, everything associated with pricing, exercise, expiration, what have you. We'd also like to extract that from all the warrant documents that are in PDF form. Most are in PDF text, some are still in images. So when you look at extraction, some of them, when you're ingesting the content, you're not going to be able to ingest text, but you're going to be ingesting images through your OCR and then convert it to text and then extract the relevant content out of that.
+
+>>Min	11:39
+Why this is important is A, embedded in the warrant documents are a lot of different rights associated with the warrant. So everything from information rights to, there are derivatives built into the warrant itself. So the warrant's a derivative, as you all know, but then inside it could be other derivatives. So that can include rights to invest on follow on offerings. It could be quote rights. If you look at the categories that we sent you about the information that we're looking for, you'll see that that's there. Right to invest, right to co -invest, quote rights. We also look for information rights. And one of the things that's really important and we'll go through this later, and I think Michelle can lead Michelle through it, is that a lot of these relationships, because we're decoupled from the bank, we need to extract that contact information within the warrant. There's like two sets of contact information, there's company And then there's a law firm. So we need to surface as much information as we can from these warrants and hence that's what the process is. So if you're able to ingest all these warrant docs and then basically use your model to extract the relevant data that we're looking for, it makes our work not only easier, but make sure that we're not missing any critical pieces of information that might be helpful as we kind of manage down this portfolio of assets.
+
+>>Bikram Dahal	13:14
+Okay. Min, thanks a lot for that detail. It really gives me a very clear picture. Like I said, I had got a little bit of download. I also had seen some of the samples and everything during the onboarding steps and everything, but this really gives me a complete context. I think now that everyone is on the team, I'll just quickly do a small introduction just to make sure that, because we've been working together for some time. So I just wanted to make sure that we have a quick introduction. So I'm Vikram. I'm the CTO for Docshubo. So I'm one of the co -founders. I overlook both delivery and the product side of Docshubo. And I'm really interested in understanding the use case. I really love to know why people are doing it, how people are using the software and everything. Vishal and Manoj are our customer success engineers and principal customer success manager. So they will be overlooking the project overall, but I'll be involved on all the steps just to make sure that you guys have a smooth journey with Docshubo. So I'll just quickly, like Vishal, you can quickly go through the introduction and then we'll come back to this problem. I have a few questions, but let me just finish the introduction, then we'll circle it back. Sure.
+
+>>Docsumo Success	14:34
+Thank you so much, Vikram. So, I mean, Yeah, I already met men. Hey, Stephen, Vishal. So, yeah, I'm the principal customer success manager here at Docshubo and I would be supervising this entire project alongside Manoj. Also working with Vikram on the delivery side of the things. And I'm also going to be a point of contact for all the billing related matters.
+
+>>Docsumo Success	14:55
+So I'll just pass it on to Manoj for a short introduction, then we can jump on to your team, and then we can take the kick off the entire project discussion.
+
+>>Manoj Racherla	15:06
+Thanks, Vishal. Thanks. Yeah, I mean, I hope you're doing well. Myself, Manoj, I will be helping you with the implementation and onboarding towards this entire project with Vikram and Vishal. So I'm glad helping you any time.
+
+>>Docsumo Success	15:29
+Yeah, I mean, we'll just pass it on to your team, Stefan, Vishal, if we can just go through a little round of introduction, then we can just go ahead with the project discussion. We'll start.
+
+>>Stefan Z	15:39
+Yeah, I'll go first. Like Vin said, I'm just managing out our warrant portfolio, which is sort of the bulk, all of the documents that we'll be looking at. So it's my responsibility to deal with the daily activity of all the warrants that we have currently in our portfolio.
+
+>>Vishal Arya	16:00
+Yeah, I'm Vishal, another Vishal here. But yeah, I'm helping Stefan as well, so I'll just echo the same responsibility. As far as DocsUMO, I'll be, I think, your point of contact on the initial implementation and onboarding. So happy to kind of work through that process with you all.
+
+>>Bikram Dahal	16:20
+Ok, so I'll let you know about the onboarding steps. Usually, I'll take it on. Usually, Vishal is the one who talks about this project. But this is a bit different, because you guys have certain set of documents on your Sharepoint or some other system. And to put it very bluntly, you are trying to convert those into an Excel sheet, so that you guys can make sure that an Excel sheet with track data, so know where the information came from and everything, so that you can go revisit and make sure that everything is to the point. And it's a one -time thing, but I don't think you guys will be receiving more warrants, or do the company send you those information every quarterly, or if they have to send any more report, or you guys have fixed set of warrants?
+
+>>Min	17:06
+We have a fixed set of warrants. But I think one thing we did talk with your team was another side project, but that's independent from this. This is just one -shot thing.
+
+>>Bikram Dahal	17:18
+Sure, OK. Makes sense. I want to understand a bit more. I have not gone too much into this, like a VC investment. I have signed some documents, but also usually looks into signing the documents and everything. I just sign it after it says that everything is good. So help me understand a little bit about this document. I did a little bit of research looking to some of the samples, but I have a question regarding the way it is currently structured. So is it safe to assume that, like you said, you have about 3 ,000 different companies, but you have 4 ,500 different warrants? So is it safe to assume that, and do they also have some kind of rider document along with that, or one warrant is? So let me say there is a folder for company A. There are two documents. Can you assume that these are two different warrants, or can one be a warrant and one can be a rider? It's a supporting document, not the warrant on itself.
+
+>>Min	18:20
+That's a great question. So the way, the topology of the file structure is that there is a, you'll see a company, and inside that file folder, there's a host of different files. There could be two files, it could be 20 files, but what Michelle will share with you is that the warrant documents have a specific way that they're labeled. And so if you look for that particular label, you'll see that that's the warrant document. There are a lot of files that look similar, and there might be amendments, there might be little pieces of the warrant, what have you. So if you go through all of them, try to ingest them, it's going to be a mess. And Stephane and Michelle can give you a lot more color, but there's a specific designation for each warrant, and that's the one that you want to pull.
+
+>>Bikram Dahal	19:15
+Sure. But one thing you talked about, there also can be amendments and everything, but can a warrant also have a supporting document that puts it, like whatever is written on a warrant, right? So can a warrant have an extra document that, like what do you call it, a rider document or anything, or one file?
+
+>>Min	19:35
+It's one document.
+
+>>Bikram Dahal	19:37
+It's one document. So let me say if a folder has two warrants, and it matches because of the naming and everything, then we can consider. What I'm going to figure out is on your data table that we have, or Excel sheet, just to make it simple, I'll put it in the Excel sheet. Your first column is.
+
+>>Bikram Dahal	19:54
+Your company name. And company has, let me say, two warrants. So you go inside the folder, and if you go there, there are two documents that are passing as a warrant. I make two line items over here. And let me say I have all the information. So example, what are the basic, like for contacting and everything, you need those information. You have one section regarding right of approval, like whatever extra information that you need over there, you have that like this. So you have a column called company name. You have a second column called warrant, and you have like one or two. And then you have like, what do you call, you have key value pair. And then like, you have the same thing. Now if you get Excel back to you guys, then it will be like 45 rows of those information. Is that correct to assume, or can warrant be further divided and you can have two document that we have to combine and only do the extraction?
+
+>>Min	20:51
+No, Stephan.
+
+>>Stefan Z	20:53
+No, it's just one document. I don't want to complicate it too much, but there are some instances, as Min mentioned where there are amendments. But I think we would, those are very unique, very rarely occur. And I think we would probably just try to, I don't know how we would deal with those, but there's no way to combine them because it's effectively the amendment would be a change of one of the parents. You know, the termination date is extended to something else.
+
+>>Min	21:25
+The only way to really manage that is if you actually ingest both documents and you dedupe it and know which one's more newer than the old one, and then just merge it.
+
+>>Bikram Dahal	21:34
+That's a lot of work.
+
+>>Stefan Z	21:36
+Just to be clear, the amendment is not a duplicate with changed terms. It's literally just one line that says this term changed. So I think in order to deal with that, we would just sort of identify that there is a separate document that's called amendment. I mean, if there's an amendment, it will say amendment in the title. But otherwise, for the large, vast majority, there's just one document and every, if there is a warrant, it's all contained in that one file.
+
+>>Bikram Dahal	22:04
+Okay, then that makes even our life easier because otherwise I was looking at auto -classification and everything. So that makes sense. And then like, then on the list of the field that is required from all of these warrants, I know you have sent some list to the team, but just wanted to make sure that, like, is that list finalized or you guys will be sending that, like, what are the information required? I know not all the warrants will have all the information, like some warrants will have, like you said, like some of them have a lot of derivatives and everything. So do you guys have a list of field that you guys want to extract from this warrants? Is that finalized or like that can evolve in future? Like right now you might not know that I need it, but in future I might need something. So I just wanted to understand that list is fixed or it can evolve after one, like we have extracted the information and after six months you guys can say that, oh, I need one additional information. So I just wanted to understand, is that list fixed or it can change in future?
+
+>>Stefan Z	23:08
+I believe it's fixed at this point, right? Yeah, I mean, so we have a list of information that we want to gather from the warrants. Each, I don't want to say each of these warrants, but the structure of how the information is presented can be different within the warrants. So if we want a certain data point and it's called one thing in one document, but something else in a different document, we want that data point. And I think we have that list available, but we could find later that in a different document, it's called something else. So your search or your call -out feature needs to be amended or adjusted.
+
+>>Bikram Dahal	23:50
+Yeah, no, I totally agree. I like, as long as the final schema of the, like, because I think all of us are technical, so I'm just going to use that. So like, as long as that final Excel workbook, like says that, okay, these are the fields that I want from this document, it's okay. This information might not be on this warrant because not every information will be on all the warrants, but as long as there is no mistake, whatever is there is picked up. And then you put that Excel, few of these things are empty because those things do not apply to that warrant. So that, as long as that is there, then you guys will be able to use that data and then, like, make whatever decision that you guys need to make on top of that. So that is what I'm understanding on this project.
+
+>>Stefan Z	24:38
+Yeah, I believe that's true. So we've identified the type of information that we want to get out of it. The way to pull it out may be sort of modified as we go forward, as we understand what's in the documents.
+
+>>Min	24:52
+Yep. Vikram, just to -
+
+>>Min	24:53
+Confirm do you have all the fields that we've shared with the team so far?
+
+>>Bikram Dahal	24:58
+I'll have to check with the team but like usually we we don't take it from that we take from the first party You guys only because of the miscommunication and everything happens. So one of the agendas after this call is going to be to get the sample and also there are few agendas of this call. Vishal will give more idea about like few but one of the main agenda that I always ask my team is to get that field list from you guys because sometimes things might have changed from Poc to now right so just wanted to make sure that we have the latest field.
+
+>>Min	25:27
+Okay.
+
+>>Bikram Dahal	25:27
+And this information I currently store on like Sharepoint or like where are this information is stored? I just wanted to understand that part.
+
+>>Vishal Arya	25:38
+Yeah this this data on our end is on a Sharepoint site.
+
+>>Bikram Dahal	25:42
+Okay.
+
+>>Vishal Arya	25:42
+And we've got an external IT that kind of helps us manage and give us access and things like that so we can work with them and you guys at the same time and make sure we have you know permissions on certain folders and not others to make sure you're looking at the exact folder you need.
+
+>>Bikram Dahal	25:57
+Okay that sounds good and because here we don't have a part of integration because it's not a regular thing it's coming every month So like there can be a little bit of thing we can figure out a way to upload it one time and then make sure that like put it into Docsimo and then later on modify things and everything so that should be that's how that sounds good. Okay I think this was the majority of the question that I had so Abhisar you can take it on are you getting the action item from the call or if you guys have any other questions I can answer it otherwise Abhisar from outside will give you what are the things that he needs what are the next steps I will also be adding you to Slack channel and everything so those housekeeping tasks and the next step Abhisar will take it from there.
+
+>>Docsumo Success	26:41
+All right So I mean Yeah This is pretty much clear like you know as Vikram already discussed about the documents and the workflow you know but one thing like I mean I know that we already have that list have got it from Just like you know but still like you know if you can reshare that with me would be really grateful along with the samples I think you stored and share like you know if you can add me up so that we can have all the downloads you know on our site so that should be really great but one thing that we just missed you know because we directly jumped onto the workflow part was just giving you a little idea about this entire onboarding process how this is going to take over so let me just quickly share my screen and quickly show you some slides to just take you through the process. Is my screen visible guys?
+
+>>Stefan Z	27:32
+Yes
+
+>>Vishal Arya	27:33
+Yes all right all right
+
+>>Docsumo Success	27:37
+So basically like you know we are going to take up the entire on onboarding process in the four phases and first of course is starting with the kickoff like you know how we have initiated the project today this call was you know set to just gather requirements and get clarity on all the deliverables like you know what the expectations are how the workflow is going to be and what would be the need and the prerequisites basically on our side that we would need to you know move to the second phase of implementation where we would be completely setting up the document types and you know working on you know the requirements as you would be asking so that would be the second phase that will be completely taken by my team And then we will move on to the third phase of Uod testing like where we would be just delivering this account to you to test the account extensively with the set of data and we would love to have the feedback that you have whether it be on the extraction side whether we would be it on the workflow side and we would be parallelly working on fixing and resolving all those issues that we come across the UOD testing phase And then we will just you know there's a green signal from your side we'll just mark you live on the platform so that you can utilize you know the platform with your production data so that's how it is going to be there and post that like it's going to be with your support you will be having a dedicated customer success manager from our site who will be always you know in touch with you he will also be you know doing like a monthly sync up just to review your utilizations and just to check like you know if you were having any kind of you know issues with the platform that we can definitely assist with our work upon to make things easy at your end so this is how this onboarding journey and post that it's going to be like now also talking about just for the easier communication it's going to be one of the complex and extensive products so we would love to have you guys either on teams or slack channel if you guys are already using you can add us we can have a dedicated channel my team would be there and this would be really easy you know to have this you know quick conversations and look after all the issues that we come across you can add me my email address you already have
+
+>>Docsumo Success	29:52
+And I will add the rest of my team. And post this, we are going to send you the summary and the action item related to what we have discussed right now. And we will also be setting up a weekly call just to discuss the progress where we have reached with the implementation and just to give you an update about how it's going with the entire setup on the Docsomo site. So that's about it. That's what I just wanted to summarize. Yeah, anything to add, Vikram, Manoj?
+
+>>Bikram Dahal	30:23
+Nothing on my side. Main action item for this call are mainly three. The first one is for us to understand the use case. I think we have understood the use case to the great detail. The second thing over there is for you guys to make sure that you guys prepare whatever authentication needs to be done on your side and make sure that that data set is Jd and provide us the field that you guys need to extract. So that we can look at that. Look at some sample. We'll have some examples. So one more thing on this case is if you guys, because when you send your data, because you guys have idea about this document more than us. So if there's some caveat, example, okay. Like usually for normal people, this looks like how it should be extracted. But in this case, it's a bit like, it's not how it should be extracted. So if you guys have, if you think, we'll figure out a few things later on. But if you guys already know that, okay, this is a place where like a DB team has to be a table of like, whatever, like it has to be a table and it can be a bit tricky because it's written a bit differently. So if you guys think like that is the case, then we'd love to get some small write up and everything. If you guys already know, that will be the case. Otherwise, we'll look into those files. We'll run your like a field that you guys need. And we'll provide you a sample of hundred files and everything just to make sure that everything is good. And then once you guys say that, okay, on this hundred files, everything is extracted perfectly, let's go and extract it for all the files. So that is how the cycle will happen. So if you have it, provide it to us. If you guys don't have it, then don't worry. Next call, we'll have a lot of questions. Like, okay, is this file extracted correctly or not? What is the mistake on this and everything?
+
+>>Bikram Dahal	32:04
+We'll fix those things and then make sure that we run it on the larger samples. Okay, and on this case, it's a bit easier because you didn't have a complete flow of information. It's a one time thing. And then you'll be using the platform. But usually then we also have integration and everything, which in this case, I think will not go very deep because worst case scenario, we'll just take a dump of that data and convert that into same structure in Docsremo through a manual upload if required. So I think the integration is going to be that big of issue. So we'll not go very detailed on that.
+
+>>Min	32:36
+Yeah, that makes a lot of sense. I think, but just even, yeah, if we can do a one or a couple reps of the samples and then we just tune it up before we do the whole batch, that would be great. Even when we share that information, I think it'd be prudent for us to have the Sharepoint up So we don't email stuff back and forth. I think that's probably our priorities. So we'll have the Sharepoint up, we'll have like, here's the preliminary data, the information about all like the fields that we need, here's a couple of samples and we'll go back and forth. And then we'll have the full data set up on the docs inside. And then you guys will have to pull that up accordingly. That's going to be probably, again, probably one of the more challenging piece because the way the file folders are structured and what you're looking for, but Vishal can walk you through exactly what the key files are. And I'm sure once you put it in some sort of a data lake or something, it'll be easy to pull off.
+
+>>Bikram Dahal	33:33
+100%. We have done a lot of like SharePoint extraction. I know like a different enterprise have different kind of thing, but we only have integration. And the only part that will be remaining is to make sure that we write a very small custom code to make sure that we only pull in those information, those files on the structure that we need, which I think shouldn't, we didn't see a lot of big issue over there, but you don't know, like sometimes, all these enterprises product have their own quirks, like regarding few things, right? So hopefully like that will go smoothly. Once Vishal shares us the link with the information that should be extracted, what is a folder tree, then if we have more questions, then we can take it on the next call and make sure that, or we will do it on Slack async only, so that like we don't have to wait for a next week call.
+
+>>Min	34:22
+That sounds perfect. Okay. So we don't, just letting you know, we don't use Slack. I'm not happy to download it. We do use Teams. If you guys use Teams, we're gonna just create that external channel.
+
+>>Stefan Z	34:33
+I think it might be easier if Vishal or Vishal just sets up a Teams chat with all the different emails on here, send a message and that'll be, because you guys use Teams as well.
+
+>>Bikram Dahal	34:46
+Yeah, we use both. Like some customers are on Teams and some are on Slack, so we have.
+
+>>Bikram Dahal	34:51
+Okay.
+
+>>Stefan Z	34:52
+Yes, let's do it that way.
+
+>>Vishal Arya	34:54
+Okay. Perfect.
+
+>>Bikram Dahal	34:55
+Okay. Sounds good. Then I think Vishal will send the action items and everything after this email. Looking forward to seeing the samples and also the field that needs to be extracted. Looking forward to getting that one out of, like, checks done so that you guys can do one iteration to make sure that everything is good so that we can put all your samples into the systems.
+
+>>Stefan Z	35:18
+Great. Okay.
+
+>>Vishal Arya	35:19
+Sounds good.
+
+>>Bikram Dahal	35:21
+Okay.
+
+>>Docsumo Success	35:21
+Just one last thing. Yeah. I don't know.
+
+>>Bikram Dahal	35:24
+Everything done on my side.
+
+>>Docsumo Success	35:26
+Okay. I mean, just one thing off track. Not with the onboarding project. I'll just send you a separate email, you know, with one of the invoice. You know, if you can just take a look at that, that would be great.
+
+>>Min	35:37
+Look at what I'm sorry. I apologize.
+
+>>Docsumo Success	35:39
+I'll just send you, you know, on a separate email thread. I've sent you an invoice. Oh, yes.
+
+>>Min	35:44
+I saw that. I just haven't. All right. All right.
+
+>>Docsumo Success	35:49
+Thank you.
+
+>>Min	35:50
+I got it.
+
+>>Docsumo Success	35:51
+That's about it. Nothing else on our end. I'll just drop you an email and probably we can take it from there then.
+
+>>Min	35:58
+Fantastic.
+
+>>Stefan Z	35:59
+All right.
+
+>>Docsumo Success	36:00
+Okay.
+
+>>Bikram Dahal	36:01
+Have a nice day.
+
+>>Min	36:02
+Thank you. Thank you.
+
+>>Manoj Racherla	36:05
+Bye bye.
+
+>>Docsumo Success	36:08
+Okay.
+
+>>Bikram Dahal	36:09
+So get.
+

@@ -1,0 +1,345 @@
+>>Divesh Mehta	00:01
+Georgiana about why we are having this call. So I am Devesh. I lead the entire product and design team here at Dopsumo, right? And this call is specifically for us to take feedback from you as our valued users about your experience with Dopsumo, how you use it, you know, in your daily work and what feedback do you have for us as Dopsumo to improve the product and make it work 10x better for you, right? So that's the aim from this call. And any feedback that we take from this call will help us improve the product for you and customers, hundreds of Dopsumo customers like you, right? So with that intention, can me and Avinash kind of proceed to one of the first questions that we have for you guys? Yes. All right. So, can you quickly like walk me and Avinash, Avinash is a fellow product manager at Dopsumo also. Sorry, I forgot to introduce him. But can you quickly walk us through like the workflow or how your team uses Dopsumo day to day from like uploading documents to reviewing data to finally using that data? What does your workflow look like? What kind of problems are you guys solving with Dopsumo?
+
+>>Laura Tavares	01:18
+Georgie, do you want to?
+
+>>Georgiana Olescu	01:20
+Okay. So on a day to day basis, how we use Dopsumo, we have loads of bills, files from suppliers that we upload as a bulk to Dopsumo. And the system is supposed to split the files bill by bill. So it should create one file for each individual bill. Lately for one supplier or two suppliers, we had an issue because they changed their format of how they were designing their bills. The system got a little bit confused and it didn't split the bill. I even emailed a few times for it to be checked in the background to see if something could be done about it. Once we have all the bills split, we go into the bills and we check for errors to see if what we need is being picked up by the system. Once we're happy with it, we confirm it and then we export everything as a Csv file then to work on the data we've extracted from the system. Now we use a lot of data table as well to extract those individual bills. We need a PDF file of each individual bill to export it from the system and put it into our system that we work with. Sometimes the data table is just giving us issues as well, just because it takes a really long time to load, first of all.
+
+>>Georgiana Olescu	03:08
+And then if I'm not on the page when I'm loading, so for example, I want to look for a specific bill, I search for it and then I switch the screens because I'm working on something else while the page is loading. When I get back to it, then nothing comes back on my screen and then I try to load it again. It works while I'm in the screen, but it takes a lot of our time just to have the screen open just for the system to load the bill. It would be great if that would be improved as well. And sometimes it's quite tricky just because it doesn't want to action my request just by entering the address or the account number. It gets confused sometimes, even though I've been writing, show me all documents where the account number is this, this, this, or the service address is this, this and that. Sometimes it gets confused and I have to try and search for that document a few, two, three times. Eventually it brings it up, but the problem is that it's really slow to load and it takes a few tries sometimes. And one other thing that would improve and make things faster, so instead of going into the bill, so let's say I processed everything And I'm happy with the data. Now I'm looking for this individual document. Instead of going into the document where it says review in detail to download it, it would be great just to have it on the main screen, click on it, you know, where the window pops up on the right -hand side.
+
+>>Georgiana Olescu	04:58
+Of the screen Just to have a quick view at it. If we would have a separate button instead of going into it, just download it from there directly. Because when I go back from the bill, so let's say I press again review in detail to download it, but when I go back to the main data table, the system loads again, which takes time again.
+
+>>Divesh Mehta	05:28
+Got it. Got it. So I think got it. So one of your key concerns is the time it takes for all the data to load. Second is like the search is not very accurate. You say show bills where the bill number is 1, 2, 3, 4. And sometimes most of the times it fails and then it works. And the entire time you're putting the same query each time, right?
+
+>>Georgiana Olescu	05:54
+Sometimes I put in the account number a few times and then I change it with the postcode of the property or with the property. I have to try it with different information, but I really don't understand why it needs me to try in different types of ways when the information is extracted as it is. So even if I have it on the main screen, I see it on the main screen that the account number is 1, 2, 3, 4. But if I type it in the search bar, it gives me an error sometimes. And I don't understand why, because I can see that it's there. Got it. And we also had the issues recently exporting Csv files. So when clicking on all documents to be exported as Csv files, the download wouldn't work. I think the notification that popped up was saying that the download expired is now processing in the activity log. But when you would go on the activity log page, it would still process for, I have it even now, it's still processing. Probably there was an IT issue because I've emailed twice last week, I think. And every time I emailed, it was sorted on that day within a few minutes, but still there was an issue.
+
+>>Divesh Mehta	07:27
+Okay, we'll take a look at those and try to figure out the root cause. Okay, this is all great feedback. The third point that you mentioned was I think the ability to just download the Csv file for that document directly from the data table, right? Instead of having to go into that document review page.
+
+>>Georgiana Olescu	07:45
+Yes, we would like, it would be faster just to download the PDF document from the data table. So when the window pops up, I'm clicking on the bill. And on the right hand side, I have the window popping up, just giving me a very quick overlook at the bill. I don't have, right now, I don't have a button to say download. I need to go into it and press download. And when I go back from it to look, because we have multiple bills with the same account number for the same property. And let's say I want to download all of them. I have to click on every bill and go in it and download and then go back. The system loads again and then click on the next one and then download the other one. So it takes time. Got it.
+
+>>Divesh Mehta	08:39
+Got it. This is all great feedback. Thank you for telling me and Avinash and being so frank. I think this is all great feedback that me and Avinash can take back to our teams and improve our product for sure. We had a couple of more questions that I would kind of like to go into. So when you do use data tables, Georgiana, right? You're using data tables to also correct some mistakes that the extraction would have made? Or do you use it purely to just show me how you do it?
+
+>>Georgiana Olescu	09:10
+Laura is already sharing her screen. Yes. So sometimes let's say that the address hasn't been picked up properly, right? And we press on the review in detail again. So this is what I'm talking about. Instead of going into the document and pressing review in detail again, it would be great to have a button to download it directly from here. The bill that I'm clicking on, download it directly from that page instead of going in it. But if some type of information was picked up incorrectly and I didn't see it the first time I reviewed the document, I can then review it again by clicking on that button, review in detail again.
+
+>>Georgiana Olescu	09:57
+And then I correct whatever I need to correct And then I confirm the document Okay
+
+>>Divesh Mehta	10:05
+So for example in like the southeast the huddle bill right if you could I Oh it's processed already it's approved
+
+>>Laura Tavares	10:13
+It is this is processed So what Georgia was saying in terms of getting the download in the Pdf file is for example we look for the bill with a prompt in the search bar the bills come in and then on on here we can actually just select and the bill will come here and then we can go into the bill but at the moment for us to download the bill we have to go in to review the bill and then on the left side you download but just to speed it up this is again what Georgia was saying they takes really long time to go back to the page that we were on if we could just select the bill and then here somewhere a button where it says download the bill either here or up here a button that will say download the bill and then we can download the bill as opposed to actually going into the bill and then extract the bill itself Okay And the other thing that Georgia was saying is when we actually have to look up for a bill in here we'll have to write the prompt which it shouldn't be a prompt really it should be for example just the account number we just add the account number or the address and it would automatically bring all the bills for that particular address but on this currently with your system we actually have to write show me all the bills for this account number And then whatever bills are there if are there if it doesn't give error it will bring up bring the bills but other than that it's just a nightmare trying to figure out a way to bring out the bill because we know that the bill is already there it's just a matter of finding the bill that is giving us a little trouble and the other thing that I would want to mention is currently we have bills that we've processed on the old version
+
+>>Laura Tavares	12:19
+And then the new version if we're looking for bill like for example for this address But then some of the bills were already on the old profile we actually have to go into the old profile and look out for the bill as opposed to one window we put in the account number and it bring all the bills in the new version and an old version so this is another thing that is kind of delaying the process of getting the bills out Okay And and the new version I think you mentioned came in because one of your vendors changed the format of the bills and that's why you have two versions is that correct understanding I don't I don't remember why the new version was added I think the old version is because well let me know even getting to that because I'm not too sure why the new version was was added Georgia do you know can you repeat the question please why do we have an old version and a new version
+
+>>Georgiana Olescu	13:22
+Oh that happened back in May I believe yes we waiting with Vishal Or they said that they've updated this is they've done some improvements and they created a new version is called a new field for us And we were supposed to use the new one from May on But you don't use the old one anymore
+
+>>Divesh Mehta	13:50
+Right No it was just because of an update that you guys have done back in May so in this case it would be better if it was cleaned and the old one was not there so that I think like Laura got confused other members of your team do not get confused Yeah
+
+>>Laura Tavares	14:10
+So what I was saying is if for example we at the moment we are on all data that all data And then we've we are on the the new profile then new version then if I'm looking for for bill let's say for this particular address which is whatever and then and then if there's a bill for the same address in the old version it would not show you will only show the bills in the new version so it would be nice if we have if when we put in the account number it will bring up all bills that are related to that customer number on the new version and old version all in one I don't know if that is possible but that would be good instead of just
+
+>>Laura Tavares	14:56
+Of just going back and forth because adding the prompts on the new version, finding the bill or the bill is not here and then having to go back on the old version and do the same thing again. So it is a lot of work.
+
+>>Divesh Mehta	15:11
+So all your bills are kind of okay. So I'll ask a couple of more questions. Very interesting. So when you do review a document, right? Let's say, like on the line that you are the first row, right? Like Docsimo gives you those yellow indicators, right? Saying that, you know, what data we've not been able to extract or what we are not very confident about and things that you would have to review. So when you do review them, you review one entire bill and then download it and then move to row two and then move to row three.
+
+>>Georgiana Olescu	15:41
+No, no. So we upload a big document at once with loads of bills, right? And then the system is supposed to split the document and make it into a bill by bill document. So PDF, Pdf, Pdf is supposed to split the hundreds of pages of bills. And then once we have that, those pages split, we review them before we download the Csv file. Then we work on the Csv file with the data to upload it onto our system for work for Huddle utilities. Once we upload, we work with that data from the Csv, we would need the PDF file of that individual bill. So I'm working for 12th Avenue Street on Huddle. I need to go back to Docsimo and search for that bill to upload that particular bill from Docsimo into Huddle.
+
+>>Divesh Mehta	16:55
+Got it.
+
+>>Georgiana Olescu	16:57
+But the processing of the data is being done before we download the Csv files.
+
+>>Divesh Mehta	17:08
+Got it. So when you do download the Csv file, right? And upload it into your system, is there something that you're doing on because now I'm imagining the Csv file as like 20 rows of data, right? Like for 20 bills, let's say you uploaded one Pdf, it had, for example, 20 bills and Docsimo created 20 rows, right? And there's data extracted in all data And you're seeing 20 rows only right now, you download the Csv for all those and you get 20 rows worth of data in your CSV. Do you do some work on that Csv before you upload it into your system? Or is it just like as it is you upload it? Do you do something else?
+
+>>Georgiana Olescu	17:43
+We work on it. The data from that Csv file is being uploaded into our own spreadsheet. And then from our spreadsheet, we put it into a different spreadsheet. And then from that spreadsheet, we put it into the system, the Huddle system. And when the data from our spreadsheet is uploaded onto the Huddle system, we need to upload it with a Pdf bill. And that's when we start searching for the Pdf bills. Got it.
+
+>>Divesh Mehta	18:21
+So in this case, Georgiana, if I could give you a simple solution, so like when you download the Csv, right? For example, let's say we added one more column to that Csv to say link to downloaded file, right?
+
+>>Georgiana Olescu	18:36
+To download it when I download, to download the Pdf files when I download the CSV. But then, but then if that happens, the files, the individual files don't have names. So for example, if I go to, let me share my screen with you to show you.
+
+>>Divesh Mehta	18:59
+Individual files do not have names. Yes, exactly.
+
+>>Georgiana Olescu	19:02
+So where is it? Okay.
+
+>>Laura Tavares	19:07
+Can you see my screen?
+
+>>Divesh Mehta	19:09
+Yep.
+
+>>Georgiana Olescu	19:10
+Okay, perfect. Southeast, let's take Southeast, for example. This is what most of them, this is what they come up with. It's scanned from Xerox multifunction printer. This is the name of the bill. So if I, whenever I download it as it is, even as a Pdf, this is what it comes up with. So how am I supposed to know even if the Csv file is downloaded along with the Pdf files, then in my files, how am I supposed to locate 12th Avenue Road when it's scanned from Xerox multifunction? I have to click on every bill. Right.
+
+>>Divesh Mehta	19:55
+Got it. Got it. So, in this case, let me for an example, like if you had to name this file something like if you could just click on this file and open it. If you had to name this file something what you would name it, Southeast Avenue underscore some bill number like what would you name it?
+
+>>Georgiana Olescu	20:16
+Ideally, you want to name them.
+
+>>Divesh Mehta	20:20
+Yes, if you had to name it like because your problem is like all of the files are the same names, right? You're not like, yeah, identify for you to know which file you want to you have to open click see and then okay, this is the right file now I'll download this that takes a few attempts and a lot of your time to rename this file, what would you rename it to?
+
+>>Laura Tavares	20:38
+I pick up on the address if you could pick up on the address and name the file the name of the address that would be more than more than enough either the yeah, not the address and the period. Okay, so is it possible, you know, where you have on the old data or where you have to build when we search for the bills And then you have two lines with a particular for that particular address that we looked into you've got various columns which one is for account number customer number customer name, address and postcode and whatnot. If we could have this one in here, then it will be easy for us to exactly see which accounts to select and download it from there. Got it.
+
+>>Divesh Mehta	21:39
+Okay. Okay. Or if you could show you the document name there reverse just show you the document name that that would also solve.
+
+>>Laura Tavares	21:46
+So what do you mean document name?
+
+>>Divesh Mehta	21:48
+So if you go to all data, yeah, that's where you have all of the data in columns, right?
+
+>>Laura Tavares	21:54
+Yeah. Yeah.
+
+>>Divesh Mehta	21:56
+If you could show you if you could just click there, the next one in the left, the third icon. Yeah. Yes. So for example, it is taking a long time to load. Yeah. So you would see similar document names here as well, right? Like scans, Xerox, something like that here.
+
+>>Georgiana Olescu	22:25
+Yeah. All right. Now it has a filter on and remove the filter.
+
+>>Divesh Mehta	22:52
+So instead of seeing Yeah, so you see the file name here and you have all of the account number addresses everything here, right?
+
+>>Georgiana Olescu	23:00
+Yeah.
+
+>>Divesh Mehta	23:00
+You don't have the download option here. So that's why you want to download option here so that you don't have to do multiple clicks figure out which file has what data. So you see the address here, you know, which file it is, and you'll just pick it up.
+
+>>Laura Tavares	23:13
+Yes.
+
+>>Georgiana Olescu	23:14
+Correct.
+
+>>Divesh Mehta	23:15
+That would solve.
+
+>>Georgiana Olescu	23:16
+Yeah. But it would be great for the search bar to work. Yes. Yes. Whenever, whenever we search for something, it would be great for it to work.
+
+>>Divesh Mehta	23:26
+I agree. I agree.
+
+>>Laura Tavares	23:29
+Because without the prompt, without the prompt, just for example, where we see account number column, if we just add the account number, just add it on the search bar instead of the prompt, it would automatically bring all the bills with that same account number, or a service address, or postcode one or another. But, yeah.
+
+>>Divesh Mehta	23:53
+Got it. Okay. I have a follow up question, though. So you said you take all of this data into the Csv, it goes into another spreadsheet. And then it goes into another spreadsheet. And then you upload it to hurdle utilities, right? Like there are two more places where something is happening with this data further. Right? If you could give us a sneak peek into like kind of what happens when you take this data into like the other two spreadsheets. Are there some calculations you're doing on top of this data? Are you adding more data?
+
+>>Georgiana Olescu	24:23
+Yeah, there are loads of calculations that we're doing in the background. So this, we're just extracting whatever we need from, look, for example, there was a bill in there with this account number. I'm just curious to see if it brings it up.
+
+>>Divesh Mehta	24:39
+Okay. Yeah.
+
+>>Georgiana Olescu	24:40
+Oh, it brought it up. Yeah. See, when, has it ever happened to you when something isn't working when you're doing it on your own, and then you're showing it to the guy that can do it? And then you're like,
+
+>>Divesh Mehta	24:54
+It happens to me all the time, but I think you were working in the background to get it done.
+
+>>Georgiana Olescu	25:03
+That's why probably it's working now, but good, but if we enter just the account number, most of the times it's just coming up with a with an error here saying this document cannot be.
+
+>>Divesh Mehta	25:14
+You will see far, far, far less of that happening. I can't promise on the time we're still trying to improve that, but you will slowly see over the next few more weeks, like far less number of times the error showing up because we are actively working on improving this in the last two, three weeks. So even if when we are not on call, like you can try it at a random time, it will work far more accurately than before, but you will see it improve massively over the next one month because it's not just you, we've heard it from other customers also. And that's how this feedback has helped us. And that's why we're going on more and more calls to like take feedback from customers.
+
+>>Georgiana Olescu	25:48
+And you see how we have three bills for this account number. For example, I don't want, I don't want to go in each bill because you see it takes a really long time to download it. I just want to have a click here, open this one and maybe have a button somewhere or maybe a button here, button here, download these. And then that's it. I can go on to the next one instead of click, click, click, load, load, load.
+
+>>Divesh Mehta	26:13
+Makes sense that, I mean, I don't know why we didn't think of it earlier, but it just makes sense because we just, it's the same file. We just have to allow you to download it.
+
+>>Georgiana Olescu	26:21
+It's not a big deal for sure.
+
+>>Divesh Mehta	26:24
+Okay, cool. Cool. We'll, we'll work on making these improvements and updates and all this feedback is awesome. But about like all of those calculations that you do in the other two spreadsheets, I think like we are adding more and more capabilities with our other customers to do this kind of workflow automation for them, right? Like because most of our customers are taking extracted data out from the system and just like you, right? They have some complicated logic, which sits in their Excel sheet macros, right? That they apply on top of this data to come up with a final data set that they upload into their system, right? So it's, they're not doing anything. They're taking the exact data, pasting it in a sheet, some calculations run, they run some values, and then they finally upload it into a system. So we have come up with solutions to solve that. And hence what you mentioned piqued my interest a lot. So I don't know if you have the time today or maybe some other time, or if you want, we can look at it today. Also, if you want DocsMove to kind of help you do that entire process, also, I think that's something that we should be able to do in the next couple of weeks, if you want, like you can, if you could show us, we could probably give you a solution around that as well, because we've launched, you'll see in the next week, like the emails will go out. And if you'll see Linkedin, our CEO has already announced it also on Linkedin, Rushabh said, that we've just launched a Ai enabled workflow automation system that actually solved this problem, because we've heard it from like 10, 20 of our customers now, that they want us to solve for them also.
+
+>>Georgiana Olescu	27:58
+Laura, we can't really hear you.
+
+>>Laura Tavares	28:00
+Yeah, I think with that one, it's going to be a bit more difficult, because we, for example, for each supplier, we've got different spreadsheets, well, it makes calculations in the background, based on the meter readings, the consumption, the consumption, the tariffs, as well, because all suppliers have different tariffs. So it's a bit difficult. I can show you one that we're working in at the moment. Bear with me, let me just bring it up. Right.
+
+>>Georgiana Olescu	28:34
+So the thing with the automation and bulk importing, it never worked for water and for us, because there would give us loads of errors. Let's say it would work for the first two bills, but then on the third bill, it would give us loads of errors.
+
+>>Laura Tavares	29:03
+Yeah, that is true. So with this sheet, we've got a tariff scene here. And we've got all the properties that we have for that particular supplier that we've taken from our main sheet into here, because on the main sheet, we've got all suppliers combined. But for this one, because it's only for United Utilities, we only extract the ones for United Utilities, we add it here. And then in here, you would have, for example, in here, it's got the start read, and the most, the latest read, and then you've got the consumption and the consumption per day. And then in here will be the accumulation of all the bills that we received so far, and the dates of the bills.
+
+>>Laura Tavares	29:53
+And based on the table, based on the figures, the tariffs in here, we will have on this side all calculations based on the number of days, tariffs for some period, because the tariffs for fresh water is different than waste water. They've got a standing charges for a period for the first six months and then the standing charges for the next six months might be different. So we've got all of these calculations to do before we can pull this information into our main sheet. In the main sheet, this is only for metered properties because on the main sheet it will be for metered and measure for the ones that don't have a meter. So this predict is only for metered properties. Once we are all happy with this information, then it will be added to our main sheet. And then the main sheet is where me and George work through it. But then apart from the main sheet, we have an internal database where we have all the properties in there. And we have to also add the information, the bills and whatever into that main database. And on that main database is where we have to also add the PDF file of the bill that we're working on. I can show you as well. Let me just, I don't know if you want to add anything else to it, George, while I'm looking for Phoenix.
+
+>>Georgiana Olescu	31:38
+No, that's fine.
+
+>>Laura Tavares	31:42
+Okay, so this is our main database where we have a profile for each address. In this case, we have water on the previous contract for this period, which we will then have the suppliers in here, supplier contracts. And then on this main page, on this supplier billing is where we will add the bills for each supplier. And then each line here is basically the same thing as Docsumo, where we've got each line for each bill that we get. And then in here is where we should add a copy of the PDF file. And then when we select when that is active, and we click on it, the bill will come up. So this is everyone in our business can actually have a look and see the bill instead of coming to us and asking for the bills if they need the bill.
+
+>>Divesh Mehta	32:48
+Got it. So Docsumo gives you all of the metered readings, the start date, end dates, the addresses, all of that as a CSV output. Then you use your database, which has rates, volume based discounts based on different supplier contracts. You might have different sub suppliers inside of other utilities, right? So there's a different contract for each of them, based on the address and the sub supplier or the sub supplier for that area for that address, different rates, different discounts, I don't know, like different contracts. So you come up with like a final bill amount, which you showed like there are like six, seven rows, each with pounds, right there.
+
+>>Laura Tavares	33:28
+So you come up with all of that bill.
+
+>>Divesh Mehta	33:30
+And that's what you come in and upload here. And then you also have to upload the Pdf, which is the original bill. So yes, someone who's looking at this row, yeah, can not only verify the final bill in the in pounds, but also the actual meter reading start date and dates if they want to like check what's happening.
+
+>>Laura Tavares	33:47
+Exactly, because sometimes we do have our customers, they ask for copies of bills, because they they they need to verify for themselves that the what we have on our system, it is correct. So instead of just us going to upload each bill from the our saved Inbox, because on the main, our main inbox, on that main inbox, only myself in Georgia will have access to it. But then if we add everything in here, anyone, any our any of our customer service members, they can come in here and say, Okay, so I've got all of these bills, the tenancy is requesting the bills, download the bills and send it off to the tenants.
+
+>>Divesh Mehta	34:29
+Got it. Makes sense. Makes sense. So just I'll, maybe not today, I think we're almost going to hit time. But this is definitely something that we've solved for other customers and are solving right now. If you want, we could run a small pilot with you, we just need like an hour or two of your time and probably the data that you shared. And we can show you how we can kind of automate this
+
+>>Divesh Mehta	34:52
+This end -to -end for you so that what you will need to do is just verify the values and then upload it into the system yourself. I think we should be able to do it as Docsumo very soon. So if you'll be interested, I can reach out to you.
+
+>>Laura Tavares	35:05
+Okay, that would be great because in the end of the day, I know that Docsumo has helped us a lot in terms of getting all the bills combined and then work through it because it makes it easier for us to carry the data from one side to another. But still, there's a lot of work in the background to be done up until the final product goes into our main database. So if you have ideas on how to improve that, that would be really good.
+
+>>Divesh Mehta	35:40
+Super, we can do it. I'll set up another call maybe two weeks from now and before that, I'll show you a quick... I'll show you what Docsumo has built basically that can help power all of this and we'll take your sheets and try to build a workflow on our side and then show it to you how it works and we can improve it to your accuracy. But I'm very sure we'll be able to do this. I'm sufficiently confident we'll be able to do this.
+
+>>Laura Tavares	36:02
+Okay, yeah, but for the time being, we just need these small things very fixed. Those get done first. Yes, the thing that I was going to say as well, the speed on Docsumo has never been that great, to be honest. I don't want to be rude or anything, but it's never been that quick to get any file up. But it seems like it's just... I think it's because it's got a lot more information now and it's becoming a bit more tricky to get whatever we need up. If that can be sped up, it would be wondrous.
+
+>>Divesh Mehta	36:43
+100%. Please don't worry about being rude or not. This is why me and Abhinash are on this call as the owners of the product, both of us, to understand your problems and solve it for you. You're not the first one. I think as Docsumo has grown and it's scaled like 100x in the last couple of years, with that scale, we've seen some performance degradation and we'll be working through all of December to improve it. So you'll see, we've noted all of this down and probably next time when we come on call with you in two to three weeks, we'll also show you a few of those issues solved and the speed one will take some more time because it needs a system overhaul. It's not very easy to re -architect an entire working software, but that's something that we're actively working on also. But you'll see improvements in the speed as well. And we'll solve a few of these problems next time when we come on call for you, for sure, because they just make sense to me that I can't figure out why we've not done it so for sure.
+
+>>Laura Tavares	37:33
+Yeah, the more heads work on something is always better, isn't it? One thing, so if we have any issues with Docsumo at any one point, what do you suggest we do to get your team and get this sorted out as soon as possible? Is it via email? Do you have a button in your Docsumo for us to speak to someone live? How does that work?
+
+>>Divesh Mehta	38:06
+Solomon, do you want to answer that or should I take it?
+
+>>Solomon Rajan	38:12
+Yeah, sure. So for now, you can reach out to us on email and we can get on instant calls.
+
+>>Laura Tavares	38:21
+Okay, so you suggest that emails will be the quickest way to get things done?
+
+>>Solomon Rajan	38:25
+Yes, correct.
+
+>>Divesh Mehta	38:31
+All right. Yeah, definitely. I think there is a support email or success email that you can reach out to. But also in the future, if you're having any issues, something or feedback that you have, you have my email or you have my name, feel free to directly email me as well. If there's something that's paining you, if you think the improvement in product would make your life and life of other customers like you for us easier, better, then they will love Docsumo More. Please feel free to directly reach out to me as well. It's not a problem. Also, we have this option inside the product. So I think now that you're mentioning it, we'll have to probably make it more cleaner. But if you click here, you could also go here and share feedback. And this directly goes to our management team, including me and the founders and the CEO and the CTO. This feedback that you enter here directly goes to them. So next time, if you don't feel like you want to get on a call, you don't want to explain, you're too frustrated, you just click here, be as raw, as real as you want and just hit submit request and it will directly come to me and the management team And we will be taking care of it.
+
+>>Laura Tavares	39:42
+Okay. And how do you get back to us? Is that going to be via email? Are you going to email us back with the response?
+
+>>Divesh Mehta	39:47
+Yes, yes.
+
+>>Laura Tavares	39:48
+And with that, you would know that the...
+
+>>Laura Tavares	39:51
+The feedback came directly from us.
+
+>>Divesh Mehta	39:55
+Correct, yes.
+
+>>Laura Tavares	39:56
+We don't need to add our name.
+
+>>Divesh Mehta	39:57
+Yes, no, because when you submit it, you will be logged in, right? Like we'll have your name and your email ID. So we'll know who submitted it And we'll be able to reach out to you within the next 24 to 48 hours to figure it out.
+
+>>Laura Tavares	40:09
+Okay, since I've got you on the call at the moment, that is, I've got one thing for you. So there was a disagreement in terms of how we upload our Pdf file and then for the system itself to split the bills accordingly. Where previously we had the impression that we can add, let's say, one bill's got four pages, but only two pages have the information that is needed to be extracted on your system. The other two pages, it's got just noise or empty. And we were told in the beginning that we can add all four pages. The system will automatically pick up all the information only on those two pages and we'll only be charged for those two pages. But later on, we've been advised that was not the case. So if we add four pages, four pages are accounted as credit, even though the two pages that they have been put in are basically useless. But because of the way that we have to scan the documents, it's long -winded if we have to do it one by one just to get the information that we get. So how do you suggest we actually upload, if there's an easy way for us to get all of this uploaded onto your system and that you won't get credits for pages that are not necessary? Got it.
+
+>>Divesh Mehta	41:43
+So I think that would have, I don't know, Solomon, if you know about the issue or should I answer it?
+
+>>Solomon Rajan	41:50
+No, I think you can take it forward.
+
+>>Divesh Mehta	41:53
+Okay, so what happens is I'll explain like why it's charged first of all, because as a customer, you should know why it's charged, right? When we do the extraction, we do it page by page, right? And our systems attempt to extract data from that page, even though it might seem empty to you, but systems don't know it's empty, right? They make attempt after attempt after attempt, because when we try to extract data and we don't get any data back, the system actually makes three attempts thinking that it's the system's fault or Docsumo's fault that we're not able to get data. So we actually do the same extraction on that empty page three times more than we do it on a page with data. So that's why for us, we don't know until we have extracted and run all of our technology on that page, even though it's blank, that that page is empty is why you have to be charged, because we do do the extraction on that. So that's the first reason I like to transparently explain why it is charged. And I don't know probably how that miscommunication happened. I'll go back to my team and try to figure that out, but that's the reason why it's charged first of all. To answer your question about how, yeah, sorry, go ahead, Laura.
+
+>>Laura Tavares	43:03
+Yeah, you can go ahead, sorry.
+
+>>Divesh Mehta	43:04
+Yeah, so to answer your question about how you can avoid it, the only way to probably avoid it would be to ensure that there are no blank pages, because we don't know that the page is blank until we run extraction on top of it, right? So we won't know that. The only way to avoid that is kind of probably not add those pages in your PDF. And I think it might be difficult because you also get an entire Pdf role from somewhere and you just come in and upload it. But we'll try to see if there is a better way to figure out that a page is blank and not extracted. But we'll see, we'll take that feedback as well and we'll see if we can do that some way to help our customers like you and not charge them for things like that. But we do attempt extraction on it and that's why it's charged.
+
+>>Laura Tavares	43:49
+Yeah, okay. I'm trying to find a one, a bill, one bill that would actually have it like that.
+
+>>Georgiana Olescu	43:58
+Go on, Dems.
+
+>>Laura Tavares	44:00
+I've got one here for, on Dems you're saying, right?
+
+>>Georgiana Olescu	44:05
+Yeah, okay. The one that has four pages, I think is the last one that's useless. But I can't take it out.
+
+>>Laura Tavares	44:15
+Yeah, because it is weird because for example, we've got two sets of documents and then the first page has got the information we need. The second page has information we need. The third page has and the fourth doesn't. Or it has information on the first and the third and fourth but not the second, if you know what I mean. So it's tricky to get all of this compiled together and then upload it onto your system because then we kind of have to do it.
+
+>>Laura Tavares	44:51
+To go into the scanner and then just select page by page by page what needs to be removed and what not. So if is a better way to do it, we would love to hear from you.
+
+>>Divesh Mehta	45:02
+Sure, we'll try to figure something out around that. But first I'd like to solve actually the problems that you mentioned that you're dealing with day to day. And then we'll come back to this one. But the ones that you mentioned earlier, definitely we'll solve and this one also we'll have some kind of response for you next time we speak for sure.
+
+>>Laura Tavares	45:19
+Okay, wonderful.
+
+>>Divesh Mehta	45:20
+If we're able to solve it, if we have some plan of solving it, if we have some way for solving it, we'll probably provide a solution or we'll have to do some larger work to figure out how to do it. I'll have a response back because it needs some technical discussions. Thank you.
+
+>>Laura Tavares	45:33
+All right. Okay.
+
+>>Divesh Mehta	45:36
+All right. I think we're bang on time. We are a minute late. All right, thank you. Thank you for all this feedback, Laura and Georgiana. I look forward to speaking with you guys again in probably two weeks or three weeks from now and showing you how we implemented some of the feedback that you've given us. Right? And then understand more about your use case and try to implement that and show you how Docsomo can solve those also. So look forward to our call probably two to three weeks from now.
+
+>>Laura Tavares	46:06
+Nice one. Okay, great.
+
+>>Georgiana Olescu	46:07
+Thank you so much.
+
+>>Divesh Mehta	46:10
+All right. Feel free to reach out to me directly anytime or through that share feedback on our product.
+
+>>Laura Tavares	46:14
+We'll do. We'll do. Thank you so much for your time.
+
+>>Solomon Rajan	46:18
+Have a good day.
+
+>>Laura Tavares	46:19
+Bye. Bye -bye.
+

@@ -1,0 +1,303 @@
+>>Neil	00:04
+Hi, guys.
+
+>>Bikram Dahal	00:05
+Hi, Neil. How are you?
+
+>>Neil	00:06
+Not bad. Hey, not to change subjects, but Vanessa just sent you an email. We're going to send you something. Yeah.
+
+>>Bikram Dahal	00:15
+My team is applying on this one. There might be a temporary issue. For now, the team will walk around to use the double tick. We're just looking into the issues when that is happening. Okay.
+
+>>Neil	00:30
+No worries. Just want to make sure you solve it.
+
+>>Bikram Dahal	00:34
+Okay. Yeah, Neil, so I received the emails, so I went through it. So there were a few things I wanted to understand and also wanted to check if you were able to make the documentation regarding what action is done on each of these emails.
+
+>>Neil	00:57
+I haven't had a chance to, for each email, what it does. But what I think we would want to do is, on our last conversation, like you're kind of demoing the idea, we would build an API call for you guys to each type of scenario. Okay. So I think that once we have that mapping, that would probably handle that part, right? Yeah.
+
+>>Bikram Dahal	01:25
+That will handle it. So one quick thing. Let's go through a few emails so that I understand like where it is coming from. And then it will also give you an idea of getting what kind of APIs that you guys might have to, we can use them. And if you pay that, you might have to build.
+
+>>Neil	01:38
+Right.
+
+>>Bikram Dahal	01:39
+You will have to figure out like which of these APIs might only exist, it's just that you have to expose it out through some keys. So just wanted to understand a few things because I went through the email, so I had a few confusion, right? So let me share a skin, go through one email thread. What is the action that we take on all of this email? What are the questions that I have? And then we can also record it so that we can figure out if there's anything missing at the end. Okay.
+
+>>Neil	02:06
+Okay.
+
+>>Bikram Dahal	02:07
+Let me share the skin first. I'll just share the computer screen. Can you, can you see my screen?
+
+>>Neil	02:17
+Yeah, I see your screen. Okay.
+
+>>Bikram Dahal	02:19
+I'll just check the email. Okay. So let's start with this image. This is the, like, I think all the emails over here are of thread. So like you start with one email, then there might be some additional information that you might need. And then someone will say something then like, it's a, like, it's not just one, like email and one job. So it can be a job. It can be a long, long running job also. So let's go through this one. And then we'll go through into, like, through, like, other things. So, yeah.
+
+>>Neil	02:51
+Starting from the top, this is a carrier. Okay. And they have access to our system, our portal. Okay. And they want to know the, if these orders are in our system to schedule. So the first thing from a technical standpoint, we would want to do is each of these users actually have portal access. So like that email address, Kathy at Fbc, we would have you authenticate their, that username. Okay. With the, with the API call. Yeah. To confirm what, um, to confirm what access this user has, right? Like what carriers, what, what data. Okay. Because this gets filtered by, we filter the data by user. Okay. And they can only see and update that, that set of data. Right.
+
+>>Bikram Dahal	03:46
+And that is always based on email ID or like a, like a user. Yeah. Email address.
+
+>>Neil	03:50
+Email address. Well, well determined. Um, so pretty much if they, if how I foresee it is if a, uh, email you get. Yeah. The email address is not on the, uh, our, our table for our portal users.
+
+>>Bikram Dahal	04:08
+Yeah.
+
+>>Neil	04:08
+We don't action anything like we, we, we, maybe they need a user. That's fine. But like, we wouldn't do anything else. Okay.
+
+>>Bikram Dahal	04:15
+Um, so like for now, I'd say that, uh, for the sake, um, if this user is, um, VB. Okay. And then an advantage of which, and what, um.
+
+>>Bikram Dahal	04:30
+Uh aces they have yeah
+
+>>Neil	04:33
+Uh and access is like the data you know uh we we filter the data by by by only they only see what they need to see
+
+>>Bikram Dahal	04:42
+Okay sounds good uh so the first job is that uh no matter what email you receive you first figure out if the user that's a user that like um you have in database or not after you figure out they have a database now in this case what uh this has uh like they had access they have sent you the customer supply and Po numbers
+
+>>Neil	05:03
+Right so the tell tell on this is is because they ask on the bottom right do you show this available on your system can you make it visible to fast break um Okay So um first question is is this in our system so the the po number is what you would reference um to uh to find the order um in the in the database and is it always a pure number or sometimes it also can be um the viewer number that you might have given if for the case where they want to check something
+
+>>Bikram Dahal	05:37
+Right So Yeah
+
+>>Neil	05:37
+We have we have numerous fields we have we have uh this is i think where the api may help because we have a po number we have order number we have reference number um and currently the uh when people do a search they can just put a pure number and they will find it or they will have to say order number and then only can put order number No it's any any any of those uh any any po order or reference reference number or difference
+
+>>Bikram Dahal	06:06
+So and they didn't have to it will say oh this is your number or anything you just have put a number and if something matches they will say for yeah within their data set right within their data access
+
+>>Neil	06:17
+Um genic search
+
+>>Bikram Dahal	06:19
+Okay Right
+
+>>Neil	06:23
+Okay um
+
+>>Bikram Dahal	06:26
+And then like um um so if people have to do it manually uh they are going to copy po number look into two or two zero six four and if they find something uh with this detail so after you do it you also have to make sure that because pure number can sometimes be repeated right because pure number is coming from external vendor so two vendor might have the same pure number
+
+>>Neil	06:46
+So right so supplier uh supplier is is in this example So one thing we got to kind of have to as you know in emails people use different terminologies all the time Yeah So we we can use either the supplier or the customer as a validation and even the case count they list the case count there okay number or customer or case count
+
+>>Bikram Dahal	07:13
+Okay
+
+>>Neil	07:14
+Yeah
+
+>>Bikram Dahal	07:15
+So you uh so if someone was doing it manually they'll first put up your number and then um they will see if they are like if this value is no yes or no and then um like they'll make a one more table always saying that visible on um bb right So the final output from this might be a simple table with all this information and one more table over here that says is visible on bb is called is no is No is No right
+
+>>Neil	07:39
+Right now just because it's visible it needs to So you see the second question can you make it visible to fast break So she's asking she's actually asking you if it exists okay to if it exists But but not under fast break to update it to fast break what is fast break a carrier like Okay
+
+>>Bikram Dahal	07:57
+So so they can choose okay So like uh so this vendor can also choose what carrier to use well they're they're requesting it
+
+>>Neil	08:08
+But i would want it to probably have that prompt for a user to come to other user to to say yes go ahead and do it Okay um
+
+>>Bikram Dahal	08:18
+So um i'm like um where all the women has to intervene and everything that i'll come in a minute like because like we have figured out where to intervene But if woman says yes and then like um there's option that you guys have and that will change the uh uh so if exist like um user
+
+>>Neil	08:37
+Right so this is where you guys would okay So like the the first one above you guys would call it a a order uh um api like order status to try to confirm results Yeah And then the third one would be like an order update
+
+>>Bikram Dahal	08:53
+Yeah order update um And then that is based on the same and this is just the um status uh yes um And then you just have that um So i'll make that uh later on so an order update uh what other things people can update they can order or update everything or there are certain set of things they can update um and so a customer so this is a carrier and and when they when they validate their user they not only will it say what what can they see
+
+>>Neil	09:25
+But it's it's It tells them what kind of um role
+
+>>Neil	09:29
+They have and if it's a customer role then they can update pretty much anything on the order um any field on the order which again you guys would have an api call and and go from there right if it's a if it's a carrier all they can update is um well really um all the only thing that would be updated would would uh well you can update uh from an order standpoint you would only update a carrier Okay But you would also a carrier would also be able to request an appointment which is a different api call okay um appointment
+
+>>Bikram Dahal	10:06
+Uh okay we'll come to that in a case so for now like like i'll just make one proof for now And then we'll add more complication and everything um like um it's for the new that we think over there we say Okay i think uh for this first email uh like this workflow i'll make it better But right now i'm just making it roughly on it so this one doesn't make sense so first no matter who gets an email um you check to get the email id and check if they have the permit like what like if the user exists or not now they don't exist then for now we don't do anything if the user exists you first figure out what are the ss that they have um and then maybe based on this will make one token and that token will be sent to do this search right And then i'm like if they find something and then like you really like And then this thing matches then you you make a table something like uh this saying that i like oh it did exist exist right after that job is done then there's a second intent over here that um can you make it visible now like it will just say exists exists exists and then uh the tax is uh ready and the next tax comes is that because it has two intent on the email um what will happen is that uh there will be approval woman in the loop that says that oh this tax one tax is done but the second tax is left you go you approve and then for each and every tax that says uh exists then if you have to change it to fast break then you say sss change to fastback complete sss if you think about it the final email that goes to user is going to be a table with existing um like um bb and change to fast track is called true if that is done then this this transaction there might be other will come this is a complete transaction like a complete tax to be done for a person
+
+>>Bikram Dahal	11:51
+Right correct
+
+>>Neil	11:53
+Okay sounds good
+
+>>Bikram Dahal	11:54
+So then uh let's go to this one i'm like uh so here the the question like the agent says that only this is ready uh So um then after that uh can you change this fabric uh we are picking it from and now now wait so like this one soon it's uh i did it total opening soon And this looks good there's one coming into your decks so in this case is actually the same thing for Oh Yeah
+
+>>Neil	12:19
+Yeah Yeah She wants to know here's one more check on check if you have this one but this is exactly same as
+
+>>Bikram Dahal	12:25
+Oh no this is not so
+
+>>Neil	12:26
+Yeah I think it's different right scroll up Yeah this is the difference
+
+>>Bikram Dahal	12:29
+Yeah So in this case now this is this is a part of which check you out So basically the it's just asking for the status or c is expecting it to change to fast track also pretty much she's implying the same thing Okay so this one will check because this is this is what the ambiguity and everything will come and we'll figure out like how to get home and inbox um Yeah a bit this one to see from here But i think then this is different so at least in this point you change it to fast track only but behind this email you'll change it to or like air back uh she
+
+>>Neil	13:02
+That last So she's saying updated like she updated the carrier And she's just letting him know that this is shipping at a different warehouse But it's it's not it's not updating anything so we have numerous You know we have 30 warehouses Right Um so it's just letting her know that it's shipping out out of a air park Okay
+
+>>Bikram Dahal	13:18
+So it's just that after this is done then you are just sending us summary email and you are sending that extra information uh just to say that Okay Yeah This is done like both digital i can see i'm like i have to change it to this one But i'm just giving this extra piece of information i'm like um okay makes sense um auto update um anything that uh we should know on this case uh no that one's pretty straightforward Okay then let's look into the next one i'm missing uh bol so it says can you please forward the invoice for pure one one seven one day so in this case so the email was sent by your team but the Po was missing the invoice was missing uh let's go to where what's the first email
+
+>>Neil	14:07
+Oh Oh so we sent yeah So we send uh daily uh bill ladings uh documents Yeah uh the attachment on the bottom And she's saying she's saying the the customer's saying can you please also send she says an invoice it's really the bill of lading for that po uh
+
+>>Neil	14:28
+Uh and and so scroll up first let's see what it says um and it says if there is uh Oh sorry uh Please no no go that's just like i think that's in a uh what's happening here new po regards to all the following all need to be verified um i think this one's kind of hard what they're saying that that's just that's a signature I don't think that's anything um i believe scroll up further more up Yeah uh please forward invoice But did not receive building i'm training from the portal Okay Yeah She wants she wants a copy of the bill elating um for these two orders right
+
+>>Bikram Dahal	15:20
+So again that would be uh you would you would validate her user that has access to that order and then we have um you you would have an api call to to get the building based on this one for example in this case based on this one um like let me say i call the like based on this one like if that metadata also has a link to a uh like because similar to this project where i use a pure number And then i figure out Okay these are the right that one so same thing you do over here also and if that metadata has a uh url to a file and it has a permission then you download it and you send it over here Right
+
+>>Neil	16:05
+Yeah we would have to send it to you i don't know if you would want a pdf or or a blob or whatever But um
+
+>>Bikram Dahal	16:10
+Okay this is a bit different because the action that you are doing is uh download also So like um so one more thing on the search after source uh you can do this update that is one But there's one more action that also can happen is let me just put it here user approve is uh download uh pulse And it has to reply because in this case that's exactly what is happening like um you are downloading a po So And then you are right before you apply it Okay And the email can be like ready And then okay I understood okay This one uh sounds good might be a bit tricky we'll figure it out like um
+
+>>Neil	16:50
+Yeah and that one may not be the best like you'll As i can say i probably can send you more examples you'll see like things that happen more often than others yes makes sense um Yeah this is the report so they want they want to update an inventory of uh triumph and titan So um again you authenticate the user And then you would call for uh a report you call for uh like a report
+
+>>Bikram Dahal	17:14
+So uh will this api give you the complete uh uh so there's one right on a generic search uh there's also one more api and then that will that will give you the report um
+
+>>Neil	17:27
+Yeah i think we're going to have an api for different things api for orders api for inventory you like uh orders um
+
+>>Bikram Dahal	17:36
+Yeah inventory Um Yeah i think based on now the paper order will be source based on this Uh if i find inventory will be maybe so just based on the uh like uh based on the user um like user email um because inventory you might only care about the um carrier or like the company Right so like you just need it for everything okay that should not be issue Okay uh makes sense um then here you just get that make that into a proper table Or it has that into our csv file and send it so usually you guys send it on the email or make our csv file and send it we would send in a csv file
+
+>>Neil	18:10
+Okay
+
+>>Bikram Dahal	18:13
+So you you get it from Jason Convert that into csv say that Okay here's your report and then send it request for this one Okay uh makes it makes sense so this one good afternoon this one i want to see if there's any information on this if not show it on a schedule you know supposed to be going to this one i think we got added onto the email so you can see that this this first email chain is not to us and Then and then they say this is a bi g order can you update carrier to oh um so this is this is almost the exact same request as the first example exactly but the extra question you have to be about is uh figure out that this email was not for us because the email can have a longer thread so the one important thing um in the filtering side let me just use uh this is even before that filter the email on thread and make sure you only take an action for email sent to you because this will happen frequently because i also like
+
+>>Bikram Dahal	19:27
+Just we'll just forward it to this one so the requirement is simple you just take it and send the carrier to once it's done then you can just uh send a summary of our emails it can be an idea right now it's not nice But once you do it you can just call the this apa you can just call this search apa get that data and make it into a proper thing that open it has been changed And then that should be good enough right Okay uh make sense um
+
+>>Neil	19:53
+So this is uh what is that that's a uh appointment request so this one's kind of this one Actually you probably could ignore the the well maybe not so this user customer or created
+
+>>Bikram Dahal	20:11
+Yeah scroll down
+
+>>Neil	20:13
+Yeah And scroll back up Sorry general um ignore this one this is a bad example
+
+>>Bikram Dahal	20:22
+Okay email that you use your team has sent so like uh
+
+>>Neil	20:26
+Right right i'm i I'm the one that sent them But i i didn't do that one correct I guess so this one uh appointment update so it looks like they we they got an appointment that first emails The appointment right they they went on our portal about appointment
+
+>>Bikram Dahal	20:41
+And then we asked them do you have any eta of this driver this has not been scheduled actually this this might be one thing that you could uh automate as well too to send out to call see what uh uh orders have not shown up and then send an email asking for etas okay give me a second that is something that we are looking into making a proper workflow and everything um this one so let me just get your requirement uh requirement uh uh for another site Cron job to check um few status on product and send email base on that example is if if um people have appointment but it has uh bus uh but people have not uh but we have not received we and but it at us has not been updated after uh 30 minutes at 30 minutes of an appointment then you just send this email right like that um so that like um this can be automated Okay uh that is what we're right So equipment means like i go to the portal i make a new like fedex level example if you look at example of fedex I make a label And i say that uh i'll be in your place by 1 PM But i'm not like um by 1 PM or like uh like uh the eta is not like vertical um like um um um then um so this is for your team to pick up or they come into you uh
+
+>>Neil	22:23
+No they're coming to us the carrier's coming to us are there any cases where you guys go to them uh not not through this team and and not not not through this scope No no let's say no for now Okay sure So the eta here no the xm is to be done so this one that's the answer from the carrier and then now they're saying pretty much it says that the driver's held up right they're working on eta And then they
+
+>>Bikram Dahal	22:50
+And then they reply back saying that they need a new appointment pretty much they can't make the original appointment so in this case uh in this case do you guys uh make a cancel that appointment and make a new appointment or just we can reschedule you'll reschedule the appointment so in this case the thing that you are doing is that uh it's something orbit only so in this case um it's actually
+
+>>Neil	23:11
+So i think we're gonna make a call api call for order like i said order inventory another one for appointments there's a lot of options and appointments Okay
+
+>>Bikram Dahal	23:20
+But you are update
+
+>>Neil	23:23
+Yeah you are updating the appointments Api
+
+>>Bikram Dahal	23:25
+Okay sure um let me just do it And then uh all of this will go to the same thing like up So if they exist then you uh like you just do the changes and the change will be different for order inventory and apartment like this one would be different so that will different validations right like because you'll call like go back to the email for a second they're gonna say um you know we asked them what time do you prefer
+
+>>Neil	23:48
+What what Yeah And they're saying uh i put tomorrow they're not saying giving you your time
+
+>>Bikram Dahal	23:54
+So you're going to ask like what time tomorrow
+
+>>Neil	23:57
+Right they actually say on the very top can you please set it for 11 a .m scroll up more okay 11 a .m tomorrow Yeah
+
+>>Bikram Dahal	24:04
+But initially initially they say like what time you prefer they don't say it i'd like the appointment is missed it looks like the same user sent to me two emails um
+
+>>Neil	24:14
+But she said 11 And then okay And then she confirmed that now when when when it's not like we have openings all the time when they say a date and time we you have to call it to see if we have it available
+
+>>Neil	24:26
+Available time slot for that Okay
+
+>>Bikram Dahal	24:28
+And that is that one you guys do so example if this happens manually then she calls someone to make that information or like they have some kind of place where they can see if there's a appointment is available at 11 a .m.
+
+>>Neil	24:42
+Or not they can go on our portal or they can email us pretty much for for appointments and reschedules no no
+
+>>Bikram Dahal	24:50
+But in this case they have told that okay this after that I want it for 11 like can you set it for 11 tomorrow right the team has told that like it can be seated for 11 a .m.
+
+>>Neil	25:01
+So when the email came what did the customer success do they went on our system and they updated the appointment date and time no mom that one they updated but how did they figure out if that time slot is available or not like you said there's there's the system is is is telling you the available time slot so it's on the call you're gonna you're going to when you are going to be able to figure it out
+
+>>Bikram Dahal	25:26
+And I got it like um So um when you're a bit if I put lab in they don't allow me to do it Or it will give me an option to choose from well it we
+
+>>Neil	25:34
+I how I envision it it will it will come back saying it's not available But we'll we can we can then come tell you them the the earliest available time Okay
+
+>>Bikram Dahal	25:43
+Okay Sure I'll make sense and that will also be through API only so like that one I'm a bit Um I'm not sure like how that part would work or otherwise like if there's a page is just uh give our available appointment time um then we can choose from them that is a j1 then that's another way to
+
+>>Neil	25:59
+Yeah We can you can call the day and get the times and then we can you know And then you get a list of times and you can pick the time from there Yeah
+
+>>Bikram Dahal	26:07
+So that might be a one Okay sure But like this one like we'll see because what are they available on the appointment will determine those right if that is there then that's a j1 Then you don't have to rely on that it can go and say that oh lab -in is not available but I have one or three and then
+
+>>Neil	26:23
+Right Yeah And then you choose I know I was a little late I can only do 30 minutes today on this call But you know I only have a couple more minutes but do we want to I know we have some more emails to go through
+
+>>Bikram Dahal	26:33
+Do we want to make another meeting this week if you're available sure we can do that like if like if it is a bit earlier that would be a bit better for me because the team on the I can start anytime 8 a .m. Pst or after okay can we do it for tomorrow or day after Yeah
+
+>>Neil	26:53
+I think tomorrow should be fine let me double check Okay
+
+>>Bikram Dahal	26:55
+Sure I'll go through this this one also you can forward me more emails because otherwise I'll do it over the day after because this is my passage to my team I also want to make sure that they have those or and if you want it if you want to like confirm via email and
+
+>>Neil	27:09
+Anything like like you know just ping me But yeah tomorrow at 8 or Thursday at 8 is fine Fyi we're currently Yeah working on these API calls so these API calls are not built right Yeah But But it is a project we have I have one developer actually Venetia She's she's tasked to do API calls for the foreseeable future So okay
+
+>>Bikram Dahal	27:33
+Sure sure I'm like anyway like like I said up like a page always better but like for quick testing problems and everything the UI is also like not that like that also be interesting one to check it out so like the when it goes into production we can always do the like API or the thing on our side also we can make some dummy API calls right So for taking proper and everything we do not need to have a complete API set and everything there's no more like Okay this is a pay you guys are going to build and this is how it's going to be we can make some dummy API so we can test it right we can just test it on the UI with some dummy data and then like if everything is working perfectly they're not going to press it by dummy like other Ula pH
+
+>>Neil	28:10
+Right right okay sounds good so that's a meeting for if you want Thursday that works for me
+
+>>Bikram Dahal	28:15
+Sure I'll just go to the email sound like and then if there's anything extra I'll ping you on like otherwise like we can have one call for Thursday for sure because I just want to make sure that you have guys have a clear idea about the what are the page you guys are building And we're on the same page and that should be fine
+
+>>Neil	28:27
+Okay sounds good Thank you
+

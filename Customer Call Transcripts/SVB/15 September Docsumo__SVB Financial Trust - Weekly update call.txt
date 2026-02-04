@@ -1,0 +1,474 @@
+>>Manoj Racherla	00:00
+Ok, can you hear me now? Yes, I can. Can you? Perfect Yes, great great social. How was it again? Oh good, how are you guys? So did you get time to go through the files and the extraction?
+
+>>Vishal Arya	00:22
+I have a little bit or just been.
+
+>>Manoj Racherla	00:25
+Any console busy with?
+
+>>Vishal Arya	00:27
+I'm not at the moment. I think again I'm looking at the data. Let me look at it now. You know, I think it's it's fine. I just we just have to go through some of these. Uhm? One second, let me go to your website right now and find the data again. I don't think there's that immediate of a concern because I think there's a lot of data points and it would just be that for us to go through each one and just make sure, right? That's the only way we're going to know. But high level, it looks like you've picked out. The system is picked out what we've asked for. There's a few of them on the automatic. Conversion upon expiration. There's a few that are blank, so. I think there right now the process for me is just to go through and make sure that's accurate. And from my understanding. The extraction right now, this is is this called final? Would you consider it to be final and or is it next step?
+
+>>Manoj Racherla	01:39
+The extraction is final for any improvements on that you can tell us. We can work on it.
+
+>>Vishal Arya	01:45
+Ok, no problem. Alright, in that case I think it's fine. What would be the next steps or is this? Is this it? Is this? There's nothing else really, it's just the data. It's here for us to look at.
+
+>>Manoj Racherla	02:00
+Yeah, the data is here and you want it. The data to be like export downloaded or exported. In CSV format, you can do it. I will show you if you can share your screen.
+
+>>Vishal Arya	02:13
+Ok, alright, one second. Let me go through. I want to look for this notice here. Conversion one second. Here I'll share my screen here. So I was looking at this alignable warrant and I was looking for this provision automatic conversion. That's where I'm at. So I think with this one. I'm sorry it's gonna.
+
+>>Vishal Arya	03:07
+We go find it again.
+
+>>Vishal Arya	03:29
+I'm just getting to it, there it is so unalignable. God, sorry.
+
+>>Vishal Arya	03:42
+Ok, so I think what happened here is that there's these two are the same. Well, am I able to? Widen this no, we can't see more.
+
+>>Manoj Racherla	03:56
+Same as I'm
+
+>>Vishal Arya	03:58
+I'm not sure. I wanted to see more of this title to see if these two are the same. Ok, this one and this one. I think what happened is this is blank, but it's being picked up here because this is the actual. If you look here, these two data points are the same. Ok, here, maybe this is easy, so this file has. Although the full warrant document right all the way up to pay, you know Section 5 .1, but this. This one is a duplicate. Because it only goes to. You know, Section 2 .3
+
+>>Manoj Racherla	04:41
+And it cuts off in the name you can see in the bottom.
+
+>>Vishal Arya	04:46
+Right here.
+
+>>Manoj Racherla	04:48
+No, no, no. Oh, right here.
+
+>>Vishal Arya	04:50
+I'm sorry. I see it right here.
+
+>>Manoj Racherla	04:51
+It's.
+
+>>Manoj Racherla	04:52
+Share support right? Yeah. So you don't want to you want you don't want it to be this files to be exported in here right?
+
+>>Vishal Arya	05:03
+Right because this will have again this will have all this you know all these unnecessary pages at the top.
+
+>>Manoj Racherla	05:13
+Got it got it.
+
+>>Vishal Arya	05:14
+Yeah because the support we don't really the support is basically our you know the prior team here they added these few pages as support for the additional shares. It doesn't change anything you know in this main part of the document which is here as well. So this file is just an additional when somebody saved and they copied it support but the only thing they did was add in these five pages at the top. So you can see this one because they did that they left off you know the remaining section it just stops at 2 .3 And there's no more. So that's why this is a duplicate. Sorry I don't need to know.
+
+>>Manoj Racherla	05:55
+The 127 yeah.
+
+>>Vishal Arya	05:59
+Yeah so this is the this is the real one. Even though it has this up here there's still the full you know starting from here you can see there's more than just section 2 .3 it goes all the way to the end of the document. So this is the file that's good. So that's why I was I was looking at this I'm wondering why there was a blank here and same with this right. It looks like this is also a duplicate. Oh no maybe not. Let me let me find out. That's what I was hoping to see.
+
+>>Manoj Racherla	06:35
+This is additional share support.
+
+>>Vishal Arya	06:37
+Okay this is still alignable. I'm trying to go to Alloy Technologies but this is might be different. Alloy Enterprises 2021 -12 -1. Okay so these are different. Okay that's fine And then let's see this one.
+
+>>Manoj Racherla	07:00
+Also this is a one -time activity right like importing all the Sharepoint by warrant files to.
+
+>>Vishal Arya	07:08
+Yeah it was a one -time activity Yeah.
+
+>>Manoj Racherla	07:10
+And after that you have any other documents that need to be tested like uploaded in docs.
+
+>>Vishal Arya	07:17
+No no because we're not we're not adding any more right. We're just we have a fixed number of warrants. We're not going to be any more documents in Sharepoint to be searched or anything. Now I'm not saying we'll never have it But if we did have some it would be because they were never included in the first round. Not because it's something new that we did like not another new warrant that we wrote today right. It's always going to be historical information it's just did our Sharepoint have that historical or not. But at the moment we think everything that we have should already be in Sharepoint. Only reason we would add something new is if it was missed in the very first time somebody extracted everything into Sharepoint if that makes sense.
+
+>>Manoj Racherla	08:06
+Got it. Yeah
+
+>>Vishal Arya	08:07
+So I think it's fine. Automatic conversion okay. So to notice investments. I was looking to see why this part didn't automatically get added in. Declared dividends certain company information. Treatment terms and placement. Forgot what section this was method of exercise. I thought there was a section here of automatic. I might have to go look for this separately.
+
+>>Manoj Racherla	08:52
+Replacement treatment search like there is a search on top. Yeah
+
+>>Vishal Arya	09:01
+Oh okay I didn't see that. Okay that's good to know. Automatic cash or site. Okay perfect. So this is what I need and I think I've missed I've seen this is missing in a lot of these. So right here automatic conversion. It should be automatic cashless.
+
+>>Manoj Racherla	09:23
+Sorry you can highlight the bar.
+
+>>Vishal Arya	09:27
+Yeah you mean just this.
+
+>>Manoj Racherla	09:29
+Just draw it over the text entire text.
+
+>>Vishal Arya	09:34
+No entire text. Okay I got it I got it. Oh it's not Okay I see what it's doing. All right so let me just go this way.
+
+>>Manoj Racherla	09:46
+From bottom to top yeah That's okay.
+
+>>Vishal Arya	09:49
+I think it's this is enough.
+
+>>Vishal Arya	09:51
+Okay. And then I hit the check mark. Okay. So yeah, that's what I was looking for. So this section, I need more of this, if anything. This again, these are fine. This is fine. These are right. If they don't exist, we know that. These probably don't exist. And then all invoices with a copy too. Okay, so this is good. So I'll do that, right? So this one's good. So what I'm looking for is, I think, more, we'd like, let me get back to it. From our understanding of the warrants, 99 % of all of our warrants should have an automatic exercise provision. So when I'm seeing a lot of blanks, I'm wondering if it's something that needs to be refined or what, because we should have more, almost all of them should have something like this in the event, you know? Let me look through this one.
+
+>>Vishal Arya	11:11
+Yeah, see, this is good here for this section. Yeah, in the event, exercise date. Yeah, so that's fine. So what can we do about that part? Just pulling that extra or seeing why more of these are not pulling them in.
+
+>>Manoj Racherla	11:31
+Okay, so what we can do is, so there is a feature called continuous learning. So in the first instance, when we uploaded it, for some documents, it might, the OCR didn't get the context of that particular field. So, but going forward, like, how do you confirm it? Like, let's say out of 10 documents, for five documents, it extracted the correct one. But for five, it did. So you have five documents for which the value has been extracted. You review it, saying that the value has been extracted and confirm that document.
+
+>>Vishal Arya	12:13
+Confirm, okay, got it. Confirm it all the way.
+
+>>Manoj Racherla	12:15
+The OCR will learn based on your auto -corrected. And then you try the missing field files, then it will learn automatically.
+
+>>Vishal Arya	12:27
+Got it, okay. This one here is not a document we need. So this is a, is there anything I should do or you want me to do to remove this or?
+
+>>Manoj Racherla	12:38
+Yeah, you can delete it, if you want.
+
+>>Vishal Arya	12:41
+Okay, media 60, oh, it takes me back to the top.
+
+>>Manoj Racherla	12:46
+Yeah.
+
+>>Vishal Arya	12:48
+It's okay, that's fine. Okay, so you're saying go through some of these and review and then say if it's good or not. Yeah. Okay, all right, so let's.
+
+>>Manoj Racherla	12:59
+Like the CSV, the output CSV that you were referring to.
+
+>>Vishal Arya	13:05
+Okay, let me quickly go through this one And then I'll go to that CSV. So automatic, this exercise, okay. So yeah, this one didn't pull in anything at all, see? And so let me start at the top then.
+
+>>Manoj Racherla	13:24
+Can you retry this document once?
+
+>>Vishal Arya	13:26
+Yes, let me, can I try it from here or do it?
+
+>>Manoj Racherla	13:30
+No, you have to go backwards.
+
+>>Vishal Arya	13:32
+Revalidate.
+
+>>Manoj Racherla	13:33
+Just copy the name.
+
+>>Vishal Arya	13:35
+Okay, well I see it.
+
+>>Manoj Racherla	13:36
+Click on that name, double click.
+
+>>Vishal Arya	13:39
+Okay, double click. Yeah. Oh, it's copied, okay. All right, so this is legit security. I think it should be at the very top. So that's my only thing is knowing which ones to retry and which ones not to and things like that, so.
+
+>>Manoj Racherla	13:59
+Yeah, can you click on the checkbox?
+
+>>Vishal Arya	14:01
+Yep, retry. So it looks like, you know what? It looks like none of these did. So let me try these four. Yeah, these are all blank, see? So that's the only thing. Let me try. Okay.
+
+>>Manoj Racherla	14:32
+Okay. I guess it will take some time for processing. Okay. Can you go to the document types one?
+
+>>Vishal Arya	14:43
+Document types, okay.
+
+>>Manoj Racherla	14:46
+Open the warrant files. Yeah, click on it.
+
+>>Manoj Racherla	14:50
+Go to warrants, first, first, first one, this one, I'm sorry, I didn't hear you.
+
+>>Vishal Arya	15:07
+You can.
+
+>>Manoj Racherla	15:08
+Can you see the file names there? Warrants, narrating?
+
+>>Vishal Arya	15:11
+Yeah. Yeah.
+
+>>Manoj Racherla	15:12
+Click on the first one. Warrants. No. Okay. Fine. That's fine.
+
+>>Vishal Arya	15:17
+Sorry.
+
+>>Manoj Racherla	15:18
+Yeah. There is a download icon. Can you see? Yes. Yeah. Click on download. There is a three option. If you click on original file, it will download the original file that you uploaded. If you click the Xls, it will download the Xls file or CSV file with the extraction, whatever the extraction that has been extracted for this. And if you want the same data in JSON, you can download it that also. Okay.
+
+>>Vishal Arya	15:45
+Let's see. I just want to take a look at this, see what it looks like.
+
+>>Vishal Arya	16:03
+Okay. Okay. We've got this information. Okay. So basic information.
+
+>>Manoj Racherla	16:17
+So this is for only single file, right?
+
+>>Vishal Arya	16:20
+This is one file. Yes.
+
+>>Manoj Racherla	16:22
+If you want from multiple files in one single, multiple files data in one single CSV, that you can do. Go backwards. Go to the list, go back. Yep. And you check box like that. Yeah. Go to download it. There's a top on top right download data. Yeah.
+
+>>Vishal Arya	16:44
+Okay. And now is this for, is this for everything on this page or everything on this page? Okay. Oh, I can click select all pages too, right? Yeah. Because it's easier just to do them all. And now is this going to give me everything?
+
+>>Manoj Racherla	17:01
+Yeah. Yeah. If you download data, click on download data. Okay.
+
+>>Vishal Arya	17:04
+Download data.
+
+>>Manoj Racherla	17:06
+Download CSV.
+
+>>Vishal Arya	17:08
+Csv.
+
+>>Manoj Racherla	17:20
+Okay.
+
+>>Vishal Arya	17:21
+I guess it's still running. Yeah. That's a large file.
+
+>>Manoj Racherla	17:35
+Download it first. Okay. Since this is a like long file. Yeah. Once your files are processed, it will be automatically. It's in progress. Okay.
+
+>>Vishal Arya	17:50
+I see that here in the activity log. Okay.
+
+>>Manoj Racherla	17:52
+Can you go backwards once? Okay. Can you click all files here? Name? Click on the name. Yeah. Checkbox. Can you uncheck the warrant file? First one below that. Yeah. And then download it now. So it will only download 19 of 70. Oh, I'm sorry.
+
+>>Vishal Arya	18:14
+I didn't, I didn't click on this. Did you? Okay. Is that what you wanted me to do? Just click the first page. Okay. Okay. So will it show up in my download or in the, Oh, here it is. Okay. Oh, download. This one.
+
+>>Manoj Racherla	18:36
+Okay.
+
+>>Vishal Arya	18:38
+All of the missing information. Okay. Now the, the headers here, it's not a big deal, but do they all just say basic information? It looks like they all say basic information. Okay. Oh, okay. Here. Copy with. Okay. I see. It does change. Okay. Okay.
+
+>>Manoj Racherla	18:56
+It contains all the fields that you have added in the documents.
+
+>>Vishal Arya	18:59
+Got it. Okay. That's, that's fine.
+
+>>Manoj Racherla	19:03
+Okay.
+
+>>Vishal Arya	19:03
+All right. Perfect. That's good to look at and good to know. Yep. And so what I can do is once it's done, let's see, where can I go to the download activity? Yeah. Where's activity log from here?
+
+>>Manoj Racherla	19:24
+Go to your top, right?
+
+>>Vishal Arya	19:28
+Oh, here it is. Okay. Perfect. All right. So where is it? Okay. So if I download each one, is it putting it here or, oh no, here it is. Bulk download. And this one is still in progress.
+
+>>Manoj Racherla	19:48
+Yeah.
+
+>>Vishal Arya	19:48
+Okay. Got it. Okay.
+
+>>Vishal Arya	19:49
+I just wanted to see where it shows up.
+
+>>Manoj Racherla	19:53
+Okay.
+
+>>Vishal Arya	19:55
+All right, that sounds good. It looks like everything's ready. We're just gonna run this extract again to make sure it pulls up all the data here.
+
+>>Manoj Racherla	20:07
+The meantime, I will also check with my team why the support files have also been uploaded. Ideally, it should. The one you should, right?
+
+>>Vishal Arya	20:17
+Can you share? Yeah.
+
+>>Manoj Racherla	20:18
+Tell me that file name once. What was the file name?
+
+>>Vishal Arya	20:24
+Was it this one?
+
+>>Manoj Racherla	20:26
+No, no.
+
+>>Vishal Arya	20:26
+Oh, no, it was alignable.
+
+>>Vishal Arya	20:37
+How does this work?
+
+>>Manoj Racherla	20:41
+Just search Al. Okay. Okay, wait.
+
+>>Vishal Arya	20:48
+Turn on the cross, please check the filter. It was here. I can find it this way, but I'm pretty sure it was alignable. It's right here. Let me look.
+
+>>Manoj Racherla	21:01
+126 something.
+
+>>Vishal Arya	21:02
+Yeah, 127. 26, 27, yeah. Yeah, it was 120. It was one of these two. I think it was this one.
+
+>>Manoj Racherla	21:25
+Yeah, this one.
+
+>>Vishal Arya	21:27
+So it was 127. Let me just make sure this is the support.
+
+>>Manoj Racherla	21:31
+No, not this one.
+
+>>Vishal Arya	21:32
+It's 128. Nope, you're right. Yeah, that's it. Yeah. Yeah, it's this one. So this is a support file that we don't need. 128, alignable.
+
+>>Manoj Racherla	21:51
+Okay, got it.
+
+>>Vishal Arya	21:53
+Oh, it looks like the extract is ready. So looking up top, I think there was a few more that didn't populate anything. And so let's just take a look. I wanna make sure that, yeah. It's just, I wanna make sure this is the right thing. Is this only one page? Okay, maybe that's why all the pages are blank.
+
+>>Manoj Racherla	22:28
+Okay.
+
+>>Vishal Arya	22:31
+But again, it looks like there should be something here. Populous technologies, documents. Populous technology. I'm gonna look it up on my end too, just to see what this looks like. Because there's, again, different file names. This is Populous Technologies, Inc, 2021. Oh, man, I can't open this file. So it looks like this file had maybe an error with it. And I wasn't able to open it on Sharepoint either. You can see here on, I went into Populous and it just says, well, let's see if I can download it and open it and see why I can't open it. Yeah, see? Okay, so in this case, this is a damaged file and what we'll have to do. So maybe, you know what? This is interesting because I don't want you to exclude everything with support files, right? Like contingency, because you can see in this case, the main file is corrupt, but our contingency support file name, which does have the contingency document, but the underlying pages are still the same.
+
+>>Vishal Arya	24:16
+This is correct. And this is also correct. Yeah, see, this one has more support. And actually, let's see how many pages this has or it goes to section. Okay, this one's right as well.
+
+>>Vishal Arya	24:49
+So what do we do with this one? I think this is the corrupt file and populous technologies so let's see if there's a Way to filter this
+
+>>Manoj Racherla	25:04
+Yeah But I don't think we will be able to get to know like while Extracting while importing files from the Sharepoint if that particular file is corrupted or not Right, but I know
+
+>>Vishal Arya	25:20
+And I wanted to just quickly see if I can find to make sure that the correct one did upload Is there an easy way to find it because the search function is not working.
+
+>>Manoj Racherla	25:30
+No, no, you don't have to search like that So if you click on that, okay, can you click on the title three dots? There are besides the title column There are three dots. Can you yes Yeah Okay, so Add filter Last year. Yeah Contains and value No enter the value. There is a interval.
+
+>>Vishal Arya	25:56
+Here's the value. Yeah
+
+>>Manoj Racherla	26:00
+Okay Apply filter now.
+
+>>Vishal Arya	26:08
+Is this searching all of it?
+
+>>Manoj Racherla	26:10
+Yeah, all the all the files that are there See so that's that see that's what I would that's
+
+>>Vishal Arya	26:18
+The issue here is okay So, let me think about this so when you guys when we first told you about the parameters of the files to pull and upload is it did we tell you to Disregard anything that said contingency Okay Okay. Well, this is a there's always a one -off case looks like you know,
+
+>>Manoj Racherla	26:42
+Mm -hmm.
+
+>>Vishal Arya	26:43
+Oh, man. Okay, this sucks Let me make a note of this populous Because if it's a one -off case then it can be like Manually done. Yeah
+
+>>Manoj Racherla	26:57
+If we do it for everything there may be many documents too many documents for
+
+>>Vishal Arya	27:03
+Yeah
+
+>>Manoj Racherla	27:04
+Yeah
+
+>>Vishal Arya	27:05
+Okay I'll make a note of this And I'll take it to my team and min and just see how he wants to approach this because You know from our end. We don't want to miss anything, but we also can't Foresee every single thing.
+
+>>Manoj Racherla	27:19
+Mm -hmm.
+
+>>Vishal Arya	27:19
+We can't I can't You know We can't know every single issue or it's just gonna take too long done Understood. Yeah. Okay. Let me make a note of it What was this file name I said continue and they consume positive Not how Much Sorry, I'm just typing this up Okay, well that's it for now, I think I'll come back to you with what we want to do here
+
+>>Vishal Arya	29:25
+But I think I understand this And I'll go through And check off more What do you call it I'll do some more confirming and The model can so is there anything I need to do after let's say I did 30 or 40 of these reviews and I confirmed them. Do I need to go and re rerun the extract on all these older?
+
+>>Vishal Arya	29:47
+The system do it by itself?
+
+>>Manoj Racherla	29:49
+Not on all these. Only those files you feel that on that, the data should be extracted, should have been extracted, but didn't.
+
+>>Vishal Arya	29:57
+Oh, okay. So if I do 10 of these, I confirm it, and then I find more, I can just select it and just say rerun, retry again?
+
+>>Manoj Racherla	30:05
+Okay.
+
+>>Vishal Arya	30:06
+On the ones I think. Okay, after I do a few confirmations and the model learned from it.
+
+>>Manoj Racherla	30:12
+Oh.
+
+>>Vishal Arya	30:13
+Okay. All right, let me try that. And now I know, again, I can extract everything in an activity log. I see the extract. I'll take it to the team and I'll see if they are comfortable with the data. And we'll let you know.
+
+>>Manoj Racherla	30:26
+I guess it's been completed by cloud.
+
+>>Vishal Arya	30:29
+Yeah. Yep, I see it here.
+
+>>Manoj Racherla	30:30
+You can click on the download.
+
+>>Vishal Arya	30:32
+Yep.
+
+>>Manoj Racherla	30:43
+So it contains all the files.
+
+>>Vishal Arya	30:46
+Yep. How many, how many? 1000, no, just on a blank. There's some blanks in here. Okay, 4 ,814.
+
+>>Manoj Racherla	31:01
+Yeah. So that's equal to the five that we have for it.
+
+>>Vishal Arya	31:07
+Okay. Okay, well, let me, again, we'll just go through this and we'll see all the blanks, we'll filter it, and we'll just see what kind of data we're missing and where, and then we can come back to you guys with anything else.
+
+>>Manoj Racherla	31:22
+Okay.
+
+>>Vishal Arya	31:23
+Okay.
+
+>>Manoj Racherla	31:25
+Thanks, Vishal.
+
+>>Vishal Arya	31:26
+No problem. Thank you for your time. Okay. All right, bye.
+

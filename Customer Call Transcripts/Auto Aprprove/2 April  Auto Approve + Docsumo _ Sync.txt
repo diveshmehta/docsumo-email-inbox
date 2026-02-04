@@ -1,0 +1,144 @@
+>>Mike McCarthy	00:00
+Hey Mike, how's it going? Good, how are you? I'm doing very well mine. Thank you so much for asking. How was your weekend? I was pretty good. We went a little three day weekend ski trip in Winter Park so had a good time.
+
+>>Jasneet Singh Malhi	00:18
+Lovely, lovely right? Mike, I'm assuming you start still in the process of kind of getting the documents from your end.
+
+>>Mike McCarthy	00:28
+Yeah, I'm going to share my screen and show you. Kind of what what we would be trying to validate and seeing if this like if this kind of goes along with what your service provides or not so we know whether to proceed with getting the Nda signed and then getting you. The actual customer data in terms of drivers license and other documents to extract and be able able to see if it's able to do this. Because this is what we are testing with drively as I as I mentioned previously. Sure, where's let's see.
+
+>>Mike McCarthy	01:18
+Share this one. There we go. Do you? So we have. These are not included on here, but we have test files which are basically applications.
+
+>>Jasneet Singh Malhi	01:32
+Yeah, Mike, I'm so sorry your screen is very hazy. Actually I can't see it very well. Are you using Safari by any chance? I am. Yeah, it probably takes in a minute. Oh, there you go. All clear now.
+
+>>Mike McCarthy	01:49
+Ok, so we just showing you how we're how we're testing it with drively And so we sent them all of these this information from these records. So these are customers that we have drivers license and applications, approval data, other documents that we are putting into a folder for each of those, sending to them to put through their tool and see if it can extract the data we're looking for and then provide these validations. So we have some simple ones that are based on these different areas, so we have approval so. Approval dot. Data comes location and what we're looking for is basically you have, like all of these information, data review points. What they are. And then what would what would be a pass? And what would be a fail, which is also the same as a needs review requirement pretty much. So a pass or fail based off of the data that's being extracted. So we have does the ID match? Does the number of applicants match? Does it? The same tier score for the transunion? Do the terms match to the rate match all those types of things? To say if we can have a fat pass or fail and show us what what information is failing if it's failing.
+
+>>Jasneet Singh Malhi	03:13
+Yeah, like pretty much we can do this. So wanted to understand a bunch of things here. So are you looking for the system to just extract the data and populate the fields on your on your Google Sheets or on your Excel file? Or is your expectation to do the validations also on the platform itself?
+
+>>Mike McCarthy	03:35
+Initially, cause I'm assuming it be. If we're able to do that information, first phase would just be getting it into a spreadsheet so we can have those manual checks. The end goal would be to be able to pull that information through an API and be able to have it map to our internal our homegrown CRM and do the pass or fail inside of our CRM.
+
+>>Jasneet Singh Malhi	04:01
+Right? So ideally you would want the system to just extract information and send that JSON payload to the CRM. The validation logic I'm just trying to understand will will that be on our end? Or will that be on, let's say on your CRM?
+
+>>Mike McCarthy	04:21
+I think it would be based off of the the points that we're putting on here. So we have we would prefer to be so drively is offering a solution to where they can extract it and create a rules engine for us and so the rules engine tells us pass or fail.
+
+>>Jasneet Singh Malhi	04:36
+No, absolutely. Even I think we can take in your requirements and put it across on the platform so that the extracted data can be validated against the set of fields or the rules that you have and then basically give you a pass or fail. Right, so basically we would need to create the validation engine on our end and with the extracted data will be.
+
+>>Jasneet Singh Malhi	04:57
+Fed into that validation rule and then based on that you will get the output value right now once we get this output you would ideally for initial phase you would want it in an excel file but then for the final phase you would want this linked to your crm wherein the direct pass or fail output goes into your crm is that correct or did i miss out on something i believe so
+
+>>Mike McCarthy	05:17
+And that's probably putting it in simple terms you know should we uh run a test and see that we can do what's you know get what we are needing out of this and if we decided to proceed um then we would probably bring in my my tech team as well to to do further um questioning because i don't know much about tech i'm just I know that i would like to see um i just know what kind of lift we can get if we could get just even a simple excel sheet that would tell us pass fail And if it failed give us the reason why it failed so that we can skip all those steps that say pass so that we can get that time back to the processor that's doing the deal And then they can just focus on the ones that have failed and they know why it's failed and they know what what to do next in order so it minimizes the time it takes to process a file got it so ideally as an example let's say uh you know there is one packet wherein for example the driving license has expired right
+
+>>Jasneet Singh Malhi	06:14
+So you would want us to kind of give you the requirements let's say the name matches the dov matches the address matches the only driving license is the one which has expired so this is probably you know point of review so that you can go back to the customer and saying that your driving license has expired maybe add add a copy so that's that's how you are planning to kind of save time is that an accurate assumption for the work Yeah
+
+>>Mike McCarthy	06:36
+So for for let's say driver's license expired then it would be fail and it would have the date So it shows them so they don't they don't have to go pull it up They just know what the date is that this shows that it fails uh alternatively if it's one of these other ones that's there's a lot that say mismatch so let's say the name mismatch um we would want it to say fail and then provide the what the mismatch is so pull it from the application pull it from the driver's license And then we can see the spelling error we can see the different name that's used hi Mike Russia beer
+
+>>Rushabh Sheth	07:09
+Hi how are you doing well Mike Mike This the requirements are pretty straightforward um quick question like basically i think if you are planning to consume an api you just want to run a test with sample files is it or sorry run a test with what with sample files like the requirement Yeah Yeah
+
+>>Mike McCarthy	07:39
+The the tests that we're doing And we can if we need to change it in the way that we're doing it but what we did is we put this this just simple excel sheet with validations so this just has all the requirements uh and these aren't everything that we do here but this is just a subset of them and so just to see if the uh you know the the the this that it works um and this we sent along with the actual test files so all of these we we sent these these 10 examples over to drively who were were testing as well and we gave them the actual screenshots from our crm of the applications to extract application data from and then we sent them all the corresponding uh add file the registration the book out the driver's license the approval nice
+
+>>Rushabh Sheth	08:34
+Yeah send it to us Mike I think this this is pretty straightforward what you're asking for um so i don't see any challenges where we would face on this Okay
+
+>>Mike McCarthy	08:49
+Yeah So i'll just need to uh verify with my coo to get uh that Nda i'll find that in my inbox and print it out sign it and scan it I just got to get to a printer because like i said i don't have one at home um and get that over to you to countersign and then just um send you an email that just says that you will delete the app customer data once we are done with the this after we sign that once i have that done um then i can just forward you the same because it's already all put together so i can just forward that over to you And then you can try to put together a test case to show that the results
+
+>>Rushabh Sheth	09:26
+And then if it shows the results that we want then we can uh continue the discussions and uh Mike uh this is what is the driveway like we're i'm hearing this for the first time i we typically don't come across this in our deals this is uh what is the domain what is what uh drive the drivly uh drivly
+
+>>Mike McCarthy	09:53
+I don't know the domain offhand But oh
+
+>>Rushabh Sheth	09:57
+Got it.
+
+>>Mike McCarthy	09:58
+They're specific to dealerships and auto refinance. They're new. I worked with them in a different capacity a long time ago in terms of, they used to be lead generators, but they pivoted during the market change and they went over to Ai Solutions and they're trying to make something specific to the auto refine purchase vertical. Yeah.
+
+>>Rushabh Sheth	10:26
+And how much are these guys quoting you? I'm just asking, basically, Mike, again. Mike, understood if you don't purchase Doximo, I will be transparent to you with this thing. The only thing I'm trying to understand is two -pronged. From your point of view, besides price, is there any other criteria that you're looking for in a solution?
+
+>>Mike McCarthy	10:48
+I mean, some of it's going to come down in terms of what that solution is able to accomplish for us and how. So once I know that you can do at least this kind of basic function, straightforward function, there are other scenarios. Because what we're ultimately trying to achieve is, well, there's two parts of our funnel that we're trying to fix, and that's our contracting portion and our at -bank function, which means our final QA before we send it to the bank. But let's just talk about, as an example, where we do our contracting. So in today's world, a customer says, yes, I would like to proceed with the offer, and we have a limited number of staff. And it takes, on average, right now, we're growing, so we're behind, it takes 27 hours to, on average, just to get the documents out to them because of all the manual validations that we have to do to ensure that we give them the appropriate documents and there are no mistakes. So the end goal here, and the end goal, I'm jumping all the way, there's many iterations between this, but the end goal is to get to push -button contracting, to where we push a button and it validates everything and it generates it, right? And so we can do that while we have them on the phone. It'll tell us if there's any errors we need to fix while we have them on the phone, and we can get them to sign on the phone. So that's the end goal. And the interim and the time, I mean, and likely iterations to that would be a basic checklist that takes out a whole bunch of those passes that they don't have to verify because we can just manually see that it's passed.
+
+>>Mike McCarthy	12:29
+And then just now we've reduced, let's say, 75 % normally pass, then now we only have to validate 25 % of the application. And so that's very advantageous and time -saving for us. And so that's a big step forward. The other steps forward are going to be what do we need to do? And we don't know because we're still in the process of vetting it out in terms of what other steps do we need to take to make it so that we can push -button contract besides just the internal validations. And so some of these validations are going to come off of not something so easy as these examples here. Some of them are off of unstructured data that lies inside of a lender sheet that has all the lender information. Maybe there are 20 last rate cards that have different dates on them that have to correlate to the approval dates that make sure that we are in the right for this Ltv and this term that this is the correct rate that's matching to the approval. A little bit more, it's the same concept, it's just a little bit more involved than it is a driver's license. Perfect.
+
+>>Rushabh Sheth	13:41
+Yeah. Mike, send us the samples. We'll show you what we can do. Same straightforward. Even for the ones where you need the rate cards, we can even do those. So basically we are specialized on the document side of things. So that's the difference over there. Yeah. Then I think it sounds pretty clear. Jasneet, have you gone through the rest of the tabs on this? Dli saw the matches.
+
+>>Jasneet Singh Malhi	14:13
+No, we were just.
+
+>>Mike McCarthy	14:16
+Yeah, we got to driver's license. And so book out is just a Nada book out sheet. So it's just a printed out sheet that's basically coming from Nada .com. And so it would just have. So the book out type Nada selected pass requirement, the type matches. So it lets us know if it's Kbv or if it's not. The dates, the year, make and model, Vin, mileage. So just details match, mileage match, value match. So again, these are the kind of the more simple ones.
+
+>>Mike McCarthy	14:55
+Other ones that are going to require multiple lookups to where it's this vendor of GAAP insurance with this particular lender has a max of this amount, but it's in Colorado and Colorado has a max of 300, so default to the lowest, and that would be 300 to Colorado, which we're not opposed to the fact that we may have to create the rules engine ourselves. Some of it will be looking at timeline, who can do this the fastest to get us to where we need, I need to get with our tech team, some of it's going to have to do with pricing, all that kind of stuff.
+
+>>Rushabh Sheth	15:32
+No, I think most of this we should be able to do it. The only ones where you need, I think last time you had mentioned location services, where you get some of the data. So if basically, you can pass if you have some external data that you need to match against the document to us via the API. So you can send the location services data and the document to us and then we'll run the check. So in will basically do share to us, we'll come back to you what out of this we cannot do most likely all of these seem directly from the document itself, I don't see anything that is a external source where you would need to run a check on your side.
+
+>>Mike McCarthy	16:22
+Okay, great. I will try to get that Nda signed, probably by tomorrow, and then just countersign that and send it back to me. And then I'll send you over a copy of all the the folder that goes along with this. And then also this spreadsheet as well. Perfect.
+
+>>Rushabh Sheth	16:42
+Yeah, Mike. Also, drively seems like a very small company for some reason. It's just seven employees.
+
+>>Mike McCarthy	16:48
+Yeah, there's there's like four people.
+
+>>Rushabh Sheth	16:51
+Yeah. Okay, cool. Anyways, Mike, do send this to us. We'll try to win you.
+
+>>Mike McCarthy	16:57
+Okay, sounds good.
+
+>>Rushabh Sheth	17:00
+Okay.
+
+>>Jasneet Singh Malhi	17:00
+Set something up to maybe as a placeholder for maybe next week, Friday, probably to like have a demo or something of that sort. Like, yeah, what time would you be available?
+
+>>Mike McCarthy	17:23
+Anytime between 10 and three mountain time.
+
+>>Jasneet Singh Malhi	17:30
+So 11th, April works for you. Yep. You said 10. So I think we can do it at the same time, if it's between 10 and three. Okay, and then I'll just rename this as 10. Just give me one second to cross check if.
+
+>>Jasneet Singh Malhi	18:02
+Yeah, so I'll be sending you the invite, Mike. And then we can take it ahead from there. I'll be looking forward for the Nda. Do you want me to send the Nda to you again, so that it is easier for you to kind of find on the on the email?
+
+>>Mike McCarthy	18:15
+Perfect.
+
+>>Jasneet Singh Malhi	18:16
+I will go ahead. So I've set it up for 1130 to 10 to 12. I think that should also work for everyone. And then we can take it ahead from there. Perfect. Awesome. All right, Mike, thank you so much. I will just send the Nda to you once again, so it's easier for you to kind of sign in, put across And then we can work out all the kinks and then get the ground running.
+
+>>Mike McCarthy	18:46
+Okay, sounds good.
+
+>>Jasneet Singh Malhi	18:47
+Awesome. Awesome.
+
+>>Mike McCarthy	18:48
+Thanks, Mike.
+
+>>Jasneet Singh Malhi	18:49
+Have a great one. See you soon. You too.
+
+>>Rushabh Sheth	18:52
+Thanks, Mike. Bye. Yeah, it's very interesting.
+

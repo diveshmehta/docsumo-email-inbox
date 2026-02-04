@@ -1,0 +1,483 @@
+>>Aniket Tatipamula	00:00
+Have uploaded few documents on their account Right Hello did i get Hello Yeah Yes Yes i'm audible yes they add they have uploaded few the items on their account
+
+>>Manoj Racherla	00:25
+Right what is that then uh in terms of uh they have uploaded some uh Por and lod and credit report documents
+
+>>Aniket Tatipamula	00:35
+Okay Abby is there let's add us
+
+>>Abby	00:37
+Yeah um did you get i'm sorry did you guys get my um the sheet the excel sheet with the issues i wasn't sure if you did could you see them when i upload them or do i have to do something extra with that sheet uh the issue sheet you are referring to and hold on i'm trying to get it on my other computer
+
+>>Nidhi Vichare	01:21
+Oh yeah um manage i'll just share with you the feedback sheet Okay okay The feedback sheet that's what it was
+
+>>Abby	01:42
+Yeah So there there were a lot more am i the only one on here we can hear you
+
+>>Aniket Tatipamula	02:09
+Okay
+
+>>Abby	02:11
+There were a lot of our documents that weren't labeled correctly and i couldn't find the labels to change the document type So i didn't know what we're doing today let's do one thing
+
+>>Aniket Tatipamula	02:27
+Abby i think there seems to be a little bit of uh clarity that we require or maybe Manush do you want to take do you want to share the screen and go through them or do you want me to uh you can go ahead
+
+>>Manoj Racherla	02:38
+Okay let me share
+
+>>Abby	02:42
+Okay
+
+>>Aniket Tatipamula	02:43
+So i think uh so let's go one by one and Manush please do add because i think uh i i'm not sure whether i was there on the last call uh so Abby let's start how where do you start like do you what did you do did you upload the document from the auto classifier
+
+>>Abby	03:01
+Yes i did that i did it in two different ways um i just wanted to see what the difference was the only thing i did not do was upload them one by one because that was going to take a lot of time And i should have done it But i didn't do it And there was a lot that i skipped because i was like no This is wrong so everything here that says petition you see where the name says petition 42 of 42 position so it breaks down the petition into separate parts and i i can't have that i need the petition together understood
+
+>>Aniket Tatipamula	03:42
+Okay So okay let let let let let's take a step back and sorry if it feels a little bit uh like we may be going a little bit to and fro it's just for us to understand and let me just let me just explain what happens And then that would also give you clarity as to why we would require the the information that we're asking for so basically what happens is we have this doc type called ai auto classifier and what it does it does two things the first thing that it does it it splits the document it splits the document uh from here so we have something split with ai And uh and what we have done here is we have written a little bit of text let me just uh quickly showcase it here Okay So this is the text uh is my screen visible Abhi
+
+>>Abby	04:33
+Yes i see it Yeah
+
+>>Aniket Tatipamula	04:35
+So this what we're defining here is the rules uh the rules in which it should look at a document and then split it into multiple documents right And um so this is problem number one if you look if you look here like what we've mentioned is code of types that we wanted to split into And we've also mentioned the definition and some identification information to split into you
+
+>>Aniket Tatipamula	04:58
+Now this was done at the very beginning as in this is not this is before we even signed the deal or we went ahead right So maybe we need to do a little bit of rework here with the help of you of course as in without you I i don't think we'll be able to pull it off
+
+>>Abby	05:12
+So okay But
+
+>>Aniket Tatipamula	05:17
+Yeah So is is this is this part Clear Abby like what is happening here so this we need to perfect and this is where manoj would come into picture nidi would come into picture we will probably like have a little bit of to and fro just to make sure this is something that is right and the problem that you just mentioned right that a document got split into multiple it's because we never mentioned it that we are not supposed to split into multiple So maybe we'll come here for example petition Right we'll mention that if petitions are back to back do not split them and it will not split them so this item number one and um let me then go to the next part right like what does it do after it splits so after you split the document we've said that Okay if someone uploads a document to this doc type split split it in these uh based on this information that we provided okay also go and find and classification is what we've also mentioned here let me just go ahead and copy this and put it here Okay let me add one more sheet And we even at even on the classification we mentioned the same stuff right now because this again was done way before we signed the deal or anything So we have reworked this so this is where once a document is split the ai would look at it and decide oh this is list of dependents because it has these items in it right or this is annuity because it has these items in it and if you have a very specific uh structure that you want to mention that Oh these two would look very similar but there has to be this thing this very specific text or very specific information in it to be marked as document
+
+>>Aniket Tatipamula	06:59
+A versus document b Right So we would be doing it here so this is what classifies the document Okay
+
+>>Abby	07:05
+I'm sorry i don't mean to interrupt But i do have a question like that that sounds like okay that that could fix the issue with the petition but in that same file because i uploaded about four different binders different ways just to see what was happening um But then it was coming back with so much that i was like you know what i can't use this excel spreadsheet because i'm going to confuse them but like in one of the deals it took the order um like the settlement agreement and labeled it only as court order And so i i don't know if there's extra because you're saying to make it more specific so a court uh settlement agreement would be something dated in the past um not current So i don't know if that's something that would help and if it's things like that then let me know So i can mark down to different nuances for the documents and then send that over to you so ideally you guys have a better idea because i know like i said like i said in the beginning this is going to be a lot of documentation and a lot of it is redundant it repeats but it has to be in a specific order for investors so i want to make sure that it's correct Yep um 100 was in that
+
+>>Aniket Tatipamula	08:14
+Hi Lauren Hi
+
+>>Lauren	08:16
+Yeah Sorry Abby i sent you what they put in that excel i sent you in the word document i think they also need like the phrases and the alternate names on like what the first page of like the settlement agreement has you know like the phrase order approving the transfer of structural settlement payment rights would be more would be in order versus like that wouldn't exist in a settlement agreement wait a minute say that again like the phrase like the order approving the transfer of structure settlement payment rights like that would exist on an order but that wouldn't exist on a settlement agreement So i think also phrases like that on the first page could be helpful Okay
+
+>>Abby	08:55
+So the um because we had done a a separate sheet with like additional names like the settlement agreement could be a judgment could be this could be that Yeah That so adding it to some to another form Yeah
+
+>>Lauren	09:09
+We if we send that over to them i at what that what they put in that excel sheet is what i sent you in word uh a couple like maybe a week or so ago so we just have to give them the additional names for the titles of the documents Yeah And the additional phrases i think that would probably be the easiest way to separate like things that came from the court that are orders But they're different types of orders
+
+>>Abby	09:31
+Okay do you want me to uh and anikid and manaj do you want me to send this over via email or would you rather i just share it in the teams that we have so you have it you can share it over the team So okay all right give me a second because i'm i use two different computers because my my my desktop doesn't have speakers So i'm back and forth take your time so
+
+>>Aniket Tatipamula	09:57
+Abby Yeah Yeah learn why we are while we are here as in while Abby sets up our desktop so just wanted to check like uh you must be doing like the team must be doing this manually right now Right so do we have few binders that were manually split by your team and is it kept somewhere or is there some information of those binders already with you because that would be very very helpful to manoj and me and even the team right when they look say that Okay these are the last 20 binders that the team like saved processed and this is how they split this is what was extracted and then it would i mean it would probably speed up a lot of things because we don't have to assume anything it would have that information Handy Yeah
+
+>>Lauren	10:48
+I can send that over uh we're about to start to go into production too So we'll definitely have like regular inflow binders and data points um for what and and the split up documents uh for what each of those are perfect that would be really helpful
+
+>>Aniket Tatipamula	11:04
+Thanks Okay
+
+>>Abby	11:08
+I uploaded it into teams it's just a word document with additional phrases that would be used and any additional identifiers that we can we can use But i have i would have to go through it again just to make sure with everything that i saw when i was uploading the documents into doc sumo or into this thing uh Abby can you share your screen and show it to just like what sort of by designated list uploaded it's the hold On Oh no where did it go hold on one second And then would you want the same thing for like the check images uh so by the whoever is the payor on the check image you know they'll have either one or two formats to their checks most of them have one um would you want us to give you like that
+
+>>Manoj Racherla	12:42
+And then the extraction from each check uh Lauren are you referring to the uh checks that issue a check sample that we are shared over the teams Yeah
+
+>>Lauren	12:52
+Yeah
+
+>>Manoj Racherla	12:53
+We are set it up on on the docs for platform that uh some samples of the checks and we have also extracted the data that data that you wanted from that uh document checks So Anika can you go to document types one give me a second is my screen visible
+
+>>Aniket Tatipamula	13:15
+Yes Okay document types uh okay this one
+
+>>Manoj Racherla	13:26
+Yeah uh like can you go uh So Lauren these are the fields that you wanted to extract like check payable to check number and everything Yeah So like we have set it up can you just verify if the data that we have extracted is correct or not okay from the samples and moving forward like you can also upload some of the samples yourself as well and check like whatever the extraction we had done if it's properly or Not okay
+
+>>Aniket Tatipamula	14:03
+Yep uh so manoji are all these fields provided by Abby for us to set up or like
+
+>>Manoj Racherla	14:10
+Yeah Yeah
+
+>>Lauren	14:11
+Abby uh Lauren had provided it this is a different Abby's doing underwriting checks would be Mila she's off today But i just wanted to get what her flow would be so if she can up she can verify and upload directly then um that will be good uh also Lauren do we need this uh can you scroll down a bit Okay here in the field uh pay name pay name one pay name two do we read this fields yeah because pay name two is underpayee name one which is that Roth Ira and that's the payor the the payor is who's paying the check and then the payee is i think i think the pay and the payor are a little flip -flopped on this like the pay
+
+>>Lauren	14:56
+Payee name is Provident Trust. The payor would be Metlife, which is the top left corner. Because there are the who's who's cutting the check. So Metropolitan Life Insurance is cutting the check. And then we just need payor name one, but we need payee name two. Payee name two would be the Roth IRA Y whatever is under in that second line under that check. See the Roth IRA. That's payee name two. But it's the payee, not the payor. You have payor, it should be payee, the field name should be payee name two. Yeah. Did you get it?
+
+>>Aniket Tatipamula	15:37
+Manoj, who gave you, just to be clear, right? This payee versus payor, were these fields provided by Abby or Lauren?
+
+>>Manoj Racherla	15:46
+No, these were already present within the sheet. The payee field is on top. Can you scroll up a bit? Yeah, there is a payee field.
+
+>>Aniket Tatipamula	15:57
+Okay, understood. That's probably extracted, right, Abby?
+
+>>Lauren	16:01
+The payor, yeah, that's the correct payor. So then this payor name one and payor name two should all be payee because the payee is the recipient of the check. Like the field name shouldn't, there's only one payor and it's just Metropolitan and then everything else is payee. Yeah.
+
+>>Lauren	16:23
+And then we can, you can remove the payee name because I think that that's just redundant of payee name one.
+
+>>Aniket Tatipamula	16:33
+So while we are at it, like maybe Abby, I'll also, Abby and Lauren both, I'll show you how we do this, right? I'll just delete this field for you, as you mentioned. Okay. And what we do here is we just come here and we, how would you describe, right? Like how would you describe this payee name? And if they are together, then I would say identify.
+
+>>Lauren	16:53
+It's the first line of the check payable to field. It's the first line and next to the words check payable to first line of the check payable.
+
+>>Aniket Tatipamula	17:07
+Yeah, check. I think that's what it meant to do.
+
+>>Lauren	17:13
+I paid to the order of this will be second line, I guess.
+
+>>Aniket Tatipamula	17:48
+And we can, we can test it out here, run test. Did it pick up the right name or maybe not?
+
+>>Aniket Tatipamula	18:05
+We will check this out, Abby, but this is what will the team would ideally do. We will go in each of these fields and then manually figure out what is the right thing to do, right? And then make sure that we get it right. We get this fixed right properly.
+
+>>Lauren	18:19
+And then the payors address should be payee's address. Sorry, that's just the other field. Just so it's just the payee. You don't really care about the payors address. Okay. Yeah. So we'll run through that and put in, so then we will send you, we use the sheet of if it's pulling from the wrong thing and then also any hints just on that in that sheet too. Yeah.
+
+>>Aniket Tatipamula	18:50
+Yeah. Then let me quickly go through a few more items so that we can line this up properly.
+
+>>Lauren	18:56
+I don't know what's going wrong.
+
+>>Aniket Tatipamula	19:01
+Is something going wrong here? Payee address. I think there's one more field with that name.
+
+>>Manoj Racherla	19:08
+Oh, there is. About the payee name one. Okay.
+
+>>Aniket Tatipamula	19:12
+So this, that's it, right? So we can pay the payee address.
+
+>>Lauren	19:15
+Yeah. We just need the payee's address. We don't need the payors. Same.
+
+>>Aniket Tatipamula	19:22
+So I will let me take you through the entire flow once and then it's much easier to understand. So we, we, we came to, we, we came to a lot of, we talked about how we split. We talked about how we classify and now let's go to the next part. What happens is when you upload a document. Wait, hold on.
+
+>>Abby	19:45
+Cause I lost you guys. I'm not sure why am I going to. Okay. I found you. Nevermind. Go ahead. Okay.
+
+>>Aniket Tatipamula	19:53
+Uh, okay. Uh, so basically, uh,
+
+>>Aniket Tatipamula	19:56
+We talked about how the document gets split, we talked about how the document get classified. Now let's go to the part of extraction. Did someone message anything?
+
+>>Abby	20:07
+Yes, I did. I sent in the identifiers, the additional ones that we had put together.
+
+>>Aniket Tatipamula	20:17
+Thank you so much, Abby. Let me go back. So, yeah, the moment we classify it, we split it, we classify it, that's where our extraction bit would come into picture. So whenever you upload a document, the first item that it does is it classifies, it splits, then it classifies. So if by any chance you get this wrong, this is because of the classification getting wrong. So if you ever see this is not the type of classification issue. If you ever see the document getting split in a random order, it's the splitting issue. And the last one is the extraction. So when you click into it and when you look at the document, and this is where the extraction bit comes into play. Now, if you split it wrong, if you classify it wrong, ideally you would also get the extraction wrong. But if your split is fine, your classification is fine, and then you're not able to see the right output here, maybe it did not extract, or maybe it extracted something else, then we go to the extraction issue, right? And the extraction issue, ideally, you just let us know, and then we are maintaining a sheet, we'll go and fix. But the way we fix is not very complicated. We just come here, we look at the settings, we come here, we go ahead and first change this. Like, we try to put it in plain English, and you can just run the test and verify if the system understood. But if it's very complicated, then obviously, like, we are going to do it anyways. But just keeping in your favor, feel free. If you think something is so basic that let me just try it out, right? And it fixes it. So you are always welcome to try that out.
+
+>>Aniket Tatipamula	21:58
+But we are always here. We will do it for you. And not just that, let's say, for some reason, it extracted, it extracted this name, right? And you say that, oh, I don't want Llp, like, maybe for some reason, you don't want to look at Llp, right? We can just do that. We can just remove Llp or, what do we say, business extension from, we call it self.
+
+>>Manoj Racherla	22:25
+And then, you run this, and then you are here.
+
+>>Aniket Tatipamula	22:37
+So, you will see.
+
+>>Abby	22:38
+Okay, and it took out the Llp.
+
+>>Aniket Tatipamula	22:39
+Yep, it took out the Llp. Okay.
+
+>>Abby	22:44
+So, that is simple enough to follow. Unless it's extremely difficult, then I'm going to have to get you guys involved. If you can go to the Jordan Vaughn file. Yeah, I really would. Yeah.
+
+>>Aniket Tatipamula	23:01
+All documents. Okay.
+
+>>Abby	23:04
+Yeah, Jordan Vaughn. So, there was, okay, I have it listed as Docusign, but it came up as disclosure. It's got to be in the next page. No, where is it? I didn't delete it, I promise. I did not. Oh, yeah, Docusign certificate. So, it's listed as court order. So, if you click on that, it classified this on its own. And I'm like, no, that's wrong. That's not what this is. It's not part of the order. So, I wasn't sure, like, the whole thing came through as court order. Yeah.
+
+>>Aniket Tatipamula	23:43
+So, what would that be, Avi? And I'll show you how to reclassify it as well, right? That's very important. So, you can just click this document here, and there's an option to change the doc type. What doc type is this exactly?
+
+>>Abby	23:53
+It's not in here. It's a Docusign certificate.
+
+>>Aniket Tatipamula	23:56
+Oh, we'll have to create a new one then. Okay. So, we can just create a new one, and then let's say you would see it here. I would just select that doc type and then apply. So, if for some reason it got misclassified, we can manually reclassify it.
+
+>>Abby	24:14
+Okay.
+
+>>Lauren	24:15
+And what, Avi, because I think we could have multiple Docusign certificates. So, I think it's also be specific to, you know, what it was for, if it was, like, if they, you know, Docusign the purchase agreement or something.
+
+>>Abby	24:29
+Usually, I don't get more than two Docusign certificates, usually. They tend to send, especially the states where it's a silent waiting period, they tend to send one Docusign for the whole thing, like transfer agreement, Ipa, all of that. So, I don't normally have more than two, but do you want me to sit there? Because what I do is I identify them by the last four digits of the DocuSign.
+
+>>Abby	24:54
+Docusign because every document that was signed with Docusign has those last four digits printed up on the top.
+
+>>Lauren	25:01
+So would you want to just be, I mean, however you want to break it apart and identify it, like if you want to identify it for, you know, the first package that goes out or if they also use it for, you know, Oh my God, like proofs, if it's used at like two different points in the process, like if we need two types for that board, because it like extraction, like, you know, the only thing it's used for is to sign documents.
+
+>>Abby	25:32
+We don't use it as POD confirmation. We don't use it for anything other than the verification that it went to a certain email and that seller signed it. That's all we use Docusign certificates for. It's not anything that would hinder the process or it's, you know, oh, we need this before we can. That's not the case. It's just a certificate showing this is the email that it went to. It matches on the Coa. This is the seller that we said we had.
+
+>>Lauren	25:56
+Okay.
+
+>>Aniket Tatipamula	26:03
+Okay.
+
+>>Abby	26:05
+Thanks, Abby.
+
+>>Aniket Tatipamula	26:05
+Thanks, Lauren. Then let me, let's go to the next part. I think, I think at least from the platform perspective, I hope Abby, Lauren, it is making sense to you, right? Like what's exactly happening here? It is.
+
+>>Lauren	26:17
+Yeah. We just weren't sure what we were supposed to be touching and where we were supposed to be uploading and what we weren't supposed to be touching. We were just wanting a clarification on that.
+
+>>Abby	26:26
+I do have a question for you. If I take these documents and I upload them one by one into a folder, would it learn a little bit faster if I do it that way or would it not?
+
+>>Aniket Tatipamula	26:38
+It would not, Abby, right now.
+
+>>Abby	26:40
+It would not.
+
+>>Aniket Tatipamula	26:40
+The only thing it learns though is if you correct a document extraction. So what I mean is not the splitting, not the classification, but once it's getting, once it gets classified, if you open the document, let me just cancel this for a second. Okay. I think I have something else selected. Let me just open one of these documents. Yeah. I mean, for some reason, let's say if it did not pick up this, right? I mean, there's no reason it should have picked up anything here, but I can just mark it. And if you do it enough number of times, the system learns that, oh, like this is how the date would come. Because date is pretty precise, but there are certain clauses or it could be some name or some ID that doesn't have a lot of context around it. The system will be there if you do it enough number of times. So that's auto learning, but splitting and class, we would, the team, as I said, I would, Manoj would, Nidhi would, would make sure that we set it up correctly. Okay.
+
+>>Abby	27:44
+Okay. Yes. So, yeah.
+
+>>Aniket Tatipamula	27:51
+Rehydrate once again. I think one last thing that got missed out is, uh, what, if a document gets stuck in auto -classify, I think, let me show you that as well.
+
+>>Abby	27:59
+Oh, yeah. I did see that. What happens there?
+
+>>Aniket Tatipamula	28:06
+What that means is it could not classify it. So let me just open. Oh, yeah. This one, right? This one could not be. So what it means is it got stuck on the classification. And if you open, you'd also observe that the screen is very different, right? And, uh, I mean, the split looks fine to me. I mean, it got split. Uh, but the question is, it could not figure out what document is it.
+
+>>Abby	28:29
+So what is this document? This document is, um, the structured settlement statute for the state of, I think this is Texas. Is this Texas? I think this is Texas because it's supposed to be part of the petition. So it shouldn't have gotten separated from the petition. But I do believe this, these are the rules for how we do one of these transactions in Texas. Yeah.
+
+>>Lauren	28:52
+So like any petition is going to have these exhibits and they're either going to have like exhibit E at the top or it's going to like be like a little cover sheet, like it's like, yeah, the cover sheet or like, there's like a, like a literal sticker on the page. It says exhibit A, B, E and F. So with the petition, we wanted to keep all the exhibits to the petition together, um, which would help eliminate a lot of this duplication because they do take all of the, depending on Abby, but most of the time, a lot of the duplicates are in the exhibits to the petition. So we don't want to take the exhibits to the petition as the document. We want to leave them as exhibits, the petition.
+
+>>Abby	29:27
+Right. I was explaining that, um, earlier.
+
+>>Lauren	29:34
+And then I don't see in my doc Sumo, the Usa checks for the document types. So I don't know if I have, if we have access because Neil, I should have access to that And I should have access to that.
+
+>>Aniket Tatipamula	29:48
+I'll, I'll explain that as well. Before that, I'll just, I'll just showcase how you can classify it as in a point note.
+
+>>Aniket Tatipamula	29:53
+It Abby Lauren as in will make sure i can as i said it got split incorrectly so the fix would be on the split prompt so Manoj would go back and make sure that while we are defining petitions we'll make sure that the petition would cover all the exhibits as well and we don't want to split it if you mention it there it will not split it so that would be one fix for us but for whatever odd reason let's say it did not get classified then you come here you as i just you have an option to select the doc type here i can just go ahead And i know it's petition So okay
+
+>>Abby	30:26
+Okay perfect Yeah Oh good I was wondering about that i was like Oh i see a lot of these ai things I don't know what the hell this is okay
+
+>>Aniket Tatipamula	30:38
+So that makes sense yep and that document would just like if you see this was that document right And it got it's getting processed right now in petitions as soon as it's done And then you can see the extractions as well So that's one i think that covers most of our platform uh from my perspective at least from what i feel you should know i think there would be some nuances And i'll go to the part where Lauren mentioned right like she is not able to see a dog type um what happens is we have something called as users here and uh let me look at Lauren And i think Lauren is an admin But uh yeah can you see you do not have access to ushx And you could you could enable it for yourself as well as far as i can imagine you can just go to users um go to go to the settings and then you can enable it for you But i'll enable it for you i'll enable all of them And yeah that's about it And then if i save if you please refresh and then you should be able to see it
+
+>>Abby	31:37
+Okay Okay Yeah
+
+>>Aniket Tatipamula	31:45
+Okay then this brings us to Abby like uh our request right our request uh i think Manush before i go forward like do you want to add anything are there any other items on your site uh no i have just one question so regarding the new doctor that you just said uh that that was of office on
+
+>>Manoj Racherla	32:04
+Right Right uh so we need to add that as well and we will need the fields that needs to be extracted for that doc type
+
+>>Abby	32:12
+As well okay that one is simple we're just taking the email address and the date that it was signed which is all listed on the okay
+
+>>Manoj Racherla	32:21
+And if you need to like use that document for any cross validation with other doctor we need those details as well Okay
+
+>>Lauren	32:29
+And then i had one other question too um on the usa checks there's a closing binder that got uploaded like there's a check from the closing binder that got uploaded which the current closing binder too like there wouldn't ever be anything from the ai auto classifier that would go into the usa checks like these this is an entirely different business process than what went then the closing binder the current closing binder at the end like that shouldn't ever get classified into usa checks Uh
+
+>>Manoj Racherla	33:04
+Yeah that won't be like we can set it as like within the auto classifier we can exclude this
+
+>>Lauren	33:11
+Yeah we would have a different split because i think we're getting the checks in like a big pdf so we have to split them into individual check pdfs But we're waiting for the bank to confirm um how they're sending it to us
+
+>>Aniket Tatipamula	33:25
+But it would never come from the closing binder like these checks come directly from the bank like they never come from the closing binder sure Lauren i think the way to do that is uh we can create one more auto classifier this is not the only auto classifier we have so i can duplicate this and that duplicate can only be taken care for uh checks so in that case you don't have to do anything you just upload you don't upload it to the first one Yeah like best part would be i'll just rename this for you like uh this would be a auto classifier for closing binder we can just make sure and the other one would be for i mean if you don't want to classify it all together if you are sure that it's always going to be checks then i would not even recommend you to uh what do we say even classify i can just duplicate this for you these checks And then you can just upload it to that doc type because what would we do then if you want us to split we'll split we can split inside the document type as well So we can go to there and we'll do it for you i'm just explaining it uh so that like you understand the system a little bit better uh you can come here And then you can do the same thing here the only difference would be if i do it here i would only be classifying it into checks what i mean is like if you can give it a bunch of documents only the checks would be split and those would be extracted yeah that that works because it would just be checks it's just coming from the bank it's the you know like the proof of payment that we're getting
+
+>>Lauren	34:52
+Yeah because there's two different departments yeah
+
+>>Aniket Tatipamula	34:56
+And you can also hide the rest of the documents as you just saw right Lauren you could not see so if there are two different set of individuals looking at these applications we can keep keep them separate so that it doesn't get merged yes then Abby Lauren anything more from you because then i'll go to my last part which is the request and what we need to make sure that we get going as fast as possible so are there any more questions
+
+>>Abby	35:24
+I i know it has to do with the um the notice of hearing on one of my documents i noticed it took the first page which was the notice and then the second page which has the certificate of services took it took as the pos which it has the same information as the pos But we don't use that as pos and that one was in mered meregi that one that so you can if you want to see it Maureen the one up top Yes so where did it go pos proof of service proof of service Yeah So if you look open one up so i can't remember which one it was No this was an actual service would it be on what page and then would it be at the start of the document maybe we can look into it that way i didn't write down the page number i was just like wait notice the hearing is split up and then they they listed this and this and it shouldn't have been let me let me quickly navigate it for you i think that's a we can there's one more feature out there we can just filter them out and then quickly go through them nope this right here this is supposed to be part of the noh But as you can see it has this whole certificate of service and who it got sent to so it has the same information as the pos but it is part of the document notice of hearing and it should not be separated from the other part
+
+>>Aniket Tatipamula	36:55
+Yeah how would we know about that abhi like is there any identify at the bottom of it at the bottom of it
+
+>>Lauren	37:01
+It says notice of hearing page two of two Yeah
+
+>>Abby	37:04
+Yeah
+
+>>Aniket Tatipamula	37:05
+I think then that should be good we will make sure that we will again as i said this is a split problem
+
+>>Abby	37:11
+So we'll make sure that the split uh prompt or description is properly set and that would fix this okay anything that i saw that was an issue with like the documents themselves just me having to rename them whatever i wrote down But like i said for those i didn't know how to actually work that because i was like well these are being split and they're not supposed to be so anything that i didn't like that I saw i left under review because i went through to make sure that it was extracting the correct information and everything i needed and then the ones that i was like no I don't like this i left it for review
+
+>>Aniket Tatipamula	37:44
+So sorry i mean that that's perfect actually Abby that helps us uh go through those document faster but one one thing that i'm noticing here is a lot of these documents are back to back Right do you want them or do you want them to be a single document they the proofs of service should be one single document so all of these should be just one document yes as proofs of service
+
+>>Abby	38:08
+Okay
+
+>>Aniket Tatipamula	38:10
+Did Okay yes
+
+>>Lauren	38:11
+Because one proof so like one page would be the attorney one page would be the issuer like you know because they're each of these they're basically fedexing each of those people so like for each page you'd have like who it's going to And then that would fill out the the information on the on
+
+>>Abby	38:29
+Yeah on the sheet that i sent you guys via the chats it literally says in there like pos wait let me let me get it So i know exactly what i wrote because i can be a little bit kooky sometimes And then i forget things So it i put it in the teams here so i wrote down because it's a little bit more specific so the proof of disclosure delivery was different from the pos even though they have basically the same information so for the pos i wrote identifiers are fedex from attorney's office Usps labels originally editor originating at attorney's office or a document listed affirmation of service or certificate of service Those are very specific to the proof of service for the petition and the notice of hearing versus the pod confirmation which would also be identifying an email or a package going to the seller's residence for this yeah does that make sense it's making sense a little bit as in it will take us a little bit of time um i i
+
+>>Aniket Tatipamula	39:51
+Think you are expert like obviously like we we are all engineers we are just wondering like what i know
+
+>>Abby	40:02
+And it's it's it's difficult writing it down because it's like Oh yeah Well you know i i forget that not everyone has the same background that i do But i'm i'm as i'm seeing it I'm writing it down like better ways to tell you Okay Well no this is a better identifier or this what have you So i'm sorry
+
+>>Lauren	40:19
+No i didn't um i'm sorry as we're doing this like different binders are going to have like different document types i think we give you like the core document types uh so to add a new document type do we send that to you for each document type that like we come across like that check that got caught up in the usa checks that's an admin fee like the proof of the admin fee being paid um so we would want a document type for that But will we send that to you to set up Lauren you can set it up yourself
+
+>>Aniket Tatipamula	40:55
+And then you don't have to come to us But if you are running into an issue um we are always here like we'll be there Manos you'll be there to set it up And i'll also show how to set it up like if you i mean do you want me to show it to you
+
+>>Lauren	41:09
+Yes
+
+>>Aniket Tatipamula	41:09
+Okay perfect then let me it's pretty easy actually like you just come here uh there's a add new document type here you just click here And uh you can upload your document let me just uh upload a sample invoice uh And then we have an option to analyze what this does is it looks for if it looks similar to any of the dog types that we already have uh and uh let me go back Sorry Yeah And it saves that your document type appears to be invoice but let's say let's say for the sake of it No this is not the invoice and i want to create my own i can just click create custom doc type And Um Yeah I mean it would create this custom document type and that's about it And it's the first thing it does it it tries to extract fields by itself uh this may work sometimes this may not work as expected but let's wait for A second okay while this happens uh Yeah It did so if you look as in it it tried to extract few fields Right And maybe these are not the fields that you would want so that's okay you can just delete the sections that you want uh i let's say i want to delete this i want to delete this um i'll also show where it may run into an issue so i want to delete this you cannot delete this one as a new at least need one section so if you want to delete this you would have to add your own section so let's say just for the sake of it let's say demo And i want to extract invoice number right And i again you can customize your fields as you wish you can add more sections you can add uh more information like name and you can define the string whether it's a string it's a number as in we know invoice number would need to be a number so let me put it as a number um
+
+>>Aniket Tatipamula	42:58
+And you can you can make it more precise in a way that let's say it's not that obvious right invoice number is not that obvious as Abby uh like as in has been uh what do you say teaching us how to uh go through this document like i like a very patient teacher i would say and that's really thank thanks for explaining us so you can just put it here saying that okay um this number would always be at the top be at the top Um Yeah I mean that's about it And then you can run this test uh i'll be a little cautious about this test Abby and Lauren while you do it as in if the documents is long sometimes it would not work so don't completely rely on it but if the document is small enough like two three pages this would work and it would give you the data right away like it gave you 2081 let me see Yeah I think it's 2081 right and because i marked it as number it did not pick up the rest of the string And so i did it wrong So let me just mark it as string again and then confirm and let's run this test again and if you can see it in extracted hashtag inv02081 so let me just zoom into this this this is the number Okay And i mean that's it like it's as simple as that And once you save this once you apply this and once you save this your document type is ready invoice one that's what we have set up Okay Yep And that's about it like it extracted the name it extracted the invoice number if it doesn't work then uh please uh feel free to just drop the message we'll come on the call and set it up for you or set it up async or if you want you can always play around with it a little bit you can come here and then make sure your prompt is more precise and it will start working
+
+>>Abby	44:49
+Okay that sounds
+
+>>Abby	44:51
+Good to me Yep you said i can start playing with this Right away Hello
+
+>>Lauren	44:55
+Yeah ready this helps Abby and Lauren as it is it does help so we can start testing this right now
+
+>>Abby	45:06
+Right like
+
+>>Aniket Tatipamula	45:08
+Yeah you you have the account access with you you can always start testing but that that's where my last request would come quite often what happens is uh you would want to start using the product as soon as possible but what we would recommend is recommend is if you can share a few uh binders with us when i say few as in at least 10 to 20 if possible like if it is uh with you and if you can give us uh more details as to okay where does the binder split uh what is the split document type the one that we are doing right for the classification for the extraction that way what Manoj and i and the team can do is we can test all of that on your behalf rather than you doing this and then running into issues what we can do is we can test it out at our end which is that we would need to know like where the document should split what the classification should be because right now i mean we are like as i mentioned like we have no clue we are like
+
+>>Abby	46:03
+Okay i have a question now um So if i do that because i only uploaded four because i was like oh my god this is so much and i felt bad i was like i don't want to inundate you guys But i do have doc like binders that are all stuck together that i have broken apart And then i have the broken apart ones how do you want me to put this through like do you want me to just give you the binder itself and then um on a side note like do a word document where it's like document from here to here document from here to here document from here to here that's what you want exactly that's what we want Okay Then i can i can do that for you you said you need like 20 Yes
+
+>>Aniket Tatipamula	46:41
+Yeah I can do that for you that that would be really helpful Abby because the moment you do that And then we would be uh i mean we can start working right Like we know exactly what it is like it's coming from you we know where it's supposed to split if the system goes wrong then we can also correct it uh for you and then once we are done setting it up I mean then we would want you to test it out in detail and then let us know if something is missing out otherwise you will just test it out on the system it would break uh it will probably have to come here and then fix it it will be too much back and Forth i hope you are getting my point Right No
+
+>>Abby	47:16
+No I get it completely trust me
+
+>>Aniket Tatipamula	47:18
+Yeah
+
+>>Lauren	47:19
+I mean that would be really and then for the check payable too i feel like there's some some lines of what we said where the required fields are duplicated there's some that were combined i can just change around all the fields to like what we're actually extracting and then put in the prompts for that so that it works you it's it's it's with you if something breaks good
+
+>>Aniket Tatipamula	47:43
+And then we'll be there we'll we'll fix it for you so don't worry about it Yeah
+
+>>Abby	47:47
+You want you want me to just upload these to the that's a lot of binders to put to the um team form so you guys have everything with the word documents and the name attached to it or how do you want me to do that or do you want me to just send you a like a folder with just the binder and the word document telling you which documents are which or do you want me to email them if you email it
+
+>>Aniket Tatipamula	48:16
+Then i think i don't think the attachments would allow you to attach so many documents putting it in a folder would be great Abby like if you already have it then just if you don't have it then Manos can you please create a drive link for Abby get Abby added to the drive and then that would be great because some of the binders are kind of big
+
+>>Abby	48:35
+So they do have they take a little bit of time to come over Okay So and then
+
+>>Lauren	48:41
+Um yeah
+
+>>Manoj Racherla	48:44
+I think you can upload to the sharepoint Abby the same where where i put the four binders that i had originally um Abby you can upload it in the uh the same sharepoint side wherein issuer check samples were uploaded i'll go do the link
+
+>>Abby	49:02
+Abby okay
+
+>>Lauren	49:08
+And then so i have one more question on the check so like we only sent we sent like 13 checks i think for like our our primary issuers But we have 127 different issuers that we could be receiving checks from and depending on who the issuer is the identifying fields like to identify like where the name would be like there's different labels for the different issuers do we need a different document type for the different issuers or are we putting like because it's depending on who the payor is like a John Hancock check is going to have the information with different labels in different places and different lengths than a pacific life check or a metlife check no lauren
+
+>>Aniket Tatipamula	49:50
+You don't have to do any of that it should work right out of the box as in if it doesn't then please let us know we do have a very dedicated check extractor which is being used at scale like uh so if it doesn't work we'll get it fixed for you it should it should work right out of the box
+
+>>Lauren	50:07
+Okay Yeah Because i just i'm going through them now and i'm seeing some stuff isn't getting picked up But i'll i'll correct it and then pull it through and see And then we'll upload more
+
+>>Aniket Tatipamula	50:18
+Yeah Lauren please keep us posted because on checks if something breaks uh or if something is not getting extracted do let us know And uh we as i said we have that auto learning enabled so i can bring in my team members who are working on that to make sure that it it works on your case so for example you you get a check from Abc right a bank name Abc And then it did not work the first time but once you make that correction Uh oh he froze
+
+>>Aniket Tatipamula	50:59
+Hello i think i got Yeah
+
+>>Abby	51:01
+I think i got this i'm sorry about that
+
+>>Aniket Tatipamula	51:05
+No worries Yeah did i miss anything i then was i clear about like corrections and how it works so once you correct it if you upload another check from the same payor then it should read it properly
+
+>>Lauren	51:19
+Yep Exactly that's how we've said okay and then for the prompt do we have to put in if it's not pulling it through do we have to put in for the prompt um like you know if it could be under this label or this label or this label or this label
+
+>>Aniket Tatipamula	51:38
+Yeah Lauren you don't have to start with that dedicated problems to be honest you start with very basic one i don't put any prompt but uh if it doesn't work then you start prompting it like And i i would say keep the prompt generic what i mean by generic rather than saying that Okay this would be above certain text or below certain text you can probably describe it in a way that okay who is pay or who would be the payor right and the system would understand uh but if it is not able to do it then you can be very specific because the moment you make it specific it would start looking for that specific uh words or specific sentences which may not be the case in all checks or all type of documents Okay
+
+>>Lauren	52:18
+Okay
+
+>>Abby	52:20
+All right perfect Well i'll start uploading those binders we also want to put in some colonia ones too
+
+>>Lauren	52:35
+But i figured we go through the flow and then do colonia
+
+>>Abby	52:39
+After yeah Just so we can get the splitting done right because that's going to help with the Yeah But that's going to help before we get that portfolio through So um i'm going to set up the binders i'm going to put together uh word documents for each one so in the binder that i'm going to put together you'll have the word document with the folder So you know what you're looking at and what gets split where but if you guys have any questions or i wasn't clear on something or something's missing or you just want to know what mess i was dealing with just send me an email or shoot me a message through teams and i'll get back to you sure thanks that would be okay
+
+>>Aniket Tatipamula	53:28
+Then i think uh this was a good call And i hope like uh we we've come to some some settlement and at least we know what to do next on our side uh on on our side we'll get those binders manoj me and the team would start working on setting it up properly uh get back to you if you run into any issues on your side you have access to the account please feel free to play around set up new doctrines uh also play around with prompts if required right as in uh up to you and let us know if you need any of our help thank you so much this will be decent amount of work manoj like Yeah i have to say like get all of those
+

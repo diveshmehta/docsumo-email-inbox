@@ -1,0 +1,621 @@
+>>Abhishek Lokapur	00:00
+I did Alexander and Michael. I did not add David. I'm not sure if David is going to be joining or not. We'll just have Michael and Alexander alongside myself. Sounds good. Could we, I see you have some note takers. After this, could you send me a recording and a transcript? We'll do that. We'll send you the recording and a quick recap of what we discussed today.
+
+>>Aaron Yu	00:26
+Sure, sounds great. Perfect. Just give a few moments for them to join.
+
+>>Abhishek Lokapur	00:33
+Yeah, I think both of them are here, yes. Great. Hey, Michael. Hey, Alexander.
+
+>>Michael Bottazzi	00:44
+Hey, how are you? Doing good.
+
+>>Abhishek Lokapur	00:46
+How are you guys? Great. I think we have everybody. So basically, the agenda on this call is show the initial setup that we have done with the loan packets that you've shared. And what we would want to understand from this call is from the first look of it, we want to get your honest feedback on how close we are to achieve what you're expecting. And plain, candid feedback in terms of what will not work or what changes that is required for you so that we can see if there's any rework that needs to be done on the current setup that we have actually done from Aniket, Manan, and Shivam. So I think Aniket and Manan will lead point on this call. So at any point, if you guys want to stop, ask questions, or need some clarifications, feel free to stop them. And please give us as much as feedback as possible. That definitely helps us in streamlining the entire solution for you. So yeah, let's get started. Aniket, Manan, I think if one of you can take over, that would be great.
+
+>>Aniket Tatipamula	01:53
+Yeah, I'll take over. Manan, if you have anything, let me know. And then if you want to take over something. I'll quickly share my screen. Based on the, I'll also keep that sheet open. Give me a second.
+
+>>Aniket Tatipamula	02:24
+Ok. Is my screen visible?
+
+>>Abhishek Lokapur	02:27
+Yes.
+
+>>Aniket Tatipamula	02:32
+So let me just showcase how someone from Brevit team would actually go ahead and use this. So what would happen is you will, so what we have set up is we've set up all of these document types for the documents that you have shared. And most of the documents, the name itself would suggest the type it is referring to. If you go inside the doc type, you will be able to see the document itself. And we have these fields extracted. And most of the fields are the ones that you suggested. And we made sure that these are the documents and these are the key values that we have to extract. And on top of that, I'll not go through each document right now. Maybe that's not relevant. We'll go to the validation. And then if something doesn't look right on validation, we'll go back to the document and see if we have to make any changes. Because that would make, like, that would be better use of our time right now. There's one more thing that I wanted to showcase. How ideally you would want to interact is we have something called an auto classifier. So if you upload a document here, it automatically classifies that document into any of these doc types. So it's a work in progress. We've set it up in a way that it can classify in almost all of them. But there are some cases where it does get confused, especially when on Pssr. Pssr receipts, the receipts look pretty similar. So we have to just figure out how to set it up in a proper way to make sure that it doesn't misclassify. And if I were to upload a new, let's say, case for that matter, or you want to talk about a customer, let's say this is one customer.
+
+>>Aniket Tatipamula	04:13
+So what I would do is I'll come here. I'll click on Upload here. And I'll upload all of this to auto classifier using the folder. So I click on Upload Folder. And then wherever your folder is, you can just drag and drop that folder here. And it starts working. So let me just showcase it on one of the folders. Just give me one second.
+
+>>Aniket Tatipamula	04:40
+Ok, let me upload. Let me upload Be Moved.
+
+>>Aniket Tatipamula	04:54
+Yeah, I uploaded one more customer. So let's.
+
+>>Aniket Tatipamula	04:58
+So wait for a second. Sure.
+
+>>Aaron Yu	05:05
+Just a note on what you're saying about the auto -classification. Specifically for something like the Ppsr receipts and tokens, since it's part of the closing packet, I think for us, you should be able to reliably use the name of the literal file as a differentiating factor. Just a note.
+
+>>Aniket Tatipamula	05:28
+Yeah, but I think the problem there is, and I checked that out, and I could see that almost each of those packets were pretty precise in terms of naming. But the way we classify is based on the contents of the file and not the name. And that's why, as in, we'll figure out maybe if you want to make some modifications on our program, we'll probably do that. But for now, it looks at the content and then takes a course. So yeah. Great. Yeah, and if you can see, each one of them gets classified. I did not specifically upload it in that specific doc type. This saves a lot of time. And yeah, I mean, right away from word get go, you would not have to do much. And this is where the actual Ksu is. You can come here, and you can open up this folder. You can upload it from here too. I just did it on that screen. But you can click on this on all cases. And you can come here and just upload, upload, auto -classify, upload your folder. And you will see the new folder getting created here with that specific company name. And if you open that up, you will see all the document types here. If it gets misclassified, it's quite easy to notice it. Because, for example, this director green ID, it classified as green ID. Fsa PPSR token, it did properly. This one, I don't think it did right. So changing it is also not a big deal. I just come here, and then I'll just do this. And then it should convert it. But our plan is not to get into this.
+
+>>Aniket Tatipamula	07:09
+Our plan is to fix this properly. We'll make sure that the classification happens properly, and we don't have to manually correct it. But I just showcased how we can do that in case it messed up. Can I ask you a quick question?
+
+>>Michael Bottazzi	07:22
+Yeah. Is there functionality? So if I were to drag and drop, let's say, like two sets of documents, will it auto -create two folders based on the separate clients? Or is the flow more so take the documents needed for an assessment, upload them, let them get uploaded, and have a folder created, and then do the next set?
+
+>>Aniket Tatipamula	07:46
+You don't have to wait as such. But I don't think we allow multiple of them. Let me quickly check that out. As far as I remember, we only do one at a time. But let me give it a try. Let me see if both of them happened. I just uploaded two more. Yeah. Let me just 11 .9. Let's wait for the other one. But only uploaded one, right? Although I selected two, it only uploaded one.
+
+>>Michael Bottazzi	08:18
+So one folder at a time.
+
+>>Aniket Tatipamula	08:25
+Makes sense. But you don't have to wait. What happens is there's a queue that we generate here. If you look at this queue, right?
+
+>>Michael Bottazzi	08:34
+Yeah, that's fine. Yeah, I just want to make sure it wouldn't throw up on itself if you did put two sets in. But yeah, I understand it probably needs time to make the first one, go through that, and then create the second one from there.
+
+>>Aniket Tatipamula	08:50
+And once this is done, let me open up the last one that we just uploaded. I go to the validation screen. And the validation would be. So this is how the layout is. And today, maybe there would be some validations that would be incorrectly set. It would be really helpful. You can pinpoint that, and then we make those corrections. But I think the bigger thing to focus today would be the layout. Does the layout look good? Does the checks, are all the checks covered? The details in the checks themselves, are they all relevant? So we'll focus that. And post that, we can also focus on individual checks too. If some of the checks are failing, then the team would go ahead and fix them. That would also be a priority. So I'll quickly run through this validation screen. So this is the summary. Now, you can let us know if you want the summary or not. But we printed this summary. Summary is of all the checks listed.
+
+>>Michael Bottazzi	09:47
+Yeah, I think summary's good. I think having that's important.
+
+>>Aniket Tatipamula	09:50
+Yeah, so this is the summary. You can let us know which ones are relevant and which ones you want to remove. We'll share this with you. So that should not be a problem.
+
+>>Aniket Tatipamula	09:58
+We've kind of listed all the items that you asked us, and if they pass or fail, we point it out here. We can also add remarks if you want. Like, it's up to you how you want us to configure it. But that's one version. And then we go through one check at a time. And I think we already went through those checks last time. So we go into the doctype, mark it as a reference, and then go into each of the doctypes and check if the name is present. So we can see some documents are unknown. I think this is because of auto -classification, and then maybe a little bit of code change required. So we will go ahead and fix those. But given that we picked up a doctype and a value, like, it should be passed or failed. So in this case, I guess entity names was supposed to be it, but because it's in -depth company trading history report, we picked up the entire thing. So this, we will have to figure out, like, this has to be figured out on the extraction layer, on why it picked up the entire thing, rather than just picking up the name of the company. Similarly, here as well, like, I think, yeah. So it's not the validation issue. It's more of the picking up a bigger chunk of the text. And when we are matching it, then we are not able to get enough match. So we will fix this again on the extraction. So we'll make that extraction part a little better, precise. Because we just set up all the doctypes right now. We did not look at each and every extraction to make sure that each of them. I'll also show you what we will do, just for the team to understand, like, let's just go to that doctype itself. Let me just open that doctype in a second.
+
+>>Aniket Tatipamula	11:41
+The doctype was Bpsr report. Bpsr report, yeah. Pick it up from here. So we'll go here and let me just give it a try.
+
+>>Aniket Tatipamula	12:43
+Yeah, I mean, it's now working fine. I'll just apply it here. I'll just save it. And yeah, let's wait for a second. Oh, the credits are over in this account. Manan, can you get this, get the credits added into this account?
+
+>>Manann Agarwal	12:59
+Yeah. Can you share your email for this?
+
+>>Aniket Tatipamula	13:04
+You want the org ID? It's the org that we shall be -
+
+>>Aaron Yu	13:08
+So just confirming, what you just did just now to, like, change the extraction field, theoretically, I mean, like, Alex and I can both code. We can just do that too, right?
+
+>>Aniket Tatipamula	13:21
+Yeah, you can just do that too. And we, like, we support that testing right away on the, I just showcased, right? I can, I'll probably go back. It's quite easy and intuitive. And that's not it. Like, what I changed is just the extraction bit, but I can actually add more blocks here. If I wanted to do a little bit of cleanup, right? I can get a cleanup done first. Just for the sake of it. Let's say, over here. Yeah.
+
+>>Aniket Tatipamula	14:03
+Yeah. I think I opened up, yeah, this is a different org, I guess. But if you look at it, right? Like, the thing that it picked up is Australia and New Zealand Banking Group Limited. But when I run this block, it then converts it to lowercase. So we can do much more on top of it. This was just a showcase, but I'll remove this. Save this, don't save. Looks really good.
+
+>>Aaron Yu	14:31
+Thank you for that.
+
+>>Aniket Tatipamula	14:34
+So I'll just retry this document.
+
+>>Michael Bottazzi	14:52
+What does, like, the data table or analytics tab show? Will it just?
+
+>>Michael Bottazzi	14:56
+It's kind of over on the left side of the, will it just sort of aggregate data as more Ppsr reports get uploaded and just start making, okay, test the accuracy throughout the stack, things like that.
+
+>>Aniket Tatipamula	15:13
+Yeah, this is more of analytics on the doc type. So just to get an idea as to how many documents are uploaded, how many went through without any changes, we get an approximate accuracy as well. Like this is based on the corrections that the user would do and then approve. It's pretty good.
+
+>>Michael Bottazzi	15:28
+So it gives high level stats.
+
+>>Aniket Tatipamula	15:30
+But this is really good. Like if you go to data tables here, what you see is all the data from all the documents together. So I mean, this is more like if you had thousands of cases and all the Ppsr reports would be here and you can do a lot on top of this if you know what to. And we have like this, something like a general query. So for example, I don't know if there's any relevant field here, but Yeah, I mean, I can just search for, so it will go ahead and then search for Bmo. It will set up a filter, not title, I think organization name, right? I have to specify that.
+
+>>Aniket Tatipamula	16:30
+Yeah, so it will set up a filter here. And this filter is organization name contains Bmo. So you can do much more on top of it. I just showcased a very simple case here. It's some of our customers upload a lot of their documents and for them, it makes sense to quickly summarize all the data that they've captured. And it's also a very good way for us and for the teams who are reviewing to look at it. Like for example, when I go through this, like when if I've uploaded hundreds of documents here today, I can quickly take a glance at it. And I can see that this document did not extract this value. So it makes my life easy to go ahead and correct that extraction. Similarly, the values as well, right? If I see something off here, it's much more easy for me to go to the document and correct. So it acts as aggregation as well as fast reviewing.
+
+>>Michael Bottazzi	17:20
+That's helpful, that's good to know.
+
+>>Aniket Tatipamula	17:22
+Then let me go back to the doc type. I think we were in Bmo. Pbs reported some. Yeah, if you now look at it, it picked it up properly. Let me go back. Let me go back to the validation screen.
+
+>>Aniket Tatipamula	17:54
+Yeah, I think this was not marked. It was an issue in a couple of minutes back. But now it's fast because we fixed it. Similarly, we can also fix this. It should not be a problem. But I'm just showcasing like how we will be fixing it for the next week or so. Like I'll take a pause for a second here so that like if anyone has any questions.
+
+>>Michael Bottazzi	18:20
+So at the top of the screen was the overall items that were flagged, right? Or the summary, I should say the summary of everything. But just for this case, right? Can I see like, if I go in there and three new cases are in there, I have to jump into each case individually, right? There's no overall screen showing like outstanding exceptions or something like that, which is fine to be clear. I just wanna make sure I understand how the, what works.
+
+>>Aniket Tatipamula	18:56
+Right now we don't have that screen, Michael. I understand what you're saying. But I think give us a couple of months, the team is building something around it. So sooner or later, like within a quarter, you will probably see much more powerful screen where imagine you upload 20, 30 of them. And then you just have like a list or a table where you can see, okay, these ones are all passed. This is the one that failed. You open up and then see what's failed in that. Rather than going into each one of them manually.
+
+>>Michael Bottazzi	19:24
+Yeah, that's fine. There was one other, oh, I think last time and Aaron, I'll send a filter to jump in if you recall, but we spoke about, I think like a little report or something of that sort getting sent out with confirmation of criteria that was passed or failed. Am I right there or am I thinking about this wrong? Aaron, was there like, if I put in a.
+
+>>Michael Bottazzi	19:55
+Case and there's you know three issues with it um can we get like some sort of notification to be sent out or do we want that notifications not right now Michael
+
+>>Aniket Tatipamula	20:13
+I mean i think what we talked about was like if you come here on this you will be able to download it download the excel
+
+>>Michael Bottazzi	20:21
+Yeah Okay Perfect sorry that that is that's what i was thinking some sort of file summary Okay that works
+
+>>Aniket Tatipamula	20:28
+Yeah we will set everything up as well once we set up this validation screen
+
+>>Aaron Yu	20:32
+Properly okay um i'm curious about the way you guys are setting it up Um so when you guys say kind of like i'm getting you know i saw you guys saw the sheet i got to you Guys right um are you guys kind of doing what you just demonstrated of going into the fields kind of like doing anything um basically what i'm asking is are you guys working within the platform or are you guys doing like back -end code
+
+>>Aniket Tatipamula	20:58
+Well it's it's a It's a back -end code actually in this case uh i mean it's a configurable code so our system like what we have done is in our system we allow certain uh items in our system to be configured for a specific account so that code is configured for you for this account Specifically okay So uh Yeah Yeah And sorry then i'll go to the uh then i'll just quickly go through all the checks maybe you you can comment on it if something looks off something looks wrong or the way we've set up Right like when i say the way we've set up in this case we have document we have field name we have extracted value and we have validation like we can also configure this it's not it's not like what we show here is the only way we can set it up but we felt that this is the right way to set up and we set it up So i'll go to the next one then this is the abn consistency check so if you've picked up abn again there's a reference uh if it matches it passes if it doesn't match it doesn't pass the unknown documents will remove this as in wherever this unknown thing is there we'll figure out and we'll remove um we did not pick it up in this document let me quickly check what happened here this is tax agent right I think tax agent comfort and redirection letter this is not this is not it
+
+>>Aniket Tatipamula	22:36
+I think this is it Oh we did not pick up abn But there is No abn right is this the ab um acn is different
+
+>>Aaron Yu	22:51
+So yeah this one it seems like it just didn't have abn which is good
+
+>>Michael Bottazzi	22:58
+Well not that can you scroll down that account
+
+>>Shivam Kumar	23:01
+Right top right if you guys will see on top right of this document uh just below advisors is this the abn the right one
+
+>>Aaron Yu	23:15
+Yeah there it is are you sure that's for that's for like um the the company or the accountancy for well we can check that
+
+>>Michael Bottazzi	23:29
+Okay
+
+>>Aniket Tatipamula	23:33
+I know why i did not get picked up let me just uh quickly set up the settings
+
+>>Manann Agarwal	23:42
+But but aniket i don't think that was the abn of the uh organization in question i think that was the abn of uh the accountancy for right
+
+>>Aniket Tatipamula	23:54
+Yeah
+
+>>Michael Bottazzi	23:55
+Yeah 590
+
+>>Aniket Tatipamula	24:11
+It's the same No it was 590 it's 5940 there's a difference so it's not the same one it is a different alien of the yeah 6493
+
+>>Michael Bottazzi	24:31
+Wait uh sorry 649325940 is that it Yeah
+
+>>Aniket Tatipamula	24:35
+This is the acn is Yeah
+
+>>Michael Bottazzi	24:37
+Yeah So should we pick up acn as abn then um i want to say yes but let we'll circle up on that after this and just double confirm that that's all right before we implement that um item i would think yes but
+
+>>Michael Bottazzi	24:54
+But let's just check on it to be sure.
+
+>>Aniket Tatipamula	24:58
+Sure, Michael. Then we'll go to the next check then. This one looks correct, right? We show the document, we show the field name, we show the extracted value, and we show what was the reference, whether it passed. Then there was director name consistency check. So I think line name in these two documents, R &d comfort letter, borrower name, tax. Ok, let me just check what happened here. R &D comfort letter.
+
+>>Aniket Tatipamula	25:38
+Ok, I think borrower name picked it up as removed, but it should be an individual. Where is the individual?
+
+>>Aniket Tatipamula	26:02
+It's not mentioned here, right? Or will it always be mentioned? This is not it, right?
+
+>>Aaron Yu	26:10
+Well, these ones are the tax documents, or they're sent by the independent advisors. So they'll have variation. Is there a way for you guys to configure it so that if either the borrower, like the literal director borrower name, or the company name is like, if one of the two criteria is met, then it's good?
+
+>>Aniket Tatipamula	26:39
+Yeah, we can do. I mean, we can set that up. The way we would set that up is here. Like in the validation summary, we can set it up. But in the individual validation itself, you'll have to let us know what to do. Or do you want to merge both of them together?
+
+>>Aaron Yu	26:58
+We can think about it. I'll put that. I'll note that down.
+
+>>Aniket Tatipamula	27:02
+Ok, sure, Aaron. Then let me just open up this one as well. Tax agent comfort.
+
+>>Aniket Tatipamula	27:18
+I think it may be the same case here too. There's no mention of that name.
+
+>>Michael Bottazzi	27:30
+Yeah, so to Aaron's point, I guess these might be coming in to individuals as well as firms.
+
+>>Aniket Tatipamula	27:39
+Sure, Michael. You will have to let us know what to do there. And we'll set it up accordingly.
+
+>>Michael Bottazzi	27:43
+Yep, what's your name?
+
+>>Aniket Tatipamula	27:45
+R &D advisor consistency check. I think this was just a reference, right? We just had to pick it up. As long as we pick up, was that good enough?
+
+>>Aaron Yu	28:01
+So we actually have a checklist of approved advisors. I don't think I clarified that to you guys. But I imagine it's simply just if equals list of one of these 70 names, then it's positive.
+
+>>Aniket Tatipamula	28:25
+Let me quickly check where that was. So what should this be then in this case? What should we match it against, each of these applications?
+
+>>Aaron Yu	28:37
+So I can get that to you. I don't think you guys have that. But we literally have a field of 70 company names where we're looking to see that the tax advisor, the R &D tax advisor specifically, is just one of the 70 companies.
+
+>>Aniket Tatipamula	28:55
+Ok, OK. So you will share that. I assume you'll be sharing that with us, right?
+
+>>Aaron Yu	29:00
+Yes.
+
+>>Aniket Tatipamula	29:01
+Ok, then I'll just put it here.
+
+>>Aniket Tatipamula	29:13
+Ok, then I'll move on to the next one. Ap refund accrued consistency check. So this was the reference. And this is the value. Looks good, right? Yep. Ok. Tax agent consistency check. I think it passed. I think it was just the reference, right? Again, will you be giving us a reference, or that's it?
+
+>>Aaron Yu	29:39
+No, the tax agencies in general, they'll be varied and different. So take the reference from the document. That looks good to us.
+
+>>Aniket Tatipamula	29:53
+And should we compare it against something or like because I think in this case, we just picked a couple of them as a reference. What should we compare? Like we just picked up a couple of them from radium application, but what should we compare it against? Let me quickly open that up.
+
+>>Aniket Tatipamula	30:19
+I think it's the first document, radium application. I mean, he just mentioned as verify this is same as the agent letter.
+
+>>Aaron Yu	30:38
+So, can you open document three in the actual platform?
+
+>>Aaron Yu	31:00
+I think for this, it's just the references from the radium application, right?
+
+>>Aniket Tatipamula	31:06
+Yeah.
+
+>>Aaron Yu	31:07
+So here it says Bell partners. Well, it's going to vary by the tax agencies again, but I guess if you guys can do something like the radium application says that the tax agent is Bell partners here. It's also Bell's Bell partners. So that would be like a verification check.
+
+>>Aniket Tatipamula	31:27
+Understood. Okay. I'll just rename this too. So this is zero three.
+
+>>Aniket Tatipamula	31:42
+Both of these will be zero three, right?
+
+>>Aniket Tatipamula	32:02
+Tax agent letter, borrower verification questions. I think these are the questions that we, this is completely extraction only. Yes or no. If it turns out to be no, then we'll fail the validation. So I'll do one thing, I'll open this up in a new tab, just to save other time.
+
+>>Aniket Tatipamula	32:28
+Yeah. I mean, these are a few of the cases where extraction, we have to rely on extractions and they may not probably let us know where it picked it up from, but I mean, this is it like lodge all, like there were a few questions that we can lodge all required tax information. So we are picking it up from the context of the document. So we'll, we'll get it as yes or no. And maybe this will require a little bit of verification from your side as well initially on few cases. And maybe you can share a few failed cases with us because that way we'll know whether the system works. If you give all the positive cases, then maybe it will, we'll just would not never know whether it can catch the failed ones as well. But that's it like in this, I guess this is it, right? Like there's nothing more to it. Correct.
+
+>>Aaron Yu	33:24
+Yeah, that is correct. Okay.
+
+>>Aniket Tatipamula	33:27
+Tax agent letter, R &d refund account direction. I think, I think these were just extraction. Yes, no kind of a setup. Let me just open that up as to either the innovation or the other option as to say innovation or the other was this a check R &D refund account and can you help me with this check like this specific check?
+
+>>Aaron Yu	34:09
+What about it?
+
+>>Aniket Tatipamula	34:11
+Like, what are we supposed to do here?
+
+>>Aaron Yu	34:17
+That looks good. So we're, we're setting up a second account. It's in the works, but it's kind of right now it's a little unclear, but from like for older documents, this is what it should look like.
+
+>>Aniket Tatipamula	34:40
+Okay. So we should just have like this information extracted. That's it.
+
+>>Aaron Yu	34:46
+Yeah. The field is correct. I think we, we might have to change the validation criteria.
+
+>>Aniket Tatipamula	34:52
+Okay. Okay. Cool. Cool. Cool.
+
+>>Aniket Tatipamula	34:52
+So what should be the validation criteria?
+
+>>Aaron Yu	34:59
+Let's just set it as this for now. Like, innovation is structured. That's how it's been for a very long time.
+
+>>Michael Bottazzi	35:05
+Yeah, once we're ready to go with the other one, we can just make a quick update to what we need there. But I think that the way it looks now suffices.
+
+>>Aniket Tatipamula	35:16
+Sure, thanks. Then let's go to the next one. Equifax company credit and adverse information check. I think this I personally saw it from the document. So I think based on the validation criteria you gave it, it works. And let's quickly do that check as well for the sake of it. This was picked up from Equifax company credit. I think the check was for value less than 500 something. Let me just change it to 200 and check this out.
+
+>>Aniket Tatipamula	36:01
+It passed, but I need to check. There was a value there, right? Let me just check what was the value.
+
+>>Aaron Yu	36:08
+It was 510.
+
+>>Aniket Tatipamula	36:09
+510, right? So we'll check this out, like what happened here. But this should fail, correct? It should be greater than.
+
+>>Aaron Yu	36:16
+Yeah, so that should be a fail. Could you maybe click into the validation criteria for that one?
+
+>>Aniket Tatipamula	36:28
+This one?
+
+>>Aaron Yu	36:30
+Yes.
+
+>>Aniket Tatipamula	36:33
+Yeah. This is for the directors. Yeah, I'll check this out. I'll check this out And then I know it was 510. Not sure like what happened here. This was the check if I'm not wrong. Company credit score. We'll figure this out. Okay. We will check this out, but the items here are correct, right? These were the only items that we need to look at.
+
+>>Aaron Yu	37:01
+Yeah, are you also, are you taking the one for the directors too? Because this is a company portion.
+
+>>Aniket Tatipamula	37:09
+Yeah, we have here for the directors. Let me just quickly check. There's one section for the directors.
+
+>>Aaron Yu	37:17
+Yeah, let's look at that.
+
+>>Manann Agarwal	37:18
+I think it went up. There's two directors in this.
+
+>>Aniket Tatipamula	37:24
+Yeah, this one. There are only two directors, right? This is it, I guess.
+
+>>Aaron Yu	37:30
+Can you cover that?
+
+>>Aniket Tatipamula	37:34
+The first one is adverse no default zero. I think everything was zero in the second one. Chance of adverse in the next 12 months. I think there's a 0 .88 % chance. Let me just open up this doc and check. This would be in document, I guess. Should be in the same document, right?
+
+>>Manann Agarwal	37:56
+It's the table, director info table.
+
+>>Aniket Tatipamula	38:05
+Yeah, I think it is somewhere around here.
+
+>>Manann Agarwal	38:12
+Aniket, if you just open the table on the left panel and you click on the row.
+
+>>Aniket Tatipamula	38:15
+Yeah, I do that. Yeah, so this is the first one and this is the second one. Yeah, I think it picked it up from here, 0 .88. Is it correct or is it wrong?
+
+>>Aaron Yu	38:37
+It looks correct. Can you scroll a little bit down? A little bit more down? There should be a director summary. That would be, I think that's what we were looking at.
+
+>>Manann Agarwal	38:55
+That is attached to the first row. If you, Aniket, if you click on the first row.
+
+>>Aniket Tatipamula	38:59
+There was only one, right? Were there two of them? Oh, there were two of them. Okay, we have to pick it up from this section only, right?
+
+>>Aaron Yu	39:11
+Yeah. Okay, we'll - Just pick it up from that section only. That looks good if you're able to do that consistently.
+
+>>Aniket Tatipamula	39:21
+Okay, this makes sense. Manan, will you note this thing down? At least this change?
+
+>>Manann Agarwal	39:26
+Yes, yes, I'm noting it down.
+
+>>Aniket Tatipamula	39:28
+Thanks. Okay, then let me... Yeah, so basically in this one, we actually merged all of the checks because it was turning out to be quite long if the number of directors were a lot. So all of them merged together, pass or fail. If any one of them failed, it will be failed. I hope that works.
+
+>>Aniket Tatipamula	39:54
+Okay, then let me go to the other one green ID verification check. I think this is this comes from the field itself if it's verified yes or no. This looks good, right? Okay, company registration status check. I think again, these are these are directly coming from the field. So nothing much here, as long as they are here, we should be good. Okay. Prior year R &D tax refund check. Verify that prior year received by borrower. Does it look correct?
+
+>>Aniket Tatipamula	40:39
+Aaron, are you there? Manan, can you hear me? Is it an issue?
+
+>>Manann Agarwal	40:45
+I think this should this validation.
+
+>>Aaron Yu	40:51
+Um, prior year R &D tax refund. Can you guys map that to I think what we said? Um, I think it's, it should be a number mentioned in the radium application.
+
+>>Aniket Tatipamula	41:09
+Okay. Okay, we'll match that. I think we would have will match that. So these numbers should be matched with the radium application. That's it, right?
+
+>>Aaron Yu	41:19
+Yes.
+
+>>Aniket Tatipamula	41:20
+Okay.
+
+>>Aaron Yu	41:21
+Um, at least I believe so. You guys can double check the document. The document should be pretty specific with that. Okay.
+
+>>Aniket Tatipamula	41:45
+Verify the same as documented. Okay. This makes sense. Um, Ato integrated client account status.
+
+>>Aaron Yu	42:08
+What is this document? Could you go into it?
+
+>>Aniket Tatipamula	42:13
+This is the, yeah, let me just open up.
+
+>>Aaron Yu	42:18
+I think it's business active, right? Yeah. Um, it should be zero nine.
+
+>>Aniket Tatipamula	42:35
+No, it should be zero nine. Let me just go back.
+
+>>Michael Bottazzi	42:54
+All right.
+
+>>Aniket Tatipamula	42:55
+Um, what is zero and balance zero?
+
+>>Aaron Yu	43:06
+Yeah.
+
+>>Michael Bottazzi	43:07
+Oh, sorry.
+
+>>Aaron Yu	43:10
+No, no, no. Michael speak your piece.
+
+>>Michael Bottazzi	43:12
+I shouldn't say it for date generated. It's just pulling that field, right? Or is it doing any, is there a criteria check happening there? Is it just extracting? Like, is it saying date needs to be less than this or greater than that? I don't think so. Right. It's just literally pulling the date, right?
+
+>>Aaron Yu	43:31
+I don't think I specified a date to them.
+
+>>Michael Bottazzi	43:34
+That's fine. That's fine. I just wanted to, okay.
+
+>>Aaron Yu	43:37
+Yeah. Um, so that was something that was something to be changed in future stuff. Well, I was talking to credit about that.
+
+>>Michael Bottazzi	43:48
+All right. All right. So this all looks right then. Yeah.
+
+>>Aniket Tatipamula	43:55
+Okay. Then Pbs, our registration number check consistency, I guess. For some reason we did not extract it from the doc 11. The reference would be doc 11, right?
+
+>>Aaron Yu	44:09
+Yeah. Um, doc 11 should be the reference.
+
+>>Aniket Tatipamula	44:28
+Is this the number?
+
+>>Aaron Yu	44:33
+Can you, can you look at what the other ones are saying to two or two, four?
+
+>>Aniket Tatipamula	44:43
+It's not.
+
+>>Michael Bottazzi	44:47
+It's a bit hard.
+
+>>Aaron Yu	44:48
+Um, can you scroll up a little bit?
+
+>>Michael Bottazzi	44:50
+I just want to see.
+
+>>Michael Bottazzi	44:51
+Ok.
+
+>>Michael Bottazzi	45:00
+All right. Maybe we should make note of that. We might have to re -evaluate how we want to be moved.
+
+>>Aaron Yu	45:13
+Ok.
+
+>>Aniket Tatipamula	45:14
+I'll go back then. But the rest of the docs looks correct, right? That's what we were supposed to extract.
+
+>>Michael Bottazzi	45:21
+Correct.
+
+>>Aaron Yu	45:23
+That looks good.
+
+>>Aniket Tatipamula	45:25
+Secured party consistency check. I think this was a reference and match. This should be good enough. I think these two we did not yet set up, because I think we were also a little bit not sure. Let me just open this check once. I think those are the checks that I don't think we have to do anything. I think that's it. Did we miss out on anything, Aaron?
+
+>>Aaron Yu	46:03
+No, I think you guys actually, this was really pretty well done. So are you guys able to share with us this literal account so I can flip through it and get you guys something?
+
+>>Aniket Tatipamula	46:19
+Yeah, we can. Manan is there on the call. Manan, maybe we add Aaron and Michael both to this account.
+
+>>Manann Agarwal	46:28
+Sure.
+
+>>Aaron Yu	46:29
+Add Alex too.
+
+>>Aniket Tatipamula	46:31
+And Alex as well. Awesome.
+
+>>Manann Agarwal	46:34
+Ok. You'll receive an email shortly where you'll have a one -time password to sign up. And then you can check the account out.
+
+>>Aaron Yu	46:45
+Ok. One -time password, as in we can only access it once?
+
+>>Manann Agarwal	46:49
+No, no, it's a very, you just put in that Otp And then it prompts you to put in a new secure password. You set that up. It's just for sign up.
+
+>>Michael Bottazzi	46:59
+Sure.
+
+>>Aniket Tatipamula	47:03
+And in the meantime, Aaron, because you gave us a lot of documents, so we'll upload all of those. Because now that we've gotten a little bit of a heads -up that things are working, so we will upload the rest of them and then see how things are turning out. But I would request you to also share a few accounts where things fail, because that would also help us figure out. Because as I just did that check for 200, I mean, if you could share a few of them where you know for certain that it should fail, I mean, maybe it will help us as well to catch an on -win -out or some wrong setup.
+
+>>Michael Bottazzi	47:38
+Yeah, definitely, we can do that.
+
+>>Aaron Yu	47:40
+I'd be happy to. So I do appreciate you guys doing this, because I kind of rushed you guys. I was looking at the initial setup timeline and we're pretty ahead. So thank you guys for that. So for my deliverable to you guys, I'll look into these cases. And if you want, we can either set up a meeting or I can do a thorough Excel document again. What would you guys prefer?
+
+>>Aniket Tatipamula	48:15
+We will share access to you. What I would request is don't upload a lot of documents. You can probably try it on one folder or a couple of folders, because we'll be setting, we'll be making some changes in the next two, three days. So what we can do, we will share the access with you. You're always welcome to come and test as you wish. But at the same time, once we are done with our changes, we'll give you an heads up, saying that, OK, we are done. We feel that everything looks good. And post that, and then you can do checks as per your timeline. We don't want you to do, we don't want you to take a lot of time. And then we are parallelly working on it. That would probably not help any one of us.
+
+>>Michael Bottazzi	48:55
+Sure.
+
+>>Aaron Yu	48:55
+Sure, but there are, I think some of these things, if I look into here, I can kind of give you guys some more clarity too. So I'll communicate with you guys on that.
+
+>>Michael Bottazzi	49:10
+I think we owe you like the, we'll look at the Avn versus Acn situation. Some of those smaller notes that we came across along the way too. We'll give you answers on that.
+
+>>Aniket Tatipamula	49:23
+Yeah, thanks, Michael. That would be helpful. Thanks, Aaron. Ok, I think, is there anything else, Manan, from our side?
+
+>>Manann Agarwal	49:36
+No, I don't think there's anything else. But apart from this, Aaron, do also let us know how you feel the setup is. If you feel, like the way Michael pointed out, that, you know.
+
+>>Manann Agarwal	49:50
+If there would be something where you can get a first glance of an overview of all the cases that have been uploaded. So similarly, if you have some more ideas or feedback, you're more than welcome to share that as well. So in the roadmap, most probably we can incorporate that as well, let's say a couple of quarters down the road. So yeah.
+
+>>Aaron Yu	50:11
+Yeah, that's good. I mean, just echoing what Michael was saying, just we hopefully, if we're able to get everything set up, we should trust the validation criteria and not have to really think about it. So just seeing the fails, just putting the fails at the very top or do a big green check mark, that's really, that would be something that's really, really helpful, I guess.
+
+>>Manann Agarwal	50:37
+Yes, that would be. So like Aniket mentioned, if not cases, if you can share at least a few documents for every document type where the validation, sorry, not the validation, but let's say for your green ID, I think all the documents that you shared are verified. Now, if you can share a document which is not verified, or a credit report which is less than 510, or someone, some director has an adverse information mentioned or some bankruptcy mentioned, so that would help us improve the extraction and the validations as well. So yeah, if you could share those as well.
+
+>>Aniket Tatipamula	51:15
+I think what Aaron is looking for is the, we will surely do that on validation screen, Aaron. Like as I mentioned, we don't have it yet outside. You will have to go inside that case and at the very top of the validation screen, we can give you that info, if that is what you're looking for. It's a check or fail at the very beginning.
+
+>>Aaron Yu	51:34
+Great. For the failing verifications, actually most of the things that make it through and we have access to are typically good. But I will personally go through and maybe I can change some of the PDFs, edit them directly, and I'll look to create maybe two packets that are just purely documents where every document has something wrong with it. That'll probably be very helpful to you guys. Yeah.
+
+>>Aniket Tatipamula	52:08
+Yep. Yep, Aaron. Thanks.
+
+>>Aaron Yu	52:11
+Great, no worries.
+
+>>Manann Agarwal	52:13
+Yep. Anything else?
+
+>>Michael Bottazzi	52:18
+I'm good now. No, thank you for the demo. Yeah, we'll still post everything here.
+
+>>Aaron Yu	52:24
+Also good on my end. I really appreciate it. Just a reminder on the recording so we can go back and also the summary.
+
+>>Manann Agarwal	52:35
+Sure, sure. I'll send that across.
+
+>>Aaron Yu	52:38
+Great.
+
+>>Michael Bottazzi	52:39
+Ok. Thanks.
+
+>>Manann Agarwal	52:41
+Thank you.
+
+>>Michael Bottazzi	52:41
+Thank you, everyone.
+
+>>Alexander	52:42
+Thank you.
+
+>>Aniket Tatipamula	52:43
+Thanks, Evan. Thanks, Alex. Thank you. Appreciate it.
+

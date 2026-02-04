@@ -1,0 +1,402 @@
+>>Michael Bottazzi	00:26
+Uh no we're all set are you guys good on your side Yeah
+
+>>Manann Agarwal	00:29
+All you were on our side as well cool
+
+>>Michael Bottazzi	00:33
+Um So i think you know it's been a little bit since we last circled up on the um on the integration aspect of this project um and i think we sort of level set last time um after that meeting you'd sent around a google doc um i think maybe we should look through that And then also you know we circled up on our side and sort of just determined that starting with salesforce using salesforce directly and sort of not going through box is probably the way to go um but can you let us know what you're thinking if you've had any other iterations on your side or sort of how you are best thinking about this sure Michael
+
+>>Aniket Tatipamula	01:18
+I'll we will we will run through the talk that i shared because i think that we did spend a little bit of time trying to get it done and just to give you a heads up like a lot is changing on our product uh within a quarter you may like we will probably be able to do quite a lot of these things natively on our product but for now in that product uh goes to production as in the features goes to production we'll have to stick to this So um Yeah i'll walk through it whenever you are ready And then if i can just start uh
+
+>>Michael Bottazzi	01:49
+Yeah Yeah let's just walk through it Okay
+
+>>Aniket Tatipamula	01:52
+So uh i have listed the steps that uh we would have to go through to upload like to upload the documents get the validation done and get the response uh with yes or no or maybe true or false to proceed at so the way it works is uh salesforce can use our upload endpoint like we have this endpoint here uh and there are two items to it one Is you have to create a folder let me just open this up So what is what this endpoint does is if like when you are uploading a folder uh right now from the ui we first create a folder with the folder name And then we then upload documents to that folder so what we will have to do is we'll have to first for example if the packet name is any case or manan then you would first go ahead and hit this api with the name that you would want it and with the api key that the api key i think everyone has access to it like it's on the settings i'll show where exactly it is
+
+>>Michael Bottazzi	02:55
+And you get the api key you hit this api it will create a folder let me let me do this on the call itself that would be so and just to be clear this step this creates the doc sumo folder that's tied to the salesforce case Yeah
+
+>>Aniket Tatipamula	03:27
+And the salesforce can we will have to make that api like hit this api Okay So right now let's let's call it a demo uh folder so let's name it demo I think this is asking for a type ideally we that But nevermind i can just use
+
+>>Aniket Tatipamula	03:59
+Yeah Yeah I just created the folder Right we just used this API to create the folder and this folder does not have anything in it yet So and what we would do is we would then go and that's what i mentioned upload files to a folder um we can use this API or you can use the existing API as well which is folder id what happens is you get the folder Id So i did not take note of folder i did the response had that folder id So okay
+
+>>Michael Bottazzi	04:30
+So it creates like a shell right That then
+
+>>Aniket Tatipamula	04:33
+Okay you get something like this called folder id which you can also access it here so i can use this folder id and then upload files to the folder so the bunch of the packet bunch right 1 to 13 documents you'd have to go ahead and upload them one by one here you
+
+>>Michael Bottazzi	04:53
+So this is like a clone node of the salesforce case if i'm thinking about it correctly right or does this folder id literally pull everything from that specific salesforce Id
+
+>>Aniket Tatipamula	05:09
+No this this is just this is just a cell this is an object that you created it doesn't pull that then you would have to uh someone in your team would have to write this program which would hit this api get the folder id use this folder id and upload all the documents in that packet to this specific folder And then you keep this folder with you folder id with you because you can then run validations using this folder id so this is basically a reference for you from doc sumo about the packet
+
+>>Erik Zboyan	05:41
+So um um Michael is that Yeah So what they're doing is they create the folder on their side um we then would would make a call and push the files i guess to that folder tell me if i got all this right you know is that we would then push the files over the folder you guys would do your thing And then you would the response I guess is the part is that do you give an immediate response or am i am i having to check back to see whether it passed or failed creating a folder is immediate like you would get this folder id right away and even right now when i'm uploading a file like in this case i am just uploading a sample file and let's do this
+
+>>Aniket Tatipamula	06:24
+Yeah
+
+>>Erik Zboyan	06:25
+Yeah Oh i'm sorry I i'm i'm down at i'm down at c where you wait for files to process Like So i get that we would send all the files over to you guys you guys would then do something on your side and i guess once it's once uh number two once follows a process um how do i know when you're done doing what you need to do on your side
+
+>>Aniket Tatipamula	06:48
+Yeah there are two ways one either you can use something called as a web book so what we what we do is you can uh create an api at urn on sales Okay that's one way the other way is you have something something called as document details but this is not all of this So basically this is uh this is an endpoint that lets you uh get status updates about the documents in the folder so you can just hit this folder so let me just do this and you will get an idea then let's just do this and check what happens it will be quick so while you're doing that again just let me to restate it is that so we're going to make the call out you're going to create the folder id
+
+>>Erik Zboyan	07:49
+You're going to give me back the folder id correct Yeah That's part of the callback um i'm then going to reference that folder id to put the files that need to go into that folder Right Yeah And then you're going to do your thing on your side And then either i'm going to um do a webhook or i'm going to hit hit a point where i'm going to get a response
+
+>>Manann Agarwal	08:18
+Yeah you can you can pull this endpoint Eric just just one thing so the folder id that you get is the api response itself It is not a webhook call so just making that clear Right webhook you'll get a webhook call only after the documents are processed only Yeah Right Right
+
+>>Erik Zboyan	08:36
+Right Right Okay
+
+>>Manann Agarwal	08:37
+Okay
+
+>>Erik Zboyan	08:38
+No I'm with you But But i But i guess like one of the things that we were running into is like how do i know the to write the response back to the record in salesforce um i'm going to use that that folder id because the folder id is specific to the to that person correct yeah to that packet Okay perfect Okay
+
+>>Aniket Tatipamula	09:00
+And as you can see as in you just uploaded the file and uh or we uploaded the file and this is the status so you can use this for polling as well like uh if you don't want to rely on webhook and it tells you the folder id uh the documents inside that folder and who uploaded it And uh what's the primary item is the status let's check Yeah It's it's This is the info like document review so right now none of the documents are in review yet so or document processed yet so we cannot use it like this is we'll check the status And then we can finally go ahead and pull the data right um the way you pull the data is there's no there's no pulling the data because you're not actually requesting uh output in that way what you want
+
+>>Aniket Tatipamula	09:49
+Is basically get the validation outcome and the way to do that is this i'll just quickly shoot so this is the endpoint that actually runs the validation So and we need to pass the folder id and we need to pass the api key if you can take like a folder that's already processed or
+
+>>Manann Agarwal	11:03
+Something Yeah
+
+>>Aniket Tatipamula	11:04
+I'll do that just quickly try this out there's no data document the last one Right so this is the validation screen data uh we are not expecting you to make use of this i mean it's up to you if you want to pass this But we would not recommend doing this what uh what you would do is you would just hit this api and then uh just make sure that you're getting a response and you're not getting an error and we will create a success packet here somewhere and what we'll do is when you hit this api you can let us know if you want us to fire an api uh your api or a kind of a web book information that where we can submit that this folder id is all success or this folder id id is not all success and this will keep on happening every time someone comes to this page so for example something went wrong and then someone had to come here and make a change so every time the user would come here And then we would keep on hitting that api and when everything passes and that's when you would actually take the pass signal or uh the validation complete signal and that should trigger the next set of actions that you are in uh this may be a little complicated i'll be happy to repeat Eric if you if you did not understand so the screen that i'm looking at right here
+
+>>Erik Zboyan	12:48
+So when when i drop all the files into the folder and you guys do your thing Right you you evaluate all the And then you decide whether it's a pass or fail am i going to get this response right here uh if you want it we can send it But i think you just want it if it passed or if it failed right and is there is it is it the whole packet passes or is it individual like i guess this is more Michael question is it what what are you looking for back is the whole thing to pass
+
+>>Michael Bottazzi	13:22
+Or i think we're looking for a Yeah like a whole pass on the way back And then if these fail that the you know then that triggers a different set of
+
+>>Erik Zboyan	13:36
+So so if i get any if i get any fail on any of these 13 items i tell you it fails that's it
+
+>>Michael Bottazzi	13:44
+Yeah
+
+>>Erik Zboyan	13:44
+That's how we're thinking about it right now um if they are all green and they're all pass i come back and just tell you to move on it passed
+
+>>Michael Bottazzi	13:53
+Yeah pass or um i think on a few of these I mean maybe in this one i'm a kid if you scroll down some of these are yellow uh Yeah there you go uh well not pending pending is something else but we have a few situations where it It's uh Yeah maybe there's no example here Or yeah if something's like na where it's maybe not there But it's not a fail we have situations like that But um what are so like if if something comes back as fail what what are you expecting somebody on this side to do so if it fails i think in a perfect world it hits back in salesforce and the radium team's notified that hey this this packet failed and you need to look at it um i think that's what we talked about mark
+
+>>Michael Bottazzi	14:48
+I don't know if you scroll scroll to the scroll to the top i'm sorry while he's talking Yeah good So do you want to know that it failed on two and three 11 and 12 or do you want to know that it just failed and somebody now needs to go figure out which which one failed no it should it should be which which number it failed on it can't just kind of if it comes back fail
+
+>>Mark Kemmerer	15:12
+You know i don't want people searching you know for the needle in haystack to say oh which one was it it should return what number failed right your comfort letter was bad or
+
+>>Michael Bottazzi	15:22
+Yeah
+
+>>Erik Zboyan	15:22
+But like do you want just comfort letter fail or do you want to know the reason it failed
+
+>>Mark Kemmerer	15:28
+Well so if you go to number two can you scroll down to number two they would need to know that it failed because the reference was different than the extraction is that is that too much data to be able to send back I mean you guys have the data right meaning like you could in theory pass all this i mean I think i'm gonna i'm gonna speak for you But i think you're saying is that how much data do you want to ingest i think you know i think yes like if we could send it back and say you failed on number two because this did not match this when it was supposed to that that would be perfect um
+
+>>Erik Zboyan	16:12
+Yeah so does the response have it like that level of detail like if i were to go through um what i get back could i get all the way down to it's number two Rnd advisor it's Number three tax agent firm is it Yeah
+
+>>Aniket Tatipamula	16:32
+Yep
+
+>>Erik Zboyan	16:33
+And you will you'll get down to that detail and that's the response here if you go through it like i could go through here and hit find fails right and fails would tell me what what failed Yeah
+
+>>Aniket Tatipamula	16:46
+That's about it
+
+>>Erik Zboyan	16:47
+And then i have a reference which one why it failed Okay
+
+>>Aniket Tatipamula	16:52
+Oh okay
+
+>>Michael Bottazzi	16:53
+So it does sure Okay
+
+>>Erik Zboyan	16:54
+The data is all there it's just this now this becomes a little it just becomes more in depth instead of saying so like i wasn't sure whether you wanted to know like the packet failed now go figure out what failed you know go to doc sumo or whatever and look in their ui or do you want me to tell them you know uh these should be specific items that failed and why they failed Okay Okay
+
+>>Aaron	17:20
+Harin you were going to say something or add something um i was just going to mention instead of flipping directly back to radium it may have to end up either at originations or or you first camera um if it's something like uh like an overdue thing that was previously notified but we can chat about that offline Okay
+
+>>Mark Kemmerer	17:52
+I mean if it's something that's something that's simple that it's just to the eye you're like Okay i got it Um um i don't think i want to kick that back to to barb and team i don't know what you're thinking Mike Bonnie
+
+>>Michael Bottazzi	18:15
+I don't know what you're thinking i agree i think maybe let's circle up on it though after this because if it passes right we want to push it forward and change the state
+
+>>Mark Kemmerer	18:26
+Yeah if it passes Yeah
+
+>>Michael Bottazzi	18:28
+Yeah
+
+>>Mark Kemmerer	18:29
+If fails if we're um if we're failing for the same nitpicky stuff that Doug was failing for i'm not sure if we've Yeah
+
+>>Michael Bottazzi	18:42
+I mean maybe that's what it is then if it passes it changes the state if it fails it comes to me or Whoever and then we just take direction from there like send Mel an email Hey these three failed because of this look at them I mean Yeah
+
+>>Erik Zboyan	18:56
+I mean initially what i would say is uh figure out why it failed if it becomes like you know because of ltd dot and ltd no dot or whatever Right um you know then we can adjust for that But i think initially you you hate to say it you almost want to kick it back to them and get like what why did it fail or like you said Michael if it needs to go to you And you need to figure it out that's fine Yeah because if we see something common where it's always failing for some silly reason you know these these guys can adjust it Yeah
+
+>>Mark Kemmerer	19:29
+It's just changed validation
+
+>>Michael Bottazzi	19:30
+Yeah okay
+
+>>Erik Zboyan	19:34
+But to be clear any failure is a fail correct correct
+
+>>Michael Bottazzi	19:39
+Okay
+
+>>Erik Zboyan	19:40
+All right just make sure validation Yeah um so far there's nothing that jumps out at me Um so far there's nothing that jumps out at me Um So far there's nothing that jumps out at me um so far there's nothing that jumps out at me Um so far there's nothing that jumps out at me Um So far there's nothing that jumps out at me news.
+
+>>Erik Zboyan	19:47
+That's it's pretty normal
+
+>>Michael Bottazzi	19:49
+Um i got a quick question So if all right so i go through my first 13 documents right I get my pass great we can send a response back to salesforce change the state awesome I go back in i add my next 10 documents does anything have to change on the back end on your side as far as like the folder id is concerned or If i if it's not static i guess my point right Like if i were to edit something upstream can i expect it to flow downstream accordingly via the folder the shell folder we set up in on the first step Yeah
+
+>>Aniket Tatipamula	20:29
+I mean Michael if you're asking me then yes Because Yeah Sorry much that's happening Yeah if there's nothing much happening here Like if you look at all the validations it's more like if uh during the initial packet analysis you would find all of these missing so And we can also make a provision for it like if you want us that if all of the post -approval packets are missing then don't even consider it for uh the first checks good enough we can make we can make that happen as well but the the thing that would happen is you would just see the post -approval validation as failing that's it and when you add it And then it will be passing that's it
+
+>>Erik Zboyan	21:05
+So like on the on the one i'm sorry isn't it i think make sure I i think you know what you're asking is that if number 11 fails and they And they fix they get a new document for number 11 And they want to resubmit this i can drop it in the same folder right
+
+>>Aniket Tatipamula	21:25
+I think Eric they are not asking this question what they're asking is uh your flow is broken into two parts part number one is pre -approval packet and part number two is post -approval packet so the from the perspective of salesforce And then you would first get those 13 docs and you would upload them And then you would hit this api to get the validation data during that uh the first trial you would not have any of these docs here and all of these would be failing the post -approval packet in itself would be failing Yeah
+
+>>Michael Bottazzi	21:55
+Yeah No
+
+>>Erik Zboyan	21:56
+I get that part i'm saying is that let's say the very first part the pre -approval you know go to you know the top is if if let's say again the number two fails And so i i kick it back And i say hey number two failed need to upload a new document new comfort letter
+
+>>Aniket Tatipamula	22:13
+Right no am i putting you just have to change the extraction Or maybe we would have to fix the validation you don't have to re -upload the document like let's let's pretend the document is actually wrong right
+
+>>Michael Bottazzi	22:27
+So let's say it's failing correctly And it should be failing And they go back and they get a new comfort letter right when they get that new one that's in theory correct and they put it back in that salesforce folder can we expect it to update in docs email the case Yeah
+
+>>Aniket Tatipamula	22:48
+I mean we can do that because that's what we did for the uh document number I guess there was one document that we do that we did that but what i would suggest Michael if you could just delete and upload the document again that would be faster because you know the doc id You know the doc type they are all there on the response uh the folder you just have to delete the document using the api and then upload the new document that would be better way or even for not like even for the person who is reviewing to not get confused Yeah
+
+>>Michael Bottazzi	23:17
+No i get that i think the people that are mainly going to be utilizing this workflow though aren't the same ones that are going to be in and out of doc sumo So we want to make sure that they're able to keep their same process and not get hung up
+
+>>Erik Zboyan	23:35
+But so if i understand what you were saying is that you're saying if i put in a comfort letter and it's wrong Right it fails for whatever reason i get a new comfort letter you know that i would go into wherever i would delete i would have to delete in doc sumo or have to delete in the folder that you're referencing Yeah
+
+>>Aniket Tatipamula	23:56
+You'd have to delete it in the folder that you're referencing everything would be api
+
+>>Michael Bottazzi	23:59
+Okay Okay
+
+>>Erik Zboyan	24:00
+So they would they would need to go and remove it you know put it and then say go pull this through
+
+>>Mark Kemmerer	24:10
+They're just an aba used
+
+>>Aniket Tatipamula	24:11
+Okay Yeah
+
+>>Mark Kemmerer	24:13
+I'm sorry so so Michael um who's who's pushing the qc's is the platform pushing the qc's or is it come to uh does it sit in your lap or in my lap
+
+>>Michael Bottazzi	24:28
+And then you push you push the qc and and i think i think platforms push the qc right because right now once they get the initial approval And i know we talked about Eric i can't remember But i don't i don't know if the state
+
+>>Michael Bottazzi	24:46
+Changes automatically or if that's one of the ones where Doug goes into and grabs them but what do you I'm sorry you lost me they kick off the qc right now does um radium or rocking horse they do something
+
+>>Erik Zboyan	25:03
+Yeah
+
+>>Michael Bottazzi	25:03
+They they hit they hit some they have some trigger that They yeah
+
+>>Mark Kemmerer	25:07
+They have to do something
+
+>>Michael Bottazzi	25:08
+So i'd imagine we would just want to keep that in place Right And yeah have it flow
+
+>>Erik Zboyan	25:14
+I mean i mean in the perfect world the way i'm thinking about it is that they put all their documents in their box folder right um they go hit you know go process or whatever the the api says go create this folder give me the id back Right i save it back to the record so now i know what to respond back to um And then we're gonna have to figure out how to take the files from box um and put those in you know via this api and send them over to doc sumo and so that that i'm not sure about that last part it could be done i'm certain of that But i just i off top of my head don't know me saying pushing a button and saying go grab these files hit hit upload and then hit go that's easy that i can do that me referencing box and using the box because now i can use a box api to go get the files because that's where they're at they're not in salesforce So not the end of the world i mean it's just i don't i've talked ahead top my head I'm not quite sure how to do it But i know it can be done because you know it's box Okay have that right doc sumo I mean you understand what i'm saying right
+
+>>Aniket Tatipamula	26:45
+Yeah Yeah You're talking about you first like i think you're fetching the data from doc sumo or sorry box put it in salesforce and then send it to us Yeah
+
+>>Erik Zboyan	26:55
+Or Yeah basically or just some some way of retrieving the data from box and giving it to you Yeah
+
+>>Aniket Tatipamula	27:02
+Yeah um Eric If i may can i ask how is it done right now like is it done completely manually how do you upload to salesforce um
+
+>>Erik Zboyan	27:12
+How do i how do we upload documents to salesforce yes And how do we get them into into box Yeah is that Yeah So it You know there's we do provide some direct box integration to the end user and so that the files will go directly into the folder inside a box But the in theory none of the files are really in salesforce they're always in box We just we just have like a connection to where we can a we can see it But we we know what folder it's in over in on the box side um the the numbering and stuff like that which i think is what you guys are using is that right is that why the 5b you know 9 10 you know all that um you know that's automatic when it's passed through to box we rename the files you know So we we number them correctly and have them so you can reference them so hopefully that answers your question right now nothing is really getting into salesforce which again is what's different here because if you look at the steps the dark the integration steps on your document 1b it is the one where i'm not sure so i got to figure out one b one a one c two whatever those are all good the rest of it's normal it's just one b involves not somebody actually uploading the files it's going to have to be like a you know uh some api that does that just one before you guys i'll just answer one question if you have access to the file url right now you don't have to download the file you can just upload using the file url
+
+>>Aniket Tatipamula	29:04
+As well like there's an option here So if you know the exact file path on the box and if it is share if it's a shareable link which i believe it would be yeah
+
+>>Erik Zboyan	29:15
+And that was because that's the way you guys originally had this Right it wasn't it somebody like pointing to the box folder So if i if i know where if i know in box where the files reside and i know the folder id you can retrieve those right uh the file url has to be accessible so what i mean is that then we just can't retrieve something but if it's public or if it is a shareable link then
+
+>>Erik Zboyan	29:46
+We can access it okay and as long as it's shareable okay Yeah Now now this what you're showing me here like if you think of step step 1b So i i initiate so again just working it backwards is that i initiate the call i say hey this thing is ready um it sends out and does 1a which is creating the folder you know on your side um could i reference this for 1b and tell you hey here's the here's the path this is where all the stuff is Yeah
+
+>>Aniket Tatipamula	30:22
+Then we can probably try this out Right Yeah
+
+>>Erik Zboyan	30:29
+So like for the brevet crowd is that we know where the file with the folder is you know and inside that folder inside a box is where all the files reside and if what i'm understanding the sumo crew is saying is that as long as i give you a public link you know where you can you have access to that that um that url that path that you could then pull down the stuff now is you retrieving this is that is there like does it have To i mean it can i just collaborate it with you meaning from a security standpoint like no different than like just collaborating you know a box folder or does it have to be like public available it has to be publicly available because our system uh and and when we say public Eric what you can do is uh i think most of these modern applications have shareable link or a way to just unlist the document it's technically not public
+
+>>Aniket Tatipamula	31:43
+But it's unlisted like you need to actually know the url to access it which is highly unlikely for people to know all right
+
+>>Erik Zboyan	31:52
+Let me let me talk about it internal But okay go ahead i think we just uploaded that document
+
+>>Aniket Tatipamula	32:02
+So Yeah
+
+>>Erik Zboyan	32:19
+So if i gave you the folder you don't necessarily need the document is that right do you need the document path or do you need the folder path i would need the document path Oh you need document path um all right let me i might do something i don't know let me let me talk with my developer about it I get what the options are there's nothing you can do right at this point Yeah
+
+>>Michael Bottazzi	32:58
+And um on a kid one one thing you mentioned earlier which i thought was a good idea was on the first half of the the pack you know the pre -approval packet i think we should make uh the second part you know not applicable Right like if nothing has been uploaded for 15 through 34 24 we can safely make the assumption that the document is the pre -approval stage so the following 20 docs should be not applicable Yeah
+
+>>Aniket Tatipamula	33:33
+So Michael we will get that done that should not that's that's straightforward Yeah
+
+>>Michael Bottazzi	33:37
+That's i'm sure Yeah just
+
+>>Erik Zboyan	33:42
+So i'm clear the pre is the underwriting the post is the funding or at the point of ready to fund is that right is that yeah are you breaking down
+
+>>Mark Kemmerer	33:51
+Okay first first start is Android Qc the second part is the closing slash funding closing
+
+>>Erik Zboyan	33:58
+Okay cool I mean longer term i mean obviously first gotta figure out how to get the files over to you because otherwise this is pointless um But you know longer term for you guys you know Brevet is you know having something like this you know visible to to the end user would probably be pretty cool and then having the detail of the fails you know would probably be cool as well I mean Yeah that way somebody could just be in salesforce see it failed you drill in go See What the reason was and address it you know somebody address it You
+
+>>Michael Bottazzi	34:46
+Yeah like and to be clear you mean like radium directly being able to go in and take a look and say Yeah Yeah
+
+>>Erik Zboyan	34:52
+Yeah I mean like the checklist and stuff like that Yeah
+
+>>Michael Bottazzi	34:55
+Yeah
+
+>>Mark Kemmerer	34:55
+Like here's potentially one of my thoughts on this So you have the platform like qc -ing their own products which again segregation of duties do i want them doing that to um there's a recent Bpa Does this um and there's a reason why like uh bpa does it for Canada as well it has to be done in the u .s for tax purposes like we can't be you can't that's there's a There's a there's a platform underwriter and a lender underwriter lender underwriter is bpa who handles qc that has to be done in The United States can't be done in Australia or in Canada when we get to the Canada right which is like to to do Do i want i do one i don't know if that qualifies if those guys kick it which is why these if those guys kick that process off in Australia um if we're failing uh you know some of the legal reasons why we have it set up today they don't kick it off now though do they they push to be there's notification
+
+>>Michael Bottazzi	36:09
+And then bpa does it the bpa physically does that so i would think they would push that would just trigger the doc sumo hole right to start right
+
+>>Mark Kemmerer	36:26
+But it shouldn't be qc -ing your own work No i get that saying that qc and that underwrite the review needs to take place here
+
+>>Michael Bottazzi	36:37
+Yeah we need we need like some sort of uh very good summary notification email detailing the fails and what they what they are here before it goes to them And And yeah that that makes sense Yeah like
+
+>>Mark Kemmerer	36:53
+The like the easy things too right that take two seconds to fix we don't want them having to get their case pushed all the way back because of it um which is kind of my original question is like they can push push the files and then someone here pushes the button to the qc well and make sure i understand it is that they're going to push this it's going to kick off all these things which basically returns what you're showing on the screen right here if something fails where do you you know are you saying don't send it back to radio No no No no somebody there has to be a notification that you know something needs to be fixed right for sure for sure i'm just saying tax purposes you know the qc or the underwrite has to take place in The United States and if if they're pushing the button for Doxima it's a run through you know their process in Australia i don't know if that meets that qualification you're saying effectively they're by them pushing it forward they've Qc'd it correct yes versus right now they're even though they're technically are accusing it you know the reality is is bpa is that the Bpa is the list of Qc or qc
+
+>>Erik Zboyan	38:29
+Right correct
+
+>>Michael Bottazzi	38:31
+So there's two separate that's one And then the other is when something does need to be amended how do we want that to flow through accordingly Yes okay we can chat about that Yeah let's let's take that online um we'll come back to him and on And i get with a confirmed flow that's just a good question of who pushed the button Yeah um Yeah I guess we'll also take back the the security you know compliance aspect of it um Eric we can chat about that as well so do you have documentation on this api and all that do you have like something you can share with me this specific documentation pardon me this specific api docs as in
+
+>>Aniket Tatipamula	39:25
+Yeah
+
+>>Erik Zboyan	39:26
+Yeah Just just through the whole the steps that we went through Yeah Do you have it's in it Okay it's in those links are the the docs Okay Api docs Okay
+
+>>Mark Kemmerer	39:36
+Yeah
+
+>>Aniket Tatipamula	39:37
+Except for this one because this is a custom one that we built for you so this is the api that i just showcased i can i can
+
+>>Aniket Tatipamula	39:44
+Share enforcement uh you're fine you're fine
+
+>>Erik Zboyan	39:47
+Yeah So what so like my so for me the neck You know like i said everything except for b right now is you typical um it's just how i'm going to get you the files I'm not quite sure yet securely So yeah Securely and the method and everything Yeah I'm not really sure how we're going to do that i mean because it goes up because up to date Just so i'm clear like up until right this point with when you guys have been doing your you know review of this you guys are putting files into folders Correct Yeah
+
+>>Aniket Tatipamula	40:26
+Yeah
+
+>>Erik Zboyan	40:27
+Now this is what's different this is kind of a I'm not really i'm not putting fine an action is created is triggering the request to put files in the folders versus somebody just dropping files on the folders or referencing you know public links so it's just a little different
+
+>>Aniket Tatipamula	40:46
+So i just need to look through that piece so my suggestion is in uh there's one other way you can do this as in if you if you use zapier And then we can set it up on zapier too So uh we can make a connection of zapier to uh uh box and every time something happens on box And then it would trigger a workflow on zapier that would do this that would uh go ahead and make sure that it creates right Yeah
+
+>>Erik Zboyan	41:16
+I mean obviously i've got that option that's a good idea Yeah that's one thing
+
+>>Aniket Tatipamula	41:22
+The other way is we do it uh but if you are asking us to do it then we would require your box api key uh because we do have the option to add custom integration and i think we talked about it in the last fall so and what we would do is on this custom integration we would do the same thing that you would do on uh savior But it is a little different like this would run every five minutes And we check if a new file got added in your box
+
+>>Michael Bottazzi	41:47
+And then we will go ahead and pick that up and put it in one thing that came up um last week or the other last time i chatted was that you know we can get let's assume we can get the folders in there the way we want and the data is housed there ready to be Qc'd and then to kick the the next part of the process off and actually do the qc checks right and to trigger pass fails or whatever someone needs to be in doc sumo and go through each case i want to confirm that's still how everything is set up right now is that true Yeah
+
+>>Aniket Tatipamula	42:28
+It is true but if you are using the api if you're using this api then you don't have to do that
+
+>>Michael Bottazzi	42:32
+Okay got it I understand now
+
+>>Aniket Tatipamula	42:35
+Okay that makes sense thank you if you if you are the one orchestrating it then you don't have to come to doc sumo Like you just do these four steps these three or four steps you are done like this on this api you will get the response you don't even have to come to doc sumo or open the doc sumo at all
+
+>>Michael Bottazzi	42:50
+Okay that's helpful cool Okay um All right we'll circle up on our side I think we have some questions and things we gotta hash out and like Eric mentioned run down some of the specific uh some of the specifics with getting the folder set up um if i just make this meeting for the same time next week does that work and Eric I guess does that give you enough time to run it run what you need down or do you need Yeah
+
+>>Erik Zboyan	43:22
+Yeah I think so i mean obviously i've got access to you guys to ask questions in between Yeah okay All right so let me do this is that i'll get with my developer talk about it see what his thoughts are And he'll i'm sure he'll have questions on this So um we'll just we'll loop together you know at that point
+
+>>Michael Bottazzi	43:41
+Okay cool um that's super helpful I'll um i'll come over top of the email with uh or actually i guess if you guys want to use google teams again just feel free to send out another invite we can just do the same thing that works this is helpful though thank you for the uh the assistance with the api the custom api and everything i think that's great thanks
+
+>>Aniket Tatipamula	44:06
+Man Okay
+
+>>Michael Bottazzi	44:09
+All right thanks Jim Okay great have a good one
+
+>>Aaron	44:14
+Bye Bye
+
+>>Aniket Tatipamula	44:16
+Okay We shall go ahead go ahead
+

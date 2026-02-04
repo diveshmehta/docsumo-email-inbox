@@ -1,0 +1,285 @@
+>>Raghuram Menon	00:00
+Very good. Thank you. So, give me one minute. I'm just ringing Vikram. He will also be joining today. And he'll be leading the call. Give me one second. Okay. Yes, Vikram is here.
+
+>>Bikram Dahal	00:25
+Hello. Can you guys hear me? Yes.
+
+>>Boris Teper	00:28
+Vikram, how are you?
+
+>>Bikram Dahal	00:29
+All good. How are you?
+
+>>Eugene Yaromik	00:31
+Very good.
+
+>>Boris Teper	00:31
+Thanks.
+
+>>Bikram Dahal	00:31
+Oh, I was just messaging Eugene because I did not see him on the meeting. Okay. Just to give you a focus on our side. We have been able to complete majority of the things that were required on our side so that you guys can start the litigation. We are extremely sorry I could not send a bit more detail last week because we were just finalizing the adjustment instructions and everything. That has been finalized. And I'll make sure that before using you, we start on Monday. You have all the information. I have four questions that we need to answer. I can answer like just to make sure that everything is smooth. So I'll go to that. But before that, is there anything from both your side or anything you guys want to discuss about before I go into my questions?
+
+>>Boris Teper	01:25
+Eugene, do you have any questions?
+
+>>Eugene Yaromik	01:29
+Right now, no.
+
+>>Bikram Dahal	01:31
+Okay, awesome.
+
+>>Eugene Yaromik	01:32
+So I'll just also show you the flow.
+
+>>Bikram Dahal	01:35
+A lot of things have been completed on testing environment. The team was just showing me those things this morning. But it's not on your account, which will be released on Monday or Tuesday. So we'll plan everything as for that. So let me first go through the questions And then I'll go to like showing you the whole workflows and everything. And then so like how everything works. The first question was regarding. Give me a second so that I don't forget. Yeah. So right now, what we saw on the because when the file is sent to us, we'll be making a folder. And and then like putting all the files that we receive on the same folder. Now, the folder currently we are just using the like subject. But what I what we saw is that subject has all the text and with the name. So like I'll give you an example. So I just wanted to know if you guys want to do any kind of post -processing and only keep the name on that. You guys want complete subject without us doing any kind of manipulation because you might have to like figure that subject on your side. So that's what I didn't know. Like what should be the name of the folder on our system? So let me just say this.
+
+>>Eugene Yaromik	02:56
+I think it doesn't matter what the name will be. Ok. But then how do you reference the folder?
+
+>>Bikram Dahal	03:08
+So on this case, just to make sure that we are on the same page, the folder name would be like what it would be complete application for this one. Right. So as long as this will be fine, we just I want to see if we have to just get the name of a desk and only put this as a folder name or we can put this complete as a folder name.
+
+>>Boris Teper	03:31
+It should be complete because sometimes they even send without the subject with the blank.
+
+>>Bikram Dahal	03:36
+Ok. So that for now, like we just send you the complete subject so that it's easier for you to. So that was the first question. The second question that I had was are you getting the analytics? So on the analytics side, on the on the web that your team has sent, summary is different and transaction is different. So on our case, we can send it to separate web books or we can combine both and send them under same JSON. I'll give you an example of JSON that I have also.
+
+>>Bikram Dahal	04:15
+So this is a summary and this is a transaction summary. So do you guys want it under a same JSON like this or you guys prefer to have it as a two separate like JSON like you guys had sent to us?
+
+>>Eugene Yaromik	04:32
+I think it should be one. Ok, so then in this case, we don't need the transactions, only Mca transactions.
+
+>>Bikram Dahal	04:43
+That one will make sure that Mca transaction and that if there is a recurring payment, you guys also need a recurring payment. So if that is the case, then we'll send those transactions on the same JSON. So you have summary and you will have two transactions of Mca transactions.
+
+>>Bikram Dahal	04:58
+Transactions and recurring transactions. And so these are the two information that will be added to the same JSON. Ok, you guys don't use the transaction data at all. Like this information that you guys are receiving is currently not used at all. It's for MCAs.
+
+>>Eugene Yaromik	05:19
+Yeah, we don't use these old transactions. We don't use them.
+
+>>Bikram Dahal	05:23
+Sure, I'll make sure that within that summary itself, you get somebody. And on the down, you'll get the Mca. And also, you'll get a base of a week. I think there's one where you need to figure out if it's a weekly and daily updates or loans or things like that. That also will make sure that that is on the same JSON. Ok, that makes sense here. So let me just go to the next question that I had. Give me a second. I have too many screens. Sorry. And then the next one is, oh, yeah, because if you guys don't need that categorization, the question I was going to ask is, if you are using transaction information, then do you guys use Sfi MCA? Do you guys use any other category for any other calculations? So that is already answered, because you guys don't do it. The last question that I had was, example, some documents have some issues, right? Like let me say someone was supposed to upload three bank statements. And then one of the bank statements is scanned. And we're not able to extract that information from those bank statements. Only the partial information is extracted. And the running balance protocol, opening balance and closing balance are not matching. In that case, currently what happens with your coin vendor, right? So do they just send that information into your system and you guys manually post those files? Or what happens, for whatever reason, if there's an issue on the document and the extraction did not happen? So how is that case handled currently on your side? We also have iframe where people can go and fix those issues. So I just wanted to know if you guys want to integrate that or how is that process handled if you're not able to extract for whatever reason?
+
+>>Eugene Yaromik	07:07
+Do you mean bank statements? Yes. We should send bank statements manually, like via API?
+
+>>Bikram Dahal	07:16
+No, no. So let me say you've got three bank statements and all of this is scanned document and they have some issues, right? So on our side, we are able to figure out that this has an issue. We are not able to compare closing and opening balance. We can give you a data back, no issue with that. But usually for us, a bank statement is completely extracted when opening balance, closing balance and all the transactions were matched. If they are not matching for whatever reason, if the file is missing or something, then we also give you information saying that there is a telecheck fail, right?
+
+>>Eugene Yaromik	07:53
+Okay, I got it. For example, in the JSON, it should be like a summary. No, first bank statements, it should be a summary. Then it should be like a file name, bank statements and the status, for example.
+
+>>Bikram Dahal	08:15
+Okay, okay.
+
+>>Eugene Yaromik	08:16
+And if there is some error, we will check it manually and send, for example, another bank statements.
+
+>>Bikram Dahal	08:33
+Okay, on that case, that will do. We'll send you all the air quotes and everything that we have also that you can take a decision. What we also have in our system is that if there's an issue on the file, people do not have to open that file on any kind of systems. People can just, you can put our iframe into your systems very easily. What I mean by to say is that this document, right? Let me say, let it open. This, everything is correct. The telepath has checked, everything is good. But let me say something has failed. Then this whole screen that you guys see can be put as an iframe on Salesforce or any other system that you guys have, right? It can just be a link. If you click on a link, this will likely open this iframe with all the security. There will be one -time password and everything, like a one -time link and everything. Do you guys want to embed this iframe or the case where there is a failure so that people can review this document very easily? If they want to fix a few things, they can easily fix also because it will highlight and everything. Do you guys want to use this product maybe today or on long run just wanted to get your opinion? Because it has all the numbers and where the information is extracted from. It just, even if one puts highlighting and everything, you'll be able to see, example, if you see there's a blue, right? It means that everything is extracted. For whatever reason, this page is not extracted. Then you not have that highlighting. So you can figure out that, okay, one page.
+
+>>Bikram Dahal	09:57
+Did not extract it. And you can just go and even change it. Like, just do an edit field, and then fix that, and get that extracted. So for those S cases, just wanted to understand, do you guys want to embed this skin into your workflows? Or for now, skip that for version 1?
+
+>>Eugene Yaromik	10:15
+No, I think we should use this link to, for example, manually update something.
+
+>>Boris Teper	10:24
+Sure. It's a very good feature.
+
+>>Eugene Yaromik	10:26
+I think we should do that. This link to JSON?
+
+>>Bikram Dahal	10:31
+Yeah, it will be on JSON only. It will be on link. So if you put that link as an iframe on your system, you can put it, or people can click in, and then it will open an iframe, right? So you guys can decide how you want to. And it will not only have to be for the cases where there is a failure. It can also be for the cases where there is a pass. But people want to leave this document for whatever reason. For example, this is a pass case, right? Everything is good. There's no issue with this pass. But still, this can be put as an iframe, so that people want to leave this file at once, just to see what is there. Then they can do it. So on that JSON that you will be receiving, we'll give you this link also. So you guys can figure out how to show it on your site if you guys want to use it. Like, I'll send you the recommendation on all of this. It's not complicated. You'll get all ready on JSON payload. You just have to make a link and show it over there, or make an iframe and put it over there. So there's no extra effort that is required on your side. Ok? Ok. Also, then, I think this was mainly the question that I had. When you're getting your account, I was just finishing two things. So I will enable auto -classification and make sure that you can upload it to here. It will classify it to application form, make a statement, all those. And then we have also made sure that the JSON structure and everything is very simple, so that you don't have any issues, like you wanted on this code and everything, right? So we're also making sure that those things are properly set up. Please allow us till Monday or maximum Tuesday. We'll make sure that everything is ready. And send you all the JSON schema, send you all the features, send you one more video, so that you understand all the integrations, so that you guys can start using it.
+
+>>Eugene Yaromik	12:16
+Yeah, we can test. Ok, awesome. But for example, about questions that I posted in Slack, what about this first process when you receive an email? And what do you do first? Send a webhook or parse a loan application form, and then send a webhook?
+
+>>Bikram Dahal	12:49
+Yeah, so for now, like, what do you call it? On this case, we'll send both, but you can ignore it. So what we'll do is that we can send a webhook on all the places. So we can send a webhook when the case is made, and you can ignore it. So I'll just show you, over here. You can decide when you want to receive a webhook. Do you want to receive it when the document is on review, when it is approved, or when the case is being made, right? So this is totally your control. So like, but no matter which webhook you receive, it will have all the metadata. Example, let me say, once a loan application is approved, then only, like, then you want to receive a webhook, and it should have all the metadata. That will also happen. So that one, like, we'll make sure that both of these things, this option will be over here. If you guys say that I only want to get a webhook, once the document is processed, loan application is processed, you'll receive that. And you can ignore the order. We might be able to not even send it to you when the pull is created. You can choose that.
+
+>>Eugene Yaromik	13:54
+Okay, one more question. For example, there may be a situation when your service process the email faster than our system. And when you send a webhook, we will not have this email yet. Okay. For example, can we send another API request with this, like, ID?
+
+>>Bikram Dahal	14:23
+Yeah. Yeah. So in that case, what happens is that when you do a, like, when... So the only thing that we need to think about, and that is the reason why I think we might need this webhook. Just a second. So on our side, we do it three, right? I have to see on what time frame and everything that I have to see, on what time frame and everything. But my advice for you guys is that on this diagram, right? Because the most important thing that you guys need is a case. Case and case ID. If you have a case ID, you can call it any time. Because at the end of the day, like I...
+
+>>Bikram Dahal	14:56
+You do not receive a webhook, you can call this, give us a document ID, it will give you information. So this, when you send an email to Docsumo and Docsumo sends you back one information, a webhook with what are the case created, what is the name of the case and what is the case ID, if you guys can use that information and store it on your system and then use that, that will really make all the other steps easier. Because let's say, let's say in the case of this, we send you a webhook, you are not able to receive it, we try it for three times, then it will go to failure. You can see those, what are the failures and everything on Podoc also. Or like, you can see the Podoc and everything. You can also pull what are the case I have. And because you can always pull up that, do that pull every five minutes and figure out what are the case that Docsumo has and what is not created on your system. Because after three attempts, we don't retry that again, because it makes no sense on our side. So my thought process for this is that, either you guys pull what are the cases that was made in the last 15 minutes and then make those case on your side, or you guys can listen for that webhook and every time you receive that webhook, it will have information regarding what is the subject, what is the case ID, what are the files that case ID has. It will have that information also. So that might be one better way. You can let us know, like there are two ways. You guys can let us know, you want to use Webhook or you want to use Rap to find that case.
+
+>>Eugene Yaromik	16:32
+Okay, one more question about this. Maybe do you have some, an option when you send a webhook and receive a response with status other than 200, do you send another webhook, for example?
+
+>>Bikram Dahal	16:51
+So if we don't receive 200, any other retry, let's say for 200, then we retry three times. But I have to see like, what is the retry time? What is the, like how often it retries? I'll get you back to that number. But after three requests, it will not retry one more time. But the main thing on your side for your use case, I have to think around is, if you have document ID or case ID, then you can pull that data anytime. But here, the main issue is that you don't have a case ID without having that application.
+
+>>Eugene Yaromik	17:21
+Because we have a log, like when we receive a webhook and some error, we send another API by case ID in one minute.
+
+>>Bikram Dahal	17:35
+That you can do. Like example, that you can do. Example, the only thing that we have to figure out is that you guys will be able to receive that case ID. Right, so how do you receive the case ID? One is either after the document is, application form is processed, then you receive a webhook. So you get that information. So now the question that you're talking about is, you are never able to receive that webhook for whatever reason. Your system is down or for whatever reason, that case ID never reaches you. Not on our side, but on your side, because it will happen, right? If you guys have a case ID, you can pull anything. Anytime. Because there's an API to pull that information. The only issue that I'm facing, like the issue, and this is very S case of S case. For whatever reason, your system is down. Then there's a second way. You can get a list of case ID using a URL. And you can do a look, saying which case do I have and which case I don't have. So you guys can let me know. Like on this one, sorry, I might have confused you. If you have a case ID, you can pull. Anytime. How much you want to pull that information. But if you are not able to receive the case ID, then you have to make a call to our API that will give you a list of case ID. Look it against what case ID you already have. And if there's some case that you don't have, you have not made a case ID, then you have to put that in your database.
+
+>>Eugene Yaromik	18:57
+Okay. And what part of your integration can we start facing now? So from one day, we can - Like email, like just an application, for example. Yeah.
+
+>>Bikram Dahal	19:16
+Please allow him to do Monday. On your Monday, what you will be able to do is you will be able to send the, like, this is ready. You'll be using this email ID. If you send a file to this email ID, then it will like make a folder. It will make sure that it will make a folder. It will put all the files into that. And you will get a web book back onto your system when the application - On this case, you'll receive a web book when everything is processed. Every time the document is processed, you'll get a web book, but you can ignore it because you only care about those application document, right? So we have a -
+
+>>Bikram Dahal	19:55
+Filter for that you can like and it will have all this fill that is extracted sorry this
+
+>>Eugene Yaromik	20:03
+And you can save this information so you can start with this like you can start with this from Monday when you parse application form you send first webhook
+
+>>Bikram Dahal	20:20
+Yes no so on our system um it will it will send like it will send like what is when any document goes into any of this status like whenever the document is processed it will send you a webhook but in this webhook you will have information about you will have a document type so what you can do on your side in future what will happen Is that is the future i had promised Boris to complete it by um end of this month not right now So like in future what will happen is the first document our system will process is always going to be application form so you send a email application form will be processed first and you receive a webhook right now what will happen is it will start processing all the document and it will start sending you the webhook on your side you can ignore the webhooks you can ignore the webhooks which are not of this document type so what will happen is let me just show it to you there is this id document type we'll send you the url and everything so if you receive any webhook that is of not this document type you can ignore it you can just say if else condition and name of it if you receive a webhook of this with this document type then you can make a case for yourself and put whatever information that you want to put over there and that will have other information also after that is done you need a bank analysis and everything your this json it will have a case id And you will give a url if you send like if you send that information like you will take the case id from this webhook that one from this webhook and if you do it you'll be able to execute analytics
+
+>>Eugene Yaromik	22:13
+Okay
+
+>>Bikram Dahal	22:15
+So and it will be that analytics part will be ready by like whatever and check part will be ready by mid of the week everything is ready it's just i have to like figure out a few things over there so that will be ready by mid of the week Uh but from monday uh like from monday into friday or maximum tuesday you'll be able to send a file to Doxomo Doxomo will automatically classify this into different types it will send you a webhook you'll get a you'll only care about application webhook based on that id and everything you'll send that information to your system you'll get a case id and like um and like using that case id you can also call being analytics api for now
+
+>>Eugene Yaromik	22:57
+It will it will not give you anything it will give you empty but once the api is ready it will give you the lesson on the required format um for the first part of integration will you parse all files yes after update parse after bank statement after our api request Okay
+
+>>Bikram Dahal	23:23
+Once you it is the application information everything you make a case and you guys decide if i have to do a bank statement processing or not if you're doing a bank explicit processing you will send a URL like url and that url will do all the processing and send data back to you on the notebook once it's done Yeah The book should contain this url with i was sending me a message no you'll get a webhook it will be a webhook only because like um once it will take time for those all files to be processed right there's no point of like having that one you'll get those information that transaction in a webhook only and it will have an event you can like we'll make sure that you can differentiate the webhook from application and analytics so it will have some kind of uh keys on the webhook so that you can just like you can like these are which of them is analytics of uh what case and which of this is the application Uh okay Anyway you can uh don't worry about it uh like allow me monday and tuesday we'll make sure that i'll send you proper videos and all the uh all the webhooks so that you guys you can start integration
+
+>>Eugene Yaromik	24:36
+Okay I'll test it on monday and let me know
+
+>>Bikram Dahal	24:42
+Okay
+
+>>Eugene Yaromik	24:42
+Okay
+
+>>Bikram Dahal	24:43
+You didn't i had one question on your side because i'm still a bit confused about uh like if a follow -up email comes all right uh because that is the part because where am i worried about
+
+>>Bikram Dahal	24:54
+On our system we might make two folders because what happens is when the email is forwarded to us that is a part where I have still not figured a few things out and I don't know how often that happens but let me say you initially send up email to us we do a like we extract the application form we do big instrument extraction but later on come to realize that you guys come to realize after looking at analytics that you don't have enough data or something is missing you send a message to the message to the this case and then if I back to the if I back up and then they will send the biggest statement in this case if the subject is same then it's very easy for us to keep it on the same folder but sometimes there's also a case that two different email might have us exactly same email ideas right so just wanted to understand how are you guys thinking about how do how should we work together just to make sure that we are not making two folder one is let me say case study for Vikram and there's Aki Ali or something because it was forwarded to info and the subject got changed And then you have a new subject but for Doxomo because it's a new subject it's a new case I just wanted to understand have you guys thought about those case or how often that case happens if there's a effect on the same field like how do we handle that kind of case you guys understood my question
+
+>>Eugene Yaromik	26:29
+Not exactly Yeah
+
+>>Bikram Dahal	26:32
+This this part like So right now sorry let me make it bigger so this is very simple this flow is simple we don't have to think too much about it this is a part where I'm like I'm just trying to figure out that we are on the same page next is gets the update on the case you get more file right now what happens is that when you get update I'm not sure how your email is set up but to my best knowledge that email will also be sent to doxomo when you receive more files right so currently if let me say on this email that we had someone replies to this email example let me say someone just clicks on reply to all and adds two more file and send it to this one in this case this email will also receive this email because this email was forwarded to us right now if the subject is same then we can upload those files into the same folder right that's doable and that is also the feature that you guys want to have I think so that is fine that we can do but and just wanted to confirm is that the feature that you guys want on Doxomo right like you guys don't want like two different folders on this one
+
+>>Eugene Yaromik	28:08
+So if someone replies to that set you guys want whatever file comes into that set to be put into same um case is that correct for example when it it will be the same subject it like will be the duplicate email because sometimes we receive like one email and maybe in five minutes we receive the same email it's sometimes
+
+>>Bikram Dahal	28:40
+Where already so in that case for Doxomo side like um if you even issue a duplicate then we'll upload all the files example let me say simple I'll give me I mean we might be looking at s case And maybe this is not the time to like look into this case I might be making it complicated just on my mind because I have seen few of these cases So but just wanted to for you guys to think through we might need not need a solution right away is a simple case two cases the first case is you have a case people send an email and for whatever reason you get a same like same subject email from vendor um and it comes to doxomo in that case what will happen is Doxomo will make like um like we try to upload all the files of same uh subject into one case right and in that case you will have two application you might have two application you might have six bank statement um so just wanted to make sure that that case is you guys have thought about that duplication and everything so that's the one use case one case uh second case is people reply to that email with additional information in that case if it is the same subject we'll make sure that it get uploaded and they will not be issued it will just be the case but for whatever reason
+
+>>Bikram Dahal	29:53
+Sometimes what will happen is you see this is FY, right? It was forwarded. That's the reason why, like, original email was this only. But FY happens, and because of that, like, we have. And if you do too much of 2 and 4, sometimes the subject also changes. And if the subject changes, then it will make a new case in Docs And Go. So I just wanted to make sure that that is case you guys have it on mind. And we can see later on how often we see this issue. And something on our side saying that filter this kind of, like, name on the subject. And if they are named, just remove it. And then if, like, after removing those keywords, if the subject is the same, then upload that information to the same folder. That might be the case. I just wanted to make sure that these two are the cases. For now, we are not handling it anyway. We'll see how often you guys face this issue. And based on that, we'll take a decision regarding, should I merge it, not merge it, or other thing we may do in future.
+
+>>Eugene Yaromik	30:53
+Ok, but for happy path, we will see how it will work. And just check. We'll see how it will work.
+
+>>Bikram Dahal	31:03
+Sure. For now, like, simple follow up and everything will not be an issue.
+
+>>Eugene Yaromik	31:08
+Because for now, it doesn't matter which folder we name it to be. Ok, sure.
+
+>>Bikram Dahal	31:18
+Ok, then that's fine on our side.
+
+>>Eugene Yaromik	31:20
+To receive an application form and the bank statements.
+
+>>Bikram Dahal	31:28
+Ok, sounds good then. Like, we'll make sure that everything is at least, you can start testing the auto -classification, folder making, and application parsing, so that you can get the whole book. We'll make it ready by Monday. Analytics also will give you a pay and everything, so that you can at least get it started. But the complete analytics of bank statement might take two more days, one or two more days next week. We'll make those ready, and also send it to you, so that you can do the complete interim testing, at least by the end of next week.
+
+>>Eugene Yaromik	32:05
+Ok? Ok. Ok, I will start testing on Monday, and let you know.
+
+>>Bikram Dahal	32:13
+Ok, sure. Ok, anything else, Eugene?
+
+>>Eugene Yaromik	32:22
+Ok, sounds good then.
+
+>>Bikram Dahal	32:24
+Moiz, anything else?
+
+>>Boris Teper	32:26
+No, nothing for me.
+
+>>Bikram Dahal	32:28
+Ok, awesome, guys. Then I think we are making a very big progress. Like, the company is really working on our side to make sure that all of these things are ready. We'll make sure that a majority of things are ready by Monday. And that analytics thing is ready by the middle of the week, so that you guys can do a complete test by the end of the week.
+
+>>Boris Teper	32:44
+Ok, that's good.
+
+>>Eugene Yaromik	32:46
+Ok, have a nice day.
+
+>>Bikram Dahal	32:48
+Anything else, Raghu?
+
+>>Raghuram Menon	32:52
+Nothing else from my side, Vikram. It was very detailed. What I'll do is post this call. Give me some time. I'll be sending a detailed summary of this for reference or via an email too.
+
+>>Boris Teper	33:02
+Sure.
+
+>>Bikram Dahal	33:03
+Oh, I had one question. This was coming from the product side. How do you guys currently decide if you need analysis of bank statement or not? And what is the logic that runs on your side? And can that logic be on our side later or not for now, but on future? So what logic is running on your side to take a decision? Should I post a bank statement or not?
+
+>>Boris Teper	33:29
+The logic, how to process the bank statements, you're saying?
+
+>>Bikram Dahal	33:32
+No, no.
+
+>>Eugene Yaromik	33:33
+So when you get a loan application.
+
+>>Boris Teper	33:35
+Right.
+
+>>Eugene Yaromik	33:38
+Say it again.
+
+>>Boris Teper	33:39
+I'm sorry. I just missed it.
+
+>>Bikram Dahal	33:41
+So what is the logic for you guys to decide if you have to post a bank statement or not? Because on your case, you get a loan application and a bank statement. And you guys don't want to post a bank statement of everyone. All the loan. So once you guys get that information from loan, how is it decided do you guys need bank statement analytics or not?
+
+>>Boris Teper	34:03
+No, we process all the bank statements. We just don't process the duplicates.
+
+>>Bikram Dahal	34:07
+Oh, OK, OK, OK. So the reason you guys are not wanting to post that bank statement with loan application is that if there's a duplicate, then you don't want to post that one more time. No, no, no.
+
+>>Boris Teper	34:23
+You process all the loan applications. But I think we get the submissions from different brokers for the same merchant. So if we process the bank statement from one merchant, the other broker sends the same bank statements to us again. And the third one. So we don't need to process the same bank statements. It's the same one merchant. That's the only reason.
+
+>>Bikram Dahal	34:47
+Ok, that makes sense. Because I was just trying to figure out what logic is running on for that. That makes sense to me.
+
+>>Boris Teper	34:52
+Yeah, that's the only way.
+
+>>Boris Teper	34:52
+Logic Yeah
+
+>>Bikram Dahal	34:54
+Okay Okay Awesome awesome guys are then I like how like looking forward to for you guys to test the product next week and progress Okay
+
+>>Eugene Yaromik	35:02
+Okay
+
+>>Bikram Dahal	35:04
+Yes have a great
+

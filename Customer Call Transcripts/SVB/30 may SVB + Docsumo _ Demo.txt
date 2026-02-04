@@ -1,0 +1,765 @@
+>>Jasneet Singh Malhi	00:00
+Can you hear me now, Vishal?
+
+>>Jasneet Singh Malhi	00:26
+No?
+
+>>Jasneet Singh Malhi	01:16
+Hello? Still can't hear you, Vishal. Let's see if there's the same issue with Min as well. Hey, Min, how are you? Can you hear me?
+
+>>Min	01:43
+Hey, Min, can you hear me? Vishal, can you hear us?
+
+>>Rushabh Sheth	01:54
+We can hear you, Jasneet.
+
+>>Min	01:58
+We can hear you, Vishal. Sorry, my computer doesn't like Google Meet, so I can't see anything. I don't know if you can hear me.
+
+>>Vishal	02:05
+We can hear you, yeah.
+
+>>Jasneet Singh Malhi	02:07
+Oh, I can hear you, Vishal.
+
+>>Vishal	02:09
+Let's go. Alright, we're good. So many different things to configure every time, sorry.
+
+>>Jasneet Singh Malhi	02:16
+I and Vishal were playing charades for the last, like, 30 seconds. Min still can't hear us, though.
+
+>>Min	02:28
+Okay. We can hear you, Min. Okay, now I'm good. Alright. Yeah, I'm not a fan of Google Meet. Yeah, same here.
+
+>>Vishal	02:38
+I was like...
+
+>>Min	02:39
+It never works for me.
+
+>>Rushabh Sheth	02:41
+Min, you have a pretty full coffee pot.
+
+>>Min	02:45
+This is my tea. I drink, like, way too much tea, so I shifted to decaf Darjeeling. I have, like, a liter of regular Darjeeling, then I moved to decaf Darjeeling by the end of the day.
+
+>>Rushabh Sheth	03:00
+Actually, I have moved to, like, just putting, like, lemon. I don't know if you guys can see. But, like, one of those large cups with lemon and some salt and this thing, and not have it. Like, otherwise, I was getting too addicted to coffee.
+
+>>Vishal	03:16
+Well, I used to...
+
+>>Min	03:17
+When I used to work at my old shop, the way we did it was, you know, I had my assistant create a steep, a big thing thermos of tea because I'm just constantly drinking it. I have this really weird thing. Then, at home, it's always a pain because you brew it And then the teacup cools down by having it at the bottom. It's cold. You know, you have to throw it away. But now I have this thing that keeps it at 190 degrees. So, it oxidizes the tea, so it's not great, but it's better than cold tea. And I go through it in, like, an hour or so.
+
+>>Rushabh Sheth	03:53
+Wow.
+
+>>Jasneet Singh Malhi	03:55
+I think you are single -handedly getting the consumption on The West Coast.
+
+>>Min	04:02
+I know, like, decaf tea is horrible, but I can't keep drinking the caffeinated tea Otherwise I'd just kill myself, you know?
+
+>>Jasneet Singh Malhi	04:09
+Maybe once in a while for the original stuff, you know? I'm sorry? Once in a while, maybe, for the original...
+
+>>Min	04:15
+Oh, no, I get one liter of the real stuff and then... Oh, okay. So, in the morning, I get the good stuff And then the second brew is the decaf. Got it.
+
+>>Jasneet Singh Malhi	04:28
+Awesome.
+
+>>Jasneet Singh Malhi	04:29
+So Min, thank you for joining. Vishal, thank you for joining. After that initial snafu, I'm glad that everything is sorted. So I would also like to introduce Roshabh on today's call. Roshabh is our founder and CEO. He is based out of New York and just wanted to include him on today's call just so that there's an executive connect. We have the next one hour blocked for the demo and discussing the pricing. And Roshabh could also give him his inputs because he's worked on tons of projects like this. So Roshabh, if you want to quickly introduce yourself.
+
+>>Rushabh Sheth	04:57
+Yeah, Vishal, Min, really nice to meet you guys. Hopefully we get to meet in person sometime. Just to give a quick background, me and my co -founder started Docsumo about six years back. We are already in our sixth year running. So I have a fair bit of experience with just entire unstructured to structured data flows. We already work with Nomura, The Bank, Greystone, Arbor, quite a few players in this space. And essentially, we do everything from helping you automate ingestion, classification, splitting of documents, capturing data from all sorts of structured, unstructured documents, Word files, Excel, et cetera. We also help you to cross reference that between different documents or with a database, analyze and then pipe that data into any downstream system like Salesforce. So I've seen a whole bunch of use cases across the board, essentially, especially for banks and lending firms. There are quite a few processes from ingestion. The first major use case that people come to us for is mailroom automation. They would have an older classification engine not really working And then they would need to tag the files, put it into, create a case based on that. So entire mailroom automation plus what do you say, loan originations or pre -approvals, underwriting, and the analytics closing part of it.
+
+>>Rushabh Sheth	06:38
+But anyways, we'll jump into the demo to give you a better understanding of the platform. So happy to help wherever you need my input. So feel free to ask me. Awesome.
+
+>>Jasneet Singh Malhi	06:52
+Awesome. I think we've met Stefan and we've met Min. I don't think, Mishal, we met on the last call. So if you could also quickly just give us a background of how you bring this to the call, that would be awesome. And then I can also try to see what value can I match to your day -to -day And then help you realize the value better.
+
+>>Vishal	07:10
+Yeah, I'm kind of like parallel to Stefan. So basically we use the same kind of search criterias and looking for our docs and warrants and whatnot. So that's the easiest and quick abridged version there. I'm kind of similar to Stefan's needs. So we'll leave it at that. Awesome.
+
+>>Min	07:29
+I need to interrupt, but just quickly on The Docsable Notetaker, I assume that's not in the public cloud. That's still covered by the Nda and that's within your system. Correct.
+
+>>Jasneet Singh Malhi	07:44
+So basically I'll just start the demo. I'll just give you a quick rundown once again, because I think Vishal just joined us today. So just to set some initial context, Docsamo is basically an Idp OCR platform, which uses machine learning and artificial intelligence to extract data out of any sort of unstructured documents and gives the data back to a structured format. The structured format could be a JSON file, a CSV, or directly piping the data to a CRM or an ERP system or Salesforce for that matter. And unstructured documents could be contracts, invoices, bank statements, what have you. So any sort of documents where you want data to be extracted out of and be piped somewhere else, Docsamo is the way to go. So where we're starting the demo today is that AI models are basically an AI library, wherein you have a lot of these pre -trained models that we've created, plug and play system. The idea of the whole system is that we've done most of the heavy lifting here, wherein you can just use this as a baseline model and train it on top of your data set to have an extractor engine built for you within minutes. We also have an AI auto classifier. I think Vishal mentioned that we also help you to classify different types of documents and their respective buckets for extraction. And then finally, let's say your use case is not sufficient in one of these pre -trained models, we also have the ability of a custom document type as well, which comes with automatic field extraction. So basic idea being here is that if the system has never seen a document type before, it will scan it and then recommend some of the fields that you ideally want to extract from this document type to have an engine which can extract, classify, and send the data for you within minutes. I'll just take a quick pause, very high level overview.
+
+>>Jasneet Singh Malhi	09:26
+We'll just get into the documents that...
+
+>>Jasneet Singh Malhi	09:28
+Shared with us, and then we can, you know, give you a rundown of how this will this will all work. But any questions on the AI models up front? Got it. So we'll just move into the actual demo team just wanted to give some initial context. So for the purpose of this demo, I had I've created one document type or one model called Silicon Svb, right? We're in the first and foremost thing is automating the ingestion of these of these documents onto the platform. Now, when you mentioned that you just want to drag and drop all your files, and then just forget about, you know, the entire thing. So we can essentially just drag and drop all the files here.
+
+>>Min	10:07
+And just going forward, if we decide to do this engagement, it's not gonna be a drag and drop. We're looking at upwards of and maybe before we even go into this, it might make sense. We have some based on last conversations, we have 4500 discrete documents that are organized in lack of better word, Sharepoint, let's say, in a host of different folders. So but each folder, so for each document, there are a lot of duplicates as well. So when when somebody made like a little notation on a PDF, oftentimes that was saved, there were there are other extraneous files in those folders as well. And so even identification of the right files to ingest is going to be a little bit of a lift. And we haven't thought through how best to do that. We, you know, because we, I don't know if that's something we would work with you where you just ingest everything and you de -dupe all the data. So we have a clean set of files for every document type. Or we have somebody hand curate the 4500 and drop it into a, you know, some sort of a cloud, you know, drop it in some cloud implementation. Yeah, so we have to think through that too. But that's, that's an end piece is actually going to be a pretty heavy lift.
+
+>>Rushabh Sheth	11:50
+Oh, man, actually, let me tell you, you have to do nothing of that sort. Essentially, we will match exactly the folder structure that you have. So for example, everything will be via APIs, you really don't have to do any of this thing. So what you can do on Docsumo is we have a auto classifier built. Just see maybe if we can enable that And I think it's already enabled probably, you can just go into it. So when you go into the auto classifier, you can set either custom or you can create a depending on the kind of files you have, you can specify what are the classes that you want to capture. So think of it as like, out of those 400 4500 documents, maybe you have 100 different document types that you want to classify and capture and then like 101st being others. Essentially, you can set that up your send the folder by folder, all the all the files here. So you can just upload just need to this is a generic one.
+
+>>Min	12:57
+Yeah, so when we say 4500, we have 4500 documents that need to be evaluated, we probably have upwards of 45 ,000, because there's a lot of duplicates of those documents, right? Yeah, in a set folder, let's say there are two documents that we need uploaded. In that set folder, we might and those are PDFs, we might have another 15 PDFs are very related, have similar content as those, but they're not the final documents that might be drafts, they might have little notes attached, then we might have some Excel files that we don't need to be subsumed, because those are just random. So the curation process, we haven't figured out if there's an easier curation process where we can give you the whole I don't know, 50 ,000 files and your your system will identify which ones to ingest or ingest all the PDFs. And then again, clean it up in a way, recognizing what are duplicates, what aren't. That could work too. But that's just something to be thoughtful, we'd have to get to an answer now.
+
+>>Rushabh Sheth	14:05
+Typically, again, you wouldn't need to hand curate, essentially, technology has come to a stage where we will sort of take care of all of that. So you just need to folder by folder, send the files to us via API, we will do the classification. And we will also mark duplicates in that.
+
+>>Rushabh Sheth	14:27
+And we'll show you how that works. So basically, once the document comes in, any document, it will essentially get auto -classified. And in that folder, so if you go to data tables, just need.
+
+>>Min	14:39
+Yeah.
+
+>>Rushabh Sheth	14:40
+So it will basically create a record saying that what was it classified into.
+
+>>Stefan Z	14:46
+And essentially, you just I'm sorry, can you just clarify one thing? When you say, so now you're discussing the process from when the file gets to you. But you said prior to that, that in order to get that file to then go through that process, we need to send you folder by folder of the files. Correct.
+
+>>Rushabh Sheth	15:06
+Ok.
+
+>>Stefan Z	15:06
+So I think that's what Ben's discussing is sort of. There are two ways of doing it.
+
+>>Rushabh Sheth	15:12
+One way is, so if you go into just need all documents on the very left, you can programmatically create on the top if you do the three dots new folder, you can basically do a new folder with exact naming convention you have. If you need us to group by, let's say, a particular identifier, we can also create folders with a particular identifier and put. So one of the other things that should be clear.
+
+>>Stefan Z	15:41
+So the issue that we have is that we have a Sharepoint folder system, whatever, with. So we have 4 ,500 documents. We have 3 ,000 folders which are named by the company. So each company has its own separate folder. There's no system to that, right? It just depends on the company. Some companies have number identifiers which are unique identifiers. Some don't. So that's what we're working at. And those folders have what Min described, the two documents that we need and the 15 others that we don't.
+
+>>Rushabh Sheth	16:22
+Correct. So Stephan, essentially, what I'm understanding is you would have subfolders per company.
+
+>>Stefan Z	16:29
+Yeah, correct. So there are 3 ,000 of those, let's say.
+
+>>Rushabh Sheth	16:33
+Perfect. So the way to do it is there are two ways for you to do it. Like if you want to maintain separate queues, so if you go into a doc type. So think of doc types as a model attached to a queue. And you can, with the auto classifier, have different queues. So you can have like, where it says invoice, you can do company 1, company 2, things like that. The other way to do it is you can sort of just name the queue.
+
+>>Stefan Z	17:00
+So we identify company 1, company 2, or that's done automatically based on the queue? Ok.
+
+>>Min	17:06
+The auto classifier. So we just need the root drive. Can we take the root drive and populate it? The root drive would all have the subfolders in it. If we just drop that thing in, will you classify it?
+
+>>Rushabh Sheth	17:16
+We will do everything from that point.
+
+>>Min	17:17
+We will retain the folder subfolders. Yeah, OK.
+
+>>Rushabh Sheth	17:21
+So just to, if you go to integrations, Jasneet, for example, what you are essentially talking about is, so we already have a connector library with Sharepoint. And you can just give it one root drive, and we basically consume everything from there. Because there is no point of you putting human effort to trying to go through 4 ,500 files, figuring out duplicates and all of that. So that's where this technology already solves this. And the way we do it is, we'll quickly give you one overview. So practically, if you go into any of the document types, Jasneet, if you go into the Svb1, yeah, you can take it from there.
+
+>>Jasneet Singh Malhi	18:08
+Yeah, so team, essentially, once the document is uploaded onto the platform, we also have the ability to have sub -documents within main model as well. So let's say this is the company name. And then you can have different, you have the ability of creating different folders in a model, right? So I'll just open up one of these examples. So once the document is uploaded, it goes to something called as a processing phase, wherein the AI and the OCR, they work together. And then they're able to extract all the information that we would want to extract from the platform, right? Now, once the processing phase is over, we move into the review phase, wherein you'll be able to review the document and the extraction side by side. Now, this is particularly very powerful for operations team, because this also comes with a two -way mapping as well, wherein if I click on, you know, where exactly is this information extracted from, it will tell me this is the place wherein it was able to extract this information from. And our operations team won't have to kind of search and find where exactly is this, what clause on the document, right? Similarly, the second point of the mapping is that if I hover on top of this specific, you know, or the extracted value, it will give me a tool tip saying that this is the company name. And if I click on it, it will tell me where exactly was it extracted from, right? So let's say if I click on initial shares, it was able to understand and tell me that these are the initial shares that the system, you know, has extracted from. Now, you'll be able to see two things.
+
+>>Jasneet Singh Malhi	19:26
+Here. One is a green tick mark icon which shows that the confidence score of this field is high and it is good and it does not warrant a further review. And there's a yellow eye icon which shows that the confidence score is low. Now what this basically means is that the system we've set up a threshold value and the confidence of that extraction for the threshold value is below that. So rather than giving you wrong or faulty information, the system says that this is the value that I've extracted, but I'm not sure if it is the right value or not. Right. And then this is where human in the loop comes into the picture. Right. If you can just if and let's say, for example, notice as an example is something as let's say this loss as an example, the value is this. Right. And I tell the platform that this is not the right value that you've extracted. The right value needs to be this. Right. Now, the confidence score has changed from low to high and the system is picking up the right value. But the beauty of the whole whole thing is that this actually gets recorded as part of the model training. So the next time onwards, when the system sees this specific format, it will know that the notice needs to be picked up from here and you won't have to re -annotate it or re -correct it again because the system has learned is already learning from. And as and when you keep on adding more and more data, the system accuracy keeps on becoming greater because it is learning from each and every annotation that you're doing on the platform. I'll take a quick pause to see if there are any questions for me.
+
+>>Rushabh Sheth	20:46
+So we do everything from key values to tables. So do you need to capture tables from any of the 4 ,500 files?
+
+>>Vishal	20:57
+I don't think there should be any tables.
+
+>>Stefan Z	21:00
+You're on mute.
+
+>>Min	21:03
+Do you create, do you pull tables out of here? You just create those tables yourself, right?
+
+>>Rushabh Sheth	21:08
+We everything like essentially we pull everything.
+
+>>Min	21:11
+I don't know if Stefan was actually pulled, if he actually pulls tables or graphs. You never do that, do you?
+
+>>Stefan Z	21:18
+Tables or graphs?
+
+>>Vishal	21:20
+There's usually not any in the world.
+
+>>Stefan Z	21:22
+Yeah, yeah,
+
+>>Min	21:23
+Yeah. So, no. No, just confirm it.
+
+>>Rushabh Sheth	21:27
+And what about things like checkboxes and signatures?
+
+>>Min	21:32
+No.
+
+>>Stefan Z	21:34
+No, it's just the data that's been mostly covered there, yeah.
+
+>>Rushabh Sheth	21:39
+Okay. Because sometimes what use case we have seen is just checking whether both the signatures are there. Because like you mentioned, when the same folder will have different files and maybe it had like a draft before signing and then the final one with signing. So typically where that matters is essentially being able to capture both the signatures and then run a validation check saying both the signatures are present.
+
+>>Min	22:05
+That's a fair process. It's not one that we need. Most of these files have already been confirmed. Got it. We know one of the various drafts is the real one. Maybe that's how you can actually parse through and identify the right one is to see which one actually has the two signatures, but that's an aside. Yeah, I mean, so the interesting thing that we, why we have that put right and right to invest, and there's going to be other fields too, but those are the test ones, is as I noted in my email, Jasneet, not all these files have those comments. And one of the processes for us to have the data exported in some sort of a data set so we can screen which financial instrument has that clause in it.
+
+>>Jasneet Singh Malhi	23:03
+Actually, pretty relevant use case for us again, because we kind of do this on the platform itself, we have something called as data table as Rishabh was mentioning, wherein you so this data table is basically giving you a list of all the data across all your contracts. Right. You also like apply filters or use Nlp.
+
+>>Rushabh Sheth	23:23
+One of the things is, Jasneet, if you can write to all of this is you can write a prompt to filter and use a complicated like as so for example, let's see. Is there a particular thing that you look in notices?
+
+>>Min	23:41
+Well, the notice I was looking for, again, this wasn't very explicit. We have certain, our counterparties have certain requirements to provide us notice. Okay. And that can actually come up in different permutations within any said document. So I was wondering if it was able to put that up, identify, okay, they have to get provide notice of 10 days before they do certain action. You know, so that's what that notice.
+
+>>Rushabh Sheth	24:12
+Yeah, maybe we can put notice is notice has at least 10 days.
+
+>>Rushabh Sheth	24:24
+And when you.
+
+>>Rushabh Sheth	24:25
+Hit enter, it essentially takes this prompt converts it to a filter, there is nothing that came up. You can change. I don't know if there is a particular.
+
+>>Min	24:37
+Okay, that's how it does.
+
+>>Rushabh Sheth	24:38
+Okay, so so you can filter this and where your data set? Yeah, you can query the data set however you like. And it will basically apply that and pick that out.
+
+>>Min	24:52
+Got it.
+
+>>Stefan Z	24:53
+So so one thing I'd like to understand, and you don't necessarily have to do it right now, But but obviously this filter is is is filtering through information that you have captured in the system.
+
+>>Rushabh Sheth	25:03
+Right.
+
+>>Stefan Z	25:04
+So so that's so that's a positive hit only on known information. The question is, how do we know that you you properly capture that information from the documents without having to manually go through it. So for example, one of the documents that you just looked at did not have put right information and presumably it's because that didn't exist in the file. But how do we how do we verify that? How do we confirm that the information doesn't exist in the system because it doesn't exist in the document and not that it was missed?
+
+>>Rushabh Sheth	25:38
+Correct. So Stefan, typically the bidirectional relationship on this data table is maintained. So if you click on any of the cells, right, like if you click on the previous one, it will sort of like match and show you and the the thing is that let's say put right is not there in a lot of these documents. Essentially, you can filter that column to show all the put rights where it is empty, we'll just go into it like that filter and everything is straightforward, like, that's fine. Can you click on that put right cell just need? Yeah, the cell? Yeah. And if you go into review document, you can also search within that. So you can sort of like use chat AI and like actually ask, is there a put right condition? So typically, like there are two ways to cross verifying essentially, one is querying the document inside the document in review, and seeing the other is directly on the data table filtering and finding out all the places where there is no that particular cell doesn't have it. So I don't think this one has it.
+
+>>Jasneet Singh Malhi	26:53
+So, but the example where there is a portrait to yeah.
+
+>>Rushabh Sheth	27:03
+And Stefan, the way the system learns is essentially from human input where it doesn't sort of capture.
+
+>>Stefan Z	27:12
+Yeah, that I understand. So so if I if I know a document does have one, but your system says it doesn't, I just go in. And I identify where it is your system will then say, Okay, that's where I find it. Correct. And which will then I assume somehow apply to it will apply. So if I so if I give it if I do know one document is missing information, and I teach the system, it will then go run all 4500 documents through that same update. Yeah.
+
+>>Rushabh Sheth	27:46
+So there are two ways to doing it. Essentially, you don't want if you're already processed and consume the data from previous files, you don't want to apply it to all the 4500. You can do it also like that. It's just a column operation that you are running. Essentially, we store the OCR data we the first thing we do is get the OCR data and essentially then sequentially run all of the classification, etc. Prompts to on the LLM. And the thing is that once you have made any change, so essentially you can edit all the fields that you want to extract over here. So just need to go back into this. Yeah, so you can you can configure. So the first thing that your team would need to do is essentially make sure like what are what is the data structure that you want to consume? Because overall, that is like, you don't want to keep changing that. So one of the things you mentioned was note. So on the note itself, let's say you want to tag that note and on the And you also want to extract one of the values from the note. So essentially, what you're saying is that get me to three more data points. One is the raw note based on whatever kind of note it is. The second is like tag that note. And the third is extract a particular information or piece from that note. So all of that is like where the data table that you are seeing all the columns of that will essentially come from here. And there are like different data types.
+
+>>Rushabh Sheth	29:24
+That you can define, from everything like dropdowns to VLOOKUPs to dates, tables, strings, checkboxes, signatures, and then you can also calculate fields based on that. So the point being is that you don't want your data structure to keep changing because once this data pipe is sort of established, you will consume data in that format only.
+
+>>Stefan Z	29:50
+Yeah, I mean, that part I think I understand. And I think what I was saying is that the data is incorrect, or I've identified that it's incorrect and want to update the data so that it's pulling the correct data.
+
+>>Rushabh Sheth	30:06
+So Stefan, in that review screen, whenever you make changes, it basically feeds into the continuous learning loop. So Jasneet, can we go out back to the configure? Yeah, cancel and go out to the configure. So on the back end, there are like two different engines that sort of run side by side. There is the Llm model, and there is a few -shot learning model. Essentially, that's what will make sure that next time it doesn't make the same mistake. And that is not really so.
+
+>>Stefan Z	30:42
+Well, remember, I mean, for other companies or for other potential clients, it may be different. But for us, this is a one -shot thing, right? So we're taking in all the documents, and there isn't going to be another one.
+
+>>Rushabh Sheth	30:56
+Makes sense, Stefan.
+
+>>Stefan Z	30:56
+So our changes will only be sort of looking back to what's already been done. Yeah, no worries.
+
+>>Rushabh Sheth	31:03
+Essentially, you want to apply to all. Your data structure will change, and you just want to apply to all each time you change the data structure and get it to a form that you can then consume.
+
+>>Stefan Z	31:14
+I believe so. I mean, if there's any value, that's what.
+
+>>Rushabh Sheth	31:19
+Yeah, and that typically always happens, Stefan, because most of the times when we go into these automation projects, if you go to a data table, Jasneet, you will realize that, OK, there is one more column that maybe you have not configured right at the start. So you can sort of add a column, which is there in the field setup. Nothing to do, Jasneet. Just let's stay on the data table. So basically, you can configure all the data points that you need and get exactly the same data table over here. And what you said, you can just apply to all from here.
+
+>>Min	31:57
+Yeah, I think the comment from Stefan is that the continuous learning, because we're not going to be ingesting new documents, so the continuous learning has to be, it's almost, it'll go back to the existing data set and redo the work. But I think that the challenge that Stefan is rightly highlighting is that we have a lot of this data. We're using this data. We're hoping to use Docsimil as a way to extract this. But if there's a, yeah, I don't know if there's an adversarial network that you can run it against to check for errors, right? It's like if we were doing this on a brute force, I would have one analyst do it and have another analyst do it and cross the data set, right? But if you have an adversarial network that's challenging your core Ml model, and I try to identify errors in it, then we would be a lot more confident about what your results are.
+
+>>Rushabh Sheth	33:17
+Makes sense. So Min, I think that is also doable. Essentially, what you want is two different models.
+
+>>Min	33:24
+It's one shot that has to be clean, so we know that this is right.
+
+>>Rushabh Sheth	33:29
+Makes sense. Min, we can do that for you. We will run two different models to pull the same data and compare. So that cross -referencing is already built. Essentially, once you get, what you're saying is that get two of these tables and then compare those tables.
+
+>>Min	33:45
+Yeah. But if your OCR is the same, if your OCR is the same, your underlying logic models are the same, it's not going to be that robust, right? So again, I'm not challenging your platform. Your platform is what it is. I'm just questioning, does your platform have a differentiated model that will look at the same data set so that you feel, again, I don't think this is like a Gan or anything like that, but where you do, you want it to be able to be adversarial so you feel comfortable that you're not, you know.
+
+>>Rushabh Sheth	34:20
+Yeah.
+
+>>Min	34:20
+So the model is differentiated enough where you know you're going to get...
+
+>>Min	34:23
+You have to read this in the data set so you feel comfortable that you're getting it right.
+
+>>Rushabh Sheth	34:27
+I'll show you something, Min. I think, Jasneet, if you go to All Models on the left. Yeah. So basically, you can train a new model from your min. So what we do is, on our side, when you upload this, you can pick the model and train. I think this account doesn't have any trained models. But basically, let me see if my demo account has trained models. Yeah, it has. Jasneet, maybe I'll share.
+
+>>Min	34:56
+So we were hoping that this would all work in the background, because none of us, I don't know. Vishal might actually have a background in development. But we don't code. We don't develop. So we're hoping the platform will do all this for us on an automated basis.
+
+>>Rushabh Sheth	35:15
+Totally understood, Min. Essentially, you need one short, verified data tables out from the platform.
+
+>>Min	35:20
+That's it.
+
+>>Rushabh Sheth	35:21
+You give us one Sharepoint link. We use our platform, essentially, however we want, and give you back data. You don't really want to configure. It's a one -time project. We completely understand. Essentially, on the back end, we are able to get accuracies and thresholds per field. So the thing that you said, essentially what we'll do is, we'll upload a few files, train it on that. So either it can be a manual training, or it can be through that continuous learning, by default, continuous learning is already enabled. But the whole architecture is built around this process where this continuous learning pipeline runs, and it sort of does it. So we will basically, for the same data set, produce two different data tables, and then show it, and do a compare, and give it to you. So the whole point is that, basically, we can, from the same, we can create as many data tables from that particular entry point. Typically, the logical thing is to match the same file structure that you already have. So these are all the data tables that come out from this thing, so on an aggregate basis.
+
+>>Rushabh Sheth	36:50
+So yeah, Dean, this was like the quick demo we wanted to show you. But is this something that would solve your problem, feels like something that would solve your problem?
+
+>>Min	37:04
+I think so. It depends on what the resultants are. On the 30 -some files that we sent, I know I sent them late, and I apologize if you guys didn't have time to run through it. But I think we gave you a pretty healthy distribution of the type of fields. And so it would be great to look at on the data table for those 30 companies to see what it picked up with respect to some of the more esoteric fields, like the right to invest, input. And then the generic ones that are across the board, we'd like to see that as well.
+
+>>Rushabh Sheth	37:43
+Yeah, we'll just see if we can go back to the data tables.
+
+>>Min	37:59
+So I think one example is, if we can find the exercise price is great, the type of class shares, those are all universal things. Yeah, it's interesting why we're not picking up share counts for a couple of those things. But that's OK. For ZILO and 3NDA, it doesn't have share numbers. I'd love to see what we picked up for the put, put right. So we have one oblong.
+
+>>Rushabh Sheth	38:36
+Stephan, I will also come back to you on the question. It seems that put right is a column where you may or may not have it on the document, like a rider. You're on mute, Stephan.
+
+>>Min	38:49
+Here we go.
+
+>>Stefan Z	38:51
+So for example, this is what I was talking about. You can see row 20. So we cheated a little bit, and we gave you files in the title. It says put right. So line 20 should have something. Or I should say, line 20, the document does have a put right in there based on our definition. So your model didn't pick that up. But I can do that quickly, because I could see it in the title. Among the 4 ,000, we don't have those.
+
+>>Stefan Z	39:22
+Set up the same way. The only reason that's in there is because Vishal, you know, spent hours looking for some of them. So the question is, I do know that your model missed it in this case. When we apply it to the 4000, how do we teach it to identify this one, pull it out correctly, and then know, I mean, now we can teach it before we do it. But let's say it goes through the 4000. And I happen to know of one that I find it after we do the 4000. How do we teach it to then pick it up?
+
+>>Jasneet Singh Malhi	39:58
+Yeah, so I think one of the reasons to find like this was like this did not have this is just like a two page contract. So I'm not sure if this was supposed to have a portrait, like the number of pages are only two. And this is just like an addendum to the Okay, so you may have caught me there.
+
+>>Stefan Z	40:16
+I don't know what this document is.
+
+>>Jasneet Singh Malhi	40:19
+So it should like pick up the rest of the things because this didn't pick up anything at all. So that like raised a flag because for all the other documents, we were able to pick up most of these things excise price expiration date, but we weren't able to find anything at all here.
+
+>>Min	40:36
+So this this looks like an addendum page. So it's not a full warrant. Yeah, yeah, It's an amendment to it.
+
+>>Stefan Z	40:44
+Okay, so so that's obviously it can't pull something.
+
+>>Rushabh Sheth	40:48
+The model picked it up. You just to understand, like, when you How did you sort of collect these samples in the first place? Because like someone would like Vishal, if you have done that exercise, and like, to call this put right as a file title.
+
+>>Vishal	41:08
+You know, I don't know about this file myself. Maybe the original warrant has it right. And this amendment is an add on to it, but it's still tying back to the original.
+
+>>Stefan Z	41:18
+So let's not focus on this because I took these files from from a larger, larger that this could have been, you know, two files that are meant to be one one set. But to answer your question, the way we got these in the first place was Vishal just did a text search in Sharepoint. And that's how these came up in the first place. Cool.
+
+>>Rushabh Sheth	41:43
+So essentially, but I get your question, Stefan, what, what would happen is that you would, wherever you have that yellow dot, you would click on it, review the file and rerun the column. And it will update everything based on that the only only issue with doing that is it will change values for whatever is like, orange or low confidence on that column. So, so basically, the thought process behind doing this is you don't want to keep changing the values of all the low con. So whatever is like high confidence, it will not touch. But essentially what you're like, it's both like a sort of a, like a wedge hammer where you say that, okay, like, based on this one correction, change all the low confidence values for this column. So that you can do it, but I'm not really sure whether that's the right approach. But I do get your question saying that, how do you know whether this really, like, since it is a one time exercise and not a volume flow, you don't want to necessarily come back and keep changing the data.
+
+>>Jasneet Singh Malhi	43:01
+Quickly like to add here one thing, Stefan. So let's say if the put right clause, like the actual keyword is mentioned in the contract, the LLM should be able to pick it up without any problem. Like, we are pretty sure that it should be able to pick up because if you look at all the examples that you shared with us, rather than just that one exception, that wherein we were not able to pick up anything at all, we were able to kind of pick up all the put rights here, right? So like this, this was the one wherein this was just like an addendum, I think. But this put right, we were able to pick up this put right, we were able to pick up this put right, we were able to pick up, right. So if the keyword put right is available in the contract, I'm pretty sure that the Llm will pick it up without a problem.
+
+>>Stefan Z	43:46
+Right.
+
+>>Rushabh Sheth	43:46
+Do you run so is there a way for you to run any validation on that field? So we also do validations on top of it. So you can derive as many columns based on this data itself. So or like do a validation between multiple columns or however you see fit. So the better way to Stefan is to not touch the base extraction, but to sort of have some sort of a validation rule on top of it.
+
+>>Stefan Z	44:21
+Ok, cool.
+
+>>Min	44:25
+And we're going to keep with the model. Do we have more question on the model? This can you?
+
+>>Stefan Z	44:32
+Can you? I'm sorry, just just real quickly. We'll put this part to rest and go to that. Can you just filter for the ones that do have data in the foot right field?
+
+>>Rushabh Sheth	44:41
+Yeah. Maybe just need you'll have to change the query too.
+
+>>Stefan Z	44:51
+Yeah, just or just at the top of the column.
+
+>>Rushabh Sheth	44:53
+Yeah, I think my screen is stuck team.
+
+>>Jasneet Singh Malhi	45:00
+Just give me one second. Yeah.
+
+>>Stefan Z	45:03
+I'm asking too many questions.
+
+>>Rushabh Sheth	45:06
+No, we like that stuff And I think one question that I'll go back to my co founder today is what my wife's face looks like after I asked him. Good question that what how do you know? Like fine.
+
+>>Stefan Z	45:25
+Yeah, and while we're waiting for that, I'm clear that the reason is, you know there are some fields that are in every document, so I have 100 % confidence that is going to work correctly like the number of years. So so you know I'm not going to think twice about that, but but because this is a type of this is a data field that is not in every document and the documents that it that they are in are different. So you know over you know over a 10 year period we had communicated this information in different ways because there's different lawyers we learn things and you know modified the language modified where it was within the document. So so it's not just you know, like the shares, it's pretty much the same in all the documents. It's on the first page or section says number of shares, but this is different, and that's the only reason I, you know, harping on this one and bringing this up.
+
+>>Rushabh Sheth	46:17
+No, no make sense. I think the best way Stefan is on the prompt side if you can give us examples, we can add it to the prompt. So on this itself, if you go to feel set up for each of the fields you can also give examples. So just need if you go into field setup, but that still doesn't unslick. Basically what that will do is probably fill that column better. But you're still question the question that I don't have a very direct answer is. How are how how can you be confident that a field is not there?
+
+>>Stefan Z	46:54
+It's easy for us. This is, you know, this is one of the higher value pieces of information that we get out of this, right? Because without getting into boring details about it, you know this is an economic issue for us, and the sooner we know that we have this, these contracts with this information in it, the quicker and more likely it is that we can get value out of it. So obviously we shall nor I nor men, nor the three of us together can look at all 4000 documents to do that, and that's why you know this type of process. Because I already have all these documents with the share numbers, right? I mean, that's not already have. So I didn't know the expiration date, so Yeah, just some things that I don't know. And those are the hardest information to get out and obviously got it.
+
+>>Rushabh Sheth	47:50
+7 essentially we will need samples for us to put here. So imagine you put samples here out of 4500 documents it then. Initially, with without any prompt or examples it found out thousands, which thousand which has put right And then you put the samples and it went from 1000 to let's say 3000. That's the sort of improvement you will see in the extraction for that column. But what to do about the rest 1200? Like whether they genuinely don't have put right or that I think that will have to be human reviewed like essentially like I don't know on the top of my head if there is an answer to are you sure that it doesn't have this information? It can be that's fine.
+
+>>Stefan Z	48:37
+So so your answer is basically the the the machine does a good job. Here's how it does the job where we have a confidence level because it is capturing these things that we do know exists this sort of unknown And then we, you know, as the user has to have to say, OK, the ones that it says aren't in there. How confident are we and do we want to do extra work to get the one correct? Yes, but that if that's the answer, that's that's perfect.
+
+>>Rushabh Sheth	49:06
+Yeah, that's the answer. Stefan essentially it only says what it knows it with and with what confidence it cannot say what is not whether it is there or not there because that's that's essentially the.
+
+>>Rushabh Sheth	49:20
+Extraction problem only.
+
+>>Stefan Z	49:21
+Yeah, understood.
+
+>>Rushabh Sheth	49:25
+So, cool.
+
+>>Jasneet Singh Malhi	49:30
+So, Stefan, these are all the documents wherein we put a filter that the put right column is not empty. And of course, all the documents that we've uploaded, these are the ones where we have the put right.
+
+>>Stefan Z	49:42
+Yeah, yeah, that's good. Thank you for highlighting that.
+
+>>Rushabh Sheth	49:50
+But, Stefan, the one thing that I wanted to highlight since you also mentioned that. And essentially, we do that onboarding. We charge for it. Our team will take care of it. Basically, we have an in -house data annotation team. So we don't do regular processing, but in the onboarding setup, since this is one time full drive sort of a setup, we will take care of that. So if you need us to also validate all the ones which actually don't have, then we have an annotation team that can do the lift.
+
+>>Min	50:25
+Yeah, that's one of the questions we had. I know you're a platform vendor, but what kind of services you have to support you. The front end is, I think, where it's going to be most important.
+
+>>Rushabh Sheth	50:36
+Correct.
+
+>>Min	50:38
+Obviously, over time, we may need to actually go in. Maybe we identify some other right that we want to identify across the entire section of the 4 ,500. We'll have to rerun it. So just from a technology perspective, once you ingest all the documents, you're going to have that sitting in your storage space. So if we need to run another query for another new field that we've identified a need for, like a right to something, and we want to see across the 4 ,500 which have that, you'll have it in memory so we can run it quickly, correct?
+
+>>Rushabh Sheth	51:19
+Correct.
+
+>>Min	51:19
+You don't have to re -ingest this data set again.
+
+>>Rushabh Sheth	51:21
+You don't have to ingest it again. The only question is that do you want to, like if there are values in that column, do you want to refresh the whole column again, like rerun the whole column? Because that's a slightly dicey situation to go back and change the output for that same column. So the better way to do it is to, from the start, show it a few examples so that it does a better fill on that column.
+
+>>Min	51:51
+All right. And then can we just talk, I mean, we'll take away from this meeting and kind of think through whether we'd like to move forward from an operational perspective. Can we just talk a little bit more about the economics of the platform?
+
+>>Rushabh Sheth	52:08
+Yeah, we'll do it. Sure. And we completely understand, essentially, you just need to throw that entire set on us and get accurate data tables back. You really don't care about the platform. You might need it in the future once you have the data tables hosted. But you don't want to go through the process of building and classifying and maintaining sort of flows and all of that. All you need is, essentially, queryable data tables, which are human verified.
+
+>>Min	52:41
+Yeah. Yeah, the Snapchat across all the files.
+
+>>Rushabh Sheth	52:46
+Makes sense. Cool. Yeah, Jasneet, we can probably share the pricing.
+
+>>Jasneet Singh Malhi	52:50
+Awesome. Also, I think on the last call, you mentioned that you would want to look at the pricing for half a million pages. Is that still valid? Because I think last time we referenced around 44 ,000 pages, but now we have like around 4 ,500.
+
+>>Min	53:04
+So this is the part of the issue that we're talking about on the ingestion side. So, again, we're doing rough numbers, right? Let's say there are 4 ,500 documents. There are, and each document is, I don't know, let's say 10 pages on an average basis.
+
+>>Stefan Z	53:25
+So you'll get - Actually, we can get that number. So we gave them 30 documents, but do you know how many pages there were in those 30 documents? I mean, that's the average right there.
+
+>>Rushabh Sheth	53:35
+Yeah, Jasneet, we can go to credits and see how many credits got consumed.
+
+>>Jasneet Singh Malhi	53:43
+This is a demo account, Roshabh. I had a bunch of demos.
+
+>>Rushabh Sheth	53:47
+So that number, I see.
+
+>>Stefan Z	53:48
+Ok, so Mink can go through the - Let's just get it out.
+
+>>Min	53:53
+It's a consulting -
+
+>>Rushabh Sheth	53:54
+It has also split by document type. Can you just open the credits? It should have that information.
+
+>>Min	54:01
+They're going to be all PDFs.
+
+>>Rushabh Sheth	54:07
+If you go into billing, and on billing, if you go to overview, yeah, you use 3 ,700.
+
+>>Rushabh Sheth	54:19
+3 ,712 pages.
+
+>>Min	54:20
+3 ,712 pages across the 30 documents we uploaded.
+
+>>Rushabh Sheth	54:26
+Yep.
+
+>>Min	54:27
+So is that right?
+
+>>Stefan Z	54:30
+That doesn't sound right.
+
+>>Min	54:35
+We sent you 30 docs. The average cannot be over.
+
+>>Rushabh Sheth	54:41
+I think that's what Jasneet is saying that essentially like it has other documents also. So yeah, it's not right.
+
+>>Min	54:49
+You're writing all your other demos. Yeah.
+
+>>Rushabh Sheth	54:52
+All the demos are also other demos.
+
+>>Min	54:55
+So let's just do like a quick consulting problem. 4 ,500 documents blended basis. Let's say let's keep it simple. 5 ,015 pages average. You're looking at 3 ,575 ,000 pages. Okay.
+
+>>Rushabh Sheth	55:12
+Got it.
+
+>>Min	55:13
+5 ,000 documents, 15 pages.
+
+>>Rushabh Sheth	55:17
+Is this counting duplicates or not counting duplicates?
+
+>>Min	55:22
+These are the, these are the final thoughts. Okay.
+
+>>Rushabh Sheth	55:26
+Yeah.
+
+>>Min	55:26
+Now the question is there's probably, so that's, that's for the core. That's 75 ,000 documents. Let's assume that there are 10 duplicates per that's where it just scales massively. Right. And that's what we don't know. We know like the richness of the data is going to be in the 75 ,000 plus or minus pages that we want to track from, but the duplication and others might skyrocket this to an order of magnitude higher.
+
+>>Rushabh Sheth	55:57
+Yeah. So I think min again, like the pricing doesn't vary too much based on that, like the price per page. So, because the thing is that again, you want to do it programmatically. You don't want to really pay a very high variable cost on the per page. And it also essentially it's the same problem, right? Like what you're doing is sending even the duplicates and then using one column to sort of find out the duplicates, how you do it in Excel or other, other places. So essentially it's the exact same process that would happen here. So just need, if we can open the pricing calculator and walk them through the pricing, the Excel, Google sheet.
+
+>>Jasneet Singh Malhi	56:36
+Oh, the, the Google sheet.
+
+>>Rushabh Sheth	56:41
+Like if you go to our Google sheet, the yeah, just open it.
+
+>>Jasneet Singh Malhi	56:59
+Can you see the pricing sheet?
+
+>>Rushabh Sheth	57:03
+So yeah. So typically like the onboarding cost. So we, we will assign essentially like the data annotation team plus one customer success manager to do the lift on our side. Basically we will take the guarantee of making, reviewing all the outputs and making sure all the tables are like in place, like basically practically no lift on you. All you need to do is give access to that S3 master bucket for us to then take where we will need your input is essentially telling us, giving us examples of what you are looking for, especially for things like put, right. So that we, the model would know. And also like our data annotation team reviewing would know. So we take, we would take care of that. On the subscription side of things, essentially there is three fronts. One is the platform fee, which is which is for all the, all the, everything you see on the product. There is a cost for the pages you process. So typically if you are going at, let's say half a million pages or like 50K, this thing, the price almost drops to half of it. So that's for that. And then there would be like a dedicated account manager for the year where you can add us on teams or we add you on Slack and essentially do it. But again, like this is a one -time exercise. So I don't know if you would need that support for the rest of the year, but typically that's how we have bundled it.
+
+>>Min	58:34
+So if the, if all the ingestion takes place in a period of 30 days, but then we want you to host the data so we can play with that, you know, that I, we're much more comfortable. We understand your SaaS platform. We understand platform fees. So we're not trying to say, okay, we want to run it. We're happy to kind of pay for the platform going forward. But I imagine it's going to be 42 ,000 because most of the, all the analytics are done in the first, you know, period of time.
+
+>>Rushabh Sheth	59:04
+So do you need retention? Like basically the question comes back to, do you like, are you like, so quite a few of these technology teams actually then query and use the data. Essentially it's like how you would use.
+
+>>Rushabh Sheth	59:18
+Snowflake or any other, this thing, like you get a structured data table back and then you can query it and use it for filtering and all of that.
+
+>>Min	59:27
+Yeah. So we haven't, you know, we haven't actually determined how right now it's just right now it's just identification and cataloging, right? So we need to figure out where things are. We have not determined, we kind of kind of just spitball, you know, can we move the data set to Salesforce so we can have everything uploaded in Salesforce where it can start monitoring all our conversations with our counterparties and all that. We haven't gone, we're spitballing, we haven't gone down that path. In which case we'll, this will be a one -shot deal and we'll port the data. Right. But we haven't, so for now the assumption should be that we'll do all the analytics on the front end and just be done. We may, but we'd like to keep it on platform for a little, for like five, six months in case we have other fields that we want to be searching for. So we don't want to just do it, you know, do it and be done. But it's like on a maintenance basis, all we're going to probably be looking for is expectations of it to be hosted and for us to query it.
+
+>>Rushabh Sheth	01:00:38
+Yeah, yeah, exactly. I mean, so, so it seems that there is like, you have a further use case beyond this one time where you need incoming doc sort of mailroom automation.
+
+>>Min	01:00:53
+We, we, we won't, we won't have, I don't think we'll have more documents. I think this is discreet.
+
+>>Rushabh Sheth	01:01:01
+Got it. Cool. So we will retain the data min, no problem on our side.
+
+>>Min	01:01:05
+So, yeah, so what would be the front end costs, you know, with the onboarding costs, you know, again, all these numbers, we can kind of negotiate and figure out what the right package is, but I'm not, I'm not fixed on a number, but we, we would definitely like more robust support on the onboarding. If we decide, if we decide to go down this path because I want it to be as low touch for Stefan and Michelle as possible, but at the same time, allow them to have insight and review of the onboarding process obviously then there's the, the platform fee and ingestion processing costs. Totally appreciate that. But I think for my annual sub basis, given that it's probably more retention and queries, I would imagine that annual subscription costs be materially lower than what you're showing.
+
+>>Rushabh Sheth	01:01:53
+Yeah. So I think, I mean, anyways, your number of pages would be higher. So for half a million pages, we can go, go, go down to let's say five, by the way, I mean, the, the, like whether you query later, but essentially this is for the processing pipe, like we run the exact same pipe, even to get like, whether you are consuming the credits upfront or through the year really doesn't matter, it's essentially like. Goes through the exact same pipe, but we can, we can sort of like, say if we were to do like, uh, 50 ,000 and, uh, uh, 50 ,000, like, because it's monthly Disney or 40 ,000, if you can do 40 ,000, that might be a better one, including duplicates and everything and go to like 5 cents. So essentially, uh, we can go, go lower and like make this lower. So, uh, we can, like you mentioned men, we'll figure out the pricing, but basically the thought process is pretty simple. Like leave aside us, even if you had to get a team member to do it, how much time and money are you planning to spend on this to get this data?
+
+>>Min	01:02:58
+Yeah. So that's, so that's fine. And so over the year, even though it's, it will probably do really accelerated upfront. Let's say we do it on an average basis of 40 ,000. So I get that, but year two, we're not adjusting any more pages. Um, yeah.
+
+>>Rushabh Sheth	01:03:18
+So then we'll basically remove the processing fee.
+
+>>Min	01:03:21
+Got it. All right.
+
+>>Rushabh Sheth	01:03:23
+And if you don't need support also, we'll remove the support also, because typically if your main use case is just for the second year, not for the first year, because all of this is upfront, like whenever you need. Essentially for 50 K you're getting like full team, just making sure that you don't have to do anything. You get accurate, verified data back with that one. Yeah.
+
+>>Min	01:03:46
+But again, uh, we're just, we're just, um, seeing where, what, what, like the magnitude of what the economics are. Um, we'll, once we get a better idea of what the underlying pages are and whatnot, we can find out what the ultimate, but I just wanted to kind of get a sense of what the magnitude of what we're looking at. Um, sure.
+
+>>Rushabh Sheth	01:04:07
+Yeah. Sure. So Min, we'll also send you this basically for us. It's like your use case is pretty straightforward. Like we already have this Sharepoint integration. We essentially, you just need to do one.
+
+>>Rushabh Sheth	01:04:17
+On integration and the rest of it is on us. The main input that will come on your side is defining the data tables, like helping us define the data tables.
+
+>>Min	01:04:25
+Yeah. The alternative is I can have my, you know, my kids coming home from college, I can have them just put something up on Textextract, Right? I can put this in S3, have them put something off Git, and then just have it rip through Amazon's Textextract platform and kind of have the same data field. So I'm not saying that's what my head was at in the beginning, but if you guys can do turnkey, it would be a lot easier.
+
+>>Rushabh Sheth	01:04:53
+Yeah, we will do it turnkey, like we understand that.
+
+>>Min	01:04:56
+Okay. Okay.
+
+>>Rushabh Sheth	01:05:00
+Yeah.
+
+>>Min	01:05:01
+Is there questions? Stephan, Vishal, do you have questions? Or should we, you know, I think we're past the hour, so.
+
+>>Stefan Z	01:05:07
+I've run through my question a lot, but thank you.
+
+>>Vishal	01:05:10
+I'm good.
+
+>>Rushabh Sheth	01:05:10
+Stephan, there is one question you asked, I will get back to you if we have an answer. Like, that's a very interesting question. I don't have a very straightforward answer to that. But I'll get back, I'll ask and get back to you.
+
+>>Min	01:05:25
+Awesome. No, this is really helpful. Thank you for taking the time. And just one thing I have, if you can just help, so on the onboarding process, you'll have, there's customer success and you have, other macro support to take to adjust the onboarding, right? Yeah. Okay. I don't wanna get, yeah.
+
+>>Rushabh Sheth	01:05:50
+Yeah, like there is a solutions engineer that will get paired, there is a success manager who will get paired and then basically they'll get work done with the data annotation team.
+
+>>Min	01:06:01
+That sounds great. No, this was really helpful. Thank you very much. Perfect. Let us take this away. We'll discuss amongst ourselves and Justin, we'll give you a shout, maybe in a week, within, hopefully within a week or so. I'm sure, but you know.
+
+>>Rushabh Sheth	01:06:18
+Would it make sense for me to understand like, so if you guys haven't done this so far, like why do it now? What's the value of this data?
+
+>>Min	01:06:26
+Oh, just to give you context. And again, this is important because we're not part of Silicon Valley Bank, just to make, differentiate. We are, again, we're under Nda. So Stefan, Vishal and I represent a trust that used to be the holding company, bank holding company that used to own Silicon Valley Bank. We own all these assets. The three of us are relatively new to these new assets and we've been running, clearing things. We're looking at it manually and running everything through an Excel file, which that's okay. That part is a little onerous. The Excel file, Excel's not nice, but we can do it. But we just need to understand and catalog the assets a little bit better so we can find the richness within that data set to see if we can create, as Stefan said, see where that, extract that value from all these different types of documentation, right? We used to have a different team that used to do this. So they were more familiar with it, but the three of us are relatively new. Stefan's the domain expert here, but that's why we're doing it now.
+
+>>Rushabh Sheth	01:07:41
+Yeah. Okay, perfect. I understand. Essentially, the change in the structure is what's leading to you needing a data set in the first place. So got it. Then I think, agreed, we'll send you the pricing. We'll send you this thing. If the pricing works, very straightforward for us.
+
+>>Min	01:08:00
+We have done this.
+
+>>Rushabh Sheth	01:08:01
+Essentially, we do this, the larger problem we see in this space is essentially mailroom automation, because a lot of these credit companies get thrown like 100, 150 ,000 pages or documents a month. And essentially they need to, exactly the same thing as a point in time exercise. In that case, they get legal notices if they do not respond to that sort of communication in time.
+
+>>Min	01:08:26
+So - No, I used to work with Dave a long time ago. I don't know if you know, he used to run Documentum before Emc bought it. So I remember when he went into Metlife and he had to process like a hundred million life insurance policies to document this software platform. This is like 15 years ago, but so I know the kind of workflows that these platforms need to ingest. I don't know if yours is that big, but I know Emc Documentum used to be back in the day, so.
+
+>>Rushabh Sheth	01:08:52
+The funny thing is, there is a book called Crossing The Chasm and it has Documentum as an example.
+
+>>Min	01:08:59
+Oh, okay. Yeah, I just, I remember I used to, I used to cover Emc and when they bought that, you know, it was a good purchase. Yeah, it was like a Fujitsu Documentum combo. They used Fujitsu high -speed scanners and Documentum used to use their OCR.
+
+>>Min	01:09:17
+I go that's total tangent I don't always say it was time but thank you very much really appreciate it.
+
+>>Rushabh Sheth	01:09:23
+Thanks guys then we'll send you the pricing and we'll send you the demo and let us know how we want to proceed. Hopefully we can work together and we'll solve your problem.
+
+>>Stefan Z	01:09:35
+Great.
+
+>>Jasneet Singh Malhi	01:09:36
+Would it make sense for us to schedule 15 minutes maybe next Friday or Thursday just so that we have some.
+
+>>Min	01:09:41
+Can we do the Monday after I'm out that's half the next week. So absolutely.
+
+>>Jasneet Singh Malhi	01:09:48
+I'll just know what time works for you on this would be I think 9th of June 9th is actually I think.
+
+>>Min	01:10:00
+Hold on. Give me one second. We'll pull. Can we do you know 9 a .m. On the 10th of June 10th of June.
+
+>>Jasneet Singh Malhi	01:10:11
+Which is a Tuesday 9 a .m. Pacific.
+
+>>Min	01:10:14
+Sure. That would be helpful.
+
+>>Jasneet Singh Malhi	01:10:16
+We just need like 30 minutes for a sync up.
+
+>>Min	01:10:18
+So sure. That's perfect. Awesome. I've just set it up and if you're not you don't need to join. But if you guys want to join does that works the fun.
+
+>>Rushabh Sheth	01:10:27
+Michelle. Why do you need this data by the way. If you do. Sooner the better.
+
+>>Min	01:10:34
+We've been you know we've been sitting on this data for a few months. So and we realize you know time is important because this is all this is runs in the options world. So there's always data involved in everything. So there's time. And that's why Stefan noted that knowing and when we know and how we extract value is really important. And so. Ok.
+
+>>Rushabh Sheth	01:10:57
+Yeah. Because put like I play a bit in the options market and puts sort of decay with time.
+
+>>Min	01:11:05
+So. Yeah. I think once we decide to go down the path you know it's almost like you know wait wait then hurry up you know. So but we'll try to you know we'll work to see how we can get it done quickly. But once we decide we'll probably want to move pretty fast.
+
+>>Rushabh Sheth	01:11:23
+Awesome. Thanks.
+
+>>Jasneet Singh Malhi	01:11:25
+So can we do half an hour before or half an hour after because I think I have a clash at that point. At 9am.
+
+>>Min	01:11:32
+Oh my. Yeah. I could. I can do 8 .30.
+
+>>Jasneet Singh Malhi	01:11:37
+Yeah. 8 .30 is perfect.
+
+>>Min	01:11:39
+Ok.
+
+>>Jasneet Singh Malhi	01:11:40
+I have a better invite.
+
+>>Min	01:11:42
+Fantastic.
+
+>>Vishal	01:11:43
+Ok.
+
+>>Jasneet Singh Malhi	01:11:44
+Awesome.
+
+>>Min	01:11:45
+Thank you so much.
+
+>>Rushabh Sheth	01:11:47
+Bye.
+
+>>Min	01:11:49
+Thanks everyone. Bye.
+
+>>Jasneet Singh Malhi	01:11:50
+Bye.
+

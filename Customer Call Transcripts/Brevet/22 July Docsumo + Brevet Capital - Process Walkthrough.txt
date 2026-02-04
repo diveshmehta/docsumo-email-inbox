@@ -1,0 +1,270 @@
+>>Aniket Tatipamula	00:00
+Hi Vishal. Hi Vishay. Hi Manan. We'll understand their use case. Wait, wait, wait. We will understand their use case and Manan, just take every point carefully because we have to do the setup. Yes. Okay.
+
+>>Aniket Tatipamula	00:22
+Hi Aaron. Hi Aaron.
+
+>>Aaron Yu	00:28
+Hey guys, how are you doing?
+
+>>Vishal Arya	00:32
+Great. Thanks for asking. How are you?
+
+>>Aaron Yu	00:35
+Good, good, good. Happy Tuesday. Happy Tuesday.
+
+>>Vishal Arya	00:39
+Happy Tuesday, Aaron.
+
+>>Abhishek Lokapur	00:42
+Hey Aaron, hi. Should we wait for Alex?
+
+>>Aaron Yu	00:45
+Yeah, let's wait a few moments for Alex. He should be on soon. Okay.
+
+>>Aaron Yu	01:29
+Yeah, he's going to be on in a moment. What was it? Vishal, Aniket and Manan, you guys are on the engineering team?
+
+>>Manann Agarwal	01:41
+Yes.
+
+>>Vishal Arya	01:41
+I see, I see. Yeah, so Manan is on the solution side. Aniket is on the leading engineering team and I'm a part of the customer service team.
+
+>>Aaron Yu	01:53
+Oh, I see. I get it. Yeah, we're going to be making a Teams chat with you guys shortly. Whenever we get it through appliance. Well, it's through But it takes a little bit of time to change the settings.
+
+>>Abhishek Lokapur	02:30
+It's a bit slow. I can't quite hear what you're saying. Give me a voice. This man is dead.
+
+>>Abhishek Lokapur	02:52
+I can't hear you. I can't hear you. You're talking. You're talking. You're talking. You want to see if you've grown your ancestors to a huge group. You can't. I can't hear you. I can't hear you. I can't hear you. I can't hear you. I can't hear you. I can't hear you. I can't hear you. I can't hear you. I can't hear you. I can't hear you. I can't hear you. I can't hear you. I've got a little bit of time too. Right. I can't hear you. Yeah, yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah,
+
+>>Abhishek Lokapur	05:05
+Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah, Yeah And now they're just sitting there watching it happen. That's the problem with social media. But, as I said, they cannot come out of it. If they fail at the battlefield, they will be ashamed of all of us. Oh, how cool it would be if we were there. Maybe we'll talk about it early. The boys will be back shortly. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news.
+
+>>Abhishek Lokapur	05:50
+It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news.
+
+>>Abhishek Lokapur	06:41
+It's bad news.
+
+>>Vishal Arya	07:00
+It's bad news.
+
+>>Alexander	07:04
+It's bad news. It's bad news. It's bad news. It's bad news.
+
+>>Abhishek Lokapur	07:30
+It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news.
+
+>>Aaron Yu	07:42
+It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news.
+
+>>Aaron Yu	08:53
+It's bad news. It's bad news.
+
+>>Aaron Yu	09:08
+It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news.
+
+>>Aaron Yu	09:42
+It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news.
+
+>>Vishal Arya	10:53
+It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news. It's bad news.
+
+>>Aaron Yu	11:00
+It's bad news.
+
+>>Abhishek Lokapur	11:02
+Good news, happens always.
+
+>>Aaron Yu	11:14
+And sometimes it happens when you 나오�. And that opens up a heavy responsiveness. And so you can see this as it happens, may have seen some of these with the things that I shared with you guys. This is the same client, Australian Bay Lobsters. And this is a radium application, which is filled out by the client. So these are all inputs that they're doing on an online form. And this is simply a compilation of all their inputs. So here, if you check the kind of mock list I made, I basically just pulled all the data from here into this. And I think this is essentially what Docsumo would be doing, correct? Side by side, industry group, agriculture, you're literally just pulling data from here. And some things that we may wanna verify across is, for example, here you might wanna take the Australian Bay Lobsters Limited, which you guys, I believe, have already done. And here's the business address, make sure that these are constant across all the different documents. Here, he himself is saying that the primary director is John Bryant. So we're gonna differentiate between the primary director and there's a few other directors, depending on the company. And also for the R &D advisor, here it says Greg Pratt from Deloitte. And we might wanna verify that too, as we're gonna go through the R &D comfort letter in a little bit. First on filer, some of these are more important than the others. And we can kinda go over later when we do the validation checks hand in hand. But for now, this is just a general, essentially, something else important is probably the Australian business numbers and such, which is also included here.
+
+>>Aaron Yu	13:01
+Sorry, I misclicked. But the Australian business number is located here. And this is a recurring number that shows off across various documents. So in this checklist, basically pulled all this information. For the R &D comfort letter, we're in a special scenario because we don't really care about maybe these specific numbers here, as many other people who are looking to assess cash flows may do. But we are looking to see that Deloitte, John Bryant, this is all the same. We wanna see that the total R &D expenditure here, that's verified by the comfort letter, make sure that it's the same. So here it's 409 ,000, and above it's also 409 ,000. And then that's primarily it, I mean, for this. The only trouble with this is that this comfort letter is unique across various borrower profiles. So, geez, okay, let's close that out. But another company might have Ey instead of Deloitte, and the document may look slightly different. But I think it was shown that your software can handle that pretty smoothly. So, yeah, looking at the financial advisor, looking at the financial periods that this is billed. And then a validation check that you guys kind of showed was, make sure the thing is less than 60 days old.
+
+>>Aaron Yu	14:43
+So I think that's a helpful check that you guys could also be doing, because it's not something that we're currently doing. Maybe if it's like 30 days or 60 days old, we can do a validation check there. Packaging comfort letter by, yeah, Yeah, Aniket.
+
+>>Aniket Tatipamula	15:01
+And as in the validation check that you just talked about, right? Are they listed somewhere right now? Should we write it down or note it down, or will you be sharing those?
+
+>>Aaron Yu	15:13
+I can do a more detailed share with you guys in the form of an Excel document. Like so, would that be helpful for you guys?
+
+>>Aniket Tatipamula	15:21
+Yeah, that would be helpful, because that is what we would ideally want to replicate on the validation screen. So if you can share that, that would be great.
+
+>>Aaron Yu	15:29
+Yeah, so yeah, today I can get you guys a more in -depth version. And I'll just put a validation row here. And if it's blank, maybe we can just assume that the information is not too important, and I can write any specific criteria that we may need. Good?
+
+>>Aniket Tatipamula	15:47
+Okay, thanks, Adam. Great, no worries.
+
+>>Aaron Yu	15:52
+For the tax agent comfort letter, we're really looking for these specific criteria. We're looking to see that this is specifically directed towards Australian Bay Lobsters Limited. We want to poll whoever is filing this tax. And also, mainly we're looking at these things. We want to make sure that they're in good standing with The Australian Tax Office. So here it's saying that all the tax returns are large, all the business activity statements, there's no audit going on, has never been subject to an audit, and no outstanding tax liabilities. Yeah, Adam, so these checks, right, like just to understand these, these would be like more of we're trying to understand from the points there. I mean, there's no specific marker somewhere specifically stating that large, I think one of the things where large all require tax returns.
+
+>>Aniket Tatipamula	16:52
+There will be no yes or no kind of a thing in the document, right?
+
+>>Aaron Yu	16:56
+Yeah, so it's mainly, as far as I know, they're mainly written kind of in like a number of format like this. But there should be five essentially sort of bullet points across all the many documents. And then it will say something like no outstanding liabilities, not previously in a dispute, not currently subject to an audit. Do you think that's kind of doable for you guys?
+
+>>Aniket Tatipamula	17:26
+It is, Adam, we can do it. I think we did demo it in the demonstration. The only question though, there would be like how we localize the data. So we'll have to look at it. We need to figure out like where it got picked up from. And we will check that out as in and get back to you on this.
+
+>>Aaron Yu	17:44
+Sure, and if you guys want more client packets, now that we are in a partnered relationship, I'd be happy to share like a group of like 10 packets maybe. So if that's helpful to you guys. And then I think this is something that's a little more easier for you guys. Here's the account name. We're looking for, we're going to have either two accounts from now on. And just looking to make sure that it's either says one of the two accounts. So that would be like a validation criteria. Yes, moving on here. We're going to skip the advanced finding certificate. We may need to do some validation for this, but it's very uncommon to be seen right now. So we're just going to be moving past it for now. And the Equifax report here, we're really looking to see that the Equifax report does pertain to Australian Bay Lobsters Limited. So we're going to verify here, we're going to make sure it says Australian Bay Lobsters Limited. Credit score has to be above 510 for the company itself. And we're also going to see that here somewhere here it says the sector that they're in. So a high risk sector for us, maybe something like, yeah, gaming, gambling, casinos, adult entertainment, prostitution, brothels, tobacco growers, predatory lending. So if we can kind of create a validation criteria, that's kind of like, I don't know, if is any of these criteria, right?
+
+>>Aaron Yu	19:31
+Then just flag it. But I can get that to you guys, obviously. Just briefly skimming over it, basically. And then, so we're looking at this credit score to make sure that it's over 510. Aniket, please. Sorry to interrupt, Aaron. Is the criteria, like the sector information present in the report? Or would that have to be, okay. Yeah, it's all present in the report. This is a very in -depth report.
+
+>>Aaron Yu	19:58
+This is a very in -depth report. I'm just, I can actually find the exact place for you guys, but maybe not right now.
+
+>>Aniket Tatipamula	20:10
+Yeah, sure.
+
+>>Aaron Yu	20:13
+So key extraction point here would be the director summary. Borrower verification, this is kind of pertaining more to the company itself. But then we also have a director summary, right? Here we have all the directors. And then you can see all the information about the directors here. John Bryant, Michael Dalton, Peter Carroll, Timothy Keefe. And then it'll say, we're really looking for the adverse information here to say no for all of them. And we're looking for defaults, writs, court summons, court actions, bankruptcy act, and disqualified dictatorships. We want all of these to say no. So in the scenario that any of these say, like one, two, whatever, right? A non -zero number, we may want to directly raise a flag and send that to credit. So that would also be another validation criteria. Yeah, so for the Equifax report, we're mainly looking for that. And besides that, also making sure that the director scores for all of them are not below 510, similar to the company overall credit report. If any of these are, you know, if below 510, raise a flag, send it on.
+
+>>Aaron Yu	21:37
+Green ID report, we're not really expecting you guys to be able to like parse these results because it's mainly just like coding code numbers, but we're looking for the overall verification of verified. We're looking for John Bryant, John Bryant and verified. And that's just essentially tells us that it's basically passed through this third party checker for us.
+
+>>Aaron Yu	22:14
+The beneficial ownership report is a little bit in depth and we're not really finalized with maybe like what we want from this. But as of right now, we're currently checking for adverse information. So you'll see here that on a certain page right here on the summary, you'll see that it's registered for all these three things, the statuses, and it's adverse information. So it's very clear these, he's a good borrower. So he has all these checks on, but if it's a scenario where it's not registered, it's gonna have an X and then it's gonna say the reason for it. So here we may want to just directly pull that and verify that no adverse information is present. And also that it's registered and has a check mark for all of these things. So that may be one of the validation criteria that I can get to you guys. And there's a few more things that we can probably do here. So I'll take a further look. And this is really just, this is really just pertaining to around the company structure is what this document is. So that helps you guys paint some color.
+
+>>Aaron Yu	23:38
+For this tag statement, we're mainly looking to see that, well, the generated date would be nice. Make sure the generated date is within 30 days of filing or 30, 60 days, whatever it is, right? Of portal submission. And we're looking to see that there's no overdue payments, no not yet due payments and no balance present. So this is a perfect example. But if it says like $100 ,000 on credit card, whatever, we may wanna flag it. And theoretically, given that it's going through our underwriters, by the time it reaches this point, it shouldn't have things like that, but we're still running the secondary checks to make sure that it can bypass everything and comes up clean. So we're just being very in depth with all these various checks and such.
+
+>>Aaron Yu	24:35
+So same thing for the integrated client account. I think we're looking to pull these balances and mainly these same exact numbers. So there may be a reason for this. And I think the, I forgot what the reason for this was, but it obviously passed through here. And if we're primarily looking to just pull these into a thing, and then we can put the validation criteria on this, which I can get to you guys too. So this is a very similar document, nine and eight, they're both relating to tax documents. And it's about really the income that's present for the company. Yeah, so even though we're submitting, when we're delivering these packets, we're gonna obviously put the entire thing in, all 12 pages. But as you can see, most of these information is present on one page or one specific thing that's pretty standardized. Here, it's always gonna be at the top. And these are really the four biggest things because it's a summary of all the more in -depth information below. Great.
+
+>>Aaron Yu	25:55
+Yeah, so the prior tax return, once again, verifying that it is submitted by Australian Bay Lobsters Limited. What did we look here? Okay, so there's a prior year refund number that is recurring. And I guess I kind of skipped over it a little bit. But in the business activity statement, the prior year tax return here is $4 ,613 ,000. And we just wanna see that in this tax return, it says the exact same number as the income account activity statement. I believe this number also shows up in the R &D comfort letter. And something I could cross verify, but maybe something to just note down. This is a pretty important number. Make sure that they claim their refund in the past year and actually got delivered to their account. And then there's the Australian business number that's recurring. It appeared in Radium. It appeared in a couple of documents already. Did kind of skim through that part too. But make sure that, I'm sure once you guys see the first instance, you guys can be like, this is the validation criteria, this number. And then you guys can see it across because it'll always say Abn next to it. Ppsr report, looking to see the Ppsr registration. So, well, it's somewhere here, but apologies for that.
+
+>>Aaron Yu	27:37
+But we're looking to see the organization name and then verify the entity name is the same across all of these. And then we do want to see that there's no lines of credit that are above ours. It's kind of slipping my brain a bit how we exactly verify that from this document. But this is basically just a check on the lines of credit that the borrower has across various profiles. Yes, please.
+
+>>Aniket Tatipamula	28:13
+Yeah, so for the verify That, as you mentioned, right? Like, would you probably send it across later on the document itself on how you do that? Because if the check is done across multiple fields, then we may also have to make sure we extract those. Yeah, I think when I share this, I'm gonna try to make it crystal clear for you guys.
+
+>>Aaron Yu	28:35
+I might even put some screenshots in, circle some things for you guys. So it's easier if I think it's unclear. But honestly, for this, I was thinking, just give like a high level overview of what these documents are. So you guys kind of familiarize yourself with it. And then once we establish a team channel, please feel free to just send a message there. It doesn't have to be an email and I can answer any questions directly.
+
+>>Aniket Tatipamula	29:03
+Sure, and thanks, that will help.
+
+>>Aaron Yu	29:05
+Yeah, happy to help. So this is the last document we're looking before the loan summary. And if you guys, you guys will have access to the loan summary, but for your context, a loan summary is basically a, it's basically a compilation of extracted fields from the prior 12 documents. So this is like basically our extraction of it based on Salesforce, because this is a, this is an output that's compiled within Salesforce. This isn't like an input. So you guys can kind of use that to verify whether Docsumo is functioning properly and extracting the right fields, I guess, if that's any helpful to you guys. But the last document, the office industry report is basically just, this is literally just saying that the tax incentive is valid because it's, this is from the state. So here we're looking to see straight, pretty straightforward here. The entity name, Abn, recurring number, the income year, make sure that this is pertaining to the correct year. This is a specific period, which I don't think we need to validate, but the registration number is also helpful because this shows up across some of the closing packet documents. Some of the tokens and receipts will have this there, but we're gonna be skipping over that for now, if I'm correct. So we're looking for the income year, the income period, registration number, and then these will be, once again, verified across some other documents, I guess, once we get to those.
+
+>>Aaron Yu	30:49
+Do you guys have any questions about, like, these essentially pre -approval packets that we, I just talked about?
+
+>>Aniket Tatipamula	30:59
+No, Baron, thanks. Vishal, Manan?
+
+>>Manann Agarwal	31:06
+Nothing from mine.
+
+>>Vishal Arya	31:07
+Yeah, nothing from mine, too.
+
+>>Aaron Yu	31:11
+Great. I mean, our objective for this meeting was to really, so what I shared with you guys, I think was very outdated. So this, for example, as you can tell, there's some of these, it's very simple checks, right? There's a lot more in -depth things that we could do. So I didn't want you guys to waste your time kind of going on this, and then I tell you guys that there's so many other things that we want to do. So pretty straightforward. I can help you guys with this instead. And then, you know, so how does your timeline look in terms of getting something back to us?
+
+>>Vishal Arya	31:53
+So we will be getting back to you, so, I mean, this was pretty much clear, Aaron, like, you know, what you just explained us. Give us 24 hours to let's, I mean, let's have this discussion internally. Sure. And I'll get back to you by Thursday morning.
+
+>>Abhishek Lokapur	32:14
+Sure.
+
+>>Aaron Yu	32:14
+And what can I expect during that time? Kind of like a initial, initial, like, version of this, basically? Oh, okay.
+
+>>Vishal Arya	32:22
+Yeah, so for the initial version to be ready, like, you know, we would need the timeline till Friday then. We will try to set up the document types and at least with the two models, at least like, you know, we'll try to make the validation thing ready. So yeah, that will be the timeline for now, but then gradually we'll, you know, update you on the rest of the document types as well.
+
+>>Aaron Yu	32:48
+Sure. That sounds good. Yeah.
+
+>>Aniket Tatipamula	32:52
+Aaron, we need to interrupt. One thing that would help us a lot is when we got this Excel sheet last time, we had to actually manually check what to refer to and what all to match to. So if it's possible, as in this will be really helpful to us, like while you're writing the validations on one of the columns, if you can also refer to those fields that, okay, you are picking up a name or maybe entity name from document X and then verifying with document Y or document A, document B, document C from these documents, these fields from these documents. That would make our life a little easy because then we would know, okay, name has to be matched across four documents and then we'll create a validation accordingly. That would be one thing. The second thing is the order of the validation, how you want to see, right? Do you want to see name validations first or do you want to see some other validations first? So is there any order to it?
+
+>>Aaron Yu	33:53
+I don't think it makes a difference. Alex, feel free to interject. Theoretically, it'd be great if everything could just pass this process. That would be amazing, right? But if it has a flag, I'm sure that we can just jump to the flag using your platform. Well, I guess a very standardized like name, date at the top, or if you want to separate it into sections, you can kind of follow the Radium application to chunk it. If that would be like a helpful thing for you guys.
+
+>>Abhishek Lokapur	34:33
+What do you think?
+
+>>Aaron Yu	34:36
+Sure, Aaron, I think what we'll do is as soon as you share that validation column with us, we will probably, we'll probably have a look and then come back to you with the first validation option that we are thinking of.
+
+>>Aniket Tatipamula	34:49
+And if you guys are okay with it, then we'll proceed. If it's not, then we'll make those changes and then make it work out. Sure.
+
+>>Aaron Yu	34:56
+And going back to, yeah, Manon.
+
+>>Manann Agarwal	35:00
+Yeah, so I had one question. So, you know, there might be some validations which, you know, if let's say the entity name in a certain document is not extracted, right? And that is more of a, let's say, a mandatory field, right? In that case, what should be the output? Because if it matches, we'll let's say give a go ahead. If it does not match, we'll raise a flag. But what would be the case in the case where, you know, let's say the field is not extracted. In that case, what is it that you're expecting specifically for mandatory and non -mandatory fields if there are validations on it?
+
+>>Aaron Yu	35:36
+What do you mean? Like kind of the platform has some trouble extracting it?
+
+>>Manann Agarwal	35:41
+Yeah, so, no, I'm just talking about the worst case scenario where, you know, there is a certain field that let's say it was not extracted due to the, you know, due to whatever reason, right? In that case, you know, what is it you're expecting? Are you expecting something on the lines of validation could not run? Or you, you know, you want us to flag that directly saying that, let's say, you know, the name is not present or, you know, what is it you're expecting in that case? The gray area that I'm talking about.
+
+>>Aaron Yu	36:07
+Yeah, so I think your platform is really great. And from what I've seen, it does a pretty good job. So I'm not expecting too many of these scenarios. But in the scenario that it does happen, you know, just flag it, come back to us, send us a screenshot or hop on a meeting, say, you know, we're having some trouble extracting this specific field from this document type specifically. And then we can see how mandatory it is. If it's something that maybe is more of a convenience and factor rather than like a credit breach or like risk factor, then maybe we can just ignore it. And if there is, when we get to that point, I think we can find a solution around it, work with the credit team, whatever, see how really important that field is. But I'm really not expecting that to happen, so.
+
+>>Manann Agarwal	36:53
+Awesome, thank you.
+
+>>Aaron Yu	36:56
+Yeah, Aniket, I do want to make your life easy. So you guys don't have to flip through all the documents. So, I mean, for the validation criteria, would you want me to say something like validate number as present in Radium application, also present in, you know, document 3, 4, 5, 6, 7? Would that be something that's like, is that kind of what you guys are expecting?
+
+>>Aniket Tatipamula	37:26
+Yeah, and if you can also add like, with the Radium application, if you want to add name as well, right? If you're very specifically mentioned on Radium application as an applicant name, as opposed to in R &D comfort letter, it's a borrower name. And both of them actually make sense because while we'll set up the doc type, we'll use those field names, both helpful to the team and us as well.
+
+>>Aaron Yu	37:51
+Okay, great. I'll try my best to make this clear to you guys. There might be some things that I don't get on the first try. And in that scenario, please just feel free to get back to me. And I'll try my best to make this easy for you guys. Yeah. Is there any other comments, Alex, that you would like to make or anyone on this call?
+
+>>Vishal Arya	38:17
+Nothing from my side.
+
+>>Abhishek Lokapur	38:23
+Thanks, Dan. Yeah, one thing, Alex, what we'll do once we have the agreement in from David, I think Vishal will be sending a link, invoice link for the initial payment. So I think we should send it to Michael. I'll just keep you both also on the loop just for visibility. So internally, I'm not sure what the process is internally. So I'll be reaching out to you guys just to follow up on that once we have sent the invoice for that. Sure.
+
+>>Aaron Yu	38:53
+Yeah, just make sure to Cc Alexander on everything. Helpful if I'm there too, but Alexander's very important person. Yeah. Thank you guys for this call.
+
+>>Abhishek Lokapur	39:09
+Thanks, Aaron. Thanks, Alexander. I'll be emailing you guys soon.
+
+>>Aaron Yu	39:14
+Yeah, I'll look to get to you guys as soon as possible.
+
+>>Abhishek Lokapur	39:17
+Thanks, guys.
+
+>>Vishal Arya	39:18
+Thank you.
+
+>>Alexander	39:19
+Thank you.
+
+>>Aniket Tatipamula	39:20
+Thanks.
+
+>>Aaron Yu	39:21
+Have a good one. Bye -bye.
+
+>>Abhishek Lokapur	39:22
+Bye -bye.
+
+>>Vishal Arya	39:25
+Thank you. Yeah.
+

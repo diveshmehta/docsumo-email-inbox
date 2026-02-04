@@ -1,0 +1,219 @@
+>>Bikram Dahal	00:00
+Yeah, I can hear you. Morning, how are you? It has been a long time. Thanks for changing the time yesterday. No problem. So how are things on your side? Busy, like normal. But yeah, overall pretty good. Yourself? All good. I have moved to Long Island. So the weather is, the summer is finishing up. So trying to enjoy most of the summer before the winter kicks in.
+
+>>Neil	00:25
+Yeah, it's going to be cold.
+
+>>Bikram Dahal	00:28
+Awesome, Neil. So on my call, I have Aniket. I'm not sure if you have met Aniket or not before. He is our head of engineering. And we are doing some exciting things together. So I just wanted to quickly give you the heads up regarding those features and see. I know we have talked about this use case one year ago, exactly one year ago, more than that. And we're just looking into those. I'll give you more context later on. And then I thought, OK, let me talk to Neil, because he might find this interesting. So we just wanted to catch up with you to see if there's any place where we can further improve your process.
+
+>>Neil	01:00
+Yeah, yeah, definitely.
+
+>>Bikram Dahal	01:02
+Ok, Aniket, quick introduction for you.
+
+>>Aniket Tatipamula	01:06
+Hi, Neil. Vikram just introduced me as head of engineering. I've been in Docsmobile for quite a long time. And I've heard about you, a lot of things from Vikram. But this is the first time at least being on a call with you. So nice to be here.
+
+>>Neil	01:20
+Likewise, nice to meet you.
+
+>>Bikram Dahal	01:22
+Ok, awesome. Neil, I'll directly jump in. So the thing about Docsmobile till last year has been that, oh, we are just accepting information. On your case, we are doing a few more things, like converting that extraction into a required PDF file and sending it back to you, so that you guys can use it for data storage and everything. But because of introduction of LLMs and other things, a lot of the things that was not possible before now are possible. So we have been working to make sure that the invoice is very simple. Now, any job that you have, information extraction is just a part of it. There is a task that comes before it. There is a task that comes after it. One of the examples might be that if you have an invoice, then sometime before you make up, you'll extract information from the invoice. But you might also have to have a connection with other people saying, OK, this invoice is right, this invoice is wrong. Or there might be some other operation that you have to do with that invoice. The better example, I think invoice might not be a good example, but the better example is in case of mortgage. If you want to get out of mortgage, then you have multiple steps. You have pre -processing, pre -approval, where you have to give a lot of document. And you have to extract information from those documents. But then you also have to combine the information from two documents. You might have to ask them for more documents. And once they go to the next step, you might have to call third -party API to get that information into your system and make sure that you can handle that job into it. So it's not just about extracting information from W2, but it also has a lot of other moving parts.
+
+>>Bikram Dahal	03:04
+And because of introduction of LLMs, few of this job, which were not possible till now, are now possible. And so we're trying to figure out what can we do in Doximo so that we are solving any problem into it, not just being a part of it, of extracting our information and just letting everyone else handle the thing. And then making sure that we do things end -to -end. So now, we have decided to go with the two routes. So right now, the product is a bit focused on lending. And because in lending, we have a clear understanding. We have some customers. I really see that this can be a sign modification for any kind of use case where a case has to be maintained. So it might be a bit confusing, but once I show you the diagram, then we'll have more context and everything. So let me directly jump to a diagram. And then we'll discuss about your problem that we discussed last time. I will iterate on what you guys need, and then we'll take it from there. So this is the problem statement that, if I remember it correctly, you guys currently have on your system, is to make sure that the support function that happens, which have a lot of use case and everything, because sometimes people will ask you for a status. Sometimes they want to change the delivery date. Sometimes they want to hold the order. There are a lot of things that can happen with the support ticket. And we're looking into automating that step. And it involves multiple steps. It's not just about getting a ticket and figuring out, oh, this is a support ticket for checking a status. That is one part of it. But then after you figure this out, then can you automatically solve this problem and maybe the only action that people might have to do is say that, okay, everything is good.
+
+>>Bikram Dahal	04:49
+Do this action. So not just doing the classification of these documents and giving you that lesson, but building it in a sort of way that,
+
+>>Bikram Dahal	04:58
+Let me say 80%. Like I said, one of the things about all this AI isn't in everything, they will never be 100%. But you already know that, because even in document extraction, you are never 100%. But you guys were happy with certain accuracy. And after running some experiment, we have come to realize that using LLMs, they might be on Ai blobs and everything. But once you combine these pieces, you will be able to, and if you use a little bit of human intervention, we'll be able to get very good accuracy and save a lot of time on certain sections. So that's just what we're thinking about the workflow. So I have a diagram over here, like I can go through these diagrams. And this is currently live on the, not live, on the testing only. So this is not the diagram. We already have it on the product. We are testing this and that. So like you can add more. But like, so anyway, just wanted to, on the interest of time, I've already drawn it. I just wanted to go through your problem statement, how you think that we can solve it. There are a few more screens also regarding case management and everything. So, and get your feedback. Did it solve your problem, not solve your problem? Are there some more things to be added into this problem to solve your problem?
+
+>>Neil	06:06
+Okay. So I remember this conversation we had about a year ago, you said, and we were, I know we kind of got sidetracked, but we were looking at setting up an API with our email application that we use, like a team email application we use. And then pretty much the intention was that we would get the API results to then, you know, either update our system or draft an email. Is that still the intention? Or is this actually Docsumo would handle the response back to what it would, maybe explain that a little bit more to me.
+
+>>Bikram Dahal	06:46
+Yeah, I'll go to that, right? So one of the biggest issue with that system that we had designed for you was that like we would do the information extraction and we'll give it back to you, but then you have to build a lot of things on your side to like, because you have to make sure that your APIs are there to handle those. I know you guys might have an API, but you guys are not building this project outside, right? So those APIs might have to be maintained and everything. So right now the goal is to see if we can combine little bit of pieces to make sure that you guys have to do a minimum work on your side. And you still be able to make sure that this project goes live without a lot of involvement of Andrew, right? If I'm not wrong, Andrew was the one who was -
+
+>>Neil	07:29
+Yeah, yeah, Yeah.
+
+>>Bikram Dahal	07:29
+So the goal over here is because it's not just about being usable, but what we have also seen with a lot of companies is that their tech resources are already busy with doing so many things. So if we just give them the output, sometimes you have no idea how much of the project have failed through because of that, because they don't have resources to allocate and everything. The goal over here is to make sure that major of the things will still need your support on few things. It's not that fully automation, but the goal over there is to solve a lot of time for Andrew and the integration and the team so that they don't have to do a lot of integration. I'll just go through this. I think this will make things a bit more clear. Okay. Okay. So the first process, how any of this system works is that you guys sync your email like through API or you do the email forwarding. So the first step is always getting your email information into our system. And we email forward, we can call it, do it through API. That is a nitigated thing that we'll come to. The second part over there is all the support emails has to be first classified regarding what should be done on this support email, right? If I'm remembering it correctly, there are multiple things. I have just given some example. Sometimes people are just going to email you saying what is the status. Someone just copies that order number or something, just goes to your system, looks into that order number, comes back and then gives you the output. They don't have to do anything. They just say that, okay, this is it, which they could do themselves also. They already have that UI, but they don't use the UI. They just call you, right? So one way you just want to check the status. Second thing is you might want to send the delivery date or you might want to send the delivery address or you might want to hold.
+
+>>Bikram Dahal	09:11
+And so the first job over there is to figure out what kind of request people send on that email.
+
+>>Neil	09:19
+Right, right, right. So if it's a update or if it's a question, like a lookup or... So how is that classification going to happen? Is that through AI or?
+
+>>Bikram Dahal	09:29
+Yes, right now it's through AI, but we have a lot of homing in the loop and everything so that I'll come to that in a minute so that if it makes a mistake. And like I said, this models are really good now. Like things have changed a lot in last three years because we have done this classification, not just for email, but I'll give you one example where a client want to take a file and classify that file into 300 different document types. Over there also, we have been able to achieve 95 % equation, 300 different categories.
+
+>>Bikram Dahal	09:57
+Like category of document type. So we think that because this support email are usually are not that complicated. We'll be able to classify even if the support email has two different actions to be done.
+
+>>Neil	10:09
+The first action is like a couple of sentences, right?
+
+>>Bikram Dahal	10:13
+So and also like even if you have two different jobs to be done, then it will say that this also has a check status for this one and this for there's a change of delivery of address. So the LLM will be able to figure out, OK, these are two operations you have to do. So the first job over here is like email syncing. After that, we decide like what are the categories and everything we want to play with. We put some example of prompts and everything if required, depending upon that. After that is done, then this is the main block which will decide what kind of workflow should I run after this is figured out. Example. And this is just example only. If someone says that, oh, this is just checking a status and here's an order number or here's a user ID, then what we're thinking about is that because as long as we have a restricted account on your site, so that is also the maintaining of credential and everything we need to discuss and everything because we don't want AI to have all the credential and everything over there. But that's one part of like we'll come to that in a minute. But let's say that problem is solved, then what will happen is as soon as you figure out there's a checking status of the email, then our system will automatically open your platform and get that information, put that information into your platform, get the status, draft the email, but it will not send it, at least for the beginning. Right, later on we can look into confidence and everything and send it. It will do those operations and draft the email. And I'll also show you on the UI how people can do that, how people can stop it. Those I'll come to in a minute. But like our email will be drafted for that case. So think of it this way.
+
+>>Bikram Dahal	11:54
+It's an email that is coming to Docsimo is made into a case. And there's a, how this will be and everything, I'll come to that in a minute. First I want to clear this out so that then we can come back and see over there. So it's not just like Docsimo is like a magic and people don't care about it. They just log in into Docsimo, they see their cases. And for each cases, they see their data. So let me say our email came and I know that this email is about checking our data. So the checking is started, this pipeline will run. This pipeline will first open the system, get that information based on how you want the email to be there. It will draft the email, it will make it ready. And someone will come, click signal, this looks right, let me just send it. So you don't have to, people don't have to do it. And this part can be automated, but at least it wasn't one. For three months, I didn't want that part to be automated because it's a risk, right? We didn't want to get it. Right, right, right.
+
+>>Neil	12:47
+And where's the email? Is that an application in Docsimo or is that through our same email? So you guys would just put it in the draft, keep it in the draft then.
+
+>>Bikram Dahal	12:57
+Yeah, we'll keep it on a draft of your system. And then we'll also, we'll have to see the API integration and everything, depending on what you have used. And on Docsimo itself, we can make sure that if you click on the bottom, then it will be sent, right? So we'll have to look into what platform you guys are using. I know you guys are using Outlook, so there are a few things to figure it out. But our thought process is that it will be on draft of Outlook, but people will be able to send, if they click some button, then that will also be sent after, in this woman in the loop. I'll show you in a minute, regarding this one. Okay. And the second one is changing delivery and holding order. This one, I don't want to automatically do it. So a woman has to, this will be put over there. A woman has to take, saying that, okay, this is correct. Then it will automatically do this action, draft the email, because a woman has already given one approval. This will automatically send an email saying that, your address has been changed. I send thing over here, like there's a woman in the loop. The AI will do this task, draft her email and send it. Right? And if there is some unclassified or something, and woman in the loop can be anywhere. You can say that, as soon as this is classified, I want to check before I do next step, totally fine. And you say that, okay, I don't want a system doing it automatically. Like, I just want to check each and every record. And then I decide what workflow to run. Because if you think about it, this workflow that you have over here is a custom workflow of its own, right? So as long as I know this is a email type, and the action that I have to do is change the address. So let's say there's a mini workflow of this part, and then you automatically choose and decide saying, okay, go and now change the address. So you want it to be manual. You don't want automation and everything, because for whatever reason, until you guys get the confidence, then in that case, let me say the case of where it's not classified, you're not able to figure out, a woman comes in, you'll give her a status, and based on that status, one of this pipeline will run.
+
+>>Bikram Dahal	14:49
+And if it is successful, it will go into, the case will be resolved. If it's not successful, then like people will see either, and they can do whatever action to be done.
+
+>>Bikram Dahal	14:56
+And this is just this part is we want people to be able to build those things themselves without too much of our help, because sometimes they might want to add one more category. They might want to add one more woman in the loop, or whatever they want to do. So they can do it from this workflow. Now, workflow is one part, but the most important part is the place where are they going to, how is this going to work overall? And here, it's not perfectly designed for your use case. Like I said, this is a bit designed for lending. So little bit of things might look a bit odd, but we have made it in a sort of way that you can customize any of these views, right? So because of that, like, so like, if there's something that looks a bit odd, don't worry. You'll be able to customize where you want your people to see it.
+
+>>Neil	15:43
+Okay.
+
+>>Bikram Dahal	15:44
+Okay, so this is a Eba scheme. So let's take a simple example of our Eba scheme. Our case comes like, our case is regarding one of the Binance accounts, and the Binance, like a Binance had sent an email, what will happen in Doximo is similar to, I'll just quickly go to the product here also, and show you here. So similar to our document and everything, our case will be created, right? When people click on that case, then they will be shown this scheme, saying that this has two queries. It's the same email, but it has two queries. One is to check the status, and one is to check the, change the delivery date. And if you click on view, you'll be able to see the original email, and also like, what is the JSON taken out of it, right? So like, this is the original email, but this person wants to get a check of this ID, and he wants to change the, like address of this ID from this to this, right? So one is just to see the original email, so that everything is good. And then second thing is to see what was the, what was extracted, and if everything is good. And if it is a mistake, they can change and everything, but I'll come to that moment in the loop. I think that is more important. So what will happen is that, you get the email, it will make the, like, whatever queries are here, and it will also say, what is the current status? Now, the status comes from here. So it is currently, like, on routing, or it is currently like, this one is currently an email on the loop, or currently some draft email and everything. So those status will be here. So people will click, if they want to know the detail, because you need a complete log, right? Change log and everything, because if you want to monitor from the very beginning till this step, you can do that. So there'll be an audit log and everything, so I'll come to that in a minute.
+
+>>Bikram Dahal	17:24
+But basic idea is, let's give a simple example. So this email is just about checking the data. The email comes, the data over here will be, because in this workflow, the woman in the loop is only on here. So draft the email. So what it will say, the email is drafted. Now, when you click on that, it will open something like this, saying that, right now it's only approved and disapproved, but it will show you the email.
+
+>>Neil	17:50
+Okay.
+
+>>Bikram Dahal	17:53
+This is the, like this is a email. This has been extracted in the draft email, and do you want to send it? They click on send, then it will send, the data of this will change to, like completed. Simple use case. Now let's say, take a case of this. On this case, because there's a woman in the loop over here, the only part this will do is, the data type of this is going to be, like need approval or need like something. Click on this one, then we're able to see the original file, and also like, what is the JSON? What they want to change it from to what? They say, this looks correct. They click yes. It will do like everything. It will look for correction, and like it will do it, and then it will automatically say that, okay. Changing in database, done. Changing in, like this, done. The email send, done. And then it will now go to, like it will now go and say that, okay, this is also close. Okay.
+
+>>Neil	18:51
+Like it will draft, so it will update the database.
+
+>>Bikram Dahal	18:54
+Yes.
+
+>>Neil	18:54
+Confirm that it updated it, and then draft an email.
+
+>>Bikram Dahal	18:56
+Yes. And then, for each and everything that you guys, that will be done. You will have a status regarding, like what happened on this. So even if AI has done some mistake, example, it has made access to your database and everything, it will keep a screenshot regarding what change it made. Right?
+
+>>Neil	19:13
+Okay.
+
+>>Bikram Dahal	19:13
+On the email also, like what draft was done, who approved that email and everything. So at any given point of time, people are like, you figure out that, okay, something is messed up. Then you guys can figure out, okay, where did the mess up? Like, did AI mess it up, or did you mess it up? Like, people mess it up and everything. So this is also very important, because it's not just about showing where it came from, but if Ai had done some activities, example, it has gone, and it has made a thing on a database, then you'll be able to see a screenshot and videos, saying what change was done.
+
+>>Neil	19:44
+I get the concept, but I like the UI of it and the approach. Two things. Number one, I only have about 10 more minutes, because I have a 9 .30, but can we talk about how...
+
+>>Neil	19:55
+How you would connect to the database and how would you connect to the emails?
+
+>>Bikram Dahal	20:00
+Sure. So database, it will be through UI only. So that is one part I need to talk with Andrew and figure it out. Because as long as you can publicly assess your website and there is some read -only password and everything. So similar to how your team currently assesses your back end, we'll be assessing it the same way. Because think of it this way, this AI that is here is similar to someone opening a Chrome tab and doing whatever option they are doing manually.
+
+>>Neil	20:29
+So that part is important.
+
+>>Bikram Dahal	20:30
+So here, the connection to your database, communication will only happen through this one. If you guys have an API, we can do API and not worry about this part of it, AI opening the browser. We can do that also. That is better. I always prefer that. Because then I can just use, not open this browser, but use the API to upload those things over there. But if you guys have APIs and everything handy, and we can quickly want to test without making those API, then we can just, as long as your team can do it, the AI will be able to do it.
+
+>>Neil	21:02
+I got it. I understand. I think API is probably more, from a security standpoint, probably what we prefer.
+
+>>Bikram Dahal	21:08
+Yeah.
+
+>>Neil	21:09
+And then what about email? Yeah.
+
+>>Bikram Dahal	21:12
+So right now, this is the part I still need to figure it out. Because I need to know your tech stack. Your currently tech stack is Outlook, right? Right. So I need to figure it out. Because your forwarding will not be useful, because you also need to send email. Because if it was just about us getting a file, then us getting the file, then it was easy. We just forward the email. But you also have to have a draft and everything. So we'll have to have a connection with you. So this one, I still need to figure it out. But I think because Outlook is like, they have enough connection and everything, we'll be able to figure out something on that.
+
+>>Neil	21:42
+Yeah, I know other applications you're able to make. We have Microsoft Exchange, right? So we're able to connect through. Let's say somehow we were able to connect from your application on Microsoft Exchange. That's what you need to kind of research, I think.
+
+>>Bikram Dahal	21:57
+Yeah, sure. That one, we already have some other integration for other things. So I think we'll be able to figure that out.
+
+>>Neil	22:03
+Okay. Yeah, I mean, it sounds promising. I like the approach, and I like the kind of like the one -stop shop of seeing the email, the initial request, and what happened and what, you know, AI, what are you guys using for Ai, chat, Tpt, or?
+
+>>Bikram Dahal	22:23
+So over there, like, we'll be using multiple packets, but like more likely we'll go with Google because Google has a better, like, so it'll probably change depending upon the, I know we're preferring Google because of how complicated it is they're able to handle for our client.
+
+>>Neil	22:38
+Yeah, we'll want to understand the, you know, the big thing for us right now is security, right? So, you know, I'm comfortable with API calls, pretty much the email, you know, Microsoft Exchange, I'm pretty much comfortable with that too. But from an AI standpoint, you know, how we, you got to make sure that if it's Google, that our data is still going to be not shared and secured and that kind of stuff, right?
+
+>>Bikram Dahal	23:05
+So like 100%, so those things are already taken care of. We can send you our policies, because that is the number one thing, because we are working with lender. They cannot have our data training and they cannot restore our information. So those things are taken care of. We can send you a report and like other things that is required for your company.
+
+>>Neil	23:22
+That will be big, so we're, you know, similar to what we talked about a year ago, we're really interested in Ai and this approach of like, you know, having AI handle our customer services, we think it's definitely doable. What has happened since last year is, I think I told you, one of our systems got hacked, right? And so now of course, we're through that, right? It was fine, but now everyone's on high alert, like, hey, our data, you know, so it's not like, there's probably a little, a couple more layers to get approved besides me now, right? So we'll want to understand, you know, from an AI security standpoint, from Ai, from, you know, connecting to our database and obviously email, but Yeah, I mean it, and how would, have you guys thought about like the pricing model on this? Is it by call or is it by connection set up or?
+
+>>Bikram Dahal	24:17
+Yeah, so we actually, to be frank, I'm essentially discussing on this one, with all the lending customer, we are doing it for the loan application. So here also, I think more likely we'll do it for like issue solve, that will be a better one. But like, to be frank, I don't have a very exact price because usually with all the customer, we are just saying that, oh, you have implemented the fee of X amount and then platform fee and everything, but you are using our platform. So I don't have, like we'll make sure that on our side, if you guys like it, like we'll make sure that you have a best right over there. So price, I think will make sure that, because you guys also a little bit helping us to build this, right? So I saw more on the synergies side of things, like I didn't have an exact.
+
+>>Neil	24:55
+That's fine, that's fine. The only scary part about doing by call or by email is, as you know, people send emails, a million of them, and we don't want to drive up the cost that way. But yeah, I totally understand. We want to do something that makes sense between both parties, right?
+
+>>Bikram Dahal	25:10
+Sure, yeah, sure.
+
+>>Neil	25:11
+Okay. So what do you think the next steps are then?
+
+>>Bikram Dahal	25:14
+Yeah, so the next step is this one, because one thing I'm not able to figure out is if you guys have your Sap or something to train your team regarding what are the things that they do, right? They check status, they do deliveries and everything. So if you can have that status, and then with that, some example emails, because if you have that, all the things are very pretty basic, right? What we need to do, we like, on a high level, we can think around it. So the thing that I want to know is this router, what are the jobs that people do? And is there some edge case or nitty gritty that we have missed over here, right? Like one of the things I told you is, sometimes the email is going to have both the two jobs at once. It's not just about checking the status. So one part of the job might be taking it as a second, might be there. So that is something that I already know.
+
+>>Neil	25:59
+A big one, I can get you the examples. A big one for us is, since we deal with so many different customers, and the customers are the ones that are emailing us, we want to make sure that that customer is only inquiring about their order, right? And no one else's orders. So, but we have some ways to account for that. But yeah.
+
+>>Bikram Dahal	26:22
+So one more thing that will also help, that is one thing I need. And second thing is that if we can have a talk with one of the, what do you call it, one customer success agent, and if they can share their skin and show us what they do completely, right? So for one email, like how they did live example, that will really help us make sure that we understand those things very clearly and make sure that those, because at the end of the day, small, small things is what is going to change people's life. It's not AI and anything. It's like the time it takes to drop that email. That might be something that is not even related to AI, right? So it will be really helpful if, like once you guys give us that list of what they do, if you can have a half an hour call And maybe we can see one live example, and then that will really help us make sure that we have figured out everything that is required to make sure that this UI is really built for them. Okay.
+
+>>Neil	27:14
+Yeah, let's start with, send me emails next step. The easy one is getting you examples. And I know we kind of worked on that last year, so we can look at that again. And then we'd probably set up a call with those examples. And yeah, we can get a customer rep on and we can walk you through the front end, what we do in those examples.
+
+>>Bikram Dahal	27:38
+Okay. Sounds good, Neil. So I'll send you the diagrams and everything also. I'll also send you the next step. Just to give you a heads up, this is not completely ready. It will be ready in next three weeks. We also have time to prepare. So it should be good.
+
+>>Neil	27:51
+Yeah, that's fine. And if you have any, well, start also building documents for security and all that thing. That's gonna be really important for us And I'm sure everyone else too.
+
+>>Bikram Dahal	28:06
+Yeah, sure. 100%. We already have software. We already have the policy regarding Ai and everything. We'll make sure that those things are ready. And like you said, if you guys go through API, then a lot of things will be a lot easier for us. So let's start that conversation and we'll figure out more things down the road. We'll make sure that on AI side, on security side and everything, everything is covered so that if you guys have a chief security officer, they are certified with the product.
+
+>>Neil	28:32
+Okay. And as you get the email figured out, the connection, I mean, I think a first step would be we can make a kind of like a Docsumo Outlook email for us and we can forward you examples and you guys could then do that classification to determine what that classification should be.
+
+>>Bikram Dahal	28:52
+Yeah, and then we can just run it without completely making it into the closed system. And once everything looks good, then we can join the closed system so that there's no any issues over there.
+
+>>Neil	29:02
+Right, yep. I gotta let you go. I gotta go to the other meeting. So I'll look forward to seeing you in the next steps.
+
+>>Bikram Dahal	29:07
+I'll send you an email. Thanks a lot.
+
+>>Neil	29:09
+Thank you. Bye -bye.
+
+>>Bikram Dahal	29:10
+Bye.
+
+>>Aniket Tatipamula	29:12
+Thank you.
+
+>>Bikram Dahal	29:16
+Okay, I think that sounds good. He looks interested. I know I didn't ask him about Boolan and everything. He was in a hurry. So, I'm not good at anything. I'm not spelling it. That's a bit weird.
+
+>>Divesh Mehta	29:29
+No, no, I will do the note taker.
+

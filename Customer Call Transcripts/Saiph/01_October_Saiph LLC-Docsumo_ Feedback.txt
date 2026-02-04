@@ -1,0 +1,102 @@
+>>Rushabh Sheth	00:00
+I have my kids live in New York so i get to go back to see all the seasons and i usually get one snow day when i go back And it's plenty for me very nice I can bet like i'm in India So it's more humid humid if not like same But Yeah I i guess uh India weather is similar to Florida in a lot of ways i was there uh Actually i visited Miami in february this year i was there for like almost a week
+
+>>John Pascale	00:26
+But it was probably like on the cool side Right yeah Because i think i don't think i can take like Florida summers either it's too old i've been here for almost 30 years now and believe me when it gets below 70 i'm freezing and i used to you know my blood really thin you get used to it John we have to get you to India because you've already developed quite some resistance to it so the plan is to get to India in the next couple of years one of our um colleagues uh who used to work for me here in Florida She her family's in India And she moved back temporarily so she's still working with us So she keeps trying to get us there you should like we'll we'll be more than happy to do that awesome
+
+>>Paul Kosinski	01:15
+Hey Paul how's it going today happy how was your birthday jasmine Uh it was well Paul it was like you were working all day uh they don't give you a rest today
+
+>>Rushabh Sheth	01:26
+I i think this is a question that Paul i have to ask to ask you like do you give holidays No we don't we don't have vacation
+
+>>Paul Kosinski	01:36
+No we live in the US there are no holidays we're slave drivers Yes and Paul we work when you are working that's right that answers it appreciate it uh awesome
+
+>>Jasneet Singh Malhi	01:49
+Uh so i think uh team so um again thank you so much for uh you know quickly jumping on today's call so Lauren we quickly want to just understand uh you know the check processing use case ones in a little bit more detail so that we just don't miss out on anything important so uh we there are two ways either we can just you know get started with the scope that we have right now on the order form or we can take some time understand the check processing use case understand what volumes would it would be and then update the order form accordingly and Then uh have both of these tested out in the poc itself Yeah
+
+>>Lauren Boersig	02:27
+I think we want to do the scoping um just because with the pricing we want to confirm like what the pricing would be because the the the pricing right now is just it's higher than it would take our it doesn't make sense for us to go with a solution that's not going to be the solution for both ends of the the uh workflow so that's what it comes down to
+
+>>Paul Kosinski	02:48
+And and again i don't think this is you know all that labor intensive of a process Right i mean checks have been around since forever i'm sure banks Ocr them All the time right They're typically within a very finite number of places the information that we're looking to extract so um you know short of edge cases where we have some statements and stuff that go along with uh remittances uh it should be pretty cookie cutter and Paul this is for your servicing function correct Yes
+
+>>Rushabh Sheth	03:17
+And so how many how much how many debts do you service per year and how many payments are you looking at well
+
+>>Paul Kosinski	03:24
+So right now we're starting from whole cloth Right So we we were in a position in our previous company where we were doing 10 000 plus checks a month right uh or payments now we're starting a new business in that same space so all the originations we're going to be doing for the file onboarding the the case management are going to translate into 40 year streams that we have to collect payments over right So it'll accumulate over time it'll be low volume up front but high volume down the road uh which is you know uh the kind of the opposite of what nations looks like understood and so uh so as of now you don't have volumes for the servicing but that's right uh this would all be new uh we are we have a couple bids on bringing in some portfolios that 3500 records we've been talking about that would be in on a servicing basis so that will start crash falling pretty immediately put another bid in today for another few hundred records Right So we're actively out there sourcing these so we can get to somewhat of a scale pretty quickly but not all these annuities pay every month current Right so a portion of them do and a portion of them pay annually But uh you know we can get to a few hundred checks a month in the first year i think got it
+
+>>Rushabh Sheth	04:33
+Okay I think got it Paul uh understood essentially it's just a good to have add -on as of now uh at least till you sort of like if till it becomes like a major portion on the servicing side of things uh did you have a price point in mind because like like either ways it doesn't matter because it's uh Yeah I mean we need to be close to a dollar
+
+>>Paul Kosinski	04:55
+Right So you're almost five x four to five x
+
+>>Paul Kosinski	04:58
+Right now uh can you do 1 .5
+
+>>Rushabh Sheth	05:01
+All then we'll just send it to you like just just to make sure that uh i'm sorry can we do 1 .5 1 .5 dollars for that uh check processing because we still have to run through in the in the slot in the small scale yes uh once we get to a larger scale we're gonna
+
+>>Paul Kosinski	05:16
+Yeah
+
+>>Rushabh Sheth	05:16
+We'll get to it and then can we just put that as for the first year would that be like thousand So you're talking about 1 .5 times thousand uh so that would be fifteen hundred dollars yeah
+
+>>Paul Kosinski	05:28
+There's a thousand that'll be the price point similar to the files where and then we're gonna break above a thousand Yeah Correct
+
+>>Rushabh Sheth	05:35
+Yeah then basically as like all of this works like if you ramp up faster and you acquire that portfolio and suddenly you're getting like 3 000 checks then we'll just ramp it up like as you can just say let us know in multiples of 500 of how much we want to top up
+
+>>Paul Kosinski	05:51
+Okay Lauren did that work for you Yeah
+
+>>Lauren Boersig	05:54
+Okay
+
+>>Paul Kosinski	05:55
+Okay
+
+>>Rushabh Sheth	05:56
+So then practically there's not much difference in the order form we just wanted to understand that because at least so we work with arbor and their servicing team is huge they service like in tens of thousands of loans so basically like we just wanted to make sure that like we understand like how how much of a big
+
+>>Paul Kosinski	06:13
+Yeah it's again it's a ramp Right so it will be it's going to be some time before we get to that level uh Yes But but we fully intend on doing it at a bigger scale so uh this will be leveraging the software longer term it's just again we got to figure out a solution we don't want to go down this path on the case management and then pick another vendor for the check management and then have to integrate both and manage both so great cool Paul then we'll put it on the order form we'll put like uh basically thousand times 1 .5 and then prorate it for the first three months
+
+>>Rushabh Sheth	06:44
+Okay all right all right and are we still good on the monday start So we'll send you like the checklist for uh all the things that we need uh in terms of most of it we have because i think one of the things that we loved working with your team is that document you guys sent because that was super clear uh So Yeah i really appreciate that when someone does that because that like makes it easy for everyone to work along because then there's no ambiguity uh But i'm pretty sure like on the data side our success team will have certain questions because some of the points that you had put over there like were questions like check this check that But what does it mean in terms of like the actual data points like the data types is it like a string number date if it's a date then are you looking at things so basically we'll send you that checklist once our team starts looking at it But uh we'll keep monday like i'll basically prime our team that monday we kick off with you guys Lauren you good with that
+
+>>Paul Kosinski	07:44
+Yeah
+
+>>Lauren Boersig	07:45
+I'm good with that Okay
+
+>>Paul Kosinski	07:46
+Abby uh well Lauren we need the whole team or is this the first scoping is going to be i think we need Abby and me
+
+>>Lauren Boersig	07:53
+Okay
+
+>>Paul Kosinski	07:56
+I'll probably set out the first uh the first kickoff call But uh we'll be dropping in every now And then
+
+>>Rushabh Sheth	08:01
+Yeah awesome uh awesome team then we'll update the order form we'll send it to you and uh then if we reconnect once once everything is good once we sign off we'll we'll send you uh the invoice also and we'll also um tell our success team to arrange a call for monday
+
+>>Paul Kosinski	08:21
+Okay sounds good sounds good Awesome great thanks everybody appreciate your time
+
+>>Rushabh Sheth	08:26
+Okay
+
+>>Paul Kosinski	08:31
+So we'll quickly just update the order form
+
+>>Rushabh Sheth	08:38
+Yeah
+

@@ -1,0 +1,426 @@
+>>Aniket Tatipamula	00:00
+Else join the call or like this is it? I believe it's Leanna and William. If I'm not mistaken, yeah, William has not joined yet.
+
+>>Aniket Tatipamula	00:18
+Oh. Yep, so till Liam should I message him? Let me just check if I can message him on Slack.
+
+>>Aniket Tatipamula	00:35
+Ok, just for this. I bought it.
+
+>>Boris Teper	00:56
+I'm sorry it was a myth. How are you?
+
+>>Aniket Tatipamula	00:59
+I'm good, how are you?
+
+>>Boris Teper	01:00
+Go here, thanks.
+
+>>Aniket Tatipamula	01:06
+I just messaged Liam. It doesn't seem to be online.
+
+>>Liana Vinokur	01:12
+Hi guys, can you hear me? My AirPods are not connecting for some reason.
+
+>>Eugene Yaromik	01:17
+Yeah, yep.
+
+>>Aniket Tatipamula	01:18
+Ok, I I think then we'll start as in if William joins, that's great. But I'll start with the updates. I'll start with the issues because that will probably give a bit of understanding as to what was going wrong as in and what's happening on the account right now. So from the last week changes, one good thing that happened is a lot of documents are now going to processed. I mean, on the bank statement, that number was around 6570 earlier. Now it's around 85. So like 20 % jump in documents that are actually getting processed in the ones that are not yet tallying. As in, we're looking at the main. The main issue is around opening and closing. William also showing. Hello, hi William. You're you're on mute Liam.
+
+>>Liam Dionisio	02:31
+I was too busy. I thought this is 30 minutes from now.
+
+>>Aniket Tatipamula	02:36
+Yeah, no worries. Thanks for joining. So I I was just discussing with the team about the issues and Yeah, I mean that's the bank statement extraction bit and we will continue to keep on fixing it, but that was not the main issue. I mean, you remember Lazaro as in last time when you were pointing out few issues, those were mainly around negative days and average average ledger balance. And we we we had identified that issue on Thursday Friday. We we've understood like what was happening was as in sometimes I think the documents were multiple accounts and when they were in multiple accounts and the balance that we were picking up to actually compute the average ledger balance was the one that the one that was externally picked for the entire document and not specifically for that multiple account. And I think that is where all of these mismatches started occurring and the team has now fixed it. And if you now and we've added some very stringent logic on how we want to split whether you want to merge or not merge or whether you want to keep the data as it is. So all of those logics that we talked about last time, we've incorporated them in the Alb calculations now and we made one release today itself as in there was one release till yesterday that was I think that had couple of changes not yet done. But today we made one more release and I think that with that release, most of the Alb calculation should be correct. And on this call, maybe we can give it a shot like on on few of the older documents or a few of the newer cases. We can probably try that out and see if the Alb calculations are now working fine. The only other issue that is left is, I think this is where Eugene and Eugene, you can come in to help is there are certain instances where we see summary data as in on Salesforce.
+
+>>Aniket Tatipamula	04:27
+But when we go to that case, or when we go to Docsumo, we see the documents are in AI auto -classification. They have not been classified to bank statement. So not sure how that happens and when that happens, but it seemed to happen like few times for the issues mentioned by Liam in that sheet.
+
+>>Eugene Yaromik	04:50
+I think maybe it's bank statements from previous opportunity. I don't know exactly.
+
+>>Aniket Tatipamula	04:57
+Can that happen?
+
+>>Aniket Tatipamula	04:58
+Like, can you pick up, like, even if the case gets created in DocsUMO, there could always be a possibility that you pick up data from the old opportunity and not actually process the data in the new DocsUMO?
+
+>>Eugene Yaromik	05:14
+I don't know exactly. For example, can you send me some examples because I'll check.
+
+>>Aniket Tatipamula	05:27
+Yeah, I'll send it across to you. Maybe I'll share my screen and see if we can see that right now.
+
+>>Aniket Tatipamula	05:53
+This is something that I would have processed.
+
+>>Aniket Tatipamula	06:02
+Yeah, this one. So this specific case, right, as in Liam had pointed out that the Alb is wrong in this case. But if you look at these documents, the statements are still in review. They haven't been classified to bank statement yet. So the summary that Liam may be seeing on Salesforce, not sure where it is coming from.
+
+>>Eugene Yaromik	06:29
+Because I saw that when bank statements in a review status, we will receive account summary.
+
+>>Aniket Tatipamula	06:47
+Okay, Liam, would it be possible for you to open this specific case and share the screen? Because that would probably, like, clear the confusion on this issue.
+
+>>Liam Dionisio	06:59
+I'm sorry, I'm on the phone right now. I won't be able to access this. Lazaro, can you help with this?
+
+>>Eugene Yaromik	07:10
+Yeah, let me try here.
+
+>>Lazaro Pages	07:13
+Thank you. Just click it.
+
+>>Lazaro Pages	07:23
+No, hold on. Where do I input this code?
+
+>>Aniket Tatipamula	07:39
+Lazaro, you are not sharing the screen. As in, if you can, and maybe I think Liam or Eugene can help.
+
+>>Lazaro Pages	07:45
+Yeah, here, let me share my screen. Okay.
+
+>>Lazaro Pages	07:59
+Okay, so I'm here. Where do I paste this? How can I look up this file?
+
+>>Boris Teper	08:20
+Can I open the bank statement and just give them the account name?
+
+>>Lazaro Pages	08:24
+Yeah, yeah.
+
+>>Boris Teper	08:25
+You can find the account name.
+
+>>Lazaro Pages	08:26
+Tell me the account name and I'll look it up.
+
+>>Eugene Yaromik	08:30
+Yeah, I'm doing it right away.
+
+>>Aniket Tatipamula	08:32
+So the account name is Aashay, hashes, home, extended, stays, and yeah.
+
+>>Lazaro Pages	08:40
+Can you repeat it again?
+
+>>Aniket Tatipamula	08:42
+Oh, just give me one second. I think I'll just open up the application form and type it.
+
+>>Liam Dionisio	08:46
+Oh, it's here. It's your file, Aashay.
+
+>>Aniket Tatipamula	08:50
+Yeah, this one.
+
+>>Lazaro Pages	08:51
+Aash.
+
+>>Liam Dionisio	08:53
+A -A -S -H -a -y. Asheville, Dc. Aashay, home, extended.
+
+>>Liana Vinokur	09:02
+Oh, Asheville, hold on.
+
+>>Lazaro Pages	09:06
+Last week. It's
+
+>>Liam Dionisio	09:08
+Double A. Yeah, double A.
+
+>>Eugene Yaromik	09:13
+Yeah, this opportunity. It's a bank statement from a previous opportunity.
+
+>>Liana Vinokur	09:20
+Oh.
+
+>>Lazaro Pages	09:24
+So this is from a previous opportunity.
+
+>>Aniket Tatipamula	09:32
+Eugene, how did you know that? Like, how did you get to see that?
+
+>>Eugene Yaromik	09:40
+For example, when we received some application in the same month, like, for example, one month ago, we used a bank statement from a previous opportunity.
+
+>>Aniket Tatipamula	09:59
+Thank you. I think from the three of the issues that you pointed out last time, two of them were of that type.
+
+>>Liana Vinokur	10:08
+Of that type.
+
+>>Lazaro Pages	10:09
+Okay, I have a couple more today if you guys want to just take a look right now. Okay, so let's look at this one. It's called Foresight Connect Holdings. So I have here that June revenue was actually correct. Let's see here. So June is correct. However, March is incorrect. And another thing, it's showing that all the bank statements are processed, but it only generated two months, June and March. So if you open up March here on the bank statement portion, it says 1 .4 million. But when you open up March, it's actually 580 ,000.
+
+>>Liana Vinokur	11:02
+Can you do one thing, Lazaro?
+
+>>Aniket Tatipamula	11:05
+Can we fetch this data, summary data again? Is there a button to refresh the summary data?
+
+>>Eugene Yaromik	11:12
+Yes, you should choose button reload.
+
+>>Lazaro Pages	11:14
+This one right here?
+
+>>Eugene Yaromik	11:15
+No, reload.
+
+>>Lazaro Pages	11:17
+Reload. Okay.
+
+>>Lazaro Pages	11:30
+Okay, it gave me an error message up here. Not sure if you guys saw it.
+
+>>Aniket Tatipamula	11:35
+Yeah. Can you please try it again?
+
+>>Lazaro Pages	11:40
+Yes, let's try again. Reload.
+
+>>Lazaro Pages	11:51
+Yeah, the same error message here. Insufficient access or read only. I guess I might not have access to that here.
+
+>>Boris Teper	12:02
+Can you scroll up? Let me try to refresh.
+
+>>Lazaro Pages	12:04
+Yes.
+
+>>Boris Teper	12:07
+Foresight Connect. Hold on a second.
+
+>>Lazaro Pages	12:09
+Foresight Connect Holdings.
+
+>>Boris Teper	12:12
+Foresight Connect Holdings, 721. Reload.
+
+>>Liana Vinokur	12:27
+Okay, now refresh.
+
+>>Lazaro Pages	12:31
+Okay, here we go. Yep, now that is more accurate. May 342, 342, 580. Yep, okay, I got it now.
+
+>>Boris Teper	12:50
+Okay, you can throw any message.
+
+>>Eugene Yaromik	12:54
+Okay, I'll check.
+
+>>Liana Vinokur	12:56
+And then here, let's go to another file.
+
+>>Lazaro Pages	13:04
+Source, I mean, I'm not sure if the same thing is happening here.
+
+>>Liana Vinokur	13:10
+But here, I believe June is incorrect. The revenue, 184. And the bank statement says it was 268.
+
+>>Lazaro Pages	13:24
+So it should be showing 268.
+
+>>Liana Vinokur	13:28
+Lazaro, can you please reload this one as well?
+
+>>Aniket Tatipamula	13:31
+I think quite a lot of these would work.
+
+>>Liana Vinokur	13:36
+I'm sorry? Can you please reload again?
+
+>>Lazaro Pages	13:40
+Yes.
+
+>>Liana Vinokur	13:41
+Hold on a minute.
+
+>>Lazaro Pages	13:42
+Yeah, Boris will reload here.
+
+>>Liana Vinokur	13:44
+Hold on, please.
+
+>>Boris Teper	13:51
+Yeah, this one we get an opportunity.
+
+>>Liana Vinokur	13:55
+Yeah, there's numbers of previous opportunities. We have another opportunity. Yeah, but it's the same bank account.
+
+>>Lazaro Pages	14:01
+It's the same bank account.
+
+>>Liana Vinokur	14:03
+I believe. Eugene, will reload work if it's the previous statement? I didn't add it yet.
+
+>>Boris Teper	14:18
+Try to reload.
+
+>>Liana Vinokur	14:25
+It's not going to work, because we didn't send the statement to the customer, correct?
+
+>>Boris Teper	14:31
+We loaded the statement from the previous opportunity.
+
+>>Liana Vinokur	14:34
+No, this opportunity is from the current opportunity.
+
+>>Boris Teper	14:40
+721, time source.
+
+>>Eugene Yaromik	14:41
+Yeah, because when the bank statement starts to process, yeah, it's the current opportunity.
+
+>>Boris Teper	14:47
+But I see a little checkbox that says bank statement from previous opportunity.
+
+>>Liana Vinokur	14:53
+No, I'm trying to reload.
+
+>>Boris Teper	14:55
+I'm getting an error that says...
+
+>>Liana Vinokur	14:56
+That's my account summary It's for what opportunity because there's only one screen come source Because as I see on the screen, it's like an opportunity Corp, oh, this is 7
+
+>>Boris Teper	15:22
+-9. Wait, I'm on the opportunity 721.
+
+>>Lazaro Pages	15:25
+Yes 721 shows That one loaded the previous time Louser we see it says bank statement a little
+
+>>Boris Teper	15:35
+I next to the word bank statements. Yep If you point mouse there, it tells you if the statements are loaded from the previous opportunity No on the right now go to the right the box of blank statements on the right No, no to the right where they see the bank statements Td Bank and all the numbers Right here to the right. Yeah
+
+>>Boris Teper	16:05
+So you're saying on 7 -9 and 7 -9 incorrect, right?
+
+>>Liana Vinokur	16:09
+Yeah.
+
+>>Lazaro Pages	16:09
+So from the Yeah the ones that processed on 7 -9 it was incorrect
+
+>>Liana Vinokur	16:24
+I Love the entire page I Have Three statements now because in documents, they're only three process 721 is not process. The only ones are the 7 -9 submission.
+
+>>Boris Teper	17:29
+These are the ones that have been processed Alright, we have to be on the right. Yeah
+
+>>Liana Vinokur	17:40
+Okay, I see what you're saying I don't want a 204 was right Paper 188 right
+
+>>Lazaro Pages	18:00
+Okay, so that was refreshed Seems accurate now on the 7 -9 submission and then let's take a look at this last one. I found possibly the same So this one shipwreck tavern on 721 June has the correct revenue and negative days However, March revenue and negative days are incorrect So June that's correct March 110 ,000 and here it says they're all processed. However, it only picked up June and March. Maybe we have to do a reload
+
+>>Aniket Tatipamula	18:35
+Yeah What is would you be able to reload again?
+
+>>Boris Teper	18:39
+This one doesn't have access to the reload?
+
+>>Lazaro Pages	18:42
+I Believe I don't have access
+
+>>Eugene Yaromik	18:48
+Yeah, you can check Here here that's here for you
+
+>>Boris Teper	18:54
+No, I'll click on reload button. Oh reload for me.
+
+>>Lazaro Pages	18:58
+Yeah. Yeah.
+
+>>Boris Teper	18:59
+Let's try it
+
+>>Eugene Yaromik	19:01
+You didn't have to delete all the statements
+
+>>Boris Teper	19:12
+Yeah
+
+>>Eugene Yaromik	19:15
+Okay Yes shipwreck tavern
+
+>>Boris Teper	19:27
+Okay, you can refresh now, all right, there we go.
+
+>>Lazaro Pages	19:52
+Yep. This looks a lot more accurate now, let's check June
+
+>>Lazaro Pages	19:55
+June 62 right that one was fine March 37 March 37 Yep let's check the negatives One two yep looks like it's picking it up now May 34 34 is Yep All right yep that picked it up correct as well all right those are all the examples I had as far as some things I noticed sure I think this new fix that we made today
+
+>>Aniket Tatipamula	20:40
+I mean you may have to reload them again Because yeah this has to be manually done but the change that we made today were all based on what you were asking for on the last call so I am expecting like the team should experience significantly less problems going forward and if there are problems and these would be extraction problems which we also addressed in the last release so the number should now significantly go down in the next few days if they don't then we are here like we'll keep on continuously fixing if there are more issues awesome awesome sounds good
+
+>>Lazaro Pages	21:17
+Yeah
+
+>>Aniket Tatipamula	21:18
+Yeah I think then all the issues that we looked at at least the basic ones I know there would be issues there still could be issues and we are here we are here to solve them but at least the major ones I think yet they're taken care of that the issue with the Alb the issue with the negative days I think these two at least with the current fix it's taken care of if there are more issues we look at it then there was one issue with the that Eugene just pointed out Eugene and Boris helped us figure out that there could always be data from previous opportunity not sure like if what to do there But if there is any issue then maybe you will have you guys will have to figure out what to do in that case I think these two are the major ones I still see there are cases where we have some classification issues sometime and some extraction issues the team will continuously keep on fixing them as in there's no one fix that will fix for everyone but every case
+
+>>Boris Teper	22:15
+But it will be an incremental fixes but the number would be significantly less now the that you were facing and what about that request that we wanted to pass the address you person one line we need to pass into the three lines like address state zip and and and state
+
+>>Aniket Tatipamula	22:37
+I mean sure that that I'll check once the reason it's difficult on bank statement is because it's a it's an extractor used by a lot of other like clients as well And I believe the team would have to check if we can do something specifically for your account to get that thing done so we have because our priority was a little different for the last few weeks so we kept it on sidetrack that And we also had that reply to that you asked for right the reply to one is fixed on testing the team is testing it out they will release it soon that you will not be getting emails on the other address But if you can from the sales force when you are actually sending email to talk so you can populate the reply to of the email metadata and you will get reply on that email and it could be whichever email you want and for this address getting split I'll check this up with the team this week And then we'll figure something out for you Okay Yeah are there any more issues we're good now
+
+>>Lazaro Pages	23:52
+Yeah I'm pretty good on my end honest I was just concerned about the banks but it seems to be working now after the updates your brother what happens the idea when we convert the application the bank is still processing
+
+>>Eugene Yaromik	24:04
+And that's why it's a little delay so you need to reload menu again to reload to reload a bank statement
+
+>>Lazaro Pages	24:21
+Yeah let me try let me try on one of these so let me go back to shipwreck on the down was already reloaded let me just see them works reload as long as you don't get an error
+
+>>Boris Teper	24:43
+So yeah
+
+>>Lazaro Pages	24:44
+As long as I don't get an error correct let me see here it's loading all right there we go bank statements were updated successfully
+
+>>Lazaro Pages	24:54
+It seems like I have access now. That's good Can we give that same access to the other underwriters as well Lenny and if they don't have access already and William Yes, that's yeah, that's that's good for us. If we see any errors.
+
+>>Eugene Yaromik	25:13
+It's good for us to be able to reload possibly I Have another question. Oh, I need get this What is the status of receiving and the mail body as a PDF file in a webhook for example for that's that In an email body, we don't create a file with the status And so it's force
+
+>>Aniket Tatipamula	25:51
+Yeah That was also looked up by the team. I'll make sure that this week we set that up as well on the book So you will receive the email image email body image in base 64 format that works, right?
+
+>>Eugene Yaromik	26:05
+Yeah
+
+>>Aniket Tatipamula	26:07
+We will set it up this week and then send across the information
+
+>>Eugene Yaromik	26:13
+Okay But is do we need this feature or not?
+
+>>Boris Teper	26:18
+Yeah, I think we need a reference Yeah PDF What was discovered by?
+
+>>Aniket Tatipamula	26:24
+In the email body Okay, I Think we now have three more requests one is the email body the second one is the reply to for the errors that we get on the emails and I think the third one is to split the address. Is there any more requests?
+
+>>Eugene Yaromik	26:52
+Apart from these three From my side is only this question about a mail body as a PDF file Sure Eugene, we will set it up
+
+>>Boris Teper	27:17
+Okay Okay. Okay.
+
+>>Eugene Yaromik	27:21
+Thank you guys.
+
+>>Lazaro Pages	27:22
+All good. Yeah. All right guys. Thank you Thank you
+
+>>Eugene Yaromik	27:26
+Bye -bye
+
