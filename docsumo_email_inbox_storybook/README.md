@@ -191,3 +191,4 @@ VITE_API_URL=http://localhost:3001
 ## License
 
 MIT
+# Trigger rebuild Fri Feb  6 17:35:20 IST 2026
