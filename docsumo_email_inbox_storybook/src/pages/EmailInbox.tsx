@@ -21,6 +21,8 @@ import {
   Minimize2,
   Play,
   Columns,
+  LogOut,
+  Zap,
 } from 'lucide-react'
 import {
   Button,
@@ -36,12 +38,14 @@ import {
 } from '@/components/ui'
 import {
   mockEmails,
-  getEmailsByClassification,
-  getEmailThread,
-  getCountByClassification,
+  getEmailsByClassification as getMockEmailsByClassification,
+  getEmailThread as getMockEmailThread,
+  getCountByClassification as getMockCountByClassification,
   type Email,
   type DocumentType,
 } from '@/data/mockEmails'
+import { useGmailAuth } from '@/hooks/useGmailAuth'
+import { useGmailEmails } from '@/hooks/useGmailEmails'
 import { format, formatDistanceToNow } from 'date-fns'
 
 // Column configuration
@@ -63,6 +67,10 @@ const defaultColumns: ColumnConfig[] = [
 ]
 
 export const EmailInbox: React.FC = () => {
+  // Gmail Integration Hooks
+  const gmailAuth = useGmailAuth()
+  const gmailEmails = useGmailEmails(gmailAuth.user?.email || null)
+
   // State
   const [selectedTab, setSelectedTab] = useState<DocumentType | 'All'>('All')
   const [selectedEmailId, setSelectedEmailId] = useState<string | null>(null)
@@ -73,9 +81,24 @@ export const EmailInbox: React.FC = () => {
   const [checkedRows, setCheckedRows] = useState<string[]>([])
   const [columns, setColumns] = useState<ColumnConfig[]>(defaultColumns)
   const [showColumnPicker, setShowColumnPicker] = useState(false)
+  const [useMockData, setUseMockData] = useState(true) // Toggle for demo mode
+
+  // Sync emails when connected
+  useEffect(() => {
+    if (gmailAuth.isConnected && gmailAuth.user?.email && !gmailEmails.lastSyncedAt) {
+      gmailEmails.syncEmails(100)
+      setUseMockData(false)
+      setShowConnectBanner(false)
+    }
+  }, [gmailAuth.isConnected, gmailAuth.user?.email])
+
+  // Determine which data source to use
+  const emails = useMockData ? mockEmails : gmailEmails.emails
+  const getEmailsByClassification = useMockData ? getMockEmailsByClassification : gmailEmails.getEmailsByClassification
+  const getEmailThread = useMockData ? getMockEmailThread : gmailEmails.getEmailThread
+  const counts = useMockData ? getMockCountByClassification() : gmailEmails.getCountByClassification()
 
   // Computed
-  const counts = getCountByClassification()
   const filteredEmails = getEmailsByClassification(selectedTab).filter(
     (email) =>
       !email.isAutoReply &&
@@ -84,7 +107,7 @@ export const EmailInbox: React.FC = () => {
         email.from.email.toLowerCase().includes(searchQuery.toLowerCase()))
   )
   const selectedEmail = selectedEmailId
-    ? mockEmails.find((e) => e.id === selectedEmailId)
+    ? emails.find((e) => e.id === selectedEmailId)
     : null
   const emailThread = selectedEmail
     ? getEmailThread(selectedEmail.threadId)
@@ -137,8 +160,34 @@ export const EmailInbox: React.FC = () => {
   // Handlers
   const handleRefresh = async () => {
     setIsRefreshing(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    if (gmailAuth.isConnected && !useMockData) {
+      await gmailEmails.syncEmails(100)
+    } else {
+      await new Promise((resolve) => setTimeout(resolve, 1500))
+    }
     setIsRefreshing(false)
+  }
+
+  const handleConnectGmail = () => {
+    console.log('🔘 Connect Gmail button clicked!')
+    gmailAuth.connect()
+  }
+
+  const handleDisconnect = async () => {
+    await gmailAuth.disconnect()
+    setUseMockData(true)
+    setShowConnectBanner(true)
+  }
+
+  const handleSwitchToLiveData = () => {
+    if (gmailAuth.isConnected) {
+      setUseMockData(false)
+      gmailEmails.syncEmails(100)
+    }
+  }
+
+  const handleSwitchToMockData = () => {
+    setUseMockData(true)
   }
 
   const toggleColumn = (key: string) => {
@@ -231,23 +280,136 @@ export const EmailInbox: React.FC = () => {
             <Tooltip content="Settings">
               <IconButton icon={<Settings />} />
             </Tooltip>
+
+            {/* Connect Gmail Button - Always visible when not connected */}
+            {!gmailAuth.isConnected && (
+              <Button
+                variant="contained"
+                size="sm"
+                leftIcon={<Mail className="w-4 h-4" />}
+                onClick={handleConnectGmail}
+                disabled={gmailAuth.isLoading}
+              >
+                {gmailAuth.isLoading ? 'Connecting...' : 'Connect Gmail'}
+              </Button>
+            )}
           </div>
         </div>
       </header>
 
       {/* Connect Email Banner */}
-      {showConnectBanner && (
+      {showConnectBanner && !gmailAuth.isConnected && (
         <div className="flex-shrink-0 px-6 pt-4">
           <Banner
             type="info"
-            title="Connect your email"
-            message="Link your Gmail or Outlook account to start receiving and processing emails automatically."
+            title="Connect your Gmail"
+            message="Link your Gmail account to sync and automatically classify your last 100 emails."
             onClose={() => setShowConnectBanner(false)}
             action={{
-              label: 'Connect Email',
-              onClick: () => alert('OAuth flow would start here'),
+              label: 'Connect Gmail',
+              onClick: handleConnectGmail,
             }}
           />
+        </div>
+      )}
+
+      {/* Auth Error Banner */}
+      {gmailAuth.error && (
+        <div className="flex-shrink-0 px-6 pt-4">
+          <Banner
+            type="error"
+            title="Authentication Error"
+            message={gmailAuth.error}
+            onClose={() => {}}
+          />
+        </div>
+      )}
+
+      {/* Syncing Banner */}
+      {gmailEmails.isSyncing && (
+        <div className="flex-shrink-0 px-6 pt-4">
+          <Banner
+            type="info"
+            title="Syncing emails..."
+            message="Fetching and classifying your last 100 emails from Gmail. This may take a moment."
+          />
+        </div>
+      )}
+
+      {/* Connected Account Bar */}
+      {gmailAuth.isConnected && gmailAuth.user && (
+        <div className="flex-shrink-0 px-6 pt-4">
+          <div className="flex items-center justify-between bg-white border border-neutral-200 rounded-lg px-4 py-3">
+            <div className="flex items-center gap-3">
+              {gmailAuth.user.picture ? (
+                <img
+                  src={gmailAuth.user.picture}
+                  alt={gmailAuth.user.name}
+                  className="w-8 h-8 rounded-full"
+                />
+              ) : (
+                <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center">
+                  <User className="w-4 h-4 text-primary-600" />
+                </div>
+              )}
+              <div>
+                <p className="text-sm font-medium text-neutral-900">{gmailAuth.user.name}</p>
+                <p className="text-xs text-neutral-500">{gmailAuth.user.email}</p>
+              </div>
+              <Badge variant="success" size="sm">
+                <CheckCircle2 className="w-3 h-3 mr-1" />
+                Connected
+              </Badge>
+              {gmailEmails.lastSyncedAt && (
+                <span className="text-xs text-neutral-400">
+                  Last synced: {formatDistanceToNow(new Date(gmailEmails.lastSyncedAt), { addSuffix: true })}
+                </span>
+              )}
+            </div>
+            <div className="flex items-center gap-2">
+              {/* Data Source Toggle */}
+              <div className="flex items-center gap-2 mr-4">
+                <button
+                  onClick={handleSwitchToMockData}
+                  className={cn(
+                    'px-3 py-1.5 text-xs font-medium rounded-md transition-colors',
+                    useMockData
+                      ? 'bg-primary-100 text-primary-700'
+                      : 'text-neutral-500 hover:bg-neutral-100'
+                  )}
+                >
+                  Demo Data
+                </button>
+                <button
+                  onClick={handleSwitchToLiveData}
+                  className={cn(
+                    'px-3 py-1.5 text-xs font-medium rounded-md transition-colors',
+                    !useMockData
+                      ? 'bg-primary-100 text-primary-700'
+                      : 'text-neutral-500 hover:bg-neutral-100'
+                  )}
+                >
+                  <Zap className="w-3 h-3 inline mr-1" />
+                  Live Gmail
+                </button>
+              </div>
+              <Tooltip content="Sync emails">
+                <IconButton
+                  icon={<RefreshCw className={cn(gmailEmails.isSyncing && 'animate-spin')} />}
+                  onClick={() => gmailEmails.syncEmails(100)}
+                  disabled={gmailEmails.isSyncing}
+                  size="sm"
+                />
+              </Tooltip>
+              <Tooltip content="Disconnect">
+                <IconButton
+                  icon={<LogOut />}
+                  onClick={handleDisconnect}
+                  size="sm"
+                />
+              </Tooltip>
+            </div>
+          </div>
         </div>
       )}
 
