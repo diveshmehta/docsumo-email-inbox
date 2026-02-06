@@ -1,10 +1,11 @@
 [build]
+  # Build from the new storybook inbox folder
+  base = "docsumo_email_inbox_storybook"
   command = "npm run build"
   publish = "dist"
   
 [build.environment]
   NODE_VERSION = "18"
-  NPM_FLAGS = "--legacy-peer-deps"
 
 # SPA routing - redirect all requests to index.html
 [[redirects]]
