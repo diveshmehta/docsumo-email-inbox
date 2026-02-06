@@ -84,9 +84,10 @@ export const EmailInbox: React.FC = () => {
   const [useMockData, setUseMockData] = useState(true) // Toggle for demo mode
 
   // Sync emails when connected
+  // Auto-sync 10 emails when connected
   useEffect(() => {
     if (gmailAuth.isConnected && gmailAuth.user?.email && !gmailEmails.lastSyncedAt) {
-      gmailEmails.syncEmails(100)
+      gmailEmails.syncEmails(10)
       setUseMockData(false)
       setShowConnectBanner(false)
     }
@@ -161,7 +162,7 @@ export const EmailInbox: React.FC = () => {
   const handleRefresh = async () => {
     setIsRefreshing(true)
     if (gmailAuth.isConnected && !useMockData) {
-      await gmailEmails.syncEmails(100)
+      await gmailEmails.syncEmails(10)
     } else {
       await new Promise((resolve) => setTimeout(resolve, 1500))
     }
@@ -182,7 +183,7 @@ export const EmailInbox: React.FC = () => {
   const handleSwitchToLiveData = () => {
     if (gmailAuth.isConnected) {
       setUseMockData(false)
-      gmailEmails.syncEmails(100)
+      gmailEmails.syncEmails(10)
     }
   }
 
@@ -396,7 +397,7 @@ export const EmailInbox: React.FC = () => {
               <Tooltip content="Sync emails">
                 <IconButton
                   icon={<RefreshCw className={cn(gmailEmails.isSyncing && 'animate-spin')} />}
-                  onClick={() => gmailEmails.syncEmails(100)}
+                  onClick={() => gmailEmails.syncEmails(10)}
                   disabled={gmailEmails.isSyncing}
                   size="sm"
                 />

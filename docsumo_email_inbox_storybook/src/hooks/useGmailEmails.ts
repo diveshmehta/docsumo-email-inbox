@@ -27,8 +27,8 @@ export function useGmailEmails(userEmail: string | null): UseGmailEmailsReturn {
   const [error, setError] = useState<string | null>(null)
   const [lastSyncedAt, setLastSyncedAt] = useState<string | null>(null)
 
-  // Sync emails from Gmail
-  const syncEmails = useCallback(async (maxResults: number = 100) => {
+  // Sync emails from Gmail (default: 10 emails)
+  const syncEmails = useCallback(async (maxResults: number = 10) => {
     if (!userEmail) {
       setError('No email account connected')
       return
