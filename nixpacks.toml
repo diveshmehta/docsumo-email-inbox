@@ -1,0 +1,14 @@
+# Nixpacks configuration for Railway
+# Build from the server subdirectory
+
+[phases.setup]
+nixPkgs = ["nodejs_18"]
+
+[phases.install]
+cmds = ["cd docsumo_email_inbox_storybook/server && npm install"]
+
+[phases.build]
+cmds = ["echo 'No build step needed for Node.js server'"]
+
+[start]
+cmd = "cd docsumo_email_inbox_storybook/server && npm start"
